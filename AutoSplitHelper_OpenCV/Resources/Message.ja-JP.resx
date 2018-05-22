@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="msg1" xml:space="preserve">
+    <value>表の読み込みに失敗しました。savefileフォルダに[table1.csv(カンマ区切り)]を作成してください。</value>
+  </data>
+  <data name="msg10" xml:space="preserve">
+    <value>ゴール or ウィンドウが存在しません。</value>
+  </data>
+  <data name="msg11" xml:space="preserve">
+    <value>不明なエラー</value>
+  </data>
+  <data name="msg12" xml:space="preserve">
+    <value>リセット用の画像ファイルが存在しません。</value>
+  </data>
+  <data name="msg13" xml:space="preserve">
+    <value>リセット用の画像ファイルが存在しないか、ウィンドウが存在しません。</value>
+  </data>
+  <data name="msg14" xml:space="preserve">
+    <value>Settingタブの表に空欄、もしくはコメント列ではない箇所に数字以外が存在するようです。適切に入力後終了してください。また、最終行の空欄を削除してみてください。</value>
+  </data>
+  <data name="msg15" xml:space="preserve">
+    <value>Positionタブの表に空欄があるようです。入力後終了してください。</value>
+  </data>
+  <data name="msg16" xml:space="preserve">
+    <value>Settingタブにある表の空欄を埋めてください。もしくは、設定ファイルが開かれた状態です。変更は保存されません。</value>
+  </data>
+  <data name="msg17" xml:space="preserve">
+    <value>Created / Saved.</value>
+  </data>
+  <data name="msg18" xml:space="preserve">
+    <value>消去しますか？</value>
+  </data>
+  <data name="msg19" xml:space="preserve">
+    <value>質問</value>
+  </data>
+  <data name="msg2" xml:space="preserve">
+    <value>表の読み込みに失敗しました。savefileフォルダに[table2.csv(カンマ区切り)]を作成してください。</value>
+  </data>
+  <data name="msg20" xml:space="preserve">
+    <value>は既に存在しています。</value>
+  </data>
+  <data name="msg21" xml:space="preserve">
+    <value>ハンドルの取得がされていません。</value>
+  </data>
+  <data name="msg22" xml:space="preserve">
+    <value>1.bmpが存在しません。</value>
+  </data>
+  <data name="msg23" xml:space="preserve">
+    <value>1.bmpもしくはreset.bmpが存在しません。</value>
+  </data>
+  <data name="msg24" xml:space="preserve">
+    <value>Positionタブにある表の空欄を埋めてください。もしくは、設定ファイルが開かれた状態です。変更は保存されません。</value>
+  </data>
+  <data name="msg25" xml:space="preserve">
+    <value>行内の空欄を埋めてください。</value>
+  </data>
+  <data name="msg26" xml:space="preserve">
+    <value>csvファイルor画像フォルダの消去に失敗しました。</value>
+  </data>
+  <data name="msg27" xml:space="preserve">
+    <value>※1度でも監視を行った場合、再起動の後プロファイルを削除して下さい。</value>
+  </data>
+  <data name="msg28" xml:space="preserve">
+    <value>空欄が有ります。</value>
+  </data>
+  <data name="msg29" xml:space="preserve">
+    <value>数字以外の文字は入力できません。</value>
+  </data>
+  <data name="msg3" xml:space="preserve">
+    <value>読み込みに失敗しました。設定が初期化されます。</value>
+  </data>
+  <data name="msg30" xml:space="preserve">
+    <value>画像認識中</value>
+  </data>
+  <data name="msg31" xml:space="preserve">
+    <value>待機中</value>
+  </data>
+  <data name="msg32" xml:space="preserve">
+    <value>場面転換待機中</value>
+  </data>
+  <data name="msg33" xml:space="preserve">
+    <value>暗転待機中</value>
+  </data>
+  <data name="msg34" xml:space="preserve">
+    <value>指定時間待機中</value>
+  </data>
+  <data name="msg35" xml:space="preserve">
+    <value>たたむ</value>
+  </data>
+  <data name="msg36" xml:space="preserve">
+    <value>広げる</value>
+  </data>
+  <data name="msg37" xml:space="preserve">
+    <value>プロファイル名を入力して下さい。</value>
+  </data>
+  <data name="msg38" xml:space="preserve">
+    <value>プロファイル新規作成</value>
+  </data>
+  <data name="msg39" xml:space="preserve">
+    <value>ロード中</value>
+  </data>
+  <data name="msg4" xml:space="preserve">
+    <value>ウィンドウの存在を確認できませんでした。</value>
+  </data>
+  <data name="msg40" xml:space="preserve">
+    <value>loading.bmpが存在しません。</value>
+  </data>
+  <data name="msg41" xml:space="preserve">
+    <value>ビデオデバイスが存在しません。SCFFDSF等仮想カメラデバイスをインストールして下さい。</value>
+  </data>
+  <data name="msg42" xml:space="preserve">
+    <value>キャンセルされました。</value>
+  </data>
+  <data name="msg43" xml:space="preserve">
+    <value>接続エラー。本体を再起動して下さい。</value>
+  </data>
+  <data name="msg44" xml:space="preserve">
+    <value>ビデオプレイヤーが表示されていません。</value>
+  </data>
+  <data name="msg45" xml:space="preserve">
+    <value>Time列に数字以外の文字が入っています。</value>
+  </data>
+  <data name="msg46" xml:space="preserve">
+    <value>仮想カメラの接続エラー。仮想カメラの再接続や本体の再起動を試してみて下さい。</value>
+  </data>
+  <data name="msg47" xml:space="preserve">
+    <value>defaultは削除できません。</value>
+  </data>
+  <data name="msg48" xml:space="preserve">
+    <value>リストからウィンドウタイトルを1つ選択してください。</value>
+  </data>
+  <data name="msg49" xml:space="preserve">
+    <value>見つかりませんでした。</value>
+  </data>
+  <data name="msg5" xml:space="preserve">
+    <value>画像フォルダ選択がされていません。</value>
+  </data>
+  <data name="msg50" xml:space="preserve">
+    <value>仮想カメラとの接続を行って下さい。</value>
+  </data>
+  <data name="msg6" xml:space="preserve">
+    <value>画像ファイル数と表のデータ数が一致しません。</value>
+  </data>
+  <data name="msg7" xml:space="preserve">
+    <value>画像ファイルが存在しません。</value>
+  </data>
+  <data name="msg8" xml:space="preserve">
+    <value>画像ファイルが存在しないか、ウィンドウが存在しません。</value>
+  </data>
+  <data name="msg9" xml:space="preserve">
+    <value>Finish!</value>
+  </data>
+  <data name="msga1" xml:space="preserve">
+    <value>内に画像が存在しません。</value>
+  </data>
+  <data name="msga2" xml:space="preserve">
+    <value>範囲外の値を指定しようとしました。値を-215以上にして下さい。</value>
+  </data>
+  <data name="msga3" xml:space="preserve">
+    <value>範囲外の値を指定しようとしました。値を-250以上にして下さい。</value>
+  </data>
+  <data name="msgb1" xml:space="preserve">
+    <value>Preview キャプチャ中</value>
+  </data>
+  <data name="msgb2" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="msgb3" xml:space="preserve">
+    <value>Preview キャプチャ中（監視範囲指定）</value>
+  </data>
+  <data name="msgb4" xml:space="preserve">
+    <value>無効な範囲です。</value>
+  </data>
+  <data name="msgb5" xml:space="preserve">
+    <value>ファイルを上書きしますか？</value>
+  </data>
+  <data name="msgb6" xml:space="preserve">
+    <value>質問</value>
+  </data>
+  <data name="msgb7" xml:space="preserve">
+    <value>行選択状態でキャプチャして下さい。一度監視または表の拡張をした場合は、再起動して下さい。</value>
+  </data>
+  <data name="msgc01" xml:space="preserve">
+    <value>接続</value>
+  </data>
+  <data name="msgc02" xml:space="preserve">
+    <value>切断</value>
+  </data>
+</root>

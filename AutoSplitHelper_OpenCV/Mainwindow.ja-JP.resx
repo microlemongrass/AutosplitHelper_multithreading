@@ -1,0 +1,1095 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="send.HeaderText" xml:space="preserve">
+    <value>送信</value>
+  </data>
+  <data name="rate.HeaderText" xml:space="preserve">
+    <value>閾値</value>
+  </data>
+  <data name="sleep.HeaderText" xml:space="preserve">
+    <value>待機時間</value>
+  </data>
+  <data name="darksleep.HeaderText" xml:space="preserve">
+    <value>遅延時間</value>
+  </data>
+  <data name="darkthr.HeaderText" xml:space="preserve">
+    <value>色幅</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="chkloading.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 22</value>
+  </data>
+  <data name="chkloading.Text" xml:space="preserve">
+    <value>ロード用</value>
+  </data>
+  <data name="chklimit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 22</value>
+  </data>
+  <data name="chklimit.Text" xml:space="preserve">
+    <value>限定探索</value>
+  </data>
+  <data name="chkoverwrite.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 22</value>
+  </data>
+  <data name="chkoverwrite.Text" xml:space="preserve">
+    <value>上書き確認</value>
+  </data>
+  <data name="btncur_showvideo.Text" xml:space="preserve">
+    <value>映像を表示</value>
+  </data>
+  <data name="Label97.Size" type="System.Drawing.Size, System.Drawing">
+    <value>293, 19</value>
+  </data>
+  <data name="Label97.Text" xml:space="preserve">
+    <value>現在の設定（各ラベルをクリックで設定画面へ）</value>
+  </data>
+  <data name="Label79.Text" xml:space="preserve">
+    <value>最初のラップ                  :</value>
+  </data>
+  <data name="Label76.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 19</value>
+  </data>
+  <data name="Label76.Text" xml:space="preserve">
+    <value>監視間隔 : </value>
+  </data>
+  <data name="Label92.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 19</value>
+  </data>
+  <data name="Label92.Text" xml:space="preserve">
+    <value>後 : </value>
+  </data>
+  <data name="Label94.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 19</value>
+  </data>
+  <data name="Label94.Text" xml:space="preserve">
+    <value>前 : </value>
+  </data>
+  <data name="Label90.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 19</value>
+  </data>
+  <data name="Label90.Text" xml:space="preserve">
+    <value>名前付きパイプ　　 　:</value>
+  </data>
+  <data name="Label89.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 19</value>
+  </data>
+  <data name="Label89.Text" xml:space="preserve">
+    <value>連動      　　　　     :</value>
+  </data>
+  <data name="Label86.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 19</value>
+  </data>
+  <data name="Label86.Text" xml:space="preserve">
+    <value>LiveSplitにカウント追加 　:</value>
+  </data>
+  <data name="btncur_webcamera.Text" xml:space="preserve">
+    <value>接続</value>
+  </data>
+  <data name="chkcreate_temppicture.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 23</value>
+  </data>
+  <data name="chkcreate_temppicture.Text" xml:space="preserve">
+    <value>画像の一時フォルダを作成する</value>
+  </data>
+  <data name="chkvideo_manualstart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 26</value>
+  </data>
+  <data name="chkvideo_manualstart.Text" xml:space="preserve">
+    <value>手動でRTAを開始</value>
+  </data>
+  <data name="GroupBox4.Text" xml:space="preserve">
+    <value>ウィンドウキャプチャ用ウィンドウの設定（重め）</value>
+  </data>
+  <data name="chkvideo_showwinvideo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 26</value>
+  </data>
+  <data name="chkvideo_showwinvideo.Text" xml:space="preserve">
+    <value>ウィンドウキャプチャ用ウィンドウを表示</value>
+  </data>
+  <data name="Label95.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 19</value>
+  </data>
+  <data name="Label95.Text" xml:space="preserve">
+    <value>更新間隔 (ms)</value>
+  </data>
+  <data name="Label93.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 19</value>
+  </data>
+  <data name="Label93.Text" xml:space="preserve">
+    <value>位置</value>
+  </data>
+  <data name="chkvideo_autoseek.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 26</value>
+  </data>
+  <data name="chkvideo_autoseek.Text" xml:space="preserve">
+    <value>オートシークを行う</value>
+  </data>
+  <data name="chkshowvideo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 26</value>
+  </data>
+  <data name="chkshowvideo.Text" xml:space="preserve">
+    <value>ビデオを表示する</value>
+  </data>
+  <data name="btnclosetable.Text" xml:space="preserve">
+    <value>元に戻す</value>
+  </data>
+  <data name="Label29.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 19</value>
+  </data>
+  <data name="Label29.Text" xml:space="preserve">
+    <value>一致率</value>
+  </data>
+  <data name="Label33.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 19</value>
+  </data>
+  <data name="Label33.Text" xml:space="preserve">
+    <value>遅延</value>
+  </data>
+  <data name="Label15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 19</value>
+  </data>
+  <data name="Label15.Text" xml:space="preserve">
+    <value>一致率</value>
+  </data>
+  <data name="Label35.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 19</value>
+  </data>
+  <data name="Label35.Text" xml:space="preserve">
+    <value>遅延</value>
+  </data>
+  <data name="Label36.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 19</value>
+  </data>
+  <data name="Label36.Text" xml:space="preserve">
+    <value>一致率</value>
+  </data>
+  <data name="Label37.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 19</value>
+  </data>
+  <data name="Label37.Text" xml:space="preserve">
+    <value>遅延</value>
+  </data>
+  <data name="Label40.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 19</value>
+  </data>
+  <data name="Label40.Text" xml:space="preserve">
+    <value>一致率</value>
+  </data>
+  <data name="Label43.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 19</value>
+  </data>
+  <data name="Label43.Text" xml:space="preserve">
+    <value>遅延</value>
+  </data>
+  <data name="Label44.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 19</value>
+  </data>
+  <data name="Label44.Text" xml:space="preserve">
+    <value>一致率</value>
+  </data>
+  <data name="Label45.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 19</value>
+  </data>
+  <data name="Label45.Text" xml:space="preserve">
+    <value>遅延</value>
+  </data>
+  <data name="Label47.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 19</value>
+  </data>
+  <data name="Label47.Text" xml:space="preserve">
+    <value>一致率</value>
+  </data>
+  <data name="Label48.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 19</value>
+  </data>
+  <data name="Label48.Text" xml:space="preserve">
+    <value>遅延</value>
+  </data>
+  <data name="Label50.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 19</value>
+  </data>
+  <data name="Label50.Text" xml:space="preserve">
+    <value>一致率</value>
+  </data>
+  <data name="Label54.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 19</value>
+  </data>
+  <data name="Label54.Text" xml:space="preserve">
+    <value>遅延</value>
+  </data>
+  <data name="Label55.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 19</value>
+  </data>
+  <data name="Label55.Text" xml:space="preserve">
+    <value>一致率</value>
+  </data>
+  <data name="Label56.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 19</value>
+  </data>
+  <data name="Label56.Text" xml:space="preserve">
+    <value>遅延</value>
+  </data>
+  <data name="Label57.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 19</value>
+  </data>
+  <data name="Label57.Text" xml:space="preserve">
+    <value>一致率</value>
+  </data>
+  <data name="Label58.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 19</value>
+  </data>
+  <data name="Label58.Text" xml:space="preserve">
+    <value>遅延</value>
+  </data>
+  <data name="Label59.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 19</value>
+  </data>
+  <data name="Label59.Text" xml:space="preserve">
+    <value>一致率</value>
+  </data>
+  <data name="Label60.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 19</value>
+  </data>
+  <data name="Label60.Text" xml:space="preserve">
+    <value>遅延</value>
+  </data>
+  <data name="Label96.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 19</value>
+  </data>
+  <data name="Label96.Text" xml:space="preserve">
+    <value>キー押下時間 (ms)</value>
+  </data>
+  <data name="chkundoskip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 23</value>
+  </data>
+  <data name="chkundoskip.Text" xml:space="preserve">
+    <value>連動</value>
+  </data>
+  <data name="chknamedpipe.Location" type="System.Drawing.Point, System.Drawing">
+    <value>357, 55</value>
+  </data>
+  <data name="chknamedpipe.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 42</value>
+  </data>
+  <data name="chknamedpipe.Text" xml:space="preserve">
+    <value>名前付きパイプを使用
+　　　　　（LiveSplit）</value>
+  </data>
+  <data name="Label62.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 19</value>
+  </data>
+  <data name="Label62.Text" xml:space="preserve">
+    <value>フレームレート</value>
+  </data>
+  <data name="Label61.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 19</value>
+  </data>
+  <data name="Label61.Text" xml:space="preserve">
+    <value>解像度</value>
+  </data>
+  <data name="_moji6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 19</value>
+  </data>
+  <data name="_moji6.Text" xml:space="preserve">
+    <value>映像キャプチャデバイス</value>
+  </data>
+  <data name="btnconnect_camera.Text" xml:space="preserve">
+    <value>接続</value>
+  </data>
+  <data name="btnresetup.Text" xml:space="preserve">
+    <value>適用</value>
+  </data>
+  <data name="chkactiveapp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>278, 23</value>
+  </data>
+  <data name="chkactiveapp.Text" xml:space="preserve">
+    <value>キー出力時、特定のウィンドウをアクティブ化</value>
+  </data>
+  <data name="chkactivesomeapp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>278, 23</value>
+  </data>
+  <data name="chkactivesomeapp.Text" xml:space="preserve">
+    <value>キー出力後、特定のウィンドウをアクティブ化</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>キー送信までの時間(ms)</value>
+  </data>
+  <data name="chkrename_livesplit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 26</value>
+  </data>
+  <data name="chkrename_livesplit.Text" xml:space="preserve">
+    <value>LiveSplitのSegment nameにカウント追加</value>
+  </data>
+  <data name="btnreset_livesplit.Text" xml:space="preserve">
+    <value>LiveSplitのカウント初期化</value>
+  </data>
+  <data name="btnreset_table.Text" xml:space="preserve">
+    <value>表の初期化</value>
+  </data>
+  <data name="btnreset_count.Text" xml:space="preserve">
+    <value>カウントリセット</value>
+  </data>
+  <data name="_moji1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 19</value>
+  </data>
+  <data name="_moji1.Text" xml:space="preserve">
+    <value>閾値(％)</value>
+  </data>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 19</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>監視間隔(ms)</value>
+  </data>
+  <data name="_moji3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 19</value>
+  </data>
+  <data name="_moji3.Text" xml:space="preserve">
+    <value>色幅</value>
+  </data>
+  <data name="btninsertanten.Text" xml:space="preserve">
+    <value>挿入</value>
+  </data>
+  <data name="chkcv_loop.Text" xml:space="preserve">
+    <value>ループ</value>
+  </data>
+  <data name="btninsertitti.Text" xml:space="preserve">
+    <value>挿入</value>
+  </data>
+  <data name="chkcv_resetonoff.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 23</value>
+  </data>
+  <data name="chkcv_resetonoff.Text" xml:space="preserve">
+    <value>自動リセット　</value>
+  </data>
+  <data name="btninsertsleep.Text" xml:space="preserve">
+    <value>挿入</value>
+  </data>
+  <data name="_moji2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 19</value>
+  </data>
+  <data name="_moji2.Text" xml:space="preserve">
+    <value>待機時間(s)</value>
+  </data>
+  <data name="chkcv_loadremover.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 26</value>
+  </data>
+  <data name="chkcv_loadremover.Text" xml:space="preserve">
+    <value>ロード除去    </value>
+  </data>
+  <data name="chkcv_monitor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 23</value>
+  </data>
+  <data name="chkcv_monitor.Text" xml:space="preserve">
+    <value>ラップ</value>
+  </data>
+  <data name="btnstartopencv.Text" xml:space="preserve">
+    <value>開始</value>
+  </data>
+  <data name="txtstate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 18</value>
+  </data>
+  <data name="txtstate.Text" xml:space="preserve">
+    <value>現在の状況</value>
+  </data>
+  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 18</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>処理時間(ms)</value>
+  </data>
+  <data name="btncv_downsize.Text" xml:space="preserve">
+    <value>たたむ</value>
+  </data>
+  <data name="btncv_stop.Text" xml:space="preserve">
+    <value>停止</value>
+  </data>
+  <data name="chkmulti.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 23</value>
+  </data>
+  <data name="chkmulti.Text" xml:space="preserve">
+    <value>ロード除去用に使用</value>
+  </data>
+  <data name="btnrenameapp.Text" xml:space="preserve">
+    <value>選択したソフトのタイトルを変更</value>
+  </data>
+  <data name="btninsertzahyou.Text" xml:space="preserve">
+    <value>表へ代入</value>
+  </data>
+  <data name="chklockwindow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 23</value>
+  </data>
+  <data name="chklockwindow.Text" xml:space="preserve">
+    <value>ウィンドウを固定する</value>
+  </data>
+  <data name="btn2_getwindowtitle.Text" xml:space="preserve">
+    <value>ウィンドウタイトルを再取得</value>
+  </data>
+  <data name="gbsetting.Text" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="btncalib_reset.Text" xml:space="preserve">
+    <value>リセット</value>
+  </data>
+  <data name="gbrgb.Text" xml:space="preserve">
+    <value>色調整</value>
+  </data>
+  <data name="lblm1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 15</value>
+  </data>
+  <data name="lblm1.Text" xml:space="preserve">
+    <value>明るさ</value>
+  </data>
+  <data name="btncalib_adjrgb.Text" xml:space="preserve">
+    <value>自動調整</value>
+  </data>
+  <data name="btncalib_adjbright.Text" xml:space="preserve">
+    <value>自動調整</value>
+  </data>
+  <data name="btncalib_insert.Text" xml:space="preserve">
+    <value>適用</value>
+  </data>
+  <data name="btncalib_adjaspect.Text" xml:space="preserve">
+    <value>自動調整</value>
+  </data>
+  <data name="btncalib_adjscale.Text" xml:space="preserve">
+    <value>自動調整</value>
+  </data>
+  <data name="Label102.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 15</value>
+  </data>
+  <data name="Label102.Text" xml:space="preserve">
+    <value>高さ (%)</value>
+  </data>
+  <data name="Label104.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 15</value>
+  </data>
+  <data name="Label104.Text" xml:space="preserve">
+    <value>幅 (%)</value>
+  </data>
+  <data name="Label103.Text" xml:space="preserve">
+    <value>アスペクト比変更                      </value>
+  </data>
+  <data name="btncalib_resize.Text" xml:space="preserve">
+    <value>出力</value>
+  </data>
+  <data name="Label110.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 15</value>
+  </data>
+  <data name="Label110.Text" xml:space="preserve">
+    <value>最高一致率</value>
+  </data>
+  <data name="Label75.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 15</value>
+  </data>
+  <data name="Label75.Text" xml:space="preserve">
+    <value>最適な画像</value>
+  </data>
+  <data name="Label100.Size" type="System.Drawing.Size, System.Drawing">
+    <value>146, 15</value>
+  </data>
+  <data name="Label100.Text" xml:space="preserve">
+    <value>Before (↓に画像をドロップ)</value>
+  </data>
+  <data name="Label25.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 20</value>
+  </data>
+  <data name="Label25.Text" xml:space="preserve">
+    <value>レモングラス</value>
+  </data>
+  <data name="Label18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>442, 20</value>
+  </data>
+  <data name="Label18.Text" xml:space="preserve">
+    <value>本ソフトはラップ機能付きのタイマーとの併用を前提に作られています。</value>
+  </data>
+  <data name="Label16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 20</value>
+  </data>
+  <data name="Label16.Text" xml:space="preserve">
+    <value>不具合等有りましたらこちら。</value>
+  </data>
+  <data name="LinkLabel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>334, 181</value>
+  </data>
+  <data name="LinkLabel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 20</value>
+  </data>
+  <data name="LinkLabel3.Text" xml:space="preserve">
+    <value>HP (マニュアル有)</value>
+  </data>
+  <data name="LinkLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>155, 181</value>
+  </data>
+  <data name="LinkLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 20</value>
+  </data>
+  <data name="LinkLabel1.Text" xml:space="preserve">
+    <value>Googleフォーム</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAUFAAAAEAIADoZwAAFgAAACgAAABQAAAAoAAAAAEAIAAAAAAAAGQAABMLAAATCwAAAAAAAAAA
+        AAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsAP///wD///8A////AP///wD///8A////ACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwA////AP///wD///8A////AP///wD///8ALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAD///8A////AP//
+        /wD///8A////AP///wAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCzeLCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsAP///wD///8A////AP///wD///8A////ACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwA////AP///wD///8A////AP///wD///8ALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCzHLCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCzHLCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAD///8A////AP//
+        /wD///8A////AP///wAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCws+SwsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCzfLCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsAP///wD///8A////AP///wD///8A////ACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwA////AP///wD///8A////AP///wD///8ALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAD///8A////AP//
+        /wD///8A////AP///wAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsAP///wD///8A////AP///wD///8A////ACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwA////AP///wD///8A////AP///wD///8ALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAD///8A////AP//
+        /wD///8A////AP///wAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP80NDD/T09F/2lpYf+EhH3/kpKL/zY2Mf8sLCz/LCws/25uY/+YmJL/eXlx/1xc
+        Uv9BQTr/Li4s/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsAP///wD///8A////AP///wD///8A////ACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsACwsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/zU1MP9mZVz/n56b/8bGxf/9/f3////////////09O//PT01/yws
+        LP8sLCz/iIh//////////////v7///z8/P+6urn/ioqE/09PRf8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwA////AP///wD///8A////AP///wD///8ALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/zY2Mf99fXf/zs7O////////////////////
+        //////////////Pz7/88PDX/LCws/ywsLP+FhXv/////////////////////////////////0tLS/7m5
+        uf9ERDz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAD///8A////AP//
+        /wD///8A////AP///wAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/zIyLv9wcGf/ysrL////
+        ////////////////////////////////////////8/Pv/zw8Nf8sLCz/LCws/4WFe///////////////
+        ////////////////////////zs7O/0lJQP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsAP///wD///8A////AP///wD///8A////ACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LOAsLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP9TU0r/rKun///////////////////////////////////////////////////////z8+//PDw1/yws
+        LP8sLCz/hYR7//////////////////////////////////////92dm3/LCws/ywsLP8sLCz/TU1E/z8/
+        OP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwA////AP///wD///8A////AP///wD///8ALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8uLi3/cnJp/8fHxv//////////////////////////////////////////////
+        //////////////T08P89PTX/LCws/ywsLP+IiH//////////////////////////////////s7Ow/z09
+        Nv8sLCz/LCws/zk5M//Av7//sbGt/0xMQ/8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCwALCwsACwsLAAsLCwALCwsACwsLAD///8A////AP//
+        /wD///8A////AP///wAsLCwALCwsACwsLAAsLCwALCwsACwsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/NTUw/5GRi//9/f3/////////////////////////
+        ////////////////////////////////////////vLy8/zs8NP8sLCz/LCws/319dP/8/P//////////
+        //////////////7+/v9ubmX/LCws/ywsLP8sLCz/oKCb////////////vb28/2NjWv8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCwALCwsACws
+        LAAsLCwALCwsAP///wD///8A////AP///wD///8A////ACwsLAAsLCwALCwsACwsLAAsLCwALCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/zQ0MP+dnZf/////////
+        /////////////////////////////////////////////9LS0v+RkYv/XV1U/0NDOv83ODL/LCws/yws
+        LP8sLCz/Ly8t/zs7Nf9MTEP/cG9n/7S0tP/S0tL/p6ej/zQ0MP8sLCz/LCws/2VlXP/Q0M//////////
+        ////////y8vL/25uZf8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLAAsLCwALCwsACwsLAAsLCwA////AP///wD///8A////AP///wD///8ALCwsACws
+        LAAsLCwALCwsACwsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8tLSz/j4+J/////////////////////////////////////////////////9LS0v+EhH//MzMv/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/0ZGPv9WVk7/LCws/yws
+        LP80NDD/s7Ow////////////////////////////ycnJ/1dXTf8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLAAsLCwALCwsACwsLAD///8A////AP//
+        /wD///8A////AP///wAsLCwALCwsACwsLAAsLCwALCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/3Jza////////////////////////////////////////v7+/8fH
+        xv+YmJL/Ozs1/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/3h5b//9/f3/////////////////////////////////u7u5/0BA
+        OP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCwsACws
+        LAAsLCwALCwsAP///wD///8A////AP///wD///8A////ACwsLAAsLCwALCwsACwsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP9RUkj/0tLS////////////////////
+        //////////////////+2trP/XV1U/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/dXVt/8nJyP//////////////
+        ////////////////////////np6a/y8vLf8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCwsACwsLAAsLCwA////AP///wD///8A////AP///wD///8ALCwsACws
+        LAAsLCwALCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/NDQw/7q7
+        uf//////////////////////////////////////oKGd/z09Nv8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/YWFX/8PDwv///////////////////////////7u7uf9sbGP/Li4s/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCwALCwsACwsLAD///8A////AP//
+        /wD///8A////AP///wAsLCwALCwsACwsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP+Hh4H//////////////////////////////////////52dl/8yMi7/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/UFBH/8XFxv///////////9LS0v+IiIH/Ozs0/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LAAsLCwALCwsAP///wD///8A////AP///wD///8A////ACwsLAAsLCwALCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/QEA5/9LS0v//////////////////////////////
+        //+zs7D/ODgy/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/YGBX/9LS
+        0v+urqr/UE9H/ywsLP8sLCz/LCws/ywsLP8tLSz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLAAsLCwA////AP///wD///8A////AP///wD///8ALCwsACws
+        LAAsLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP+goJv/////////
+        ////////////////////////zMzL/1BQR/8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/SkpC/zAwLf8sLCz/LCws/ywsLP8sLCz/S0tC/6Cgm/9MTEP/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCwsACwsLAD///8A////AP//
+        /wD///8A////AP///wAsLCwALCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/RkY+/8/Pzv////////////////////////////////+Hh3//LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/QUA5/4mJ
+        gf/Bwr///////6Kinf8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCwALCwsAP///wD///8A////AP///wD///8A////ACwsLAAsLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP98fXT//v7+////////////////////////////ycjJ/zQ0
+        L/8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/MzMv/3p7cv/Bwb///v7+////////////zMzL/0FBOf8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCwA////AP///wD///8A////AP///wD///8ALCwsACws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/Li4t/66uqv//////////////
+        //////////////////9kZFz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP+2trP////////////////////////////+/v3/b29l/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLAD///8A////AP//
+        /wD///8A////AP///wAsLCwALCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP9CQzr/9fXy////////////////////////////vb2//zQ0L/8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/2lpYv//////////////
+        //////////////7+/v+bm5X/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCwsAP///wD///8A////AP///wD///8A////ACwsLN4sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/15fVf/5+fj///////////////////////////9+fnb/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/Nzgy/8/P0v/////////////////////////+/7m5tv8zMy//LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCwA////AP///wD///8A////AP///wD///8ALCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/enpy//39/f//////////////
+        /////////v7//1xcUv8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/kpGL////////////////////////////9fXy/0NE
+        O/8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLAD///8A////AP//
+        /wD///8A////AP///wAsLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP+IiH///v7+///////////////////////09PH/RUU8/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP93d23/////////
+        ///////////////////8/Pr/VVVL/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/////wD///8A////AP///wD///8A////ACwsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/42Nh//+/v7//////////////////////+zr5v86OjP/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/1lZT/+5ubn/6uro/+rq6P/q6uj/6uro/6ysqv9VVUz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/////AP///wD///8A////AP///wD///8ALCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/kZGL//7+/v//////////////
+        ////////4+Pb/zM0L/8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/zExLv8wMC3/Ly8t/y8vLf8vLy3/MDAt/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP////8A////AP//
+        /wD///8A////AP///wAsLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP+RkYv//v7+///////////////////////h4dn/MjIu/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/////wD///8A////AP///wD///8A////ACwsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/5GRi//+/v7//////////////////////+Dg2P8yMi7/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/////AP///wD///8A////AP///wD///8ALCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/kZGL//7+/v//////////////
+        ////////5+fg/zY2Mf8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/Pz84/3Fxa/9vb2n/bm5n/25uZ/9ubmf/bWxl/0FB
+        Of8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP////8A////AP//
+        /wD///8A////AP///wAsLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP+MjIT//v7+///////////////////////v8Ov/Pj42/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP9vb2X/////////
+        ////////////////////////XV1S/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/////wD///8A////AP///wD///8A////ACwsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/4WFff/+/v7///////////////////////n5+P9PT0X/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/4GBeP////////////////////////////b29P9MTEL/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz9////AP///wD///8A////AP///wD///8ALCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/b29n//z8+///////////////
+        /////////////2trYv8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8vLy3/q6qo//////////////////////////7/8/Pw/zw8
+        Nf8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLAD///8A////AP//
+        /wD///8A////AP///wAsLCzeLCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP9QUEf/9/f1////////////////////////////mJiT/y0tLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/0NDO///////////////
+        //////////////7+/v+urqr/Li4s/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCwsAP///wD///8A////AP///wD///8A////ACwsLAAsLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/zc3Mf+5ubf/////////////////////////////////QUI6/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/q6un/////////////////////////////v7+/4eHf/8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCwA////AP///wD///8A////AP///wD///8ALCwsACws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/5mZkv////7/////////
+        //////////////////+hoJ3/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP9vb2f/wsK////////////////////////+/v3/V1dO/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLAD///8A////AP//
+        /wD///8A////AP///wAsLCwALCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/YWFX//39/f///////////////////////////9LS0v9VVUz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP85OTP/h4d//8bG
+        xf/+/v7//////8DAv/8wMC3/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCwsAP///wD///8A////AP///wD///8A////ACwsLAAsLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8yMi7/wcC//////////////////////////////////7Gx
+        rv8yMi7/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/SkpB/5aWkP/Ly8v/enpy/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLAAsLCwA////AP///wD///8A////AP///wD///8ALCwsACws
+        LAAsLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP9ycWn/////////
+        /////////////////////////////319dP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP84ODL/j4+J/1tbUP8sLCz/LCws/ywsLP8sLCz/LCws/1xbUv8yMi7/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCwsACwsLAD///8A////AP//
+        /wD///8A////AP///wAsLCwALCwsACwsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/y0tLP+8vLn/////////////////////////////////0dHS/2FhWP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/1lZT/9MTEP/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/Ly8t/5qalf//////0tLS/52dmP9GRj7/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCwALCwsAP///wD///8A////AP///wD///8A////ACwsLAAsLCwALCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/1RUS//S0tL/////////////////////////
+        ////////yMjI/1lZT/8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/c3Nn/8/O
+        zv9gYFf/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/zExLv+WlpD/////////
+        /////////////8vLy/93d2//NDQw/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCwsACwsLAAsLCwA////AP///wD///8A////AP///wD///8ALCwsACws
+        LAAsLCwALCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/4uK
+        hP//////////////////////////////////////ysnJ/3BwZ/8vLy3/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP9tbWH//////8/Pz/+KioT/Pz84/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP9BQTr/pKSf//////////////////////////////////////+jo5//MzMv/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCwALCwsACwsLAD///8A////AP//
+        /wD///8A////AP///wAsLCwALCwsACwsLAAsLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/NTUw/6urp////////////////////////////////////////Pv7/5iY
+        kv9LS0L/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/21tYv////////////////+2trT/aWlf/ywt
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/0hIP/+xsbD//////////v///////////////////////////3Jy
+        af8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LAAsLCwALCwsAP///wD///8A////AP///wD///8A////ACwsLAAsLCwALCwsACwsLAAsLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/QkI6/7+/v///////////////
+        /////////////////////////v7+/8HBv/+Skov/PDw1/ywsLP8sLCz/LCws/ywsLP8sLCz/bW1i////
+        /////////////////v/8/Pv/o6Of/z8/OP8sLCz/LCws/ywsLP8sLCz/LCws/y8vLf+AgHr/0tLS////
+        //////////////////+Ojoj/Li4t/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCwALCwsACwsLAAsLCwA////AP///wD///8A////AP///wD///8ALCwsACws
+        LAAsLCwALCwsACwsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/WFhP/8vLzP/////////////////////////////////////////////////S0tL/oaGf/z4+
+        N/8sLCz/LCws/ywsLP9ubmP/////////////////////////////////ysrI/1VUTP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP9eXlb/0tLS//7+/v//////p6ei/zY2Mf8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLAAsLCwALCwsACwsLAD///8A////AP//
+        /wD///8A////AP///wAsLCwALCwsACwsLAAsLCwALCwsACwsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/aGhe/8bGxv//////////////////////////////
+        ////////////////////////0tLS/8XFyP+NjYf/bW1l/6Cgm///////////////////////////////
+        ////////0tLS/3x8dP8wMC3/LCws/ywsLP8sLCz/LCws/ywsLP9CQjr/paWg/6ysqP9BQTn/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCwALCwsACws
+        LAAsLCwALCwsAP///wD///8A////AP///wD///8A////ACwsLAAsLCwALCwsACwsLAAsLCwALCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/V1dN/7Oz
+        sP//////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////6mppf9ISD//LCws/ywsLP8sLCz/LCws/yws
+        LP8xMS7/Nzcx/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCwsACwsLAAsLCwALCwsACwsLAAsLCwA////AP///wD///8A////AP///wD///8ALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/QEA5/5aWkP//////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////8bG
+        xf9qamH/MzMv/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCwALCwsACwsLAAsLCwALCwsACwsLAD///8A////AP//
+        /wD///8A////AP///wAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/MTEu/2pqYf+8vLz/////////
+        ////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////+KioT/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsAP///wD///8A////AP///wD///8A////ACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/zc3Mv91dW3/y8vM////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////S0tL/hYV9/zk5Mv8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwA////AP///wD///8A////AP///wD///8ALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP82NjH/dXVt/8DAv///////////////
+        ////////////////////////////////////////////////////////////////////////y8vL/2Fh
+        V/8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAD///8A////AP//
+        /wD///8A////AP///wAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/Ly8t/09PRv98fHT/pKOf/8LBv//6+vv//Pz7///+/v//////////////////////////////
+        /////////////6mppf9DRDv/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsAP///wD///8A////AP///wD///8A////ACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsACwsLAAsLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/MTEu/z4+N/9ISED/mJiQ////
+        /////////////////////////v7+/8bGxv96enL/Ly8t/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCwALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwA////AP///wD///8A////AP///wD///8ALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP9paV7///////////////////////7+/v+xsa3/UE9H/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAD///8A////AP//
+        /wD///8A////AP///wAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/21tYv/////////////////Jycj/goJ6/zU1
+        MP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsAP///wD///8A////AP///wD///8A////ACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/bW1h////
+        ////////sLCt/1NTSv8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwA////AP///wD///8A////AP///wD///8ALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP9wcWX/0tLS/4eGf/83NzH/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAD///8A////AP//
+        /wD///8A////AP///wAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsACwsLAAsLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/19fVf9iYln/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws+SwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsAP///wD///8A////AP///wD///8A////ACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCzfLCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLMcsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwA////AP///wD///8A////AP///wD///8ALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCzHLCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLOAsLCzHLCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAD///8A////AP//
+        /wD///8A////AP///wAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLN4sLCwALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsAP///wD///8A////AP///wD///8A////ACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LMcsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwA////AP///wD///8A////AP///wD///8ALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAD///8A////AP//
+        /wD///8A////AP///wAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCws4CwsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/ywsLP8sLCz/LCws/yws
+        LP8sLCz/LCws/ywsLP8sLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACwsLAAsLCwALCwsACws
+        LAAsLCwALCwsAP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A/////////////wAA////////
+        /////wAA/////////////wAA//////gf/////wAA/////gAAf////wAA////8AAAD////wAA////gAAA
+        Af///wAA///+AAAAAH///wAA///wAAAAAA///wAA///gAAAAAAf//wAA///AAAAAAAP//wAA//+AAAAA
+        AAH//wAA//8AAAAAAAD//wAA//4AAAAAAAB//wAA//wAAAAAAAA//wAA//gAAAAAAAAf/wAA//AAAAAA
+        AAAP/wAA/+AAAAAAAAAH/wAA/8AAAAAAAAAD/wAA/4AAAAAAAAAD/wAA/4AAAAAAAAAB/wAA/wAAAAAA
+        AAAA/wAA/wAAAAAAAAAA/wAA/gAAAAAAAAAAfwAA/gAAAAAAAAAAfwAA/AAAAAAAAAAAPwAA/AAAAAAA
+        AAAAPwAA+AAAAAAAAAAAPwAA+AAAAAAAAAAAHwAA+AAAAAAAAAAAHwAA8AAAAAAAAAAAHwAA8AAAAAAA
+        AAAADwAA8AAAAAAAAAAADwAA8AAAAAAAAAAADwAA4AAAAAAAAAAADwAA4AAAAAAAAAAADwAA4AAAAAAA
+        AAAABwAA4AAAAAAAAAAABwAA4AAAAAAAAAAABwAA4AAAAAAAAAAABwAA4AAAAAAAAAAABwAA4AAAAAAA
+        AAAABwAA4AAAAAAAAAAABwAA4AAAAAAAAAAABwAA4AAAAAAAAAAADwAA4AAAAAAAAAAADwAA8AAAAAAA
+        AAAADwAA8AAAAAAAAAAADwAA8AAAAAAAAAAADwAA8AAAAAAAAAAAHwAA+AAAAAAAAAAAHwAA+AAAAAAA
+        AAAAHwAA+AAAAAAAAAAAPwAA/AAAAAAAAAAAPwAA/AAAAAAAAAAAPwAA/gAAAAAAAAAAfwAA/gAAAAAA
+        AAAAfwAA/wAAAAAAAAAA/wAA/wAAAAAAAAAB/wAA/4AAAAAAAAAB/wAA/4AAAAAAAAAD/wAA/8AAAAAA
+        AAAD/wAA/+AAAAAAAAAH/wAA//AAAAAAAAAP/wAA//gAAAAAAAAf/wAA//wAAAAAAAA//wAA//4AAAAA
+        AAB//wAA//8AAAAAAAD//wAA//+AAAAAAAH//wAA///AAAAAAAP//wAA///gAAAAAAf//wAA///wAAAA
+        AA///wAA///+AAAAAH///wAA////gAAAAf///wAA////8AAAD////wAA/////gAA/////wAA////////
+        /////wAA/////////////wAA/////////////wAA/////////////wAA
+</value>
+  </data>
+</root>
