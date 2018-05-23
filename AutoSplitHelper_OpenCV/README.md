@@ -3,9 +3,23 @@
 			終　監視のマルチスレッド化
 			　　→インターバルを小さくするとmaxvalがバグる。原因不明
 			終　グラフ周りのcurボタンが効かなかった
+			終　Calibrationのアスペクト比変更を分かりやすく
+			　　モニタリングの進む、戻る、リセットのホットキーを作る
+			　　チャート表示機能
 
+			フォルダ構造について、
+			　現在　./savedata/csvfile/[profilename].csv
+			　　　　          /picture/[profilename]/n.bmp
+			　　　　          /textfile/[profilename]/n.rtf
+			　　　　          /profile/[profilename].txt
 
+			　を、
+			　　　　./savedata/[profilename]/[profilename].csv
+			　　　　                        /picture/n.bmp
+			　　　　                        /textfile/n.rtf
+			　　　　                        /[profilename].txt
 
+			現在のプロファイルを共有用に出力
 
 2018/05/20
 

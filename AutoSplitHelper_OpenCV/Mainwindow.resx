@@ -949,13 +949,13 @@
     <value>5, 0</value>
   </data>
   <data name="Label97.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 19</value>
+    <value>333, 19</value>
   </data>
   <data name="Label97.TabIndex" type="System.Int32, mscorlib">
     <value>283</value>
   </data>
   <data name="Label97.Text" xml:space="preserve">
-    <value>Current Setting (Details by label click)</value>
+    <value>Current Setting (Show details by label click)</value>
   </data>
   <data name="&gt;&gt;Label97.Name" xml:space="preserve">
     <value>Label97</value>
@@ -2445,6 +2445,75 @@
   <data name="&gt;&gt;grpgeneral.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="btnshow_chart.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnshow_chart.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 8pt</value>
+  </data>
+  <data name="btnshow_chart.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnshow_chart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>136, 87</value>
+  </data>
+  <data name="btnshow_chart.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 1, 0, 0</value>
+  </data>
+  <data name="btnshow_chart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 26</value>
+  </data>
+  <data name="btnshow_chart.TabIndex" type="System.Int32, mscorlib">
+    <value>305</value>
+  </data>
+  <data name="btnshow_chart.Text" xml:space="preserve">
+    <value>Show Chart</value>
+  </data>
+  <data name="&gt;&gt;btnshow_chart.Name" xml:space="preserve">
+    <value>btnshow_chart</value>
+  </data>
+  <data name="&gt;&gt;btnshow_chart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnshow_chart.Parent" xml:space="preserve">
+    <value>pnl_other</value>
+  </data>
+  <data name="&gt;&gt;btnshow_chart.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="chkshow_chart.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkshow_chart.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 11pt</value>
+  </data>
+  <data name="chkshow_chart.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkshow_chart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 88</value>
+  </data>
+  <data name="chkshow_chart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 23</value>
+  </data>
+  <data name="chkshow_chart.TabIndex" type="System.Int32, mscorlib">
+    <value>256</value>
+  </data>
+  <data name="chkshow_chart.Text" xml:space="preserve">
+    <value>Show chart</value>
+  </data>
+  <data name="&gt;&gt;chkshow_chart.Name" xml:space="preserve">
+    <value>chkshow_chart</value>
+  </data>
+  <data name="&gt;&gt;chkshow_chart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkshow_chart.Parent" xml:space="preserve">
+    <value>pnl_other</value>
+  </data>
+  <data name="&gt;&gt;chkshow_chart.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="chkcreate_temppicture.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2476,13 +2545,13 @@
     <value>pnl_other</value>
   </data>
   <data name="&gt;&gt;chkcreate_temppicture.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="txtpass_picturefolder.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 9pt</value>
   </data>
   <data name="txtpass_picturefolder.Location" type="System.Drawing.Point, System.Drawing">
-    <value>81, 165</value>
+    <value>81, 186</value>
   </data>
   <data name="txtpass_picturefolder.Size" type="System.Drawing.Size, System.Drawing">
     <value>221, 23</value>
@@ -2500,13 +2569,13 @@
     <value>pnl_other</value>
   </data>
   <data name="&gt;&gt;txtpass_picturefolder.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="txtpass_csv.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 9pt</value>
   </data>
   <data name="txtpass_csv.Location" type="System.Drawing.Point, System.Drawing">
-    <value>81, 132</value>
+    <value>81, 153</value>
   </data>
   <data name="txtpass_csv.Size" type="System.Drawing.Size, System.Drawing">
     <value>221, 23</value>
@@ -2524,7 +2593,7 @@
     <value>pnl_other</value>
   </data>
   <data name="&gt;&gt;txtpass_csv.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="Label98.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2557,7 +2626,7 @@
     <value>pnl_other</value>
   </data>
   <data name="&gt;&gt;Label98.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="Label26.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2569,7 +2638,7 @@
     <value>NoControl</value>
   </data>
   <data name="Label26.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 134</value>
+    <value>19, 155</value>
   </data>
   <data name="Label26.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 18</value>
@@ -2590,7 +2659,7 @@
     <value>pnl_other</value>
   </data>
   <data name="&gt;&gt;Label26.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="Label23.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2602,7 +2671,7 @@
     <value>NoControl</value>
   </data>
   <data name="Label23.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 168</value>
+    <value>19, 189</value>
   </data>
   <data name="Label23.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 18</value>
@@ -2623,7 +2692,7 @@
     <value>pnl_other</value>
   </data>
   <data name="&gt;&gt;Label23.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="lbllivesplit_state.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2656,7 +2725,7 @@
     <value>pnl_other</value>
   </data>
   <data name="&gt;&gt;lbllivesplit_state.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="pnl_other.Location" type="System.Drawing.Point, System.Drawing">
     <value>1477, 360</value>

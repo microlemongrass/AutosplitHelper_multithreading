@@ -120,6 +120,9 @@
   <data name="&gt;&gt;btn2_getwindowtitle.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;list2_alltitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btn2_getwindowtitle.Location" type="System.Drawing.Point, System.Drawing">
     <value>11, 10</value>
@@ -133,7 +136,7 @@
   <data name="btn2_getwindowtitle.Text" xml:space="preserve">
     <value>Reload</value>
   </data>
-  <data name="btn2_getwindowtitle.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="list2_hwnd.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 11pt</value>
   </data>
   <data name="&gt;&gt;list2_hwnd.ZOrder" xml:space="preserve">
@@ -143,9 +146,11 @@
   <data name="list2_hwnd.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btn2_getwindowtitle.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
+  <data name="list2_hwnd.TabIndex" type="System.Int32, mscorlib">
+    <value>115</value>
+  </data>
+  <data name="&gt;&gt;btnadd.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="txtprocess.Location" type="System.Drawing.Point, System.Drawing">
     <value>11, 189</value>
@@ -162,8 +167,8 @@
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>getprocesswindow1</value>
   </data>
-  <data name="btnadd.Text" xml:space="preserve">
-    <value>Add</value>
+  <data name="&gt;&gt;btnadd.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;btn2_getwindowtitle.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -177,6 +182,7 @@
   <data name="btn2_getwindowtitle.Size" type="System.Drawing.Size, System.Drawing">
     <value>125, 32</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="txtprocess.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Right</value>
   </data>
@@ -186,11 +192,8 @@
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>445, 225</value>
   </data>
-  <data name="list2_hwnd.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 11pt</value>
-  </data>
-  <data name="&gt;&gt;txtprocess.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;list2_hwnd.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;txtprocess.Parent" xml:space="preserve">
     <value>$this</value>
@@ -201,11 +204,8 @@
   <data name="txtprocess.Size" type="System.Drawing.Size, System.Drawing">
     <value>421, 26</value>
   </data>
-  <data name="txtprocess.TabIndex" type="System.Int32, mscorlib">
-    <value>116</value>
-  </data>
-  <data name="&gt;&gt;list2_hwnd.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;txtprocess.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="list2_hwnd.ItemHeight" type="System.Int32, mscorlib">
     <value>19</value>
@@ -213,14 +213,11 @@
   <data name="&gt;&gt;btn2_getwindowtitle.Name" xml:space="preserve">
     <value>btn2_getwindowtitle</value>
   </data>
-  <data name="btnadd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 32</value>
+  <data name="btn2_getwindowtitle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 11pt</value>
   </data>
-  <data name="&gt;&gt;list2_alltitle.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnadd.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="btnadd.Text" xml:space="preserve">
+    <value>Add</value>
   </data>
   <data name="list2_alltitle.ItemHeight" type="System.Int32, mscorlib">
     <value>19</value>
@@ -231,20 +228,20 @@
   <data name="list2_alltitle.Size" type="System.Drawing.Size, System.Drawing">
     <value>422, 135</value>
   </data>
-  <data name="btnadd.TabIndex" type="System.Int32, mscorlib">
-    <value>117</value>
-  </data>
   <data name="btn2_getwindowtitle.TabIndex" type="System.Int32, mscorlib">
     <value>114</value>
   </data>
   <data name="&gt;&gt;btn2_getwindowtitle.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;list2_alltitle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="btnadd.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
-  <data name="list2_hwnd.TabIndex" type="System.Int32, mscorlib">
-    <value>115</value>
+  <data name="btnadd.TabIndex" type="System.Int32, mscorlib">
+    <value>117</value>
+  </data>
+  <data name="&gt;&gt;btnadd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;list2_hwnd.Type" xml:space="preserve">
     <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -255,8 +252,8 @@
   <data name="txtprocess.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 11pt</value>
   </data>
-  <data name="&gt;&gt;btnadd.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;list2_alltitle.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="btnadd.Location" type="System.Drawing.Point, System.Drawing">
     <value>307, 10</value>
@@ -267,11 +264,14 @@
   <data name="list2_hwnd.Location" type="System.Drawing.Point, System.Drawing">
     <value>450, 48</value>
   </data>
-  <data name="btnadd.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
+  <data name="txtprocess.TabIndex" type="System.Int32, mscorlib">
+    <value>116</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnadd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 32</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Add...</value>
@@ -279,13 +279,10 @@
   <data name="btnadd.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 11pt</value>
   </data>
-  <data name="&gt;&gt;btnadd.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="btn2_getwindowtitle.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>ja-JP</value>
   </metadata>
 </root>

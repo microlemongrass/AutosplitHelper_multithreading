@@ -204,6 +204,12 @@
     <Compile Include="tableview.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Textwindow.Designer.vb">
+      <DependentUpon>Textwindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Textwindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Validation.vb" />
     <Compile Include="Videoplayer.Designer.vb">
       <DependentUpon>Videoplayer.vb</DependentUpon>
@@ -286,6 +292,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="tableview.resx">
       <DependentUpon>tableview.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Textwindow.resx">
+      <DependentUpon>Textwindow.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Videoplayer.resx">
       <DependentUpon>Videoplayer.vb</DependentUpon>

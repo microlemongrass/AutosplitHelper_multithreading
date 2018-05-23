@@ -162,7 +162,7 @@ Public Class Import_picture
 
         '■新規にプロファイルを作成する。同名チェック→プロファイル作成、フォルダ作成、パスのフォルダ/ファイルコピー
         '基本的にメインウィンドウのコントロールを使用するため、メインウィンドウ上で行う。
-        If System.IO.File.Exists("./csvfile/" & txtname.Text & ".csv") Then
+        If System.IO.File.Exists("./savedata/csvfile/" & txtname.Text & ".csv") Then
             MessageBox.Show(txtname.Text & My.Resources.Message.msg20, "AutoSplit Helper by Image") '"は既に存在しています。"
         Else
 

@@ -646,6 +646,8 @@ Partial Class Mainwindow
         Me.timchecktimer = New System.Windows.Forms.Timer(Me.components)
         Me.timcamera = New System.Windows.Forms.Timer(Me.components)
         Me.timcalib = New System.Windows.Forms.Timer(Me.components)
+        Me.chkshow_chart = New System.Windows.Forms.CheckBox()
+        Me.btnshow_chart = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.DGtable, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1509,6 +1511,8 @@ Partial Class Mainwindow
         'pnl_other
         '
         Me.pnl_other.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.pnl_other.Controls.Add(Me.btnshow_chart)
+        Me.pnl_other.Controls.Add(Me.chkshow_chart)
         Me.pnl_other.Controls.Add(Me.chkcreate_temppicture)
         Me.pnl_other.Controls.Add(Me.txtpass_picturefolder)
         Me.pnl_other.Controls.Add(Me.txtpass_csv)
@@ -5909,6 +5913,22 @@ Partial Class Mainwindow
         'timcalib
         '
         '
+        'chkshow_chart
+        '
+        resources.ApplyResources(Me.chkshow_chart, "chkshow_chart")
+        Me.chkshow_chart.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.chkshow_chart.ForeColor = System.Drawing.SystemColors.Control
+        Me.chkshow_chart.Name = "chkshow_chart"
+        Me.chkshow_chart.UseVisualStyleBackColor = False
+        '
+        'btnshow_chart
+        '
+        Me.btnshow_chart.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
+        resources.ApplyResources(Me.btnshow_chart, "btnshow_chart")
+        Me.btnshow_chart.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btnshow_chart.Name = "btnshow_chart"
+        Me.btnshow_chart.UseVisualStyleBackColor = False
+        '
         'Mainwindow
         '
         resources.ApplyResources(Me, "$this")
@@ -6724,4 +6744,6 @@ Partial Class Mainwindow
     Friend WithEvents rdocalib_aspect_to43 As RadioButton
     Friend WithEvents rdocalib_aspect_to169 As RadioButton
     Friend WithEvents rdocalib_aspect_none As RadioButton
+    Friend WithEvents btnshow_chart As Button
+    Friend WithEvents chkshow_chart As CheckBox
 End Class

@@ -146,8 +146,8 @@ Public Class Mainwindow
         Me.Location = New Drawing.Point(numsavex.Value, numsavey.Value)
 
         '■テンプレート画像のテンポラリーファイル。監視などが安定しない時に使用している。
-        If System.IO.Directory.Exists("./savedata/temp3") Then
-            System.IO.Directory.Delete("./savedata/temp3", True) ' フォルダ (ディレクトリ) を削除する
+        If System.IO.Directory.Exists("./temp/temp3") Then
+            System.IO.Directory.Delete("./temp/temp3", True) ' フォルダ (ディレクトリ) を削除する
 
 
         End If
@@ -230,7 +230,7 @@ Public Class Mainwindow
         '読み込み中の描画をしない(これでかなり高速に処理できる)　
         cmbtimer.BeginUpdate()  'こちらの効果の程は、Web 上でも色々紹介され一般的に知られている
 
-        Dim st As New System.IO.StreamReader(".\savedata\01_active1.txt", System.Text.Encoding.Default)
+        Dim st As New System.IO.StreamReader("./savedata/01_active1.txt", System.Text.Encoding.Default)
 
         'ファイルの最後までループ
         Do Until st.Peek = -1
@@ -251,7 +251,7 @@ Public Class Mainwindow
 
         cmbsomeapp.BeginUpdate()
 
-        Dim st2 As New System.IO.StreamReader(".\savedata\02_active2.txt", System.Text.Encoding.Default)
+        Dim st2 As New System.IO.StreamReader("./savedata/02_active2.txt", System.Text.Encoding.Default)
 
         'ファイルの最後までループ
         Do Until st2.Peek = -1
@@ -270,7 +270,7 @@ Public Class Mainwindow
 
         cmbprofile.BeginUpdate()
 
-        Dim st5 As New System.IO.StreamReader(".\savedata\03_profilelist.txt", System.Text.Encoding.Default)
+        Dim st5 As New System.IO.StreamReader("./savedata/03_profilelist.txt", System.Text.Encoding.Default)
 
         'ファイルの最後までループ
         Do Until st5.Peek = -1
@@ -287,7 +287,7 @@ Public Class Mainwindow
 
         cmbcv_resolution.BeginUpdate()
 
-        Dim st6 As New System.IO.StreamReader(".\savedata\04_resolution.txt", System.Text.Encoding.Default)
+        Dim st6 As New System.IO.StreamReader("./savedata/04_resolution.txt", System.Text.Encoding.Default)
 
         'ファイルの最後までループ
         Do Until st6.Peek = -1
@@ -308,7 +308,7 @@ Public Class Mainwindow
 
             Try
 
-                Dim myfilename_table1 As String = ".\csvfile\default.csv"
+                Dim myfilename_table1 As String = "./savedata/csvfile/default.csv"
 
                 Dim parser As TextFieldParser = New TextFieldParser(myfilename_table1, Encoding.GetEncoding("Shift_JIS"))
                 parser.TextFieldType = FieldType.Delimited
@@ -348,7 +348,7 @@ Public Class Mainwindow
 
             Try
 
-                Dim myfilename_position As String = ".\savedata\position.csv"
+                Dim myfilename_position As String = "./savedata/position.csv"
 
                 Dim parser As TextFieldParser = New TextFieldParser(myfilename_position, Encoding.GetEncoding("Shift_JIS"))
                 parser.TextFieldType = FieldType.Delimited
@@ -398,8 +398,8 @@ Public Class Mainwindow
             cmbtimer.SelectedIndex = 0
             cmbsomeapp.SelectedIndex = 0
 
-            txtpass_picturefolder.Text = "./picture/default"
-            txtpass_csv.Text = "./csvfile/default.csv"
+            txtpass_picturefolder.Text = "./savedata/picture/default"
+            txtpass_csv.Text = "./savedata/csvfile/default.csv"
 
             cmbcv_device.SelectedIndex = 0
 
@@ -569,7 +569,7 @@ Public Class Mainwindow
     Private Sub Mainwindow_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
 
         ' フォルダ (ディレクトリ) を作成する
-        System.IO.Directory.CreateDirectory("./savedata/temp3")
+        System.IO.Directory.CreateDirectory("./temp/temp3")
 
         '■Livesplitの名前付きパイプの接続状況表示。存在したら接続
 
@@ -847,16 +847,16 @@ Public Class Mainwindow
         Dim import_csv As String = Import_picture.txtpass_csv.Text
         Dim import_name As String = Import_picture.txtname.Text
 
-        txtpass_picturefolder.Text = "./picture/" & import_name
-        txtpass_csv.Text = "./csvfile/" & import_name & ".csv"
+        txtpass_picturefolder.Text = "./savedata/picture/" & import_name
+        txtpass_csv.Text = "./savedata/csvfile/" & import_name & ".csv"
 
         '■フォルダ (ディレクトリ) を作成する
-        System.IO.Directory.CreateDirectory("./picture/" & import_name & "/")
+        System.IO.Directory.CreateDirectory("./savedata/picture/" & import_name & "/")
 
-        My.Computer.FileSystem.CopyDirectory(import_pic, "./picture/" & import_name,
+        My.Computer.FileSystem.CopyDirectory(import_pic, "./savedata/picture/" & import_name,
         FileIO.UIOption.AllDialogs, FileIO.UICancelOption.DoNothing)
 
-        My.Computer.FileSystem.CopyFile(import_csv, "./csvfile/" & import_name & ".csv",
+        My.Computer.FileSystem.CopyFile(import_csv, "./savedata/csvfile/" & import_name & ".csv",
         FileIO.UIOption.AllDialogs, FileIO.UICancelOption.DoNothing)
 
 
@@ -4793,7 +4793,7 @@ Public Class Mainwindow
 
         btncalib_resize.Enabled = False
         btnpreview.Enabled = False
-        txtpass_picturefolder.Text = "./picture/" & cmbprofile.SelectedItem 'Mainwindow.txtpass_picturefolder.Text
+        txtpass_picturefolder.Text = "./savedata/picture/" & cmbprofile.SelectedItem 'Mainwindow.txtpass_picturefolder.Text
 
 
         '■ファイルが存在しているかどうか確認する
@@ -4954,7 +4954,7 @@ Public Class Mainwindow
 
         piccalib_bestresult.Image = canvas
 
-        piccalib_bestresult.Image.Save("./savedata/temp2/best.bmp", ImageFormat.Bmp)
+        piccalib_bestresult.Image.Save("./temp/temp2/best.bmp", ImageFormat.Bmp)
 
 
     End Sub
@@ -5021,7 +5021,7 @@ Public Class Mainwindow
 
                 'PictureBox1に表示する
                 piccalib_handresult.Image = canvas
-                piccalib_handresult.Image.Save("./savedata/temp/" & txtcalib_count.Text & ".bmp", ImageFormat.Bmp)
+                piccalib_handresult.Image.Save("./temp/temp1/" & txtcalib_count.Text & ".bmp", ImageFormat.Bmp)
 
                 numcalib_scale.Value += 0.1
 
@@ -5106,7 +5106,7 @@ Public Class Mainwindow
 
                 'PictureBox1に表示する
                 piccalib_handresult.Image = canvas
-                piccalib_handresult.Image.Save("./savedata/temp/" & txtcalib_count.Text & ".bmp", ImageFormat.Bmp)
+                piccalib_handresult.Image.Save("./temp/temp1/" & txtcalib_count.Text & ".bmp", ImageFormat.Bmp)
 
                 numcalib_scaleheight.Value += 0.1
 
@@ -5161,7 +5161,7 @@ Public Class Mainwindow
             Dim brightness As Integer = numcalib_bright.Value + bright
 
             '色補正をする画像
-            Dim img As New Bitmap("./savedata/temp2/best.bmp")
+            Dim img As New Bitmap("./temp/temp2/best.bmp")
             '赤を128増加させる
             AdjustColorImage(img, brightness, brightness, brightness)
             'PictureBox1に表示
@@ -5172,7 +5172,7 @@ Public Class Mainwindow
             End If
 
             piccalib_handresult.Image = img
-            piccalib_handresult.Image.Save("./savedata/temp/" & txtcalib_count.Text & ".bmp", ImageFormat.Bmp)
+            piccalib_handresult.Image.Save("./temp/temp1/" & txtcalib_count.Text & ".bmp", ImageFormat.Bmp)
 
             Application.DoEvents()
 
@@ -5232,7 +5232,7 @@ Public Class Mainwindow
                     Dim valG As Integer = numcalib_g.Value + gg
                     Dim valB As Integer = numcalib_b.Value + bb
                     '色補正をする画像
-                    Dim img As New Bitmap("./savedata/temp2/best.bmp")
+                    Dim img As New Bitmap("./temp/temp2/best.bmp")
                     '赤を128増加させる
                     AdjustColorImage(img, valR, valG, valB)
                     'PictureBox1に表示
@@ -5243,7 +5243,7 @@ Public Class Mainwindow
                     End If
 
                     piccalib_handresult.Image = img
-                    piccalib_handresult.Image.Save("./savedata/temp/" & txtcalib_count.Text & ".bmp", ImageFormat.Bmp)
+                    piccalib_handresult.Image.Save("./temp/temp1/" & txtcalib_count.Text & ".bmp", ImageFormat.Bmp)
                     Application.DoEvents()
 
                     calib()
@@ -5394,7 +5394,7 @@ Public Class Mainwindow
 
         'Try '画像サイズが映像キャプチャデバイスのサイズ以上だとエラー落ちする
 
-        Dim aa As String = "./savedata/temp/" & txtcalib_count.Text & ".bmp"
+        Dim aa As String = "./temp/temp1/" & txtcalib_count.Text & ".bmp"
 
         Using tpl2 As Mat = Cv2.ImRead(aa, ImreadModes.Color)
 
@@ -5423,10 +5423,10 @@ Public Class Mainwindow
 
                     If txtcalib_scaleorcolor.Text = 0 Then
 
-                        System.IO.File.Copy("./savedata/temp/" & txtcalib_count.Text & ".bmp", "./savedata/temp2/bestscale.bmp", True)
+                        System.IO.File.Copy("./temp/temp1/" & txtcalib_count.Text & ".bmp", "./temp/temp2/bestscale.bmp", True)
 
                     ElseIf txtcalib_scaleorcolor.Text = 1 Then
-                        System.IO.File.Copy("./savedata/temp/" & txtcalib_count.Text & ".bmp", "./savedata/temp2/bestcolor.bmp", True)
+                        System.IO.File.Copy("./temp/temp1/" & txtcalib_count.Text & ".bmp", "./temp/temp2/bestcolor.bmp", True)
 
 
                     End If
@@ -5452,10 +5452,10 @@ Public Class Mainwindow
         Dim aa As String
 
         If txtcalib_scaleorcolor.Text = 0 Then
-            aa = "./savedata/temp2/handscale.bmp"
+            aa = "./temp/temp2/handscale.bmp"
 
         ElseIf txtcalib_scaleorcolor.Text = 1 Then
-            aa = "./savedata/temp2/handrgb.bmp"
+            aa = "./temp/temp2/handrgb.bmp"
 
         End If
 
@@ -5496,11 +5496,11 @@ Public Class Mainwindow
 
                     If txtcalib_scaleorcolor.Text = 0 Then
 
-                        System.IO.File.Copy("./savedata/temp2/handscale.bmp", "./savedata/temp2/bestscale.bmp", True)
+                        System.IO.File.Copy("./temp/temp2/handscale.bmp", "./temp/temp2/bestscale.bmp", True)
 
 
                     ElseIf txtcalib_scaleorcolor.Text = 1 Then
-                        System.IO.File.Copy("./savedata/temp2/handrgb.bmp", "./savedata/temp2/bestcolor.bmp", True)
+                        System.IO.File.Copy("./temp/temp2/handrgb.bmp", "./temp/temp2/bestcolor.bmp", True)
 
 
                     End If
@@ -5695,7 +5695,7 @@ Public Class Mainwindow
 
             'PictureBox1に表示する
             piccalib_handresult.Image = canvas
-            piccalib_handresult.Image.Save("./savedata/temp2/handscale.bmp", ImageFormat.Bmp)
+            piccalib_handresult.Image.Save("./temp/temp2/handscale.bmp", ImageFormat.Bmp)
 
             'Application.DoEvents()
 
@@ -5756,7 +5756,7 @@ Public Class Mainwindow
 
             'PictureBox1に表示する
             piccalib_handresult.Image = canvas
-            piccalib_handresult.Image.Save("./savedata/temp2/handscale.bmp", ImageFormat.Bmp)
+            piccalib_handresult.Image.Save("./temp/temp2/handscale.bmp", ImageFormat.Bmp)
 
             calib_hand()
 
@@ -5815,7 +5815,7 @@ Public Class Mainwindow
 
             'PictureBox1に表示する
             piccalib_handresult.Image = canvas
-            piccalib_handresult.Image.Save("./savedata/temp2/handscale.bmp", ImageFormat.Bmp)
+            piccalib_handresult.Image.Save("./temp/temp2/handscale.bmp", ImageFormat.Bmp)
 
 
             calib_hand()
@@ -5841,7 +5841,7 @@ Public Class Mainwindow
             Dim brightness As Integer = numcalib_hand_bright.Value
 
             '色補正をする画像
-            Dim img As New Bitmap("./savedata/temp2/handscale.bmp")
+            Dim img As New Bitmap("./temp/temp2/handscale.bmp")
             '赤を128増加させる
             AdjustColorImage(img, brightness, brightness, brightness)
             'PictureBox1に表示
@@ -5852,7 +5852,7 @@ Public Class Mainwindow
             End If
 
             piccalib_handresult.Image = img
-            piccalib_handresult.Image.Save("./savedata/temp2/handrgb.bmp", ImageFormat.Bmp)
+            piccalib_handresult.Image.Save("./temp/temp2/handrgb.bmp", ImageFormat.Bmp)
 
             calib_hand()
 
@@ -5878,7 +5878,7 @@ Public Class Mainwindow
             Dim bb As Integer = numcalib_hand_b.Value
 
             '色補正をする画像
-            Dim img As New Bitmap("./savedata/temp2/handscale.bmp")
+            Dim img As New Bitmap("./temp/temp2/handscale.bmp")
             '赤を128増加させる
             AdjustColorImage(img, rr, gg, bb)
             'PictureBox1に表示
@@ -5889,7 +5889,7 @@ Public Class Mainwindow
             End If
 
             piccalib_handresult.Image = img
-            piccalib_handresult.Image.Save("./savedata/temp2/handrgb.bmp", ImageFormat.Bmp)
+            piccalib_handresult.Image.Save("./temp/temp2/handrgb.bmp", ImageFormat.Bmp)
 
             calib_hand()
 
@@ -5915,7 +5915,7 @@ Public Class Mainwindow
             Dim bb As Integer = numcalib_hand_b.Value
 
             '色補正をする画像
-            Dim img As New Bitmap("./savedata/temp2/handscale.bmp")
+            Dim img As New Bitmap("./temp/temp2/handscale.bmp")
             '赤を128増加させる
             AdjustColorImage(img, rr, gg, bb)
             'PictureBox1に表示
@@ -5926,7 +5926,7 @@ Public Class Mainwindow
             End If
 
             piccalib_handresult.Image = img
-            piccalib_handresult.Image.Save("./savedata/temp2/handrgb.bmp", ImageFormat.Bmp)
+            piccalib_handresult.Image.Save("./temp/temp2/handrgb.bmp", ImageFormat.Bmp)
 
             calib_hand()
 
@@ -5952,7 +5952,7 @@ Public Class Mainwindow
             Dim bb As Integer = numcalib_hand_b.Value
 
             '色補正をする画像
-            Dim img As New Bitmap("./savedata/temp2/handscale.bmp")
+            Dim img As New Bitmap("./temp/temp2/handscale.bmp")
             '赤を128増加させる
             AdjustColorImage(img, rr, gg, bb)
             'PictureBox1に表示
@@ -5960,7 +5960,7 @@ Public Class Mainwindow
                 piccalib_bestresult.Image.Dispose()
             End If
             piccalib_handresult.Image = img
-            piccalib_handresult.Image.Save("./savedata/temp2/handrgb.bmp", ImageFormat.Bmp)
+            piccalib_handresult.Image.Save("./temp/temp2/handrgb.bmp", ImageFormat.Bmp)
 
             calib_hand()
 
@@ -6170,14 +6170,14 @@ Public Class Mainwindow
 
             Dim r1 As String = tsNow.ToString().Replace(":", "-")
             ' フォルダ (ディレクトリ) を作成する
-            System.IO.Directory.CreateDirectory("./savedata/temp3/" & r1)
+            System.IO.Directory.CreateDirectory("./temp/temp3/" & r1)
 
-            'ディレクトリ"picture/xxx"を"savedata/temp3/xxx"にコピーする
-            My.Computer.FileSystem.CopyDirectory(txtpass_picturefolder.Text, "./savedata/temp3/" & r1,
+            'ディレクトリ"picture/xxx"を"temp/temp3/xxx"にコピーする
+            My.Computer.FileSystem.CopyDirectory(txtpass_picturefolder.Text, "./temp/temp3/" & r1,
     FileIO.UIOption.AllDialogs, FileIO.UICancelOption.DoNothing)
 
             txttemp_picturepass.Text = txtpass_picturefolder.Text
-            txtpass_picturefolder.Text = "./savedata/temp3/" & r1
+            txtpass_picturefolder.Text = "./temp/temp3/" & r1
 
         End If
 
@@ -11326,7 +11326,7 @@ Public Class Mainwindow
 
 
         '■各情報の保存
-        Using st1 As New System.IO.StreamWriter(".\savedata\01_active1.txt", False, System.Text.Encoding.Default)
+        Using st1 As New System.IO.StreamWriter("./savedata/01_active1.txt", False, System.Text.Encoding.Default)
             For i As Integer = 0 To cmbtimer.Items.Count - 1
                 st1.WriteLine(cmbtimer.Items(i))
             Next
@@ -11334,19 +11334,19 @@ Public Class Mainwindow
 
 
 
-        Using st2 As New System.IO.StreamWriter(".\savedata\02_active2.txt", False, System.Text.Encoding.Default)
+        Using st2 As New System.IO.StreamWriter("./savedata/02_active2.txt", False, System.Text.Encoding.Default)
             For ii As Integer = 0 To cmbsomeapp.Items.Count - 1
                 st2.WriteLine(cmbsomeapp.Items(ii))
             Next
         End Using
 
-        Using st5 As New System.IO.StreamWriter(".\savedata\03_profilelist.txt", False, System.Text.Encoding.Default)
+        Using st5 As New System.IO.StreamWriter("./savedata/03_profilelist.txt", False, System.Text.Encoding.Default)
             For iiiii As Integer = 0 To cmbprofile.Items.Count - 1
                 st5.WriteLine(cmbprofile.Items(iiiii))
             Next
         End Using
 
-        Using st6 As New System.IO.StreamWriter(".\savedata\04_resolution.txt", False, System.Text.Encoding.Default)
+        Using st6 As New System.IO.StreamWriter("./savedata/04_resolution.txt", False, System.Text.Encoding.Default)
             For iiiiii As Integer = 0 To cmbcv_resolution.Items.Count - 1
                 st6.WriteLine(cmbcv_resolution.Items(iiiiii))
             Next
@@ -11407,7 +11407,7 @@ Public Class Mainwindow
         Else
 
             Dim sfd1 As New SaveFileDialog()
-            Dim myfilename1 = ".\csvfile\default.csv"
+            Dim myfilename1 = "./savedata/csvfile/default.csv"
 
             CsvFileSave1(myfilename1)
 
@@ -11453,7 +11453,7 @@ Public Class Mainwindow
 
 
             Dim sfd2 As New SaveFileDialog()
-            Dim myfilename2 = ".\savedata\position.csv"
+            Dim myfilename2 = "./savedata/position.csv"
 
             CsvFileSave2(myfilename2)
 
@@ -11778,13 +11778,13 @@ Public Class Mainwindow
             cmbprofile.Items.Add(cmbprofile.Text)
 
             'pictureフォルダのコピー
-            My.Computer.FileSystem.CopyDirectory(txtpass_picturefolder.Text, "./picture/" & cmbprofile.Text & "/",
+            My.Computer.FileSystem.CopyDirectory(txtpass_picturefolder.Text, "./savedata/picture/" & cmbprofile.Text & "/",
                 FileIO.UIOption.AllDialogs, FileIO.UICancelOption.DoNothing)
             'csvファイルのコピー
-            System.IO.File.Copy(txtpass_csv.Text, "./csvfile/" & cmbprofile.Text & ".csv", True)
+            System.IO.File.Copy(txtpass_csv.Text, "./savedata/csvfile/" & cmbprofile.Text & ".csv", True)
 
-            txtpass_picturefolder.Text = "./picture/" & cmbprofile.Text
-            txtpass_csv.Text = "./csvfile/" & cmbprofile.Text & ".csv"
+            txtpass_picturefolder.Text = "./savedata/picture/" & cmbprofile.Text
+            txtpass_csv.Text = "./savedata/csvfile/" & cmbprofile.Text & ".csv"
 
         End If
 
@@ -12210,13 +12210,13 @@ Public Class Mainwindow
             Exit Sub
         End If
 
-        If System.IO.File.Exists("./csvfile/" & inputText & ".csv") Then
+        If System.IO.File.Exists("./savedata/csvfile/" & inputText & ".csv") Then
             MessageBox.Show(inputText & My.Resources.Message.msg20, "AutoSplit Helper by Image") '"は既に存在しています。"
         Else
 
             ' フォルダ (ディレクトリ) を作成する
-            System.IO.Directory.CreateDirectory("./picture/" & inputText & "/")
-            txtpass_picturefolder.Text = "./picture/" & inputText
+            System.IO.Directory.CreateDirectory("./savedata/picture/" & inputText & "/")
+            txtpass_picturefolder.Text = "./savedata/picture/" & inputText
 
 
 
@@ -12228,8 +12228,8 @@ Public Class Mainwindow
                 ' hStream が閉じられることを保証するために Try ～ Finally を使用する
                 Try
                     ' 指定したパスのファイルを作成する
-                    hStream = System.IO.File.Create("./csvfile/" & inputText & ".csv")
-                    txtpass_csv.Text = "./csvfile/" & inputText & ".csv"
+                    hStream = System.IO.File.Create("./savedata/csvfile/" & inputText & ".csv")
+                    txtpass_csv.Text = "./savedata/csvfile/" & inputText & ".csv"
 
                 Finally
                     ' 作成時に返される FileStream を利用して閉じる
@@ -13121,15 +13121,13 @@ Public Class Mainwindow
     End Sub
 
 
-
-
-
-
     Private Sub StartMonitoringMToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StartMonitoringMToolStripMenuItem.Click
         btnstartopencv.PerformClick()
     End Sub
 
-
+    Private Sub btnshow_chart_Click(sender As Object, e As EventArgs) Handles btnshow_chart.Click
+        Textwindow.Show()
+    End Sub
 
 
 
@@ -13335,7 +13333,7 @@ numwin_interval.Value
 
         '自分のディレクトリ内の「tempfiles」フォルダ以下にあるファイルをすべて削除。
         For Each tempFile As String In
-      System.IO.Directory.GetFiles("./savedata/temp")
+      System.IO.Directory.GetFiles("./temp/temp1")
             System.IO.File.Delete(tempFile)
         Next
 
