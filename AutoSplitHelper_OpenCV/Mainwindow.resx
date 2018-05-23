@@ -2445,6 +2445,99 @@
   <data name="&gt;&gt;grpgeneral.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="Button1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="Button1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 8pt</value>
+  </data>
+  <data name="Button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>220, 87</value>
+  </data>
+  <data name="Button1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 1, 0, 0</value>
+  </data>
+  <data name="Button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 26</value>
+  </data>
+  <data name="Button1.TabIndex" type="System.Int32, mscorlib">
+    <value>308</value>
+  </data>
+  <data name="Button1.Text" xml:space="preserve">
+    <value>Create Textfile</value>
+  </data>
+  <data name="&gt;&gt;Button1.Name" xml:space="preserve">
+    <value>Button1</value>
+  </data>
+  <data name="&gt;&gt;Button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Button1.Parent" xml:space="preserve">
+    <value>pnl_other</value>
+  </data>
+  <data name="&gt;&gt;Button1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtpass_rtf.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="txtpass_rtf.Location" type="System.Drawing.Point, System.Drawing">
+    <value>81, 122</value>
+  </data>
+  <data name="txtpass_rtf.Size" type="System.Drawing.Size, System.Drawing">
+    <value>221, 23</value>
+  </data>
+  <data name="txtpass_rtf.TabIndex" type="System.Int32, mscorlib">
+    <value>307</value>
+  </data>
+  <data name="&gt;&gt;txtpass_rtf.Name" xml:space="preserve">
+    <value>txtpass_rtf</value>
+  </data>
+  <data name="&gt;&gt;txtpass_rtf.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtpass_rtf.Parent" xml:space="preserve">
+    <value>pnl_other</value>
+  </data>
+  <data name="&gt;&gt;txtpass_rtf.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Label112.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label112.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 10pt</value>
+  </data>
+  <data name="Label112.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label112.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 124</value>
+  </data>
+  <data name="Label112.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 18</value>
+  </data>
+  <data name="Label112.TabIndex" type="System.Int32, mscorlib">
+    <value>306</value>
+  </data>
+  <data name="Label112.Text" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="&gt;&gt;Label112.Name" xml:space="preserve">
+    <value>Label112</value>
+  </data>
+  <data name="&gt;&gt;Label112.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label112.Parent" xml:space="preserve">
+    <value>pnl_other</value>
+  </data>
+  <data name="&gt;&gt;Label112.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="btnshow_chart.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -2455,19 +2548,19 @@
     <value>NoControl</value>
   </data>
   <data name="btnshow_chart.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 87</value>
+    <value>129, 87</value>
   </data>
   <data name="btnshow_chart.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 1, 0, 0</value>
   </data>
   <data name="btnshow_chart.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 26</value>
+    <value>80, 26</value>
   </data>
   <data name="btnshow_chart.TabIndex" type="System.Int32, mscorlib">
     <value>305</value>
   </data>
   <data name="btnshow_chart.Text" xml:space="preserve">
-    <value>Show Chart</value>
+    <value>Show Text</value>
   </data>
   <data name="&gt;&gt;btnshow_chart.Name" xml:space="preserve">
     <value>btnshow_chart</value>
@@ -2479,40 +2572,40 @@
     <value>pnl_other</value>
   </data>
   <data name="&gt;&gt;btnshow_chart.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
   </data>
-  <data name="chkshow_chart.AutoSize" type="System.Boolean, mscorlib">
+  <data name="chkshow_text.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="chkshow_chart.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="chkshow_text.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 11pt</value>
   </data>
-  <data name="chkshow_chart.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="chkshow_text.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="chkshow_chart.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="chkshow_text.Location" type="System.Drawing.Point, System.Drawing">
     <value>19, 88</value>
   </data>
-  <data name="chkshow_chart.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 23</value>
+  <data name="chkshow_text.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 23</value>
   </data>
-  <data name="chkshow_chart.TabIndex" type="System.Int32, mscorlib">
+  <data name="chkshow_text.TabIndex" type="System.Int32, mscorlib">
     <value>256</value>
   </data>
-  <data name="chkshow_chart.Text" xml:space="preserve">
-    <value>Show chart</value>
+  <data name="chkshow_text.Text" xml:space="preserve">
+    <value>Show Text</value>
   </data>
-  <data name="&gt;&gt;chkshow_chart.Name" xml:space="preserve">
-    <value>chkshow_chart</value>
+  <data name="&gt;&gt;chkshow_text.Name" xml:space="preserve">
+    <value>chkshow_text</value>
   </data>
-  <data name="&gt;&gt;chkshow_chart.Type" xml:space="preserve">
+  <data name="&gt;&gt;chkshow_text.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;chkshow_chart.Parent" xml:space="preserve">
+  <data name="&gt;&gt;chkshow_text.Parent" xml:space="preserve">
     <value>pnl_other</value>
   </data>
-  <data name="&gt;&gt;chkshow_chart.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;chkshow_text.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="chkcreate_temppicture.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2545,7 +2638,7 @@
     <value>pnl_other</value>
   </data>
   <data name="&gt;&gt;chkcreate_temppicture.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="txtpass_picturefolder.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 9pt</value>
@@ -2569,7 +2662,7 @@
     <value>pnl_other</value>
   </data>
   <data name="&gt;&gt;txtpass_picturefolder.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="txtpass_csv.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 9pt</value>
@@ -2593,7 +2686,7 @@
     <value>pnl_other</value>
   </data>
   <data name="&gt;&gt;txtpass_csv.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
   <data name="Label98.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2626,7 +2719,7 @@
     <value>pnl_other</value>
   </data>
   <data name="&gt;&gt;Label98.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>8</value>
   </data>
   <data name="Label26.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2659,7 +2752,7 @@
     <value>pnl_other</value>
   </data>
   <data name="&gt;&gt;Label26.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
   </data>
   <data name="Label23.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2692,7 +2785,7 @@
     <value>pnl_other</value>
   </data>
   <data name="&gt;&gt;Label23.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>10</value>
   </data>
   <data name="lbllivesplit_state.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2725,7 +2818,7 @@
     <value>pnl_other</value>
   </data>
   <data name="&gt;&gt;lbllivesplit_state.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>11</value>
   </data>
   <data name="pnl_other.Location" type="System.Drawing.Point, System.Drawing">
     <value>1477, 360</value>

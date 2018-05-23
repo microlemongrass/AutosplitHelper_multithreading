@@ -117,6 +117,11 @@ Partial Class Mainwindow
         Me.lblcur_device_name = New System.Windows.Forms.Label()
         Me.lblset_monitoring = New System.Windows.Forms.Label()
         Me.pnl_other = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.txtpass_rtf = New System.Windows.Forms.TextBox()
+        Me.Label112 = New System.Windows.Forms.Label()
+        Me.btnshow_chart = New System.Windows.Forms.Button()
+        Me.chkshow_text = New System.Windows.Forms.CheckBox()
         Me.chkcreate_temppicture = New System.Windows.Forms.CheckBox()
         Me.txtpass_picturefolder = New System.Windows.Forms.TextBox()
         Me.txtpass_csv = New System.Windows.Forms.TextBox()
@@ -646,8 +651,6 @@ Partial Class Mainwindow
         Me.timchecktimer = New System.Windows.Forms.Timer(Me.components)
         Me.timcamera = New System.Windows.Forms.Timer(Me.components)
         Me.timcalib = New System.Windows.Forms.Timer(Me.components)
-        Me.chkshow_chart = New System.Windows.Forms.CheckBox()
-        Me.btnshow_chart = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.DGtable, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1511,8 +1514,11 @@ Partial Class Mainwindow
         'pnl_other
         '
         Me.pnl_other.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.pnl_other.Controls.Add(Me.Button1)
+        Me.pnl_other.Controls.Add(Me.txtpass_rtf)
+        Me.pnl_other.Controls.Add(Me.Label112)
         Me.pnl_other.Controls.Add(Me.btnshow_chart)
-        Me.pnl_other.Controls.Add(Me.chkshow_chart)
+        Me.pnl_other.Controls.Add(Me.chkshow_text)
         Me.pnl_other.Controls.Add(Me.chkcreate_temppicture)
         Me.pnl_other.Controls.Add(Me.txtpass_picturefolder)
         Me.pnl_other.Controls.Add(Me.txtpass_csv)
@@ -1522,6 +1528,46 @@ Partial Class Mainwindow
         Me.pnl_other.Controls.Add(Me.lbllivesplit_state)
         resources.ApplyResources(Me.pnl_other, "pnl_other")
         Me.pnl_other.Name = "pnl_other"
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
+        resources.ApplyResources(Me.Button1, "Button1")
+        Me.Button1.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Button1.Name = "Button1"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'txtpass_rtf
+        '
+        Me.txtpass_rtf.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.txtpass_rtf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        resources.ApplyResources(Me.txtpass_rtf, "txtpass_rtf")
+        Me.txtpass_rtf.ForeColor = System.Drawing.SystemColors.Control
+        Me.txtpass_rtf.Name = "txtpass_rtf"
+        Me.txtpass_rtf.ReadOnly = True
+        '
+        'Label112
+        '
+        resources.ApplyResources(Me.Label112, "Label112")
+        Me.Label112.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.Label112.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label112.Name = "Label112"
+        '
+        'btnshow_chart
+        '
+        Me.btnshow_chart.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
+        resources.ApplyResources(Me.btnshow_chart, "btnshow_chart")
+        Me.btnshow_chart.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btnshow_chart.Name = "btnshow_chart"
+        Me.btnshow_chart.UseVisualStyleBackColor = False
+        '
+        'chkshow_text
+        '
+        resources.ApplyResources(Me.chkshow_text, "chkshow_text")
+        Me.chkshow_text.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.chkshow_text.ForeColor = System.Drawing.SystemColors.Control
+        Me.chkshow_text.Name = "chkshow_text"
+        Me.chkshow_text.UseVisualStyleBackColor = False
         '
         'chkcreate_temppicture
         '
@@ -5913,22 +5959,6 @@ Partial Class Mainwindow
         'timcalib
         '
         '
-        'chkshow_chart
-        '
-        resources.ApplyResources(Me.chkshow_chart, "chkshow_chart")
-        Me.chkshow_chart.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.chkshow_chart.ForeColor = System.Drawing.SystemColors.Control
-        Me.chkshow_chart.Name = "chkshow_chart"
-        Me.chkshow_chart.UseVisualStyleBackColor = False
-        '
-        'btnshow_chart
-        '
-        Me.btnshow_chart.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
-        resources.ApplyResources(Me.btnshow_chart, "btnshow_chart")
-        Me.btnshow_chart.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.btnshow_chart.Name = "btnshow_chart"
-        Me.btnshow_chart.UseVisualStyleBackColor = False
-        '
         'Mainwindow
         '
         resources.ApplyResources(Me, "$this")
@@ -6745,5 +6775,8 @@ Partial Class Mainwindow
     Friend WithEvents rdocalib_aspect_to169 As RadioButton
     Friend WithEvents rdocalib_aspect_none As RadioButton
     Friend WithEvents btnshow_chart As Button
-    Friend WithEvents chkshow_chart As CheckBox
+    Friend WithEvents chkshow_text As CheckBox
+    Friend WithEvents txtpass_rtf As TextBox
+    Friend WithEvents Label112 As Label
+    Friend WithEvents Button1 As Button
 End Class

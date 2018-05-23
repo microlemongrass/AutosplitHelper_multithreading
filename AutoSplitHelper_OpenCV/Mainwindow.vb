@@ -143,6 +143,7 @@ Public Class Mainwindow
         keydown_length = numpresstime.Value
 
         '■アプリ終了時のソフトの位置を記憶、復元
+
         Me.Location = New Drawing.Point(numsavex.Value, numsavey.Value)
 
         '■テンプレート画像のテンポラリーファイル。監視などが安定しない時に使用している。
@@ -308,7 +309,7 @@ Public Class Mainwindow
 
             Try
 
-                Dim myfilename_table1 As String = "./savedata/csvfile/default.csv"
+                Dim myfilename_table1 As String = "./profile/default/table.csv" '★
 
                 Dim parser As TextFieldParser = New TextFieldParser(myfilename_table1, Encoding.GetEncoding("Shift_JIS"))
                 parser.TextFieldType = FieldType.Delimited
@@ -398,8 +399,10 @@ Public Class Mainwindow
             cmbtimer.SelectedIndex = 0
             cmbsomeapp.SelectedIndex = 0
 
-            txtpass_picturefolder.Text = "./savedata/picture/default"
-            txtpass_csv.Text = "./savedata/csvfile/default.csv"
+            txtpass_picturefolder.Text = "./profile/default/picture" '★
+            txtpass_rtf.Text = "./profile/default/text" '★
+
+            txtpass_csv.Text = "./profile/default/table.csv" '★
 
             cmbcv_device.SelectedIndex = 0
 
@@ -844,20 +847,28 @@ Public Class Mainwindow
         End If
 
         Dim import_pic As String = Import_picture.txtpass_picturefolder.Text
+        Dim import_rtf As String = Import_picture.txtpass_rtf.Text
         Dim import_csv As String = Import_picture.txtpass_csv.Text
+
         Dim import_name As String = Import_picture.txtname.Text
 
-        txtpass_picturefolder.Text = "./savedata/picture/" & import_name
-        txtpass_csv.Text = "./savedata/csvfile/" & import_name & ".csv"
+        txtpass_picturefolder.Text = "./profile/" & import_name & "/picture" '★
+        txtpass_rtf.Text = "./profile/" & import_name & "/text" '★
+        txtpass_csv.Text = "./profile/" & import_name & "/table.csv" '★
+
 
         '■フォルダ (ディレクトリ) を作成する
-        System.IO.Directory.CreateDirectory("./savedata/picture/" & import_name & "/")
+        System.IO.Directory.CreateDirectory("./profile/" & import_name & "/picture/") '★
+        System.IO.Directory.CreateDirectory("./profile/" & import_name & "/text/") '★
 
-        My.Computer.FileSystem.CopyDirectory(import_pic, "./savedata/picture/" & import_name,
+        My.Computer.FileSystem.CopyDirectory(import_pic, "./profile/" & import_name & "/picture",
         FileIO.UIOption.AllDialogs, FileIO.UICancelOption.DoNothing)
 
-        My.Computer.FileSystem.CopyFile(import_csv, "./savedata/csvfile/" & import_name & ".csv",
+        My.Computer.FileSystem.CopyDirectory(import_rtf, "./profile/" & import_name & "/text",
         FileIO.UIOption.AllDialogs, FileIO.UICancelOption.DoNothing)
+
+        My.Computer.FileSystem.CopyFile(import_csv, "./profile/" & import_name & "/table.csv",
+        FileIO.UIOption.AllDialogs, FileIO.UICancelOption.DoNothing) '★
 
 
         '■csvファイルの内容を表に表示
@@ -913,7 +924,8 @@ Public Class Mainwindow
 
         Next
 
-        Dim sw As New System.IO.StreamWriter("./savedata/profile/" & cmbprofile.SelectedItem & ".txt", False, System.Text.Encoding.GetEncoding("shift_jis"))
+        'Dim sw As New System.IO.StreamWriter("./savedata/profile/" & cmbprofile.SelectedItem & ".txt", False, System.Text.Encoding.GetEncoding("shift_jis"))
+        Dim sw As New System.IO.StreamWriter("./profile/" & cmbprofile.SelectedItem & "/data.txt", False, System.Text.Encoding.GetEncoding("shift_jis")) '★
 
         sw.Write(txtprofile.Text)
 
@@ -4793,7 +4805,7 @@ Public Class Mainwindow
 
         btncalib_resize.Enabled = False
         btnpreview.Enabled = False
-        txtpass_picturefolder.Text = "./savedata/picture/" & cmbprofile.SelectedItem 'Mainwindow.txtpass_picturefolder.Text
+        txtpass_picturefolder.Text = "./profile/" & cmbprofile.SelectedItem & "/picture" 'Mainwindow.txtpass_picturefolder.Text'★
 
 
         '■ファイルが存在しているかどうか確認する
@@ -6146,13 +6158,8 @@ Public Class Mainwindow
     Private Sub btnstartopencv_Click(sender As Object, e As EventArgs) Handles btnstartopencv.Click
 
 
-        'If Not btnconnect_camera.BackColor = Color.DarkRed Then
-        '    MsgBox("仮想カメラとの接続が行われていません。") '★
 
-
-        '    Exit Sub
-        'End If
-
+        '■ビデオプレイヤーを表示するかどうか
         If chkshowvideo.Checked = True And Videoplayer.Visible = False Then
             MsgBox(My.Resources.Message.msg44) 'ビデオプレイヤーが表示されていません。
 
@@ -6160,26 +6167,16 @@ Public Class Mainwindow
 
         End If
 
+        If chkshow_text.Checked = True And Textwindow.Visible = False Then
+            MsgBox("テキストビューワーが表示されていません。") 'ビデオプレイヤーが表示されていません。'★
 
-        '■画像フォルダの一時ファイルを作成するかどうか
-        If chkcreate_temppicture.Checked = True Then
-            ' 必要な変数を宣言する
-            Dim dtNow As DateTime = DateTime.Now
-            ' 時刻の部分だけを取得する
-            Dim tsNow As TimeSpan = dtNow.TimeOfDay
-
-            Dim r1 As String = tsNow.ToString().Replace(":", "-")
-            ' フォルダ (ディレクトリ) を作成する
-            System.IO.Directory.CreateDirectory("./temp/temp3/" & r1)
-
-            'ディレクトリ"picture/xxx"を"temp/temp3/xxx"にコピーする
-            My.Computer.FileSystem.CopyDirectory(txtpass_picturefolder.Text, "./temp/temp3/" & r1,
-    FileIO.UIOption.AllDialogs, FileIO.UICancelOption.DoNothing)
-
-            txttemp_picturepass.Text = txtpass_picturefolder.Text
-            txtpass_picturefolder.Text = "./temp/temp3/" & r1
+            Exit Sub
 
         End If
+
+
+
+
 
 
 
@@ -6359,6 +6356,22 @@ Public Class Mainwindow
 
 
         '■画像ファイル数と表データの数に齟齬がないか
+
+        Dim FileCount_rtfonly As Integer
+
+        If chkshow_text.Checked = True Then
+            Dim di_text As New System.IO.DirectoryInfo(txtpass_rtf.Text)
+            Dim files_text As System.IO.FileInfo() = di_text.GetFiles("*.rtf", System.IO.SearchOption.TopDirectoryOnly)
+
+            For Each f As System.IO.FileInfo In files_text
+                FileCount_rtfonly += 1
+            Next
+        End If
+
+
+
+
+
         Dim di As New System.IO.DirectoryInfo(txtpass_picturefolder.Text)
         Dim files As System.IO.FileInfo() = di.GetFiles("*.bmp", System.IO.SearchOption.TopDirectoryOnly)
         Dim FileCount_bmponly As Integer
@@ -6425,7 +6438,11 @@ Public Class Mainwindow
             If chkcv_resetonoff.Checked = False Then
 
                 If Not FileCount_bmponly = TableCount - 1 Then
-                    MessageBox.Show(My.Resources.Message.msg6, "AutoSplit Helper by Image", MessageBoxButtons.OK) '"画像ファイル数と表のデータ数が一致しません。"
+                    MessageBox.Show(My.Resources.Message.msg6 & vbCrLf &
+                                   "Table line number(s): " & TableCount - 1 & " (exclude Reset line)" & vbCrLf &
+                                   "Bmpfile number(s): " & FileCount_bmponly & vbCrLf &
+                                   "Textfile number(s): " & FileCount_rtfonly,
+                                    "AutoSplit Helper by Image", MessageBoxButtons.OK) '"画像ファイル数と表のデータ数が一致しません。"
 
                     Exit Sub
 
@@ -6433,10 +6450,14 @@ Public Class Mainwindow
 
             ElseIf chkcv_resetonoff.Checked = True Then
 
-                FileCount_bmponly += 1
+                FileCount_bmponly += 1 'resetの分を補填
 
                 If Not FileCount_bmponly = TableCount Then
-                    MessageBox.Show(My.Resources.Message.msg6, "AutoSplit Helper by Image", MessageBoxButtons.OK) '"画像ファイル数と表のデータ数が一致しません。"
+                    MessageBox.Show(My.Resources.Message.msg6 & vbCrLf &
+                                   "Table line number(s): " & TableCount & " (include Reset line)" & vbCrLf &
+                                   "Bmpfile number(s): " & FileCount_bmponly & vbCrLf &
+                                   "Textfile number(s): " & FileCount_rtfonly,
+                                    "AutoSplit Helper by Image", MessageBoxButtons.OK) '"画像ファイル数と表のデータ数が一致しません。"
 
                     Exit Sub
 
@@ -6460,6 +6481,25 @@ Public Class Mainwindow
             '■監視処理開始
 
 
+            '■画像フォルダの一時ファイルを作成するかどうか
+            If chkcreate_temppicture.Checked = True Then
+                ' 必要な変数を宣言する
+                Dim dtNow As DateTime = DateTime.Now
+                ' 時刻の部分だけを取得する
+                Dim tsNow As TimeSpan = dtNow.TimeOfDay
+
+                Dim r1 As String = tsNow.ToString().Replace(":", "-")
+                ' フォルダ (ディレクトリ) を作成する
+                System.IO.Directory.CreateDirectory("./temp/temp3/" & r1)
+
+                'ディレクトリ"picture/xxx"を"temp/temp3/xxx"にコピーする
+                My.Computer.FileSystem.CopyDirectory(txtpass_picturefolder.Text, "./temp/temp3/" & r1,
+                FileIO.UIOption.AllDialogs, FileIO.UICancelOption.DoNothing)
+
+                txttemp_picturepass.Text = txtpass_picturefolder.Text
+                txtpass_picturefolder.Text = "./temp/temp3/" & r1
+
+            End If
 
 
             '■Livesplitの名前付きパイプの接続状況表示。存在したら接続
@@ -6968,6 +7008,15 @@ Public Class Mainwindow
                 '■最初の画像の読み込み
                 Dim aa_load10 As String = txtpass_picturefolder.Text & "\" & 1 & ".bmp"
                 tplex_load10 = Cv2.ImRead(aa_load10, ImreadModes.Color)
+
+
+            End If
+
+            '■テキストファイルの読み込み
+            If chkshow_text.Checked = True Then
+                '■最初のリッチテキストファイルを読み込む
+                Textwindow.rtxt1.LoadFile(txtpass_rtf.Text & "/1.rtf", RichTextBoxStreamType.RichText)
+
 
 
             End If
@@ -7810,6 +7859,9 @@ Public Class Mainwindow
 
                         '■テンプレート画像　表示用
                         piccv_picture.Image = Image.FromFile(aa)
+
+                        '■最初のリッチテキストファイルを表示'★
+                        Textwindow.rtxt1.LoadFile(txtpass_rtf.Text & "/1.rtf", RichTextBoxStreamType.RichText)
 
                         '■結果の初期化
                         lblcv_maxval.Text = 0
@@ -8726,6 +8778,9 @@ Public Class Mainwindow
             tplex = Cv2.ImRead(aa, ImreadModes.Color)
             '■テンプレート画像の更新（表示用）
             piccv_picture.Image = System.Drawing.Image.FromFile(aa)
+
+            '■リッチテキストファイルの更新★
+            Textwindow.rtxt1.LoadFile(txtpass_rtf.Text & "/" & lblcv_lap.Text & ".rtf", RichTextBoxStreamType.RichText)
         End If
 
 
@@ -8795,12 +8850,6 @@ Public Class Mainwindow
 
 
             onetimematching()
-            ''■テンプレート画像の更新
-            'Dim aa As String = txtpass_picturefolder.Text & "\" & number & ".bmp"
-            'tplex = Cv2.ImRead(aa, ImreadModes.Color)
-
-            ''■テンプレート画像の更新（表示用）
-            'piccv_picture.Image = System.Drawing.Image.FromFile(aa)
 
             '===========================================================================================================
 
@@ -10662,6 +10711,9 @@ Public Class Mainwindow
             '■該当の画像をUIにも表示        
             piccv_picture.Image = Image.FromFile(aa)
 
+            '■リッチテキストファイルの更新★
+            Textwindow.rtxt1.LoadFile(txtpass_rtf.Text & "/" & number & ".rtf", RichTextBoxStreamType.RichText)
+
 
             '後処理##########################################################################################
             cvtimer_change.Stop()
@@ -10912,6 +10964,9 @@ Public Class Mainwindow
             '■該当の画像をUIにも表示        
             piccv_picture.Image = Image.FromFile(aa)
 
+            '■リッチテキストファイルの更新★
+            Textwindow.rtxt1.LoadFile(txtpass_rtf.Text & "/" & number & ".rtf", RichTextBoxStreamType.RichText)
+
 
             '後処理##########################################################################################
             cvtimer_change.Stop()
@@ -11136,6 +11191,9 @@ Public Class Mainwindow
 
             '■該当の画像をUIにも表示        
             piccv_picture.Image = Image.FromFile(aa)
+
+            '■リッチテキストファイルの更新
+            Textwindow.rtxt1.LoadFile(txtpass_rtf.Text & "/" & number & ".rtf", RichTextBoxStreamType.RichText)
 
 
             '後処理##########################################################################################
@@ -11407,7 +11465,8 @@ Public Class Mainwindow
         Else
 
             Dim sfd1 As New SaveFileDialog()
-            Dim myfilename1 = "./savedata/csvfile/default.csv"
+            'Dim myfilename1 = "./savedata/csvfile/default.csv"
+            Dim myfilename1 = "./profile/default/table.csv" '★ここdefaultでいいの？
 
             CsvFileSave1(myfilename1)
 
@@ -11778,13 +11837,19 @@ Public Class Mainwindow
             cmbprofile.Items.Add(cmbprofile.Text)
 
             'pictureフォルダのコピー
-            My.Computer.FileSystem.CopyDirectory(txtpass_picturefolder.Text, "./savedata/picture/" & cmbprofile.Text & "/",
-                FileIO.UIOption.AllDialogs, FileIO.UICancelOption.DoNothing)
-            'csvファイルのコピー
-            System.IO.File.Copy(txtpass_csv.Text, "./savedata/csvfile/" & cmbprofile.Text & ".csv", True)
+            My.Computer.FileSystem.CopyDirectory(txtpass_picturefolder.Text, "./profile/" & cmbprofile.Text & "/picture/",
+                FileIO.UIOption.AllDialogs, FileIO.UICancelOption.DoNothing) '★
 
-            txtpass_picturefolder.Text = "./savedata/picture/" & cmbprofile.Text
-            txtpass_csv.Text = "./savedata/csvfile/" & cmbprofile.Text & ".csv"
+            'textフォルダのコピー
+            My.Computer.FileSystem.CopyDirectory(txtpass_rtf.Text, "./profile/" & cmbprofile.Text & "/text/",
+                FileIO.UIOption.AllDialogs, FileIO.UICancelOption.DoNothing) '★
+
+            'csvファイルのコピー
+            System.IO.File.Copy(txtpass_csv.Text, "./profile/" & cmbprofile.Text & "/table.csv", True)
+
+            txtpass_picturefolder.Text = "./profile/" & cmbprofile.Text & "/picture" '★
+            txtpass_rtf.Text = "./profile/" & cmbprofile.Text & "/text" '★
+            txtpass_csv.Text = "./profile/" & cmbprofile.Text & "/table.csv"
 
         End If
 
@@ -11799,7 +11864,7 @@ Public Class Mainwindow
             txtprofile.AppendText(arrayprofile(ii) & vbCrLf)
         Next
 
-        Dim sw As New System.IO.StreamWriter("./savedata/profile/" & cmbprofile.SelectedItem & ".txt", False, System.Text.Encoding.GetEncoding("shift_jis"))
+        Dim sw As New System.IO.StreamWriter("./profile/" & cmbprofile.SelectedItem & "/data.txt", False, System.Text.Encoding.GetEncoding("shift_jis")) '★
 
         sw.Write(txtprofile.Text)
 
@@ -11836,7 +11901,7 @@ Public Class Mainwindow
         Next
 
 
-        Dim sw As New System.IO.StreamWriter("./savedata/profile/" & cmbprofile.SelectedItem & ".txt", False, System.Text.Encoding.GetEncoding("shift_jis"))
+        Dim sw As New System.IO.StreamWriter("./profile/" & cmbprofile.SelectedItem & "/data.txt", False, System.Text.Encoding.GetEncoding("shift_jis")) '★
 
         sw.Write(txtprofile.Text)
 
@@ -11872,10 +11937,12 @@ Public Class Mainwindow
         If result = DialogResult.Yes Then
 
             Try
-                System.IO.File.Delete("./savedata/profile/" & cmbprofile.SelectedItem & ".txt")
+                System.IO.File.Delete("./profile/" & cmbprofile.SelectedItem & "/data.txt") '★
+
                 cmbprofile.Items.RemoveAt(cmbprofile.SelectedIndex)
 
                 System.IO.Directory.Delete(txtpass_picturefolder.Text, True)
+                System.IO.Directory.Delete(txtpass_rtf.Text, True) '★
                 System.IO.File.Delete(txtpass_csv.Text)
 
                 cmbprofile.SelectedIndex = 0 '"default"
@@ -11893,7 +11960,7 @@ Public Class Mainwindow
     Private Sub cmbprofile_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbprofile.SelectedIndexChanged
 
         'コンボボックス読み込み3■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-        If System.IO.File.Exists("./savedata/profile/" & cmbprofile.SelectedItem & ".txt") Then
+        If System.IO.File.Exists("./profile/" & cmbprofile.SelectedItem & "/data.txt") Then
 
             '■仮想カメラの切断
             If btnconnect_camera.Text = My.Resources.Message.msgc01 Then
@@ -11912,7 +11979,8 @@ Public Class Mainwindow
 
             End If
 
-            Dim loadtxt As String = "./savedata/profile/" & cmbprofile.SelectedItem & ".txt"
+            Dim loadtxt As String = "./profile/" & cmbprofile.SelectedItem & "/data.txt" '★
+
             cmbprofile.IntegralHeight = False
 
             cmbprofile.BeginUpdate()
@@ -11931,109 +11999,110 @@ Public Class Mainwindow
             '各パラメーターを読む
             txtpass_csv.Text = txtloadprofile.Lines(1)
             txtpass_picturefolder.Text = txtloadprofile.Lines(2)
+            txtpass_rtf.Text = txtloadprofile.Lines(3)
 
-            numsavex.Value = txtloadprofile.Lines(5)
-            numsavey.Value = txtloadprofile.Lines(6)
+            numsavex.Value = txtloadprofile.Lines(6)
+            numsavey.Value = txtloadprofile.Lines(7)
 
-            chkcv_monitor.Checked = txtloadprofile.Lines(9)
-            chkcv_loop.Checked = txtloadprofile.Lines(10)
-            chkcv_resetonoff.Checked = txtloadprofile.Lines(11)
-            chkcv_loadremover.Checked = txtloadprofile.Lines(12)
-            numpercent.Value = txtloadprofile.Lines(13)
-            numstop.Value = txtloadprofile.Lines(14)
-            numanten.Value = txtloadprofile.Lines(15)
-            numcv_interval.Value = txtloadprofile.Lines(16)
+            chkcv_monitor.Checked = txtloadprofile.Lines(10)
+            chkcv_loop.Checked = txtloadprofile.Lines(11)
+            chkcv_resetonoff.Checked = txtloadprofile.Lines(12)
+            chkcv_loadremover.Checked = txtloadprofile.Lines(13)
+            numpercent.Value = txtloadprofile.Lines(14)
+            numstop.Value = txtloadprofile.Lines(15)
+            numanten.Value = txtloadprofile.Lines(16)
+            numcv_interval.Value = txtloadprofile.Lines(17)
 
-            cmbcv_device.SelectedIndex = txtloadprofile.Lines(19)
-            cmbcv_resolution.SelectedIndex = txtloadprofile.Lines(20)
-            numcv_framerate.Value = txtloadprofile.Lines(21)
+            cmbcv_device.SelectedIndex = txtloadprofile.Lines(20)
+            cmbcv_resolution.SelectedIndex = txtloadprofile.Lines(21)
+            numcv_framerate.Value = txtloadprofile.Lines(22)
 
-            chkactiveapp.Checked = txtloadprofile.Lines(24)
-            cmbtimer.SelectedItem = txtloadprofile.Lines(25)
-            chkactivesomeapp.Checked = txtloadprofile.Lines(26)
-            cmbsomeapp.SelectedItem = txtloadprofile.Lines(27)
-            numsendsleep.Value = txtloadprofile.Lines(28)
+            chkactiveapp.Checked = txtloadprofile.Lines(25)
+            cmbtimer.SelectedItem = txtloadprofile.Lines(26)
+            chkactivesomeapp.Checked = txtloadprofile.Lines(27)
+            cmbsomeapp.SelectedItem = txtloadprofile.Lines(28)
+            numsendsleep.Value = txtloadprofile.Lines(29)
 
-            chkshift.Checked = txtloadprofile.Lines(31)
-            chkctrl.Checked = txtloadprofile.Lines(32)
-            chkalt.Checked = txtloadprofile.Lines(33)
-            txtsplit_key.Text = txtloadprofile.Lines(34)
-            lblkeysforsend.Text = txtloadprofile.Lines(35)
-            chkshift_reset.Checked = txtloadprofile.Lines(36)
-            chkctrl_reset.Checked = txtloadprofile.Lines(37)
-            chkalt_reset.Checked = txtloadprofile.Lines(38)
-            txtreset_key.Text = txtloadprofile.Lines(39)
-            lblkeysforsend_reset.Text = txtloadprofile.Lines(40)
-            chkshift_undo.Checked = txtloadprofile.Lines(41)
-            chkctrl_undo.Checked = txtloadprofile.Lines(42)
-            chkalt_undo.Checked = txtloadprofile.Lines(43)
-            txtundo_key.Text = txtloadprofile.Lines(44)
-            lblkeysforundo.Text = txtloadprofile.Lines(45)
-            chkshift_skip.Checked = txtloadprofile.Lines(46)
-            chkctrl_skip.Checked = txtloadprofile.Lines(47)
-            chkalt_skip.Checked = txtloadprofile.Lines(48)
-            txtskip_key.Text = txtloadprofile.Lines(49)
-            lblkeysforskip.Text = txtloadprofile.Lines(50)
-            chkshift_pause.Checked = txtloadprofile.Lines(51)
-            chkctrl_pause.Checked = txtloadprofile.Lines(52)
-            chkalt_pause.Checked = txtloadprofile.Lines(53)
-            txtpause_key.Text = txtloadprofile.Lines(54)
-            lblkeysforpause.Text = txtloadprofile.Lines(55)
-            chkshift_resume.Checked = txtloadprofile.Lines(56)
-            chkctrl_resume.Checked = txtloadprofile.Lines(57)
-            chkalt_resume.Checked = txtloadprofile.Lines(58)
-            txtresume_key.Text = txtloadprofile.Lines(59)
-            lblkeysforresume.Text = txtloadprofile.Lines(60)
-            chkundoskip.Checked = txtloadprofile.Lines(61)
-            chknamedpipe.Checked = txtloadprofile.Lines(62)
-            numpresstime.Value = txtloadprofile.Lines(63)
+            chkshift.Checked = txtloadprofile.Lines(32)
+            chkctrl.Checked = txtloadprofile.Lines(33)
+            chkalt.Checked = txtloadprofile.Lines(34)
+            txtsplit_key.Text = txtloadprofile.Lines(35)
+            lblkeysforsend.Text = txtloadprofile.Lines(36)
+            chkshift_reset.Checked = txtloadprofile.Lines(37)
+            chkctrl_reset.Checked = txtloadprofile.Lines(38)
+            chkalt_reset.Checked = txtloadprofile.Lines(39)
+            txtreset_key.Text = txtloadprofile.Lines(40)
+            lblkeysforsend_reset.Text = txtloadprofile.Lines(41)
+            chkshift_undo.Checked = txtloadprofile.Lines(42)
+            chkctrl_undo.Checked = txtloadprofile.Lines(43)
+            chkalt_undo.Checked = txtloadprofile.Lines(44)
+            txtundo_key.Text = txtloadprofile.Lines(45)
+            lblkeysforundo.Text = txtloadprofile.Lines(46)
+            chkshift_skip.Checked = txtloadprofile.Lines(47)
+            chkctrl_skip.Checked = txtloadprofile.Lines(48)
+            chkalt_skip.Checked = txtloadprofile.Lines(49)
+            txtskip_key.Text = txtloadprofile.Lines(50)
+            lblkeysforskip.Text = txtloadprofile.Lines(51)
+            chkshift_pause.Checked = txtloadprofile.Lines(52)
+            chkctrl_pause.Checked = txtloadprofile.Lines(53)
+            chkalt_pause.Checked = txtloadprofile.Lines(54)
+            txtpause_key.Text = txtloadprofile.Lines(55)
+            lblkeysforpause.Text = txtloadprofile.Lines(56)
+            chkshift_resume.Checked = txtloadprofile.Lines(57)
+            chkctrl_resume.Checked = txtloadprofile.Lines(58)
+            chkalt_resume.Checked = txtloadprofile.Lines(59)
+            txtresume_key.Text = txtloadprofile.Lines(60)
+            lblkeysforresume.Text = txtloadprofile.Lines(61)
+            chkundoskip.Checked = txtloadprofile.Lines(62)
+            chknamedpipe.Checked = txtloadprofile.Lines(63)
+            numpresstime.Value = txtloadprofile.Lines(64)
 
-            chkload1.Checked = txtloadprofile.Lines(66)
-            chkload2.Checked = txtloadprofile.Lines(67)
-            chkload3.Checked = txtloadprofile.Lines(68)
-            chkload4.Checked = txtloadprofile.Lines(69)
-            chkload5.Checked = txtloadprofile.Lines(70)
-            chkload6.Checked = txtloadprofile.Lines(71)
-            chkload7.Checked = txtloadprofile.Lines(72)
-            chkload8.Checked = txtloadprofile.Lines(73)
-            chkload9.Checked = txtloadprofile.Lines(74)
-            chkload10.Checked = txtloadprofile.Lines(75)
-            numload_rate1.Value = txtloadprofile.Lines(76)
-            numload_rate2.Value = txtloadprofile.Lines(77)
-            numload_rate3.Value = txtloadprofile.Lines(78)
-            numload_rate4.Value = txtloadprofile.Lines(79)
-            numload_rate5.Value = txtloadprofile.Lines(80)
-            numload_rate6.Value = txtloadprofile.Lines(81)
-            numload_rate7.Value = txtloadprofile.Lines(82)
-            numload_rate8.Value = txtloadprofile.Lines(83)
-            numload_rate9.Value = txtloadprofile.Lines(84)
-            numload_rate10.Value = txtloadprofile.Lines(85)
-            numload_delay1.Value = txtloadprofile.Lines(86)
-            numload_delay2.Value = txtloadprofile.Lines(87)
-            numload_delay3.Value = txtloadprofile.Lines(88)
-            numload_delay4.Value = txtloadprofile.Lines(89)
-            numload_delay5.Value = txtloadprofile.Lines(90)
-            numload_delay6.Value = txtloadprofile.Lines(91)
-            numload_delay7.Value = txtloadprofile.Lines(92)
-            numload_delay8.Value = txtloadprofile.Lines(93)
-            numload_delay9.Value = txtloadprofile.Lines(94)
-            numload_delay10.Value = txtloadprofile.Lines(95)
+            chkload1.Checked = txtloadprofile.Lines(67)
+            chkload2.Checked = txtloadprofile.Lines(68)
+            chkload3.Checked = txtloadprofile.Lines(69)
+            chkload4.Checked = txtloadprofile.Lines(70)
+            chkload5.Checked = txtloadprofile.Lines(71)
+            chkload6.Checked = txtloadprofile.Lines(72)
+            chkload7.Checked = txtloadprofile.Lines(73)
+            chkload8.Checked = txtloadprofile.Lines(74)
+            chkload9.Checked = txtloadprofile.Lines(75)
+            chkload10.Checked = txtloadprofile.Lines(76)
+            numload_rate1.Value = txtloadprofile.Lines(77)
+            numload_rate2.Value = txtloadprofile.Lines(78)
+            numload_rate3.Value = txtloadprofile.Lines(79)
+            numload_rate4.Value = txtloadprofile.Lines(80)
+            numload_rate5.Value = txtloadprofile.Lines(81)
+            numload_rate6.Value = txtloadprofile.Lines(82)
+            numload_rate7.Value = txtloadprofile.Lines(83)
+            numload_rate8.Value = txtloadprofile.Lines(84)
+            numload_rate9.Value = txtloadprofile.Lines(85)
+            numload_rate10.Value = txtloadprofile.Lines(86)
+            numload_delay1.Value = txtloadprofile.Lines(87)
+            numload_delay2.Value = txtloadprofile.Lines(88)
+            numload_delay3.Value = txtloadprofile.Lines(89)
+            numload_delay4.Value = txtloadprofile.Lines(90)
+            numload_delay5.Value = txtloadprofile.Lines(91)
+            numload_delay6.Value = txtloadprofile.Lines(92)
+            numload_delay7.Value = txtloadprofile.Lines(93)
+            numload_delay8.Value = txtloadprofile.Lines(94)
+            numload_delay9.Value = txtloadprofile.Lines(95)
+            numload_delay10.Value = txtloadprofile.Lines(96)
 
-            numgraph_first.Value = txtloadprofile.Lines(98)
-            chkrename_livesplit.Checked = txtloadprofile.Lines(99)
-            numloopcount.Value = txtloadprofile.Lines(100)
+            numgraph_first.Value = txtloadprofile.Lines(99)
+            chkrename_livesplit.Checked = txtloadprofile.Lines(100)
+            numloopcount.Value = txtloadprofile.Lines(101)
 
-            chkshowvideo.Checked = txtloadprofile.Lines(103)
-            chkvideo_autoseek.Checked = txtloadprofile.Lines(104)
-            chkvideo_manualstart.Checked = txtloadprofile.Lines(105)
-            txtvideo_pass.Text = txtloadprofile.Lines(106)
-            txtvideo_startat.Text = txtloadprofile.Lines(107)
-            numvideo_sizex.Value = txtloadprofile.Lines(108)
-            numvideo_sizey.Value = txtloadprofile.Lines(109)
-            chkvideo_showwinvideo.Checked = txtloadprofile.Lines(110)
-            numwin_locx.Value = txtloadprofile.Lines(111)
-            numwin_locy.Value = txtloadprofile.Lines(112)
-            numwin_interval.Value = txtloadprofile.Lines(113)
+            chkshowvideo.Checked = txtloadprofile.Lines(104)
+            chkvideo_autoseek.Checked = txtloadprofile.Lines(105)
+            chkvideo_manualstart.Checked = txtloadprofile.Lines(106)
+            txtvideo_pass.Text = txtloadprofile.Lines(107)
+            txtvideo_startat.Text = txtloadprofile.Lines(108)
+            numvideo_sizex.Value = txtloadprofile.Lines(109)
+            numvideo_sizey.Value = txtloadprofile.Lines(110)
+            chkvideo_showwinvideo.Checked = txtloadprofile.Lines(111)
+            numwin_locx.Value = txtloadprofile.Lines(112)
+            numwin_locy.Value = txtloadprofile.Lines(113)
+            numwin_interval.Value = txtloadprofile.Lines(114)
 
 
 
@@ -12210,13 +12279,17 @@ Public Class Mainwindow
             Exit Sub
         End If
 
-        If System.IO.File.Exists("./savedata/csvfile/" & inputText & ".csv") Then
+        If System.IO.File.Exists("./profile/" & inputText & "/data.csv") Then '★
             MessageBox.Show(inputText & My.Resources.Message.msg20, "AutoSplit Helper by Image") '"は既に存在しています。"
         Else
 
             ' フォルダ (ディレクトリ) を作成する
-            System.IO.Directory.CreateDirectory("./savedata/picture/" & inputText & "/")
-            txtpass_picturefolder.Text = "./savedata/picture/" & inputText
+            System.IO.Directory.CreateDirectory("./profile/" & inputText & "/picture/") '★
+            txtpass_picturefolder.Text = "./profile/" & inputText & "/picture" '★
+
+            ' フォルダ (ディレクトリ) を作成する
+            System.IO.Directory.CreateDirectory("./profile/" & inputText & "/text/") '★
+            txtpass_rtf.Text = "./profile/" & inputText & "/text" '★
 
 
 
@@ -12228,8 +12301,8 @@ Public Class Mainwindow
                 ' hStream が閉じられることを保証するために Try ～ Finally を使用する
                 Try
                     ' 指定したパスのファイルを作成する
-                    hStream = System.IO.File.Create("./savedata/csvfile/" & inputText & ".csv")
-                    txtpass_csv.Text = "./savedata/csvfile/" & inputText & ".csv"
+                    hStream = System.IO.File.Create("./profile/" & inputText & "/table.csv") '★
+                    txtpass_csv.Text = "./profile/" & inputText & "/table.csv" '★
 
                 Finally
                     ' 作成時に返される FileStream を利用して閉じる
@@ -12273,36 +12346,8 @@ Public Class Mainwindow
             parser.Close()
 
 
-
             DGtable.Rows.Add()
-            'DGtable.Rows(0).DefaultCellStyle.BackColor = Color.MistyRose
 
-            'DGtable(no.Index, 1).Style.BackColor = Color.WhiteSmoke
-
-            'DGtable(send.Index, 1).Style.BackColor = Color.Gainsboro
-            'DGtable(key.Index, 1).Style.BackColor = Color.Gainsboro
-
-            'DGtable(rate.Index, 1).Style.BackColor = Color.WhiteSmoke
-
-            'DGtable(sleep.Index, 1).Style.BackColor = Color.Gainsboro
-
-            'DGtable(timing.Index, 1).Style.BackColor = Color.WhiteSmoke
-            'DGtable(darksleep.Index, 1).Style.BackColor = Color.WhiteSmoke
-            'DGtable(darkthr.Index, 1).Style.BackColor = Color.WhiteSmoke
-
-            'DGtable(graph_count.Index, 1).Style.BackColor = Color.Gainsboro
-            'DGtable(graph_rate.Index, 1).Style.BackColor = Color.Gainsboro
-            'DGtable(graph_view.Index, 1).Style.BackColor = Color.Gainsboro
-
-            'DGtable(posx.Index, 1).Style.BackColor = Color.WhiteSmoke
-            'DGtable(posy.Index, 1).Style.BackColor = Color.WhiteSmoke
-            'DGtable(sizex.Index, 1).Style.BackColor = Color.WhiteSmoke
-            'DGtable(sizey.Index, 1).Style.BackColor = Color.WhiteSmoke
-
-            'DGtable(ltx.Index, 1).Style.BackColor = Color.Gainsboro
-            'DGtable(lty.Index, 1).Style.BackColor = Color.Gainsboro
-            'DGtable(rbx.Index, 1).Style.BackColor = Color.Gainsboro
-            'DGtable(rby.Index, 1).Style.BackColor = Color.Gainsboro
 
             Adjust_table()
 
@@ -12354,7 +12399,7 @@ Public Class Mainwindow
                 txtprofile.AppendText(arrayprofile(ii) & vbCrLf)
             Next
 
-            Dim sw As New System.IO.StreamWriter("./savedata/profile/" & cmbprofile.SelectedItem & ".txt", False, System.Text.Encoding.GetEncoding("shift_jis"))
+            Dim sw As New System.IO.StreamWriter("./profile/" & cmbprofile.SelectedItem & "/data.txt", False, System.Text.Encoding.GetEncoding("shift_jis")) '★
 
             sw.Write(txtprofile.Text)
 
@@ -13125,6 +13170,8 @@ Public Class Mainwindow
         btnstartopencv.PerformClick()
     End Sub
 
+
+
     Private Sub btnshow_chart_Click(sender As Object, e As EventArgs) Handles btnshow_chart.Click
         Textwindow.Show()
     End Sub
@@ -13135,13 +13182,14 @@ Public Class Mainwindow
 
 
     'Arrayprofileの作成はここ★
-    Private arrayprofile(113) As String
+    Private arrayprofile(114) As String
     Private Sub Createarrayprofile()
 
         arrayprofile = New String() {
 "##########Path##########",
 txtpass_csv.Text,
 txtpass_picturefolder.Text,
+txtpass_rtf.Text,
 "-",
 "##########Location##########",
 numsavex.Value,

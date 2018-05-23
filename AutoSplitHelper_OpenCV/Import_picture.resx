@@ -117,350 +117,227 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;btnimport_picture.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>360, 400</value>
-  </data>
-  <data name="&gt;&gt;txtinfo.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;txtinfo.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="btnclosewindow.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 12pt</value>
-  </data>
-  <data name="&gt;&gt;txtname.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnimport_ok.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 32</value>
-  </data>
-  <data name="btnimport_csv.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 24</value>
-  </data>
-  <data name="btnclosewindow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>315, 0</value>
-  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lbltitlebar.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;txtpass_picturefolder.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;lbltitlebar.Name" xml:space="preserve">
-    <value>lbltitlebar</value>
-  </data>
-  <data name="txtinfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 152</value>
-  </data>
-  <data name="txtpass_csv.TabIndex" type="System.Int32, mscorlib">
-    <value>225</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Import_picture</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="txtname.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 9.5pt</value>
-  </data>
-  <data name="btnclosewindow.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label67.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="txtpass_picturefolder.Location" type="System.Drawing.Point, System.Drawing">
-    <value>93, 39</value>
-  </data>
-  <data name="lbltitlebar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 26</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 12</value>
-  </data>
-  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
-    <value>231</value>
-  </data>
-  <data name="btnclosewindow.TabIndex" type="System.Int32, mscorlib">
-    <value>227</value>
-  </data>
-  <data name="btnclosewindow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 26</value>
-  </data>
-  <data name="&gt;&gt;txtpass_csv.Name" xml:space="preserve">
-    <value>txtpass_csv</value>
-  </data>
-  <data name="txtname.TabIndex" type="System.Int32, mscorlib">
-    <value>226</value>
-  </data>
-  <data name="lbltitlebar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnimport_csv.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;btnclosewindow.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnimport_ok.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="&gt;&gt;Label67.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="btnimport_picture.TabIndex" type="System.Int32, mscorlib">
-    <value>88</value>
-  </data>
-  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
-    <value>Label1</value>
-  </data>
-  <data name="&gt;&gt;btnimport_ok.Name" xml:space="preserve">
-    <value>btnimport_ok</value>
-  </data>
-  <data name="lbltitlebar.TabIndex" type="System.Int32, mscorlib">
-    <value>87</value>
-  </data>
-  <data name="txtinfo.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
-    <value>Vertical</value>
-  </data>
-  <data name="&gt;&gt;lbltitlebar.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="btnimport_picture.Text" xml:space="preserve">
-    <value>Picture</value>
-  </data>
-  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnclosewindow.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
-  </data>
-  <data name="&gt;&gt;txtname.Name" xml:space="preserve">
-    <value>txtname</value>
-  </data>
-  <data name="&gt;&gt;txtpass_csv.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txtinfo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lbltitlebar.Text" xml:space="preserve">
-    <value>Import</value>
-  </data>
-  <data name="&gt;&gt;Label67.Name" xml:space="preserve">
-    <value>Label67</value>
-  </data>
-  <data name="btnimport_ok.TabIndex" type="System.Int32, mscorlib">
-    <value>229</value>
-  </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>Profile name :</value>
-  </data>
-  <data name="txtpass_picturefolder.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Yes</value>
-  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lbltitlebar.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 9.75pt</value>
   </data>
-  <data name="&gt;&gt;btnimport_ok.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbltitlebar.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="Label67.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 321</value>
-  </data>
-  <data name="btnimport_picture.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 9pt</value>
-  </data>
-  <data name="Label67.Text" xml:space="preserve">
-    <value>* Please act "Calibration"after importing.</value>
-  </data>
-  <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="btnclosewindow.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 0, 0</value>
-  </data>
-  <data name="Label67.Size" type="System.Drawing.Size, System.Drawing">
-    <value>311, 19</value>
-  </data>
-  <data name="Label67.TabIndex" type="System.Int32, mscorlib">
-    <value>230</value>
-  </data>
-  <data name="txtinfo.Text" xml:space="preserve">
-    <value>If there is "info.txt" it will be displayed here ...</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lbltitlebar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="lbltitlebar.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="&gt;&gt;btnimport_ok.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="lbltitlebar.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 3, 314, 6</value>
   </data>
-  <data name="txtinfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>327, 151</value>
+  <data name="lbltitlebar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>365, 26</value>
   </data>
-  <data name="&gt;&gt;Label67.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="lbltitlebar.TabIndex" type="System.Int32, mscorlib">
+    <value>87</value>
   </data>
-  <data name="&gt;&gt;txtinfo.Name" xml:space="preserve">
-    <value>txtinfo</value>
+  <data name="lbltitlebar.Text" xml:space="preserve">
+    <value>Import</value>
   </data>
-  <data name="txtpass_csv.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Yes</value>
+  <data name="&gt;&gt;lbltitlebar.Name" xml:space="preserve">
+    <value>lbltitlebar</value>
   </data>
-  <data name="&gt;&gt;btnimport_csv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;lbltitlebar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbltitlebar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbltitlebar.ZOrder" xml:space="preserve">
+    <value>14</value>
   </data>
   <data name="btnimport_picture.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="&gt;&gt;btnclosewindow.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="btnimport_picture.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="btnimport_picture.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 39</value>
+  </data>
+  <data name="btnimport_picture.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 24</value>
+  </data>
+  <data name="btnimport_picture.TabIndex" type="System.Int32, mscorlib">
+    <value>88</value>
+  </data>
+  <data name="btnimport_picture.Text" xml:space="preserve">
+    <value>Picture</value>
+  </data>
+  <data name="&gt;&gt;btnimport_picture.Name" xml:space="preserve">
+    <value>btnimport_picture</value>
+  </data>
+  <data name="&gt;&gt;btnimport_picture.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnimport_picture.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;btnimport_picture.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="btnimport_csv.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnimport_csv.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnimport_csv.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="btnimport_csv.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 68</value>
+  </data>
+  <data name="btnimport_csv.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 24</value>
+  </data>
+  <data name="btnimport_csv.TabIndex" type="System.Int32, mscorlib">
+    <value>89</value>
+  </data>
+  <data name="btnimport_csv.Text" xml:space="preserve">
+    <value>CSV</value>
+  </data>
+  <data name="&gt;&gt;btnimport_csv.Name" xml:space="preserve">
+    <value>btnimport_csv</value>
+  </data>
+  <data name="&gt;&gt;btnimport_csv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnimport_csv.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnimport_csv.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="txtpass_csv.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9.5pt</value>
+  </data>
+  <data name="txtpass_csv.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 68</value>
+  </data>
+  <data name="txtpass_csv.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="txtpass_csv.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 24</value>
+  </data>
+  <data name="txtpass_csv.TabIndex" type="System.Int32, mscorlib">
+    <value>225</value>
+  </data>
+  <data name="&gt;&gt;txtpass_csv.Name" xml:space="preserve">
+    <value>txtpass_csv</value>
+  </data>
+  <data name="&gt;&gt;txtpass_csv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtpass_csv.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtpass_csv.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="txtpass_picturefolder.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9.5pt</value>
+  </data>
+  <data name="txtpass_picturefolder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 39</value>
+  </data>
+  <data name="txtpass_picturefolder.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="txtpass_picturefolder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 24</value>
+  </data>
+  <data name="txtpass_picturefolder.TabIndex" type="System.Int32, mscorlib">
+    <value>223</value>
+  </data>
+  <data name="&gt;&gt;txtpass_picturefolder.Name" xml:space="preserve">
+    <value>txtpass_picturefolder</value>
+  </data>
+  <data name="&gt;&gt;txtpass_picturefolder.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtpass_picturefolder.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtpass_picturefolder.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="txtname.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9.5pt</value>
+  </data>
+  <data name="txtname.Location" type="System.Drawing.Point, System.Drawing">
+    <value>130, 139</value>
+  </data>
+  <data name="txtname.Size" type="System.Drawing.Size, System.Drawing">
+    <value>213, 24</value>
+  </data>
+  <data name="txtname.TabIndex" type="System.Int32, mscorlib">
+    <value>226</value>
+  </data>
+  <data name="&gt;&gt;txtname.Name" xml:space="preserve">
+    <value>txtname</value>
+  </data>
+  <data name="&gt;&gt;txtname.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtname.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtname.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
   <data name="btnclosewindow.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="&gt;&gt;txtpass_picturefolder.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="btnclosewindow.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
   </data>
-  <data name="&gt;&gt;txtpass_picturefolder.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="btnclosewindow.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="txtpass_csv.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 24</value>
+  <data name="btnclosewindow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>315, 0</value>
   </data>
-  <data name="&gt;&gt;btnimport_csv.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="btnclosewindow.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 0, 0</value>
   </data>
-  <data name="txtname.Size" type="System.Drawing.Size, System.Drawing">
-    <value>213, 24</value>
+  <data name="btnclosewindow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 26</value>
   </data>
-  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 109</value>
-  </data>
-  <data name="Label67.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 11pt</value>
-  </data>
-  <data name="Label67.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtpass_picturefolder.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 24</value>
-  </data>
-  <data name="txtinfo.TabIndex" type="System.Int32, mscorlib">
-    <value>232</value>
-  </data>
-  <data name="txtpass_picturefolder.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 9.5pt</value>
-  </data>
-  <data name="&gt;&gt;btnimport_ok.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="txtname.Location" type="System.Drawing.Point, System.Drawing">
-    <value>130, 108</value>
-  </data>
-  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtpass_picturefolder.TabIndex" type="System.Int32, mscorlib">
-    <value>223</value>
-  </data>
-  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="Label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 11pt</value>
-  </data>
-  <data name="btnimport_csv.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="&gt;&gt;btnclosewindow.Name" xml:space="preserve">
-    <value>btnclosewindow</value>
-  </data>
-  <data name="btnimport_csv.TabIndex" type="System.Int32, mscorlib">
-    <value>89</value>
-  </data>
-  <data name="&gt;&gt;btnimport_csv.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;txtname.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txtpass_csv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label67.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbltitlebar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 19</value>
+  <data name="btnclosewindow.TabIndex" type="System.Int32, mscorlib">
+    <value>227</value>
   </data>
   <data name="btnclosewindow.Text" xml:space="preserve">
     <value>×</value>
   </data>
-  <data name="btnimport_csv.Text" xml:space="preserve">
-    <value>CSV</value>
+  <data name="btnclosewindow.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
   </data>
-  <data name="&gt;&gt;txtpass_picturefolder.Name" xml:space="preserve">
-    <value>txtpass_picturefolder</value>
+  <data name="&gt;&gt;btnclosewindow.Name" xml:space="preserve">
+    <value>btnclosewindow</value>
   </data>
-  <data name="&gt;&gt;btnimport_picture.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lbltitlebar.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 3, 314, 6</value>
-  </data>
-  <data name="txtpass_csv.Location" type="System.Drawing.Point, System.Drawing">
-    <value>93, 68</value>
-  </data>
-  <data name="btnimport_ok.Text" xml:space="preserve">
-    <value>Import</value>
-  </data>
-  <data name="txtinfo.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtinfo.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 9pt</value>
-  </data>
-  <data name="btnimport_csv.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 9pt</value>
+  <data name="&gt;&gt;btnclosewindow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnclosewindow.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="btnimport_picture.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 24</value>
+  <data name="&gt;&gt;btnclosewindow.ZOrder" xml:space="preserve">
+    <value>8</value>
   </data>
-  <data name="&gt;&gt;txtname.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="btnimport_csv.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 68</value>
-  </data>
-  <data name="txtpass_csv.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 9.5pt</value>
-  </data>
-  <data name="btnimport_picture.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 39</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="btnimport_ok.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
   <data name="btnimport_ok.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 11pt</value>
@@ -468,16 +345,259 @@
   <data name="btnimport_ok.Location" type="System.Drawing.Point, System.Drawing">
     <value>233, 352</value>
   </data>
-  <data name="&gt;&gt;btnimport_csv.Name" xml:space="preserve">
-    <value>btnimport_csv</value>
+  <data name="btnimport_ok.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 32</value>
   </data>
-  <data name="&gt;&gt;txtpass_csv.ZOrder" xml:space="preserve">
+  <data name="btnimport_ok.TabIndex" type="System.Int32, mscorlib">
+    <value>229</value>
+  </data>
+  <data name="btnimport_ok.Text" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="&gt;&gt;btnimport_ok.Name" xml:space="preserve">
+    <value>btnimport_ok</value>
+  </data>
+  <data name="&gt;&gt;btnimport_ok.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnimport_ok.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnimport_ok.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="Label67.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label67.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 11pt</value>
+  </data>
+  <data name="Label67.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label67.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 321</value>
+  </data>
+  <data name="Label67.Size" type="System.Drawing.Size, System.Drawing">
+    <value>311, 19</value>
+  </data>
+  <data name="Label67.TabIndex" type="System.Int32, mscorlib">
+    <value>230</value>
+  </data>
+  <data name="Label67.Text" xml:space="preserve">
+    <value>* Please act "Calibration"after importing.</value>
+  </data>
+  <data name="&gt;&gt;Label67.Name" xml:space="preserve">
+    <value>Label67</value>
+  </data>
+  <data name="&gt;&gt;Label67.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label67.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Label67.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;btnimport_picture.Name" xml:space="preserve">
-    <value>btnimport_picture</value>
+  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 11pt</value>
+  </data>
+  <data name="Label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 140</value>
+  </data>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 19</value>
+  </data>
+  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
+    <value>231</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Profile name :</value>
+  </data>
+  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
+    <value>Label1</value>
+  </data>
+  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="txtinfo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="txtinfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 175</value>
+  </data>
+  <data name="txtinfo.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtinfo.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="txtinfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>327, 128</value>
+  </data>
+  <data name="txtinfo.TabIndex" type="System.Int32, mscorlib">
+    <value>232</value>
+  </data>
+  <data name="txtinfo.Text" xml:space="preserve">
+    <value>If there is "info.txt" it will be displayed here ...</value>
+  </data>
+  <data name="&gt;&gt;txtinfo.Name" xml:space="preserve">
+    <value>txtinfo</value>
+  </data>
+  <data name="&gt;&gt;txtinfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtinfo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtinfo.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="txtpass_rtf.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9.5pt</value>
+  </data>
+  <data name="txtpass_rtf.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 98</value>
+  </data>
+  <data name="txtpass_rtf.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="txtpass_rtf.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 24</value>
+  </data>
+  <data name="txtpass_rtf.TabIndex" type="System.Int32, mscorlib">
+    <value>234</value>
+  </data>
+  <data name="&gt;&gt;txtpass_rtf.Name" xml:space="preserve">
+    <value>txtpass_rtf</value>
+  </data>
+  <data name="&gt;&gt;txtpass_rtf.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtpass_rtf.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtpass_rtf.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Button1.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Button1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="Button1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="Button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 98</value>
+  </data>
+  <data name="Button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 24</value>
+  </data>
+  <data name="Button1.TabIndex" type="System.Int32, mscorlib">
+    <value>233</value>
+  </data>
+  <data name="Button1.Text" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="&gt;&gt;Button1.Name" xml:space="preserve">
+    <value>Button1</value>
+  </data>
+  <data name="&gt;&gt;Button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Button1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Button1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnimport_profile.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnimport_profile.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="btnimport_profile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnimport_profile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 360</value>
+  </data>
+  <data name="btnimport_profile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 24</value>
+  </data>
+  <data name="btnimport_profile.TabIndex" type="System.Int32, mscorlib">
+    <value>235</value>
+  </data>
+  <data name="btnimport_profile.Text" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="&gt;&gt;btnimport_profile.Name" xml:space="preserve">
+    <value>btnimport_profile</value>
+  </data>
+  <data name="&gt;&gt;btnimport_profile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnimport_profile.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnimport_profile.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtpass_profile.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9.5pt</value>
+  </data>
+  <data name="txtpass_profile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 361</value>
+  </data>
+  <data name="txtpass_profile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 24</value>
+  </data>
+  <data name="txtpass_profile.TabIndex" type="System.Int32, mscorlib">
+    <value>236</value>
+  </data>
+  <data name="&gt;&gt;txtpass_profile.Name" xml:space="preserve">
+    <value>txtpass_profile</value>
+  </data>
+  <data name="&gt;&gt;txtpass_profile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtpass_profile.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtpass_profile.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 12</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>360, 400</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Import_picture</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>
