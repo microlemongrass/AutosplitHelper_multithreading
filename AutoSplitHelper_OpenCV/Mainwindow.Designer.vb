@@ -359,6 +359,7 @@ Partial Class Mainwindow
         Me.ViewTableToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InformationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LicenseLToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.picunder = New System.Windows.Forms.PictureBox()
         Me.btnclose_general = New System.Windows.Forms.Button()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
@@ -634,6 +635,20 @@ Partial Class Mainwindow
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.lblversion = New System.Windows.Forms.Label()
+        Me.TabPage16 = New System.Windows.Forms.TabPage()
+        Me.btntosetting04 = New System.Windows.Forms.Button()
+        Me.rtxtlicense = New System.Windows.Forms.RichTextBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.link_dobon = New System.Windows.Forms.LinkLabel()
+        Me.Label118 = New System.Windows.Forms.Label()
+        Me.Label117 = New System.Windows.Forms.Label()
+        Me.Label116 = New System.Windows.Forms.Label()
+        Me.link_directshowlib = New System.Windows.Forms.LinkLabel()
+        Me.Label113 = New System.Windows.Forms.Label()
+        Me.link_opencvsharp = New System.Windows.Forms.LinkLabel()
+        Me.link_inteltbb = New System.Windows.Forms.LinkLabel()
+        Me.Label114 = New System.Windows.Forms.Label()
+        Me.Label115 = New System.Windows.Forms.Label()
         Me.btnview_close = New System.Windows.Forms.Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
@@ -786,6 +801,8 @@ Partial Class Mainwindow
         CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        Me.TabPage16.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -796,6 +813,7 @@ Partial Class Mainwindow
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage15)
         Me.TabControl1.Controls.Add(Me.TabPage3)
+        Me.TabControl1.Controls.Add(Me.TabPage16)
         Me.TabControl1.Multiline = True
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -3578,7 +3596,7 @@ Partial Class Mainwindow
         '
         'HelpToolStripMenuItem
         '
-        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InformationToolStripMenuItem})
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InformationToolStripMenuItem, Me.LicenseLToolStripMenuItem})
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
         resources.ApplyResources(Me.HelpToolStripMenuItem, "HelpToolStripMenuItem")
         '
@@ -3586,6 +3604,11 @@ Partial Class Mainwindow
         '
         Me.InformationToolStripMenuItem.Name = "InformationToolStripMenuItem"
         resources.ApplyResources(Me.InformationToolStripMenuItem, "InformationToolStripMenuItem")
+        '
+        'LicenseLToolStripMenuItem
+        '
+        Me.LicenseLToolStripMenuItem.Name = "LicenseLToolStripMenuItem"
+        resources.ApplyResources(Me.LicenseLToolStripMenuItem, "LicenseLToolStripMenuItem")
         '
         'picunder
         '
@@ -5886,6 +5909,124 @@ Partial Class Mainwindow
         Me.lblversion.ForeColor = System.Drawing.SystemColors.Control
         Me.lblversion.Name = "lblversion"
         '
+        'TabPage16
+        '
+        Me.TabPage16.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(75, Byte), Integer))
+        Me.TabPage16.Controls.Add(Me.btntosetting04)
+        Me.TabPage16.Controls.Add(Me.rtxtlicense)
+        Me.TabPage16.Controls.Add(Me.Panel2)
+        resources.ApplyResources(Me.TabPage16, "TabPage16")
+        Me.TabPage16.Name = "TabPage16"
+        '
+        'btntosetting04
+        '
+        Me.btntosetting04.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
+        resources.ApplyResources(Me.btntosetting04, "btntosetting04")
+        Me.btntosetting04.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btntosetting04.Name = "btntosetting04"
+        Me.btntosetting04.UseVisualStyleBackColor = False
+        '
+        'rtxtlicense
+        '
+        Me.rtxtlicense.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.rtxtlicense.ForeColor = System.Drawing.Color.Snow
+        resources.ApplyResources(Me.rtxtlicense, "rtxtlicense")
+        Me.rtxtlicense.Name = "rtxtlicense"
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.link_dobon)
+        Me.Panel2.Controls.Add(Me.Label118)
+        Me.Panel2.Controls.Add(Me.Label117)
+        Me.Panel2.Controls.Add(Me.Label116)
+        Me.Panel2.Controls.Add(Me.link_directshowlib)
+        Me.Panel2.Controls.Add(Me.Label113)
+        Me.Panel2.Controls.Add(Me.link_opencvsharp)
+        Me.Panel2.Controls.Add(Me.link_inteltbb)
+        Me.Panel2.Controls.Add(Me.Label114)
+        Me.Panel2.Controls.Add(Me.Label115)
+        resources.ApplyResources(Me.Panel2, "Panel2")
+        Me.Panel2.Name = "Panel2"
+        '
+        'link_dobon
+        '
+        resources.ApplyResources(Me.link_dobon, "link_dobon")
+        Me.link_dobon.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.link_dobon.LinkColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.link_dobon.Name = "link_dobon"
+        Me.link_dobon.TabStop = True
+        Me.link_dobon.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        '
+        'Label118
+        '
+        resources.ApplyResources(Me.Label118, "Label118")
+        Me.Label118.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Label118.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label118.Name = "Label118"
+        '
+        'Label117
+        '
+        resources.ApplyResources(Me.Label117, "Label117")
+        Me.Label117.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Label117.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label117.Name = "Label117"
+        '
+        'Label116
+        '
+        resources.ApplyResources(Me.Label116, "Label116")
+        Me.Label116.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Label116.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label116.Name = "Label116"
+        '
+        'link_directshowlib
+        '
+        resources.ApplyResources(Me.link_directshowlib, "link_directshowlib")
+        Me.link_directshowlib.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.link_directshowlib.LinkColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.link_directshowlib.Name = "link_directshowlib"
+        Me.link_directshowlib.TabStop = True
+        Me.link_directshowlib.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        '
+        'Label113
+        '
+        resources.ApplyResources(Me.Label113, "Label113")
+        Me.Label113.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Label113.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label113.Name = "Label113"
+        '
+        'link_opencvsharp
+        '
+        resources.ApplyResources(Me.link_opencvsharp, "link_opencvsharp")
+        Me.link_opencvsharp.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.link_opencvsharp.LinkColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.link_opencvsharp.Name = "link_opencvsharp"
+        Me.link_opencvsharp.TabStop = True
+        Me.link_opencvsharp.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        '
+        'link_inteltbb
+        '
+        resources.ApplyResources(Me.link_inteltbb, "link_inteltbb")
+        Me.link_inteltbb.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.link_inteltbb.LinkColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.link_inteltbb.Name = "link_inteltbb"
+        Me.link_inteltbb.TabStop = True
+        Me.link_inteltbb.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        '
+        'Label114
+        '
+        resources.ApplyResources(Me.Label114, "Label114")
+        Me.Label114.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Label114.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label114.Name = "Label114"
+        '
+        'Label115
+        '
+        resources.ApplyResources(Me.Label115, "Label115")
+        Me.Label115.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Label115.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label115.Name = "Label115"
+        '
         'btnview_close
         '
         Me.btnview_close.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer))
@@ -6149,6 +6290,9 @@ Partial Class Mainwindow
         Me.Panel3.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.TabPage16.ResumeLayout(False)
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -6779,4 +6923,19 @@ Partial Class Mainwindow
     Friend WithEvents txtpass_rtf As TextBox
     Friend WithEvents Label112 As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents TabPage16 As TabPage
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Label118 As Label
+    Friend WithEvents Label117 As Label
+    Friend WithEvents Label116 As Label
+    Friend WithEvents link_directshowlib As LinkLabel
+    Friend WithEvents Label113 As Label
+    Friend WithEvents link_opencvsharp As LinkLabel
+    Friend WithEvents link_inteltbb As LinkLabel
+    Friend WithEvents Label114 As Label
+    Friend WithEvents Label115 As Label
+    Friend WithEvents rtxtlicense As RichTextBox
+    Friend WithEvents link_dobon As LinkLabel
+    Friend WithEvents btntosetting04 As Button
+    Friend WithEvents LicenseLToolStripMenuItem As ToolStripMenuItem
 End Class

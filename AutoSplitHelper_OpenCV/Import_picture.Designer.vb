@@ -24,8 +24,6 @@ Partial Class Import_picture
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Import_picture))
         Me.lbltitlebar = New System.Windows.Forms.Label()
-        Me.btnimport_picture = New System.Windows.Forms.Button()
-        Me.btnimport_csv = New System.Windows.Forms.Button()
         Me.txtpass_csv = New System.Windows.Forms.TextBox()
         Me.txtpass_picturefolder = New System.Windows.Forms.TextBox()
         Me.txtname = New System.Windows.Forms.TextBox()
@@ -35,9 +33,11 @@ Partial Class Import_picture
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtinfo = New System.Windows.Forms.TextBox()
         Me.txtpass_rtf = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.btnimport_profile = New System.Windows.Forms.Button()
         Me.txtpass_profile = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'lbltitlebar
@@ -46,20 +46,6 @@ Partial Class Import_picture
         Me.lbltitlebar.BackColor = System.Drawing.Color.SteelBlue
         Me.lbltitlebar.ForeColor = System.Drawing.SystemColors.Control
         Me.lbltitlebar.Name = "lbltitlebar"
-        '
-        'btnimport_picture
-        '
-        Me.btnimport_picture.BackColor = System.Drawing.SystemColors.Control
-        resources.ApplyResources(Me.btnimport_picture, "btnimport_picture")
-        Me.btnimport_picture.Name = "btnimport_picture"
-        Me.btnimport_picture.UseVisualStyleBackColor = False
-        '
-        'btnimport_csv
-        '
-        Me.btnimport_csv.BackColor = System.Drawing.SystemColors.Control
-        resources.ApplyResources(Me.btnimport_csv, "btnimport_csv")
-        Me.btnimport_csv.Name = "btnimport_csv"
-        Me.btnimport_csv.UseVisualStyleBackColor = False
         '
         'txtpass_csv
         '
@@ -131,13 +117,6 @@ Partial Class Import_picture
         Me.txtpass_rtf.Name = "txtpass_rtf"
         Me.txtpass_rtf.ReadOnly = True
         '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.SystemColors.Control
-        resources.ApplyResources(Me.Button1, "Button1")
-        Me.Button1.Name = "Button1"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
         'btnimport_profile
         '
         Me.btnimport_profile.BackColor = System.Drawing.SystemColors.Control
@@ -153,16 +132,39 @@ Partial Class Import_picture
         Me.txtpass_profile.ForeColor = System.Drawing.SystemColors.Control
         Me.txtpass_profile.Name = "txtpass_profile"
         '
+        'Label2
+        '
+        resources.ApplyResources(Me.Label2, "Label2")
+        Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label2.Name = "Label2"
+        '
+        'Label3
+        '
+        resources.ApplyResources(Me.Label3, "Label3")
+        Me.Label3.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label3.Name = "Label3"
+        '
+        'Label4
+        '
+        resources.ApplyResources(Me.Label4, "Label4")
+        Me.Label4.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.Label4.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label4.Name = "Label4"
+        '
         'Import_picture
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(74, Byte), Integer))
         Me.ControlBox = False
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtpass_profile)
         Me.Controls.Add(Me.btnimport_profile)
         Me.Controls.Add(Me.txtpass_rtf)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.txtinfo)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label67)
@@ -171,8 +173,6 @@ Partial Class Import_picture
         Me.Controls.Add(Me.txtname)
         Me.Controls.Add(Me.txtpass_csv)
         Me.Controls.Add(Me.txtpass_picturefolder)
-        Me.Controls.Add(Me.btnimport_csv)
-        Me.Controls.Add(Me.btnimport_picture)
         Me.Controls.Add(Me.lbltitlebar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Import_picture"
@@ -182,8 +182,6 @@ Partial Class Import_picture
     End Sub
 
     Friend WithEvents lbltitlebar As Label
-    Friend WithEvents btnimport_picture As Button
-    Friend WithEvents btnimport_csv As Button
     Friend WithEvents txtpass_csv As TextBox
     Friend WithEvents txtpass_picturefolder As TextBox
     Friend WithEvents txtname As TextBox
@@ -193,7 +191,9 @@ Partial Class Import_picture
     Friend WithEvents Label1 As Label
     Friend WithEvents txtinfo As TextBox
     Friend WithEvents txtpass_rtf As TextBox
-    Friend WithEvents Button1 As Button
     Friend WithEvents btnimport_profile As Button
     Friend WithEvents txtpass_profile As TextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
 End Class

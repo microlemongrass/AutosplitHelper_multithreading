@@ -9355,6 +9355,12 @@
   <data name="InformationToolStripMenuItem.Text" xml:space="preserve">
     <value>Information(&amp;I)</value>
   </data>
+  <data name="LicenseLToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 24</value>
+  </data>
+  <data name="LicenseLToolStripMenuItem.Text" xml:space="preserve">
+    <value>License(&amp;L)</value>
+  </data>
   <data name="HelpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>98, 25</value>
   </data>
@@ -17780,6 +17786,441 @@
   <data name="&gt;&gt;TabPage3.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="btntosetting04.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btntosetting04.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 8pt</value>
+  </data>
+  <data name="btntosetting04.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btntosetting04.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 30</value>
+  </data>
+  <data name="btntosetting04.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 1, 0, 0</value>
+  </data>
+  <data name="btntosetting04.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 26</value>
+  </data>
+  <data name="btntosetting04.TabIndex" type="System.Int32, mscorlib">
+    <value>267</value>
+  </data>
+  <data name="btntosetting04.Text" xml:space="preserve">
+    <value>← Back</value>
+  </data>
+  <data name="&gt;&gt;btntosetting04.Name" xml:space="preserve">
+    <value>btntosetting04</value>
+  </data>
+  <data name="&gt;&gt;btntosetting04.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btntosetting04.Parent" xml:space="preserve">
+    <value>TabPage16</value>
+  </data>
+  <data name="&gt;&gt;btntosetting04.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="rtxtlicense.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 242</value>
+  </data>
+  <data name="rtxtlicense.Size" type="System.Drawing.Size, System.Drawing">
+    <value>742, 307</value>
+  </data>
+  <data name="rtxtlicense.TabIndex" type="System.Int32, mscorlib">
+    <value>113</value>
+  </data>
+  <data name="rtxtlicense.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;rtxtlicense.Name" xml:space="preserve">
+    <value>rtxtlicense</value>
+  </data>
+  <data name="&gt;&gt;rtxtlicense.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rtxtlicense.Parent" xml:space="preserve">
+    <value>TabPage16</value>
+  </data>
+  <data name="&gt;&gt;rtxtlicense.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="link_dobon.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="link_dobon.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="link_dobon.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="link_dobon.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 129</value>
+  </data>
+  <data name="link_dobon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 20</value>
+  </data>
+  <data name="link_dobon.TabIndex" type="System.Int32, mscorlib">
+    <value>117</value>
+  </data>
+  <data name="link_dobon.Text" xml:space="preserve">
+    <value>License</value>
+  </data>
+  <data name="&gt;&gt;link_dobon.Name" xml:space="preserve">
+    <value>link_dobon</value>
+  </data>
+  <data name="&gt;&gt;link_dobon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;link_dobon.Parent" xml:space="preserve">
+    <value>Panel2</value>
+  </data>
+  <data name="&gt;&gt;link_dobon.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Label118.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label118.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="Label118.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label118.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 129</value>
+  </data>
+  <data name="Label118.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 20</value>
+  </data>
+  <data name="Label118.TabIndex" type="System.Int32, mscorlib">
+    <value>116</value>
+  </data>
+  <data name="Label118.Text" xml:space="preserve">
+    <value>・DOBON.NET</value>
+  </data>
+  <data name="&gt;&gt;Label118.Name" xml:space="preserve">
+    <value>Label118</value>
+  </data>
+  <data name="&gt;&gt;Label118.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label118.Parent" xml:space="preserve">
+    <value>Panel2</value>
+  </data>
+  <data name="&gt;&gt;Label118.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Label117.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label117.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="Label117.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label117.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 101</value>
+  </data>
+  <data name="Label117.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 20</value>
+  </data>
+  <data name="Label117.TabIndex" type="System.Int32, mscorlib">
+    <value>115</value>
+  </data>
+  <data name="Label117.Text" xml:space="preserve">
+    <value>・Directshowlib-2005</value>
+  </data>
+  <data name="&gt;&gt;Label117.Name" xml:space="preserve">
+    <value>Label117</value>
+  </data>
+  <data name="&gt;&gt;Label117.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label117.Parent" xml:space="preserve">
+    <value>Panel2</value>
+  </data>
+  <data name="&gt;&gt;Label117.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Label116.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label116.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="Label116.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label116.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 73</value>
+  </data>
+  <data name="Label116.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 20</value>
+  </data>
+  <data name="Label116.TabIndex" type="System.Int32, mscorlib">
+    <value>114</value>
+  </data>
+  <data name="Label116.Text" xml:space="preserve">
+    <value>  ・Intel TBB</value>
+  </data>
+  <data name="&gt;&gt;Label116.Name" xml:space="preserve">
+    <value>Label116</value>
+  </data>
+  <data name="&gt;&gt;Label116.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label116.Parent" xml:space="preserve">
+    <value>Panel2</value>
+  </data>
+  <data name="&gt;&gt;Label116.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="link_directshowlib.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="link_directshowlib.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="link_directshowlib.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="link_directshowlib.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 101</value>
+  </data>
+  <data name="link_directshowlib.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 20</value>
+  </data>
+  <data name="link_directshowlib.TabIndex" type="System.Int32, mscorlib">
+    <value>113</value>
+  </data>
+  <data name="link_directshowlib.Text" xml:space="preserve">
+    <value>License</value>
+  </data>
+  <data name="&gt;&gt;link_directshowlib.Name" xml:space="preserve">
+    <value>link_directshowlib</value>
+  </data>
+  <data name="&gt;&gt;link_directshowlib.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;link_directshowlib.Parent" xml:space="preserve">
+    <value>Panel2</value>
+  </data>
+  <data name="&gt;&gt;link_directshowlib.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Label113.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label113.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="Label113.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label113.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 50</value>
+  </data>
+  <data name="Label113.Size" type="System.Drawing.Size, System.Drawing">
+    <value>264, 20</value>
+  </data>
+  <data name="Label113.TabIndex" type="System.Int32, mscorlib">
+    <value>112</value>
+  </data>
+  <data name="Label113.Text" xml:space="preserve">
+    <value>・OpenCVSharp 3.4.1.20180319 </value>
+  </data>
+  <data name="&gt;&gt;Label113.Name" xml:space="preserve">
+    <value>Label113</value>
+  </data>
+  <data name="&gt;&gt;Label113.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label113.Parent" xml:space="preserve">
+    <value>Panel2</value>
+  </data>
+  <data name="&gt;&gt;Label113.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="link_opencvsharp.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="link_opencvsharp.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="link_opencvsharp.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="link_opencvsharp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 50</value>
+  </data>
+  <data name="link_opencvsharp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 20</value>
+  </data>
+  <data name="link_opencvsharp.TabIndex" type="System.Int32, mscorlib">
+    <value>112</value>
+  </data>
+  <data name="link_opencvsharp.Text" xml:space="preserve">
+    <value>License</value>
+  </data>
+  <data name="&gt;&gt;link_opencvsharp.Name" xml:space="preserve">
+    <value>link_opencvsharp</value>
+  </data>
+  <data name="&gt;&gt;link_opencvsharp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;link_opencvsharp.Parent" xml:space="preserve">
+    <value>Panel2</value>
+  </data>
+  <data name="&gt;&gt;link_opencvsharp.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="link_inteltbb.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="link_inteltbb.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="link_inteltbb.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="link_inteltbb.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 73</value>
+  </data>
+  <data name="link_inteltbb.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 20</value>
+  </data>
+  <data name="link_inteltbb.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="link_inteltbb.Text" xml:space="preserve">
+    <value>License</value>
+  </data>
+  <data name="&gt;&gt;link_inteltbb.Name" xml:space="preserve">
+    <value>link_inteltbb</value>
+  </data>
+  <data name="&gt;&gt;link_inteltbb.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;link_inteltbb.Parent" xml:space="preserve">
+    <value>Panel2</value>
+  </data>
+  <data name="&gt;&gt;link_inteltbb.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="Label114.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label114.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="Label114.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label114.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 14</value>
+  </data>
+  <data name="Label114.Size" type="System.Drawing.Size, System.Drawing">
+    <value>468, 20</value>
+  </data>
+  <data name="Label114.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="Label114.Text" xml:space="preserve">
+    <value>This software uses the following libraries and informations.</value>
+  </data>
+  <data name="&gt;&gt;Label114.Name" xml:space="preserve">
+    <value>Label114</value>
+  </data>
+  <data name="&gt;&gt;Label114.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label114.Parent" xml:space="preserve">
+    <value>Panel2</value>
+  </data>
+  <data name="&gt;&gt;Label114.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="Label115.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label115.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="Label115.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label115.Location" type="System.Drawing.Point, System.Drawing">
+    <value>250, 14</value>
+  </data>
+  <data name="Label115.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 20</value>
+  </data>
+  <data name="Label115.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="Label115.Text" xml:space="preserve">
+    <value>V1.29</value>
+  </data>
+  <data name="&gt;&gt;Label115.Name" xml:space="preserve">
+    <value>Label115</value>
+  </data>
+  <data name="&gt;&gt;Label115.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label115.Parent" xml:space="preserve">
+    <value>Panel2</value>
+  </data>
+  <data name="&gt;&gt;Label115.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="Panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 62</value>
+  </data>
+  <data name="Panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>774, 501</value>
+  </data>
+  <data name="Panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>112</value>
+  </data>
+  <data name="&gt;&gt;Panel2.Name" xml:space="preserve">
+    <value>Panel2</value>
+  </data>
+  <data name="&gt;&gt;Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Panel2.Parent" xml:space="preserve">
+    <value>TabPage16</value>
+  </data>
+  <data name="&gt;&gt;Panel2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="TabPage16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="TabPage16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>2092, 1032</value>
+  </data>
+  <data name="TabPage16.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TabPage16.Text" xml:space="preserve">
+    <value>License</value>
+  </data>
+  <data name="&gt;&gt;TabPage16.Name" xml:space="preserve">
+    <value>TabPage16</value>
+  </data>
+  <data name="&gt;&gt;TabPage16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabPage16.Parent" xml:space="preserve">
+    <value>TabControl1</value>
+  </data>
+  <data name="&gt;&gt;TabPage16.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
   <data name="TabControl1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 9.75pt</value>
   </data>
@@ -18718,6 +19159,12 @@
     <value>InformationToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;InformationToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LicenseLToolStripMenuItem.Name" xml:space="preserve">
+    <value>LicenseLToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;LicenseLToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;applysize.Name" xml:space="preserve">

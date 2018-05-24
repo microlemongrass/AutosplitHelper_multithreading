@@ -343,8 +343,12 @@
     <Content Include="120ce37833969fbf1948ecadb41a00f6_xxo.ico" />
     <EmbeddedResource Include="Resources\size.bmp" />
     <EmbeddedResource Include="Resources\viewsize_640x360.bmp" />
-    <None Include="Resources\save.png" />
-    <None Include="Resources\delete.png" />
+    <EmbeddedResource Include="Resources\save.png" />
+    <EmbeddedResource Include="Resources\delete.png" />
+    <EmbeddedResource Include="Resources\License[Directshowlib-2005].txt" />
+    <EmbeddedResource Include="Resources\Licence[Intel_TBB].txt" />
+    <EmbeddedResource Include="Resources\License[DOBONNET].txt" />
+    <EmbeddedResource Include="Resources\License[OpenCVsharp].txt" />
     <Content Include="wes.ico" />
   </ItemGroup>
   <ItemGroup>

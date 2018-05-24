@@ -612,6 +612,8 @@ Public Class Mainwindow
 
     Private Sub lblset_monitoring_MouseClick(sender As Object, e As MouseEventArgs) Handles lblset_monitoring.MouseClick
 
+
+        listsetcontents.SelectedIndex = 1
         listsetcontents.SelectedIndex = 0
 
         '280+15 -> 22
@@ -628,6 +630,7 @@ Public Class Mainwindow
 
     Private Sub lblset_device_MouseClick(sender As Object, e As MouseEventArgs) Handles lblset_device.MouseClick
 
+        listsetcontents.SelectedIndex = 0
         listsetcontents.SelectedIndex = 1
 
         '280+15 -> 22
@@ -644,6 +647,7 @@ Public Class Mainwindow
 
     Private Sub lblset_focus_MouseClick(sender As Object, e As MouseEventArgs) Handles lblset_focus.MouseClick
 
+        listsetcontents.SelectedIndex = 0
         listsetcontents.SelectedIndex = 2
 
         '280+15 -> 22
@@ -660,6 +664,7 @@ Public Class Mainwindow
 
     Private Sub lblset_hotkey_MouseClick(sender As Object, e As MouseEventArgs) Handles lblset_hotkey.MouseClick
 
+        listsetcontents.SelectedIndex = 0
         listsetcontents.SelectedIndex = 3
 
         '280+15 -> 22
@@ -676,6 +681,7 @@ Public Class Mainwindow
 
     Private Sub lblset_road_MouseClick(sender As Object, e As MouseEventArgs) Handles lblset_road.MouseClick
 
+        listsetcontents.SelectedIndex = 0
         listsetcontents.SelectedIndex = 4
 
         '280+15 -> 22
@@ -692,6 +698,7 @@ Public Class Mainwindow
 
     Private Sub lblset_graph_MouseClick(sender As Object, e As MouseEventArgs) Handles lblset_graph.MouseClick
 
+        listsetcontents.SelectedIndex = 0
         listsetcontents.SelectedIndex = 5
 
         '280+15 -> 22
@@ -708,6 +715,7 @@ Public Class Mainwindow
 
     Private Sub lblset_video_MouseClick(sender As Object, e As MouseEventArgs) Handles lblset_video.MouseClick
 
+        listsetcontents.SelectedIndex = 0
         listsetcontents.SelectedIndex = 6
 
         '280+15 -> 22
@@ -726,47 +734,39 @@ Public Class Mainwindow
     '■リストボックスのアイテム選択時の処理
     Private Sub listsetcontents_SelectedIndexChanged(sender As Object, e As EventArgs) Handles listsetcontents.SelectedIndexChanged
 
-        pnl_parameter.Visible = False
-        pnl_cvparameter.Visible = False
-        pnl_focus.Visible = False
-        pnl_hotkey.Visible = False
-        pnl_loadremover.Visible = False
-        pnl_graph.Visible = False
-        pnl_video.Visible = False
-        pnl_other.Visible = False
+        pnl_parameter.Location = New Drawing.Point(10000, 0)
+        pnl_cvparameter.Location = New Drawing.Point(10000, 0)
+        pnl_focus.Location = New Drawing.Point(10000, 0)
+        pnl_hotkey.Location = New Drawing.Point(10000, 0)
+        pnl_loadremover.Location = New Drawing.Point(10000, 0)
+        pnl_graph.Location = New Drawing.Point(10000, 0)
+        pnl_video.Location = New Drawing.Point(10000, 0)
+        pnl_other.Location = New Drawing.Point(10000, 0)
 
         Select Case listsetcontents.SelectedIndex
 
             Case 0 'Parameter
-                pnl_parameter.Visible = True
                 pnl_parameter.Location = New Drawing.Point(120, 265)
 
             Case 1 'OpenCV Parameter
-                pnl_cvparameter.Visible = True
                 pnl_cvparameter.Location = New Drawing.Point(120, 265)
 
             Case 2 'Focus
-                pnl_focus.Visible = True
                 pnl_focus.Location = New Drawing.Point(120, 265)
 
             Case 3 'Hot key
-                pnl_hotkey.Visible = True
                 pnl_hotkey.Location = New Drawing.Point(120, 265)
 
             Case 4 'Load remover
-                pnl_loadremover.Visible = True
                 pnl_loadremover.Location = New Drawing.Point(120, 265)
 
             Case 5 'Graph
-                pnl_graph.Visible = True
                 pnl_graph.Location = New Drawing.Point(120, 265)
 
             Case 6 'Video
-                pnl_video.Visible = True
                 pnl_video.Location = New Drawing.Point(120, 265)
 
             Case 7 'Other
-                pnl_other.Visible = True
                 pnl_other.Location = New Drawing.Point(120, 265)
 
 
@@ -2412,6 +2412,13 @@ Public Class Mainwindow
 
     End Sub
 
+    Private Sub btntosetting04_Click(sender As Object, e As EventArgs) Handles btntosetting04.Click
+
+        TabControl1.SelectedIndex = 0
+
+
+    End Sub
+
 
 
 
@@ -2780,15 +2787,14 @@ Public Class Mainwindow
             txtrowscount.Location = New Drawing.Point(8, 23 + numcv_sizey.Value + piczoom.Height + 4)
 
 
-            pnl_parameter.Visible = False
-            pnl_cvparameter.Visible = False
-            pnl_focus.Visible = False
-            pnl_hotkey.Visible = False
-            pnl_loadremover.Visible = False
-            pnl_graph.Visible = False
-            pnl_video.Visible = False
-            pnl_other.Visible = False
-
+            pnl_parameter.Location = New Drawing.Point(10000, 0)
+            pnl_cvparameter.Location = New Drawing.Point(10000, 0)
+            pnl_focus.Location = New Drawing.Point(10000, 0)
+            pnl_hotkey.Location = New Drawing.Point(10000, 0)
+            pnl_loadremover.Location = New Drawing.Point(10000, 0)
+            pnl_graph.Location = New Drawing.Point(10000, 0)
+            pnl_video.Location = New Drawing.Point(10000, 0)
+            pnl_other.Location = New Drawing.Point(10000, 0)
 
             btnclose_general.Visible = False
             picunder.Visible = False
@@ -4742,14 +4748,6 @@ Public Class Mainwindow
         picunder.Visible = True
         listsetcontents.Visible = True
 
-        pnl_parameter.Visible = True
-        pnl_cvparameter.Visible = True
-        pnl_focus.Visible = True
-        pnl_hotkey.Visible = True
-        pnl_loadremover.Visible = True
-        pnl_graph.Visible = True
-        pnl_video.Visible = True
-        pnl_other.Visible = True
 
         'Trueにしてよいのか？
         btnstartopencv.Enabled = True
@@ -6161,16 +6159,15 @@ Public Class Mainwindow
 
         '■ビデオプレイヤーを表示するかどうか
         If chkshowvideo.Checked = True And Videoplayer.Visible = False Then
-            MsgBox(My.Resources.Message.msg44) 'ビデオプレイヤーが表示されていません。
-
-            Exit Sub
+            'MsgBox(My.Resources.Message.msg44) 'ビデオプレイヤーが表示されていません。
+            Videoplayer.Show()
 
         End If
 
         If chkshow_text.Checked = True And Textwindow.Visible = False Then
-            MsgBox("テキストビューワーが表示されていません。") 'ビデオプレイヤーが表示されていません。'★
+            'MsgBox("テキストビューワーが表示されていません。") 'ビデオプレイヤーが表示されていません。'★
+            Textwindow.Show()
 
-            Exit Sub
 
         End If
 
@@ -13168,6 +13165,82 @@ Public Class Mainwindow
 
     Private Sub StartMonitoringMToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StartMonitoringMToolStripMenuItem.Click
         btnstartopencv.PerformClick()
+    End Sub
+
+    Private Sub link_opencvsharp_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles link_opencvsharp.LinkClicked
+        rtxtlicense.Clear()
+        '現在のコードを実行しているAssemblyを取得
+        Dim myAssembly As System.Reflection.Assembly = Reflection.Assembly.GetExecutingAssembly()
+        '指定されたマニフェストリソースを読み込む
+        Dim sr As New System.IO.StreamReader(
+            myAssembly.GetManifestResourceStream("AutoSplitHelper_OpenCV.License[OpenCVsharp].txt"),
+                System.Text.Encoding.GetEncoding("shift-jis"))
+        '内容を読み込む
+        Dim s As String = sr.ReadToEnd()
+        '後始末
+        sr.Close()
+        sr.Dispose()
+        rtxtlicense.Text = s
+
+
+
+
+    End Sub
+
+    Private Sub link_inteltbb_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles link_inteltbb.LinkClicked
+        rtxtlicense.Clear()
+        '現在のコードを実行しているAssemblyを取得
+        Dim myAssembly As System.Reflection.Assembly = Reflection.Assembly.GetExecutingAssembly()
+        '指定されたマニフェストリソースを読み込む
+        Dim sr As New System.IO.StreamReader(
+            myAssembly.GetManifestResourceStream("AutoSplitHelper_OpenCV.Licence[Intel_TBB].txt"),
+                System.Text.Encoding.GetEncoding("shift-jis"))
+        '内容を読み込む
+        Dim s As String = sr.ReadToEnd()
+        '後始末
+        sr.Close()
+        sr.Dispose()
+        rtxtlicense.Text = s
+
+    End Sub
+
+    Private Sub link_directshowlib_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles link_directshowlib.LinkClicked
+        rtxtlicense.Clear()
+        '現在のコードを実行しているAssemblyを取得
+        Dim myAssembly As System.Reflection.Assembly = Reflection.Assembly.GetExecutingAssembly()
+        '指定されたマニフェストリソースを読み込む
+        Dim sr As New System.IO.StreamReader(
+            myAssembly.GetManifestResourceStream("AutoSplitHelper_OpenCV.License[Directshowlib-2005].txt"),
+                System.Text.Encoding.GetEncoding("shift-jis"))
+        '内容を読み込む
+        Dim s As String = sr.ReadToEnd()
+        '後始末
+        sr.Close()
+        sr.Dispose()
+        rtxtlicense.Text = s
+
+    End Sub
+
+    Private Sub link_dobon_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles link_dobon.LinkClicked
+        rtxtlicense.Clear()
+        '現在のコードを実行しているAssemblyを取得
+        Dim myAssembly As System.Reflection.Assembly = Reflection.Assembly.GetExecutingAssembly()
+        '指定されたマニフェストリソースを読み込む
+        Dim sr As New System.IO.StreamReader(
+            myAssembly.GetManifestResourceStream("AutoSplitHelper_OpenCV.License[DOBONNET].txt"),
+                System.Text.Encoding.GetEncoding("shift-jis"))
+        '内容を読み込む
+        Dim s As String = sr.ReadToEnd()
+        '後始末
+        sr.Close()
+        sr.Dispose()
+        rtxtlicense.Text = s
+
+    End Sub
+
+
+    Private Sub LicenseLToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LicenseLToolStripMenuItem.Click
+        TabControl1.SelectedIndex = 5
     End Sub
 
 
