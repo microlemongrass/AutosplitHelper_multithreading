@@ -255,6 +255,18 @@
   <data name="msg50" xml:space="preserve">
     <value>仮想カメラとの接続を行って下さい。</value>
   </data>
+  <data name="msg51" xml:space="preserve">
+    <value>その名前のプロファイルは既に存在しています。</value>
+  </data>
+  <data name="msg52" xml:space="preserve">
+    <value>サイズは16:9または4:3の比で入力してください。</value>
+  </data>
+  <data name="msg53" xml:space="preserve">
+    <value>ハンドルの取得がされていません。</value>
+  </data>
+  <data name="msg54" xml:space="preserve">
+    <value>動画ファイルのパスを選択していない可能性があります。</value>
+  </data>
   <data name="msg6" xml:space="preserve">
     <value>画像ファイル数と表のデータ数が一致しません。</value>
   </data>

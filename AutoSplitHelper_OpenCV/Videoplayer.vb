@@ -36,7 +36,7 @@ Public Class Videoplayer
             Axwmp1.Ctlcontrols.stop()
 
         Catch ex As Exception
-            MsgBox("動画ファイルのパスを選択していない可能性があります。" & vbCrLf & ex.Message) '★
+            MessageBox.Show(My.Resources.Message.msg54 & vbCrLf & ex.Message) '★動画ファイルのパスを選択していない可能性があります。
         End Try
 
 

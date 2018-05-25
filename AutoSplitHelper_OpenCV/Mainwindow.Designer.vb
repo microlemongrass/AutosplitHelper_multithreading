@@ -69,9 +69,12 @@ Partial Class Mainwindow
         Me.trktemp = New System.Windows.Forms.TrackBar()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.grpgeneral = New System.Windows.Forms.GroupBox()
+        Me.btncur_showtext = New System.Windows.Forms.Button()
+        Me.lblcur_showtextwindow = New System.Windows.Forms.Label()
+        Me.lblcur_showvideo = New System.Windows.Forms.Label()
+        Me.lblset_text = New System.Windows.Forms.Label()
         Me.btncur_showvideo = New System.Windows.Forms.Button()
         Me.Label97 = New System.Windows.Forms.Label()
-        Me.chkcur_showvideo = New System.Windows.Forms.CheckBox()
         Me.lblset_video = New System.Windows.Forms.Label()
         Me.lblcur_firstsplit = New System.Windows.Forms.Label()
         Me.Label79 = New System.Windows.Forms.Label()
@@ -117,7 +120,7 @@ Partial Class Mainwindow
         Me.lblcur_device_name = New System.Windows.Forms.Label()
         Me.lblset_monitoring = New System.Windows.Forms.Label()
         Me.pnl_other = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btntext_createtext = New System.Windows.Forms.Button()
         Me.txtpass_rtf = New System.Windows.Forms.TextBox()
         Me.Label112 = New System.Windows.Forms.Label()
         Me.btnshow_chart = New System.Windows.Forms.Button()
@@ -215,6 +218,10 @@ Partial Class Mainwindow
         Me.chkload2 = New System.Windows.Forms.CheckBox()
         Me.chkload9 = New System.Windows.Forms.CheckBox()
         Me.pnl_hotkey = New System.Windows.Forms.Panel()
+        Me.Label119 = New System.Windows.Forms.Label()
+        Me.txtreset_ash_key = New System.Windows.Forms.TextBox()
+        Me.txtundo_ash_key = New System.Windows.Forms.TextBox()
+        Me.txtskip_ash_key = New System.Windows.Forms.TextBox()
         Me.Label96 = New System.Windows.Forms.Label()
         Me.numpresstime = New System.Windows.Forms.NumericUpDown()
         Me.txtresume_key = New System.Windows.Forms.TextBox()
@@ -287,12 +294,18 @@ Partial Class Mainwindow
         Me.btnreset_table = New System.Windows.Forms.Button()
         Me.btnreset_count = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.numtextwindow_sizex = New System.Windows.Forms.NumericUpDown()
         Me.lblcheckopening = New System.Windows.Forms.Label()
+        Me.numtextwindow_sizey = New System.Windows.Forms.NumericUpDown()
         Me.numprofile = New System.Windows.Forms.NumericUpDown()
         Me.Label38 = New System.Windows.Forms.Label()
+        Me.txtclickcount = New System.Windows.Forms.TextBox()
         Me.txtprofile = New System.Windows.Forms.TextBox()
         Me.txtloadprofile = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.numskip_ash = New System.Windows.Forms.NumericUpDown()
+        Me.numundo_ash = New System.Windows.Forms.NumericUpDown()
+        Me.numreset_ash = New System.Windows.Forms.NumericUpDown()
         Me.lblkeysforresume = New System.Windows.Forms.Label()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.numcv_sizex = New System.Windows.Forms.NumericUpDown()
@@ -308,7 +321,6 @@ Partial Class Mainwindow
         Me.txtsavetempnumber = New System.Windows.Forms.TextBox()
         Me.numtemp = New System.Windows.Forms.NumericUpDown()
         Me.txt11 = New System.Windows.Forms.TextBox()
-        Me.txtclickcount = New System.Windows.Forms.TextBox()
         Me.txt22 = New System.Windows.Forms.TextBox()
         Me.txt12 = New System.Windows.Forms.TextBox()
         Me.txt21 = New System.Windows.Forms.TextBox()
@@ -341,22 +353,22 @@ Partial Class Mainwindow
         Me.NewProfileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ImportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.SaveProfileSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteSelectedProfileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.UploadTheCurrentProfileUToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StartMonitoringMToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
         Me.PreviewGetTemplatePictureToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CalibrationToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.PositionSettingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.ExpandTableToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewTableToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenTextWindowWToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InformationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LicenseLToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -666,6 +678,7 @@ Partial Class Mainwindow
         Me.timchecktimer = New System.Windows.Forms.Timer(Me.components)
         Me.timcamera = New System.Windows.Forms.Timer(Me.components)
         Me.timcalib = New System.Windows.Forms.Timer(Me.components)
+        Me.timash_hotkey_sleep = New System.Windows.Forms.Timer(Me.components)
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.DGtable, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -731,8 +744,13 @@ Partial Class Mainwindow
         Me.pnl_graph.SuspendLayout()
         CType(Me.numgraph_first, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.numtextwindow_sizex, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numtextwindow_sizey, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numprofile, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
+        CType(Me.numskip_ash, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numundo_ash, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numreset_ash, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numcv_sizex, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numcv_sizey, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numsavex, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1137,9 +1155,12 @@ Partial Class Mainwindow
         'grpgeneral
         '
         Me.grpgeneral.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.grpgeneral.Controls.Add(Me.btncur_showtext)
+        Me.grpgeneral.Controls.Add(Me.lblcur_showtextwindow)
+        Me.grpgeneral.Controls.Add(Me.lblcur_showvideo)
+        Me.grpgeneral.Controls.Add(Me.lblset_text)
         Me.grpgeneral.Controls.Add(Me.btncur_showvideo)
         Me.grpgeneral.Controls.Add(Me.Label97)
-        Me.grpgeneral.Controls.Add(Me.chkcur_showvideo)
         Me.grpgeneral.Controls.Add(Me.lblset_video)
         Me.grpgeneral.Controls.Add(Me.lblcur_firstsplit)
         Me.grpgeneral.Controls.Add(Me.Label79)
@@ -1182,6 +1203,36 @@ Partial Class Mainwindow
         Me.grpgeneral.Name = "grpgeneral"
         Me.grpgeneral.TabStop = False
         '
+        'btncur_showtext
+        '
+        Me.btncur_showtext.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
+        resources.ApplyResources(Me.btncur_showtext, "btncur_showtext")
+        Me.btncur_showtext.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btncur_showtext.Name = "btncur_showtext"
+        Me.btncur_showtext.UseVisualStyleBackColor = False
+        '
+        'lblcur_showtextwindow
+        '
+        resources.ApplyResources(Me.lblcur_showtextwindow, "lblcur_showtextwindow")
+        Me.lblcur_showtextwindow.BackColor = System.Drawing.Color.Crimson
+        Me.lblcur_showtextwindow.ForeColor = System.Drawing.SystemColors.Control
+        Me.lblcur_showtextwindow.Name = "lblcur_showtextwindow"
+        '
+        'lblcur_showvideo
+        '
+        resources.ApplyResources(Me.lblcur_showvideo, "lblcur_showvideo")
+        Me.lblcur_showvideo.BackColor = System.Drawing.Color.Crimson
+        Me.lblcur_showvideo.ForeColor = System.Drawing.SystemColors.Control
+        Me.lblcur_showvideo.Name = "lblcur_showvideo"
+        '
+        'lblset_text
+        '
+        resources.ApplyResources(Me.lblset_text, "lblset_text")
+        Me.lblset_text.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer))
+        Me.lblset_text.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblset_text.ForeColor = System.Drawing.Color.Gainsboro
+        Me.lblset_text.Name = "lblset_text"
+        '
         'btncur_showvideo
         '
         Me.btncur_showvideo.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
@@ -1196,13 +1247,6 @@ Partial Class Mainwindow
         Me.Label97.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label97.ForeColor = System.Drawing.SystemColors.Control
         Me.Label97.Name = "Label97"
-        '
-        'chkcur_showvideo
-        '
-        Me.chkcur_showvideo.AutoCheck = False
-        resources.ApplyResources(Me.chkcur_showvideo, "chkcur_showvideo")
-        Me.chkcur_showvideo.Name = "chkcur_showvideo"
-        Me.chkcur_showvideo.UseVisualStyleBackColor = True
         '
         'lblset_video
         '
@@ -1532,7 +1576,7 @@ Partial Class Mainwindow
         'pnl_other
         '
         Me.pnl_other.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.pnl_other.Controls.Add(Me.Button1)
+        Me.pnl_other.Controls.Add(Me.btntext_createtext)
         Me.pnl_other.Controls.Add(Me.txtpass_rtf)
         Me.pnl_other.Controls.Add(Me.Label112)
         Me.pnl_other.Controls.Add(Me.btnshow_chart)
@@ -1547,13 +1591,13 @@ Partial Class Mainwindow
         resources.ApplyResources(Me.pnl_other, "pnl_other")
         Me.pnl_other.Name = "pnl_other"
         '
-        'Button1
+        'btntext_createtext
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
-        resources.ApplyResources(Me.Button1, "Button1")
-        Me.Button1.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Button1.Name = "Button1"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btntext_createtext.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
+        resources.ApplyResources(Me.btntext_createtext, "btntext_createtext")
+        Me.btntext_createtext.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btntext_createtext.Name = "btntext_createtext"
+        Me.btntext_createtext.UseVisualStyleBackColor = False
         '
         'txtpass_rtf
         '
@@ -2407,6 +2451,10 @@ Partial Class Mainwindow
         'pnl_hotkey
         '
         Me.pnl_hotkey.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.pnl_hotkey.Controls.Add(Me.Label119)
+        Me.pnl_hotkey.Controls.Add(Me.txtreset_ash_key)
+        Me.pnl_hotkey.Controls.Add(Me.txtundo_ash_key)
+        Me.pnl_hotkey.Controls.Add(Me.txtskip_ash_key)
         Me.pnl_hotkey.Controls.Add(Me.Label96)
         Me.pnl_hotkey.Controls.Add(Me.numpresstime)
         Me.pnl_hotkey.Controls.Add(Me.txtresume_key)
@@ -2444,6 +2492,40 @@ Partial Class Mainwindow
         Me.pnl_hotkey.Controls.Add(Me.chkshift_skip)
         resources.ApplyResources(Me.pnl_hotkey, "pnl_hotkey")
         Me.pnl_hotkey.Name = "pnl_hotkey"
+        '
+        'Label119
+        '
+        resources.ApplyResources(Me.Label119, "Label119")
+        Me.Label119.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.Label119.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label119.Name = "Label119"
+        '
+        'txtreset_ash_key
+        '
+        Me.txtreset_ash_key.BackColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(2, Byte), Integer))
+        Me.txtreset_ash_key.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        resources.ApplyResources(Me.txtreset_ash_key, "txtreset_ash_key")
+        Me.txtreset_ash_key.ForeColor = System.Drawing.SystemColors.Control
+        Me.txtreset_ash_key.Name = "txtreset_ash_key"
+        Me.txtreset_ash_key.ReadOnly = True
+        '
+        'txtundo_ash_key
+        '
+        Me.txtundo_ash_key.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.txtundo_ash_key.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        resources.ApplyResources(Me.txtundo_ash_key, "txtundo_ash_key")
+        Me.txtundo_ash_key.ForeColor = System.Drawing.SystemColors.Control
+        Me.txtundo_ash_key.Name = "txtundo_ash_key"
+        Me.txtundo_ash_key.ReadOnly = True
+        '
+        'txtskip_ash_key
+        '
+        Me.txtskip_ash_key.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.txtskip_ash_key.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        resources.ApplyResources(Me.txtskip_ash_key, "txtskip_ash_key")
+        Me.txtskip_ash_key.ForeColor = System.Drawing.SystemColors.Control
+        Me.txtskip_ash_key.Name = "txtskip_ash_key"
+        Me.txtskip_ash_key.ReadOnly = True
         '
         'Label96
         '
@@ -3049,9 +3131,12 @@ Partial Class Mainwindow
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.numtextwindow_sizex)
         Me.GroupBox2.Controls.Add(Me.lblcheckopening)
+        Me.GroupBox2.Controls.Add(Me.numtextwindow_sizey)
         Me.GroupBox2.Controls.Add(Me.numprofile)
         Me.GroupBox2.Controls.Add(Me.Label38)
+        Me.GroupBox2.Controls.Add(Me.txtclickcount)
         Me.GroupBox2.Controls.Add(Me.txtprofile)
         Me.GroupBox2.Controls.Add(Me.txtloadprofile)
         Me.GroupBox2.Controls.Add(Me.GroupBox3)
@@ -3063,11 +3148,25 @@ Partial Class Mainwindow
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.TabStop = False
         '
+        'numtextwindow_sizex
+        '
+        resources.ApplyResources(Me.numtextwindow_sizex, "numtextwindow_sizex")
+        Me.numtextwindow_sizex.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
+        Me.numtextwindow_sizex.Name = "numtextwindow_sizex"
+        Me.numtextwindow_sizex.Value = New Decimal(New Integer() {100, 0, 0, 0})
+        '
         'lblcheckopening
         '
         resources.ApplyResources(Me.lblcheckopening, "lblcheckopening")
         Me.lblcheckopening.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcheckopening.Name = "lblcheckopening"
+        '
+        'numtextwindow_sizey
+        '
+        resources.ApplyResources(Me.numtextwindow_sizey, "numtextwindow_sizey")
+        Me.numtextwindow_sizey.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
+        Me.numtextwindow_sizey.Name = "numtextwindow_sizey"
+        Me.numtextwindow_sizey.Value = New Decimal(New Integer() {100, 0, 0, 0})
         '
         'numprofile
         '
@@ -3088,6 +3187,14 @@ Partial Class Mainwindow
         Me.Label38.ForeColor = System.Drawing.SystemColors.Control
         Me.Label38.Name = "Label38"
         '
+        'txtclickcount
+        '
+        Me.txtclickcount.BackColor = System.Drawing.SystemColors.ButtonFace
+        resources.ApplyResources(Me.txtclickcount, "txtclickcount")
+        Me.txtclickcount.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.txtclickcount.Name = "txtclickcount"
+        Me.txtclickcount.ReadOnly = True
+        '
         'txtprofile
         '
         resources.ApplyResources(Me.txtprofile, "txtprofile")
@@ -3100,6 +3207,9 @@ Partial Class Mainwindow
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.numskip_ash)
+        Me.GroupBox3.Controls.Add(Me.numundo_ash)
+        Me.GroupBox3.Controls.Add(Me.numreset_ash)
         Me.GroupBox3.Controls.Add(Me.lblkeysforresume)
         Me.GroupBox3.Controls.Add(Me.Label24)
         Me.GroupBox3.Controls.Add(Me.numcv_sizex)
@@ -3115,6 +3225,30 @@ Partial Class Mainwindow
         resources.ApplyResources(Me.GroupBox3, "GroupBox3")
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.TabStop = False
+        '
+        'numskip_ash
+        '
+        resources.ApplyResources(Me.numskip_ash, "numskip_ash")
+        Me.numskip_ash.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
+        Me.numskip_ash.Minimum = New Decimal(New Integer() {100, 0, 0, -2147483648})
+        Me.numskip_ash.Name = "numskip_ash"
+        Me.numskip_ash.Value = New Decimal(New Integer() {100, 0, 0, 0})
+        '
+        'numundo_ash
+        '
+        resources.ApplyResources(Me.numundo_ash, "numundo_ash")
+        Me.numundo_ash.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
+        Me.numundo_ash.Minimum = New Decimal(New Integer() {100, 0, 0, -2147483648})
+        Me.numundo_ash.Name = "numundo_ash"
+        Me.numundo_ash.Value = New Decimal(New Integer() {100, 0, 0, 0})
+        '
+        'numreset_ash
+        '
+        resources.ApplyResources(Me.numreset_ash, "numreset_ash")
+        Me.numreset_ash.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
+        Me.numreset_ash.Minimum = New Decimal(New Integer() {100, 0, 0, -2147483648})
+        Me.numreset_ash.Name = "numreset_ash"
+        Me.numreset_ash.Value = New Decimal(New Integer() {100, 0, 0, 0})
         '
         'lblkeysforresume
         '
@@ -3202,7 +3336,6 @@ Partial Class Mainwindow
         Me.Panel5.Controls.Add(Me.txtsavetempnumber)
         Me.Panel5.Controls.Add(Me.numtemp)
         Me.Panel5.Controls.Add(Me.txt11)
-        Me.Panel5.Controls.Add(Me.txtclickcount)
         Me.Panel5.Controls.Add(Me.txt22)
         Me.Panel5.Controls.Add(Me.txt12)
         Me.Panel5.Controls.Add(Me.txt21)
@@ -3234,14 +3367,6 @@ Partial Class Mainwindow
         Me.txt11.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txt11.Name = "txt11"
         Me.txt11.ReadOnly = True
-        '
-        'txtclickcount
-        '
-        Me.txtclickcount.BackColor = System.Drawing.SystemColors.ButtonFace
-        resources.ApplyResources(Me.txtclickcount, "txtclickcount")
-        Me.txtclickcount.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.txtclickcount.Name = "txtclickcount"
-        Me.txtclickcount.ReadOnly = True
         '
         'txt22
         '
@@ -3494,17 +3619,19 @@ Partial Class Mainwindow
         '
         'MenuToolStripMenuItem
         '
-        Me.MenuToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewProfileToolStripMenuItem, Me.ImportToolStripMenuItem, Me.ToolStripSeparator1, Me.ToolStripSeparator2, Me.SaveProfileSToolStripMenuItem, Me.DeleteSelectedProfileToolStripMenuItem, Me.ToolStripSeparator4, Me.ToolStripSeparator5, Me.ExitToolStripMenuItem})
+        Me.MenuToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewProfileToolStripMenuItem, Me.ImportToolStripMenuItem, Me.ToolStripSeparator1, Me.SaveProfileSToolStripMenuItem, Me.DeleteSelectedProfileToolStripMenuItem, Me.ToolStripSeparator4, Me.UploadTheCurrentProfileUToolStripMenuItem, Me.ToolStripSeparator5, Me.ExitToolStripMenuItem})
         Me.MenuToolStripMenuItem.Name = "MenuToolStripMenuItem"
         resources.ApplyResources(Me.MenuToolStripMenuItem, "MenuToolStripMenuItem")
         '
         'NewProfileToolStripMenuItem
         '
+        Me.NewProfileToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
         Me.NewProfileToolStripMenuItem.Name = "NewProfileToolStripMenuItem"
         resources.ApplyResources(Me.NewProfileToolStripMenuItem, "NewProfileToolStripMenuItem")
         '
         'ImportToolStripMenuItem
         '
+        Me.ImportToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
         Me.ImportToolStripMenuItem.Name = "ImportToolStripMenuItem"
         resources.ApplyResources(Me.ImportToolStripMenuItem, "ImportToolStripMenuItem")
         '
@@ -3513,18 +3640,15 @@ Partial Class Mainwindow
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
         resources.ApplyResources(Me.ToolStripSeparator1, "ToolStripSeparator1")
         '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        resources.ApplyResources(Me.ToolStripSeparator2, "ToolStripSeparator2")
-        '
         'SaveProfileSToolStripMenuItem
         '
+        Me.SaveProfileSToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
         Me.SaveProfileSToolStripMenuItem.Name = "SaveProfileSToolStripMenuItem"
         resources.ApplyResources(Me.SaveProfileSToolStripMenuItem, "SaveProfileSToolStripMenuItem")
         '
         'DeleteSelectedProfileToolStripMenuItem
         '
+        Me.DeleteSelectedProfileToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
         Me.DeleteSelectedProfileToolStripMenuItem.Name = "DeleteSelectedProfileToolStripMenuItem"
         resources.ApplyResources(Me.DeleteSelectedProfileToolStripMenuItem, "DeleteSelectedProfileToolStripMenuItem")
         '
@@ -3533,6 +3657,12 @@ Partial Class Mainwindow
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
         resources.ApplyResources(Me.ToolStripSeparator4, "ToolStripSeparator4")
         '
+        'UploadTheCurrentProfileUToolStripMenuItem
+        '
+        Me.UploadTheCurrentProfileUToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
+        Me.UploadTheCurrentProfileUToolStripMenuItem.Name = "UploadTheCurrentProfileUToolStripMenuItem"
+        resources.ApplyResources(Me.UploadTheCurrentProfileUToolStripMenuItem, "UploadTheCurrentProfileUToolStripMenuItem")
+        '
         'ToolStripSeparator5
         '
         Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
@@ -3540,17 +3670,19 @@ Partial Class Mainwindow
         '
         'ExitToolStripMenuItem
         '
+        Me.ExitToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         resources.ApplyResources(Me.ExitToolStripMenuItem, "ExitToolStripMenuItem")
         '
         'ToolToolStripMenuItem
         '
-        Me.ToolToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StartMonitoringMToolStripMenuItem, Me.ToolStripSeparator6, Me.ToolStripSeparator7, Me.PreviewGetTemplatePictureToolStripMenuItem, Me.CalibrationToolStripMenuItem1, Me.PositionSettingToolStripMenuItem, Me.ToolStripSeparator3, Me.ExpandTableToolStripMenuItem, Me.ViewTableToolStripMenuItem})
+        Me.ToolToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StartMonitoringMToolStripMenuItem, Me.ToolStripSeparator6, Me.PreviewGetTemplatePictureToolStripMenuItem, Me.CalibrationToolStripMenuItem1, Me.PositionSettingToolStripMenuItem, Me.ToolStripSeparator3, Me.ExpandTableToolStripMenuItem, Me.ViewTableToolStripMenuItem, Me.OpenTextWindowWToolStripMenuItem})
         Me.ToolToolStripMenuItem.Name = "ToolToolStripMenuItem"
         resources.ApplyResources(Me.ToolToolStripMenuItem, "ToolToolStripMenuItem")
         '
         'StartMonitoringMToolStripMenuItem
         '
+        Me.StartMonitoringMToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
         Me.StartMonitoringMToolStripMenuItem.Name = "StartMonitoringMToolStripMenuItem"
         resources.ApplyResources(Me.StartMonitoringMToolStripMenuItem, "StartMonitoringMToolStripMenuItem")
         '
@@ -3559,23 +3691,21 @@ Partial Class Mainwindow
         Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
         resources.ApplyResources(Me.ToolStripSeparator6, "ToolStripSeparator6")
         '
-        'ToolStripSeparator7
-        '
-        Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
-        resources.ApplyResources(Me.ToolStripSeparator7, "ToolStripSeparator7")
-        '
         'PreviewGetTemplatePictureToolStripMenuItem
         '
+        Me.PreviewGetTemplatePictureToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
         Me.PreviewGetTemplatePictureToolStripMenuItem.Name = "PreviewGetTemplatePictureToolStripMenuItem"
         resources.ApplyResources(Me.PreviewGetTemplatePictureToolStripMenuItem, "PreviewGetTemplatePictureToolStripMenuItem")
         '
         'CalibrationToolStripMenuItem1
         '
+        Me.CalibrationToolStripMenuItem1.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
         Me.CalibrationToolStripMenuItem1.Name = "CalibrationToolStripMenuItem1"
         resources.ApplyResources(Me.CalibrationToolStripMenuItem1, "CalibrationToolStripMenuItem1")
         '
         'PositionSettingToolStripMenuItem
         '
+        Me.PositionSettingToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
         Me.PositionSettingToolStripMenuItem.Name = "PositionSettingToolStripMenuItem"
         resources.ApplyResources(Me.PositionSettingToolStripMenuItem, "PositionSettingToolStripMenuItem")
         '
@@ -3586,27 +3716,38 @@ Partial Class Mainwindow
         '
         'ExpandTableToolStripMenuItem
         '
+        Me.ExpandTableToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
         Me.ExpandTableToolStripMenuItem.Name = "ExpandTableToolStripMenuItem"
         resources.ApplyResources(Me.ExpandTableToolStripMenuItem, "ExpandTableToolStripMenuItem")
         '
         'ViewTableToolStripMenuItem
         '
+        Me.ViewTableToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
         Me.ViewTableToolStripMenuItem.Name = "ViewTableToolStripMenuItem"
         resources.ApplyResources(Me.ViewTableToolStripMenuItem, "ViewTableToolStripMenuItem")
+        '
+        'OpenTextWindowWToolStripMenuItem
+        '
+        Me.OpenTextWindowWToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
+        Me.OpenTextWindowWToolStripMenuItem.Name = "OpenTextWindowWToolStripMenuItem"
+        resources.ApplyResources(Me.OpenTextWindowWToolStripMenuItem, "OpenTextWindowWToolStripMenuItem")
         '
         'HelpToolStripMenuItem
         '
         Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InformationToolStripMenuItem, Me.LicenseLToolStripMenuItem})
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
+        Me.HelpToolStripMenuItem.Padding = New System.Windows.Forms.Padding(0)
         resources.ApplyResources(Me.HelpToolStripMenuItem, "HelpToolStripMenuItem")
         '
         'InformationToolStripMenuItem
         '
+        Me.InformationToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
         Me.InformationToolStripMenuItem.Name = "InformationToolStripMenuItem"
         resources.ApplyResources(Me.InformationToolStripMenuItem, "InformationToolStripMenuItem")
         '
         'LicenseLToolStripMenuItem
         '
+        Me.LicenseLToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
         Me.LicenseLToolStripMenuItem.Name = "LicenseLToolStripMenuItem"
         resources.ApplyResources(Me.LicenseLToolStripMenuItem, "LicenseLToolStripMenuItem")
         '
@@ -6100,6 +6241,10 @@ Partial Class Mainwindow
         'timcalib
         '
         '
+        'timash_hotkey_sleep
+        '
+        Me.timash_hotkey_sleep.Interval = 300
+        '
         'Mainwindow
         '
         resources.ApplyResources(Me, "$this")
@@ -6203,9 +6348,14 @@ Partial Class Mainwindow
         CType(Me.numgraph_first, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        CType(Me.numtextwindow_sizex, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numtextwindow_sizey, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.numprofile, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        CType(Me.numskip_ash, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numundo_ash, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numreset_ash, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.numcv_sizex, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.numcv_sizey, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.numsavex, System.ComponentModel.ISupportInitialize).EndInit()
@@ -6695,7 +6845,6 @@ Partial Class Mainwindow
     Friend WithEvents Label94 As Label
     Friend WithEvents Label97 As Label
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
-    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PreviewGetTemplatePictureToolStripMenuItem As ToolStripMenuItem
@@ -6799,7 +6948,6 @@ Partial Class Mainwindow
     Friend WithEvents Label78 As Label
     Friend WithEvents numpresstime As NumericUpDown
     Friend WithEvents Label96 As Label
-    Friend WithEvents chkcur_showvideo As CheckBox
     Friend WithEvents lblset_video As Label
     Friend WithEvents btncur_showvideo As Button
     Friend WithEvents chkvideo_manualstart As CheckBox
@@ -6894,7 +7042,6 @@ Partial Class Mainwindow
     Friend WithEvents ToolStripSeparator5 As ToolStripSeparator
     Friend WithEvents StartMonitoringMToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator6 As ToolStripSeparator
-    Friend WithEvents ToolStripSeparator7 As ToolStripSeparator
     Friend WithEvents no As DataGridViewTextBoxColumn
     Friend WithEvents send As DataGridViewTextBoxColumn
     Friend WithEvents key As DataGridViewTextBoxColumn
@@ -6922,7 +7069,7 @@ Partial Class Mainwindow
     Friend WithEvents chkshow_text As CheckBox
     Friend WithEvents txtpass_rtf As TextBox
     Friend WithEvents Label112 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btntext_createtext As Button
     Friend WithEvents TabPage16 As TabPage
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label118 As Label
@@ -6938,4 +7085,20 @@ Partial Class Mainwindow
     Friend WithEvents link_dobon As LinkLabel
     Friend WithEvents btntosetting04 As Button
     Friend WithEvents LicenseLToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UploadTheCurrentProfileUToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents numtextwindow_sizex As NumericUpDown
+    Friend WithEvents numtextwindow_sizey As NumericUpDown
+    Friend WithEvents OpenTextWindowWToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents lblcur_showvideo As Label
+    Friend WithEvents lblset_text As Label
+    Friend WithEvents btncur_showtext As Button
+    Friend WithEvents lblcur_showtextwindow As Label
+    Friend WithEvents Label119 As Label
+    Friend WithEvents txtreset_ash_key As TextBox
+    Friend WithEvents txtundo_ash_key As TextBox
+    Friend WithEvents txtskip_ash_key As TextBox
+    Friend WithEvents numskip_ash As NumericUpDown
+    Friend WithEvents numundo_ash As NumericUpDown
+    Friend WithEvents numreset_ash As NumericUpDown
+    Friend WithEvents timash_hotkey_sleep As Timer
 End Class

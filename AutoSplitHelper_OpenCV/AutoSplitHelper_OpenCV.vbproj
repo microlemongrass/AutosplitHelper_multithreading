@@ -118,6 +118,7 @@
     <Reference Include="System.Deployment" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml" />
@@ -141,6 +142,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dialog_sharetemplate.Designer.vb">
+      <DependentUpon>dialog_sharetemplate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dialog_sharetemplate.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="getprocesswindow1.Designer.vb">
       <DependentUpon>getprocesswindow1.vb</DependentUpon>
     </Compile>
@@ -231,6 +238,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="dialog_sharetemplate.ja-JP.resx">
+      <DependentUpon>dialog_sharetemplate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialog_sharetemplate.resx">
+      <DependentUpon>dialog_sharetemplate.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="getprocesswindow1.en.resx">
       <DependentUpon>getprocesswindow1.vb</DependentUpon>
     </EmbeddedResource>

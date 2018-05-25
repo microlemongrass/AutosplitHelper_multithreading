@@ -30,7 +30,7 @@ Partial Class Textwindow
         Me.rtxt1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.rtxt1.Location = New System.Drawing.Point(0, 0)
         Me.rtxt1.Name = "rtxt1"
-        Me.rtxt1.Size = New System.Drawing.Size(456, 495)
+        Me.rtxt1.Size = New System.Drawing.Size(412, 495)
         Me.rtxt1.TabIndex = 0
         Me.rtxt1.Text = ""
         '
@@ -38,14 +38,14 @@ Partial Class Textwindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(456, 495)
+        Me.ClientSize = New System.Drawing.Size(412, 495)
         Me.Controls.Add(Me.rtxt1)
         Me.Font = New System.Drawing.Font("Meiryo UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Textwindow"
-        Me.Text = "Chart"
+        Me.Text = "Text"
         Me.ResumeLayout(False)
 
     End Sub

@@ -53,7 +53,7 @@ Public Class Import_picture
 
             Mainwindow.import_ok()
 
-            'MsgBox("Success.")
+            'MessageBox.Show("Success.")
 
         End If
 

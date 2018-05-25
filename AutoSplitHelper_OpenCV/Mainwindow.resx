@@ -900,6 +900,144 @@
   <data name="&gt;&gt;PictureBox1.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="btncur_showtext.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btncur_showtext.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 8pt</value>
+  </data>
+  <data name="btncur_showtext.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btncur_showtext.Location" type="System.Drawing.Point, System.Drawing">
+    <value>705, 248</value>
+  </data>
+  <data name="btncur_showtext.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 1, 0, 0</value>
+  </data>
+  <data name="btncur_showtext.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="btncur_showtext.TabIndex" type="System.Int32, mscorlib">
+    <value>307</value>
+  </data>
+  <data name="btncur_showtext.Text" xml:space="preserve">
+    <value>Show</value>
+  </data>
+  <data name="&gt;&gt;btncur_showtext.Name" xml:space="preserve">
+    <value>btncur_showtext</value>
+  </data>
+  <data name="&gt;&gt;btncur_showtext.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btncur_showtext.Parent" xml:space="preserve">
+    <value>grpgeneral</value>
+  </data>
+  <data name="&gt;&gt;btncur_showtext.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblcur_showtextwindow.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblcur_showtextwindow.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 11pt</value>
+  </data>
+  <data name="lblcur_showtextwindow.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblcur_showtextwindow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>674, 252</value>
+  </data>
+  <data name="lblcur_showtextwindow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 19</value>
+  </data>
+  <data name="lblcur_showtextwindow.TabIndex" type="System.Int32, mscorlib">
+    <value>306</value>
+  </data>
+  <data name="lblcur_showtextwindow.Text" xml:space="preserve">
+    <value>Y</value>
+  </data>
+  <data name="&gt;&gt;lblcur_showtextwindow.Name" xml:space="preserve">
+    <value>lblcur_showtextwindow</value>
+  </data>
+  <data name="&gt;&gt;lblcur_showtextwindow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblcur_showtextwindow.Parent" xml:space="preserve">
+    <value>grpgeneral</value>
+  </data>
+  <data name="&gt;&gt;lblcur_showtextwindow.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblcur_showvideo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblcur_showvideo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 11pt</value>
+  </data>
+  <data name="lblcur_showvideo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblcur_showvideo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>545, 252</value>
+  </data>
+  <data name="lblcur_showvideo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 19</value>
+  </data>
+  <data name="lblcur_showvideo.TabIndex" type="System.Int32, mscorlib">
+    <value>284</value>
+  </data>
+  <data name="lblcur_showvideo.Text" xml:space="preserve">
+    <value>Y</value>
+  </data>
+  <data name="&gt;&gt;lblcur_showvideo.Name" xml:space="preserve">
+    <value>lblcur_showvideo</value>
+  </data>
+  <data name="&gt;&gt;lblcur_showvideo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblcur_showvideo.Parent" xml:space="preserve">
+    <value>grpgeneral</value>
+  </data>
+  <data name="&gt;&gt;lblcur_showvideo.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblset_text.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblset_text.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 11pt</value>
+  </data>
+  <data name="lblset_text.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblset_text.Location" type="System.Drawing.Point, System.Drawing">
+    <value>657, 222</value>
+  </data>
+  <data name="lblset_text.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 12, 0</value>
+  </data>
+  <data name="lblset_text.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 19</value>
+  </data>
+  <data name="lblset_text.TabIndex" type="System.Int32, mscorlib">
+    <value>305</value>
+  </data>
+  <data name="lblset_text.Text" xml:space="preserve">
+    <value>Text + Other</value>
+  </data>
+  <data name="&gt;&gt;lblset_text.Name" xml:space="preserve">
+    <value>lblset_text</value>
+  </data>
+  <data name="&gt;&gt;lblset_text.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblset_text.Parent" xml:space="preserve">
+    <value>grpgeneral</value>
+  </data>
+  <data name="&gt;&gt;lblset_text.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="btncur_showvideo.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -910,19 +1048,19 @@
     <value>NoControl</value>
   </data>
   <data name="btncur_showvideo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>625, 250</value>
+    <value>575, 248</value>
   </data>
   <data name="btncur_showvideo.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 1, 0, 0</value>
   </data>
   <data name="btncur_showvideo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>146, 26</value>
+    <value>57, 26</value>
   </data>
   <data name="btncur_showvideo.TabIndex" type="System.Int32, mscorlib">
     <value>304</value>
   </data>
   <data name="btncur_showvideo.Text" xml:space="preserve">
-    <value>Show Video</value>
+    <value>Show</value>
   </data>
   <data name="&gt;&gt;btncur_showvideo.Name" xml:space="preserve">
     <value>btncur_showvideo</value>
@@ -934,7 +1072,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;btncur_showvideo.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>4</value>
   </data>
   <data name="Label97.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -967,40 +1105,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;Label97.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="chkcur_showvideo.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="chkcur_showvideo.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 11pt</value>
-  </data>
-  <data name="chkcur_showvideo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="chkcur_showvideo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>547, 251</value>
-  </data>
-  <data name="chkcur_showvideo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 23</value>
-  </data>
-  <data name="chkcur_showvideo.TabIndex" type="System.Int32, mscorlib">
-    <value>303</value>
-  </data>
-  <data name="chkcur_showvideo.Text" xml:space="preserve">
-    <value>Show</value>
-  </data>
-  <data name="&gt;&gt;chkcur_showvideo.Name" xml:space="preserve">
-    <value>chkcur_showvideo</value>
-  </data>
-  <data name="&gt;&gt;chkcur_showvideo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chkcur_showvideo.Parent" xml:space="preserve">
-    <value>grpgeneral</value>
-  </data>
-  <data name="&gt;&gt;chkcur_showvideo.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="lblset_video.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1015,10 +1120,10 @@
     <value>539, 222</value>
   </data>
   <data name="lblset_video.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 184, 0</value>
+    <value>0, 0, 50, 0</value>
   </data>
   <data name="lblset_video.Size" type="System.Drawing.Size, System.Drawing">
-    <value>234, 19</value>
+    <value>100, 19</value>
   </data>
   <data name="lblset_video.TabIndex" type="System.Int32, mscorlib">
     <value>302</value>
@@ -1036,7 +1141,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;lblset_video.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="lblcur_firstsplit.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1069,7 +1174,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;lblcur_firstsplit.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
   <data name="Label79.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1102,7 +1207,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;Label79.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>8</value>
   </data>
   <data name="chkcur_load10.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1129,7 +1234,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;chkcur_load10.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
   </data>
   <data name="chkcur_load8.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1156,7 +1261,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;chkcur_load8.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>10</value>
   </data>
   <data name="chkcur_load7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1183,7 +1288,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;chkcur_load7.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>11</value>
   </data>
   <data name="chkcur_load9.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1210,7 +1315,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;chkcur_load9.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>12</value>
   </data>
   <data name="chkcur_load5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1237,7 +1342,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;chkcur_load5.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>13</value>
   </data>
   <data name="chkcur_load4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1264,7 +1369,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;chkcur_load4.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>14</value>
   </data>
   <data name="chkcur_load6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1291,7 +1396,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;chkcur_load6.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>15</value>
   </data>
   <data name="chkcur_load3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1318,7 +1423,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;chkcur_load3.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>16</value>
   </data>
   <data name="chkcur_load2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1345,7 +1450,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;chkcur_load2.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>17</value>
   </data>
   <data name="chkcur_load1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1372,7 +1477,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;chkcur_load1.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>18</value>
   </data>
   <data name="lblcur_addcount.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1405,7 +1510,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;lblcur_addcount.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>19</value>
   </data>
   <data name="lblcur_namedpipe.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1438,7 +1543,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;lblcur_namedpipe.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>20</value>
   </data>
   <data name="lblcur_rendou.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1471,7 +1576,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;lblcur_rendou.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>21</value>
   </data>
   <data name="lblcur_focus_after.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1504,7 +1609,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;lblcur_focus_after.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>22</value>
   </data>
   <data name="lblcur_focus_before.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1537,7 +1642,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;lblcur_focus_before.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>23</value>
   </data>
   <data name="lblcur_loadremover.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1570,7 +1675,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;lblcur_loadremover.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>24</value>
   </data>
   <data name="lblcur_interval.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1828,7 +1933,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;Panel4.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>25</value>
   </data>
   <data name="Label92.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1861,7 +1966,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;Label92.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>26</value>
   </data>
   <data name="lblset_focus.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1897,7 +2002,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;lblset_focus.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>27</value>
   </data>
   <data name="Label94.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1930,7 +2035,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;Label94.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>28</value>
   </data>
   <data name="Label90.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1963,7 +2068,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;Label90.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>29</value>
   </data>
   <data name="lblset_hotkey.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1999,7 +2104,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;lblset_hotkey.ZOrder" xml:space="preserve">
-    <value>27</value>
+    <value>30</value>
   </data>
   <data name="Label89.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2032,7 +2137,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;Label89.ZOrder" xml:space="preserve">
-    <value>28</value>
+    <value>31</value>
   </data>
   <data name="btncur_clear_live.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -2068,7 +2173,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;btncur_clear_live.ZOrder" xml:space="preserve">
-    <value>29</value>
+    <value>32</value>
   </data>
   <data name="btncur_clear_table.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -2104,7 +2209,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;btncur_clear_table.ZOrder" xml:space="preserve">
-    <value>30</value>
+    <value>33</value>
   </data>
   <data name="btncur_clear_count.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -2140,7 +2245,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;btncur_clear_count.ZOrder" xml:space="preserve">
-    <value>31</value>
+    <value>34</value>
   </data>
   <data name="Label86.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2173,7 +2278,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;Label86.ZOrder" xml:space="preserve">
-    <value>32</value>
+    <value>35</value>
   </data>
   <data name="lblset_graph.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2209,7 +2314,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;lblset_graph.ZOrder" xml:space="preserve">
-    <value>33</value>
+    <value>36</value>
   </data>
   <data name="btncur_webcamera.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -2245,7 +2350,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;btncur_webcamera.ZOrder" xml:space="preserve">
-    <value>34</value>
+    <value>37</value>
   </data>
   <data name="lblset_road.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2281,7 +2386,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;lblset_road.ZOrder" xml:space="preserve">
-    <value>35</value>
+    <value>38</value>
   </data>
   <data name="lblcur_device_res_fps.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2314,7 +2419,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;lblcur_device_res_fps.ZOrder" xml:space="preserve">
-    <value>36</value>
+    <value>39</value>
   </data>
   <data name="lblset_device.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2350,7 +2455,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;lblset_device.ZOrder" xml:space="preserve">
-    <value>37</value>
+    <value>40</value>
   </data>
   <data name="lblcur_device_name.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2383,7 +2488,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;lblcur_device_name.ZOrder" xml:space="preserve">
-    <value>38</value>
+    <value>41</value>
   </data>
   <data name="lblset_monitoring.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2419,7 +2524,7 @@
     <value>grpgeneral</value>
   </data>
   <data name="&gt;&gt;lblset_monitoring.ZOrder" xml:space="preserve">
-    <value>39</value>
+    <value>42</value>
   </data>
   <data name="grpgeneral.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 12pt, style=Italic</value>
@@ -2445,40 +2550,40 @@
   <data name="&gt;&gt;grpgeneral.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="Button1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="btntext_createtext.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="Button1.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="btntext_createtext.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 8pt</value>
   </data>
-  <data name="Button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="btntext_createtext.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="Button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>220, 87</value>
+  <data name="btntext_createtext.Location" type="System.Drawing.Point, System.Drawing">
+    <value>248, 19</value>
   </data>
-  <data name="Button1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="btntext_createtext.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 1, 0, 0</value>
   </data>
-  <data name="Button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 26</value>
+  <data name="btntext_createtext.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 26</value>
   </data>
-  <data name="Button1.TabIndex" type="System.Int32, mscorlib">
+  <data name="btntext_createtext.TabIndex" type="System.Int32, mscorlib">
     <value>308</value>
   </data>
-  <data name="Button1.Text" xml:space="preserve">
+  <data name="btntext_createtext.Text" xml:space="preserve">
     <value>Create Textfile</value>
   </data>
-  <data name="&gt;&gt;Button1.Name" xml:space="preserve">
-    <value>Button1</value>
+  <data name="&gt;&gt;btntext_createtext.Name" xml:space="preserve">
+    <value>btntext_createtext</value>
   </data>
-  <data name="&gt;&gt;Button1.Type" xml:space="preserve">
+  <data name="&gt;&gt;btntext_createtext.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Button1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btntext_createtext.Parent" xml:space="preserve">
     <value>pnl_other</value>
   </data>
-  <data name="&gt;&gt;Button1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;btntext_createtext.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="txtpass_rtf.Font" type="System.Drawing.Font, System.Drawing">
@@ -2548,7 +2653,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnshow_chart.Location" type="System.Drawing.Point, System.Drawing">
-    <value>129, 87</value>
+    <value>157, 19</value>
   </data>
   <data name="btnshow_chart.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 1, 0, 0</value>
@@ -2584,7 +2689,7 @@
     <value>NoControl</value>
   </data>
   <data name="chkshow_text.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 88</value>
+    <value>22, 19</value>
   </data>
   <data name="chkshow_text.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 23</value>
@@ -2617,7 +2722,7 @@
     <value>NoControl</value>
   </data>
   <data name="chkcreate_temppicture.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 56</value>
+    <value>327, 153</value>
   </data>
   <data name="chkcreate_temppicture.Size" type="System.Drawing.Size, System.Drawing">
     <value>228, 23</value>
@@ -2797,7 +2902,7 @@
     <value>NoControl</value>
   </data>
   <data name="lbllivesplit_state.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 20</value>
+    <value>323, 124</value>
   </data>
   <data name="lbllivesplit_state.Size" type="System.Drawing.Size, System.Drawing">
     <value>211, 20</value>
@@ -5424,6 +5529,111 @@
   <data name="&gt;&gt;pnl_loadremover.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <data name="Label119.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label119.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 11pt</value>
+  </data>
+  <data name="Label119.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label119.Location" type="System.Drawing.Point, System.Drawing">
+    <value>339, 144</value>
+  </data>
+  <data name="Label119.Size" type="System.Drawing.Size, System.Drawing">
+    <value>211, 19</value>
+  </data>
+  <data name="Label119.TabIndex" type="System.Int32, mscorlib">
+    <value>260</value>
+  </data>
+  <data name="Label119.Text" xml:space="preserve">
+    <value>↑ASH's hotkey (single key)</value>
+  </data>
+  <data name="&gt;&gt;Label119.Name" xml:space="preserve">
+    <value>Label119</value>
+  </data>
+  <data name="&gt;&gt;Label119.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label119.Parent" xml:space="preserve">
+    <value>pnl_hotkey</value>
+  </data>
+  <data name="&gt;&gt;Label119.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtreset_ash_key.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 10pt</value>
+  </data>
+  <data name="txtreset_ash_key.Location" type="System.Drawing.Point, System.Drawing">
+    <value>339, 49</value>
+  </data>
+  <data name="txtreset_ash_key.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 24</value>
+  </data>
+  <data name="txtreset_ash_key.TabIndex" type="System.Int32, mscorlib">
+    <value>257</value>
+  </data>
+  <data name="&gt;&gt;txtreset_ash_key.Name" xml:space="preserve">
+    <value>txtreset_ash_key</value>
+  </data>
+  <data name="&gt;&gt;txtreset_ash_key.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtreset_ash_key.Parent" xml:space="preserve">
+    <value>pnl_hotkey</value>
+  </data>
+  <data name="&gt;&gt;txtreset_ash_key.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtundo_ash_key.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 10pt</value>
+  </data>
+  <data name="txtundo_ash_key.Location" type="System.Drawing.Point, System.Drawing">
+    <value>339, 79</value>
+  </data>
+  <data name="txtundo_ash_key.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 24</value>
+  </data>
+  <data name="txtundo_ash_key.TabIndex" type="System.Int32, mscorlib">
+    <value>258</value>
+  </data>
+  <data name="&gt;&gt;txtundo_ash_key.Name" xml:space="preserve">
+    <value>txtundo_ash_key</value>
+  </data>
+  <data name="&gt;&gt;txtundo_ash_key.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtundo_ash_key.Parent" xml:space="preserve">
+    <value>pnl_hotkey</value>
+  </data>
+  <data name="&gt;&gt;txtundo_ash_key.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="txtskip_ash_key.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 10pt</value>
+  </data>
+  <data name="txtskip_ash_key.Location" type="System.Drawing.Point, System.Drawing">
+    <value>339, 109</value>
+  </data>
+  <data name="txtskip_ash_key.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 24</value>
+  </data>
+  <data name="txtskip_ash_key.TabIndex" type="System.Int32, mscorlib">
+    <value>259</value>
+  </data>
+  <data name="&gt;&gt;txtskip_ash_key.Name" xml:space="preserve">
+    <value>txtskip_ash_key</value>
+  </data>
+  <data name="&gt;&gt;txtskip_ash_key.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtskip_ash_key.Parent" xml:space="preserve">
+    <value>pnl_hotkey</value>
+  </data>
+  <data name="&gt;&gt;txtskip_ash_key.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="Label96.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -5434,7 +5644,7 @@
     <value>NoControl</value>
   </data>
   <data name="Label96.Location" type="System.Drawing.Point, System.Drawing">
-    <value>354, 123</value>
+    <value>432, 110</value>
   </data>
   <data name="Label96.Size" type="System.Drawing.Size, System.Drawing">
     <value>147, 19</value>
@@ -5455,13 +5665,13 @@
     <value>pnl_hotkey</value>
   </data>
   <data name="&gt;&gt;Label96.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>4</value>
   </data>
   <data name="numpresstime.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 11pt</value>
   </data>
   <data name="numpresstime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>501, 121</value>
+    <value>579, 108</value>
   </data>
   <data name="numpresstime.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 26</value>
@@ -5482,7 +5692,7 @@
     <value>pnl_hotkey</value>
   </data>
   <data name="&gt;&gt;numpresstime.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>5</value>
   </data>
   <data name="txtresume_key.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 10pt</value>
@@ -5506,7 +5716,7 @@
     <value>pnl_hotkey</value>
   </data>
   <data name="&gt;&gt;txtresume_key.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>6</value>
   </data>
   <data name="Label85.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5539,7 +5749,7 @@
     <value>pnl_hotkey</value>
   </data>
   <data name="&gt;&gt;Label85.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>7</value>
   </data>
   <data name="Label28.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5572,7 +5782,7 @@
     <value>pnl_hotkey</value>
   </data>
   <data name="&gt;&gt;Label28.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>8</value>
   </data>
   <data name="Label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5605,7 +5815,7 @@
     <value>pnl_hotkey</value>
   </data>
   <data name="&gt;&gt;Label7.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>9</value>
   </data>
   <data name="chkalt_resume.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5638,7 +5848,7 @@
     <value>pnl_hotkey</value>
   </data>
   <data name="&gt;&gt;chkalt_resume.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>10</value>
   </data>
   <data name="chkctrl_resume.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5671,7 +5881,7 @@
     <value>pnl_hotkey</value>
   </data>
   <data name="&gt;&gt;chkctrl_resume.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>11</value>
   </data>
   <data name="txtsplit_key.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 10pt</value>
@@ -5695,7 +5905,7 @@
     <value>pnl_hotkey</value>
   </data>
   <data name="&gt;&gt;txtsplit_key.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>12</value>
   </data>
   <data name="chkctrl_reset.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5728,7 +5938,7 @@
     <value>pnl_hotkey</value>
   </data>
   <data name="&gt;&gt;chkctrl_reset.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>13</value>
   </data>
   <data name="Label8.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5761,7 +5971,7 @@
     <value>pnl_hotkey</value>
   </data>
   <data name="&gt;&gt;Label8.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>14</value>
   </data>
   <data name="chkshift_resume.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5797,7 +6007,7 @@
     <value>pnl_hotkey</value>
   </data>
   <data name="&gt;&gt;chkshift_resume.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>15</value>
   </data>
   <data name="Label9.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5830,7 +6040,7 @@
     <value>pnl_hotkey</value>
   </data>
   <data name="&gt;&gt;Label9.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>16</value>
   </data>
   <data name="chkalt_reset.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5863,7 +6073,7 @@
     <value>pnl_hotkey</value>
   </data>
   <data name="&gt;&gt;chkalt_reset.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>17</value>
   </data>
   <data name="chkundoskip.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5875,7 +6085,7 @@
     <value>NoControl</value>
   </data>
   <data name="chkundoskip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>358, 20</value>
+    <value>436, 20</value>
   </data>
   <data name="chkundoskip.Size" type="System.Drawing.Size, System.Drawing">
     <value>93, 23</value>
@@ -5896,7 +6106,7 @@
     <value>pnl_hotkey</value>
   </data>
   <data name="&gt;&gt;chkundoskip.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>18</value>
   </data>
   <data name="txtpause_key.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 10pt</value>
@@ -5920,7 +6130,7 @@
     <value>pnl_hotkey</value>
   </data>
   <data name="&gt;&gt;txtpause_key.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>19</value>
   </data>
   <data name="txtreset_key.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 10pt</value>
@@ -5944,7 +6154,7 @@
     <value>pnl_hotkey</value>
   </data>
   <data name="&gt;&gt;txtreset_key.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>20</value>
   </data>
   <data name="chkalt.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5977,7 +6187,7 @@
     <value>pnl_hotkey</value>
   </data>
   <data name="&gt;&gt;chkalt.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>21</value>
   </data>
   <data name="chkshift_undo.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6010,7 +6220,7 @@
     <value>pnl_hotkey</value>
   </data>
   <data name="&gt;&gt;chkshift_undo.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>22</value>
   </data>
   <data name="Label27.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6043,7 +6253,7 @@
     <value>pnl_hotkey</value>
   </data>
   <data name="&gt;&gt;Label27.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>23</value>
   </data>
   <data name="Label10.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6076,7 +6286,7 @@
     <value>pnl_hotkey</value>
   </data>
   <data name="&gt;&gt;Label10.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>24</value>
   </data>
   <data name="chkctrl.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6109,7 +6319,7 @@
     <value>pnl_hotkey</value>
   </data>
   <data name="&gt;&gt;chkctrl.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>25</value>
   </data>
   <data name="chkctrl_undo.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6142,7 +6352,7 @@
     <value>pnl_hotkey</value>
   </data>
   <data name="&gt;&gt;chkctrl_undo.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>26</value>
   </data>
   <data name="chkalt_pause.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6175,7 +6385,7 @@
     <value>pnl_hotkey</value>
   </data>
   <data name="&gt;&gt;chkalt_pause.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>27</value>
   </data>
   <data name="txtundo_key.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 10pt</value>
@@ -6199,7 +6409,7 @@
     <value>pnl_hotkey</value>
   </data>
   <data name="&gt;&gt;txtundo_key.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>28</value>
   </data>
   <data name="chkshift.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6232,7 +6442,7 @@
     <value>pnl_hotkey</value>
   </data>
   <data name="&gt;&gt;chkshift.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>29</value>
   </data>
   <data name="chkalt_undo.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6265,7 +6475,7 @@
     <value>pnl_hotkey</value>
   </data>
   <data name="&gt;&gt;chkalt_undo.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>30</value>
   </data>
   <data name="chkctrl_pause.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6298,7 +6508,7 @@
     <value>pnl_hotkey</value>
   </data>
   <data name="&gt;&gt;chkctrl_pause.ZOrder" xml:space="preserve">
-    <value>27</value>
+    <value>31</value>
   </data>
   <data name="txtskip_key.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 10pt</value>
@@ -6322,7 +6532,7 @@
     <value>pnl_hotkey</value>
   </data>
   <data name="&gt;&gt;txtskip_key.ZOrder" xml:space="preserve">
-    <value>28</value>
+    <value>32</value>
   </data>
   <data name="chkshift_pause.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6358,7 +6568,7 @@
     <value>pnl_hotkey</value>
   </data>
   <data name="&gt;&gt;chkshift_pause.ZOrder" xml:space="preserve">
-    <value>29</value>
+    <value>33</value>
   </data>
   <data name="chkalt_skip.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6391,7 +6601,7 @@
     <value>pnl_hotkey</value>
   </data>
   <data name="&gt;&gt;chkalt_skip.ZOrder" xml:space="preserve">
-    <value>30</value>
+    <value>34</value>
   </data>
   <data name="chkctrl_skip.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6424,7 +6634,7 @@
     <value>pnl_hotkey</value>
   </data>
   <data name="&gt;&gt;chkctrl_skip.ZOrder" xml:space="preserve">
-    <value>31</value>
+    <value>35</value>
   </data>
   <data name="chknamedpipe.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6436,7 +6646,7 @@
     <value>NoControl</value>
   </data>
   <data name="chknamedpipe.Location" type="System.Drawing.Point, System.Drawing">
-    <value>358, 49</value>
+    <value>436, 49</value>
   </data>
   <data name="chknamedpipe.Size" type="System.Drawing.Size, System.Drawing">
     <value>149, 42</value>
@@ -6458,7 +6668,7 @@
     <value>pnl_hotkey</value>
   </data>
   <data name="&gt;&gt;chknamedpipe.ZOrder" xml:space="preserve">
-    <value>32</value>
+    <value>36</value>
   </data>
   <data name="chkshift_reset.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6494,7 +6704,7 @@
     <value>pnl_hotkey</value>
   </data>
   <data name="&gt;&gt;chkshift_reset.ZOrder" xml:space="preserve">
-    <value>33</value>
+    <value>37</value>
   </data>
   <data name="chkshift_skip.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6530,7 +6740,7 @@
     <value>pnl_hotkey</value>
   </data>
   <data name="&gt;&gt;chkshift_skip.ZOrder" xml:space="preserve">
-    <value>34</value>
+    <value>38</value>
   </data>
   <data name="pnl_hotkey.Location" type="System.Drawing.Point, System.Drawing">
     <value>685, 599</value>
@@ -6581,7 +6791,7 @@
     <value>Video</value>
   </data>
   <data name="listsetcontents.Items7" xml:space="preserve">
-    <value>Other</value>
+    <value>Text + Other</value>
   </data>
   <data name="listsetcontents.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 265</value>
@@ -7714,6 +7924,27 @@
   <data name="&gt;&gt;pnl_graph.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
+  <data name="numtextwindow_sizex.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 332</value>
+  </data>
+  <data name="numtextwindow_sizex.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 24</value>
+  </data>
+  <data name="numtextwindow_sizex.TabIndex" type="System.Int32, mscorlib">
+    <value>253</value>
+  </data>
+  <data name="&gt;&gt;numtextwindow_sizex.Name" xml:space="preserve">
+    <value>numtextwindow_sizex</value>
+  </data>
+  <data name="&gt;&gt;numtextwindow_sizex.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numtextwindow_sizex.Parent" xml:space="preserve">
+    <value>GroupBox2</value>
+  </data>
+  <data name="&gt;&gt;numtextwindow_sizex.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="lblcheckopening.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -7724,7 +7955,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblcheckopening.Location" type="System.Drawing.Point, System.Drawing">
-    <value>128, 60</value>
+    <value>135, 20</value>
   </data>
   <data name="lblcheckopening.Size" type="System.Drawing.Size, System.Drawing">
     <value>19, 20</value>
@@ -7748,7 +7979,28 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;lblcheckopening.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
+  </data>
+  <data name="numtextwindow_sizey.Location" type="System.Drawing.Point, System.Drawing">
+    <value>108, 332</value>
+  </data>
+  <data name="numtextwindow_sizey.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 24</value>
+  </data>
+  <data name="numtextwindow_sizey.TabIndex" type="System.Int32, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="&gt;&gt;numtextwindow_sizey.Name" xml:space="preserve">
+    <value>numtextwindow_sizey</value>
+  </data>
+  <data name="&gt;&gt;numtextwindow_sizey.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numtextwindow_sizey.Parent" xml:space="preserve">
+    <value>GroupBox2</value>
+  </data>
+  <data name="&gt;&gt;numtextwindow_sizey.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="numprofile.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 11pt</value>
@@ -7757,7 +8009,7 @@
     <value>77, 18</value>
   </data>
   <data name="numprofile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 26</value>
+    <value>45, 26</value>
   </data>
   <data name="numprofile.TabIndex" type="System.Int32, mscorlib">
     <value>147</value>
@@ -7775,7 +8027,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;numprofile.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="Label38.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -7808,7 +8060,40 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;Label38.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
+  </data>
+  <data name="txtclickcount.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9.75pt</value>
+  </data>
+  <data name="txtclickcount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 52</value>
+  </data>
+  <data name="txtclickcount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 24</value>
+  </data>
+  <data name="txtclickcount.TabIndex" type="System.Int32, mscorlib">
+    <value>269</value>
+  </data>
+  <data name="txtclickcount.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtclickcount.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="txtclickcount.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;txtclickcount.Name" xml:space="preserve">
+    <value>txtclickcount</value>
+  </data>
+  <data name="&gt;&gt;txtclickcount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtclickcount.Parent" xml:space="preserve">
+    <value>GroupBox2</value>
+  </data>
+  <data name="&gt;&gt;txtclickcount.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="txtprofile.Location" type="System.Drawing.Point, System.Drawing">
     <value>17, 43</value>
@@ -7838,7 +8123,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;txtprofile.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="txtloadprofile.Location" type="System.Drawing.Point, System.Drawing">
     <value>65, 43</value>
@@ -7865,7 +8150,70 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;txtloadprofile.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
+  </data>
+  <data name="numskip_ash.Location" type="System.Drawing.Point, System.Drawing">
+    <value>128, 101</value>
+  </data>
+  <data name="numskip_ash.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 24</value>
+  </data>
+  <data name="numskip_ash.TabIndex" type="System.Int32, mscorlib">
+    <value>257</value>
+  </data>
+  <data name="&gt;&gt;numskip_ash.Name" xml:space="preserve">
+    <value>numskip_ash</value>
+  </data>
+  <data name="&gt;&gt;numskip_ash.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numskip_ash.Parent" xml:space="preserve">
+    <value>GroupBox3</value>
+  </data>
+  <data name="&gt;&gt;numskip_ash.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="numundo_ash.Location" type="System.Drawing.Point, System.Drawing">
+    <value>128, 71</value>
+  </data>
+  <data name="numundo_ash.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 24</value>
+  </data>
+  <data name="numundo_ash.TabIndex" type="System.Int32, mscorlib">
+    <value>256</value>
+  </data>
+  <data name="&gt;&gt;numundo_ash.Name" xml:space="preserve">
+    <value>numundo_ash</value>
+  </data>
+  <data name="&gt;&gt;numundo_ash.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numundo_ash.Parent" xml:space="preserve">
+    <value>GroupBox3</value>
+  </data>
+  <data name="&gt;&gt;numundo_ash.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="numreset_ash.Location" type="System.Drawing.Point, System.Drawing">
+    <value>128, 42</value>
+  </data>
+  <data name="numreset_ash.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 24</value>
+  </data>
+  <data name="numreset_ash.TabIndex" type="System.Int32, mscorlib">
+    <value>255</value>
+  </data>
+  <data name="&gt;&gt;numreset_ash.Name" xml:space="preserve">
+    <value>numreset_ash</value>
+  </data>
+  <data name="&gt;&gt;numreset_ash.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numreset_ash.Parent" xml:space="preserve">
+    <value>GroupBox3</value>
+  </data>
+  <data name="&gt;&gt;numreset_ash.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="lblkeysforresume.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -7880,10 +8228,10 @@
     <value>102, 119</value>
   </data>
   <data name="lblkeysforresume.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>50, 0, 0, 0</value>
+    <value>20, 0, 0, 0</value>
   </data>
   <data name="lblkeysforresume.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 20</value>
+    <value>20, 20</value>
   </data>
   <data name="lblkeysforresume.TabIndex" type="System.Int32, mscorlib">
     <value>223</value>
@@ -7898,7 +8246,7 @@
     <value>GroupBox3</value>
   </data>
   <data name="&gt;&gt;lblkeysforresume.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
   </data>
   <data name="Label24.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -7934,7 +8282,7 @@
     <value>GroupBox3</value>
   </data>
   <data name="&gt;&gt;Label24.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="numcv_sizex.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 48</value>
@@ -7955,7 +8303,7 @@
     <value>GroupBox3</value>
   </data>
   <data name="&gt;&gt;numcv_sizex.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="lblkeysforpause.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -7970,10 +8318,10 @@
     <value>102, 101</value>
   </data>
   <data name="lblkeysforpause.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>50, 0, 0, 0</value>
+    <value>20, 0, 0, 0</value>
   </data>
   <data name="lblkeysforpause.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 20</value>
+    <value>20, 20</value>
   </data>
   <data name="lblkeysforpause.TabIndex" type="System.Int32, mscorlib">
     <value>222</value>
@@ -7988,7 +8336,7 @@
     <value>GroupBox3</value>
   </data>
   <data name="&gt;&gt;lblkeysforpause.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="numcv_sizey.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 75</value>
@@ -8009,7 +8357,7 @@
     <value>GroupBox3</value>
   </data>
   <data name="&gt;&gt;numcv_sizey.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
   <data name="numsavex.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 105</value>
@@ -8030,7 +8378,7 @@
     <value>GroupBox3</value>
   </data>
   <data name="&gt;&gt;numsavex.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>8</value>
   </data>
   <data name="numsavey.Location" type="System.Drawing.Point, System.Drawing">
     <value>55, 105</value>
@@ -8051,7 +8399,7 @@
     <value>GroupBox3</value>
   </data>
   <data name="&gt;&gt;numsavey.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
   </data>
   <data name="lblkeysforsend.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -8066,10 +8414,10 @@
     <value>102, 21</value>
   </data>
   <data name="lblkeysforsend.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>50, 0, 0, 0</value>
+    <value>20, 0, 0, 0</value>
   </data>
   <data name="lblkeysforsend.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 20</value>
+    <value>20, 20</value>
   </data>
   <data name="lblkeysforsend.TabIndex" type="System.Int32, mscorlib">
     <value>77</value>
@@ -8084,7 +8432,7 @@
     <value>GroupBox3</value>
   </data>
   <data name="&gt;&gt;lblkeysforsend.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>10</value>
   </data>
   <data name="lblkeysforsend_reset.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -8099,10 +8447,10 @@
     <value>102, 41</value>
   </data>
   <data name="lblkeysforsend_reset.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>50, 0, 0, 0</value>
+    <value>20, 0, 0, 0</value>
   </data>
   <data name="lblkeysforsend_reset.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 20</value>
+    <value>20, 20</value>
   </data>
   <data name="lblkeysforsend_reset.TabIndex" type="System.Int32, mscorlib">
     <value>97</value>
@@ -8117,7 +8465,7 @@
     <value>GroupBox3</value>
   </data>
   <data name="&gt;&gt;lblkeysforsend_reset.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>11</value>
   </data>
   <data name="lblkeysforskip.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -8132,10 +8480,10 @@
     <value>102, 81</value>
   </data>
   <data name="lblkeysforskip.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>50, 0, 0, 0</value>
+    <value>20, 0, 0, 0</value>
   </data>
   <data name="lblkeysforskip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 20</value>
+    <value>20, 20</value>
   </data>
   <data name="lblkeysforskip.TabIndex" type="System.Int32, mscorlib">
     <value>221</value>
@@ -8150,7 +8498,7 @@
     <value>GroupBox3</value>
   </data>
   <data name="&gt;&gt;lblkeysforskip.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>12</value>
   </data>
   <data name="lblkeysforundo.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -8165,10 +8513,10 @@
     <value>102, 61</value>
   </data>
   <data name="lblkeysforundo.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>50, 0, 0, 0</value>
+    <value>20, 0, 0, 0</value>
   </data>
   <data name="lblkeysforundo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 20</value>
+    <value>20, 20</value>
   </data>
   <data name="lblkeysforundo.TabIndex" type="System.Int32, mscorlib">
     <value>220</value>
@@ -8183,7 +8531,7 @@
     <value>GroupBox3</value>
   </data>
   <data name="&gt;&gt;lblkeysforundo.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>13</value>
   </data>
   <data name="GroupBox3.Location" type="System.Drawing.Point, System.Drawing">
     <value>17, 83</value>
@@ -8207,7 +8555,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;GroupBox3.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>8</value>
   </data>
   <data name="txtsavetempnumber.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -8311,39 +8659,6 @@
   <data name="&gt;&gt;txt11.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="txtclickcount.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 9.75pt</value>
-  </data>
-  <data name="txtclickcount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>87, 72</value>
-  </data>
-  <data name="txtclickcount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 24</value>
-  </data>
-  <data name="txtclickcount.TabIndex" type="System.Int32, mscorlib">
-    <value>269</value>
-  </data>
-  <data name="txtclickcount.Text" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="txtclickcount.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="txtclickcount.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;txtclickcount.Name" xml:space="preserve">
-    <value>txtclickcount</value>
-  </data>
-  <data name="&gt;&gt;txtclickcount.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtclickcount.Parent" xml:space="preserve">
-    <value>Panel5</value>
-  </data>
-  <data name="&gt;&gt;txtclickcount.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <data name="txt22.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 9.75pt</value>
   </data>
@@ -8375,7 +8690,7 @@
     <value>Panel5</value>
   </data>
   <data name="&gt;&gt;txt22.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="txt12.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 9.75pt</value>
@@ -8408,7 +8723,7 @@
     <value>Panel5</value>
   </data>
   <data name="&gt;&gt;txt12.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="txt21.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 9.75pt</value>
@@ -8441,13 +8756,13 @@
     <value>Panel5</value>
   </data>
   <data name="&gt;&gt;txt21.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="Panel5.Location" type="System.Drawing.Point, System.Drawing">
     <value>21, 258</value>
   </data>
   <data name="Panel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>146, 100</value>
+    <value>146, 71</value>
   </data>
   <data name="Panel5.TabIndex" type="System.Int32, mscorlib">
     <value>284</value>
@@ -8462,7 +8777,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;Panel5.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
   </data>
   <data name="txttemp_picturepass.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 9pt</value>
@@ -8486,7 +8801,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;txttemp_picturepass.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>10</value>
   </data>
   <data name="Label71.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -8519,7 +8834,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;Label71.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>11</value>
   </data>
   <data name="GroupBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>1889, 1</value>
@@ -9251,43 +9566,46 @@
     <value>Yu Gothic UI, 11pt</value>
   </data>
   <data name="NewProfileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 24</value>
+    <value>270, 24</value>
   </data>
   <data name="NewProfileToolStripMenuItem.Text" xml:space="preserve">
     <value>New profile(&amp;N)</value>
   </data>
   <data name="ImportToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 24</value>
+    <value>270, 24</value>
   </data>
   <data name="ImportToolStripMenuItem.Text" xml:space="preserve">
     <value>Import(&amp;I)</value>
   </data>
   <data name="ToolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>265, 6</value>
-  </data>
-  <data name="ToolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>265, 6</value>
+    <value>267, 6</value>
   </data>
   <data name="SaveProfileSToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 24</value>
+    <value>270, 24</value>
   </data>
   <data name="SaveProfileSToolStripMenuItem.Text" xml:space="preserve">
     <value>Save to the current profile(&amp;S)</value>
   </data>
   <data name="DeleteSelectedProfileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 24</value>
+    <value>270, 24</value>
   </data>
   <data name="DeleteSelectedProfileToolStripMenuItem.Text" xml:space="preserve">
     <value>Delete the current profile(&amp;D)</value>
   </data>
   <data name="ToolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>265, 6</value>
+    <value>267, 6</value>
+  </data>
+  <data name="UploadTheCurrentProfileUToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>270, 24</value>
+  </data>
+  <data name="UploadTheCurrentProfileUToolStripMenuItem.Text" xml:space="preserve">
+    <value>Upload the current profile(&amp;U)</value>
   </data>
   <data name="ToolStripSeparator5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>265, 6</value>
+    <value>267, 6</value>
   </data>
   <data name="ExitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 24</value>
+    <value>270, 24</value>
   </data>
   <data name="ExitToolStripMenuItem.Text" xml:space="preserve">
     <value>Exit(&amp;X)</value>
@@ -9305,9 +9623,6 @@
     <value>Start Monitoring(&amp;M)</value>
   </data>
   <data name="ToolStripSeparator6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>279, 6</value>
-  </data>
-  <data name="ToolStripSeparator7.Size" type="System.Drawing.Size, System.Drawing">
     <value>279, 6</value>
   </data>
   <data name="PreviewGetTemplatePictureToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
@@ -9343,6 +9658,12 @@
   <data name="ViewTableToolStripMenuItem.Text" xml:space="preserve">
     <value>Open Graph(&amp;G)</value>
   </data>
+  <data name="OpenTextWindowWToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 24</value>
+  </data>
+  <data name="OpenTextWindowWToolStripMenuItem.Text" xml:space="preserve">
+    <value>Open Text window(&amp;W)</value>
+  </data>
   <data name="ToolToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>91, 25</value>
   </data>
@@ -9362,7 +9683,7 @@
     <value>License(&amp;L)</value>
   </data>
   <data name="HelpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 25</value>
+    <value>90, 25</value>
   </data>
   <data name="HelpToolStripMenuItem.Text" xml:space="preserve">
     <value>   Help(&amp;H)   </value>
@@ -17592,7 +17913,7 @@
     <value>112</value>
   </data>
   <data name="Label31.Text" xml:space="preserve">
-    <value> (2018/05/20)</value>
+    <value> (2018/05/26)</value>
   </data>
   <data name="&gt;&gt;Label31.Name" xml:space="preserve">
     <value>Label31</value>
@@ -17724,7 +18045,7 @@
     <value>5</value>
   </data>
   <data name="lblversion.Text" xml:space="preserve">
-    <value>V1.29</value>
+    <value>V1.30</value>
   </data>
   <data name="&gt;&gt;lblversion.Name" xml:space="preserve">
     <value>lblversion</value>
@@ -18443,6 +18764,9 @@
   <metadata name="timcalib.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>571, 45</value>
   </metadata>
+  <metadata name="timash_hotkey_sleep.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>659, 5</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -19053,12 +19377,6 @@
   <data name="&gt;&gt;ToolStripSeparator1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ToolStripSeparator2.Name" xml:space="preserve">
-    <value>ToolStripSeparator2</value>
-  </data>
-  <data name="&gt;&gt;ToolStripSeparator2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;SaveProfileSToolStripMenuItem.Name" xml:space="preserve">
     <value>SaveProfileSToolStripMenuItem</value>
   </data>
@@ -19076,6 +19394,12 @@
   </data>
   <data name="&gt;&gt;ToolStripSeparator4.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;UploadTheCurrentProfileUToolStripMenuItem.Name" xml:space="preserve">
+    <value>UploadTheCurrentProfileUToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;UploadTheCurrentProfileUToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ToolStripSeparator5.Name" xml:space="preserve">
     <value>ToolStripSeparator5</value>
@@ -19105,12 +19429,6 @@
     <value>ToolStripSeparator6</value>
   </data>
   <data name="&gt;&gt;ToolStripSeparator6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripSeparator7.Name" xml:space="preserve">
-    <value>ToolStripSeparator7</value>
-  </data>
-  <data name="&gt;&gt;ToolStripSeparator7.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;PreviewGetTemplatePictureToolStripMenuItem.Name" xml:space="preserve">
@@ -19147,6 +19465,12 @@
     <value>ViewTableToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;ViewTableToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OpenTextWindowWToolStripMenuItem.Name" xml:space="preserve">
+    <value>OpenTextWindowWToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;OpenTextWindowWToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;HelpToolStripMenuItem.Name" xml:space="preserve">
@@ -19279,6 +19603,12 @@
     <value>timcalib</value>
   </data>
   <data name="&gt;&gt;timcalib.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timash_hotkey_sleep.Name" xml:space="preserve">
+    <value>timash_hotkey_sleep</value>
+  </data>
+  <data name="&gt;&gt;timash_hotkey_sleep.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

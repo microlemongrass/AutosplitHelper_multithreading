@@ -479,6 +479,42 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  A folder with that name already exists. に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend Shared ReadOnly Property msg51() As String
+            Get
+                Return ResourceManager.GetString("msg51", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Please input size in the ratio of 16 : 9 or 4 : 3. に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend Shared ReadOnly Property msg52() As String
+            Get
+                Return ResourceManager.GetString("msg52", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Handle has not been acquired. に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend Shared ReadOnly Property msg53() As String
+            Get
+                Return ResourceManager.GetString("msg53", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  It may not be the path of the video file. に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend Shared ReadOnly Property msg54() As String
+            Get
+                Return ResourceManager.GetString("msg54", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  The number of image files does not match the number of data in the table. に類似しているローカライズされた文字列を検索します。
         '''</summary>
         Friend Shared ReadOnly Property msg6() As String

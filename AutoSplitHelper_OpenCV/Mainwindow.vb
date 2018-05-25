@@ -112,6 +112,7 @@ Public Class Mainwindow
     Private pipeServer As System.IO.Pipes.NamedPipeClientStream = New System.IO.Pipes.NamedPipeClientStream("LiveSplit") 'Livesplitの名前付きパイプを利用する。
     Private livesplit_state As String = ""
 
+    Friend messagebox_name As String = "Autosplit Helper"
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 
@@ -125,7 +126,7 @@ Public Class Mainwindow
 
         If Devices.Count <= 0 Then
             Console.WriteLine("ビデオデバイスが存在しません。")
-            MsgBox(My.Resources.Message.msg41) 'ビデオデバイスが存在しません。SCFFDSF等仮想カメラデバイスをインストールして下さい。
+            MessageBox.Show(My.Resources.Message.msg41, messagebox_name) 'ビデオデバイスが存在しません。SCFFDSF等仮想カメラデバイスをインストールして下さい。
 
 
         Else
@@ -337,7 +338,7 @@ Public Class Mainwindow
 
 
             Catch
-                MessageBox.Show(My.Resources.Message.msg1, "AutoSplit Helper by Image")
+                MessageBox.Show(My.Resources.Message.msg1, messagebox_name)
                 '"表の読み込みに失敗しました。savefileフォルダに[table1.csv(カンマ区切り)]を作成してください。"
             End Try
 
@@ -378,7 +379,7 @@ Public Class Mainwindow
 
                 ' MessageBox.Show(myfilename_table2 & "ファイル2の読み込みに成功しました。", "AutoSplit Helper by Image")
             Catch
-                MessageBox.Show(My.Resources.Message.msg2, "AutoSplit Helper by Image")
+                MessageBox.Show(My.Resources.Message.msg2, messagebox_name)
                 '"表の読み込みに失敗しました。savefileフォルダに[table2.csv(カンマ区切り)]を作成してください。"
             End Try
 
@@ -394,7 +395,7 @@ Public Class Mainwindow
             cmbprofile.SelectedIndex = numprofile.Value
 
         Catch
-            MessageBox.Show(My.Resources.Message.msg3, "AutoSplit Helper by Image") '"読み込みに失敗しました。設定が初期化されます。"
+            MessageBox.Show(My.Resources.Message.msg3, messagebox_name) '"読み込みに失敗しました。設定が初期化されます。"
 
             cmbtimer.SelectedIndex = 0
             cmbsomeapp.SelectedIndex = 0
@@ -420,7 +421,7 @@ Public Class Mainwindow
         '★
         btnresetup.Enabled = False
         '★
-        webcam_sleep.Interval = New TimeSpan(0, 0, 0, 1, 0)
+        webcam_sleep.Interval = New TimeSpan(0, 0, 0, 0, 600)
 
 
 
@@ -730,6 +731,23 @@ Public Class Mainwindow
 
     End Sub
 
+    Private Sub lblset_text_MouseClick(sender As Object, e As MouseEventArgs) Handles lblset_text.MouseClick
+
+        listsetcontents.SelectedIndex = 0
+        listsetcontents.SelectedIndex = 7
+
+        '280+15 -> 22
+        For i = 0 To 68
+            grpgeneral.Height -= 4
+            Application.DoEvents()
+
+        Next
+
+        grpgeneral.Height = 22
+
+    End Sub
+
+
 
     '■リストボックスのアイテム選択時の処理
     Private Sub listsetcontents_SelectedIndexChanged(sender As Object, e As EventArgs) Handles listsetcontents.SelectedIndexChanged
@@ -937,7 +955,7 @@ Public Class Mainwindow
         '■リセットの部分の背景変更'★
         DGtable.Rows(0).DefaultCellStyle.BackColor = Color.FromArgb(58, 16, 16) 'Color.MistyRose
 
-        lbltitlebar.Text = "[OpenCV][" & cmbprofile.SelectedItem & "]" & " AutoSplit Helper by Image " & lblversion.Text
+        lbltitlebar.Text = "[" & cmbprofile.SelectedItem & "]" & " AutoSplit Helper by Image " & lblversion.Text
 
 
 
@@ -991,7 +1009,7 @@ Public Class Mainwindow
     Private Sub chkcv_monitor_CheckedChanged(sender As Object, e As EventArgs) Handles chkcv_monitor.CheckedChanged
 
         If chkcv_monitor.Checked = True Then
-            lblcur_split.BackColor = Color.Maroon
+            lblcur_split.BackColor = Color.FromArgb(68, 0, 2)
 
         Else
             lblcur_split.BackColor = Color.FromArgb(80, 90, 95)
@@ -1005,8 +1023,8 @@ Public Class Mainwindow
     Private Sub chkcv_loop_CheckedChanged(sender As Object, e As EventArgs) Handles chkcv_loop.CheckedChanged
 
         If chkcv_loop.Checked = True Then
-            lblcur_loop.BackColor = Color.Maroon
-            lblcur_loopcount.BackColor = Color.Maroon
+            lblcur_loop.BackColor = Color.FromArgb(68, 0, 2)
+            lblcur_loopcount.BackColor = Color.FromArgb(68, 0, 2)
 
         Else
             lblcur_loop.BackColor = Color.FromArgb(80, 90, 95)
@@ -1028,7 +1046,7 @@ Public Class Mainwindow
     Private Sub chkcv_resetonoff_CheckedChanged(sender As Object, e As EventArgs) Handles chkcv_resetonoff.CheckedChanged
 
         If chkcv_resetonoff.Checked = True Then
-            lblcur_reset.BackColor = Color.Maroon
+            lblcur_reset.BackColor = Color.FromArgb(68, 0, 2)
 
         Else
             lblcur_reset.BackColor = Color.FromArgb(80, 90, 95)
@@ -1042,10 +1060,10 @@ Public Class Mainwindow
     Private Sub chkcv_loadremover_CheckedChanged(sender As Object, e As EventArgs) Handles chkcv_loadremover.CheckedChanged
 
         If chkcv_loadremover.Checked = True Then
-            chkcv_loadremover.BackColor = Color.Maroon
+            lblcur_load.BackColor = Color.FromArgb(68, 0, 2)
 
         Else
-            chkcv_loadremover.BackColor = Color.FromArgb(80, 90, 95)
+            lblcur_load.BackColor = Color.FromArgb(80, 90, 95)
 
 
         End If
@@ -1230,7 +1248,7 @@ Public Class Mainwindow
                 keysending()
 
 
-            Else MessageBox.Show(My.Resources.Message.msg4, "AutoSplit Helper by Image") '"ウィンドウの存在を確認できませんでした。"
+            Else MessageBox.Show(My.Resources.Message.msg4, messagebox_name) '"ウィンドウの存在を確認できませんでした。"
 
 
             End If
@@ -1256,7 +1274,7 @@ Public Class Mainwindow
             System.Threading.Thread.Sleep(numsendsleep.Value)
 
 
-        Else MessageBox.Show(My.Resources.Message.msg4, "AutoSplit Helper by Image") '"ウィンドウの存在を確認できませんでした。"
+        Else MessageBox.Show(My.Resources.Message.msg4, messagebox_name) '"ウィンドウの存在を確認できませんでした。"
 
 
         End If
@@ -1410,6 +1428,42 @@ Public Class Mainwindow
     Private Sub txtresume_key_KeyDown(sender As Object, e As KeyEventArgs) Handles txtresume_key.KeyDown
         txtresume_key.Text = e.KeyCode.ToString
         lblkeysforresume.Text = e.KeyCode
+        Label7.Focus()
+
+    End Sub
+
+
+    '■ASH用のホットキー
+    Private Sub txtreset_ash_key_MouseDown(sender As Object, e As EventArgs) Handles txtreset_ash_key.MouseDown
+        txtreset_ash_key.Text = "Set Hotkey..."
+    End Sub
+
+    Private Sub txtreset_ash_key_KeyDown(sender As Object, e As KeyEventArgs) Handles txtreset_ash_key.KeyDown
+        txtreset_ash_key.Text = e.KeyCode.ToString
+        numreset_ash.Value = e.KeyCode
+
+        Label7.Focus()
+
+    End Sub
+
+    Private Sub txtundo_ash_key_MouseDown(sender As Object, e As EventArgs) Handles txtundo_ash_key.MouseDown
+        txtundo_ash_key.Text = "Set Hotkey..."
+    End Sub
+
+    Private Sub txtundo_ash_key_KeyDown(sender As Object, e As KeyEventArgs) Handles txtundo_ash_key.KeyDown
+        txtundo_ash_key.Text = e.KeyCode.ToString
+        numundo_ash.Value = e.KeyCode
+        Label7.Focus()
+
+    End Sub
+
+    Private Sub txtskip_ash_key_MouseDown(sender As Object, e As EventArgs) Handles txtskip_ash_key.MouseDown
+        txtskip_ash_key.Text = "Set Hotkey..."
+    End Sub
+
+    Private Sub txtskip_ash_key_KeyDown(sender As Object, e As KeyEventArgs) Handles txtskip_ash_key.KeyDown
+        txtskip_ash_key.Text = e.KeyCode.ToString
+        numskip_ash.Value = e.KeyCode
         Label7.Focus()
 
     End Sub
@@ -1888,7 +1942,7 @@ Public Class Mainwindow
 
 
                 Catch ex As Exception
-                    MessageBox.Show(ex.ToString)
+                    MessageBox.Show(ex.ToString, messagebox_name)
                 End Try
 
 
@@ -2217,7 +2271,7 @@ Public Class Mainwindow
                             sw.WriteLine("setsplitname " & txtsetsplitname.Text & vbCrLf)
 
                         Catch
-                            MessageBox.Show("error")
+                            MessageBox.Show("error", messagebox_name)
 
 
                         End Try
@@ -2326,9 +2380,11 @@ Public Class Mainwindow
     Private Sub chkshowvideo_CheckedChanged(sender As Object, e As EventArgs) Handles chkshowvideo.CheckedChanged
 
         If chkshowvideo.Checked = True Then
-            chkcur_showvideo.Checked = True
+            lblcur_showvideo.BackColor = Color.FromArgb(68, 0, 2)
+            lblcur_showvideo.Text = "Y"
         Else
-            chkcur_showvideo.Checked = False
+            lblcur_showvideo.BackColor = Color.FromArgb(80, 90, 95)
+            lblcur_showvideo.Text = "N"
         End If
 
 
@@ -2367,7 +2423,7 @@ Public Class Mainwindow
                 txtvideo_pass.Text = ofd.FileName.Replace("""", "")
 
             ElseIf DialogResult.Cancel Then
-                MsgBox(My.Resources.Message.msg42) 'キャンセルされました。
+                MessageBox.Show(My.Resources.Message.msg42, messagebox_name) 'キャンセルされました。
 
                 Continue For '保存処理をふっとばす。
 
@@ -2810,7 +2866,7 @@ Public Class Mainwindow
 
         Else
 
-            MessageBox.Show("サイズは16:9または4:3を入力してください。", "AutoSplit Helper by Image")
+            MessageBox.Show(My.Resources.Message.msg52, messagebox_name)
 
 
         End If
@@ -2872,7 +2928,7 @@ Public Class Mainwindow
         Catch
             cvpreview.Stop()
 
-            MsgBox(My.Resources.Message.msg43) '接続エラー。本体を再起動して下さい。
+            MessageBox.Show(My.Resources.Message.msg43, messagebox_name) '接続エラー。本体を再起動して下さい。
 
         End Try
 
@@ -3057,7 +3113,7 @@ Public Class Mainwindow
                 piccap.Visible = False
                 cvpreview.Start()
 
-                MsgBox(My.Resources.Message.msgb4) '"無効な範囲です。")
+                MessageBox.Show(My.Resources.Message.msgb4, messagebox_name) '"無効な範囲です。")
 
             End Try
 
@@ -3245,7 +3301,7 @@ Public Class Mainwindow
 
         Catch
 
-            MsgBox(My.Resources.Message.msgb7) '"行選択状態でキャプチャして下さい。"
+            MessageBox.Show(My.Resources.Message.msgb7, messagebox_name) '"行選択状態でキャプチャして下さい。"
             Exit Sub
 
 
@@ -3406,7 +3462,7 @@ Public Class Mainwindow
         Dim psnumber As Integer = txtrowscount.Text
 
         If psnumber >= DGtable.Rows.Count - 1 - 1 Then
-            MsgBox("Nothing")
+            MessageBox.Show("Nothing", messagebox_name)
 
         Else
             txtrowscount.Text += 1
@@ -3425,7 +3481,7 @@ Public Class Mainwindow
         Dim psnumber As Integer = txtrowscount.Text
 
         If psnumber <= 0 Then
-            MsgBox("Nothing")
+            MessageBox.Show("Nothing", messagebox_name)
 
         Else
             txtrowscount.Text -= 1
@@ -4761,7 +4817,7 @@ Public Class Mainwindow
         cvpreview_replay.Stop()
         cvpreview_zoom.Stop()
 
-        lbltitlebar.Text = "[OpenCV][" & cmbprofile.SelectedItem & "]" & " AutoSplit Helper by Image " & lblversion.Text
+        lbltitlebar.Text = "[" & cmbprofile.SelectedItem & "]" & " AutoSplit Helper by Image " & lblversion.Text
 
 
     End Sub
@@ -4784,7 +4840,7 @@ Public Class Mainwindow
 
     Private Sub Calibration_intialize()
 
-        lbltitlebar.Text = "[OpenCV][" & cmbprofile.SelectedItem & "]" & " Calibration"
+        lbltitlebar.Text = "[" & cmbprofile.SelectedItem & "]" & " Calibration"
 
         piccamera.Size = New Drawing.Size(numcv_sizex.Value, numcv_sizey.Value)
         gbcalib_m1.Location = New Drawing.Point(piccamera.Location.X, piccamera.Location.Y + numcv_sizey.Value + 5)
@@ -4825,7 +4881,7 @@ Public Class Mainwindow
         btnpreview.Enabled = True
 
         If listcalib_1.Items.Count = 0 Then
-            MsgBox(txtpass_picturefolder.Text & My.Resources.Message.msga1) '"内に画像が存在しません。"
+            MessageBox.Show(txtpass_picturefolder.Text & My.Resources.Message.msga1, messagebox_name) '"内に画像が存在しません。"
 
             Me.Close()
             Exit Sub
@@ -5154,7 +5210,7 @@ Public Class Mainwindow
 
         If numcalib_hand_bright.Value + bright_min <= -256 Then
 
-            MsgBox(My.Resources.Message.msga2) '"範囲外の値を指定しようとしました。値を-215以上にして下さい。"
+            MessageBox.Show(My.Resources.Message.msga2, messagebox_name) '"範囲外の値を指定しようとしました。値を-215以上にして下さい。"
             Exit Sub
 
 
@@ -5217,7 +5273,7 @@ Public Class Mainwindow
 
 
         If numcalib_hand_r.Value + rgb_min <= -256 Or numcalib_hand_g.Value + rgb_min <= -256 Or numcalib_hand_b.Value + rgb_min <= -256 Then
-            MsgBox(My.Resources.Message.msga3) '"範囲外の値を指定しようとしました。値を-250以上にして下さい。"
+            MessageBox.Show(My.Resources.Message.msga3, messagebox_name) '"範囲外の値を指定しようとしました。値を-250以上にして下さい。"
             Exit Sub
         End If
 
@@ -5582,7 +5638,7 @@ Public Class Mainwindow
         Next
 
         txtpass_picturefolder.Text = txtpass_picturefolder.Text & "\resize\"
-        MsgBox("ok.")
+        MessageBox.Show("ok.", messagebox_name)
 
         'PictureBox1.Image.Save(stCurrentDir & "\screenshot\" & psnumber & ".bmp", ImageFormat.Bmp)
 
@@ -6092,7 +6148,7 @@ Public Class Mainwindow
 
     Private WithEvents cvtimer_manualstart As New DispatcherTimer()
 
-    Private WithEvents cvtimer_async As New DispatcherTimer()
+    Private WithEvents cvtimer_ash_hotkey As New DispatcherTimer()
 
     Private tempnumber As Integer = 0
 
@@ -6159,13 +6215,13 @@ Public Class Mainwindow
 
         '■ビデオプレイヤーを表示するかどうか
         If chkshowvideo.Checked = True And Videoplayer.Visible = False Then
-            'MsgBox(My.Resources.Message.msg44) 'ビデオプレイヤーが表示されていません。
+            'MessageBox.Show(My.Resources.Message.msg44) 'ビデオプレイヤーが表示されていません。
             Videoplayer.Show()
 
         End If
 
         If chkshow_text.Checked = True And Textwindow.Visible = False Then
-            'MsgBox("テキストビューワーが表示されていません。") 'ビデオプレイヤーが表示されていません。'★
+            'MessageBox.Show("テキストビューワーが表示されていません。") 'ビデオプレイヤーが表示されていません。'★
             Textwindow.Show()
 
 
@@ -6184,7 +6240,7 @@ Public Class Mainwindow
 
         '■画像フォルダ選択がなされているかどうか
         If txtpass_picturefolder.Text = "" Or txtpass_picturefolder.Text = "フォルダを選択して下さい…" Then '画像フォルダは選択ができた時点で中身は大丈夫…なはず
-            MessageBox.Show(My.Resources.Message.msg5, "AutoSplit Helper by Image",
+            MessageBox.Show(My.Resources.Message.msg5, messagebox_name,
                     MessageBoxButtons.OK) '"画像フォルダ選択がされていません。"
 
             Exit Sub
@@ -6198,7 +6254,7 @@ Public Class Mainwindow
 
             If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\1.bmp") Then
 
-                MsgBox(My.Resources.Message.msg22) '"1.bmpが存在しません。"
+                MessageBox.Show(My.Resources.Message.msg22, messagebox_name) '"1.bmpが存在しません。"
 
                 Exit Sub
 
@@ -6208,7 +6264,7 @@ Public Class Mainwindow
 
             If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\1.bmp") Or Not System.IO.File.Exists(txtpass_picturefolder.Text & "\reset.bmp") Then
 
-                MsgBox(My.Resources.Message.msg23) '"1.bmpもしくはreset.bmpが存在しません。"
+                MessageBox.Show(My.Resources.Message.msg23, messagebox_name) '"1.bmpもしくはreset.bmpが存在しません。"
 
                 Exit Sub
 
@@ -6223,7 +6279,7 @@ Public Class Mainwindow
 
                 If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\loading1.bmp") Then
 
-                    MsgBox(My.Resources.Message.msg40) '"loading.bmpが存在しません。"
+                    MessageBox.Show(My.Resources.Message.msg40, messagebox_name) '"loading.bmpが存在しません。"
 
                     Exit Sub
 
@@ -6233,7 +6289,7 @@ Public Class Mainwindow
 
                 If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\loading2.bmp") Then
 
-                    MsgBox(My.Resources.Message.msg40) '"loading.bmpが存在しません。"
+                    MessageBox.Show(My.Resources.Message.msg40, messagebox_name) '"loading.bmpが存在しません。"
 
                     Exit Sub
 
@@ -6243,7 +6299,7 @@ Public Class Mainwindow
 
                 If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\loading3.bmp") Then
 
-                    MsgBox(My.Resources.Message.msg40) '"loading.bmpが存在しません。"
+                    MessageBox.Show(My.Resources.Message.msg40, messagebox_name) '"loading.bmpが存在しません。"
 
                     Exit Sub
 
@@ -6253,7 +6309,7 @@ Public Class Mainwindow
 
                 If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\loading4.bmp") Then
 
-                    MsgBox(My.Resources.Message.msg40) '"loading.bmpが存在しません。"
+                    MessageBox.Show(My.Resources.Message.msg40, messagebox_name) '"loading.bmpが存在しません。"
 
                     Exit Sub
 
@@ -6263,7 +6319,7 @@ Public Class Mainwindow
 
                 If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\loading5.bmp") Then
 
-                    MsgBox(My.Resources.Message.msg40) '"loading.bmpが存在しません。"
+                    MessageBox.Show(My.Resources.Message.msg40, messagebox_name) '"loading.bmpが存在しません。"
 
                     Exit Sub
 
@@ -6273,7 +6329,7 @@ Public Class Mainwindow
 
                 If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\loading6.bmp") Then
 
-                    MsgBox(My.Resources.Message.msg40) '"loading.bmpが存在しません。"
+                    MessageBox.Show(My.Resources.Message.msg40, messagebox_name) '"loading.bmpが存在しません。"
 
                     Exit Sub
 
@@ -6283,7 +6339,7 @@ Public Class Mainwindow
 
                 If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\loading7.bmp") Then
 
-                    MsgBox(My.Resources.Message.msg40) '"loading.bmpが存在しません。"
+                    MessageBox.Show(My.Resources.Message.msg40, messagebox_name) '"loading.bmpが存在しません。"
 
                     Exit Sub
 
@@ -6293,7 +6349,7 @@ Public Class Mainwindow
 
                 If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\loading8.bmp") Then
 
-                    MsgBox(My.Resources.Message.msg40) '"loading.bmpが存在しません。"
+                    MessageBox.Show(My.Resources.Message.msg40, messagebox_name) '"loading.bmpが存在しません。"
 
                     Exit Sub
 
@@ -6303,7 +6359,7 @@ Public Class Mainwindow
 
                 If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\loading9.bmp") Then
 
-                    MsgBox(My.Resources.Message.msg40) '"loading.bmpが存在しません。"
+                    MessageBox.Show(My.Resources.Message.msg40, messagebox_name) '"loading.bmpが存在しません。"
 
                     Exit Sub
 
@@ -6313,7 +6369,7 @@ Public Class Mainwindow
 
                 If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\loading10.bmp") Then
 
-                    MsgBox(My.Resources.Message.msg40) '"loading.bmpが存在しません。"
+                    MessageBox.Show(My.Resources.Message.msg40, messagebox_name) '"loading.bmpが存在しません。"
 
                     Exit Sub
 
@@ -6337,7 +6393,7 @@ Public Class Mainwindow
 
             Else
                 '数字以外が入っている
-                MsgBox(My.Resources.Message.msg45) 'Time列に数字以外の文字が入っています。
+                MessageBox.Show(My.Resources.Message.msg45, messagebox_name) 'Time列に数字以外の文字が入っています。
 
 
                 Exit Sub
@@ -6426,7 +6482,7 @@ Public Class Mainwindow
         '→FileCount_bmponlyは、全てのbmpファイルからreset/loadingxx.bmpを取り除いた数になる。
 
 
-        'MsgBox("ファイル数:" & FileCount & vbCrLf & "除リセット、ロード:" & FileCount_numberonly & vbCrLf & "行数:" & TableCount)
+        'MessageBox.Show("ファイル数:" & FileCount & vbCrLf & "除リセット、ロード:" & FileCount_numberonly & vbCrLf & "行数:" & TableCount)
 
         If chkcv_loop.Checked = True Then 'ファイル数を考慮する必要なし。
 
@@ -6578,7 +6634,7 @@ Public Class Mainwindow
             cvtimer_loaddelay9.Interval = New TimeSpan(0, 0, 0, 0, numcv_interval.Value)
             cvtimer_loaddelay10.Interval = New TimeSpan(0, 0, 0, 0, numcv_interval.Value)
 
-            cvtimer_async.Interval = New TimeSpan(0, 0, 0, 0, numcv_interval.Value)
+            cvtimer_ash_hotkey.Interval = New TimeSpan(0, 0, 0, 0, 100)
 
 
             lblcv_nowmaxval.Text = 0
@@ -7112,7 +7168,7 @@ Public Class Mainwindow
 
 
                 cvtimer.Start()
-                cvtimer_async.Start()
+                cvtimer_ash_hotkey.Start()
 
                 txtstate.Text = My.Resources.Message.msg30 '"画像認識中"
 
@@ -7124,7 +7180,7 @@ Public Class Mainwindow
                 If chkvideo_manualstart.Checked = False Then
                     Console.WriteLine("ビデオ再生あり、かつ自動スタート")
                     cvtimer.Start()
-                    cvtimer_async.Start()
+                    cvtimer_ash_hotkey.Start()
 
                     txtstate.Text = My.Resources.Message.msg30 '"画像認識中"
 
@@ -7155,14 +7211,14 @@ Public Class Mainwindow
 
             'Catch
 
-            '    MsgBox("Error")
+            '    MessageBox.Show("Error")
 
             'End Try
 
 
         Else
 
-            MessageBox.Show("サイズは16:9または4:3を入力してください。", "AutoSplit Helper by Image")
+            MessageBox.Show(My.Resources.Message.msg52, messagebox_name) 'サイズは16:9または4:3の比で入力してください。
 
 
         End If
@@ -7188,60 +7244,40 @@ Public Class Mainwindow
     Private async_load9_onoff = 0
     Private async_load10_onoff = 0
 
+    Private Sub cvtimer_ash_hotkey_Tick(sender As Object, e As EventArgs) Handles cvtimer_ash_hotkey.Tick '★
 
-    Private Sub cvtimer_async_Tick(sender As Object, e As EventArgs) Handles cvtimer_async.Tick '★
-        '■プレビュー画面の更新
-        NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
+        If GetKeyPress(numreset_ash.Value) Then
 
-        If async_split_onoff = 1 Then
-            Async_split()
+            Console.WriteLine("ASH_reset")
+
+            btncv_first.PerformClick()
+            timash_hotkey_sleep.Enabled = True
+            cvtimer_ash_hotkey.Stop()
+
+        ElseIf GetKeyPress(numundo_ash.Value) Then
+
+            Console.WriteLine("ASH_undo")
+
+            btncv_back.PerformClick()
+            timash_hotkey_sleep.Enabled = True
+            cvtimer_ash_hotkey.Stop()
+
+        ElseIf GetKeyPress(numskip_ash.Value) Then
+
+            Console.WriteLine("ASH_skip")
+
+            btncv_forward.PerformClick()
+            timash_hotkey_sleep.Enabled = True
+            cvtimer_ash_hotkey.Stop()
+
         End If
 
-        If async_reset_onoff = 1 Then
-            Async_reset()
-        End If
+    End Sub
 
-        If async_load1_onoff = 1 Then
-            Async_load1()
-        End If
+    Private Sub timash_hotkey_sleep_Tick(sender As Object, e As EventArgs) Handles timash_hotkey_sleep.Tick
 
-        If async_load2_onoff = 1 Then
-            Async_load2()
-        End If
-
-        If async_load3_onoff = 1 Then
-            Async_load3()
-        End If
-
-        If async_load4_onoff = 1 Then
-            Async_load4()
-        End If
-
-        If async_load5_onoff = 1 Then
-            Async_load5()
-        End If
-
-        If async_load6_onoff = 1 Then
-            Async_load6()
-        End If
-
-        If async_load7_onoff = 1 Then
-            Async_load7()
-        End If
-
-        If async_load8_onoff = 1 Then
-            Async_load8()
-        End If
-
-        If async_load9_onoff = 1 Then
-            Async_load9()
-        End If
-
-        If async_load10_onoff = 1 Then
-            Async_load10()
-        End If
-
-
+        cvtimer_ash_hotkey.Start()
+        timash_hotkey_sleep.Enabled = False
 
     End Sub
 
@@ -7286,7 +7322,6 @@ Public Class Mainwindow
 
 
     End Sub
-
 
     Private Async Sub Async_load2() '★
 
@@ -7429,7 +7464,7 @@ Public Class Mainwindow
 
             '■監視タイマースタート
             cvtimer.Start()
-            cvtimer_async.Start()
+            cvtimer_ash_hotkey.Start()
             txtstate.Text = My.Resources.Message.msg30 '"画像認識中"
 
             cvtimer_manualstart.Stop()
@@ -7449,8 +7484,57 @@ Public Class Mainwindow
     '■監視中■■■■■■■■■■■■■■■■■■■■■■■■■■■■
     Private Sub OpenCV_Monitor_Tick(sender As Object, e As EventArgs) Handles cvtimer.Tick
 
-
         Try
+            '■プレビュー画面の更新
+            NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
+
+            If async_split_onoff = 1 Then
+                Async_split()
+            End If
+
+            If async_reset_onoff = 1 Then
+                Async_reset()
+            End If
+
+            If async_load1_onoff = 1 Then
+                Async_load1()
+            End If
+
+            If async_load2_onoff = 1 Then
+                Async_load2()
+            End If
+
+            If async_load3_onoff = 1 Then
+                Async_load3()
+            End If
+
+            If async_load4_onoff = 1 Then
+                Async_load4()
+            End If
+
+            If async_load5_onoff = 1 Then
+                Async_load5()
+            End If
+
+            If async_load6_onoff = 1 Then
+                Async_load6()
+            End If
+
+            If async_load7_onoff = 1 Then
+                Async_load7()
+            End If
+
+            If async_load8_onoff = 1 Then
+                Async_load8()
+            End If
+
+            If async_load9_onoff = 1 Then
+                Async_load9()
+            End If
+
+            If async_load10_onoff = 1 Then
+                Async_load10()
+            End If
 
             ''■プレビュー画面の更新（表示のみ）
             picipl_cap.ImageIpl = frame
@@ -8673,7 +8757,7 @@ Public Class Mainwindow
 
 
         Catch
-            MsgBox(My.Resources.Message.msg46) '仮想カメラの接続エラー。仮想カメラの再接続や本体の再起動を試してみて下さい。
+            MessageBox.Show(My.Resources.Message.msg46, messagebox_name) '仮想カメラの接続エラー。仮想カメラの再接続や本体の再起動を試してみて下さい。
 
             btncv_stop.PerformClick()
 
@@ -8805,7 +8889,7 @@ Public Class Mainwindow
 
                 show_finish()
                 'btncv_stop.PerformClick()
-                'MsgBox("指定回数ループしました。")
+                'MessageBox.Show("指定回数ループしました。")
             End If
         End If
 
@@ -10427,7 +10511,7 @@ Public Class Mainwindow
         cvtimer_change.Stop()
         cvtimer_changergb.Stop()
         cvtimer.Stop()
-        cvtimer_async.Stop()
+        cvtimer_ash_hotkey.Stop()
 
         cvsleep_split.Stop()
         cvtimer_loadremover1.Stop()
@@ -10481,7 +10565,7 @@ Public Class Mainwindow
         cvtimer_change.Stop()
         cvtimer_changergb.Stop()
         cvtimer.Stop()
-        cvtimer_async.Stop()
+        cvtimer_ash_hotkey.Stop()
         cvtimer_loadremover1.Stop()
         cvtimer_loadremover2.Stop()
         cvtimer_loadremover3.Stop()
@@ -10580,7 +10664,7 @@ Public Class Mainwindow
         '監視範囲の更新#################################################################################################
         If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\" & lblcv_lap.Text - 1 & ".bmp") Then
 
-            MessageBox.Show(My.Resources.Message.msg7, "AutoSplit Helper by Image",
+            MessageBox.Show(My.Resources.Message.msg7, messagebox_name,
                    MessageBoxButtons.OK) '"画像が存在しません。"
 
         Else
@@ -10628,7 +10712,7 @@ Public Class Mainwindow
 
 
                         Catch ex As Exception
-                            MessageBox.Show(ex.ToString)
+                            MessageBox.Show(ex.ToString, messagebox_name)
                         End Try
 
                     End If
@@ -10838,7 +10922,7 @@ Public Class Mainwindow
         '監視範囲の更新#################################################################################################
         If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\" & lblcv_lap.Text + 1 & ".bmp") Then
 
-            MessageBox.Show(My.Resources.Message.msg7, "AutoSplit Helper by Image",
+            MessageBox.Show(My.Resources.Message.msg7, messagebox_name,
                    MessageBoxButtons.OK) '"画像が存在しません。"
 
         Else
@@ -10883,7 +10967,7 @@ Public Class Mainwindow
 
                         Catch ex As Exception
 
-                            MessageBox.Show(ex.ToString)
+                            MessageBox.Show(ex.ToString, messagebox_name)
 
                         End Try
 
@@ -11087,7 +11171,7 @@ Public Class Mainwindow
         '監視範囲の更新#################################################################################################
         If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\" & 1 & ".bmp") Then
 
-            MessageBox.Show(My.Resources.Message.msg7, "AutoSplit Helper by Image",
+            MessageBox.Show(My.Resources.Message.msg7, messagebox_name,
                    MessageBoxButtons.OK) '"画像が存在しません。"
         Else
 
@@ -11122,7 +11206,7 @@ Public Class Mainwindow
 
 
                         Catch ex As Exception
-                            MessageBox.Show(ex.ToString)
+                            MessageBox.Show(ex.ToString, messagebox_name)
                         End Try
 
 
@@ -11454,7 +11538,7 @@ Public Class Mainwindow
 
         ' 'エラーチェックをしたので、このまま通過していいかどうかを判別。################################################################
         If errorcount1 <> 0 Then
-            MessageBox.Show(My.Resources.Message.msg14, "AutoSplit Helper by Image")
+            MessageBox.Show(My.Resources.Message.msg14, messagebox_name)
             '"Settingタブの表に空欄、もしくはコメント列ではない箇所に数字以外が存在するようです。適切に入力後終了してください。また、最終行の空欄を削除してみてください。"
             DGtable.AllowUserToAddRows = True
 
@@ -11501,7 +11585,7 @@ Public Class Mainwindow
 
         ' 'エラーチェックをしたので、このまま通過していいかどうかを判別。################################################################
         If errorcount2 <> 0 Then
-            MessageBox.Show(My.Resources.Message.msg15, "AutoSplit Helper by Image") '
+            MessageBox.Show(My.Resources.Message.msg15, messagebox_name) '
             '"Window Positionタブの表に空欄があるようです。入力後終了してください。"
             dgv2_template.AllowUserToAddRows = True
             e.Cancel = True
@@ -11814,7 +11898,7 @@ Public Class Mainwindow
 
 
         If errorcount <> 0 Then
-            MessageBox.Show(My.Resources.Message.msg14, "AutoSplit Helper by Image")
+            MessageBox.Show(My.Resources.Message.msg14, messagebox_name)
             '"Settingタブの表に空欄、もしくはコメント列ではない箇所に数字以外が存在するようです。適切に入力後終了してください。また、最終行の空欄を削除してみてください"
         Else
             Me.Close()
@@ -11875,7 +11959,7 @@ Public Class Mainwindow
 
 
 
-        MessageBox.Show("Saved.", "AutoSplit Helper by Image")
+        MessageBox.Show("Saved.", messagebox_name)
 
 
 
@@ -11918,7 +12002,7 @@ Public Class Mainwindow
     Private Sub btndeleteprofile_Click(sender As Object, e As EventArgs) Handles btndeleteprofile.Click
 
         If cmbprofile.SelectedItem = "default" Then
-            MsgBox(My.Resources.Message.msg47) 'defaultは削除できません。
+            MessageBox.Show(My.Resources.Message.msg47, messagebox_name) 'defaultは削除できません。
 
             Exit Sub
         End If
@@ -11945,7 +12029,7 @@ Public Class Mainwindow
                 cmbprofile.SelectedIndex = 0 '"default"
 
             Catch
-                MsgBox(My.Resources.Message.msg26 & vbCrLf & My.Resources.Message.msg27)
+                MessageBox.Show(My.Resources.Message.msg26 & vbCrLf & My.Resources.Message.msg27, messagebox_name)
                 '"csvファイルor画像フォルダの消去に失敗しました。" "※1度でも監視を行った場合、再起動の後プロファイルを削除して下さい。"
             End Try
 
@@ -11970,7 +12054,7 @@ Public Class Mainwindow
 
                 btnstartopencv.Enabled = False
 
-                btnconnect_camera.BackColor = SystemColors.Control
+                btnconnect_camera.BackColor = Color.FromArgb(50, 52, 54)
 
 
 
@@ -12050,56 +12134,66 @@ Public Class Mainwindow
             chkalt_resume.Checked = txtloadprofile.Lines(59)
             txtresume_key.Text = txtloadprofile.Lines(60)
             lblkeysforresume.Text = txtloadprofile.Lines(61)
-            chkundoskip.Checked = txtloadprofile.Lines(62)
-            chknamedpipe.Checked = txtloadprofile.Lines(63)
-            numpresstime.Value = txtloadprofile.Lines(64)
+            txtreset_ash_key.Text = txtloadprofile.Lines(62)
+            numreset_ash.Value = txtloadprofile.Lines(63)
+            txtundo_ash_key.Text = txtloadprofile.Lines(64)
+            numundo_ash.Value = txtloadprofile.Lines(65)
+            txtskip_ash_key.Text = txtloadprofile.Lines(66)
+            numskip_ash.Value = txtloadprofile.Lines(67)
+            chkundoskip.Checked = txtloadprofile.Lines(68)
+            chknamedpipe.Checked = txtloadprofile.Lines(69)
+            numpresstime.Value = txtloadprofile.Lines(70)
 
-            chkload1.Checked = txtloadprofile.Lines(67)
-            chkload2.Checked = txtloadprofile.Lines(68)
-            chkload3.Checked = txtloadprofile.Lines(69)
-            chkload4.Checked = txtloadprofile.Lines(70)
-            chkload5.Checked = txtloadprofile.Lines(71)
-            chkload6.Checked = txtloadprofile.Lines(72)
-            chkload7.Checked = txtloadprofile.Lines(73)
-            chkload8.Checked = txtloadprofile.Lines(74)
-            chkload9.Checked = txtloadprofile.Lines(75)
-            chkload10.Checked = txtloadprofile.Lines(76)
-            numload_rate1.Value = txtloadprofile.Lines(77)
-            numload_rate2.Value = txtloadprofile.Lines(78)
-            numload_rate3.Value = txtloadprofile.Lines(79)
-            numload_rate4.Value = txtloadprofile.Lines(80)
-            numload_rate5.Value = txtloadprofile.Lines(81)
-            numload_rate6.Value = txtloadprofile.Lines(82)
-            numload_rate7.Value = txtloadprofile.Lines(83)
-            numload_rate8.Value = txtloadprofile.Lines(84)
-            numload_rate9.Value = txtloadprofile.Lines(85)
-            numload_rate10.Value = txtloadprofile.Lines(86)
-            numload_delay1.Value = txtloadprofile.Lines(87)
-            numload_delay2.Value = txtloadprofile.Lines(88)
-            numload_delay3.Value = txtloadprofile.Lines(89)
-            numload_delay4.Value = txtloadprofile.Lines(90)
-            numload_delay5.Value = txtloadprofile.Lines(91)
-            numload_delay6.Value = txtloadprofile.Lines(92)
-            numload_delay7.Value = txtloadprofile.Lines(93)
-            numload_delay8.Value = txtloadprofile.Lines(94)
-            numload_delay9.Value = txtloadprofile.Lines(95)
-            numload_delay10.Value = txtloadprofile.Lines(96)
+            chkload1.Checked = txtloadprofile.Lines(73)
+            chkload2.Checked = txtloadprofile.Lines(74)
+            chkload3.Checked = txtloadprofile.Lines(75)
+            chkload4.Checked = txtloadprofile.Lines(76)
+            chkload5.Checked = txtloadprofile.Lines(77)
+            chkload6.Checked = txtloadprofile.Lines(78)
+            chkload7.Checked = txtloadprofile.Lines(79)
+            chkload8.Checked = txtloadprofile.Lines(80)
+            chkload9.Checked = txtloadprofile.Lines(81)
+            chkload10.Checked = txtloadprofile.Lines(82)
+            numload_rate1.Value = txtloadprofile.Lines(83)
+            numload_rate2.Value = txtloadprofile.Lines(84)
+            numload_rate3.Value = txtloadprofile.Lines(85)
+            numload_rate4.Value = txtloadprofile.Lines(86)
+            numload_rate5.Value = txtloadprofile.Lines(87)
+            numload_rate6.Value = txtloadprofile.Lines(88)
+            numload_rate7.Value = txtloadprofile.Lines(89)
+            numload_rate8.Value = txtloadprofile.Lines(90)
+            numload_rate9.Value = txtloadprofile.Lines(91)
+            numload_rate10.Value = txtloadprofile.Lines(92)
+            numload_delay1.Value = txtloadprofile.Lines(93)
+            numload_delay2.Value = txtloadprofile.Lines(94)
+            numload_delay3.Value = txtloadprofile.Lines(95)
+            numload_delay4.Value = txtloadprofile.Lines(96)
+            numload_delay5.Value = txtloadprofile.Lines(97)
+            numload_delay6.Value = txtloadprofile.Lines(98)
+            numload_delay7.Value = txtloadprofile.Lines(99)
+            numload_delay8.Value = txtloadprofile.Lines(100)
+            numload_delay9.Value = txtloadprofile.Lines(101)
+            numload_delay10.Value = txtloadprofile.Lines(102)
 
-            numgraph_first.Value = txtloadprofile.Lines(99)
-            chkrename_livesplit.Checked = txtloadprofile.Lines(100)
-            numloopcount.Value = txtloadprofile.Lines(101)
+            numgraph_first.Value = txtloadprofile.Lines(105)
+            chkrename_livesplit.Checked = txtloadprofile.Lines(106)
+            numloopcount.Value = txtloadprofile.Lines(107)
 
-            chkshowvideo.Checked = txtloadprofile.Lines(104)
-            chkvideo_autoseek.Checked = txtloadprofile.Lines(105)
-            chkvideo_manualstart.Checked = txtloadprofile.Lines(106)
-            txtvideo_pass.Text = txtloadprofile.Lines(107)
-            txtvideo_startat.Text = txtloadprofile.Lines(108)
-            numvideo_sizex.Value = txtloadprofile.Lines(109)
-            numvideo_sizey.Value = txtloadprofile.Lines(110)
-            chkvideo_showwinvideo.Checked = txtloadprofile.Lines(111)
-            numwin_locx.Value = txtloadprofile.Lines(112)
-            numwin_locy.Value = txtloadprofile.Lines(113)
-            numwin_interval.Value = txtloadprofile.Lines(114)
+            chkshowvideo.Checked = txtloadprofile.Lines(110)
+            chkvideo_autoseek.Checked = txtloadprofile.Lines(111)
+            chkvideo_manualstart.Checked = txtloadprofile.Lines(112)
+            txtvideo_pass.Text = txtloadprofile.Lines(113)
+            txtvideo_startat.Text = txtloadprofile.Lines(114)
+            numvideo_sizex.Value = txtloadprofile.Lines(115)
+            numvideo_sizey.Value = txtloadprofile.Lines(116)
+            chkvideo_showwinvideo.Checked = txtloadprofile.Lines(117)
+            numwin_locx.Value = txtloadprofile.Lines(118)
+            numwin_locy.Value = txtloadprofile.Lines(119)
+            numwin_interval.Value = txtloadprofile.Lines(120)
+
+            chkshow_text.Checked = txtloadprofile.Lines(123)
+            numtextwindow_sizex.Value = txtloadprofile.Lines(124)
+            numtextwindow_sizey.Value = txtloadprofile.Lines(125)
 
 
 
@@ -12133,44 +12227,44 @@ Public Class Mainwindow
 
             numprofile.Value = cmbprofile.SelectedIndex '選択保存用
 
-            lbltitlebar.Text = "[OpenCV][" & cmbprofile.SelectedItem & "]" & " AutoSplit Helper by Image " & lblversion.Text
+            lbltitlebar.Text = "[" & cmbprofile.SelectedItem & "]" & " AutoSplit Helper by Image " & lblversion.Text
 
 
 
             '■Current Settingに反映
 
             If chkcv_monitor.Checked = True Then
-                lblcur_split.BackColor = Color.Maroon
+                lblcur_split.BackColor = Color.FromArgb(68, 0, 2)
             Else
-                lblcur_split.BackColor = Color.DimGray
+                lblcur_split.BackColor = Color.FromArgb(80, 90, 95)
 
             End If
 
 
             If chkcv_resetonoff.Checked = True Then
-                lblcur_reset.BackColor = Color.Maroon
+                lblcur_reset.BackColor = Color.FromArgb(68, 0, 2)
             Else
-                lblcur_reset.BackColor = Color.DimGray
+                lblcur_reset.BackColor = Color.FromArgb(80, 90, 95)
 
             End If
 
 
 
             If chkcv_loop.Checked = True Then
-                lblcur_loop.BackColor = Color.Maroon
-                lblcur_loopcount.BackColor = Color.Maroon
+                lblcur_loop.BackColor = Color.FromArgb(68, 0, 2)
+                lblcur_loopcount.BackColor = Color.FromArgb(68, 0, 2)
 
             Else
-                lblcur_loop.BackColor = Color.DimGray
-                lblcur_loopcount.BackColor = Color.DimGray
+                lblcur_loop.BackColor = Color.FromArgb(80, 90, 95)
+                lblcur_loopcount.BackColor = Color.FromArgb(80, 90, 95)
 
             End If
 
 
             If chkcv_loadremover.Checked = True Then
-                lblcur_load.BackColor = Color.Maroon
+                lblcur_load.BackColor = Color.FromArgb(68, 0, 2)
             Else
-                lblcur_load.BackColor = Color.DimGray
+                lblcur_load.BackColor = Color.FromArgb(80, 90, 95)
 
             End If
 
@@ -12180,6 +12274,22 @@ Public Class Mainwindow
             ElseIf chkvideo_manualstart.Checked = False Then
                 txtvideo_startat.Enabled = False
 
+            End If
+
+            If chkshowvideo.Checked = True Then
+                lblcur_showvideo.BackColor = Color.FromArgb(68, 0, 2)
+                lblcur_showvideo.Text = "Y"
+            Else
+                lblcur_showvideo.BackColor = Color.FromArgb(80, 90, 95)
+                lblcur_showvideo.Text = "N"
+            End If
+
+            If chkshow_text.Checked = True Then
+                lblcur_showtextwindow.BackColor = Color.FromArgb(68, 0, 2)
+                lblcur_showtextwindow.Text = "Y"
+            Else
+                lblcur_showtextwindow.BackColor = Color.FromArgb(80, 90, 95)
+                lblcur_showtextwindow.Text = "N"
             End If
 
 
@@ -12277,7 +12387,7 @@ Public Class Mainwindow
         End If
 
         If System.IO.File.Exists("./profile/" & inputText & "/data.csv") Then '★
-            MessageBox.Show(inputText & My.Resources.Message.msg20, "AutoSplit Helper by Image") '"は既に存在しています。"
+            MessageBox.Show(inputText & My.Resources.Message.msg20, messagebox_name) '"は既に存在しています。"
         Else
 
             ' フォルダ (ディレクトリ) を作成する
@@ -12412,9 +12522,9 @@ Public Class Mainwindow
             '■リセットの部分の背景変更★
             DGtable.Rows(0).DefaultCellStyle.BackColor = Color.FromArgb(58, 16, 16) 'Color.MistyRose
 
-            lbltitlebar.Text = "[OpenCV][" & cmbprofile.SelectedItem & "]" & " AutoSplit Helper by Image " & lblversion.Text
+            lbltitlebar.Text = "[" & cmbprofile.SelectedItem & "]" & " AutoSplit Helper by Image " & lblversion.Text
 
-            MsgBox("Created.")
+            MessageBox.Show("Created.", messagebox_name)
 
 
 
@@ -12519,7 +12629,7 @@ Public Class Mainwindow
         ElseIf mode = "child" Then
             title = txt2_windowtitle2.Text
         Else
-            MsgBox("ぱらめ異常")
+            MessageBox.Show("ぱらめ異常", messagebox_name)
             Exit Sub
         End If
 
@@ -12530,7 +12640,7 @@ Public Class Mainwindow
             ElseIf mode = "child" Then
                 Me.list2_hwnd2.Items.Add(hwnd.ToString)
             Else
-                MsgBox("ぱらめ異常")
+                MessageBox.Show("ぱらめ異常", messagebox_name)
                 Exit Sub
             End If
         End If
@@ -12645,7 +12755,7 @@ Public Class Mainwindow
         If dgv.Columns(e.ColumnIndex).Name = "applysize" Then
 
             If list2_alltitle.SelectedItems.Count <= 0 Then
-                MsgBox(My.Resources.Message.msg48) 'リストからウィンドウタイトルを1つ選択してください。
+                MessageBox.Show(My.Resources.Message.msg48, messagebox_name) 'リストからウィンドウタイトルを1つ選択してください。
             Else
 
                 Dim count As Integer = 0
@@ -12654,12 +12764,12 @@ Public Class Mainwindow
 
                     If dgv2_template(k, e.RowIndex).Value Is Nothing Then
                         count += 1
-                        MsgBox(My.Resources.Message.msg28) '"空欄が有ります。"
+                        MessageBox.Show(My.Resources.Message.msg28, messagebox_name) '"空欄が有ります。"
                         Exit For
 
                     ElseIf System.Text.RegularExpressions.Regex.IsMatch(dgv2_template(k, e.RowIndex).Value, "[^-?\d]+") Then
                         count += 1
-                        MsgBox(My.Resources.Message.msg29) '"数字以外の文字は入力できません。"
+                        MessageBox.Show(My.Resources.Message.msg29, messagebox_name) '"数字以外の文字は入力できません。"
                         Exit For
 
                     End If
@@ -12753,7 +12863,7 @@ Public Class Mainwindow
         Catch
             timlockwindow.Enabled = False
             chklockwindow.Checked = False
-            MessageBox.Show("ハンドルの取得がされていません")
+            MessageBox.Show(My.Resources.Message.msg53, messagebox_name) 'ハンドルの取得がされていません
         End Try
 
     End Sub
@@ -12943,7 +13053,7 @@ Public Class Mainwindow
 
                 Catch
 
-                    MessageBox.Show("End")
+                    MessageBox.Show(My.Resources.Message.msg51, messagebox_name)
 
                 End Try
 
@@ -12980,7 +13090,7 @@ Public Class Mainwindow
 
             SetWindowText(hWnd, txtrenameapp.Text)
         Else
-            MsgBox(My.Resources.Message.msg49) '見つかりませんでした。
+            MessageBox.Show(My.Resources.Message.msg49, messagebox_name) '見つかりませんでした。
 
         End If
 
@@ -13083,7 +13193,7 @@ Public Class Mainwindow
 
 
         lbllivesplit_state.Text = livesplit_state
-        lbltitlebar.Text = "[OpenCV][" & cmbprofile.SelectedItem & "]" & " AutoSplit Helper by Image " & lblversion.Text
+        lbltitlebar.Text = "[" & cmbprofile.SelectedItem & "]" & " AutoSplit Helper by Image " & lblversion.Text
 
     End Sub
 
@@ -13110,7 +13220,7 @@ Public Class Mainwindow
             cv_preview()
 
         Else
-            MsgBox(My.Resources.Message.msg50) '仮想カメラとの接続を行って下さい。
+            MessageBox.Show(My.Resources.Message.msg50, messagebox_name) '仮想カメラとの接続を行って下さい。
 
 
         End If
@@ -13122,7 +13232,7 @@ Public Class Mainwindow
             ShowCalibration()
 
         Else
-            MsgBox(My.Resources.Message.msg50) '仮想カメラとの接続を行って下さい。
+            MessageBox.Show(My.Resources.Message.msg50, messagebox_name) '仮想カメラとの接続を行って下さい。
 
         End If
 
@@ -13243,6 +13353,47 @@ Public Class Mainwindow
         TabControl1.SelectedIndex = 5
     End Sub
 
+    Private Sub UploadTheCurrentProfileUToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UploadTheCurrentProfileUToolStripMenuItem.Click
+        dialog_sharetemplate.Show()
+
+    End Sub
+
+    Private Sub chkshow_text_CheckedChanged(sender As Object, e As EventArgs) Handles chkshow_text.CheckedChanged
+
+        If chkshow_text.Checked = True Then
+            lblcur_showtextwindow.BackColor = Color.FromArgb(68, 0, 2)
+            lblcur_showtextwindow.Text = "Y"
+        Else
+            lblcur_showtextwindow.BackColor = Color.FromArgb(80, 90, 95)
+            lblcur_showtextwindow.Text = "N"
+        End If
+
+    End Sub
+
+    Private Sub txtresume_key_MouseDown(sender As Object, e As MouseEventArgs) Handles txtresume_key.MouseDown
+
+    End Sub
+
+    Private Sub txtpause_key_MouseDown(sender As Object, e As MouseEventArgs) Handles txtpause_key.MouseDown
+
+    End Sub
+
+    Private Sub txtskip_key_MouseDown(sender As Object, e As MouseEventArgs) Handles txtskip_key.MouseDown
+
+    End Sub
+
+    Private Sub txtreset_key_MouseDown(sender As Object, e As MouseEventArgs) Handles txtreset_key.MouseDown
+
+    End Sub
+
+    Private Sub txtundo_key_MouseDown(sender As Object, e As MouseEventArgs) Handles txtundo_key.MouseDown
+
+    End Sub
+
+    Private Sub btncur_showtext_Click(sender As Object, e As EventArgs) Handles btncur_showtext.Click
+        Textwindow.Show()
+    End Sub
+
 
 
     Private Sub btnshow_chart_Click(sender As Object, e As EventArgs) Handles btnshow_chart.Click
@@ -13255,7 +13406,7 @@ Public Class Mainwindow
 
 
     'Arrayprofileの作成はここ★
-    Private arrayprofile(114) As String
+    Private arrayprofile(125) As String
     Private Sub Createarrayprofile()
 
         arrayprofile = New String() {
@@ -13321,6 +13472,12 @@ CInt(chkctrl_resume.Checked),
 CInt(chkalt_resume.Checked),
 txtresume_key.Text,
 lblkeysforresume.Text,
+txtreset_ash_key.Text,
+numreset_ash.Value,
+txtundo_ash_key.Text,
+numundo_ash.Value,
+txtskip_ash_key.Text,
+numskip_ash.Value,
 CInt(chkundoskip.Checked),
 CInt(chknamedpipe.Checked),
 numpresstime.Value,
@@ -13373,7 +13530,12 @@ numvideo_sizey.Value,
 CInt(chkvideo_showwinvideo.Checked),
 numwin_locx.Value,
 numwin_locy.Value,
-numwin_interval.Value
+numwin_interval.Value,
+"-",
+"##########Textwindow##########",
+CInt(chkshow_text.Checked),
+numtextwindow_sizex.Value,
+numtextwindow_sizey.Value
 }
 
     End Sub
@@ -13463,7 +13625,7 @@ numwin_interval.Value
 
         TabControl1.SelectedIndex = 0
 
-        lbltitlebar.Text = "[OpenCV][" & cmbprofile.SelectedItem & "]" & " AutoSplit Helper by Image " & lblversion.Text
+        lbltitlebar.Text = "[" & cmbprofile.SelectedItem & "]" & " AutoSplit Helper by Image " & lblversion.Text
 
 
     End Sub

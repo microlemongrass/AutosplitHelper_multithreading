@@ -1,0 +1,114 @@
+﻿Imports System.Windows.Forms
+Imports Microsoft.Win32
+
+Public Class dialog_sharetemplate
+
+    '■レジストリの書き換え。
+    Private Const FEATURE_BROWSER_EMULATION As String = "Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BROWSER_EMULATION"
+
+    Private regkey_emu As RegistryKey = Registry.CurrentUser.CreateSubKey(FEATURE_BROWSER_EMULATION)
+    Private process_name As String = (Process.GetCurrentProcess.ProcessName + ".exe")
+
+
+
+
+
+
+    Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK_Button.Click
+        Me.DialogResult = System.Windows.Forms.DialogResult.OK
+
+        If System.IO.Directory.Exists("./output/" & txtshare_profilename.Text) Then
+            MessageBox.Show(My.Resources.Message.msg51, Mainwindow.messagebox_name) '"フォルダが既に存在しています。"
+
+        Else
+            System.IO.Directory.CreateDirectory("./output/" & txtshare_profilename.Text) '大元
+            System.IO.Directory.CreateDirectory("./output/" & txtshare_profilename.Text & "/picture") '画像フォルダ
+            System.IO.Directory.CreateDirectory("./output/" & txtshare_profilename.Text & "/text") 'テキストフォルダ
+
+            'info.txt作成
+            Dim sw As New System.IO.StreamWriter("./output/" & txtshare_profilename.Text & "/info.txt", False, System.Text.Encoding.GetEncoding("shift_jis"))
+
+            sw.Write(txtshare_info.Text)
+
+            sw.Close()
+
+            My.Computer.FileSystem.CopyDirectory(Mainwindow.txtpass_picturefolder.Text, "./output/" & txtshare_profilename.Text & "/picture",
+                FileIO.UIOption.AllDialogs, FileIO.UICancelOption.DoNothing)
+
+            My.Computer.FileSystem.CopyDirectory(Mainwindow.txtpass_rtf.Text, "./output/" & txtshare_profilename.Text & "/text",
+                FileIO.UIOption.AllDialogs, FileIO.UICancelOption.DoNothing)
+
+            My.Computer.FileSystem.CopyFile(Mainwindow.txtpass_csv.Text, "./output/" & txtshare_profilename.Text & "/table.csv",
+                FileIO.UIOption.AllDialogs, FileIO.UICancelOption.DoNothing) '★
+
+
+            '■zipファイルの作成
+            System.IO.Compression.ZipFile.CreateFromDirectory("./output/" & txtshare_profilename.Text & "/",
+                                                                  "./output/" & txtshare_profilename.Text & ".zip")
+
+
+            '■相対パスから絶対パスを取得する
+            Dim stFilePath As String = System.IO.Path.GetFullPath("./output/" & txtshare_profilename.Text & ".zip")
+
+            '■クリップボードにパスをコピー
+            Clipboard.SetText("""" & stFilePath & """")
+
+
+            '■ブラウザを表示。
+            web1.Visible = True
+            web1.Dock = DockStyle.Fill
+            web1.Url = New Uri("http://ephemeral-leaf.com/ash/fileupload/")
+
+            Do
+                Application.DoEvents()
+            Loop Until web1.ReadyState = WebBrowserReadyState.Complete And web1.IsBusy = False
+
+            web1.Document.Window.ScrollTo(New Point(0, 270))
+            Me.BringToFront()
+
+        End If
+
+
+
+    End Sub
+
+    Private Sub Cancel_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel_Button.Click
+        Me.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.Close()
+    End Sub
+
+    Private Sub dialog_sharetemplate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.Location = New Point(Mainwindow.Location.X + 100, Mainwindow.Location.Y + 50)
+        Me.Size = New Size(437, 640)
+        web1.Visible = False
+        txtshare_profilename.Text = Mainwindow.cmbprofile.SelectedItem
+
+        Try
+            Me.regkey_emu.SetValue(Me.process_name, 11001, RegistryValueKind.DWord)
+            Console.WriteLine("レジストリの登録（Webbrowserのバージョンを7→11）に成功しました。")
+
+        Catch ex As Exception
+            Console.WriteLine("レジストリの登録（Webbrowserのバージョンを7→11）に失敗しました。")
+
+        End Try
+
+    End Sub
+
+    Private Sub dialog_sharetemplate_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+
+        Try
+            Me.regkey_emu.DeleteValue(Me.process_name)
+            Me.regkey_emu.Close()
+
+            Console.WriteLine("レジストリの削除に成功しました。" & vbCrLf & "再度追加を行う場合は、このアプリを再起動して下さい。")
+
+        Catch ex As Exception
+            Console.WriteLine("レジストリの削除に失敗しました。")
+
+        End Try
+
+
+    End Sub
+
+
+End Class

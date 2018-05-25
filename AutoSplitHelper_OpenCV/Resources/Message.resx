@@ -255,6 +255,18 @@
   <data name="msg50" xml:space="preserve">
     <value>Please connect with the virtual camera.</value>
   </data>
+  <data name="msg51" xml:space="preserve">
+    <value>A folder with that name already exists.</value>
+  </data>
+  <data name="msg52" xml:space="preserve">
+    <value>Please input size in the ratio of 16 : 9 or 4 : 3.</value>
+  </data>
+  <data name="msg53" xml:space="preserve">
+    <value>Handle has not been acquired.</value>
+  </data>
+  <data name="msg54" xml:space="preserve">
+    <value>It may not be the path of the video file.</value>
+  </data>
   <data name="msg6" xml:space="preserve">
     <value>The number of image files does not match the number of data in the table.</value>
   </data>

@@ -4,10 +4,10 @@
 			　　→インターバルを小さくするとmaxvalがバグる。原因不明
 			終　グラフ周りのcurボタンが効かなかった
 			終　Calibrationのアスペクト比変更を分かりやすく
-			　　モニタリングの進む、戻る、リセットのホットキーを作る
-			　　チャート表示機能
+			終　モニタリングの進む、戻る、リセットのホットキーを作る
+			終　チャート表示機能
 
-			フォルダ構造について、
+			終　フォルダ構造について、
 			　現在　./savedata/csvfile/[profilename].csv
 			　　　　          /picture/[profilename]/n.bmp
 			　　　　          /textfile/[profilename]/n.rtf
@@ -19,9 +19,10 @@
 			　　　　                        /textfile/n.rtf
 			　　　　                        /[profilename].txt
 
-			現在のプロファイルを共有用に出力（ウィンドウは別に作ったのでそれを移す。あとzip化。ファイルパスを表示してコピーできるように）
-			textwindowのサイズ保存
+			終　現在のプロファイルを共有用に出力（ウィンドウは別に作ったのでそれを移す。あとzip化。ファイルパスを表示してコピーできるように）
+			終　textwindowのサイズ保存
 			終　Textwindow、Videoplayerを使用する設定にしている時、監視開始時に自動的に開くように
+			終　cvtimerとcvtimer_asyncをあわせられないか
 
 
 2018/05/20
