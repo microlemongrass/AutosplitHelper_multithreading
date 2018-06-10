@@ -14,6 +14,8 @@ Imports System.Text.RegularExpressions
 
 Public Class Mainwindow
 
+
+
     '■キー入力を受け取る★
     Private Declare Function GetKeyPress Lib "user32" Alias "GetAsyncKeyState" (ByVal key As Integer) As Integer
 
@@ -102,7 +104,6 @@ Public Class Mainwindow
     Public Const WM_GETTEXT = &HD
     Public Const WM_GETTEXTLENGTH = &HE
     Private Const WM_IME_CHAR As Short = &H286S
-
 
 
     '■アプリケーション起動時の処理■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
@@ -1009,7 +1010,7 @@ Public Class Mainwindow
     Private Sub chkcv_monitor_CheckedChanged(sender As Object, e As EventArgs) Handles chkcv_monitor.CheckedChanged
 
         If chkcv_monitor.Checked = True Then
-            lblcur_split.BackColor = Color.FromArgb(68, 0, 2)
+            lblcur_split.BackColor = Color.Maroon
 
         Else
             lblcur_split.BackColor = Color.FromArgb(80, 90, 95)
@@ -1023,8 +1024,8 @@ Public Class Mainwindow
     Private Sub chkcv_loop_CheckedChanged(sender As Object, e As EventArgs) Handles chkcv_loop.CheckedChanged
 
         If chkcv_loop.Checked = True Then
-            lblcur_loop.BackColor = Color.FromArgb(68, 0, 2)
-            lblcur_loopcount.BackColor = Color.FromArgb(68, 0, 2)
+            lblcur_loop.BackColor = Color.Maroon
+            lblcur_loopcount.BackColor = Color.Maroon
 
         Else
             lblcur_loop.BackColor = Color.FromArgb(80, 90, 95)
@@ -1046,7 +1047,7 @@ Public Class Mainwindow
     Private Sub chkcv_resetonoff_CheckedChanged(sender As Object, e As EventArgs) Handles chkcv_resetonoff.CheckedChanged
 
         If chkcv_resetonoff.Checked = True Then
-            lblcur_reset.BackColor = Color.FromArgb(68, 0, 2)
+            lblcur_reset.BackColor = Color.Maroon
 
         Else
             lblcur_reset.BackColor = Color.FromArgb(80, 90, 95)
@@ -1060,7 +1061,7 @@ Public Class Mainwindow
     Private Sub chkcv_loadremover_CheckedChanged(sender As Object, e As EventArgs) Handles chkcv_loadremover.CheckedChanged
 
         If chkcv_loadremover.Checked = True Then
-            lblcur_load.BackColor = Color.FromArgb(68, 0, 2)
+            lblcur_load.BackColor = Color.Maroon
 
         Else
             lblcur_load.BackColor = Color.FromArgb(80, 90, 95)
@@ -2121,9 +2122,9 @@ Public Class Mainwindow
     Private Sub chkload1_CheckedChanged(sender As Object, e As EventArgs) Handles chkload1.CheckedChanged
 
         If chkload1.Checked = True Then
-            chkcur_load1.Checked = True
+            lblcur_load1.BackColor = Color.Maroon
         Else
-            chkcur_load1.Checked = False
+            lblcur_load1.BackColor = Color.FromArgb(80, 90, 95)
         End If
 
     End Sub
@@ -2131,9 +2132,9 @@ Public Class Mainwindow
     Private Sub chkload2_CheckedChanged(sender As Object, e As EventArgs) Handles chkload2.CheckedChanged
 
         If chkload2.Checked = True Then
-            chkcur_load2.Checked = True
+            lblcur_load2.BackColor = Color.Maroon
         Else
-            chkcur_load2.Checked = False
+            lblcur_load2.BackColor = Color.FromArgb(80, 90, 95)
         End If
 
     End Sub
@@ -2141,9 +2142,9 @@ Public Class Mainwindow
     Private Sub chkload3_CheckedChanged(sender As Object, e As EventArgs) Handles chkload3.CheckedChanged
 
         If chkload3.Checked = True Then
-            chkcur_load3.Checked = True
+            lblcur_load3.BackColor = Color.Maroon
         Else
-            chkcur_load3.Checked = False
+            lblcur_load3.BackColor = Color.FromArgb(80, 90, 95)
         End If
 
     End Sub
@@ -2151,9 +2152,9 @@ Public Class Mainwindow
     Private Sub chkload4_CheckedChanged(sender As Object, e As EventArgs) Handles chkload4.CheckedChanged
 
         If chkload4.Checked = True Then
-            chkcur_load4.Checked = True
+            lblcur_load4.BackColor = Color.Maroon
         Else
-            chkcur_load4.Checked = False
+            lblcur_load4.BackColor = Color.FromArgb(80, 90, 95)
         End If
 
     End Sub
@@ -2161,9 +2162,9 @@ Public Class Mainwindow
     Private Sub chkload5_CheckedChanged(sender As Object, e As EventArgs) Handles chkload5.CheckedChanged
 
         If chkload5.Checked = True Then
-            chkcur_load5.Checked = True
+            lblcur_load5.BackColor = Color.Maroon
         Else
-            chkcur_load5.Checked = False
+            lblcur_load5.BackColor = Color.FromArgb(80, 90, 95)
         End If
 
     End Sub
@@ -2171,9 +2172,9 @@ Public Class Mainwindow
     Private Sub chkload6_CheckedChanged(sender As Object, e As EventArgs) Handles chkload6.CheckedChanged
 
         If chkload6.Checked = True Then
-            chkcur_load6.Checked = True
+            lblcur_load6.BackColor = Color.Maroon
         Else
-            chkcur_load6.Checked = False
+            lblcur_load6.BackColor = Color.FromArgb(80, 90, 95)
         End If
 
     End Sub
@@ -2181,9 +2182,9 @@ Public Class Mainwindow
     Private Sub chkload7_CheckedChanged(sender As Object, e As EventArgs) Handles chkload7.CheckedChanged
 
         If chkload7.Checked = True Then
-            chkcur_load7.Checked = True
+            lblcur_load7.BackColor = Color.Maroon
         Else
-            chkcur_load7.Checked = False
+            lblcur_load7.BackColor = Color.FromArgb(80, 90, 95)
         End If
 
     End Sub
@@ -2191,9 +2192,9 @@ Public Class Mainwindow
     Private Sub chkload8_CheckedChanged(sender As Object, e As EventArgs) Handles chkload8.CheckedChanged
 
         If chkload8.Checked = True Then
-            chkcur_load8.Checked = True
+            lblcur_load8.BackColor = Color.Maroon
         Else
-            chkcur_load8.Checked = False
+            lblcur_load8.BackColor = Color.FromArgb(80, 90, 95)
         End If
 
     End Sub
@@ -2201,9 +2202,9 @@ Public Class Mainwindow
     Private Sub chkload9_CheckedChanged(sender As Object, e As EventArgs) Handles chkload9.CheckedChanged
 
         If chkload9.Checked = True Then
-            chkcur_load9.Checked = True
+            lblcur_load9.BackColor = Color.Maroon
         Else
-            chkcur_load9.Checked = False
+            lblcur_load9.BackColor = Color.FromArgb(80, 90, 95)
         End If
 
     End Sub
@@ -2211,9 +2212,9 @@ Public Class Mainwindow
     Private Sub chkload10_CheckedChanged(sender As Object, e As EventArgs) Handles chkload10.CheckedChanged
 
         If chkload10.Checked = True Then
-            chkcur_load10.Checked = True
+            lblcur_load10.BackColor = Color.Maroon
         Else
-            chkcur_load10.Checked = False
+            lblcur_load10.BackColor = Color.FromArgb(80, 90, 95)
         End If
 
     End Sub
@@ -2380,7 +2381,7 @@ Public Class Mainwindow
     Private Sub chkshowvideo_CheckedChanged(sender As Object, e As EventArgs) Handles chkshowvideo.CheckedChanged
 
         If chkshowvideo.Checked = True Then
-            lblcur_showvideo.BackColor = Color.FromArgb(68, 0, 2)
+            lblcur_showvideo.BackColor = Color.Maroon
             lblcur_showvideo.Text = "Y"
         Else
             lblcur_showvideo.BackColor = Color.FromArgb(80, 90, 95)
@@ -7070,8 +7071,6 @@ Public Class Mainwindow
                 '■最初のリッチテキストファイルを読み込む
                 Textwindow.rtxt1.LoadFile(txtpass_rtf.Text & "/1.rtf", RichTextBoxStreamType.RichText)
 
-
-
             End If
 
             '■■監視スタート■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
@@ -7942,7 +7941,10 @@ Public Class Mainwindow
                         piccv_picture.Image = Image.FromFile(aa)
 
                         '■最初のリッチテキストファイルを表示'★
-                        Textwindow.rtxt1.LoadFile(txtpass_rtf.Text & "/1.rtf", RichTextBoxStreamType.RichText)
+                        If chkshow_text.Checked = True Then
+                            Textwindow.rtxt1.LoadFile(txtpass_rtf.Text & "/1.rtf", RichTextBoxStreamType.RichText)
+                        End If
+
 
                         '■結果の初期化
                         lblcv_maxval.Text = 0
@@ -8037,7 +8039,7 @@ Public Class Mainwindow
 
                 End If
 
-                End If
+            End If
 
 
 
@@ -8101,17 +8103,17 @@ Public Class Mainwindow
 
                             If chkcv_resetonoff.Checked = True Then
 
-                                    chknow_reset.Checked = True
+                                chknow_reset.Checked = True
 
-
-                                End If
 
                             End If
 
                         End If
 
-
                     End If
+
+
+                End If
 
                 '■テンプレートマッチング（ロード2）
                 If chknow_load2.Checked = True Then
@@ -8131,28 +8133,28 @@ Public Class Mainwindow
                         '■ローディングがマッチングされた。
                         If CDbl(lblcv_maxval_load2.Text) > CDbl(txtcv_ikiti_load2.Text) Then
 
-                                Console.WriteLine("Show loading")
+                            Console.WriteLine("Show loading")
 
 
-                                allkeysend_load() '[play→sleep]pauseを送る
+                            allkeysend_load() '[play→sleep]pauseを送る
 
-                                txtstate.Text = My.Resources.Message.msg39 '"ロード中"
-                                lblloading.Text = "loading"
+                            txtstate.Text = My.Resources.Message.msg39 '"ロード中"
+                            lblloading.Text = "loading"
 
-                                msec_pause = CDbl(timeGetTime)
+                            msec_pause = CDbl(timeGetTime)
 
-                                cvtimer_loadremover2.Start()
+                            cvtimer_loadremover2.Start()
 
-                                chknow_load1.Checked = False
-                                chknow_load2.Checked = False
-                                chknow_load3.Checked = False
-                                chknow_load4.Checked = False
-                                chknow_load5.Checked = False
-                                chknow_load6.Checked = False
-                                chknow_load7.Checked = False
-                                chknow_load8.Checked = False
-                                chknow_load9.Checked = False
-                                chknow_load10.Checked = False
+                            chknow_load1.Checked = False
+                            chknow_load2.Checked = False
+                            chknow_load3.Checked = False
+                            chknow_load4.Checked = False
+                            chknow_load5.Checked = False
+                            chknow_load6.Checked = False
+                            chknow_load7.Checked = False
+                            chknow_load8.Checked = False
+                            chknow_load9.Checked = False
+                            chknow_load10.Checked = False
 
                             async_load1_onoff = 0 '★
                             async_load2_onoff = 0
@@ -8168,16 +8170,16 @@ Public Class Mainwindow
 
                             If chkcv_resetonoff.Checked = True Then
 
-                                    chknow_reset.Checked = True
+                                chknow_reset.Checked = True
 
-
-                                End If
 
                             End If
 
                         End If
 
                     End If
+
+                End If
 
                 '■テンプレートマッチング（ロード3）
                 If chknow_load3.Checked = True Then
@@ -8196,28 +8198,28 @@ Public Class Mainwindow
                         '■ローディングがマッチングされた。
                         If CDbl(lblcv_maxval_load3.Text) > CDbl(txtcv_ikiti_load3.Text) Then
 
-                                Console.WriteLine("Show loading")
+                            Console.WriteLine("Show loading")
 
 
-                                allkeysend_load() '[play→sleep]pauseを送る
+                            allkeysend_load() '[play→sleep]pauseを送る
 
-                                txtstate.Text = My.Resources.Message.msg39 '"ロード中"
-                                lblloading.Text = "loading"
+                            txtstate.Text = My.Resources.Message.msg39 '"ロード中"
+                            lblloading.Text = "loading"
 
-                                msec_pause = CDbl(timeGetTime)
+                            msec_pause = CDbl(timeGetTime)
 
-                                cvtimer_loadremover3.Start()
+                            cvtimer_loadremover3.Start()
 
-                                chknow_load1.Checked = False
-                                chknow_load2.Checked = False
-                                chknow_load3.Checked = False
-                                chknow_load4.Checked = False
-                                chknow_load5.Checked = False
-                                chknow_load6.Checked = False
-                                chknow_load7.Checked = False
-                                chknow_load8.Checked = False
-                                chknow_load9.Checked = False
-                                chknow_load10.Checked = False
+                            chknow_load1.Checked = False
+                            chknow_load2.Checked = False
+                            chknow_load3.Checked = False
+                            chknow_load4.Checked = False
+                            chknow_load5.Checked = False
+                            chknow_load6.Checked = False
+                            chknow_load7.Checked = False
+                            chknow_load8.Checked = False
+                            chknow_load9.Checked = False
+                            chknow_load10.Checked = False
 
                             async_load1_onoff = 0 '★
                             async_load2_onoff = 0
@@ -8232,16 +8234,16 @@ Public Class Mainwindow
 
                             If chkcv_resetonoff.Checked = True Then
 
-                                    chknow_reset.Checked = True
+                                chknow_reset.Checked = True
 
-
-                                End If
 
                             End If
 
                         End If
 
                     End If
+
+                End If
 
                 '■テンプレートマッチング（ロード4）
                 If chknow_load4.Checked = True Then
@@ -8260,28 +8262,28 @@ Public Class Mainwindow
                         '■ローディングがマッチングされた。
                         If CDbl(lblcv_maxval_load4.Text) > CDbl(txtcv_ikiti_load4.Text) Then
 
-                                Console.WriteLine("Show loading")
+                            Console.WriteLine("Show loading")
 
 
-                                allkeysend_load() '[play→sleep]pauseを送る
+                            allkeysend_load() '[play→sleep]pauseを送る
 
-                                txtstate.Text = My.Resources.Message.msg39 '"ロード中"
-                                lblloading.Text = "loading"
+                            txtstate.Text = My.Resources.Message.msg39 '"ロード中"
+                            lblloading.Text = "loading"
 
-                                msec_pause = CDbl(timeGetTime)
+                            msec_pause = CDbl(timeGetTime)
 
-                                cvtimer_loadremover4.Start()
+                            cvtimer_loadremover4.Start()
 
-                                chknow_load1.Checked = False
-                                chknow_load2.Checked = False
-                                chknow_load3.Checked = False
-                                chknow_load4.Checked = False
-                                chknow_load5.Checked = False
-                                chknow_load6.Checked = False
-                                chknow_load7.Checked = False
-                                chknow_load8.Checked = False
-                                chknow_load9.Checked = False
-                                chknow_load10.Checked = False
+                            chknow_load1.Checked = False
+                            chknow_load2.Checked = False
+                            chknow_load3.Checked = False
+                            chknow_load4.Checked = False
+                            chknow_load5.Checked = False
+                            chknow_load6.Checked = False
+                            chknow_load7.Checked = False
+                            chknow_load8.Checked = False
+                            chknow_load9.Checked = False
+                            chknow_load10.Checked = False
 
                             async_load1_onoff = 0 '★
                             async_load2_onoff = 0
@@ -8296,16 +8298,16 @@ Public Class Mainwindow
 
                             If chkcv_resetonoff.Checked = True Then
 
-                                    chknow_reset.Checked = True
+                                chknow_reset.Checked = True
 
-
-                                End If
 
                             End If
 
                         End If
 
                     End If
+
+                End If
 
                 '■テンプレートマッチング（ロード5）
                 If chknow_load5.Checked = True Then
@@ -8324,28 +8326,28 @@ Public Class Mainwindow
                         '■ローディングがマッチングされた。
                         If CDbl(lblcv_maxval_load5.Text) > CDbl(txtcv_ikiti_load5.Text) Then
 
-                                Console.WriteLine("Show loading")
+                            Console.WriteLine("Show loading")
 
 
-                                allkeysend_load() '[play→sleep]pauseを送る
+                            allkeysend_load() '[play→sleep]pauseを送る
 
-                                txtstate.Text = My.Resources.Message.msg39 '"ロード中"
-                                lblloading.Text = "loading"
+                            txtstate.Text = My.Resources.Message.msg39 '"ロード中"
+                            lblloading.Text = "loading"
 
-                                msec_pause = CDbl(timeGetTime)
+                            msec_pause = CDbl(timeGetTime)
 
-                                cvtimer_loadremover5.Start()
+                            cvtimer_loadremover5.Start()
 
-                                chknow_load1.Checked = False
-                                chknow_load2.Checked = False
-                                chknow_load3.Checked = False
-                                chknow_load4.Checked = False
-                                chknow_load5.Checked = False
-                                chknow_load6.Checked = False
-                                chknow_load7.Checked = False
-                                chknow_load8.Checked = False
-                                chknow_load9.Checked = False
-                                chknow_load10.Checked = False
+                            chknow_load1.Checked = False
+                            chknow_load2.Checked = False
+                            chknow_load3.Checked = False
+                            chknow_load4.Checked = False
+                            chknow_load5.Checked = False
+                            chknow_load6.Checked = False
+                            chknow_load7.Checked = False
+                            chknow_load8.Checked = False
+                            chknow_load9.Checked = False
+                            chknow_load10.Checked = False
 
                             async_load1_onoff = 0 '★
                             async_load2_onoff = 0
@@ -8360,16 +8362,16 @@ Public Class Mainwindow
 
                             If chkcv_resetonoff.Checked = True Then
 
-                                    chknow_reset.Checked = True
+                                chknow_reset.Checked = True
 
-
-                                End If
 
                             End If
 
                         End If
 
                     End If
+
+                End If
 
                 '■テンプレートマッチング（ロード6）
                 If chknow_load6.Checked = True Then
@@ -8388,28 +8390,28 @@ Public Class Mainwindow
                         '■ローディングがマッチングされた。
                         If CDbl(lblcv_maxval_load6.Text) > CDbl(txtcv_ikiti_load6.Text) Then
 
-                                Console.WriteLine("Show loading")
+                            Console.WriteLine("Show loading")
 
 
-                                allkeysend_load() '[play→sleep]pauseを送る
+                            allkeysend_load() '[play→sleep]pauseを送る
 
-                                txtstate.Text = My.Resources.Message.msg39 '"ロード中"
-                                lblloading.Text = "loading"
+                            txtstate.Text = My.Resources.Message.msg39 '"ロード中"
+                            lblloading.Text = "loading"
 
-                                msec_pause = CDbl(timeGetTime)
+                            msec_pause = CDbl(timeGetTime)
 
-                                cvtimer_loadremover6.Start()
+                            cvtimer_loadremover6.Start()
 
-                                chknow_load1.Checked = False
-                                chknow_load2.Checked = False
-                                chknow_load3.Checked = False
-                                chknow_load4.Checked = False
-                                chknow_load5.Checked = False
-                                chknow_load6.Checked = False
-                                chknow_load7.Checked = False
-                                chknow_load8.Checked = False
-                                chknow_load9.Checked = False
-                                chknow_load10.Checked = False
+                            chknow_load1.Checked = False
+                            chknow_load2.Checked = False
+                            chknow_load3.Checked = False
+                            chknow_load4.Checked = False
+                            chknow_load5.Checked = False
+                            chknow_load6.Checked = False
+                            chknow_load7.Checked = False
+                            chknow_load8.Checked = False
+                            chknow_load9.Checked = False
+                            chknow_load10.Checked = False
 
                             async_load1_onoff = 0 '★
                             async_load2_onoff = 0
@@ -8424,16 +8426,16 @@ Public Class Mainwindow
 
                             If chkcv_resetonoff.Checked = True Then
 
-                                    chknow_reset.Checked = True
+                                chknow_reset.Checked = True
 
-
-                                End If
 
                             End If
 
                         End If
 
                     End If
+
+                End If
 
                 '■テンプレートマッチング（ロード7）
                 If chknow_load7.Checked = True Then
@@ -8452,28 +8454,28 @@ Public Class Mainwindow
                         '■ローディングがマッチングされた。
                         If CDbl(lblcv_maxval_load7.Text) > CDbl(txtcv_ikiti_load7.Text) Then
 
-                                Console.WriteLine("Show loading")
+                            Console.WriteLine("Show loading")
 
 
-                                allkeysend_load() '[play→sleep]pauseを送る
+                            allkeysend_load() '[play→sleep]pauseを送る
 
-                                txtstate.Text = My.Resources.Message.msg39 '"ロード中"
-                                lblloading.Text = "loading"
+                            txtstate.Text = My.Resources.Message.msg39 '"ロード中"
+                            lblloading.Text = "loading"
 
-                                msec_pause = CDbl(timeGetTime)
+                            msec_pause = CDbl(timeGetTime)
 
-                                cvtimer_loadremover7.Start()
+                            cvtimer_loadremover7.Start()
 
-                                chknow_load1.Checked = False
-                                chknow_load2.Checked = False
-                                chknow_load3.Checked = False
-                                chknow_load4.Checked = False
-                                chknow_load5.Checked = False
-                                chknow_load6.Checked = False
-                                chknow_load7.Checked = False
-                                chknow_load8.Checked = False
-                                chknow_load9.Checked = False
-                                chknow_load10.Checked = False
+                            chknow_load1.Checked = False
+                            chknow_load2.Checked = False
+                            chknow_load3.Checked = False
+                            chknow_load4.Checked = False
+                            chknow_load5.Checked = False
+                            chknow_load6.Checked = False
+                            chknow_load7.Checked = False
+                            chknow_load8.Checked = False
+                            chknow_load9.Checked = False
+                            chknow_load10.Checked = False
 
                             async_load1_onoff = 0 '★
                             async_load2_onoff = 0
@@ -8488,16 +8490,16 @@ Public Class Mainwindow
 
                             If chkcv_resetonoff.Checked = True Then
 
-                                    chknow_reset.Checked = True
+                                chknow_reset.Checked = True
 
-
-                                End If
 
                             End If
 
                         End If
 
                     End If
+
+                End If
 
                 '■テンプレートマッチング（ロード8）
                 If chknow_load8.Checked = True Then
@@ -8516,28 +8518,28 @@ Public Class Mainwindow
                         '■ローディングがマッチングされた。
                         If CDbl(lblcv_maxval_load8.Text) > CDbl(txtcv_ikiti_load8.Text) Then
 
-                                Console.WriteLine("Show loading")
+                            Console.WriteLine("Show loading")
 
 
-                                allkeysend_load() '[play→sleep]pauseを送る
+                            allkeysend_load() '[play→sleep]pauseを送る
 
-                                txtstate.Text = My.Resources.Message.msg39 '"ロード中"
-                                lblloading.Text = "loading"
+                            txtstate.Text = My.Resources.Message.msg39 '"ロード中"
+                            lblloading.Text = "loading"
 
-                                msec_pause = CDbl(timeGetTime)
+                            msec_pause = CDbl(timeGetTime)
 
-                                cvtimer_loadremover8.Start()
+                            cvtimer_loadremover8.Start()
 
-                                chknow_load1.Checked = False
-                                chknow_load2.Checked = False
-                                chknow_load3.Checked = False
-                                chknow_load4.Checked = False
-                                chknow_load5.Checked = False
-                                chknow_load6.Checked = False
-                                chknow_load7.Checked = False
-                                chknow_load8.Checked = False
-                                chknow_load9.Checked = False
-                                chknow_load10.Checked = False
+                            chknow_load1.Checked = False
+                            chknow_load2.Checked = False
+                            chknow_load3.Checked = False
+                            chknow_load4.Checked = False
+                            chknow_load5.Checked = False
+                            chknow_load6.Checked = False
+                            chknow_load7.Checked = False
+                            chknow_load8.Checked = False
+                            chknow_load9.Checked = False
+                            chknow_load10.Checked = False
 
                             async_load1_onoff = 0 '★
                             async_load2_onoff = 0
@@ -8552,17 +8554,17 @@ Public Class Mainwindow
 
                             If chkcv_resetonoff.Checked = True Then
 
-                                    chknow_reset.Checked = True
+                                chknow_reset.Checked = True
 
-
-                                End If
 
                             End If
 
                         End If
 
-
                     End If
+
+
+                End If
 
                 '■テンプレートマッチング（ロード9）
                 If chknow_load9.Checked = True Then
@@ -8581,28 +8583,28 @@ Public Class Mainwindow
                         '■ローディングがマッチングされた。
                         If CDbl(lblcv_maxval_load9.Text) > CDbl(txtcv_ikiti_load9.Text) Then
 
-                                Console.WriteLine("Show loading")
+                            Console.WriteLine("Show loading")
 
 
-                                allkeysend_load() '[play→sleep]pauseを送る
+                            allkeysend_load() '[play→sleep]pauseを送る
 
-                                txtstate.Text = My.Resources.Message.msg39 '"ロード中"
-                                lblloading.Text = "loading"
+                            txtstate.Text = My.Resources.Message.msg39 '"ロード中"
+                            lblloading.Text = "loading"
 
-                                msec_pause = CDbl(timeGetTime)
+                            msec_pause = CDbl(timeGetTime)
 
-                                cvtimer_loadremover9.Start()
+                            cvtimer_loadremover9.Start()
 
-                                chknow_load1.Checked = False
-                                chknow_load2.Checked = False
-                                chknow_load3.Checked = False
-                                chknow_load4.Checked = False
-                                chknow_load5.Checked = False
-                                chknow_load6.Checked = False
-                                chknow_load7.Checked = False
-                                chknow_load8.Checked = False
-                                chknow_load9.Checked = False
-                                chknow_load10.Checked = False
+                            chknow_load1.Checked = False
+                            chknow_load2.Checked = False
+                            chknow_load3.Checked = False
+                            chknow_load4.Checked = False
+                            chknow_load5.Checked = False
+                            chknow_load6.Checked = False
+                            chknow_load7.Checked = False
+                            chknow_load8.Checked = False
+                            chknow_load9.Checked = False
+                            chknow_load10.Checked = False
 
                             async_load1_onoff = 0 '★
                             async_load2_onoff = 0
@@ -8617,16 +8619,16 @@ Public Class Mainwindow
 
                             If chkcv_resetonoff.Checked = True Then
 
-                                    chknow_reset.Checked = True
+                                chknow_reset.Checked = True
 
-
-                                End If
 
                             End If
 
                         End If
 
                     End If
+
+                End If
 
                 '■テンプレートマッチング（ロード10）
                 If chknow_load10.Checked = True Then
@@ -8645,55 +8647,55 @@ Public Class Mainwindow
                         '■ローディングがマッチングされた。
                         If CDbl(lblcv_maxval_load10.Text) > CDbl(txtcv_ikiti_load10.Text) Then
 
-                                Console.WriteLine("Show loading")
+                            Console.WriteLine("Show loading")
 
 
-                                allkeysend_load() '[play→sleep]pauseを送る
+                            allkeysend_load() '[play→sleep]pauseを送る
 
-                                txtstate.Text = My.Resources.Message.msg39 '"ロード中"
-                                lblloading.Text = "loading"
+                            txtstate.Text = My.Resources.Message.msg39 '"ロード中"
+                            lblloading.Text = "loading"
 
-                                msec_pause = CDbl(timeGetTime)
+                            msec_pause = CDbl(timeGetTime)
 
-                                cvtimer_loadremover10.Start()
+                            cvtimer_loadremover10.Start()
 
-                                chknow_load1.Checked = False
-                                chknow_load2.Checked = False
-                                chknow_load3.Checked = False
-                                chknow_load4.Checked = False
-                                chknow_load5.Checked = False
-                                chknow_load6.Checked = False
-                                chknow_load7.Checked = False
-                                chknow_load8.Checked = False
-                                chknow_load9.Checked = False
-                                chknow_load10.Checked = False
+                            chknow_load1.Checked = False
+                            chknow_load2.Checked = False
+                            chknow_load3.Checked = False
+                            chknow_load4.Checked = False
+                            chknow_load5.Checked = False
+                            chknow_load6.Checked = False
+                            chknow_load7.Checked = False
+                            chknow_load8.Checked = False
+                            chknow_load9.Checked = False
+                            chknow_load10.Checked = False
 
 
                             async_load1_onoff = 0 '★
                             async_load2_onoff = 0
-                                async_load3_onoff = 0
-                                async_load4_onoff = 0
-                                async_load5_onoff = 0
-                                async_load6_onoff = 0
-                                async_load7_onoff = 0
-                                async_load8_onoff = 0
-                                async_load9_onoff = 0
-                                async_load10_onoff = 0
+                            async_load3_onoff = 0
+                            async_load4_onoff = 0
+                            async_load5_onoff = 0
+                            async_load6_onoff = 0
+                            async_load7_onoff = 0
+                            async_load8_onoff = 0
+                            async_load9_onoff = 0
+                            async_load10_onoff = 0
 
 
-                                If chkcv_resetonoff.Checked = True Then
+                            If chkcv_resetonoff.Checked = True Then
 
-                                    chknow_reset.Checked = True
+                                chknow_reset.Checked = True
 
-
-                                End If
 
                             End If
 
-
                         End If
 
+
                     End If
+
+                End If
 
 
 
@@ -8851,101 +8853,114 @@ Public Class Mainwindow
     Private reflesh_img As Integer = 0
     '■Sleep(スプリット)■■■■■■■■■■■■■■■■■■■■■■■■■■■■
     Private Sub OpenCV_Sleep_split_Tick(sender As Object, e As EventArgs) Handles cvsleep_split.Tick
-
-        If reflesh_img = 1 Then
-            reflesh_img = 0
-            '■テンプレート画像の更新
-            Dim aa As String = txtpass_picturefolder.Text & "\" & lblcv_lap.Text & ".bmp"
-            tplex = Cv2.ImRead(aa, ImreadModes.Color)
-            '■テンプレート画像の更新（表示用）
-            piccv_picture.Image = System.Drawing.Image.FromFile(aa)
-
-            '■リッチテキストファイルの更新★
-            Textwindow.rtxt1.LoadFile(txtpass_rtf.Text & "/" & lblcv_lap.Text & ".rtf", RichTextBoxStreamType.RichText)
-        End If
+        Try
 
 
+            If reflesh_img = 1 Then
+                reflesh_img = 0
+                '■テンプレート画像の更新
+                Dim aa As String = txtpass_picturefolder.Text & "\" & lblcv_lap.Text & ".bmp"
+                tplex = Cv2.ImRead(aa, ImreadModes.Color)
+                '■テンプレート画像の更新（表示用）
+                piccv_picture.Image = System.Drawing.Image.FromFile(aa)
 
-        If lblreload_graph.Text = 1 Then
 
-            '■グラフ更新
-            graph_split()
+                '■リッチテキストファイルの更新★
+                If chkshow_text.Checked = True Then
+                    Textwindow.rtxt1.LoadFile(txtpass_rtf.Text & "/" & lblcv_lap.Text & ".rtf", RichTextBoxStreamType.RichText)
+                End If
 
-            lblreload_graph.Text = 0
-
-
-        End If
-
-        'ループカウント用
-        If lbllooptrigger.Text = 1 Then
-
-            numnowloop.Value += 1
-            lblloopcount.Text = numnowloop.Value & "/" & numloopcount.Value
-            lblcv_comment.Text = "Next:" & DGtable(no.Index, CInt(lblcv_lap.Text) - 0).Value & " [" & lblloopcount.Text & "]"
-
-            lbllooptrigger.Text = 0
-
-            If numnowloop.Value = numloopcount.Value Then
-
-                show_finish()
-                'btncv_stop.PerformClick()
-                'MessageBox.Show("指定回数ループしました。")
             End If
-        End If
-
-        txtstate.Text = My.Resources.Message.msg31 '"待機中"
-
-        Dim sleepcount As Integer = lblcv_sleepcount.Text
-
-        lblsleeptime.Text = (sleepcount + (msec - timeGetTime) * 0.001).ToString("0.0")
 
 
 
-        If lblsleeptime.Text <= 0 Then
+                If lblreload_graph.Text = 1 Then
 
-            Dim number As Integer = lblcv_lap.Text
+                '■グラフ更新
+                graph_split()
+
+                lblreload_graph.Text = 0
 
 
-            If chkcv_loop.Checked = False Then
-                lblcv_comment.Text = "Next:" & DGtable(no.Index, CInt(lblcv_lap.Text) - 0).Value
+            End If
 
-            ElseIf chkcv_loop.Checked = True Then
+            'ループカウント用
+            If lbllooptrigger.Text = 1 Then
 
+                numnowloop.Value += 1
+                lblloopcount.Text = numnowloop.Value & "/" & numloopcount.Value
                 lblcv_comment.Text = "Next:" & DGtable(no.Index, CInt(lblcv_lap.Text) - 0).Value & " [" & lblloopcount.Text & "]"
 
+                lbllooptrigger.Text = 0
+
+                If numnowloop.Value = numloopcount.Value Then
+
+                    show_finish()
+                    'btncv_stop.PerformClick()
+                    'MessageBox.Show("指定回数ループしました。")
+                End If
+            End If
+
+            txtstate.Text = My.Resources.Message.msg31 '"待機中"
+
+            Dim sleepcount As Integer = lblcv_sleepcount.Text
+
+            lblsleeptime.Text = (sleepcount + (msec - timeGetTime) * 0.001).ToString("0.0")
+
+
+
+            If lblsleeptime.Text <= 0 Then
+
+                Dim number As Integer = lblcv_lap.Text
+
+
+                If chkcv_loop.Checked = False Then
+                    lblcv_comment.Text = "Next:" & DGtable(no.Index, CInt(lblcv_lap.Text) - 0).Value
+
+                ElseIf chkcv_loop.Checked = True Then
+
+                    lblcv_comment.Text = "Next:" & DGtable(no.Index, CInt(lblcv_lap.Text) - 0).Value & " [" & lblloopcount.Text & "]"
+
+
+                End If
+
+
+                txtcv_ikiti.Text = DGtable(rate.Index, CInt(lblcv_lap.Text)).Value
+                lblcv_sleepcount.Text = DGtable(sleep.Index, CInt(lblcv_lap.Text)).Value
+
+                lblcv_maxval.Text = 0
+                lblcv_maxval_reset.Text = 0
+
+                txtstate.Text = My.Resources.Message.msg30 '"画像認識中"
+
+                '■プレビュー画面の更新
+                NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
+                picipl_cap.ImageIpl = frame
+
+
+                onetimematching()
+
+                '===========================================================================================================
+
+
+                lblcv_sendview.Visible = False
+                lblsleeptime.Visible = False
+                chknow_monitor.Checked = True
+
+                cvsleep_split.Stop()
+
+
 
             End If
 
-
-            txtcv_ikiti.Text = DGtable(rate.Index, CInt(lblcv_lap.Text)).Value
-            lblcv_sleepcount.Text = DGtable(sleep.Index, CInt(lblcv_lap.Text)).Value
-
-            lblcv_maxval.Text = 0
-            lblcv_maxval_reset.Text = 0
-
-            txtstate.Text = My.Resources.Message.msg30 '"画像認識中"
-
-            '■プレビュー画面の更新
-            NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
-            picipl_cap.ImageIpl = frame
-
-
-            onetimematching()
-
-            '===========================================================================================================
-
-
-            lblcv_sendview.Visible = False
-            lblsleeptime.Visible = False
-            chknow_monitor.Checked = True
-
-            cvsleep_split.Stop()
-
-
-
-        End If
+        Catch ex As Exception
+            show_finish()
+            MessageBox.Show(ex.Message, messagebox_name)
+        End Try
 
     End Sub
+
+
 
     Private Sub onetimematching() 'なぜかマッチングを1回挟まないと、連続でマッチング判定が起こってしまう（誤判定）
 
@@ -10793,7 +10808,9 @@ Public Class Mainwindow
             piccv_picture.Image = Image.FromFile(aa)
 
             '■リッチテキストファイルの更新★
-            Textwindow.rtxt1.LoadFile(txtpass_rtf.Text & "/" & number & ".rtf", RichTextBoxStreamType.RichText)
+            If chkshow_text.Checked = True Then
+                Textwindow.rtxt1.LoadFile(txtpass_rtf.Text & "/" & number & ".rtf", RichTextBoxStreamType.RichText)
+            End If
 
 
             '後処理##########################################################################################
@@ -11046,7 +11063,9 @@ Public Class Mainwindow
             piccv_picture.Image = Image.FromFile(aa)
 
             '■リッチテキストファイルの更新★
-            Textwindow.rtxt1.LoadFile(txtpass_rtf.Text & "/" & number & ".rtf", RichTextBoxStreamType.RichText)
+            If chkshow_text.Checked = True Then
+                Textwindow.rtxt1.LoadFile(txtpass_rtf.Text & "/" & number & ".rtf", RichTextBoxStreamType.RichText)
+            End If
 
 
             '後処理##########################################################################################
@@ -11274,7 +11293,9 @@ Public Class Mainwindow
             piccv_picture.Image = Image.FromFile(aa)
 
             '■リッチテキストファイルの更新
-            Textwindow.rtxt1.LoadFile(txtpass_rtf.Text & "/" & number & ".rtf", RichTextBoxStreamType.RichText)
+            If chkshow_text.Checked = True Then
+                Textwindow.rtxt1.LoadFile(txtpass_rtf.Text & "/" & number & ".rtf", RichTextBoxStreamType.RichText)
+            End If
 
 
             '後処理##########################################################################################
@@ -12234,7 +12255,7 @@ Public Class Mainwindow
             '■Current Settingに反映
 
             If chkcv_monitor.Checked = True Then
-                lblcur_split.BackColor = Color.FromArgb(68, 0, 2)
+                lblcur_split.BackColor = Color.Maroon
             Else
                 lblcur_split.BackColor = Color.FromArgb(80, 90, 95)
 
@@ -12242,7 +12263,7 @@ Public Class Mainwindow
 
 
             If chkcv_resetonoff.Checked = True Then
-                lblcur_reset.BackColor = Color.FromArgb(68, 0, 2)
+                lblcur_reset.BackColor = Color.Maroon
             Else
                 lblcur_reset.BackColor = Color.FromArgb(80, 90, 95)
 
@@ -12251,8 +12272,8 @@ Public Class Mainwindow
 
 
             If chkcv_loop.Checked = True Then
-                lblcur_loop.BackColor = Color.FromArgb(68, 0, 2)
-                lblcur_loopcount.BackColor = Color.FromArgb(68, 0, 2)
+                lblcur_loop.BackColor = Color.Maroon
+                lblcur_loopcount.BackColor = Color.Maroon
 
             Else
                 lblcur_loop.BackColor = Color.FromArgb(80, 90, 95)
@@ -12262,11 +12283,76 @@ Public Class Mainwindow
 
 
             If chkcv_loadremover.Checked = True Then
-                lblcur_load.BackColor = Color.FromArgb(68, 0, 2)
+                lblcur_load.BackColor = Color.Maroon
             Else
                 lblcur_load.BackColor = Color.FromArgb(80, 90, 95)
 
             End If
+
+            If chkload1.Checked = True Then
+                lblcur_load1.BackColor = Color.Maroon
+            Else
+                lblcur_load1.BackColor = Color.FromArgb(80, 90, 95)
+            End If
+
+            If chkload2.Checked = True Then
+                lblcur_load2.BackColor = Color.Maroon
+            Else
+                lblcur_load2.BackColor = Color.FromArgb(80, 90, 95)
+            End If
+
+            If chkload3.Checked = True Then
+                lblcur_load3.BackColor = Color.Maroon
+            Else
+                lblcur_load3.BackColor = Color.FromArgb(80, 90, 95)
+            End If
+
+            If chkload4.Checked = True Then
+                lblcur_load4.BackColor = Color.Maroon
+            Else
+                lblcur_load4.BackColor = Color.FromArgb(80, 90, 95)
+            End If
+
+            If chkload5.Checked = True Then
+                lblcur_load5.BackColor = Color.Maroon
+            Else
+                lblcur_load5.BackColor = Color.FromArgb(80, 90, 95)
+            End If
+
+            If chkload6.Checked = True Then
+                lblcur_load6.BackColor = Color.Maroon
+            Else
+                lblcur_load6.BackColor = Color.FromArgb(80, 90, 95)
+            End If
+
+            If chkload7.Checked = True Then
+                lblcur_load7.BackColor = Color.Maroon
+            Else
+                lblcur_load7.BackColor = Color.FromArgb(80, 90, 95)
+            End If
+
+            If chkload8.Checked = True Then
+                lblcur_load8.BackColor = Color.Maroon
+            Else
+                lblcur_load8.BackColor = Color.FromArgb(80, 90, 95)
+            End If
+
+            If chkload9.Checked = True Then
+                lblcur_load9.BackColor = Color.Maroon
+            Else
+                lblcur_load9.BackColor = Color.FromArgb(80, 90, 95)
+            End If
+
+            If chkload10.Checked = True Then
+                lblcur_load10.BackColor = Color.Maroon
+            Else
+                lblcur_load10.BackColor = Color.FromArgb(80, 90, 95)
+            End If
+
+
+
+
+
 
             If chkvideo_manualstart.Checked = True Then '★
                 txtvideo_startat.Enabled = True
@@ -12277,7 +12363,7 @@ Public Class Mainwindow
             End If
 
             If chkshowvideo.Checked = True Then
-                lblcur_showvideo.BackColor = Color.FromArgb(68, 0, 2)
+                lblcur_showvideo.BackColor = Color.Maroon
                 lblcur_showvideo.Text = "Y"
             Else
                 lblcur_showvideo.BackColor = Color.FromArgb(80, 90, 95)
@@ -12285,7 +12371,7 @@ Public Class Mainwindow
             End If
 
             If chkshow_text.Checked = True Then
-                lblcur_showtextwindow.BackColor = Color.FromArgb(68, 0, 2)
+                lblcur_showtextwindow.BackColor = Color.Maroon
                 lblcur_showtextwindow.Text = "Y"
             Else
                 lblcur_showtextwindow.BackColor = Color.FromArgb(80, 90, 95)
@@ -13361,7 +13447,7 @@ Public Class Mainwindow
     Private Sub chkshow_text_CheckedChanged(sender As Object, e As EventArgs) Handles chkshow_text.CheckedChanged
 
         If chkshow_text.Checked = True Then
-            lblcur_showtextwindow.BackColor = Color.FromArgb(68, 0, 2)
+            lblcur_showtextwindow.BackColor = Color.Maroon
             lblcur_showtextwindow.Text = "Y"
         Else
             lblcur_showtextwindow.BackColor = Color.FromArgb(80, 90, 95)
@@ -13391,10 +13477,58 @@ Public Class Mainwindow
     End Sub
 
     Private Sub btncur_showtext_Click(sender As Object, e As EventArgs) Handles btncur_showtext.Click
+
         Textwindow.Show()
+
+
     End Sub
 
 
+    Private Sub btntext_createtext_Click(sender As Object, e As EventArgs) Handles btntext_createtext.Click
+
+        Dim rowcount As Integer = DGtable.Rows.Count
+        Try
+
+            For aa = 1 To rowcount - 2
+
+                If Not System.IO.File.Exists(txtpass_rtf.Text & "/" & aa & ".rtf") Then
+
+                    My.Computer.FileSystem.CopyFile("./savedata/blank.rtf", txtpass_rtf.Text & "/" & aa & ".rtf", False) '★
+
+
+                End If
+
+
+            Next
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, messagebox_name)
+
+        End Try
+
+
+    End Sub
+
+    Private Sub btntext_openfolder_Click(sender As Object, e As EventArgs) Handles btntext_openfolder.Click
+
+        '■相対パスから絶対パスを取得する
+        Dim stFilePath As String = System.IO.Path.GetFullPath(txtpass_rtf.Text)
+
+        'フォルダ"./profile/[profilename]/text"を開く
+        System.Diagnostics.Process.Start(stFilePath)
+    End Sub
+
+    Private Sub OpenTextWindowWToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenTextWindowWToolStripMenuItem.Click
+        Textwindow.Show()
+    End Sub
+
+    Private Sub CreateTextFileToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CreateTextFileToolStripMenuItem.Click
+        btntext_createtext.PerformClick()
+    End Sub
+
+    Private Sub OpenTextFolderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenTextFolderToolStripMenuItem.Click
+        btntext_openfolder.PerformClick()
+    End Sub
 
     Private Sub btnshow_chart_Click(sender As Object, e As EventArgs) Handles btnshow_chart.Click
         Textwindow.Show()

@@ -69,6 +69,15 @@ Partial Class Mainwindow
         Me.trktemp = New System.Windows.Forms.TrackBar()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.grpgeneral = New System.Windows.Forms.GroupBox()
+        Me.lblcur_load10 = New System.Windows.Forms.Label()
+        Me.lblcur_load9 = New System.Windows.Forms.Label()
+        Me.lblcur_load8 = New System.Windows.Forms.Label()
+        Me.lblcur_load7 = New System.Windows.Forms.Label()
+        Me.lblcur_load6 = New System.Windows.Forms.Label()
+        Me.lblcur_load5 = New System.Windows.Forms.Label()
+        Me.lblcur_load4 = New System.Windows.Forms.Label()
+        Me.lblcur_load3 = New System.Windows.Forms.Label()
+        Me.lblcur_load2 = New System.Windows.Forms.Label()
         Me.btncur_showtext = New System.Windows.Forms.Button()
         Me.lblcur_showtextwindow = New System.Windows.Forms.Label()
         Me.lblcur_showvideo = New System.Windows.Forms.Label()
@@ -78,22 +87,12 @@ Partial Class Mainwindow
         Me.lblset_video = New System.Windows.Forms.Label()
         Me.lblcur_firstsplit = New System.Windows.Forms.Label()
         Me.Label79 = New System.Windows.Forms.Label()
-        Me.chkcur_load10 = New System.Windows.Forms.CheckBox()
-        Me.chkcur_load8 = New System.Windows.Forms.CheckBox()
-        Me.chkcur_load7 = New System.Windows.Forms.CheckBox()
-        Me.chkcur_load9 = New System.Windows.Forms.CheckBox()
-        Me.chkcur_load5 = New System.Windows.Forms.CheckBox()
-        Me.chkcur_load4 = New System.Windows.Forms.CheckBox()
-        Me.chkcur_load6 = New System.Windows.Forms.CheckBox()
-        Me.chkcur_load3 = New System.Windows.Forms.CheckBox()
-        Me.chkcur_load2 = New System.Windows.Forms.CheckBox()
-        Me.chkcur_load1 = New System.Windows.Forms.CheckBox()
         Me.lblcur_addcount = New System.Windows.Forms.Label()
         Me.lblcur_namedpipe = New System.Windows.Forms.Label()
         Me.lblcur_rendou = New System.Windows.Forms.Label()
         Me.lblcur_focus_after = New System.Windows.Forms.Label()
         Me.lblcur_focus_before = New System.Windows.Forms.Label()
-        Me.lblcur_loadremover = New System.Windows.Forms.Label()
+        Me.lblcur_load1 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.lblcur_interval = New System.Windows.Forms.Label()
         Me.lblcur_loopcount = New System.Windows.Forms.Label()
@@ -120,6 +119,7 @@ Partial Class Mainwindow
         Me.lblcur_device_name = New System.Windows.Forms.Label()
         Me.lblset_monitoring = New System.Windows.Forms.Label()
         Me.pnl_other = New System.Windows.Forms.Panel()
+        Me.btntext_openfolder = New System.Windows.Forms.Button()
         Me.btntext_createtext = New System.Windows.Forms.Button()
         Me.txtpass_rtf = New System.Windows.Forms.TextBox()
         Me.Label112 = New System.Windows.Forms.Label()
@@ -576,18 +576,18 @@ Partial Class Mainwindow
         Me.txtcalib_save_r = New System.Windows.Forms.TextBox()
         Me.txtcalib_save_g = New System.Windows.Forms.TextBox()
         Me.txtcalib_save_b = New System.Windows.Forms.TextBox()
-        Me.numcalib_hand_scalewidth = New System.Windows.Forms.NumericUpDown()
         Me.btncalib_insert = New System.Windows.Forms.Button()
-        Me.numcalib_hand_scale = New System.Windows.Forms.NumericUpDown()
-        Me.btncalib_adjaspect = New System.Windows.Forms.Button()
-        Me.btncalib_adjscale = New System.Windows.Forms.Button()
-        Me.Label102 = New System.Windows.Forms.Label()
-        Me.Label104 = New System.Windows.Forms.Label()
-        Me.Label105 = New System.Windows.Forms.Label()
-        Me.txtcalib_save_scale = New System.Windows.Forms.TextBox()
-        Me.txtcalib_save_scalewidth = New System.Windows.Forms.TextBox()
-        Me.txtcalib_save_scaleheight = New System.Windows.Forms.TextBox()
         Me.Label103 = New System.Windows.Forms.Label()
+        Me.numcalib_hand_scalewidth = New System.Windows.Forms.NumericUpDown()
+        Me.numcalib_hand_scale = New System.Windows.Forms.NumericUpDown()
+        Me.txtcalib_save_scaleheight = New System.Windows.Forms.TextBox()
+        Me.txtcalib_save_scalewidth = New System.Windows.Forms.TextBox()
+        Me.txtcalib_save_scale = New System.Windows.Forms.TextBox()
+        Me.Label105 = New System.Windows.Forms.Label()
+        Me.btncalib_adjaspect = New System.Windows.Forms.Button()
+        Me.Label104 = New System.Windows.Forms.Label()
+        Me.Label102 = New System.Windows.Forms.Label()
+        Me.btncalib_adjscale = New System.Windows.Forms.Button()
         Me.btncalib_resize = New System.Windows.Forms.Button()
         Me.btncalib_cap = New System.Windows.Forms.Button()
         Me.btntosetting03 = New System.Windows.Forms.Button()
@@ -679,6 +679,10 @@ Partial Class Mainwindow
         Me.timcamera = New System.Windows.Forms.Timer(Me.components)
         Me.timcalib = New System.Windows.Forms.Timer(Me.components)
         Me.timash_hotkey_sleep = New System.Windows.Forms.Timer(Me.components)
+        Me.CreateTextFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenTextFolderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.DGtable, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1155,6 +1159,15 @@ Partial Class Mainwindow
         'grpgeneral
         '
         Me.grpgeneral.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.grpgeneral.Controls.Add(Me.lblcur_load10)
+        Me.grpgeneral.Controls.Add(Me.lblcur_load9)
+        Me.grpgeneral.Controls.Add(Me.lblcur_load8)
+        Me.grpgeneral.Controls.Add(Me.lblcur_load7)
+        Me.grpgeneral.Controls.Add(Me.lblcur_load6)
+        Me.grpgeneral.Controls.Add(Me.lblcur_load5)
+        Me.grpgeneral.Controls.Add(Me.lblcur_load4)
+        Me.grpgeneral.Controls.Add(Me.lblcur_load3)
+        Me.grpgeneral.Controls.Add(Me.lblcur_load2)
         Me.grpgeneral.Controls.Add(Me.btncur_showtext)
         Me.grpgeneral.Controls.Add(Me.lblcur_showtextwindow)
         Me.grpgeneral.Controls.Add(Me.lblcur_showvideo)
@@ -1164,22 +1177,12 @@ Partial Class Mainwindow
         Me.grpgeneral.Controls.Add(Me.lblset_video)
         Me.grpgeneral.Controls.Add(Me.lblcur_firstsplit)
         Me.grpgeneral.Controls.Add(Me.Label79)
-        Me.grpgeneral.Controls.Add(Me.chkcur_load10)
-        Me.grpgeneral.Controls.Add(Me.chkcur_load8)
-        Me.grpgeneral.Controls.Add(Me.chkcur_load7)
-        Me.grpgeneral.Controls.Add(Me.chkcur_load9)
-        Me.grpgeneral.Controls.Add(Me.chkcur_load5)
-        Me.grpgeneral.Controls.Add(Me.chkcur_load4)
-        Me.grpgeneral.Controls.Add(Me.chkcur_load6)
-        Me.grpgeneral.Controls.Add(Me.chkcur_load3)
-        Me.grpgeneral.Controls.Add(Me.chkcur_load2)
-        Me.grpgeneral.Controls.Add(Me.chkcur_load1)
         Me.grpgeneral.Controls.Add(Me.lblcur_addcount)
         Me.grpgeneral.Controls.Add(Me.lblcur_namedpipe)
         Me.grpgeneral.Controls.Add(Me.lblcur_rendou)
         Me.grpgeneral.Controls.Add(Me.lblcur_focus_after)
         Me.grpgeneral.Controls.Add(Me.lblcur_focus_before)
-        Me.grpgeneral.Controls.Add(Me.lblcur_loadremover)
+        Me.grpgeneral.Controls.Add(Me.lblcur_load1)
         Me.grpgeneral.Controls.Add(Me.Panel4)
         Me.grpgeneral.Controls.Add(Me.Label92)
         Me.grpgeneral.Controls.Add(Me.lblset_focus)
@@ -1202,6 +1205,69 @@ Partial Class Mainwindow
         Me.grpgeneral.ForeColor = System.Drawing.Color.FloralWhite
         Me.grpgeneral.Name = "grpgeneral"
         Me.grpgeneral.TabStop = False
+        '
+        'lblcur_load10
+        '
+        resources.ApplyResources(Me.lblcur_load10, "lblcur_load10")
+        Me.lblcur_load10.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.lblcur_load10.ForeColor = System.Drawing.SystemColors.Control
+        Me.lblcur_load10.Name = "lblcur_load10"
+        '
+        'lblcur_load9
+        '
+        resources.ApplyResources(Me.lblcur_load9, "lblcur_load9")
+        Me.lblcur_load9.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.lblcur_load9.ForeColor = System.Drawing.SystemColors.Control
+        Me.lblcur_load9.Name = "lblcur_load9"
+        '
+        'lblcur_load8
+        '
+        resources.ApplyResources(Me.lblcur_load8, "lblcur_load8")
+        Me.lblcur_load8.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.lblcur_load8.ForeColor = System.Drawing.SystemColors.Control
+        Me.lblcur_load8.Name = "lblcur_load8"
+        '
+        'lblcur_load7
+        '
+        resources.ApplyResources(Me.lblcur_load7, "lblcur_load7")
+        Me.lblcur_load7.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.lblcur_load7.ForeColor = System.Drawing.SystemColors.Control
+        Me.lblcur_load7.Name = "lblcur_load7"
+        '
+        'lblcur_load6
+        '
+        resources.ApplyResources(Me.lblcur_load6, "lblcur_load6")
+        Me.lblcur_load6.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.lblcur_load6.ForeColor = System.Drawing.SystemColors.Control
+        Me.lblcur_load6.Name = "lblcur_load6"
+        '
+        'lblcur_load5
+        '
+        resources.ApplyResources(Me.lblcur_load5, "lblcur_load5")
+        Me.lblcur_load5.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.lblcur_load5.ForeColor = System.Drawing.SystemColors.Control
+        Me.lblcur_load5.Name = "lblcur_load5"
+        '
+        'lblcur_load4
+        '
+        resources.ApplyResources(Me.lblcur_load4, "lblcur_load4")
+        Me.lblcur_load4.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.lblcur_load4.ForeColor = System.Drawing.SystemColors.Control
+        Me.lblcur_load4.Name = "lblcur_load4"
+        '
+        'lblcur_load3
+        '
+        resources.ApplyResources(Me.lblcur_load3, "lblcur_load3")
+        Me.lblcur_load3.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.lblcur_load3.ForeColor = System.Drawing.SystemColors.Control
+        Me.lblcur_load3.Name = "lblcur_load3"
+        '
+        'lblcur_load2
+        '
+        resources.ApplyResources(Me.lblcur_load2, "lblcur_load2")
+        Me.lblcur_load2.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.lblcur_load2.ForeColor = System.Drawing.SystemColors.Control
+        Me.lblcur_load2.Name = "lblcur_load2"
         '
         'btncur_showtext
         '
@@ -1270,76 +1336,6 @@ Partial Class Mainwindow
         Me.Label79.ForeColor = System.Drawing.SystemColors.Control
         Me.Label79.Name = "Label79"
         '
-        'chkcur_load10
-        '
-        Me.chkcur_load10.AutoCheck = False
-        resources.ApplyResources(Me.chkcur_load10, "chkcur_load10")
-        Me.chkcur_load10.Name = "chkcur_load10"
-        Me.chkcur_load10.UseVisualStyleBackColor = True
-        '
-        'chkcur_load8
-        '
-        Me.chkcur_load8.AutoCheck = False
-        resources.ApplyResources(Me.chkcur_load8, "chkcur_load8")
-        Me.chkcur_load8.Name = "chkcur_load8"
-        Me.chkcur_load8.UseVisualStyleBackColor = True
-        '
-        'chkcur_load7
-        '
-        Me.chkcur_load7.AutoCheck = False
-        resources.ApplyResources(Me.chkcur_load7, "chkcur_load7")
-        Me.chkcur_load7.Name = "chkcur_load7"
-        Me.chkcur_load7.UseVisualStyleBackColor = True
-        '
-        'chkcur_load9
-        '
-        Me.chkcur_load9.AutoCheck = False
-        resources.ApplyResources(Me.chkcur_load9, "chkcur_load9")
-        Me.chkcur_load9.Name = "chkcur_load9"
-        Me.chkcur_load9.UseVisualStyleBackColor = True
-        '
-        'chkcur_load5
-        '
-        Me.chkcur_load5.AutoCheck = False
-        resources.ApplyResources(Me.chkcur_load5, "chkcur_load5")
-        Me.chkcur_load5.Name = "chkcur_load5"
-        Me.chkcur_load5.UseVisualStyleBackColor = True
-        '
-        'chkcur_load4
-        '
-        Me.chkcur_load4.AutoCheck = False
-        resources.ApplyResources(Me.chkcur_load4, "chkcur_load4")
-        Me.chkcur_load4.Name = "chkcur_load4"
-        Me.chkcur_load4.UseVisualStyleBackColor = True
-        '
-        'chkcur_load6
-        '
-        Me.chkcur_load6.AutoCheck = False
-        resources.ApplyResources(Me.chkcur_load6, "chkcur_load6")
-        Me.chkcur_load6.Name = "chkcur_load6"
-        Me.chkcur_load6.UseVisualStyleBackColor = True
-        '
-        'chkcur_load3
-        '
-        Me.chkcur_load3.AutoCheck = False
-        resources.ApplyResources(Me.chkcur_load3, "chkcur_load3")
-        Me.chkcur_load3.Name = "chkcur_load3"
-        Me.chkcur_load3.UseVisualStyleBackColor = True
-        '
-        'chkcur_load2
-        '
-        Me.chkcur_load2.AutoCheck = False
-        resources.ApplyResources(Me.chkcur_load2, "chkcur_load2")
-        Me.chkcur_load2.Name = "chkcur_load2"
-        Me.chkcur_load2.UseVisualStyleBackColor = True
-        '
-        'chkcur_load1
-        '
-        Me.chkcur_load1.AutoCheck = False
-        resources.ApplyResources(Me.chkcur_load1, "chkcur_load1")
-        Me.chkcur_load1.Name = "chkcur_load1"
-        Me.chkcur_load1.UseVisualStyleBackColor = True
-        '
         'lblcur_addcount
         '
         resources.ApplyResources(Me.lblcur_addcount, "lblcur_addcount")
@@ -1375,12 +1371,12 @@ Partial Class Mainwindow
         Me.lblcur_focus_before.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcur_focus_before.Name = "lblcur_focus_before"
         '
-        'lblcur_loadremover
+        'lblcur_load1
         '
-        resources.ApplyResources(Me.lblcur_loadremover, "lblcur_loadremover")
-        Me.lblcur_loadremover.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.lblcur_loadremover.ForeColor = System.Drawing.SystemColors.Control
-        Me.lblcur_loadremover.Name = "lblcur_loadremover"
+        resources.ApplyResources(Me.lblcur_load1, "lblcur_load1")
+        Me.lblcur_load1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.lblcur_load1.ForeColor = System.Drawing.SystemColors.Control
+        Me.lblcur_load1.Name = "lblcur_load1"
         '
         'Panel4
         '
@@ -1576,6 +1572,7 @@ Partial Class Mainwindow
         'pnl_other
         '
         Me.pnl_other.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.pnl_other.Controls.Add(Me.btntext_openfolder)
         Me.pnl_other.Controls.Add(Me.btntext_createtext)
         Me.pnl_other.Controls.Add(Me.txtpass_rtf)
         Me.pnl_other.Controls.Add(Me.Label112)
@@ -1590,6 +1587,14 @@ Partial Class Mainwindow
         Me.pnl_other.Controls.Add(Me.lbllivesplit_state)
         resources.ApplyResources(Me.pnl_other, "pnl_other")
         Me.pnl_other.Name = "pnl_other"
+        '
+        'btntext_openfolder
+        '
+        Me.btntext_openfolder.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
+        resources.ApplyResources(Me.btntext_openfolder, "btntext_openfolder")
+        Me.btntext_openfolder.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btntext_openfolder.Name = "btntext_openfolder"
+        Me.btntext_openfolder.UseVisualStyleBackColor = False
         '
         'btntext_createtext
         '
@@ -3676,7 +3681,7 @@ Partial Class Mainwindow
         '
         'ToolToolStripMenuItem
         '
-        Me.ToolToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StartMonitoringMToolStripMenuItem, Me.ToolStripSeparator6, Me.PreviewGetTemplatePictureToolStripMenuItem, Me.CalibrationToolStripMenuItem1, Me.PositionSettingToolStripMenuItem, Me.ToolStripSeparator3, Me.ExpandTableToolStripMenuItem, Me.ViewTableToolStripMenuItem, Me.OpenTextWindowWToolStripMenuItem})
+        Me.ToolToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StartMonitoringMToolStripMenuItem, Me.ToolStripSeparator6, Me.PreviewGetTemplatePictureToolStripMenuItem, Me.CalibrationToolStripMenuItem1, Me.PositionSettingToolStripMenuItem, Me.ToolStripSeparator3, Me.ExpandTableToolStripMenuItem, Me.ToolStripSeparator7, Me.ViewTableToolStripMenuItem, Me.ToolStripSeparator2, Me.OpenTextWindowWToolStripMenuItem, Me.CreateTextFileToolStripMenuItem, Me.OpenTextFolderToolStripMenuItem})
         Me.ToolToolStripMenuItem.Name = "ToolToolStripMenuItem"
         resources.ApplyResources(Me.ToolToolStripMenuItem, "ToolToolStripMenuItem")
         '
@@ -5353,18 +5358,18 @@ Partial Class Mainwindow
         Me.gbsetting.Controls.Add(Me.btncalib_reset)
         Me.gbsetting.Controls.Add(Me.numcalib_hand_scaleheight)
         Me.gbsetting.Controls.Add(Me.gbrgb)
-        Me.gbsetting.Controls.Add(Me.numcalib_hand_scalewidth)
         Me.gbsetting.Controls.Add(Me.btncalib_insert)
-        Me.gbsetting.Controls.Add(Me.numcalib_hand_scale)
-        Me.gbsetting.Controls.Add(Me.btncalib_adjaspect)
-        Me.gbsetting.Controls.Add(Me.btncalib_adjscale)
-        Me.gbsetting.Controls.Add(Me.Label102)
-        Me.gbsetting.Controls.Add(Me.Label104)
-        Me.gbsetting.Controls.Add(Me.Label105)
-        Me.gbsetting.Controls.Add(Me.txtcalib_save_scale)
-        Me.gbsetting.Controls.Add(Me.txtcalib_save_scalewidth)
-        Me.gbsetting.Controls.Add(Me.txtcalib_save_scaleheight)
         Me.gbsetting.Controls.Add(Me.Label103)
+        Me.gbsetting.Controls.Add(Me.numcalib_hand_scalewidth)
+        Me.gbsetting.Controls.Add(Me.numcalib_hand_scale)
+        Me.gbsetting.Controls.Add(Me.txtcalib_save_scaleheight)
+        Me.gbsetting.Controls.Add(Me.txtcalib_save_scalewidth)
+        Me.gbsetting.Controls.Add(Me.txtcalib_save_scale)
+        Me.gbsetting.Controls.Add(Me.Label105)
+        Me.gbsetting.Controls.Add(Me.btncalib_adjaspect)
+        Me.gbsetting.Controls.Add(Me.Label104)
+        Me.gbsetting.Controls.Add(Me.Label102)
+        Me.gbsetting.Controls.Add(Me.btncalib_adjscale)
         resources.ApplyResources(Me.gbsetting, "gbsetting")
         Me.gbsetting.ForeColor = System.Drawing.Color.Snow
         Me.gbsetting.Name = "gbsetting"
@@ -5526,6 +5531,20 @@ Partial Class Mainwindow
         Me.txtcalib_save_b.Name = "txtcalib_save_b"
         Me.txtcalib_save_b.ReadOnly = True
         '
+        'btncalib_insert
+        '
+        Me.btncalib_insert.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        resources.ApplyResources(Me.btncalib_insert, "btncalib_insert")
+        Me.btncalib_insert.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btncalib_insert.Name = "btncalib_insert"
+        Me.btncalib_insert.UseVisualStyleBackColor = False
+        '
+        'Label103
+        '
+        resources.ApplyResources(Me.Label103, "Label103")
+        Me.Label103.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Label103.Name = "Label103"
+        '
         'numcalib_hand_scalewidth
         '
         Me.numcalib_hand_scalewidth.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer))
@@ -5535,14 +5554,6 @@ Partial Class Mainwindow
         Me.numcalib_hand_scalewidth.Maximum = New Decimal(New Integer() {500, 0, 0, 0})
         Me.numcalib_hand_scalewidth.Name = "numcalib_hand_scalewidth"
         Me.numcalib_hand_scalewidth.Value = New Decimal(New Integer() {100, 0, 0, 0})
-        '
-        'btncalib_insert
-        '
-        Me.btncalib_insert.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        resources.ApplyResources(Me.btncalib_insert, "btncalib_insert")
-        Me.btncalib_insert.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.btncalib_insert.Name = "btncalib_insert"
-        Me.btncalib_insert.UseVisualStyleBackColor = False
         '
         'numcalib_hand_scale
         '
@@ -5554,43 +5565,12 @@ Partial Class Mainwindow
         Me.numcalib_hand_scale.Name = "numcalib_hand_scale"
         Me.numcalib_hand_scale.Value = New Decimal(New Integer() {100, 0, 0, 0})
         '
-        'btncalib_adjaspect
+        'txtcalib_save_scaleheight
         '
-        Me.btncalib_adjaspect.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
-        resources.ApplyResources(Me.btncalib_adjaspect, "btncalib_adjaspect")
-        Me.btncalib_adjaspect.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.btncalib_adjaspect.Name = "btncalib_adjaspect"
-        Me.btncalib_adjaspect.UseVisualStyleBackColor = False
-        '
-        'btncalib_adjscale
-        '
-        Me.btncalib_adjscale.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
-        resources.ApplyResources(Me.btncalib_adjscale, "btncalib_adjscale")
-        Me.btncalib_adjscale.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.btncalib_adjscale.Name = "btncalib_adjscale"
-        Me.btncalib_adjscale.UseVisualStyleBackColor = False
-        '
-        'Label102
-        '
-        resources.ApplyResources(Me.Label102, "Label102")
-        Me.Label102.Name = "Label102"
-        '
-        'Label104
-        '
-        resources.ApplyResources(Me.Label104, "Label104")
-        Me.Label104.Name = "Label104"
-        '
-        'Label105
-        '
-        resources.ApplyResources(Me.Label105, "Label105")
-        Me.Label105.Name = "Label105"
-        '
-        'txtcalib_save_scale
-        '
-        Me.txtcalib_save_scale.BackColor = System.Drawing.Color.LightSteelBlue
-        resources.ApplyResources(Me.txtcalib_save_scale, "txtcalib_save_scale")
-        Me.txtcalib_save_scale.Name = "txtcalib_save_scale"
-        Me.txtcalib_save_scale.ReadOnly = True
+        Me.txtcalib_save_scaleheight.BackColor = System.Drawing.Color.LightSteelBlue
+        resources.ApplyResources(Me.txtcalib_save_scaleheight, "txtcalib_save_scaleheight")
+        Me.txtcalib_save_scaleheight.Name = "txtcalib_save_scaleheight"
+        Me.txtcalib_save_scaleheight.ReadOnly = True
         '
         'txtcalib_save_scalewidth
         '
@@ -5599,18 +5579,43 @@ Partial Class Mainwindow
         Me.txtcalib_save_scalewidth.Name = "txtcalib_save_scalewidth"
         Me.txtcalib_save_scalewidth.ReadOnly = True
         '
-        'txtcalib_save_scaleheight
+        'txtcalib_save_scale
         '
-        Me.txtcalib_save_scaleheight.BackColor = System.Drawing.Color.LightSteelBlue
-        resources.ApplyResources(Me.txtcalib_save_scaleheight, "txtcalib_save_scaleheight")
-        Me.txtcalib_save_scaleheight.Name = "txtcalib_save_scaleheight"
-        Me.txtcalib_save_scaleheight.ReadOnly = True
+        Me.txtcalib_save_scale.BackColor = System.Drawing.Color.LightSteelBlue
+        resources.ApplyResources(Me.txtcalib_save_scale, "txtcalib_save_scale")
+        Me.txtcalib_save_scale.Name = "txtcalib_save_scale"
+        Me.txtcalib_save_scale.ReadOnly = True
         '
-        'Label103
+        'Label105
         '
-        resources.ApplyResources(Me.Label103, "Label103")
-        Me.Label103.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Label103.Name = "Label103"
+        resources.ApplyResources(Me.Label105, "Label105")
+        Me.Label105.Name = "Label105"
+        '
+        'btncalib_adjaspect
+        '
+        Me.btncalib_adjaspect.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
+        resources.ApplyResources(Me.btncalib_adjaspect, "btncalib_adjaspect")
+        Me.btncalib_adjaspect.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btncalib_adjaspect.Name = "btncalib_adjaspect"
+        Me.btncalib_adjaspect.UseVisualStyleBackColor = False
+        '
+        'Label104
+        '
+        resources.ApplyResources(Me.Label104, "Label104")
+        Me.Label104.Name = "Label104"
+        '
+        'Label102
+        '
+        resources.ApplyResources(Me.Label102, "Label102")
+        Me.Label102.Name = "Label102"
+        '
+        'btncalib_adjscale
+        '
+        Me.btncalib_adjscale.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
+        resources.ApplyResources(Me.btncalib_adjscale, "btncalib_adjscale")
+        Me.btncalib_adjscale.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btncalib_adjscale.Name = "btncalib_adjscale"
+        Me.btncalib_adjscale.UseVisualStyleBackColor = False
         '
         'btncalib_resize
         '
@@ -6245,6 +6250,28 @@ Partial Class Mainwindow
         '
         Me.timash_hotkey_sleep.Interval = 300
         '
+        'CreateTextFileToolStripMenuItem
+        '
+        Me.CreateTextFileToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
+        Me.CreateTextFileToolStripMenuItem.Name = "CreateTextFileToolStripMenuItem"
+        resources.ApplyResources(Me.CreateTextFileToolStripMenuItem, "CreateTextFileToolStripMenuItem")
+        '
+        'OpenTextFolderToolStripMenuItem
+        '
+        Me.OpenTextFolderToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
+        Me.OpenTextFolderToolStripMenuItem.Name = "OpenTextFolderToolStripMenuItem"
+        resources.ApplyResources(Me.OpenTextFolderToolStripMenuItem, "OpenTextFolderToolStripMenuItem")
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        resources.ApplyResources(Me.ToolStripSeparator2, "ToolStripSeparator2")
+        '
+        'ToolStripSeparator7
+        '
+        Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
+        resources.ApplyResources(Me.ToolStripSeparator7, "ToolStripSeparator7")
+        '
         'Mainwindow
         '
         resources.ApplyResources(Me, "$this")
@@ -6871,22 +6898,12 @@ Partial Class Mainwindow
     Friend WithEvents btntosetting02 As Button
     Friend WithEvents lblcur_focus_after As Label
     Friend WithEvents lblcur_focus_before As Label
-    Friend WithEvents lblcur_loadremover As Label
+    Friend WithEvents lblcur_load1 As Label
     Friend WithEvents lblcur_loopcount As Label
     Friend WithEvents lblcur_interval As Label
     Friend WithEvents lblcur_addcount As Label
     Friend WithEvents lblcur_namedpipe As Label
     Friend WithEvents lblcur_rendou As Label
-    Friend WithEvents chkcur_load10 As CheckBox
-    Friend WithEvents chkcur_load8 As CheckBox
-    Friend WithEvents chkcur_load7 As CheckBox
-    Friend WithEvents chkcur_load9 As CheckBox
-    Friend WithEvents chkcur_load5 As CheckBox
-    Friend WithEvents chkcur_load4 As CheckBox
-    Friend WithEvents chkcur_load6 As CheckBox
-    Friend WithEvents chkcur_load3 As CheckBox
-    Friend WithEvents chkcur_load2 As CheckBox
-    Friend WithEvents chkcur_load1 As CheckBox
     Friend WithEvents pnlview_window As Panel
     Friend WithEvents btnforward As Button
     Friend WithEvents piccap As PictureBox
@@ -7101,4 +7118,18 @@ Partial Class Mainwindow
     Friend WithEvents numundo_ash As NumericUpDown
     Friend WithEvents numreset_ash As NumericUpDown
     Friend WithEvents timash_hotkey_sleep As Timer
+    Friend WithEvents lblcur_load10 As Label
+    Friend WithEvents lblcur_load9 As Label
+    Friend WithEvents lblcur_load8 As Label
+    Friend WithEvents lblcur_load7 As Label
+    Friend WithEvents lblcur_load6 As Label
+    Friend WithEvents lblcur_load5 As Label
+    Friend WithEvents lblcur_load4 As Label
+    Friend WithEvents lblcur_load3 As Label
+    Friend WithEvents lblcur_load2 As Label
+    Friend WithEvents btntext_openfolder As Button
+    Friend WithEvents ToolStripSeparator7 As ToolStripSeparator
+    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
+    Friend WithEvents CreateTextFileToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OpenTextFolderToolStripMenuItem As ToolStripMenuItem
 End Class

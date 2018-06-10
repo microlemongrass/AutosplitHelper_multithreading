@@ -205,6 +205,33 @@
   <data name="PictureBox1.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="lblcur_load10.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcur_load9.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcur_load8.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcur_load7.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcur_load6.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcur_load5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcur_load4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcur_load3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcur_load2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="btncur_showtext.Text" xml:space="preserve">
     <value>表示</value>
   </data>
@@ -247,36 +274,6 @@
   <data name="Label79.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="chkcur_load10.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="chkcur_load8.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="chkcur_load7.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="chkcur_load9.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="chkcur_load5.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="chkcur_load4.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="chkcur_load6.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="chkcur_load3.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="chkcur_load2.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="chkcur_load1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="lblcur_addcount.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -292,7 +289,7 @@
   <data name="lblcur_focus_before.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="lblcur_loadremover.ToolTip" xml:space="preserve">
+  <data name="lblcur_load1.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="lblcur_interval.ToolTip" xml:space="preserve">
@@ -410,6 +407,12 @@
     <value />
   </data>
   <data name="grpgeneral.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btntext_openfolder.Text" xml:space="preserve">
+    <value>フォルダを開く</value>
+  </data>
+  <data name="btntext_openfolder.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="btntext_createtext.Text" xml:space="preserve">
@@ -1502,6 +1505,12 @@
   <data name="rdocalib_aspect_to169.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="rdocalib_aspect_none.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 19</value>
+  </data>
+  <data name="rdocalib_aspect_none.Text" xml:space="preserve">
+    <value>変更しない</value>
+  </data>
   <data name="rdocalib_aspect_none.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -1571,37 +1580,40 @@
   <data name="gbrgb.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="numcalib_hand_scalewidth.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="btncalib_insert.Text" xml:space="preserve">
     <value>適用</value>
   </data>
   <data name="btncalib_insert.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="Label103.Text" xml:space="preserve">
+    <value>アスペクト比変更                      </value>
+  </data>
+  <data name="Label103.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numcalib_hand_scalewidth.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="numcalib_hand_scale.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtcalib_save_scaleheight.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtcalib_save_scalewidth.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtcalib_save_scale.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label105.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="btncalib_adjaspect.Text" xml:space="preserve">
     <value>自動調整</value>
   </data>
   <data name="btncalib_adjaspect.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="btncalib_adjscale.Text" xml:space="preserve">
-    <value>自動調整</value>
-  </data>
-  <data name="btncalib_adjscale.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Label102.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 15</value>
-  </data>
-  <data name="Label102.Text" xml:space="preserve">
-    <value>高さ (%)</value>
-  </data>
-  <data name="Label102.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="Label104.Size" type="System.Drawing.Size, System.Drawing">
@@ -1613,22 +1625,19 @@
   <data name="Label104.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="Label105.ToolTip" xml:space="preserve">
+  <data name="Label102.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 15</value>
+  </data>
+  <data name="Label102.Text" xml:space="preserve">
+    <value>高さ (%)</value>
+  </data>
+  <data name="Label102.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="txtcalib_save_scale.ToolTip" xml:space="preserve">
-    <value />
+  <data name="btncalib_adjscale.Text" xml:space="preserve">
+    <value>自動調整</value>
   </data>
-  <data name="txtcalib_save_scalewidth.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="txtcalib_save_scaleheight.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Label103.Text" xml:space="preserve">
-    <value>アスペクト比変更                      </value>
-  </data>
-  <data name="Label103.ToolTip" xml:space="preserve">
+  <data name="btncalib_adjscale.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="gbsetting.Text" xml:space="preserve">
