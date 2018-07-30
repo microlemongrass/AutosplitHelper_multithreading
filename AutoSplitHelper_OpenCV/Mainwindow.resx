@@ -7987,6 +7987,39 @@
   <data name="&gt;&gt;pnl_graph.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
+  <data name="chkmonitor_sizestate.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkmonitor_sizestate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 11pt</value>
+  </data>
+  <data name="chkmonitor_sizestate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkmonitor_sizestate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>128, 43</value>
+  </data>
+  <data name="chkmonitor_sizestate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 23</value>
+  </data>
+  <data name="chkmonitor_sizestate.TabIndex" type="System.Int32, mscorlib">
+    <value>256</value>
+  </data>
+  <data name="chkmonitor_sizestate.Text" xml:space="preserve">
+    <value>comp</value>
+  </data>
+  <data name="&gt;&gt;chkmonitor_sizestate.Name" xml:space="preserve">
+    <value>chkmonitor_sizestate</value>
+  </data>
+  <data name="&gt;&gt;chkmonitor_sizestate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkmonitor_sizestate.Parent" xml:space="preserve">
+    <value>GroupBox2</value>
+  </data>
+  <data name="&gt;&gt;chkmonitor_sizestate.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="numtextwindow_sizex.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 332</value>
   </data>
@@ -8006,7 +8039,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;numtextwindow_sizex.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="lblcheckopening.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -8042,7 +8075,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;lblcheckopening.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="numtextwindow_sizey.Location" type="System.Drawing.Point, System.Drawing">
     <value>108, 332</value>
@@ -8063,7 +8096,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;numtextwindow_sizey.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="numprofile.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 11pt</value>
@@ -8090,7 +8123,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;numprofile.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="Label38.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -8123,13 +8156,13 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;Label38.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="txtclickcount.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 9.75pt</value>
   </data>
   <data name="txtclickcount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>132, 52</value>
+    <value>123, 66</value>
   </data>
   <data name="txtclickcount.Size" type="System.Drawing.Size, System.Drawing">
     <value>29, 24</value>
@@ -8156,7 +8189,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;txtclickcount.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="txtprofile.Location" type="System.Drawing.Point, System.Drawing">
     <value>17, 43</value>
@@ -8186,7 +8219,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;txtprofile.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="txtloadprofile.Location" type="System.Drawing.Point, System.Drawing">
     <value>65, 43</value>
@@ -8213,7 +8246,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;txtloadprofile.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="numskip_ash.Location" type="System.Drawing.Point, System.Drawing">
     <value>128, 101</value>
@@ -8618,7 +8651,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;GroupBox3.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="txtsavetempnumber.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -8840,7 +8873,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;Panel5.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="txttemp_picturepass.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 9pt</value>
@@ -8864,7 +8897,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;txttemp_picturepass.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="Label71.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -8897,7 +8930,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;Label71.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="GroupBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>1889, 1</value>
@@ -19542,16 +19575,40 @@
   <data name="&gt;&gt;ExpandTableToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;ToolStripSeparator7.Name" xml:space="preserve">
+    <value>ToolStripSeparator7</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;ViewTableToolStripMenuItem.Name" xml:space="preserve">
     <value>ViewTableToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;ViewTableToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;ToolStripSeparator2.Name" xml:space="preserve">
+    <value>ToolStripSeparator2</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;OpenTextWindowWToolStripMenuItem.Name" xml:space="preserve">
     <value>OpenTextWindowWToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;OpenTextWindowWToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CreateTextFileToolStripMenuItem.Name" xml:space="preserve">
+    <value>CreateTextFileToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;CreateTextFileToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OpenTextFolderToolStripMenuItem.Name" xml:space="preserve">
+    <value>OpenTextFolderToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;OpenTextFolderToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;HelpToolStripMenuItem.Name" xml:space="preserve">
@@ -19691,30 +19748,6 @@
   </data>
   <data name="&gt;&gt;timash_hotkey_sleep.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CreateTextFileToolStripMenuItem.Name" xml:space="preserve">
-    <value>CreateTextFileToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;CreateTextFileToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;OpenTextFolderToolStripMenuItem.Name" xml:space="preserve">
-    <value>OpenTextFolderToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;OpenTextFolderToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripSeparator2.Name" xml:space="preserve">
-    <value>ToolStripSeparator2</value>
-  </data>
-  <data name="&gt;&gt;ToolStripSeparator2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripSeparator7.Name" xml:space="preserve">
-    <value>ToolStripSeparator7</value>
-  </data>
-  <data name="&gt;&gt;ToolStripSeparator7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Mainwindow</value>

@@ -6407,9 +6407,9 @@ Public Class Mainwindow
 
 
 
+        Dim TableCount As Integer = DGtable.Rows.Count - 1
 
-
-        '■画像ファイル数と表データの数に齟齬がないか
+        '■RTFファイル数　画像ファイル数と表データの数に齟齬がないか
 
         Dim FileCount_rtfonly As Integer
 
@@ -6420,13 +6420,20 @@ Public Class Mainwindow
             For Each f As System.IO.FileInfo In files_text
                 FileCount_rtfonly += 1
             Next
+
+            If Not FileCount_rtfonly = TableCount - 1 Then
+                MessageBox.Show("Rtfファイルが存在しないか、数がテンプレート数と一致していません。")
+                Exit Sub
+            End If
+
+
         End If
 
 
 
 
 
-        Dim di As New System.IO.DirectoryInfo(txtpass_picturefolder.Text)
+            Dim di As New System.IO.DirectoryInfo(txtpass_picturefolder.Text)
         Dim files As System.IO.FileInfo() = di.GetFiles("*.bmp", System.IO.SearchOption.TopDirectoryOnly)
         Dim FileCount_bmponly As Integer
 
@@ -6434,7 +6441,7 @@ Public Class Mainwindow
             FileCount_bmponly += 1
         Next
 
-        Dim TableCount As Integer = DGtable.Rows.Count - 1
+
 
         If System.IO.File.Exists(txtpass_picturefolder.Text & "\reset.bmp") Then
             FileCount_bmponly -= 1
@@ -7208,6 +7215,11 @@ Public Class Mainwindow
 
             btnstartopencv.Enabled = False
 
+            If chkmonitor_sizestate.Checked = True Then
+            Else
+                btncv_downsize.PerformClick()
+            End If
+
             'Catch
 
             '    MessageBox.Show("Error")
@@ -7730,7 +7742,7 @@ Public Class Mainwindow
 
                                 Else '画像ファイルが存在しない
 
-                                    lblcv_lap.Text = 1
+                                    'lblcv_lap.Text = 1★
 
                                     show_finish()
 
@@ -7820,7 +7832,7 @@ Public Class Mainwindow
 
                                     Else ' ファイルが存在しない
 
-                                        lblcv_lap.Text = 1
+                                        'lblcv_lap.Text = 1★
 
                                         allkeysend()
 
@@ -10919,10 +10931,15 @@ Public Class Mainwindow
                     chknow_load10.Checked = True
 
                 End If
+
+            End If
+
+            If chkcv_monitor.Checked = True Then
+                async_split_onoff = 1
+                cvtimer.Start()
             End If
 
         End If
-
 
     End Sub
 
@@ -11123,6 +11140,7 @@ Public Class Mainwindow
             End If
 
             If chkcv_loadremover.Checked = True Then
+
                 If chkload1.Checked = True Then
                     chknow_load1.Checked = True
 
@@ -11174,8 +11192,13 @@ Public Class Mainwindow
                 End If
             End If
 
+            If chkcv_monitor.Checked = True Then
+                async_split_onoff = 1
+                cvtimer.Start() 'なくても良い
+            End If
 
         End If
+
     End Sub
 
     Private Sub btncv_first_Click(sender As Object, e As EventArgs) Handles btncv_first.Click
@@ -11403,7 +11426,15 @@ Public Class Mainwindow
                     chknow_load10.Checked = True
 
                 End If
+
             End If
+
+            If chkcv_monitor.Checked = True Then
+                async_split_onoff = 1
+                cvtimer.Start()
+            End If
+
+
 
 
 
@@ -12216,6 +12247,7 @@ Public Class Mainwindow
             numtextwindow_sizex.Value = txtloadprofile.Lines(124)
             numtextwindow_sizey.Value = txtloadprofile.Lines(125)
 
+            chkmonitor_sizestate.Checked = txtloadprofile.Lines(128)
 
 
             Dim parser As TextFieldParser = New TextFieldParser(txtpass_csv.Text, Encoding.GetEncoding("Shift_JIS"))
@@ -12444,7 +12476,7 @@ Public Class Mainwindow
             btnclosewindow.Location = New Drawing.Point(Me.Size.Width - btnclosewindow.Size.Width, btnclosewindow.Location.Y)
             btnsaisyouka.Location = New Drawing.Point(Me.Size.Width - 89, btnsaisyouka.Location.Y)
 
-
+            chkmonitor_sizestate.Checked = False
 
         ElseIf btncv_downsize.Text = My.Resources.Message.msg36 Then '"広げる"
             btncv_downsize.Text = My.Resources.Message.msg35 '"たたむ"
@@ -12453,6 +12485,7 @@ Public Class Mainwindow
             btnclosewindow.Location = New Drawing.Point(Me.Size.Width - btnclosewindow.Size.Width, btnclosewindow.Location.Y)
             btnsaisyouka.Location = New Drawing.Point(Me.Size.Width - 89, btnsaisyouka.Location.Y)
 
+            chkmonitor_sizestate.Checked = True
 
         End If
 
@@ -13540,7 +13573,7 @@ Public Class Mainwindow
 
 
     'Arrayprofileの作成はここ★
-    Private arrayprofile(125) As String
+    Private arrayprofile(128) As String
     Private Sub Createarrayprofile()
 
         arrayprofile = New String() {
@@ -13669,7 +13702,10 @@ numwin_interval.Value,
 "##########Textwindow##########",
 CInt(chkshow_text.Checked),
 numtextwindow_sizex.Value,
-numtextwindow_sizey.Value
+numtextwindow_sizey.Value,
+"-",
+"##########Other##########",
+CInt(chkmonitor_sizestate.Checked)
 }
 
     End Sub

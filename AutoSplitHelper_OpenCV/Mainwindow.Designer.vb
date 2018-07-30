@@ -367,8 +367,12 @@ Partial Class Mainwindow
         Me.PositionSettingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.ExpandTableToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
         Me.ViewTableToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.OpenTextWindowWToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CreateTextFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenTextFolderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InformationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LicenseLToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -679,10 +683,7 @@ Partial Class Mainwindow
         Me.timcamera = New System.Windows.Forms.Timer(Me.components)
         Me.timcalib = New System.Windows.Forms.Timer(Me.components)
         Me.timash_hotkey_sleep = New System.Windows.Forms.Timer(Me.components)
-        Me.CreateTextFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OpenTextFolderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
+        Me.chkmonitor_sizestate = New System.Windows.Forms.CheckBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.DGtable, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -3136,6 +3137,7 @@ Partial Class Mainwindow
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.chkmonitor_sizestate)
         Me.GroupBox2.Controls.Add(Me.numtextwindow_sizex)
         Me.GroupBox2.Controls.Add(Me.lblcheckopening)
         Me.GroupBox2.Controls.Add(Me.numtextwindow_sizey)
@@ -3725,17 +3727,39 @@ Partial Class Mainwindow
         Me.ExpandTableToolStripMenuItem.Name = "ExpandTableToolStripMenuItem"
         resources.ApplyResources(Me.ExpandTableToolStripMenuItem, "ExpandTableToolStripMenuItem")
         '
+        'ToolStripSeparator7
+        '
+        Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
+        resources.ApplyResources(Me.ToolStripSeparator7, "ToolStripSeparator7")
+        '
         'ViewTableToolStripMenuItem
         '
         Me.ViewTableToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
         Me.ViewTableToolStripMenuItem.Name = "ViewTableToolStripMenuItem"
         resources.ApplyResources(Me.ViewTableToolStripMenuItem, "ViewTableToolStripMenuItem")
         '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        resources.ApplyResources(Me.ToolStripSeparator2, "ToolStripSeparator2")
+        '
         'OpenTextWindowWToolStripMenuItem
         '
         Me.OpenTextWindowWToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
         Me.OpenTextWindowWToolStripMenuItem.Name = "OpenTextWindowWToolStripMenuItem"
         resources.ApplyResources(Me.OpenTextWindowWToolStripMenuItem, "OpenTextWindowWToolStripMenuItem")
+        '
+        'CreateTextFileToolStripMenuItem
+        '
+        Me.CreateTextFileToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
+        Me.CreateTextFileToolStripMenuItem.Name = "CreateTextFileToolStripMenuItem"
+        resources.ApplyResources(Me.CreateTextFileToolStripMenuItem, "CreateTextFileToolStripMenuItem")
+        '
+        'OpenTextFolderToolStripMenuItem
+        '
+        Me.OpenTextFolderToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
+        Me.OpenTextFolderToolStripMenuItem.Name = "OpenTextFolderToolStripMenuItem"
+        resources.ApplyResources(Me.OpenTextFolderToolStripMenuItem, "OpenTextFolderToolStripMenuItem")
         '
         'HelpToolStripMenuItem
         '
@@ -6250,27 +6274,15 @@ Partial Class Mainwindow
         '
         Me.timash_hotkey_sleep.Interval = 300
         '
-        'CreateTextFileToolStripMenuItem
+        'chkmonitor_sizestate
         '
-        Me.CreateTextFileToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
-        Me.CreateTextFileToolStripMenuItem.Name = "CreateTextFileToolStripMenuItem"
-        resources.ApplyResources(Me.CreateTextFileToolStripMenuItem, "CreateTextFileToolStripMenuItem")
-        '
-        'OpenTextFolderToolStripMenuItem
-        '
-        Me.OpenTextFolderToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
-        Me.OpenTextFolderToolStripMenuItem.Name = "OpenTextFolderToolStripMenuItem"
-        resources.ApplyResources(Me.OpenTextFolderToolStripMenuItem, "OpenTextFolderToolStripMenuItem")
-        '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        resources.ApplyResources(Me.ToolStripSeparator2, "ToolStripSeparator2")
-        '
-        'ToolStripSeparator7
-        '
-        Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
-        resources.ApplyResources(Me.ToolStripSeparator7, "ToolStripSeparator7")
+        resources.ApplyResources(Me.chkmonitor_sizestate, "chkmonitor_sizestate")
+        Me.chkmonitor_sizestate.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.chkmonitor_sizestate.Checked = True
+        Me.chkmonitor_sizestate.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chkmonitor_sizestate.ForeColor = System.Drawing.SystemColors.Control
+        Me.chkmonitor_sizestate.Name = "chkmonitor_sizestate"
+        Me.chkmonitor_sizestate.UseVisualStyleBackColor = False
         '
         'Mainwindow
         '
@@ -7132,4 +7144,5 @@ Partial Class Mainwindow
     Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
     Friend WithEvents CreateTextFileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OpenTextFolderToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents chkmonitor_sizestate As CheckBox
 End Class
