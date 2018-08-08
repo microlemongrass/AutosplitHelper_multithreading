@@ -9778,6 +9778,12 @@
   <data name="OpenTextFolderToolStripMenuItem.Text" xml:space="preserve">
     <value>Open Text folder(O)</value>
   </data>
+  <data name="DeleteAddTemplateImageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 24</value>
+  </data>
+  <data name="DeleteAddTemplateImageToolStripMenuItem.Text" xml:space="preserve">
+    <value>Delete/Add Template image</value>
+  </data>
   <data name="ToolToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>91, 25</value>
   </data>
@@ -19748,6 +19754,12 @@
   </data>
   <data name="&gt;&gt;timash_hotkey_sleep.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DeleteAddTemplateImageToolStripMenuItem.Name" xml:space="preserve">
+    <value>DeleteAddTemplateImageToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;DeleteAddTemplateImageToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Mainwindow</value>

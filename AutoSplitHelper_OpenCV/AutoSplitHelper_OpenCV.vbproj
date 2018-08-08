@@ -140,6 +140,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Del_Addimagewindow.Designer.vb">
+      <DependentUpon>Del_Addimagewindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Del_Addimagewindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="dialog_sharetemplate.Designer.vb">
       <DependentUpon>dialog_sharetemplate.vb</DependentUpon>
     </Compile>
@@ -236,6 +242,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Del_Addimagewindow.resx">
+      <DependentUpon>Del_Addimagewindow.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="dialog_sharetemplate.ja-JP.resx">
       <DependentUpon>dialog_sharetemplate.vb</DependentUpon>
     </EmbeddedResource>

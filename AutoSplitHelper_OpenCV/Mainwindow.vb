@@ -6384,7 +6384,7 @@ Public Class Mainwindow
         End If
 
 
-        '■seektimeに整数が入っているか★
+        '■seektimeに整数が入っているか★★書く場所がおかしい
         Dim TableRowsCount As Integer = DGtable.Rows.Count - 1
 
         For i = 0 To TableRowsCount - 1
@@ -6423,6 +6423,7 @@ Public Class Mainwindow
 
             If Not FileCount_rtfonly = TableCount - 1 Then
                 MessageBox.Show("Rtfファイルが存在しないか、数がテンプレート数と一致していません。")
+
                 Exit Sub
             End If
 
@@ -6433,7 +6434,7 @@ Public Class Mainwindow
 
 
 
-            Dim di As New System.IO.DirectoryInfo(txtpass_picturefolder.Text)
+        Dim di As New System.IO.DirectoryInfo(txtpass_picturefolder.Text)
         Dim files As System.IO.FileInfo() = di.GetFiles("*.bmp", System.IO.SearchOption.TopDirectoryOnly)
         Dim FileCount_bmponly As Integer
 
@@ -6738,6 +6739,8 @@ Public Class Mainwindow
             txtcv_ikiti_load10.Text = numload_rate10.Value
 
 
+
+
             If chkcv_monitor.Checked = True Then
 
 
@@ -6792,18 +6795,10 @@ Public Class Mainwindow
 
             End If
 
+
             If chkcv_loadremover.Checked = True Then
 
                 chknow_load.Checked = True
-
-
-
-
-
-
-
-
-
 
 
 
@@ -8886,7 +8881,7 @@ Public Class Mainwindow
 
 
 
-                If lblreload_graph.Text = 1 Then
+            If lblreload_graph.Text = 1 Then
 
                 '■グラフ更新
                 graph_split()
@@ -10653,6 +10648,9 @@ Public Class Mainwindow
         async_load8_onoff = 0
         async_load9_onoff = 0
         async_load10_onoff = 0
+
+
+
 
 
 
@@ -13572,6 +13570,7 @@ Public Class Mainwindow
 
 
 
+
     'Arrayprofileの作成はここ★
     Private arrayprofile(128) As String
     Private Sub Createarrayprofile()
@@ -13800,6 +13799,13 @@ CInt(chkmonitor_sizestate.Checked)
 
     End Sub
 
+    Private Sub DeleteAddTemplateImageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteAddTemplateImageToolStripMenuItem.Click
+        Del_Addimagewindow.Show()
+    End Sub
+
+    Private Sub del_addimage()
+
+    End Sub
 
 
 End Class

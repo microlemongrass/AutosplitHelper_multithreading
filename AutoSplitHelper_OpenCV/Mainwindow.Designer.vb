@@ -294,6 +294,7 @@ Partial Class Mainwindow
         Me.btnreset_table = New System.Windows.Forms.Button()
         Me.btnreset_count = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.chkmonitor_sizestate = New System.Windows.Forms.CheckBox()
         Me.numtextwindow_sizex = New System.Windows.Forms.NumericUpDown()
         Me.lblcheckopening = New System.Windows.Forms.Label()
         Me.numtextwindow_sizey = New System.Windows.Forms.NumericUpDown()
@@ -683,7 +684,7 @@ Partial Class Mainwindow
         Me.timcamera = New System.Windows.Forms.Timer(Me.components)
         Me.timcalib = New System.Windows.Forms.Timer(Me.components)
         Me.timash_hotkey_sleep = New System.Windows.Forms.Timer(Me.components)
-        Me.chkmonitor_sizestate = New System.Windows.Forms.CheckBox()
+        Me.DeleteAddTemplateImageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.DGtable, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -3155,6 +3156,16 @@ Partial Class Mainwindow
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.TabStop = False
         '
+        'chkmonitor_sizestate
+        '
+        resources.ApplyResources(Me.chkmonitor_sizestate, "chkmonitor_sizestate")
+        Me.chkmonitor_sizestate.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.chkmonitor_sizestate.Checked = True
+        Me.chkmonitor_sizestate.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chkmonitor_sizestate.ForeColor = System.Drawing.SystemColors.Control
+        Me.chkmonitor_sizestate.Name = "chkmonitor_sizestate"
+        Me.chkmonitor_sizestate.UseVisualStyleBackColor = False
+        '
         'numtextwindow_sizex
         '
         resources.ApplyResources(Me.numtextwindow_sizex, "numtextwindow_sizex")
@@ -3683,7 +3694,7 @@ Partial Class Mainwindow
         '
         'ToolToolStripMenuItem
         '
-        Me.ToolToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StartMonitoringMToolStripMenuItem, Me.ToolStripSeparator6, Me.PreviewGetTemplatePictureToolStripMenuItem, Me.CalibrationToolStripMenuItem1, Me.PositionSettingToolStripMenuItem, Me.ToolStripSeparator3, Me.ExpandTableToolStripMenuItem, Me.ToolStripSeparator7, Me.ViewTableToolStripMenuItem, Me.ToolStripSeparator2, Me.OpenTextWindowWToolStripMenuItem, Me.CreateTextFileToolStripMenuItem, Me.OpenTextFolderToolStripMenuItem})
+        Me.ToolToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StartMonitoringMToolStripMenuItem, Me.ToolStripSeparator6, Me.PreviewGetTemplatePictureToolStripMenuItem, Me.CalibrationToolStripMenuItem1, Me.PositionSettingToolStripMenuItem, Me.ToolStripSeparator3, Me.ExpandTableToolStripMenuItem, Me.ToolStripSeparator7, Me.ViewTableToolStripMenuItem, Me.ToolStripSeparator2, Me.OpenTextWindowWToolStripMenuItem, Me.CreateTextFileToolStripMenuItem, Me.OpenTextFolderToolStripMenuItem, Me.DeleteAddTemplateImageToolStripMenuItem})
         Me.ToolToolStripMenuItem.Name = "ToolToolStripMenuItem"
         resources.ApplyResources(Me.ToolToolStripMenuItem, "ToolToolStripMenuItem")
         '
@@ -6274,15 +6285,10 @@ Partial Class Mainwindow
         '
         Me.timash_hotkey_sleep.Interval = 300
         '
-        'chkmonitor_sizestate
+        'DeleteAddTemplateImageToolStripMenuItem
         '
-        resources.ApplyResources(Me.chkmonitor_sizestate, "chkmonitor_sizestate")
-        Me.chkmonitor_sizestate.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.chkmonitor_sizestate.Checked = True
-        Me.chkmonitor_sizestate.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chkmonitor_sizestate.ForeColor = System.Drawing.SystemColors.Control
-        Me.chkmonitor_sizestate.Name = "chkmonitor_sizestate"
-        Me.chkmonitor_sizestate.UseVisualStyleBackColor = False
+        Me.DeleteAddTemplateImageToolStripMenuItem.Name = "DeleteAddTemplateImageToolStripMenuItem"
+        resources.ApplyResources(Me.DeleteAddTemplateImageToolStripMenuItem, "DeleteAddTemplateImageToolStripMenuItem")
         '
         'Mainwindow
         '
@@ -7145,4 +7151,5 @@ Partial Class Mainwindow
     Friend WithEvents CreateTextFileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OpenTextFolderToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents chkmonitor_sizestate As CheckBox
+    Friend WithEvents DeleteAddTemplateImageToolStripMenuItem As ToolStripMenuItem
 End Class
