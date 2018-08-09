@@ -26,11 +26,13 @@ Partial Class Del_Addimagewindow
         Me.txtpass_csv = New System.Windows.Forms.TextBox()
         Me.txtpass_rtf = New System.Windows.Forms.TextBox()
         Me.listnumber = New System.Windows.Forms.ListBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.btnok = New System.Windows.Forms.Button()
+        Me.btninsert = New System.Windows.Forms.Button()
+        Me.btndelete = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.txtselectednumber = New System.Windows.Forms.TextBox()
+        Me.listcomment = New System.Windows.Forms.ListBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -64,37 +66,37 @@ Partial Class Del_Addimagewindow
         Me.listnumber.Size = New System.Drawing.Size(68, 319)
         Me.listnumber.TabIndex = 3
         '
-        'Button1
+        'btnok
         '
-        Me.Button1.Location = New System.Drawing.Point(228, 330)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "OK"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnok.Location = New System.Drawing.Point(335, 222)
+        Me.btnok.Name = "btnok"
+        Me.btnok.Size = New System.Drawing.Size(75, 23)
+        Me.btnok.TabIndex = 4
+        Me.btnok.Text = "OK"
+        Me.btnok.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btninsert
         '
-        Me.Button2.Location = New System.Drawing.Point(104, 12)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 5
-        Me.Button2.Text = "Insert"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btninsert.Location = New System.Drawing.Point(293, 12)
+        Me.btninsert.Name = "btninsert"
+        Me.btninsert.Size = New System.Drawing.Size(75, 23)
+        Me.btninsert.TabIndex = 5
+        Me.btninsert.Text = "Insert"
+        Me.btninsert.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btndelete
         '
-        Me.Button3.Location = New System.Drawing.Point(104, 51)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 6
-        Me.Button3.Text = "Delete"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btndelete.Location = New System.Drawing.Point(293, 51)
+        Me.btndelete.Name = "btndelete"
+        Me.btndelete.Size = New System.Drawing.Size(75, 23)
+        Me.btndelete.TabIndex = 6
+        Me.btndelete.Text = "Delete"
+        Me.btndelete.UseVisualStyleBackColor = True
         '
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.PictureBox1.Location = New System.Drawing.Point(104, 112)
+        Me.PictureBox1.Location = New System.Drawing.Point(293, 125)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(117, 91)
         Me.PictureBox1.TabIndex = 7
@@ -110,16 +112,34 @@ Partial Class Del_Addimagewindow
         Me.CheckBox1.Text = "Reset"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
+        'txtselectednumber
+        '
+        Me.txtselectednumber.Location = New System.Drawing.Point(293, 96)
+        Me.txtselectednumber.Name = "txtselectednumber"
+        Me.txtselectednumber.Size = New System.Drawing.Size(117, 23)
+        Me.txtselectednumber.TabIndex = 9
+        '
+        'listcomment
+        '
+        Me.listcomment.FormattingEnabled = True
+        Me.listcomment.ItemHeight = 15
+        Me.listcomment.Location = New System.Drawing.Point(131, 12)
+        Me.listcomment.Name = "listcomment"
+        Me.listcomment.Size = New System.Drawing.Size(68, 319)
+        Me.listcomment.TabIndex = 10
+        '
         'Del_Addimagewindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(516, 365)
+        Me.ClientSize = New System.Drawing.Size(764, 465)
+        Me.Controls.Add(Me.listcomment)
+        Me.Controls.Add(Me.txtselectednumber)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btndelete)
+        Me.Controls.Add(Me.btninsert)
+        Me.Controls.Add(Me.btnok)
         Me.Controls.Add(Me.listnumber)
         Me.Controls.Add(Me.txtpass_rtf)
         Me.Controls.Add(Me.txtpass_csv)
@@ -138,9 +158,11 @@ Partial Class Del_Addimagewindow
     Friend WithEvents txtpass_csv As TextBox
     Friend WithEvents txtpass_rtf As TextBox
     Friend WithEvents listnumber As ListBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents btnok As Button
+    Friend WithEvents btninsert As Button
+    Friend WithEvents btndelete As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents txtselectednumber As TextBox
+    Friend WithEvents listcomment As ListBox
 End Class

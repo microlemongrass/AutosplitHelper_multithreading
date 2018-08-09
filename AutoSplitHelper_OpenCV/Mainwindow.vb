@@ -1,4 +1,4 @@
-﻿'最新の変更は★で検索
+﻿'直近の変更は★、気をつけたほうが良さそうなのは♥
 
 Imports Microsoft.VisualBasic.FileIO
 Imports System.Text
@@ -16,7 +16,7 @@ Public Class Mainwindow
 
 
 
-    '■キー入力を受け取る★
+    '■キー入力を受け取る
     Private Declare Function GetKeyPress Lib "user32" Alias "GetAsyncKeyState" (ByVal key As Integer) As Integer
 
     '■ウィンドウタイトルからハンドル値を取得するためのAPI
@@ -141,7 +141,7 @@ Public Class Mainwindow
 
         End If
 
-        '■いるかわからないので後で確認。puttimeの適用★
+        '■いるかわからないので後で確認。puttimeの適用♥
         keydown_length = numpresstime.Value
 
         '■アプリ終了時のソフトの位置を記憶、復元
@@ -311,7 +311,7 @@ Public Class Mainwindow
 
             Try
 
-                Dim myfilename_table1 As String = "./profile/default/table.csv" '★
+                Dim myfilename_table1 As String = "./profile/default/table.csv"
 
                 Dim parser As TextFieldParser = New TextFieldParser(myfilename_table1, Encoding.GetEncoding("Shift_JIS"))
                 parser.TextFieldType = FieldType.Delimited
@@ -401,10 +401,9 @@ Public Class Mainwindow
             cmbtimer.SelectedIndex = 0
             cmbsomeapp.SelectedIndex = 0
 
-            txtpass_picturefolder.Text = "./profile/default/picture" '★
-            txtpass_rtf.Text = "./profile/default/text" '★
-
-            txtpass_csv.Text = "./profile/default/table.csv" '★
+            txtpass_picturefolder.Text = "./profile/default/picture"
+            txtpass_rtf.Text = "./profile/default/text"
+            txtpass_csv.Text = "./profile/default/table.csv"
 
             cmbcv_device.SelectedIndex = 0
 
@@ -419,9 +418,8 @@ Public Class Mainwindow
 
         btncv_downsize.Text = My.Resources.Message.msg35
 
-        '★
         btnresetup.Enabled = False
-        '★
+
         webcam_sleep.Interval = New TimeSpan(0, 0, 0, 0, 600)
 
 
@@ -452,32 +450,38 @@ Public Class Mainwindow
         st1.Close()
 
 
-        '■内容を取得★
-
-        rtxtupdate.Clear()
-        Dim s1 As String = html
-
-        Dim lefturl As String, righturl As String
-
-        Dim filename As String
-
-        filename = html
-        lefturl = InStr(filename, "AutosplitterUpdatestart<br>") + 22  'Mid(filename, InStr(filename, "<url>") + 5)  '拡張子を返します
-
-        Dim s2 As String = "" & filename.Substring(lefturl) ', righturl - lefturl - 1) & ""  '4文字目から3文字を取得する
-
-        If s2.Contains("AutosplitterUpdateend") = True Then
-
-            righturl = InStr(filename, "AutosplitterUpdateend")
-            s2 = filename.Substring(lefturl, righturl - lefturl - 1) & ""  '4文字目から3文字を取得する
+        '■ページの内容を取得♥
+        Try
 
 
-        End If
+            rtxtupdate.Clear()
+            Dim s1 As String = html
 
-        Dim s3 As String = s2.Replace("<br>", "")
+            Dim lefturl As String, righturl As String
 
-        rtxtupdate.Text = s3
+            Dim filename As String
 
+            filename = html
+            lefturl = InStr(filename, "AutosplitterUpdatestart<br>") + 22  'Mid(filename, InStr(filename, "<url>") + 5)  '拡張子を返します
+
+            Dim s2 As String = "" & filename.Substring(lefturl) ', righturl - lefturl - 1) & ""  '4文字目から3文字を取得する
+
+            If s2.Contains("AutosplitterUpdateend") = True Then
+
+                righturl = InStr(filename, "AutosplitterUpdateend")
+                s2 = filename.Substring(lefturl, righturl - lefturl - 1) & ""  '4文字目から3文字を取得する
+
+
+            End If
+
+            Dim s3 As String = s2.Replace("<br>", "")
+
+            rtxtupdate.Text = s3
+
+        Catch ex As Exception
+            Console.WriteLine("インターネットに接続されていないようです。")
+
+        End Try
 
     End Sub
 
@@ -871,14 +875,14 @@ Public Class Mainwindow
 
         Dim import_name As String = Import_picture.txtname.Text
 
-        txtpass_picturefolder.Text = "./profile/" & import_name & "/picture" '★
-        txtpass_rtf.Text = "./profile/" & import_name & "/text" '★
-        txtpass_csv.Text = "./profile/" & import_name & "/table.csv" '★
+        txtpass_picturefolder.Text = "./profile/" & import_name & "/picture"
+        txtpass_rtf.Text = "./profile/" & import_name & "/text"
+        txtpass_csv.Text = "./profile/" & import_name & "/table.csv"
 
 
         '■フォルダ (ディレクトリ) を作成する
-        System.IO.Directory.CreateDirectory("./profile/" & import_name & "/picture/") '★
-        System.IO.Directory.CreateDirectory("./profile/" & import_name & "/text/") '★
+        System.IO.Directory.CreateDirectory("./profile/" & import_name & "/picture/")
+        System.IO.Directory.CreateDirectory("./profile/" & import_name & "/text/")
 
         My.Computer.FileSystem.CopyDirectory(import_pic, "./profile/" & import_name & "/picture",
         FileIO.UIOption.AllDialogs, FileIO.UICancelOption.DoNothing)
@@ -887,7 +891,7 @@ Public Class Mainwindow
         FileIO.UIOption.AllDialogs, FileIO.UICancelOption.DoNothing)
 
         My.Computer.FileSystem.CopyFile(import_csv, "./profile/" & import_name & "/table.csv",
-        FileIO.UIOption.AllDialogs, FileIO.UICancelOption.DoNothing) '★
+        FileIO.UIOption.AllDialogs, FileIO.UICancelOption.DoNothing)
 
 
         '■csvファイルの内容を表に表示
@@ -944,7 +948,8 @@ Public Class Mainwindow
         Next
 
         'Dim sw As New System.IO.StreamWriter("./savedata/profile/" & cmbprofile.SelectedItem & ".txt", False, System.Text.Encoding.GetEncoding("shift_jis"))
-        Dim sw As New System.IO.StreamWriter("./profile/" & cmbprofile.SelectedItem & "/data.txt", False, System.Text.Encoding.GetEncoding("shift_jis")) '★
+        Dim sw As New System.IO.StreamWriter("./profile/" & cmbprofile.SelectedItem & "/data.txt", False,
+                                             System.Text.Encoding.GetEncoding("shift_jis"))
 
         sw.Write(txtprofile.Text)
 
@@ -953,7 +958,7 @@ Public Class Mainwindow
 
         numprofile.Value = cmbprofile.SelectedIndex '選択保存用
 
-        '■リセットの部分の背景変更'★
+        '■リセットの部分の背景変更
         DGtable.Rows(0).DefaultCellStyle.BackColor = Color.FromArgb(58, 16, 16) 'Color.MistyRose
 
         lbltitlebar.Text = "[" & cmbprofile.SelectedItem & "]" & " AutoSplit Helper by Image " & lblversion.Text
@@ -2404,8 +2409,8 @@ Public Class Mainwindow
 
     End Sub
 
-
-    Private Sub btnselectvideo_Click(sender As Object, e As EventArgs) Handles btnselectvideo.Click '★
+    '♥
+    Private Sub btnselectvideo_Click(sender As Object, e As EventArgs) Handles btnselectvideo.Click
 
         Dim ii As Integer
 
@@ -2437,7 +2442,8 @@ Public Class Mainwindow
 
     End Sub
 
-    Private Sub btncur_showvideo_Click(sender As Object, e As EventArgs) Handles btncur_showvideo.Click '★
+    '♥
+    Private Sub btncur_showvideo_Click(sender As Object, e As EventArgs) Handles btncur_showvideo.Click
 
         pnl_video.Enabled = False
 
@@ -2794,7 +2800,8 @@ Public Class Mainwindow
     Private WithEvents webcam_sleep As New DispatcherTimer()
     Private webcam_sleepcount As Integer = 0
 
-    Private Sub webcam_sleep_Tick(sender As Object, e As EventArgs) Handles webcam_sleep.Tick '★
+    '♥
+    Private Sub webcam_sleep_Tick(sender As Object, e As EventArgs) Handles webcam_sleep.Tick
 
         webcam_sleepcount += 1
 
@@ -2825,7 +2832,7 @@ Public Class Mainwindow
         '適切な解像度を入力しているか確認
         If (numcv_sizex.Value Mod 16 = 0 And numcv_sizey.Value Mod 9 = 0) Or (numcv_sizex.Value Mod 4 = 0 And numcv_sizey.Value Mod 3 = 0) Then
 
-            Me.Size = New Drawing.Size(numcv_sizex.Value + pnlview_control.Width, 23 + numcv_sizey.Value + piczoom.Height + DGtable.Height + 20 + 40) '★
+            Me.Size = New Drawing.Size(numcv_sizex.Value + pnlview_control.Width, 23 + numcv_sizey.Value + piczoom.Height + DGtable.Height + 20 + 40)
 
             btnview_close.Location = New Drawing.Point(numcv_sizex.Value + pnlview_control.Width - btnview_close.Width, 0)
 
@@ -3108,13 +3115,13 @@ Public Class Mainwindow
             Catch ex As Exception
 
                 txtclickcount.Text = 0
-                Cursor.Clip = Rectangle.Empty
-                Me.Cursor = Cursors.Default
-                My.Forms.skeleton.Close()
-                piccap.Visible = False
-                cvpreview.Start()
+            Cursor.Clip = Rectangle.Empty
+            Me.Cursor = Cursors.Default
+            My.Forms.skeleton.Close()
+            piccap.Visible = False
+            cvpreview.Start()
 
-                MessageBox.Show(My.Resources.Message.msgb4, messagebox_name) '"無効な範囲です。")
+            MessageBox.Show(My.Resources.Message.msgb4, messagebox_name) '"無効な範囲です。")
 
             End Try
 
@@ -3130,29 +3137,52 @@ Public Class Mainwindow
 
     End Sub
 
+    '■画像ファイルの保存とテキストファイルの生成★
     Sub savepicture()
 
         Try
 
-            'Dim stCurrentDir As String = System.IO.Directory.GetCurrentDirectory()
             Dim savedir As String = txtpass_picturefolder.Text
             Dim psnumber As Integer = txtrowscount.Text
 
+            '■フォルダパス＋ファイル名を確定
             Dim picname As String = savedir & "\" & psnumber & ".bmp"
             Dim picname_reset As String = savedir & "\reset.bmp"
 
+            '■上書き確認の有無
             With picview_capture
                 If Not (.Image Is Nothing) Then
 
-                    If chkoverwrite.Checked = False Then '上書き確認しない
+                    '上書き確認しない
+                    If chkoverwrite.Checked = False Then
 
                         inserttable()
 
                         If psnumber = 0 Then
+                            'テンプレート保存（Reset）
                             .Image.Save(picname_reset, ImageFormat.Bmp)
 
+
+                            'テキストファイルを生成。
+                            If Not System.IO.File.Exists(txtpass_rtf.Text & "/reset.rtf") Then
+
+                                My.Computer.FileSystem.CopyFile("./savedata/blank.rtf", txtpass_rtf.Text & "/reset.rtf", False)
+
+
+                            End If
+
+
                         Else
+                            'テンプレート保存
                             .Image.Save(picname, ImageFormat.Bmp)
+
+                            'テキストファイルを生成。
+                            If Not System.IO.File.Exists(txtpass_rtf.Text & "/" & psnumber & ".rtf") Then
+
+                                My.Computer.FileSystem.CopyFile("./savedata/blank.rtf", txtpass_rtf.Text & "/" & psnumber & ".rtf", False)
+
+
+                            End If
 
 
                         End If
@@ -3165,6 +3195,11 @@ Public Class Mainwindow
 
 
 
+
+
+
+
+                        '上書き確認する
                     ElseIf chkoverwrite.Checked = True Then
 
                         '■ファイルが存在しているかどうか確認する
@@ -3175,24 +3210,51 @@ Public Class Mainwindow
                             If System.IO.File.Exists(picname_reset) Then
 
                                 'メッセージボックスを表示する 
-                                Dim result As DialogResult = MessageBox.Show(My.Resources.Message.msgb5,
-                                                                             My.Resources.Message.msgb6,
-                                                                             MessageBoxButtons.YesNo,
-                                                                             MessageBoxIcon.Exclamation,
-                                                                             MessageBoxDefaultButton.Button2) '"ファイルを上書きしますか？"
+                                Dim result As DialogResult = MessageBox.Show(
+                                    My.Resources.Message.msgb5,
+                                    My.Resources.Message.msgb6,
+                                    MessageBoxButtons.YesNo,
+                                    MessageBoxIcon.Exclamation,
+                                    MessageBoxDefaultButton.Button2) '"ファイルを上書きしますか？"
 
-                                '何が選択されたか調べる 
+
+                                '■「はい」が選択された時は保存、「いいえ」が選択された時はなにもしない。
+
+                                '「はい」が選択された。
                                 If result = DialogResult.Yes Then
-                                    '「はい」が選択された時 
                                     Console.WriteLine("「はい」が選択されました")
 
                                     inserttable()
 
                                     If psnumber = 0 Then
+
+                                        'テンプレートを保存
                                         .Image.Save(picname_reset, ImageFormat.Bmp)
+
+                                        'テキストファイルを生成。
+                                        If Not System.IO.File.Exists(txtpass_rtf.Text & "/reset.rtf") Then
+
+                                            My.Computer.FileSystem.CopyFile("./savedata/blank.rtf", txtpass_rtf.Text & "/reset.rtf", False)
+
+
+                                        End If
+
                                     Else
+                                        'テンプレートを保存
                                         .Image.Save(picname, ImageFormat.Bmp)
+
+                                        'テキストファイルを生成。
+                                        If Not System.IO.File.Exists(txtpass_rtf.Text & "/" & psnumber & ".rtf") Then
+
+                                            My.Computer.FileSystem.CopyFile("./savedata/blank.rtf", txtpass_rtf.Text & "/" & psnumber & ".rtf", False)
+
+
+                                        End If
+
                                     End If
+
+
+
 
                                     txtno_comment.Text = psnumber + 1 & "," & CStr(DGtable(no.Index, psnumber + 1).Value)
 
@@ -3201,8 +3263,9 @@ Public Class Mainwindow
                                     DGtable.Rows(psnumber + 1).Selected = True
 
 
+                                    '「いいえ」が選択された
                                 ElseIf result = DialogResult.No Then
-                                    '「いいえ」が選択された時 
+
                                     Console.WriteLine("「いいえ」が選択されました")
                                     Exit Sub
 
@@ -3210,18 +3273,40 @@ Public Class Mainwindow
                                 End If
 
 
-
-                            Else '上書きされない。
+                                'reset.bmpが存在しない→上書き確認不要。
+                            Else
 
                                 inserttable()
 
                                 If psnumber = 0 Then
+                                    'テンプレート保存
                                     .Image.Save(picname_reset, ImageFormat.Bmp)
+
+                                    'テキストファイルを生成。
+                                    If Not System.IO.File.Exists(txtpass_rtf.Text & "/reset.rtf") Then
+
+                                        My.Computer.FileSystem.CopyFile("./savedata/blank.rtf", txtpass_rtf.Text & "/reset.rtf", False)
+
+
+                                    End If
+
+
                                 Else
+                                    'テンプレート保存
                                     .Image.Save(picname, ImageFormat.Bmp)
+
+                                    'テキストファイルを生成。
+                                    If Not System.IO.File.Exists(txtpass_rtf.Text & "/" & psnumber & ".rtf") Then
+
+                                        My.Computer.FileSystem.CopyFile("./savedata/blank.rtf", txtpass_rtf.Text & "/" & psnumber & ".rtf", False)
+
+
+                                    End If
+
                                 End If
 
                                 txtno_comment.Text = psnumber + 1 & "," & CStr(DGtable(no.Index, psnumber + 1).Value)
+
 
                                 '次の行を選択する
                                 DGtable.Rows(psnumber).Selected = False
@@ -3231,56 +3316,108 @@ Public Class Mainwindow
                             End If
 
 
-
-                        Else '■1,2,....bmpを保存しようとしている。
+                            '■1,2,....bmpを保存しようとしている。
+                        Else
 
                             If System.IO.File.Exists(picname) Then
 
                                 'メッセージボックスを表示する 
-                                Dim result As DialogResult = MessageBox.Show(My.Resources.Message.msgb5,
-                                                                     My.Resources.Message.msgb6,
-                                                                     MessageBoxButtons.YesNo,
-                                                                     MessageBoxIcon.Exclamation,
-                                                                     MessageBoxDefaultButton.Button2)
+                                Dim result As DialogResult = MessageBox.Show(
+                                    My.Resources.Message.msgb5,
+                                    My.Resources.Message.msgb6,
+                                    MessageBoxButtons.YesNo,
+                                    MessageBoxIcon.Exclamation,
+                                    MessageBoxDefaultButton.Button2)
 
-                                '何が選択されたか調べる 
+                                '■「はい」が選択された時は保存、「いいえ」が選択された時はなにもしない。
+
+                                '「はい」が選択された
                                 If result = DialogResult.Yes Then
-                                    '「はい」が選択された時 
+
                                     Console.WriteLine("「はい」が選択されました")
 
                                     inserttable()
 
                                     If psnumber = 0 Then
+
+                                        'テンプレート保存
                                         .Image.Save(picname_reset, ImageFormat.Bmp)
+
+                                        'テキストファイルを生成。
+                                        If Not System.IO.File.Exists(txtpass_rtf.Text & "/reset.rtf") Then
+
+                                            My.Computer.FileSystem.CopyFile("./savedata/blank.rtf", txtpass_rtf.Text & "/reset.rtf", False)
+
+
+                                        End If
+
+
                                     Else
+
+                                        'テンプレート保存
                                         .Image.Save(picname, ImageFormat.Bmp)
+
+                                        'テキストファイルを生成。
+                                        If Not System.IO.File.Exists(txtpass_rtf.Text & "/" & psnumber & ".rtf") Then
+
+                                            My.Computer.FileSystem.CopyFile("./savedata/blank.rtf", txtpass_rtf.Text & "/" & psnumber & ".rtf", False)
+
+
+                                        End If
+
                                     End If
 
                                     txtno_comment.Text = psnumber + 1 & "," & CStr(DGtable(no.Index, psnumber + 1).Value)
+
 
                                     '次の行を選択する
                                     DGtable.Rows(psnumber).Selected = False
                                     DGtable.Rows(psnumber + 1).Selected = True
 
 
+
+                                    '「いいえ」が選択された 
                                 ElseIf result = DialogResult.No Then
-                                    '「いいえ」が選択された時 
+
                                     Console.WriteLine("「いいえ」が選択されました")
-
-
                                     Exit Sub
 
                                 End If
 
 
+                                'n.bmpが存在しない→上書き確認必要なし。
                             Else
 
                                 inserttable()
 
                                 If psnumber = 0 Then
+
+                                    'テンプレート保存
                                     .Image.Save(picname_reset, ImageFormat.Bmp)
+
+                                    'テキストファイルを生成。
+                                    If Not System.IO.File.Exists(txtpass_rtf.Text & "/reset.rtf") Then
+
+                                        My.Computer.FileSystem.CopyFile("./savedata/blank.rtf", txtpass_rtf.Text & "/reset.rtf", False)
+
+
+                                    End If
+
+
                                 Else
+
+                                    'テンプレート保存
                                     .Image.Save(picname, ImageFormat.Bmp)
+
+                                    'テキストファイルを生成。
+                                    If Not System.IO.File.Exists(txtpass_rtf.Text & "/" & psnumber & ".rtf") Then
+
+                                        My.Computer.FileSystem.CopyFile("./savedata/blank.rtf", txtpass_rtf.Text & "/" & psnumber & ".rtf", False)
+
+
+                                    End If
+
+
                                 End If
 
                                 txtno_comment.Text = psnumber + 1 & "," & CStr(DGtable(no.Index, psnumber + 1).Value)
@@ -4860,7 +4997,7 @@ Public Class Mainwindow
 
         btncalib_resize.Enabled = False
         btnpreview.Enabled = False
-        txtpass_picturefolder.Text = "./profile/" & cmbprofile.SelectedItem & "/picture" 'Mainwindow.txtpass_picturefolder.Text'★
+        txtpass_picturefolder.Text = "./profile/" & cmbprofile.SelectedItem & "/picture" 'Mainwindow.txtpass_picturefolder.Text
 
 
         '■ファイルが存在しているかどうか確認する
@@ -6213,7 +6350,7 @@ Public Class Mainwindow
     Private Sub btnstartopencv_Click(sender As Object, e As EventArgs) Handles btnstartopencv.Click
 
 
-
+        '♥
         '■ビデオプレイヤーを表示するかどうか
         If chkshowvideo.Checked = True And Videoplayer.Visible = False Then
             'MessageBox.Show(My.Resources.Message.msg44) 'ビデオプレイヤーが表示されていません。
@@ -6222,7 +6359,7 @@ Public Class Mainwindow
         End If
 
         If chkshow_text.Checked = True And Textwindow.Visible = False Then
-            'MessageBox.Show("テキストビューワーが表示されていません。") 'ビデオプレイヤーが表示されていません。'★
+            'MessageBox.Show("テキストビューワーが表示されていません。") 'ビデオプレイヤーが表示されていません。
             Textwindow.Show()
 
 
@@ -6739,9 +6876,8 @@ Public Class Mainwindow
             txtcv_ikiti_load10.Text = numload_rate10.Value
 
 
-
-
             If chkcv_monitor.Checked = True Then
+
 
 
                 '■最初の画像の読み込み
@@ -6749,8 +6885,10 @@ Public Class Mainwindow
                 tplex = Cv2.ImRead(aa, ImreadModes.Color)
 
                 '■最初の画像の読み込み（表示用）
-                Dim img As System.Drawing.Image = System.Drawing.Image.FromFile(aa)
-                piccv_picture.Image = img
+                Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
+                    piccv_picture.Image = Image.FromStream(fs)
+                End Using
+
 
                 chknow_monitor.Checked = True
 
@@ -6762,10 +6900,13 @@ Public Class Mainwindow
                 tplex = Cv2.ImRead(aa, ImreadModes.Color)
 
                 '■最初の画像の読み込み（表示用）
-                Dim img As System.Drawing.Image = System.Drawing.Image.FromFile(aa)
-                piccv_picture.Image = img
+                Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
+                    piccv_picture.Image = Image.FromStream(fs)
+                End Using
 
             End If
+
+            'tplex = tplex_temp.Clone()
 
 
             If chkcv_resetonoff.Checked = True Then
@@ -6775,8 +6916,9 @@ Public Class Mainwindow
                 tplex_r = Cv2.ImRead(aa_reset, ImreadModes.Color)
 
                 '■リセット画像の読み込み（表示用）
-                Dim img_reset As System.Drawing.Image = System.Drawing.Image.FromFile(aa_reset)
-                piccv_reset.Image = img_reset
+                Using fs As FileStream = New FileStream(aa_reset, FileMode.Open, FileAccess.Read)
+                    piccv_reset.Image = Image.FromStream(fs)
+                End Using
 
                 chknow_reset.Checked = True
 
@@ -6784,12 +6926,14 @@ Public Class Mainwindow
             ElseIf chkcv_resetonoff.Checked = False Then '適当な画像を読み込む。
 
                 '■最初の画像の読み込み
-                Dim aa_reset As String = txtpass_picturefolder.Text & "\" & 1 & ".bmp"
+                Dim aa_reset As String = txtpass_picturefolder.Text & "\" & 2 & ".bmp"
                 tplex_r = Cv2.ImRead(aa_reset, ImreadModes.Color)
 
-                '■最初の画像の読み込み（表示用）
-                Dim img_reset As System.Drawing.Image = System.Drawing.Image.FromFile(aa_reset)
-                piccv_reset.Image = img_reset
+                '■リセット画像の読み込み（表示用）
+                Using fs As FileStream = New FileStream(aa_reset, FileMode.Open, FileAccess.Read)
+                    piccv_reset.Image = Image.FromStream(fs)
+                End Using
+
 
 
 
@@ -6807,9 +6951,10 @@ Public Class Mainwindow
                     Dim aa_load1 As String = txtpass_picturefolder.Text & "\loading1.bmp"
                     tplex_load1 = Cv2.ImRead(aa_load1, ImreadModes.Color)
 
-                    '■ローディング画像1の読み込み（表示用）
-                    Dim img_load1 As System.Drawing.Image = System.Drawing.Image.FromFile(aa_load1)
-                    piccv_load.Image = img_load1
+                    '■ローディング画像の読み込み（表示用）
+                    Using fs As FileStream = New FileStream(aa_load1, FileMode.Open, FileAccess.Read)
+                        piccv_load.Image = Image.FromStream(fs)
+                    End Using
 
                     chknow_load1.Checked = True
 
@@ -6819,9 +6964,10 @@ Public Class Mainwindow
                     Dim aa_load1 As String = txtpass_picturefolder.Text & "\" & 1 & ".bmp"
                     tplex_load1 = Cv2.ImRead(aa_load1, ImreadModes.Color)
 
-                    '■最初の画像の読み込み（表示用）
-                    Dim img_load1 As System.Drawing.Image = System.Drawing.Image.FromFile(aa_load1)
-                    piccv_load.Image = img_load1
+                    '■ローディング画像の読み込み（表示用）
+                    Using fs As FileStream = New FileStream(aa_load1, FileMode.Open, FileAccess.Read)
+                        piccv_load.Image = Image.FromStream(fs)
+                    End Using
 
                 End If
 
@@ -6998,9 +7144,10 @@ Public Class Mainwindow
                 Dim aa_load1 As String = txtpass_picturefolder.Text & "\" & 1 & ".bmp"
                 tplex_load1 = Cv2.ImRead(aa_load1, ImreadModes.Color)
 
-                '■最初の画像の読み込み（表示用）
-                Dim img_load1 As System.Drawing.Image = System.Drawing.Image.FromFile(aa_load1)
-                piccv_load.Image = img_load1
+                '■ローディング画像の読み込み（表示用）
+                Using fs As FileStream = New FileStream(aa_load1, FileMode.Open, FileAccess.Read)
+                    piccv_load.Image = Image.FromStream(fs)
+                End Using
 
 
 
@@ -7085,8 +7232,9 @@ Public Class Mainwindow
 
             End If
 
+            '開始時はオフにしておき、1度splitした時に監視をする。
             If chkcv_resetonoff.Checked = True Then
-                'chknow_reset.Checked = True★開始時はオフにしてみたい
+                'chknow_reset.Checked = True　
                 'async_reset_onoff = 1
 
             End If
@@ -7158,7 +7306,7 @@ Public Class Mainwindow
 
 
 
-            'ビデオ再生なし                    →今まで通り★
+            'ビデオ再生なし                    →ビデオプレーヤー非表示、タイマースタートする（今まで通り）
             'ビデオ再生あり、かつ手動スタート  →ビデオプレーヤー表示、タイマースタートしない
             'ビデオ再生あり、かつ自動スタート  →ビデオプレーヤー表示、タイマースタートする
 
@@ -7166,7 +7314,6 @@ Public Class Mainwindow
 
             If chkshowvideo.Checked = False Then
                 Console.WriteLine("ビデオ再生なし")
-
 
                 cvtimer.Start()
                 cvtimer_ash_hotkey.Start()
@@ -7190,7 +7337,7 @@ Public Class Mainwindow
                     cvtimer_manualstart.Interval = New TimeSpan(0, 0, 0, 0, 16)
                     cvtimer_manualstart.Start()
 
-                    txtstate.Text = "RTAスタート待機中" '♥
+                    txtstate.Text = "RTAスタート待機中"
 
 
                 End If
@@ -7222,6 +7369,8 @@ Public Class Mainwindow
             'End Try
 
 
+
+
         Else
 
             MessageBox.Show(My.Resources.Message.msg52, messagebox_name) 'サイズは16:9または4:3の比で入力してください。
@@ -7237,7 +7386,7 @@ Public Class Mainwindow
 
     End Sub
 
-    Private async_split_onoff = 0 '★
+    Private async_split_onoff = 0
     Private async_reset_onoff = 0
     Private async_load1_onoff = 0
     Private async_load2_onoff = 0
@@ -7250,7 +7399,9 @@ Public Class Mainwindow
     Private async_load9_onoff = 0
     Private async_load10_onoff = 0
 
-    Private Sub cvtimer_ash_hotkey_Tick(sender As Object, e As EventArgs) Handles cvtimer_ash_hotkey.Tick '★
+
+    'ASH本体のホットキー
+    Private Sub cvtimer_ash_hotkey_Tick(sender As Object, e As EventArgs) Handles cvtimer_ash_hotkey.Tick
 
         If GetKeyPress(numreset_ash.Value) Then
 
@@ -7287,7 +7438,7 @@ Public Class Mainwindow
 
     End Sub
 
-    Private Async Sub Async_split() '★
+    Private Async Sub Async_split()
 
         Await Task.Run(Sub()
 
@@ -7301,7 +7452,7 @@ Public Class Mainwindow
 
     End Sub
 
-    Private Async Sub Async_reset() '★
+    Private Async Sub Async_reset()
 
         Await Task.Run(Sub()
 
@@ -7315,7 +7466,7 @@ Public Class Mainwindow
 
     End Sub
 
-    Private Async Sub Async_load1() '★
+    Private Async Sub Async_load1()
 
         Await Task.Run(Sub()
                            Using res_load1 As New Mat(imgex.Width - tplex_load1.Width + 1, imgex.Height - tplex_load1.Height + 1, MatType.CV_32FC1)
@@ -7329,7 +7480,7 @@ Public Class Mainwindow
 
     End Sub
 
-    Private Async Sub Async_load2() '★
+    Private Async Sub Async_load2()
 
         Await Task.Run(Sub()
                            Using res_load2 As New Mat(imgex.Width - tplex_load2.Width + 1, imgex.Height - tplex_load2.Height + 1, MatType.CV_32FC1)
@@ -7343,7 +7494,7 @@ Public Class Mainwindow
 
     End Sub
 
-    Private Async Sub Async_load3() '★
+    Private Async Sub Async_load3()
 
         Await Task.Run(Sub()
                            Using res_load3 As New Mat(imgex.Width - tplex_load3.Width + 1, imgex.Height - tplex_load3.Height + 1, MatType.CV_32FC1)
@@ -7357,7 +7508,7 @@ Public Class Mainwindow
 
     End Sub
 
-    Private Async Sub Async_load4() '★
+    Private Async Sub Async_load4()
 
         Await Task.Run(Sub()
                            Using res_load4 As New Mat(imgex.Width - tplex_load4.Width + 1, imgex.Height - tplex_load4.Height + 1, MatType.CV_32FC1)
@@ -7371,7 +7522,7 @@ Public Class Mainwindow
 
     End Sub
 
-    Private Async Sub Async_load5() '★
+    Private Async Sub Async_load5()
 
         Await Task.Run(Sub()
                            Using res_load5 As New Mat(imgex.Width - tplex_load5.Width + 1, imgex.Height - tplex_load5.Height + 1, MatType.CV_32FC1)
@@ -7385,7 +7536,7 @@ Public Class Mainwindow
 
     End Sub
 
-    Private Async Sub Async_load6() '★
+    Private Async Sub Async_load6()
 
         Await Task.Run(Sub()
                            Using res_load6 As New Mat(imgex.Width - tplex_load6.Width + 1, imgex.Height - tplex_load6.Height + 1, MatType.CV_32FC1)
@@ -7399,7 +7550,7 @@ Public Class Mainwindow
 
     End Sub
 
-    Private Async Sub Async_load7() '★
+    Private Async Sub Async_load7()
 
         Await Task.Run(Sub()
                            Using res_load7 As New Mat(imgex.Width - tplex_load7.Width + 1, imgex.Height - tplex_load7.Height + 1, MatType.CV_32FC1)
@@ -7413,7 +7564,7 @@ Public Class Mainwindow
 
     End Sub
 
-    Private Async Sub Async_load8() '★
+    Private Async Sub Async_load8()
 
         Await Task.Run(Sub()
                            Using res_load8 As New Mat(imgex.Width - tplex_load8.Width + 1, imgex.Height - tplex_load8.Height + 1, MatType.CV_32FC1)
@@ -7427,7 +7578,7 @@ Public Class Mainwindow
 
     End Sub
 
-    Private Async Sub Async_load9() '★
+    Private Async Sub Async_load9()
 
         Await Task.Run(Sub()
                            Using res_load9 As New Mat(imgex.Width - tplex_load9.Width + 1, imgex.Height - tplex_load9.Height + 1, MatType.CV_32FC1)
@@ -7441,7 +7592,7 @@ Public Class Mainwindow
 
     End Sub
 
-    Private Async Sub Async_load10() '★
+    Private Async Sub Async_load10()
 
         Await Task.Run(Sub()
                            Using res_load10 As New Mat(imgex.Width - tplex_load10.Width + 1, imgex.Height - tplex_load10.Height + 1, MatType.CV_32FC1)
@@ -7457,8 +7608,8 @@ Public Class Mainwindow
     End Sub
 
 
-
-    Private Sub cvtimer_manualstart_Tick(sender As Object, e As EventArgs) Handles cvtimer_manualstart.Tick '★
+    '最初のラップだけホットキー（Livesplit）で取る。
+    Private Sub cvtimer_manualstart_Tick(sender As Object, e As EventArgs) Handles cvtimer_manualstart.Tick
         'RTAスタートのみでいいはず
         If GetKeyPress(lblkeysforsend.Text) Then
 
@@ -7556,7 +7707,7 @@ Public Class Mainwindow
 
             '■テンプレートマッチング（スプリット）
             If chknow_monitor.Checked = True Then
-                If async_split_onoff = 1 Then '★
+                If async_split_onoff = 1 Then
                     '■テンプレートマッチングの結果を表示
                     If Not maxval_split = 1 Then
                         lblcv_nowmaxval.Text = Math.Round(100 * maxval_split, 2, MidpointRounding.AwayFromZero) '100 * maxval
@@ -7567,8 +7718,8 @@ Public Class Mainwindow
                         End If
                     End If
 
-                    '■マッチングされた。
-                    If CDbl(lblcv_maxval.Text) > CDbl(txtcv_ikiti.Text) Then ' CInt(lblcv_maxval.Text)★
+                    '■マッチングされた。小数点以下まで加味。
+                    If CDbl(lblcv_maxval.Text) > CDbl(txtcv_ikiti.Text) Then
                         Dim key As Short = lblkeysforsend.Text
 
                         '一致した場所が指定範囲内にあるかどうか
@@ -7594,7 +7745,8 @@ Public Class Mainwindow
                         NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
                         picipl_cap.ImageIpl = frame
 
-                        async_split_onoff = 0 '★
+                        '■split用タイマー停止
+                        async_split_onoff = 0
 
 
                         txtcv_result_posx.Text = maxloc_split.X
@@ -7671,8 +7823,8 @@ Public Class Mainwindow
                                     lblcv_sendview.Visible = True
                                     lblsleeptime.Visible = True
 
-
-                                    '■Videoplayerのシーク★
+                                    '♥
+                                    '■Videoplayerのシーク
                                     If chkshowvideo.Checked = True Then
 
                                         If chkvideo_autoseek.Checked = True Then
@@ -7868,7 +8020,7 @@ Public Class Mainwindow
                         If chkcv_resetonoff.Checked = True Then
 
                             chknow_reset.Checked = True
-                            onetimematching_reset() '★'これを書かないと、前のデータが何故か残って誤判定となる。
+                            onetimematching_reset() '♥'これを書かないと、前のデータが何故か残って誤判定となる。
 
 
                         End If
@@ -7944,10 +8096,12 @@ Public Class Mainwindow
                         Dim aa As String = txtpass_picturefolder.Text & "\" & 1 & ".bmp"
                         tplex = Cv2.ImRead(aa, ImreadModes.Color)
 
-                        '■テンプレート画像　表示用
-                        piccv_picture.Image = Image.FromFile(aa)
+                        '■ローディング画像の読み込み（表示用）
+                        Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
+                            piccv_picture.Image = Image.FromStream(fs)
+                        End Using
 
-                        '■最初のリッチテキストファイルを表示'★
+                        '■最初のリッチテキストファイルを表示
                         If chkshow_text.Checked = True Then
                             Textwindow.rtxt1.LoadFile(txtpass_rtf.Text & "/1.rtf", RichTextBoxStreamType.RichText)
                         End If
@@ -8027,13 +8181,13 @@ Public Class Mainwindow
                         End If
 
 
-                        '■Videoplayerの停止★
+                        '■Videoplayerの停止
                         If chkshowvideo.Checked = True Then
 
                             Videoplayer.videostop()
 
-                            If chkvideo_manualstart.Checked = True Then '再び手動スタートに★
-                                txtstate.Text = "RTAスタート待機中" '♥
+                            If chkvideo_manualstart.Checked = True Then '再び手動スタートに
+                                txtstate.Text = "RTAスタート待機中"
                                 cvtimer_manualstart.Start()
                                 cvtimer.Stop()
 
@@ -8084,6 +8238,8 @@ Public Class Mainwindow
 
                             cvtimer_loadremover1.Start()
 
+
+                            'ロード除去が1つ働いている時、他のLoading監視をすべて止める。
                             chknow_load1.Checked = False
                             chknow_load2.Checked = False
                             chknow_load3.Checked = False
@@ -8095,7 +8251,7 @@ Public Class Mainwindow
                             chknow_load9.Checked = False
                             chknow_load10.Checked = False
 
-                            async_load1_onoff = 0 '★
+                            async_load1_onoff = 0
                             async_load2_onoff = 0
                             async_load3_onoff = 0
                             async_load4_onoff = 0
@@ -8152,6 +8308,8 @@ Public Class Mainwindow
 
                             cvtimer_loadremover2.Start()
 
+                            'ロード除去が1つ働いている時、他のLoading監視をすべて止める。
+
                             chknow_load1.Checked = False
                             chknow_load2.Checked = False
                             chknow_load3.Checked = False
@@ -8163,7 +8321,7 @@ Public Class Mainwindow
                             chknow_load9.Checked = False
                             chknow_load10.Checked = False
 
-                            async_load1_onoff = 0 '★
+                            async_load1_onoff = 0
                             async_load2_onoff = 0
                             async_load3_onoff = 0
                             async_load4_onoff = 0
@@ -8217,6 +8375,7 @@ Public Class Mainwindow
 
                             cvtimer_loadremover3.Start()
 
+                            'ロード除去が1つ働いている時、他のLoading監視をすべて止める。
                             chknow_load1.Checked = False
                             chknow_load2.Checked = False
                             chknow_load3.Checked = False
@@ -8228,7 +8387,7 @@ Public Class Mainwindow
                             chknow_load9.Checked = False
                             chknow_load10.Checked = False
 
-                            async_load1_onoff = 0 '★
+                            async_load1_onoff = 0
                             async_load2_onoff = 0
                             async_load3_onoff = 0
                             async_load4_onoff = 0
@@ -8281,6 +8440,8 @@ Public Class Mainwindow
 
                             cvtimer_loadremover4.Start()
 
+
+                            'ロード除去が1つ働いている時、他のLoading監視をすべて止める。
                             chknow_load1.Checked = False
                             chknow_load2.Checked = False
                             chknow_load3.Checked = False
@@ -8292,7 +8453,7 @@ Public Class Mainwindow
                             chknow_load9.Checked = False
                             chknow_load10.Checked = False
 
-                            async_load1_onoff = 0 '★
+                            async_load1_onoff = 0
                             async_load2_onoff = 0
                             async_load3_onoff = 0
                             async_load4_onoff = 0
@@ -8345,6 +8506,8 @@ Public Class Mainwindow
 
                             cvtimer_loadremover5.Start()
 
+
+                            'ロード除去が1つ働いている時、他のLoading監視をすべて止める。
                             chknow_load1.Checked = False
                             chknow_load2.Checked = False
                             chknow_load3.Checked = False
@@ -8356,7 +8519,7 @@ Public Class Mainwindow
                             chknow_load9.Checked = False
                             chknow_load10.Checked = False
 
-                            async_load1_onoff = 0 '★
+                            async_load1_onoff = 0
                             async_load2_onoff = 0
                             async_load3_onoff = 0
                             async_load4_onoff = 0
@@ -8409,6 +8572,8 @@ Public Class Mainwindow
 
                             cvtimer_loadremover6.Start()
 
+
+                            'ロード除去が1つ働いている時、他のLoading監視をすべて止める。
                             chknow_load1.Checked = False
                             chknow_load2.Checked = False
                             chknow_load3.Checked = False
@@ -8420,7 +8585,7 @@ Public Class Mainwindow
                             chknow_load9.Checked = False
                             chknow_load10.Checked = False
 
-                            async_load1_onoff = 0 '★
+                            async_load1_onoff = 0
                             async_load2_onoff = 0
                             async_load3_onoff = 0
                             async_load4_onoff = 0
@@ -8473,6 +8638,8 @@ Public Class Mainwindow
 
                             cvtimer_loadremover7.Start()
 
+
+                            'ロード除去が1つ働いている時、他のLoading監視をすべて止める。
                             chknow_load1.Checked = False
                             chknow_load2.Checked = False
                             chknow_load3.Checked = False
@@ -8484,7 +8651,7 @@ Public Class Mainwindow
                             chknow_load9.Checked = False
                             chknow_load10.Checked = False
 
-                            async_load1_onoff = 0 '★
+                            async_load1_onoff = 0
                             async_load2_onoff = 0
                             async_load3_onoff = 0
                             async_load4_onoff = 0
@@ -8537,6 +8704,8 @@ Public Class Mainwindow
 
                             cvtimer_loadremover8.Start()
 
+
+                            'ロード除去が1つ働いている時、他のLoading監視をすべて止める。
                             chknow_load1.Checked = False
                             chknow_load2.Checked = False
                             chknow_load3.Checked = False
@@ -8548,7 +8717,7 @@ Public Class Mainwindow
                             chknow_load9.Checked = False
                             chknow_load10.Checked = False
 
-                            async_load1_onoff = 0 '★
+                            async_load1_onoff = 0
                             async_load2_onoff = 0
                             async_load3_onoff = 0
                             async_load4_onoff = 0
@@ -8602,6 +8771,8 @@ Public Class Mainwindow
 
                             cvtimer_loadremover9.Start()
 
+
+                            'ロード除去が1つ働いている時、他のLoading監視をすべて止める。
                             chknow_load1.Checked = False
                             chknow_load2.Checked = False
                             chknow_load3.Checked = False
@@ -8613,7 +8784,7 @@ Public Class Mainwindow
                             chknow_load9.Checked = False
                             chknow_load10.Checked = False
 
-                            async_load1_onoff = 0 '★
+                            async_load1_onoff = 0
                             async_load2_onoff = 0
                             async_load3_onoff = 0
                             async_load4_onoff = 0
@@ -8666,6 +8837,8 @@ Public Class Mainwindow
 
                             cvtimer_loadremover10.Start()
 
+
+                            'ロード除去が1つ働いている時、他のLoading監視をすべて止める。
                             chknow_load1.Checked = False
                             chknow_load2.Checked = False
                             chknow_load3.Checked = False
@@ -8678,7 +8851,7 @@ Public Class Mainwindow
                             chknow_load10.Checked = False
 
 
-                            async_load1_onoff = 0 '★
+                            async_load1_onoff = 0
                             async_load2_onoff = 0
                             async_load3_onoff = 0
                             async_load4_onoff = 0
@@ -8762,7 +8935,7 @@ Public Class Mainwindow
             End If
 
 
-            'Application.DoEvents()'★消しても動くなら消したほうが良い。
+            'Application.DoEvents()'消しても動くなら消したほうが良い。
 
 
         Catch
@@ -8785,71 +8958,102 @@ Public Class Mainwindow
 
                 '■画像の表示
                 Dim aa As String = txtpass_picturefolder.Text & "\loading1.bmp"
-                Dim img As System.Drawing.Image = System.Drawing.Image.FromFile(aa)
-                piccv_load.Image = img
+
+                '■画像の表示（表示用）
+                Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
+                    piccv_load.Image = Image.FromStream(fs)
+                End Using
+
 
             ElseIf cmbloadno.SelectedIndex = 2 - 1 Then
 
                 '■画像の表示
                 Dim aa As String = txtpass_picturefolder.Text & "\loading2.bmp"
-                Dim img As System.Drawing.Image = System.Drawing.Image.FromFile(aa)
-                piccv_load.Image = img
+
+                '■画像の表示（表示用）
+                Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
+                    piccv_load.Image = Image.FromStream(fs)
+                End Using
 
             ElseIf cmbloadno.SelectedIndex = 3 - 1 Then
 
                 '■画像の表示
                 Dim aa As String = txtpass_picturefolder.Text & "\loading3.bmp"
-                Dim img As System.Drawing.Image = System.Drawing.Image.FromFile(aa)
-                piccv_load.Image = img
+
+                '■画像の表示（表示用）
+                Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
+                    piccv_load.Image = Image.FromStream(fs)
+                End Using
 
             ElseIf cmbloadno.SelectedIndex = 4 - 1 Then
 
                 '■画像の表示
                 Dim aa As String = txtpass_picturefolder.Text & "\loading4.bmp"
-                Dim img As System.Drawing.Image = System.Drawing.Image.FromFile(aa)
-                piccv_load.Image = img
+
+                '■画像の表示（表示用）
+                Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
+                    piccv_load.Image = Image.FromStream(fs)
+                End Using
 
             ElseIf cmbloadno.SelectedIndex = 5 - 1 Then
 
                 '■画像の表示
                 Dim aa As String = txtpass_picturefolder.Text & "\loading5.bmp"
-                Dim img As System.Drawing.Image = System.Drawing.Image.FromFile(aa)
-                piccv_load.Image = img
+
+                '■画像の表示（表示用）
+                Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
+                    piccv_load.Image = Image.FromStream(fs)
+                End Using
 
             ElseIf cmbloadno.SelectedIndex = 6 - 1 Then
 
                 '■画像の表示
                 Dim aa As String = txtpass_picturefolder.Text & "\loading6.bmp"
-                Dim img As System.Drawing.Image = System.Drawing.Image.FromFile(aa)
-                piccv_load.Image = img
+
+                '■画像の表示（表示用）
+                Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
+                    piccv_load.Image = Image.FromStream(fs)
+                End Using
 
             ElseIf cmbloadno.SelectedIndex = 7 - 1 Then
 
                 '■画像の表示
                 Dim aa As String = txtpass_picturefolder.Text & "\loading7.bmp"
-                Dim img As System.Drawing.Image = System.Drawing.Image.FromFile(aa)
-                piccv_load.Image = img
+
+                '■画像の表示（表示用）
+                Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
+                    piccv_load.Image = Image.FromStream(fs)
+                End Using
 
             ElseIf cmbloadno.SelectedIndex = 8 - 1 Then
 
                 '■画像の表示
                 Dim aa As String = txtpass_picturefolder.Text & "\loading8.bmp"
-                Dim img As System.Drawing.Image = System.Drawing.Image.FromFile(aa)
-                piccv_load.Image = img
+
+                '■画像の表示（表示用）
+                Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
+                    piccv_load.Image = Image.FromStream(fs)
+                End Using
 
             ElseIf cmbloadno.SelectedIndex = 9 - 1 Then
 
                 '■画像の表示
                 Dim aa As String = txtpass_picturefolder.Text & "\loading9.bmp"
-                Dim img As System.Drawing.Image = System.Drawing.Image.FromFile(aa)
-                piccv_load.Image = img
+
+                '■画像の表示（表示用）
+                Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
+                    piccv_load.Image = Image.FromStream(fs)
+                End Using
 
             ElseIf cmbloadno.SelectedIndex = 10 - 1 Then
 
                 '■画像の表示
                 Dim aa As String = txtpass_picturefolder.Text & "\loading10.bmp"
-                Dim img As System.Drawing.Image = System.Drawing.Image.FromFile(aa)
-                piccv_load.Image = img
+
+                '■画像の表示（表示用）
+                Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
+                    piccv_load.Image = Image.FromStream(fs)
+                End Using
 
             End If
 
@@ -8868,11 +9072,14 @@ Public Class Mainwindow
                 '■テンプレート画像の更新
                 Dim aa As String = txtpass_picturefolder.Text & "\" & lblcv_lap.Text & ".bmp"
                 tplex = Cv2.ImRead(aa, ImreadModes.Color)
+
                 '■テンプレート画像の更新（表示用）
-                piccv_picture.Image = System.Drawing.Image.FromFile(aa)
+                Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
+                    piccv_picture.Image = Image.FromStream(fs)
+                End Using
 
 
-                '■リッチテキストファイルの更新★
+                '■リッチテキストファイルの更新
                 If chkshow_text.Checked = True Then
                     Textwindow.rtxt1.LoadFile(txtpass_rtf.Text & "/" & lblcv_lap.Text & ".rtf", RichTextBoxStreamType.RichText)
                 End If
@@ -8978,7 +9185,7 @@ Public Class Mainwindow
 
         End Using
 
-        async_split_onoff = 1 '★
+        async_split_onoff = 1 '♥
 
     End Sub
 
@@ -8991,7 +9198,7 @@ Public Class Mainwindow
 
         End Using
 
-        async_reset_onoff = 1 '★
+        async_reset_onoff = 1 '♥
 
     End Sub
 
@@ -9003,7 +9210,7 @@ Public Class Mainwindow
             Cv2.MinMaxLoc(res_load1, minval_load1, maxval_load1, minloc_load1, maxloc_load1, Nothing)
         End Using
 
-        async_load1_onoff = 1 '★
+        async_load1_onoff = 1 '♥
 
     End Sub
 
@@ -9015,7 +9222,7 @@ Public Class Mainwindow
             Cv2.MinMaxLoc(res_load2, minval_load2, maxval_load2, minloc_load2, maxloc_load2, Nothing)
         End Using
 
-        async_load2_onoff = 1 '★
+        async_load2_onoff = 1 '♥
 
     End Sub
 
@@ -9027,7 +9234,7 @@ Public Class Mainwindow
             Cv2.MinMaxLoc(res_load3, minval_load3, maxval_load3, minloc_load3, maxloc_load3, Nothing)
         End Using
 
-        async_load3_onoff = 1 '★
+        async_load3_onoff = 1 '♥
 
     End Sub
 
@@ -9039,7 +9246,7 @@ Public Class Mainwindow
             Cv2.MinMaxLoc(res_load4, minval_load4, maxval_load4, minloc_load4, maxloc_load4, Nothing)
         End Using
 
-        async_load4_onoff = 1 '★
+        async_load4_onoff = 1 '♥
 
     End Sub
 
@@ -9051,7 +9258,7 @@ Public Class Mainwindow
             Cv2.MinMaxLoc(res_load5, minval_load5, maxval_load5, minloc_load5, maxloc_load5, Nothing)
         End Using
 
-        async_load5_onoff = 1 '★
+        async_load5_onoff = 1 '♥
 
     End Sub
 
@@ -9063,7 +9270,7 @@ Public Class Mainwindow
             Cv2.MinMaxLoc(res_load6, minval_load6, maxval_load6, minloc_load6, maxloc_load6, Nothing)
         End Using
 
-        async_load6_onoff = 1 '★
+        async_load6_onoff = 1 '♥
 
     End Sub
 
@@ -9075,7 +9282,7 @@ Public Class Mainwindow
             Cv2.MinMaxLoc(res_load7, minval_load7, maxval_load7, minloc_load7, maxloc_load7, Nothing)
         End Using
 
-        async_load7_onoff = 1 '★
+        async_load7_onoff = 1 '♥
 
     End Sub
 
@@ -9087,7 +9294,7 @@ Public Class Mainwindow
             Cv2.MinMaxLoc(res_load8, minval_load8, maxval_load8, minloc_load8, maxloc_load8, Nothing)
         End Using
 
-        async_load8_onoff = 1 '★
+        async_load8_onoff = 1 '♥
 
     End Sub
 
@@ -9099,7 +9306,7 @@ Public Class Mainwindow
             Cv2.MinMaxLoc(res_load9, minval_load9, maxval_load9, minloc_load9, maxloc_load9, Nothing)
         End Using
 
-        async_load9_onoff = 1 '★
+        async_load9_onoff = 1 '♥
 
     End Sub
 
@@ -9111,7 +9318,7 @@ Public Class Mainwindow
             Cv2.MinMaxLoc(res_load10, minval_load10, maxval_load10, minloc_load10, maxloc_load10, Nothing)
         End Using
 
-        async_load10_onoff = 1 '★
+        async_load10_onoff = 1 '♥
 
     End Sub
 
@@ -9679,7 +9886,7 @@ Public Class Mainwindow
             lblcv_maxval_load1.Text = 0
             lblcv_nowmaxval_load1.Text = 0
 
-            txtdelay_load1.Text = 0 '★
+            txtdelay_load1.Text = 0
 
 
             chkload_chknow_load_on()
@@ -9715,7 +9922,7 @@ Public Class Mainwindow
             lblcv_maxval_load2.Text = 0
             lblcv_nowmaxval_load2.Text = 0
 
-            txtdelay_load2.Text = 0 '★
+            txtdelay_load2.Text = 0
 
 
             chkload_chknow_load_on()
@@ -9751,7 +9958,7 @@ Public Class Mainwindow
             lblcv_maxval_load3.Text = 0
             lblcv_nowmaxval_load3.Text = 0
 
-            txtdelay_load3.Text = 0 '★
+            txtdelay_load3.Text = 0
 
 
             chkload_chknow_load_on()
@@ -9787,7 +9994,7 @@ Public Class Mainwindow
             lblcv_maxval_load4.Text = 0
             lblcv_nowmaxval_load4.Text = 0
 
-            txtdelay_load4.Text = 0 '★
+            txtdelay_load4.Text = 0
 
 
             chkload_chknow_load_on()
@@ -9823,7 +10030,7 @@ Public Class Mainwindow
             lblcv_maxval_load5.Text = 0
             lblcv_nowmaxval_load5.Text = 0
 
-            txtdelay_load5.Text = 0 '★
+            txtdelay_load5.Text = 0
 
 
             chkload_chknow_load_on()
@@ -9859,7 +10066,7 @@ Public Class Mainwindow
             lblcv_maxval_load6.Text = 0
             lblcv_nowmaxval_load6.Text = 0
 
-            txtdelay_load6.Text = 0 '★
+            txtdelay_load6.Text = 0
 
 
             chkload_chknow_load_on()
@@ -9895,7 +10102,7 @@ Public Class Mainwindow
             lblcv_maxval_load7.Text = 0
             lblcv_nowmaxval_load7.Text = 0
 
-            txtdelay_load7.Text = 0 '★
+            txtdelay_load7.Text = 0
 
 
             chkload_chknow_load_on()
@@ -9931,7 +10138,7 @@ Public Class Mainwindow
             lblcv_maxval_load8.Text = 0
             lblcv_nowmaxval_load8.Text = 0
 
-            txtdelay_load8.Text = 0 '★
+            txtdelay_load8.Text = 0
 
 
             chkload_chknow_load_on()
@@ -9967,7 +10174,7 @@ Public Class Mainwindow
             lblcv_maxval_load9.Text = 0
             lblcv_nowmaxval_load9.Text = 0
 
-            txtdelay_load9.Text = 0 '★
+            txtdelay_load9.Text = 0
 
 
             chkload_chknow_load_on()
@@ -10438,7 +10645,7 @@ Public Class Mainwindow
                 allkeysend()
 
 
-                '■Videoplayerのシーク★
+                '■Videoplayerのシーク'♥
                 If chkshowvideo.Checked = True Then
 
                     If chkvideo_autoseek.Checked = True Then
@@ -10636,7 +10843,7 @@ Public Class Mainwindow
         chknow_load9.Checked = False
         chknow_load10.Checked = False
 
-        async_split_onoff = 0 '★
+        async_split_onoff = 0
         async_reset_onoff = 0
         async_load1_onoff = 0
         async_load2_onoff = 0
@@ -10815,9 +11022,11 @@ Public Class Mainwindow
             tplex = Cv2.ImRead(aa, ImreadModes.Color)
 
             '■該当の画像をUIにも表示        
-            piccv_picture.Image = Image.FromFile(aa)
+            Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
+                piccv_picture.Image = Image.FromStream(fs)
+            End Using
 
-            '■リッチテキストファイルの更新★
+            '■リッチテキストファイルの更新♥
             If chkshow_text.Checked = True Then
                 Textwindow.rtxt1.LoadFile(txtpass_rtf.Text & "/" & number & ".rtf", RichTextBoxStreamType.RichText)
             End If
@@ -11075,9 +11284,11 @@ Public Class Mainwindow
             tplex = Cv2.ImRead(aa, ImreadModes.Color)
 
             '■該当の画像をUIにも表示        
-            piccv_picture.Image = Image.FromFile(aa)
+            Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
+                piccv_picture.Image = Image.FromStream(fs)
+            End Using
 
-            '■リッチテキストファイルの更新★
+            '■リッチテキストファイルの更新♥
             If chkshow_text.Checked = True Then
                 Textwindow.rtxt1.LoadFile(txtpass_rtf.Text & "/" & number & ".rtf", RichTextBoxStreamType.RichText)
             End If
@@ -11311,7 +11522,9 @@ Public Class Mainwindow
             tplex = Cv2.ImRead(aa, ImreadModes.Color)
 
             '■該当の画像をUIにも表示        
-            piccv_picture.Image = Image.FromFile(aa)
+            Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
+                piccv_picture.Image = Image.FromStream(fs)
+            End Using
 
             '■リッチテキストファイルの更新
             If chkshow_text.Checked = True Then
@@ -11597,7 +11810,7 @@ Public Class Mainwindow
 
             Dim sfd1 As New SaveFileDialog()
             'Dim myfilename1 = "./savedata/csvfile/default.csv"
-            Dim myfilename1 = "./profile/default/table.csv" '★ここdefaultでいいの？
+            Dim myfilename1 = "./profile/default/table.csv" '♥ここdefaultでいいの？
 
             CsvFileSave1(myfilename1)
 
@@ -11967,19 +12180,20 @@ Public Class Mainwindow
             Console.Write("New!")
             cmbprofile.Items.Add(cmbprofile.Text)
 
+            '♥
             'pictureフォルダのコピー
             My.Computer.FileSystem.CopyDirectory(txtpass_picturefolder.Text, "./profile/" & cmbprofile.Text & "/picture/",
-                FileIO.UIOption.AllDialogs, FileIO.UICancelOption.DoNothing) '★
+                FileIO.UIOption.AllDialogs, FileIO.UICancelOption.DoNothing)
 
             'textフォルダのコピー
             My.Computer.FileSystem.CopyDirectory(txtpass_rtf.Text, "./profile/" & cmbprofile.Text & "/text/",
-                FileIO.UIOption.AllDialogs, FileIO.UICancelOption.DoNothing) '★
+                FileIO.UIOption.AllDialogs, FileIO.UICancelOption.DoNothing)
 
             'csvファイルのコピー
             System.IO.File.Copy(txtpass_csv.Text, "./profile/" & cmbprofile.Text & "/table.csv", True)
 
-            txtpass_picturefolder.Text = "./profile/" & cmbprofile.Text & "/picture" '★
-            txtpass_rtf.Text = "./profile/" & cmbprofile.Text & "/text" '★
+            txtpass_picturefolder.Text = "./profile/" & cmbprofile.Text & "/picture"
+            txtpass_rtf.Text = "./profile/" & cmbprofile.Text & "/text"
             txtpass_csv.Text = "./profile/" & cmbprofile.Text & "/table.csv"
 
         End If
@@ -11995,7 +12209,8 @@ Public Class Mainwindow
             txtprofile.AppendText(arrayprofile(ii) & vbCrLf)
         Next
 
-        Dim sw As New System.IO.StreamWriter("./profile/" & cmbprofile.SelectedItem & "/data.txt", False, System.Text.Encoding.GetEncoding("shift_jis")) '★
+        Dim sw As New System.IO.StreamWriter("./profile/" & cmbprofile.SelectedItem & "/data.txt", False,
+                                             System.Text.Encoding.GetEncoding("shift_jis"))
 
         sw.Write(txtprofile.Text)
 
@@ -12032,7 +12247,8 @@ Public Class Mainwindow
         Next
 
 
-        Dim sw As New System.IO.StreamWriter("./profile/" & cmbprofile.SelectedItem & "/data.txt", False, System.Text.Encoding.GetEncoding("shift_jis")) '★
+        Dim sw As New System.IO.StreamWriter("./profile/" & cmbprofile.SelectedItem & "/data.txt", False,
+                                             System.Text.Encoding.GetEncoding("shift_jis"))
 
         sw.Write(txtprofile.Text)
 
@@ -12068,12 +12284,12 @@ Public Class Mainwindow
         If result = DialogResult.Yes Then
 
             Try
-                System.IO.File.Delete("./profile/" & cmbprofile.SelectedItem & "/data.txt") '★
+                System.IO.File.Delete("./profile/" & cmbprofile.SelectedItem & "/data.txt")
 
                 cmbprofile.Items.RemoveAt(cmbprofile.SelectedIndex)
 
                 System.IO.Directory.Delete(txtpass_picturefolder.Text, True)
-                System.IO.Directory.Delete(txtpass_rtf.Text, True) '★
+                System.IO.Directory.Delete(txtpass_rtf.Text, True)
                 System.IO.File.Delete(txtpass_csv.Text)
 
                 cmbprofile.SelectedIndex = 0 '"default"
@@ -12110,7 +12326,7 @@ Public Class Mainwindow
 
             End If
 
-            Dim loadtxt As String = "./profile/" & cmbprofile.SelectedItem & "/data.txt" '★
+            Dim loadtxt As String = "./profile/" & cmbprofile.SelectedItem & "/data.txt"
 
             cmbprofile.IntegralHeight = False
 
@@ -12383,8 +12599,7 @@ Public Class Mainwindow
 
 
 
-
-            If chkvideo_manualstart.Checked = True Then '★
+            If chkvideo_manualstart.Checked = True Then '♥
                 txtvideo_startat.Enabled = True
 
             ElseIf chkvideo_manualstart.Checked = False Then
@@ -12503,17 +12718,17 @@ Public Class Mainwindow
             Exit Sub
         End If
 
-        If System.IO.File.Exists("./profile/" & inputText & "/data.csv") Then '★
+        If System.IO.File.Exists("./profile/" & inputText & "/data.csv") Then
             MessageBox.Show(inputText & My.Resources.Message.msg20, messagebox_name) '"は既に存在しています。"
         Else
 
             ' フォルダ (ディレクトリ) を作成する
-            System.IO.Directory.CreateDirectory("./profile/" & inputText & "/picture/") '★
-            txtpass_picturefolder.Text = "./profile/" & inputText & "/picture" '★
+            System.IO.Directory.CreateDirectory("./profile/" & inputText & "/picture/")
+            txtpass_picturefolder.Text = "./profile/" & inputText & "/picture"
 
             ' フォルダ (ディレクトリ) を作成する
-            System.IO.Directory.CreateDirectory("./profile/" & inputText & "/text/") '★
-            txtpass_rtf.Text = "./profile/" & inputText & "/text" '★
+            System.IO.Directory.CreateDirectory("./profile/" & inputText & "/text/")
+            txtpass_rtf.Text = "./profile/" & inputText & "/text"
 
 
 
@@ -12525,8 +12740,8 @@ Public Class Mainwindow
                 ' hStream が閉じられることを保証するために Try ～ Finally を使用する
                 Try
                     ' 指定したパスのファイルを作成する
-                    hStream = System.IO.File.Create("./profile/" & inputText & "/table.csv") '★
-                    txtpass_csv.Text = "./profile/" & inputText & "/table.csv" '★
+                    hStream = System.IO.File.Create("./profile/" & inputText & "/table.csv")
+                    txtpass_csv.Text = "./profile/" & inputText & "/table.csv"
 
                 Finally
                     ' 作成時に返される FileStream を利用して閉じる
@@ -12623,7 +12838,8 @@ Public Class Mainwindow
                 txtprofile.AppendText(arrayprofile(ii) & vbCrLf)
             Next
 
-            Dim sw As New System.IO.StreamWriter("./profile/" & cmbprofile.SelectedItem & "/data.txt", False, System.Text.Encoding.GetEncoding("shift_jis")) '★
+            Dim sw As New System.IO.StreamWriter("./profile/" & cmbprofile.SelectedItem & "/data.txt", False,
+                                                 System.Text.Encoding.GetEncoding("shift_jis"))
 
             sw.Write(txtprofile.Text)
 
@@ -12636,7 +12852,7 @@ Public Class Mainwindow
             CsvFileSave(myfilename)
 
 
-            '■リセットの部分の背景変更★
+            '■リセットの部分の背景変更
             DGtable.Rows(0).DefaultCellStyle.BackColor = Color.FromArgb(58, 16, 16) 'Color.MistyRose
 
             lbltitlebar.Text = "[" & cmbprofile.SelectedItem & "]" & " AutoSplit Helper by Image " & lblversion.Text
@@ -13515,6 +13731,8 @@ Public Class Mainwindow
     End Sub
 
 
+    '♥
+    '常時作成にしたほうが良いかも知れない。
     Private Sub btntext_createtext_Click(sender As Object, e As EventArgs) Handles btntext_createtext.Click
 
         Dim rowcount As Integer = DGtable.Rows.Count
@@ -13524,7 +13742,7 @@ Public Class Mainwindow
 
                 If Not System.IO.File.Exists(txtpass_rtf.Text & "/" & aa & ".rtf") Then
 
-                    My.Computer.FileSystem.CopyFile("./savedata/blank.rtf", txtpass_rtf.Text & "/" & aa & ".rtf", False) '★
+                    My.Computer.FileSystem.CopyFile("./savedata/blank.rtf", txtpass_rtf.Text & "/" & aa & ".rtf", False)
 
 
                 End If
@@ -13571,7 +13789,7 @@ Public Class Mainwindow
 
 
 
-    'Arrayprofileの作成はここ★
+    'Arrayprofileの作成はここ
     Private arrayprofile(128) As String
     Private Sub Createarrayprofile()
 
@@ -13710,7 +13928,7 @@ CInt(chkmonitor_sizestate.Checked)
     End Sub
 
 
-    '■Numericを全選択状態にする★
+    '■Numericを全選択状態にする
     Private Sub numloopcount_Enter(sender As Object, e As EventArgs) Handles numloopcount.Enter
         numloopcount.Select(0, numloopcount.Text.Length)
 
@@ -13811,7 +14029,7 @@ CInt(chkmonitor_sizestate.Checked)
 End Class
 
 #Region "Videoseek_全て"
-''■Videoplayerのシーク★
+''■Videoplayerのシーク
 'If chkshowvideo.Checked = True Then
 
 '    If chkvideo_autoseek.Checked = True Then
@@ -13872,3 +14090,6 @@ End Class
 
 '        lbltitlebar.Text = "T:" & cvtimer.IsEnabled & ",R:" & cvreset_timer.IsEnabled & ",RO:" & cvresetonly_timer.IsEnabled
 
+               ''■最初の画像の読み込み（表示用）
+                'Dim img As System.Drawing.Image = System.Drawing.Image.FromFile(aa)
+                'piccv_picture.Image = img

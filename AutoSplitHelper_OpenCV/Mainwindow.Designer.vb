@@ -374,6 +374,7 @@ Partial Class Mainwindow
         Me.OpenTextWindowWToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CreateTextFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenTextFolderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteAddTemplateImageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InformationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LicenseLToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -684,7 +685,6 @@ Partial Class Mainwindow
         Me.timcamera = New System.Windows.Forms.Timer(Me.components)
         Me.timcalib = New System.Windows.Forms.Timer(Me.components)
         Me.timash_hotkey_sleep = New System.Windows.Forms.Timer(Me.components)
-        Me.DeleteAddTemplateImageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.DGtable, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -3772,6 +3772,11 @@ Partial Class Mainwindow
         Me.OpenTextFolderToolStripMenuItem.Name = "OpenTextFolderToolStripMenuItem"
         resources.ApplyResources(Me.OpenTextFolderToolStripMenuItem, "OpenTextFolderToolStripMenuItem")
         '
+        'DeleteAddTemplateImageToolStripMenuItem
+        '
+        Me.DeleteAddTemplateImageToolStripMenuItem.Name = "DeleteAddTemplateImageToolStripMenuItem"
+        resources.ApplyResources(Me.DeleteAddTemplateImageToolStripMenuItem, "DeleteAddTemplateImageToolStripMenuItem")
+        '
         'HelpToolStripMenuItem
         '
         Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InformationToolStripMenuItem, Me.LicenseLToolStripMenuItem})
@@ -6284,11 +6289,6 @@ Partial Class Mainwindow
         'timash_hotkey_sleep
         '
         Me.timash_hotkey_sleep.Interval = 300
-        '
-        'DeleteAddTemplateImageToolStripMenuItem
-        '
-        Me.DeleteAddTemplateImageToolStripMenuItem.Name = "DeleteAddTemplateImageToolStripMenuItem"
-        resources.ApplyResources(Me.DeleteAddTemplateImageToolStripMenuItem, "DeleteAddTemplateImageToolStripMenuItem")
         '
         'Mainwindow
         '

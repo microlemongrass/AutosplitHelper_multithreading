@@ -2785,7 +2785,7 @@
     <value>NoControl</value>
   </data>
   <data name="chkcreate_temppicture.Location" type="System.Drawing.Point, System.Drawing">
-    <value>327, 153</value>
+    <value>366, 154</value>
   </data>
   <data name="chkcreate_temppicture.Size" type="System.Drawing.Size, System.Drawing">
     <value>228, 23</value>
@@ -2965,7 +2965,7 @@
     <value>NoControl</value>
   </data>
   <data name="lbllivesplit_state.Location" type="System.Drawing.Point, System.Drawing">
-    <value>323, 124</value>
+    <value>362, 125</value>
   </data>
   <data name="lbllivesplit_state.Size" type="System.Drawing.Size, System.Drawing">
     <value>211, 20</value>
@@ -19617,6 +19617,12 @@
   <data name="&gt;&gt;OpenTextFolderToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;DeleteAddTemplateImageToolStripMenuItem.Name" xml:space="preserve">
+    <value>DeleteAddTemplateImageToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;DeleteAddTemplateImageToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;HelpToolStripMenuItem.Name" xml:space="preserve">
     <value>HelpToolStripMenuItem</value>
   </data>
@@ -19754,12 +19760,6 @@
   </data>
   <data name="&gt;&gt;timash_hotkey_sleep.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DeleteAddTemplateImageToolStripMenuItem.Name" xml:space="preserve">
-    <value>DeleteAddTemplateImageToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;DeleteAddTemplateImageToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Mainwindow</value>
