@@ -3163,15 +3163,6 @@ Public Class Mainwindow
                             .Image.Save(picname_reset, ImageFormat.Bmp)
 
 
-                            'テキストファイルを生成。
-                            If Not System.IO.File.Exists(txtpass_rtf.Text & "/reset.rtf") Then
-
-                                My.Computer.FileSystem.CopyFile("./savedata/blank.rtf", txtpass_rtf.Text & "/reset.rtf", False)
-
-
-                            End If
-
-
                         Else
                             'テンプレート保存
                             .Image.Save(picname, ImageFormat.Bmp)
@@ -3231,14 +3222,6 @@ Public Class Mainwindow
                                         'テンプレートを保存
                                         .Image.Save(picname_reset, ImageFormat.Bmp)
 
-                                        'テキストファイルを生成。
-                                        If Not System.IO.File.Exists(txtpass_rtf.Text & "/reset.rtf") Then
-
-                                            My.Computer.FileSystem.CopyFile("./savedata/blank.rtf", txtpass_rtf.Text & "/reset.rtf", False)
-
-
-                                        End If
-
                                     Else
                                         'テンプレートを保存
                                         .Image.Save(picname, ImageFormat.Bmp)
@@ -3281,14 +3264,6 @@ Public Class Mainwindow
                                 If psnumber = 0 Then
                                     'テンプレート保存
                                     .Image.Save(picname_reset, ImageFormat.Bmp)
-
-                                    'テキストファイルを生成。
-                                    If Not System.IO.File.Exists(txtpass_rtf.Text & "/reset.rtf") Then
-
-                                        My.Computer.FileSystem.CopyFile("./savedata/blank.rtf", txtpass_rtf.Text & "/reset.rtf", False)
-
-
-                                    End If
 
 
                                 Else
@@ -3343,14 +3318,6 @@ Public Class Mainwindow
                                         'テンプレート保存
                                         .Image.Save(picname_reset, ImageFormat.Bmp)
 
-                                        'テキストファイルを生成。
-                                        If Not System.IO.File.Exists(txtpass_rtf.Text & "/reset.rtf") Then
-
-                                            My.Computer.FileSystem.CopyFile("./savedata/blank.rtf", txtpass_rtf.Text & "/reset.rtf", False)
-
-
-                                        End If
-
 
                                     Else
 
@@ -3394,14 +3361,6 @@ Public Class Mainwindow
 
                                     'テンプレート保存
                                     .Image.Save(picname_reset, ImageFormat.Bmp)
-
-                                    'テキストファイルを生成。
-                                    If Not System.IO.File.Exists(txtpass_rtf.Text & "/reset.rtf") Then
-
-                                        My.Computer.FileSystem.CopyFile("./savedata/blank.rtf", txtpass_rtf.Text & "/reset.rtf", False)
-
-
-                                    End If
 
 
                                 Else

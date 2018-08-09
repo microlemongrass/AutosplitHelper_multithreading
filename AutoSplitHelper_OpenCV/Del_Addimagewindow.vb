@@ -1,5 +1,7 @@
 ﻿Imports System.IO
 
+
+'まずpicture
 Public Class Del_Addimagewindow
     Private Sub Del_Addimagewindow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtpass_picturefolder.Text = Mainwindow.txtpass_picturefolder.Text
@@ -65,14 +67,14 @@ Public Class Del_Addimagewindow
         '→FileCount_bmponlyは、全てのbmpファイルからreset/loadingxx.bmpを取り除いた数になる。
         For i = 0 To FileCount_bmponly - 1
             listnumber.Items.Add(i + 1)
-            listcomment.Items.Add(Mainwindow.DGtable(0, i).Value)
+            listcomment.Items.Add(Mainwindow.DGtable(0, i + 1).Value)
         Next
 
     End Sub
 
     Private Sub listnumber_SelectedIndexChanged(sender As Object, e As EventArgs) Handles listnumber.SelectedIndexChanged
 
-
+        listcomment.SelectedIndex = listnumber.SelectedIndex
 
         ''■画像の読み込み（表示用）※ADD/DELETE時画像の参照先が狂うので一旦無し
         'Dim aa As String = txtpass_picturefolder.Text & "/" & listnumber.SelectedItem & ".bmp"
