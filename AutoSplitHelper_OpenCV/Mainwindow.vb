@@ -12243,14 +12243,17 @@ Public Class Mainwindow
         If result = DialogResult.Yes Then
 
             Try
+               ' System.IO.File.Delete("./profile/" & cmbprofile.SelectedItem & "/data.txt")
                 System.IO.File.Delete("./profile/" & cmbprofile.SelectedItem & "/data.txt")
 
-                cmbprofile.Items.RemoveAt(cmbprofile.SelectedIndex)
+
 
                 System.IO.Directory.Delete(txtpass_picturefolder.Text, True)
                 System.IO.Directory.Delete(txtpass_rtf.Text, True)
                 System.IO.File.Delete(txtpass_csv.Text)
+                System.IO.Directory.Delete("./profile/" & cmbprofile.SelectedItem, True)
 
+                cmbprofile.Items.RemoveAt(cmbprofile.SelectedIndex)
                 cmbprofile.SelectedIndex = 0 '"default"
 
             Catch
@@ -13977,6 +13980,24 @@ CInt(chkmonitor_sizestate.Checked)
     End Sub
 
     Private Sub DeleteAddTemplateImageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteAddTemplateImageToolStripMenuItem.Click
+
+        Dim temp_profilename As String = cmbprofile.Text
+
+        If Not cmbprofile.FindStringExact(cmbprofile.SelectedItem & "_backup") = -1 Then
+            ' 存在します。
+            cmbprofile.SelectedItem = cmbprofile.SelectedItem & "_backup"
+
+            'プロファイルを削除
+            btndeleteprofile.PerformClick()
+
+        End If
+
+
+        cmbprofile.Text = cmbprofile.SelectedItem & "_backup"
+        btnaddprofile.PerformClick() '複製
+
+        cmbprofile.SelectedItem = temp_profilename
+
         Del_Addimagewindow.Show()
     End Sub
 
