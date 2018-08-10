@@ -9784,12 +9784,6 @@
   <data name="DeleteAddTemplateImageToolStripMenuItem.Text" xml:space="preserve">
     <value>Delete/Add Template image</value>
   </data>
-  <data name="SortTemplateImageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 24</value>
-  </data>
-  <data name="SortTemplateImageToolStripMenuItem.Text" xml:space="preserve">
-    <value>Sort Template image</value>
-  </data>
   <data name="ToolToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>91, 25</value>
   </data>
@@ -9797,13 +9791,13 @@
     <value>   Tool(&amp;T)   </value>
   </data>
   <data name="InformationToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 24</value>
+    <value>170, 24</value>
   </data>
   <data name="InformationToolStripMenuItem.Text" xml:space="preserve">
     <value>Information(&amp;I)</value>
   </data>
   <data name="LicenseLToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 24</value>
+    <value>170, 24</value>
   </data>
   <data name="LicenseLToolStripMenuItem.Text" xml:space="preserve">
     <value>License(&amp;L)</value>
@@ -19766,12 +19760,6 @@
   </data>
   <data name="&gt;&gt;timash_hotkey_sleep.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SortTemplateImageToolStripMenuItem.Name" xml:space="preserve">
-    <value>SortTemplateImageToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;SortTemplateImageToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Mainwindow</value>
