@@ -13750,6 +13750,11 @@ Public Class Mainwindow
 
     'Arrayprofileの作成はここ
     Private arrayprofile(128) As String
+
+    Private Sub SortTemplateImageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SortTemplateImageToolStripMenuItem.Click
+
+    End Sub
+
     Private Sub Createarrayprofile()
 
         arrayprofile = New String() {
