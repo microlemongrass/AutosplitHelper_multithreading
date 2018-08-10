@@ -209,6 +209,18 @@
     <Compile Include="skeleton.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Sortimagewindow.Designer.vb">
+      <DependentUpon>Sortimagewindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sortimagewindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sortimage_input_info.Designer.vb">
+      <DependentUpon>Sortimage_input_info.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sortimage_input_info.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="tableview.Designer.vb">
       <DependentUpon>tableview.vb</DependentUpon>
     </Compile>
@@ -309,6 +321,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="skeleton.resx">
       <DependentUpon>skeleton.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sortimagewindow.resx">
+      <DependentUpon>Sortimagewindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sortimage_input_info.resx">
+      <DependentUpon>Sortimage_input_info.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="tableview.resx">
       <DependentUpon>tableview.vb</DependentUpon>
