@@ -6659,25 +6659,25 @@ Public Class Mainwindow
             '■監視処理開始
 
 
-            '■画像フォルダの一時ファイルを作成するかどうか
-            If chkcreate_temppicture.Checked = True Then
-                ' 必要な変数を宣言する
-                Dim dtNow As DateTime = DateTime.Now
-                ' 時刻の部分だけを取得する
-                Dim tsNow As TimeSpan = dtNow.TimeOfDay
+            ''■画像フォルダの一時ファイルを作成するかどうか
+            'If chkcreate_temppicture.Checked = True Then
+            '    ' 必要な変数を宣言する
+            '    Dim dtNow As DateTime = DateTime.Now
+            '    ' 時刻の部分だけを取得する
+            '    Dim tsNow As TimeSpan = dtNow.TimeOfDay
 
-                Dim r1 As String = tsNow.ToString().Replace(":", "-")
-                ' フォルダ (ディレクトリ) を作成する
-                System.IO.Directory.CreateDirectory("./temp/temp3/" & r1)
+            '    Dim r1 As String = tsNow.ToString().Replace(":", "-")
+            '    ' フォルダ (ディレクトリ) を作成する
+            '    System.IO.Directory.CreateDirectory("./temp/temp3/" & r1)
 
-                'ディレクトリ"picture/xxx"を"temp/temp3/xxx"にコピーする
-                My.Computer.FileSystem.CopyDirectory(txtpass_picturefolder.Text, "./temp/temp3/" & r1,
-                FileIO.UIOption.AllDialogs, FileIO.UICancelOption.DoNothing)
+            '    'ディレクトリ"picture/xxx"を"temp/temp3/xxx"にコピーする
+            '    My.Computer.FileSystem.CopyDirectory(txtpass_picturefolder.Text, "./temp/temp3/" & r1,
+            '    FileIO.UIOption.AllDialogs, FileIO.UICancelOption.DoNothing)
 
-                txttemp_picturepass.Text = txtpass_picturefolder.Text
-                txtpass_picturefolder.Text = "./temp/temp3/" & r1
+            '    txttemp_picturepass.Text = txtpass_picturefolder.Text
+            '    txtpass_picturefolder.Text = "./temp/temp3/" & r1
 
-            End If
+            'End If
 
 
             '■Livesplitの名前付きパイプの接続状況表示。存在したら接続

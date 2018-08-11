@@ -2739,39 +2739,6 @@
   <data name="&gt;&gt;chkshow_text.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="chkcreate_temppicture.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="chkcreate_temppicture.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 11pt</value>
-  </data>
-  <data name="chkcreate_temppicture.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="chkcreate_temppicture.Location" type="System.Drawing.Point, System.Drawing">
-    <value>366, 61</value>
-  </data>
-  <data name="chkcreate_temppicture.Size" type="System.Drawing.Size, System.Drawing">
-    <value>228, 23</value>
-  </data>
-  <data name="chkcreate_temppicture.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="chkcreate_temppicture.Text" xml:space="preserve">
-    <value>Create temp. picture folder</value>
-  </data>
-  <data name="&gt;&gt;chkcreate_temppicture.Name" xml:space="preserve">
-    <value>chkcreate_temppicture</value>
-  </data>
-  <data name="&gt;&gt;chkcreate_temppicture.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chkcreate_temppicture.Parent" xml:space="preserve">
-    <value>pnl_other</value>
-  </data>
-  <data name="&gt;&gt;chkcreate_temppicture.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
   <data name="txtpass_picturefolder.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 9pt</value>
   </data>
@@ -2794,7 +2761,7 @@
     <value>pnl_other</value>
   </data>
   <data name="&gt;&gt;txtpass_picturefolder.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="txtpass_csv.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 9pt</value>
@@ -2818,7 +2785,7 @@
     <value>pnl_other</value>
   </data>
   <data name="&gt;&gt;txtpass_csv.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="Label98.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2851,7 +2818,7 @@
     <value>pnl_other</value>
   </data>
   <data name="&gt;&gt;Label98.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>7</value>
   </data>
   <data name="Label26.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2884,7 +2851,7 @@
     <value>pnl_other</value>
   </data>
   <data name="&gt;&gt;Label26.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>8</value>
   </data>
   <data name="Label23.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2917,7 +2884,7 @@
     <value>pnl_other</value>
   </data>
   <data name="&gt;&gt;Label23.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>9</value>
   </data>
   <data name="lbllivesplit_state.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2950,7 +2917,7 @@
     <value>pnl_other</value>
   </data>
   <data name="&gt;&gt;lbllivesplit_state.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>10</value>
   </data>
   <data name="pnl_other.Location" type="System.Drawing.Point, System.Drawing">
     <value>1477, 381</value>
@@ -8098,6 +8065,39 @@
   <data name="&gt;&gt;numtextwindow_sizey.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="chkcreate_temppicture.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkcreate_temppicture.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 11pt</value>
+  </data>
+  <data name="chkcreate_temppicture.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkcreate_temppicture.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 351</value>
+  </data>
+  <data name="chkcreate_temppicture.Size" type="System.Drawing.Size, System.Drawing">
+    <value>228, 23</value>
+  </data>
+  <data name="chkcreate_temppicture.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="chkcreate_temppicture.Text" xml:space="preserve">
+    <value>Create temp. picture folder</value>
+  </data>
+  <data name="&gt;&gt;chkcreate_temppicture.Name" xml:space="preserve">
+    <value>chkcreate_temppicture</value>
+  </data>
+  <data name="&gt;&gt;chkcreate_temppicture.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkcreate_temppicture.Parent" xml:space="preserve">
+    <value>GroupBox2</value>
+  </data>
+  <data name="&gt;&gt;chkcreate_temppicture.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
   <data name="numprofile.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 11pt</value>
   </data>
@@ -8123,7 +8123,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;numprofile.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="Label38.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -8156,7 +8156,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;Label38.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="txtclickcount.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 9.75pt</value>
@@ -8189,7 +8189,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;txtclickcount.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="txtprofile.Location" type="System.Drawing.Point, System.Drawing">
     <value>17, 43</value>
@@ -8219,7 +8219,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;txtprofile.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="txtloadprofile.Location" type="System.Drawing.Point, System.Drawing">
     <value>65, 43</value>
@@ -8246,7 +8246,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;txtloadprofile.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="numskip_ash.Location" type="System.Drawing.Point, System.Drawing">
     <value>128, 101</value>
@@ -8651,7 +8651,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;GroupBox3.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="txtsavetempnumber.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -8873,7 +8873,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;Panel5.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="txttemp_picturepass.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 9pt</value>
@@ -8897,7 +8897,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;txttemp_picturepass.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="Label71.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -8930,7 +8930,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;Label71.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="GroupBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>1889, 1</value>
@@ -18036,7 +18036,7 @@
     <value>112</value>
   </data>
   <data name="Label31.Text" xml:space="preserve">
-    <value> (2018/05/26)</value>
+    <value> (2018/08/12)</value>
   </data>
   <data name="&gt;&gt;Label31.Name" xml:space="preserve">
     <value>Label31</value>
@@ -18168,7 +18168,7 @@
     <value>5</value>
   </data>
   <data name="lblversion.Text" xml:space="preserve">
-    <value>V1.30</value>
+    <value>V1.31</value>
   </data>
   <data name="&gt;&gt;lblversion.Name" xml:space="preserve">
     <value>lblversion</value>
