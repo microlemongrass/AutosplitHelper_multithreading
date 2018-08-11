@@ -657,5 +657,59 @@ Namespace My.Resources
                 Return ResourceManager.GetString("msgc02", resourceCulture)
             End Get
         End Property
+        
+        '''<summary>
+        '''  rtf file(s) doesn&apos;t exist or the number of it does not match the number of template image(s). に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend Shared ReadOnly Property msgd01() As String
+            Get
+                Return ResourceManager.GetString("msgd01", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Created a profile backup. に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend Shared ReadOnly Property msgd02() As String
+            Get
+                Return ResourceManager.GetString("msgd02", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Finish. It is overwritten to the selected profile. に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend Shared ReadOnly Property msgd03() As String
+            Get
+                Return ResourceManager.GetString("msgd03", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Number of image files and number of text files do not match. に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend Shared ReadOnly Property msgd04() As String
+            Get
+                Return ResourceManager.GetString("msgd04", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Finish. The zip file is saved in output/. に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend Shared ReadOnly Property msgd05() As String
+            Get
+                Return ResourceManager.GetString("msgd05", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  The backup profile has been deleted. に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend Shared ReadOnly Property msgd06() As String
+            Get
+                Return ResourceManager.GetString("msgd06", resourceCulture)
+            End Get
+        End Property
     End Class
 End Namespace

@@ -22,7 +22,8 @@ Partial Class Del_Addimagewindow
     'コード エディターを使って変更しないでください。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Del_Addimagewindow))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.txtpass_picturefolder = New System.Windows.Forms.TextBox()
         Me.txtpass_csv = New System.Windows.Forms.TextBox()
         Me.txtpass_rtf = New System.Windows.Forms.TextBox()
@@ -61,273 +62,206 @@ Partial Class Del_Addimagewindow
         '
         'txtpass_picturefolder
         '
-        Me.txtpass_picturefolder.Location = New System.Drawing.Point(592, 64)
+        resources.ApplyResources(Me.txtpass_picturefolder, "txtpass_picturefolder")
         Me.txtpass_picturefolder.Name = "txtpass_picturefolder"
-        Me.txtpass_picturefolder.Size = New System.Drawing.Size(209, 23)
-        Me.txtpass_picturefolder.TabIndex = 0
         '
         'txtpass_csv
         '
-        Me.txtpass_csv.Location = New System.Drawing.Point(592, 93)
+        resources.ApplyResources(Me.txtpass_csv, "txtpass_csv")
         Me.txtpass_csv.Name = "txtpass_csv"
-        Me.txtpass_csv.Size = New System.Drawing.Size(209, 23)
-        Me.txtpass_csv.TabIndex = 1
         '
         'txtpass_rtf
         '
-        Me.txtpass_rtf.Location = New System.Drawing.Point(592, 122)
+        resources.ApplyResources(Me.txtpass_rtf, "txtpass_rtf")
         Me.txtpass_rtf.Name = "txtpass_rtf"
-        Me.txtpass_rtf.Size = New System.Drawing.Size(209, 23)
-        Me.txtpass_rtf.TabIndex = 2
         '
         'listnumber
         '
+        resources.ApplyResources(Me.listnumber, "listnumber")
         Me.listnumber.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.listnumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.listnumber.Font = New System.Drawing.Font("Meiryo UI", 11.0!)
         Me.listnumber.ForeColor = System.Drawing.SystemColors.Control
         Me.listnumber.FormattingEnabled = True
-        Me.listnumber.ItemHeight = 19
-        Me.listnumber.Location = New System.Drawing.Point(24, 50)
         Me.listnumber.Name = "listnumber"
-        Me.listnumber.Size = New System.Drawing.Size(68, 458)
-        Me.listnumber.TabIndex = 3
         '
         'btnok
         '
-        Me.btnok.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
-        Me.btnok.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        resources.ApplyResources(Me.btnok, "btnok")
+        Me.btnok.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(55, Byte), Integer))
         Me.btnok.ForeColor = System.Drawing.SystemColors.Control
-        Me.btnok.Location = New System.Drawing.Point(403, 223)
         Me.btnok.Name = "btnok"
-        Me.btnok.Size = New System.Drawing.Size(117, 42)
-        Me.btnok.TabIndex = 4
-        Me.btnok.Text = "OK"
         Me.btnok.UseVisualStyleBackColor = False
         '
         'btninsert
         '
+        resources.ApplyResources(Me.btninsert, "btninsert")
         Me.btninsert.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
-        Me.btninsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btninsert.ForeColor = System.Drawing.SystemColors.Control
-        Me.btninsert.Location = New System.Drawing.Point(271, 50)
         Me.btninsert.Name = "btninsert"
-        Me.btninsert.Size = New System.Drawing.Size(117, 37)
-        Me.btninsert.TabIndex = 5
-        Me.btninsert.Text = "Insert"
         Me.btninsert.UseVisualStyleBackColor = False
         '
         'btndelete
         '
+        resources.ApplyResources(Me.btndelete, "btndelete")
         Me.btndelete.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
-        Me.btndelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btndelete.ForeColor = System.Drawing.SystemColors.Control
-        Me.btndelete.Location = New System.Drawing.Point(403, 50)
         Me.btndelete.Name = "btndelete"
-        Me.btndelete.Size = New System.Drawing.Size(117, 37)
-        Me.btndelete.TabIndex = 6
-        Me.btndelete.Text = "Delete"
         Me.btndelete.UseVisualStyleBackColor = False
         '
         'PictureBox1
         '
+        resources.ApplyResources(Me.PictureBox1, "PictureBox1")
         Me.PictureBox1.BackColor = System.Drawing.Color.DimGray
-        Me.PictureBox1.Location = New System.Drawing.Point(271, 93)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(249, 98)
-        Me.PictureBox1.TabIndex = 7
         Me.PictureBox1.TabStop = False
         '
         'listcomment
         '
+        resources.ApplyResources(Me.listcomment, "listcomment")
         Me.listcomment.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.listcomment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.listcomment.Font = New System.Drawing.Font("Meiryo UI", 11.0!)
         Me.listcomment.ForeColor = System.Drawing.SystemColors.Control
         Me.listcomment.FormattingEnabled = True
-        Me.listcomment.ItemHeight = 19
-        Me.listcomment.Location = New System.Drawing.Point(91, 50)
         Me.listcomment.Name = "listcomment"
-        Me.listcomment.Size = New System.Drawing.Size(156, 458)
-        Me.listcomment.TabIndex = 10
         '
         'Copytable
         '
+        resources.ApplyResources(Me.Copytable, "Copytable")
         Me.Copytable.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
         Me.Copytable.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ControlDark
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Meiryo UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Copytable.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDark
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Meiryo UI", 9.0!)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Copytable.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.Copytable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Copytable.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.no, Me.send, Me.key, Me.rate, Me.sleep, Me.timing, Me.darksleep, Me.darkthr, Me.seektime, Me.graph_count, Me.graph_rate, Me.graph_view, Me.posx, Me.posy, Me.sizex, Me.sizey, Me.ltx, Me.lty, Me.rbx, Me.rby})
-        Me.Copytable.Location = New System.Drawing.Point(592, 168)
         Me.Copytable.Name = "Copytable"
         Me.Copytable.RowTemplate.Height = 21
-        Me.Copytable.Size = New System.Drawing.Size(374, 146)
-        Me.Copytable.TabIndex = 46
         '
         'no
         '
-        Me.no.HeaderText = "Comment"
+        resources.ApplyResources(Me.no, "no")
         Me.no.Name = "no"
-        Me.no.Width = 156
         '
         'send
         '
-        Me.send.HeaderText = "Snd"
+        resources.ApplyResources(Me.send, "send")
         Me.send.Name = "send"
-        Me.send.Width = 38
         '
         'key
         '
-        Me.key.HeaderText = "Key"
+        resources.ApplyResources(Me.key, "key")
         Me.key.Name = "key"
-        Me.key.Width = 38
         '
         'rate
         '
-        Me.rate.HeaderText = "Thr."
+        resources.ApplyResources(Me.rate, "rate")
         Me.rate.Name = "rate"
-        Me.rate.Width = 50
         '
         'sleep
         '
-        Me.sleep.HeaderText = "Sleep"
+        resources.ApplyResources(Me.sleep, "sleep")
         Me.sleep.Name = "sleep"
-        Me.sleep.Width = 62
         '
         'timing
         '
-        Me.timing.HeaderText = "T"
+        resources.ApplyResources(Me.timing, "timing")
         Me.timing.Name = "timing"
-        Me.timing.Width = 24
         '
         'darksleep
         '
-        Me.darksleep.HeaderText = "Delay"
+        resources.ApplyResources(Me.darksleep, "darksleep")
         Me.darksleep.Name = "darksleep"
-        Me.darksleep.Width = 70
         '
         'darkthr
         '
-        Me.darkthr.HeaderText = "C.Al."
+        resources.ApplyResources(Me.darkthr, "darkthr")
         Me.darkthr.Name = "darkthr"
-        Me.darkthr.Width = 46
         '
         'seektime
         '
-        Me.seektime.HeaderText = "Seek"
+        resources.ApplyResources(Me.seektime, "seektime")
         Me.seektime.Name = "seektime"
-        Me.seektime.Width = 70
         '
         'graph_count
         '
-        Me.graph_count.HeaderText = "G.C."
+        resources.ApplyResources(Me.graph_count, "graph_count")
         Me.graph_count.Name = "graph_count"
-        Me.graph_count.Width = 46
         '
         'graph_rate
         '
-        Me.graph_rate.HeaderText = "G.R."
+        resources.ApplyResources(Me.graph_rate, "graph_rate")
         Me.graph_rate.Name = "graph_rate"
-        Me.graph_rate.Width = 53
         '
         'graph_view
         '
-        Me.graph_view.HeaderText = "G.V."
+        resources.ApplyResources(Me.graph_view, "graph_view")
         Me.graph_view.Name = "graph_view"
-        Me.graph_view.Width = 46
         '
         'posx
         '
-        Me.posx.HeaderText = "PX(D)"
+        resources.ApplyResources(Me.posx, "posx")
         Me.posx.Name = "posx"
-        Me.posx.Width = 46
         '
         'posy
         '
-        Me.posy.HeaderText = "PY(D)"
+        resources.ApplyResources(Me.posy, "posy")
         Me.posy.Name = "posy"
-        Me.posy.Width = 46
         '
         'sizex
         '
-        Me.sizex.HeaderText = "SX(D)"
+        resources.ApplyResources(Me.sizex, "sizex")
         Me.sizex.Name = "sizex"
-        Me.sizex.Width = 44
         '
         'sizey
         '
-        Me.sizey.HeaderText = "SY(D)"
+        resources.ApplyResources(Me.sizey, "sizey")
         Me.sizey.Name = "sizey"
-        Me.sizey.Width = 44
         '
         'ltx
         '
-        Me.ltx.HeaderText = "LTX"
+        resources.ApplyResources(Me.ltx, "ltx")
         Me.ltx.Name = "ltx"
-        Me.ltx.Width = 46
         '
         'lty
         '
-        Me.lty.HeaderText = "LTY"
+        resources.ApplyResources(Me.lty, "lty")
         Me.lty.Name = "lty"
-        Me.lty.Width = 46
         '
         'rbx
         '
-        Me.rbx.HeaderText = "RBX"
+        resources.ApplyResources(Me.rbx, "rbx")
         Me.rbx.Name = "rbx"
-        Me.rbx.Width = 46
         '
         'rby
         '
-        Me.rby.HeaderText = "RBY"
+        resources.ApplyResources(Me.rby, "rby")
         Me.rby.Name = "rby"
-        Me.rby.Width = 46
         '
         'lbltitlebar
         '
-        Me.lbltitlebar.AutoSize = True
-        Me.lbltitlebar.BackColor = System.Drawing.Color.Silver
-        Me.lbltitlebar.Font = New System.Drawing.Font("Meiryo UI", 9.75!)
+        resources.ApplyResources(Me.lbltitlebar, "lbltitlebar")
+        Me.lbltitlebar.BackColor = System.Drawing.Color.DarkGray
         Me.lbltitlebar.ForeColor = System.Drawing.Color.Black
-        Me.lbltitlebar.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.lbltitlebar.Location = New System.Drawing.Point(0, 0)
         Me.lbltitlebar.Name = "lbltitlebar"
-        Me.lbltitlebar.Padding = New System.Windows.Forms.Padding(0, 3, 121, 7)
-        Me.lbltitlebar.Size = New System.Drawing.Size(575, 27)
-        Me.lbltitlebar.TabIndex = 87
-        Me.lbltitlebar.Text = "Insert/Delete template image                                                     " &
-    "           "
         '
         'btnclosewindow
         '
+        resources.ApplyResources(Me.btnclosewindow, "btnclosewindow")
         Me.btnclosewindow.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer))
-        Me.btnclosewindow.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnclosewindow.Font = New System.Drawing.Font("Meiryo UI", 12.0!)
         Me.btnclosewindow.ForeColor = System.Drawing.Color.Thistle
-        Me.btnclosewindow.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.btnclosewindow.Location = New System.Drawing.Point(529, 0)
         Me.btnclosewindow.Name = "btnclosewindow"
-        Me.btnclosewindow.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.btnclosewindow.Size = New System.Drawing.Size(45, 26)
-        Me.btnclosewindow.TabIndex = 88
-        Me.btnclosewindow.Text = "×"
-        Me.btnclosewindow.TextAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnclosewindow.UseVisualStyleBackColor = False
         '
         'Del_Addimagewindow
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.DarkGray
-        Me.ClientSize = New System.Drawing.Size(574, 533)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Controls.Add(Me.btnclosewindow)
         Me.Controls.Add(Me.lbltitlebar)
         Me.Controls.Add(Me.Copytable)
@@ -340,12 +274,9 @@ Partial Class Del_Addimagewindow
         Me.Controls.Add(Me.txtpass_rtf)
         Me.Controls.Add(Me.txtpass_csv)
         Me.Controls.Add(Me.txtpass_picturefolder)
-        Me.Font = New System.Drawing.Font("Meiryo UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "Del_Addimagewindow"
-        Me.Text = "Del_Addimagewindow"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Copytable, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

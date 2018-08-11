@@ -10,6 +10,8 @@ Imports System.IO
 '元のプロファイル全てをtemp_sortにコピーしている状態。
 Public Class Sortimagewindow
 
+    Friend messagebox_name As String = "Autosplit Helper"
+
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -19,46 +21,54 @@ Public Class Sortimagewindow
 
 
         '■表の見た目を変更
-        dg1.AllowUserToResizeRows = False
+        With dg1
 
-        dg1.EnableHeadersVisualStyles = False
-        dg1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
-        dg1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
+            .AllowUserToResizeRows = False
 
-        dg1.DefaultCellStyle.ForeColor = Color.WhiteSmoke
-        dg1.DefaultCellStyle.Font = New Font("Meiryo UI", 10)
-        dg1.DefaultCellStyle.BackColor = Color.FromArgb(40, 42, 44)
+            .EnableHeadersVisualStyles = False
+            .ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
+            .RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
 
-        dg1.ColumnHeadersDefaultCellStyle.Font = New Font("Meiryo UI", 9)
-        dg1.ColumnHeadersDefaultCellStyle.ForeColor = Color.WhiteSmoke
+            .DefaultCellStyle.ForeColor = Color.WhiteSmoke
+            .DefaultCellStyle.Font = New Font("Meiryo UI", 10)
+            .DefaultCellStyle.BackColor = Color.FromArgb(40, 42, 44)
 
-        dg1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(84, 86, 88)
-        dg1.RowHeadersDefaultCellStyle.ForeColor = Color.WhiteSmoke
+            .ColumnHeadersDefaultCellStyle.Font = New Font("Meiryo UI", 9)
+            .ColumnHeadersDefaultCellStyle.ForeColor = Color.WhiteSmoke
 
-        dg1.RowHeadersDefaultCellStyle.BackColor = Color.FromArgb(84, 86, 88)
-        dg1.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
-        dg1.Columns(0).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
-        dg1.RowHeadersWidth = 30
+            .ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(84, 86, 88)
+            .RowHeadersDefaultCellStyle.ForeColor = Color.WhiteSmoke
+
+            .RowHeadersDefaultCellStyle.BackColor = Color.FromArgb(84, 86, 88)
+            .DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+            .Columns(0).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
+            .RowHeadersWidth = 30
 
 
-        dg1.AllowUserToResizeRows = False
+        End With
 
-        dgad.EnableHeadersVisualStyles = False
-        dgad.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
-        dgad.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
-        dgad.DefaultCellStyle.ForeColor = Color.WhiteSmoke
-        dgad.DefaultCellStyle.Font = New Font("Meiryo UI", 10)
-        dgad.DefaultCellStyle.BackColor = Color.FromArgb(40, 42, 44)
+        With dgad
 
-        dgad.ColumnHeadersDefaultCellStyle.Font = New Font("Meiryo UI", 9)
-        dg1.ColumnHeadersDefaultCellStyle.ForeColor = Color.WhiteSmoke
+            .AllowUserToResizeRows = False
 
-        dgad.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(84, 86, 88)
-        dgad.RowHeadersDefaultCellStyle.ForeColor = Color.WhiteSmoke
-        dgad.RowHeadersDefaultCellStyle.BackColor = Color.FromArgb(84, 86, 88)
-        dgad.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
-        dgad.Columns(0).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
-        dgad.RowHeadersWidth = 30
+            .EnableHeadersVisualStyles = False
+            .ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
+            .RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
+            .DefaultCellStyle.ForeColor = Color.WhiteSmoke
+            .DefaultCellStyle.Font = New Font("Meiryo UI", 10)
+            .DefaultCellStyle.BackColor = Color.FromArgb(40, 42, 44)
+
+            .ColumnHeadersDefaultCellStyle.Font = New Font("Meiryo UI", 9)
+            .ColumnHeadersDefaultCellStyle.ForeColor = Color.WhiteSmoke
+
+            .ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(84, 86, 88)
+            .RowHeadersDefaultCellStyle.ForeColor = Color.WhiteSmoke
+            .RowHeadersDefaultCellStyle.BackColor = Color.FromArgb(84, 86, 88)
+            .DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+            .Columns(0).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
+            .RowHeadersWidth = 30
+
+        End With
 
 
         txtaddcount.Text = 0
@@ -121,7 +131,7 @@ Public Class Sortimagewindow
             txtpass_csv.Text = txtpass_profile.Text & "/table.csv"
             txtpass_csv.BackColor = Color.FromArgb(180, 252, 180)
         Else
-            MessageBox.Show("Not found: " & txtpass_profile.Text & "/table.csv")
+            MessageBox.Show("Not found: " & txtpass_profile.Text & "/table.csv", messagebox_name)
             Exit Sub
 
         End If
@@ -131,7 +141,7 @@ Public Class Sortimagewindow
             txtpass_picturefolder.Text = txtpass_profile.Text & "/picture"
             txtpass_picturefolder.BackColor = Color.FromArgb(180, 252, 180)
         Else
-            MessageBox.Show("Not found: " & txtpass_profile.Text & "/picture/")
+            MessageBox.Show("Not found: " & txtpass_profile.Text & "/picture/", messagebox_name)
             Exit Sub
 
         End If
@@ -141,7 +151,7 @@ Public Class Sortimagewindow
             txtpass_rtf.Text = txtpass_profile.Text & "/text"
             txtpass_rtf.BackColor = Color.FromArgb(180, 252, 180)
         Else
-            MessageBox.Show("Not found: " & txtpass_profile.Text & "/text/")
+            MessageBox.Show("Not found: " & txtpass_profile.Text & "/text/", messagebox_name)
             Exit Sub
 
         End If
@@ -225,16 +235,19 @@ Public Class Sortimagewindow
 
         If chkreset.Checked = False Then 'リセット画像なし
             If Not FileCount_bmponly = FileCount_text Then
-                MessageBox.Show("画像ファイル数とテキストファイル数が一致しません。" & vbCrLf &
-                                    "Template file number(s):" & FileCount_bmponly & " ,Textfile number(s):" & FileCount_text)
+                MessageBox.Show(My.Resources.Message.msgd04 & vbCrLf &
+                                    "Template file number(s):" & FileCount_bmponly & " ,Textfile number(s):" & FileCount_text, messagebox_name)
+                '"画像ファイル数とテキストファイル数が一致しません。"
+
                 Exit Sub
 
             End If
 
         ElseIf chkreset.Checked = True Then 'リセット画像なし
             If Not FileCount_bmponly - 1 = FileCount_text Then
-                MessageBox.Show("画像ファイル数とテキストファイル数が一致しません。" & vbCrLf &
-                                        "Template file number(s, exclude reset.bmp):" & FileCount_bmponly - 1 & " ,Textfile number(s):" & FileCount_text)
+                MessageBox.Show(My.Resources.Message.msgd04 & vbCrLf &
+                                        "Template file number(s, exclude reset.bmp):" & FileCount_bmponly - 1 & " ,Textfile number(s):" & FileCount_text, messagebox_name)
+                '"画像ファイル数とテキストファイル数が一致しません。" 
                 Exit Sub
 
             End If
@@ -637,8 +650,8 @@ Public Class Sortimagewindow
 
 
 
-        MsgBox("ZIP終わり") '(My.Resources.Message.msg3) '"現在表示中のデータを保存しました。"
-
+        MessageBox.Show(My.Resources.Message.msgd05 & vbCrLf & My.Resources.Message.msgd06, messagebox_name) '(My.Resources.Message.msg3) '"現在表示中のデータを保存しました。"
+        '"終了しました。zipファイルはoutput/へ保存されています。""バックアッププロファイルは削除されました。"
         Me.Close()
 
     End Sub
@@ -936,7 +949,7 @@ Public Class Sortimagewindow
                     Console.WriteLine("表の書き換え終わり")
 
                 Catch ex As Exception
-                    MessageBox.Show(My.Resources.Message.msg1, "messagebox_name")
+                    MessageBox.Show(My.Resources.Message.msg1, messagebox_name)
                     '"表の読み込みに失敗しました。savefileフォルダに[table1.csv(カンマ区切り)]を作成してください。"
 
                 End Try
@@ -944,8 +957,8 @@ Public Class Sortimagewindow
 
 
 
-                MsgBox("現在表示中のデータを保存しました。") '(My.Resources.Message.msg3) '"現在表示中のデータを保存しました。"
-
+                MessageBox.Show(My.Resources.Message.msgd03, messagebox_name) '(My.Resources.Message.msg3) '"現在表示中のデータを保存しました。"
+                '終了しました。 選択したプロファイルに上書きされています。
                 Me.Close()
 
             End If
@@ -954,7 +967,7 @@ Public Class Sortimagewindow
 
 
         Catch
-            MsgBox(My.Resources.Message.msg4)
+            MessageBox.Show(My.Resources.Message.msg4, messagebox_name)
             '"エラー。csv等が保存されていない可能性があります。空欄がないか確かめてみて下さい。"
         End Try
 
@@ -995,6 +1008,25 @@ Public Class Sortimagewindow
 
     Private Sub btnclosewindow_Click(sender As Object, e As EventArgs) Handles btnclosewindow.Click
         Me.Close()
+    End Sub
+
+    Private Sub btnexpandwindow_Click(sender As Object, e As EventArgs) Handles btnexpandwindow.Click
+
+        If btnexpandwindow.Text = "(vv Change comment vv)" Then
+
+            btnexpandwindow.Text = "(^^ Close ^^)"
+            Me.Size = New Drawing.Size(740, 650)
+
+
+        ElseIf btnexpandwindow.Text = "(^^ Close ^^)" Then
+
+            btnexpandwindow.Text = "(vv Change comment vv)"
+            Me.Size = New Drawing.Size(740, 450)
+
+
+        End If
+
+
     End Sub
 
 

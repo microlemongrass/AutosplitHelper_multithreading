@@ -315,4 +315,22 @@
   <data name="msgc02" xml:space="preserve">
     <value>切断</value>
   </data>
+  <data name="msgd01" xml:space="preserve">
+    <value>Rtfファイルが存在しないか、数がテンプレート数と一致していません。</value>
+  </data>
+  <data name="msgd02" xml:space="preserve">
+    <value>プロファイルのバックアップを作成しました。</value>
+  </data>
+  <data name="msgd03" xml:space="preserve">
+    <value>終了しました。 選択したプロファイルに上書きされています。</value>
+  </data>
+  <data name="msgd04" xml:space="preserve">
+    <value>画像ファイル数とテキストファイル数が一致しません。</value>
+  </data>
+  <data name="msgd05" xml:space="preserve">
+    <value>終了しました。zipファイルはoutput/へ保存されています。</value>
+  </data>
+  <data name="msgd06" xml:space="preserve">
+    <value>バックアッププロファイルは削除されました。</value>
+  </data>
 </root>

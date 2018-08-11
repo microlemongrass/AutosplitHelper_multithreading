@@ -315,4 +315,22 @@
   <data name="msgc02" xml:space="preserve">
     <value>Disconnect</value>
   </data>
+  <data name="msgd01" xml:space="preserve">
+    <value>rtf file(s) doesn't exist or the number of it does not match the number of template image(s).</value>
+  </data>
+  <data name="msgd02" xml:space="preserve">
+    <value>Created a profile backup.</value>
+  </data>
+  <data name="msgd03" xml:space="preserve">
+    <value>Finish. It is overwritten to the selected profile.</value>
+  </data>
+  <data name="msgd04" xml:space="preserve">
+    <value>Number of image files and number of text files do not match.</value>
+  </data>
+  <data name="msgd05" xml:space="preserve">
+    <value>Finish. The zip file is saved in output/.</value>
+  </data>
+  <data name="msgd06" xml:space="preserve">
+    <value>The backup profile has been deleted.</value>
+  </data>
 </root>

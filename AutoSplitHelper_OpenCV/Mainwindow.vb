@@ -6538,7 +6538,7 @@ Public Class Mainwindow
             Next
 
             If Not FileCount_rtfonly = TableCount - 1 Then
-                MessageBox.Show("Rtfファイルが存在しないか、数がテンプレート数と一致していません。")
+                MessageBox.Show(My.Resources.Message.msgd01, messagebox_name) '"Rtfファイルが存在しないか、数がテンプレート数と一致していません。"
 
                 Exit Sub
             End If
@@ -13823,9 +13823,6 @@ Public Class Mainwindow
         Textwindow.Show()
     End Sub
 
-    Private Sub CreateTextFileToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CreateTextFileToolStripMenuItem.Click
-        btntext_createtext.PerformClick()
-    End Sub
 
     Private Sub OpenTextFolderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenTextFolderToolStripMenuItem.Click
         btntext_openfolder.PerformClick()
@@ -14092,7 +14089,7 @@ CInt(chkmonitor_sizestate.Checked)
         cmbprofile.Text = cmbprofile.SelectedItem & "_backup"
         saveprofile_nomessage() '複製
 
-        MessageBox.Show("プロファイルのバックアップを作成しました（xxx_backup）")
+        MessageBox.Show(My.Resources.Message.msgd02 & "(" & temp_profilename & "_backup)", messagebox_name) '"プロファイルのバックアップを作成しました。"
 
         cmbprofile.SelectedItem = temp_profilename
 
@@ -14119,7 +14116,7 @@ CInt(chkmonitor_sizestate.Checked)
         cmbprofile.Text = cmbprofile.SelectedItem & "_backup"
         saveprofile_nomessage() '複製
 
-        MessageBox.Show("プロファイルのバックアップを作成しました（xxx_backup）")
+        MessageBox.Show("プロファイルのバックアップを作成しました。" & "(" & temp_profilename & "_backup)", messagebox_name)
 
         cmbprofile.SelectedItem = temp_profilename
 

@@ -117,55 +117,595 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="no.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="&gt;&gt;lbltitlebar.Name" xml:space="preserve">
+    <value>lbltitlebar</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="key.Width" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="listnumber.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 458</value>
+  </data>
+  <data name="btnclosewindow.TabIndex" type="System.Int32, mscorlib">
+    <value>88</value>
+  </data>
+  <data name="graph_count.HeaderText" xml:space="preserve">
+    <value>G.C.</value>
+  </data>
+  <data name="&gt;&gt;posx.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;darkthr.Name" xml:space="preserve">
+    <value>darkthr</value>
+  </data>
+  <data name="&gt;&gt;seektime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lbltitlebar.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 3, 121, 7</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="graph_view.HeaderText" xml:space="preserve">
+    <value>G.V.</value>
+  </data>
+  <data name="txtpass_picturefolder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 23</value>
+  </data>
+  <data name="&gt;&gt;btnok.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;graph_view.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="listnumber.ItemHeight" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;rby.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="sizey.Width" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="btninsert.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;lbltitlebar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtpass_picturefolder.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btndelete.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="graph_rate.Width" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="lbltitlebar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Del_Addimagewindow</value>
+  </data>
+  <data name="&gt;&gt;listcomment.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="graph_view.Width" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="&gt;&gt;lbltitlebar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtpass_picturefolder.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;darksleep.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listcomment.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;sizex.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btninsert.Name" xml:space="preserve">
+    <value>btninsert</value>
+  </data>
+  <data name="&gt;&gt;listnumber.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;rbx.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="PictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>271, 93</value>
+  </data>
+  <data name="&gt;&gt;sleep.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="btndelete.Location" type="System.Drawing.Point, System.Drawing">
+    <value>403, 50</value>
+  </data>
+  <data name="&gt;&gt;timing.Name" xml:space="preserve">
+    <value>timing</value>
+  </data>
+  <data name="&gt;&gt;btnok.Name" xml:space="preserve">
+    <value>btnok</value>
+  </data>
+  <data name="&gt;&gt;btninsert.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PictureBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="ltx.HeaderText" xml:space="preserve">
+    <value>LTX</value>
+  </data>
+  <data name="send.HeaderText" xml:space="preserve">
+    <value>Snd</value>
+  </data>
+  <data name="&gt;&gt;no.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btndelete.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;btnclosewindow.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="PictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lbltitlebar.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
-  <metadata name="send.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  </data>
+  <data name="sizex.Width" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="&gt;&gt;Copytable.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnok.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;listnumber.Name" xml:space="preserve">
+    <value>listnumber</value>
+  </data>
+  <data name="&gt;&gt;btnclosewindow.Name" xml:space="preserve">
+    <value>btnclosewindow</value>
+  </data>
+  <data name="&gt;&gt;txtpass_rtf.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="send.Width" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="txtpass_picturefolder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>592, 64</value>
+  </data>
+  <data name="&gt;&gt;darksleep.Name" xml:space="preserve">
+    <value>darksleep</value>
+  </data>
+  <data name="posx.Width" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="btninsert.Location" type="System.Drawing.Point, System.Drawing">
+    <value>271, 50</value>
+  </data>
+  <data name="timing.HeaderText" xml:space="preserve">
+    <value>T</value>
+  </data>
+  <data name="rbx.HeaderText" xml:space="preserve">
+    <value>RBX</value>
+  </data>
+  <data name="darksleep.HeaderText" xml:space="preserve">
+    <value>Delay</value>
+  </data>
+  <data name="&gt;&gt;txtpass_csv.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Del_Addimagewindow</value>
+  </data>
+  <data name="&gt;&gt;btnclosewindow.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="sizey.HeaderText" xml:space="preserve">
+    <value>SY(D)</value>
+  </data>
+  <data name="graph_rate.HeaderText" xml:space="preserve">
+    <value>G.R.</value>
+  </data>
+  <data name="rate.HeaderText" xml:space="preserve">
+    <value>Thr.</value>
+  </data>
+  <data name="no.HeaderText" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="&gt;&gt;txtpass_csv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;key.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnok.Location" type="System.Drawing.Point, System.Drawing">
+    <value>403, 223</value>
+  </data>
+  <data name="&gt;&gt;sleep.Name" xml:space="preserve">
+    <value>sleep</value>
+  </data>
+  <data name="Copytable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>374, 146</value>
+  </data>
+  <data name="listnumber.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 50</value>
+  </data>
+  <data name="&gt;&gt;sizey.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lty.Width" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="&gt;&gt;PictureBox1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lty.HeaderText" xml:space="preserve">
+    <value>LTY</value>
+  </data>
+  <data name="&gt;&gt;btndelete.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="txtpass_csv.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;timing.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ltx.Name" xml:space="preserve">
+    <value>ltx</value>
+  </data>
+  <data name="txtpass_picturefolder.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="posx.HeaderText" xml:space="preserve">
+    <value>PX(D)</value>
+  </data>
+  <data name="btnok.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 42</value>
+  </data>
+  <data name="&gt;&gt;graph_rate.Name" xml:space="preserve">
+    <value>graph_rate</value>
+  </data>
+  <data name="darkthr.Width" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="timing.Width" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="graph_count.Width" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="&gt;&gt;btnclosewindow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="listcomment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 458</value>
+  </data>
+  <data name="lbltitlebar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9.75pt</value>
+  </data>
+  <data name="lbltitlebar.Text" xml:space="preserve">
+    <value>Insert/Delete template image                                                                </value>
+  </data>
+  <data name="btndelete.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="sleep.HeaderText" xml:space="preserve">
+    <value>Sleep</value>
+  </data>
+  <data name="rby.HeaderText" xml:space="preserve">
+    <value>RBY</value>
+  </data>
+  <data name="&gt;&gt;listcomment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listcomment.Name" xml:space="preserve">
+    <value>listcomment</value>
+  </data>
+  <data name="&gt;&gt;txtpass_csv.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;PictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sizex.Name" xml:space="preserve">
+    <value>sizex</value>
+  </data>
+  <data name="&gt;&gt;Copytable.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ltx.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btninsert.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 37</value>
+  </data>
+  <data name="sizex.HeaderText" xml:space="preserve">
+    <value>SX(D)</value>
+  </data>
+  <data name="txtpass_csv.Location" type="System.Drawing.Point, System.Drawing">
+    <value>592, 93</value>
+  </data>
+  <data name="&gt;&gt;Copytable.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnclosewindow.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 0, 0</value>
+  </data>
+  <data name="&gt;&gt;rby.Name" xml:space="preserve">
+    <value>rby</value>
+  </data>
+  <data name="no.Width" type="System.Int32, mscorlib">
+    <value>156</value>
+  </data>
+  <data name="listnumber.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="listcomment.ItemHeight" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="rby.Width" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="&gt;&gt;key.Name" xml:space="preserve">
+    <value>key</value>
+  </data>
+  <data name="&gt;&gt;send.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="rbx.Width" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="&gt;&gt;lty.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btninsert.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;txtpass_csv.Name" xml:space="preserve">
+    <value>txtpass_csv</value>
+  </data>
+  <data name="sleep.Width" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="btnclosewindow.Text" xml:space="preserve">
+    <value>×</value>
+  </data>
+  <data name="&gt;&gt;graph_rate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtpass_picturefolder.Name" xml:space="preserve">
+    <value>txtpass_picturefolder</value>
+  </data>
+  <data name="&gt;&gt;rate.Name" xml:space="preserve">
+    <value>rate</value>
+  </data>
+  <data name="&gt;&gt;rbx.Name" xml:space="preserve">
+    <value>rbx</value>
+  </data>
+  <data name="&gt;&gt;graph_count.Name" xml:space="preserve">
+    <value>graph_count</value>
+  </data>
+  <data name="&gt;&gt;btndelete.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;posy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="PictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>249, 98</value>
+  </data>
+  <data name="btnclosewindow.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="listcomment.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;PictureBox1.Name" xml:space="preserve">
+    <value>PictureBox1</value>
+  </data>
+  <data name="txtpass_rtf.Location" type="System.Drawing.Point, System.Drawing">
+    <value>592, 122</value>
+  </data>
+  <data name="rate.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="&gt;&gt;sizey.Name" xml:space="preserve">
+    <value>sizey</value>
+  </data>
+  <data name="&gt;&gt;listnumber.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Copytable.Name" xml:space="preserve">
+    <value>Copytable</value>
+  </data>
+  <data name="seektime.HeaderText" xml:space="preserve">
+    <value>Seek</value>
+  </data>
+  <data name="txtpass_rtf.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 23</value>
+  </data>
+  <data name="txtpass_csv.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 23</value>
+  </data>
+  <data name="btndelete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 37</value>
+  </data>
+  <data name="lbltitlebar.TabIndex" type="System.Int32, mscorlib">
+    <value>87</value>
+  </data>
+  <data name="&gt;&gt;seektime.Name" xml:space="preserve">
+    <value>seektime</value>
+  </data>
+  <data name="&gt;&gt;txtpass_rtf.Name" xml:space="preserve">
+    <value>txtpass_rtf</value>
+  </data>
+  <data name="listnumber.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 11pt</value>
+  </data>
+  <data name="&gt;&gt;btninsert.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;btndelete.Name" xml:space="preserve">
+    <value>btndelete</value>
+  </data>
+  <data name="key.HeaderText" xml:space="preserve">
+    <value>Key</value>
+  </data>
+  <data name="lbltitlebar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>575, 27</value>
+  </data>
+  <data name="&gt;&gt;listnumber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="listcomment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>91, 50</value>
+  </data>
+  <data name="&gt;&gt;btninsert.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="seektime.Width" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>574, 533</value>
+  </data>
+  <data name="&gt;&gt;darkthr.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="darkthr.HeaderText" xml:space="preserve">
+    <value>C.Al.</value>
+  </data>
+  <data name="btnclosewindow.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="darksleep.Width" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="&gt;&gt;btnok.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;posx.Name" xml:space="preserve">
+    <value>posx</value>
+  </data>
+  <data name="&gt;&gt;no.Name" xml:space="preserve">
+    <value>no</value>
+  </data>
+  <data name="btnclosewindow.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;btndelete.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;graph_view.Name" xml:space="preserve">
+    <value>graph_view</value>
+  </data>
+  <data name="btnclosewindow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 26</value>
+  </data>
+  <data name="btnok.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="&gt;&gt;lty.Name" xml:space="preserve">
+    <value>lty</value>
+  </data>
+  <data name="Copytable.Location" type="System.Drawing.Point, System.Drawing">
+    <value>592, 168</value>
+  </data>
+  <data name="btnok.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="btnclosewindow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>529, 0</value>
+  </data>
+  <data name="posy.Width" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="&gt;&gt;txtpass_rtf.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;send.Name" xml:space="preserve">
+    <value>send</value>
+  </data>
+  <data name="Copytable.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="btnok.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btninsert.Text" xml:space="preserve">
+    <value>Insert below</value>
+  </data>
+  <data name="txtpass_rtf.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;txtpass_rtf.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;graph_count.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="listcomment.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 11pt</value>
+  </data>
+  <data name="&gt;&gt;posy.Name" xml:space="preserve">
+    <value>posy</value>
+  </data>
+  <data name="&gt;&gt;lbltitlebar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="posy.HeaderText" xml:space="preserve">
+    <value>PY(D)</value>
+  </data>
+  <data name="btnclosewindow.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;txtpass_picturefolder.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="ltx.Width" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="lbltitlebar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <metadata name="ltx.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="key.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="rate.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="sleep.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="timing.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="darksleep.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="darkthr.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="seektime.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="graph_count.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="graph_rate.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="graph_view.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="posx.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="posy.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="sizex.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="sizey.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="ltx.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="seektime.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="lty.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -174,7 +714,49 @@
   <metadata name="rbx.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="send.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="graph_rate.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="rate.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="rby.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="sizex.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="posx.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="graph_count.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="sleep.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="timing.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="no.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="posy.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="darkthr.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="graph_view.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="darksleep.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
 </root>

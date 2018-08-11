@@ -18,6 +18,9 @@ Imports Microsoft.VisualBasic.FileIO
 'キャンセル時、複製したプロファイルを削除し、元々選択していたプロファイル名にする。
 Public Class Del_Addimagewindow
 
+    Friend messagebox_name As String = "Autosplit Helper"
+
+
     Function DeleteFolder(ByVal astrDesFolderName As String) As Boolean
         '戻り値初期化
         DeleteFolder = False
@@ -175,7 +178,7 @@ Public Class Del_Addimagewindow
 
 
             Catch
-                MessageBox.Show(My.Resources.Message.msg1, "messagebox_name")
+                MessageBox.Show(My.Resources.Message.msg1, messagebox_name)
                 '"表の読み込みに失敗しました。savefileフォルダに[table1.csv(カンマ区切り)]を作成してください。"
             End Try
 
@@ -408,7 +411,7 @@ Public Class Del_Addimagewindow
 
 
         Catch ex As Exception
-            MessageBox.Show(My.Resources.Message.msg1, "messagebox_name")
+            MessageBox.Show(My.Resources.Message.msg1, messagebox_name)
             '"表の読み込みに失敗しました。savefileフォルダに[table1.csv(カンマ区切り)]を作成してください。"
 
         End Try
@@ -447,7 +450,7 @@ Public Class Del_Addimagewindow
 
 
         Console.WriteLine("終了")
-        MessageBox.Show("出力終了")
+        MessageBox.Show(My.Resources.Message.msgd03, messagebox_name) '"終了しました。選択したプロファイルに上書きされています。"
         Me.Close()
 
 

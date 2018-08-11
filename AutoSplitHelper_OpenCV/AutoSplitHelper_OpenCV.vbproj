@@ -254,6 +254,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Del_Addimagewindow.ja-JP.resx">
+      <DependentUpon>Del_Addimagewindow.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Del_Addimagewindow.resx">
       <DependentUpon>Del_Addimagewindow.vb</DependentUpon>
     </EmbeddedResource>
@@ -321,6 +324,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="skeleton.resx">
       <DependentUpon>skeleton.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sortimagewindow.ja-JP.resx">
+      <DependentUpon>Sortimagewindow.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sortimagewindow.resx">
       <DependentUpon>Sortimagewindow.vb</DependentUpon>
