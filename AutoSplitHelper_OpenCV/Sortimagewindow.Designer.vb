@@ -97,6 +97,11 @@ Partial Class Sortimagewindow
         Me.listname_picture = New System.Windows.Forms.ListBox()
         Me.listfullpass_picture = New System.Windows.Forms.ListBox()
         Me.dg1 = New System.Windows.Forms.DataGridView()
+        Me.btnok = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtoutputname = New System.Windows.Forms.TextBox()
+        Me.btnclosewindow = New System.Windows.Forms.Button()
+        Me.lbltitlebar = New System.Windows.Forms.Label()
         Me.filename = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nameonly = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.csvname = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -104,9 +109,6 @@ Partial Class Sortimagewindow
         Me.dgpicture = New System.Windows.Forms.DataGridViewImageColumn()
         Me.dg_textfullpass = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.dg_textnumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.btnok = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtoutputname = New System.Windows.Forms.TextBox()
         CType(Me.dgad, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgload, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dg1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -117,7 +119,7 @@ Partial Class Sortimagewindow
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Meiryo UI", 9.0!)
         Me.Label8.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label8.Location = New System.Drawing.Point(1032, 468)
+        Me.Label8.Location = New System.Drawing.Point(1075, 504)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(33, 15)
         Me.Label8.TabIndex = 100
@@ -128,7 +130,7 @@ Partial Class Sortimagewindow
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Meiryo UI", 9.0!)
         Me.Label7.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label7.Location = New System.Drawing.Point(1032, 436)
+        Me.Label7.Location = New System.Drawing.Point(1075, 472)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(31, 15)
         Me.Label7.TabIndex = 99
@@ -139,7 +141,7 @@ Partial Class Sortimagewindow
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Meiryo UI", 9.0!)
         Me.Label6.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label6.Location = New System.Drawing.Point(1032, 404)
+        Me.Label6.Location = New System.Drawing.Point(1075, 440)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(47, 15)
         Me.Label6.TabIndex = 98
@@ -150,7 +152,7 @@ Partial Class Sortimagewindow
         Me.listselect_pass_text.Font = New System.Drawing.Font("Meiryo UI", 10.0!)
         Me.listselect_pass_text.FormattingEnabled = True
         Me.listselect_pass_text.ItemHeight = 17
-        Me.listselect_pass_text.Location = New System.Drawing.Point(740, 269)
+        Me.listselect_pass_text.Location = New System.Drawing.Point(783, 305)
         Me.listselect_pass_text.Name = "listselect_pass_text"
         Me.listselect_pass_text.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.listselect_pass_text.Size = New System.Drawing.Size(198, 72)
@@ -161,7 +163,7 @@ Partial Class Sortimagewindow
         Me.listselect_text.Font = New System.Drawing.Font("Meiryo UI", 10.0!)
         Me.listselect_text.FormattingEnabled = True
         Me.listselect_text.ItemHeight = 17
-        Me.listselect_text.Location = New System.Drawing.Point(944, 269)
+        Me.listselect_text.Location = New System.Drawing.Point(987, 305)
         Me.listselect_text.Name = "listselect_text"
         Me.listselect_text.Size = New System.Drawing.Size(161, 72)
         Me.listselect_text.TabIndex = 96
@@ -171,7 +173,7 @@ Partial Class Sortimagewindow
         Me.listfullpass_text.Font = New System.Drawing.Font("Meiryo UI", 10.0!)
         Me.listfullpass_text.FormattingEnabled = True
         Me.listfullpass_text.ItemHeight = 17
-        Me.listfullpass_text.Location = New System.Drawing.Point(740, 191)
+        Me.listfullpass_text.Location = New System.Drawing.Point(783, 227)
         Me.listfullpass_text.Name = "listfullpass_text"
         Me.listfullpass_text.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.listfullpass_text.Size = New System.Drawing.Size(198, 72)
@@ -182,7 +184,7 @@ Partial Class Sortimagewindow
         Me.listname_text.Font = New System.Drawing.Font("Meiryo UI", 10.0!)
         Me.listname_text.FormattingEnabled = True
         Me.listname_text.ItemHeight = 17
-        Me.listname_text.Location = New System.Drawing.Point(944, 191)
+        Me.listname_text.Location = New System.Drawing.Point(987, 227)
         Me.listname_text.Name = "listname_text"
         Me.listname_text.Size = New System.Drawing.Size(161, 72)
         Me.listname_text.TabIndex = 94
@@ -190,7 +192,7 @@ Partial Class Sortimagewindow
         'txtpass_profile
         '
         Me.txtpass_profile.Font = New System.Drawing.Font("Meiryo UI", 11.0!)
-        Me.txtpass_profile.Location = New System.Drawing.Point(1094, 347)
+        Me.txtpass_profile.Location = New System.Drawing.Point(1137, 383)
         Me.txtpass_profile.Name = "txtpass_profile"
         Me.txtpass_profile.ReadOnly = True
         Me.txtpass_profile.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -200,7 +202,7 @@ Partial Class Sortimagewindow
         'txtpass_rtf
         '
         Me.txtpass_rtf.Font = New System.Drawing.Font("Meiryo UI", 11.0!)
-        Me.txtpass_rtf.Location = New System.Drawing.Point(1094, 461)
+        Me.txtpass_rtf.Location = New System.Drawing.Point(1137, 497)
         Me.txtpass_rtf.Name = "txtpass_rtf"
         Me.txtpass_rtf.ReadOnly = True
         Me.txtpass_rtf.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -209,8 +211,10 @@ Partial Class Sortimagewindow
         '
         'txtlistcount
         '
+        Me.txtlistcount.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.txtlistcount.Font = New System.Drawing.Font("Meiryo UI", 9.0!)
-        Me.txtlistcount.Location = New System.Drawing.Point(533, 257)
+        Me.txtlistcount.ForeColor = System.Drawing.SystemColors.Control
+        Me.txtlistcount.Location = New System.Drawing.Point(533, 278)
         Me.txtlistcount.Name = "txtlistcount"
         Me.txtlistcount.Size = New System.Drawing.Size(47, 23)
         Me.txtlistcount.TabIndex = 90
@@ -220,7 +224,7 @@ Partial Class Sortimagewindow
         '
         Me.btnzipok.Font = New System.Drawing.Font("Meiryo UI", 9.0!)
         Me.btnzipok.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.btnzipok.Location = New System.Drawing.Point(944, 429)
+        Me.btnzipok.Location = New System.Drawing.Point(987, 465)
         Me.btnzipok.Name = "btnzipok"
         Me.btnzipok.Size = New System.Drawing.Size(55, 26)
         Me.btnzipok.TabIndex = 89
@@ -232,7 +236,7 @@ Partial Class Sortimagewindow
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Meiryo UI", 9.0!)
         Me.Label5.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label5.Location = New System.Drawing.Point(732, 411)
+        Me.Label5.Location = New System.Drawing.Point(775, 447)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(53, 15)
         Me.Label5.TabIndex = 88
@@ -243,7 +247,7 @@ Partial Class Sortimagewindow
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Meiryo UI", 9.0!)
         Me.Label4.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label4.Location = New System.Drawing.Point(861, 411)
+        Me.Label4.Location = New System.Drawing.Point(904, 447)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(77, 15)
         Me.Label4.TabIndex = 87
@@ -254,7 +258,7 @@ Partial Class Sortimagewindow
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Meiryo UI", 9.0!)
         Me.Label3.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label3.Location = New System.Drawing.Point(737, 359)
+        Me.Label3.Location = New System.Drawing.Point(780, 395)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(61, 15)
         Me.Label3.TabIndex = 86
@@ -265,7 +269,7 @@ Partial Class Sortimagewindow
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Meiryo UI", 9.0!)
         Me.Label2.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label2.Location = New System.Drawing.Point(804, 359)
+        Me.Label2.Location = New System.Drawing.Point(847, 395)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(95, 15)
         Me.Label2.TabIndex = 85
@@ -273,41 +277,49 @@ Partial Class Sortimagewindow
         '
         'btn1clear
         '
+        Me.btn1clear.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btn1clear.Enabled = False
+        Me.btn1clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn1clear.Font = New System.Drawing.Font("Meiryo UI", 9.0!)
+        Me.btn1clear.ForeColor = System.Drawing.SystemColors.Control
         Me.btn1clear.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.btn1clear.Location = New System.Drawing.Point(533, 283)
+        Me.btn1clear.Location = New System.Drawing.Point(533, 304)
         Me.btn1clear.Name = "btn1clear"
         Me.btn1clear.Size = New System.Drawing.Size(94, 39)
         Me.btn1clear.TabIndex = 83
         Me.btn1clear.Text = "Undo"
-        Me.btn1clear.UseVisualStyleBackColor = True
+        Me.btn1clear.UseVisualStyleBackColor = False
         '
         'listcsvname
         '
+        Me.listcsvname.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.listcsvname.Font = New System.Drawing.Font("Meiryo UI", 11.0!)
+        Me.listcsvname.ForeColor = System.Drawing.SystemColors.Control
         Me.listcsvname.FormattingEnabled = True
         Me.listcsvname.ItemHeight = 19
-        Me.listcsvname.Location = New System.Drawing.Point(533, 45)
+        Me.listcsvname.Location = New System.Drawing.Point(533, 66)
         Me.listcsvname.Name = "listcsvname"
         Me.listcsvname.Size = New System.Drawing.Size(181, 213)
         Me.listcsvname.TabIndex = 82
         '
         'btnzip
         '
+        Me.btnzip.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.btnzip.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnzip.Font = New System.Drawing.Font("Meiryo UI", 9.0!)
+        Me.btnzip.ForeColor = System.Drawing.SystemColors.Control
         Me.btnzip.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.btnzip.Location = New System.Drawing.Point(409, 504)
+        Me.btnzip.Location = New System.Drawing.Point(409, 525)
         Me.btnzip.Name = "btnzip"
         Me.btnzip.Size = New System.Drawing.Size(81, 44)
         Me.btnzip.TabIndex = 81
         Me.btnzip.Text = "zip"
-        Me.btnzip.UseVisualStyleBackColor = True
+        Me.btnzip.UseVisualStyleBackColor = False
         '
         'txtcount_picture
         '
         Me.txtcount_picture.Font = New System.Drawing.Font("Meiryo UI", 10.0!)
-        Me.txtcount_picture.Location = New System.Drawing.Point(735, 429)
+        Me.txtcount_picture.Location = New System.Drawing.Point(778, 465)
         Me.txtcount_picture.Name = "txtcount_picture"
         Me.txtcount_picture.Size = New System.Drawing.Size(45, 24)
         Me.txtcount_picture.TabIndex = 79
@@ -317,7 +329,7 @@ Partial Class Sortimagewindow
         Me.chkreset.AutoSize = True
         Me.chkreset.Font = New System.Drawing.Font("Meiryo UI", 9.0!)
         Me.chkreset.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.chkreset.Location = New System.Drawing.Point(740, 462)
+        Me.chkreset.Location = New System.Drawing.Point(783, 498)
         Me.chkreset.Name = "chkreset"
         Me.chkreset.Size = New System.Drawing.Size(186, 19)
         Me.chkreset.TabIndex = 78
@@ -327,26 +339,29 @@ Partial Class Sortimagewindow
         'txtname
         '
         Me.txtname.Font = New System.Drawing.Font("Meiryo UI", 10.0!)
-        Me.txtname.Location = New System.Drawing.Point(802, 377)
+        Me.txtname.Location = New System.Drawing.Point(845, 413)
         Me.txtname.Name = "txtname"
         Me.txtname.Size = New System.Drawing.Size(128, 24)
         Me.txtname.TabIndex = 76
         '
         'btnclear
         '
+        Me.btnclear.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.btnclear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnclear.Font = New System.Drawing.Font("Meiryo UI", 9.0!)
+        Me.btnclear.ForeColor = System.Drawing.SystemColors.Control
         Me.btnclear.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.btnclear.Location = New System.Drawing.Point(659, 283)
+        Me.btnclear.Location = New System.Drawing.Point(659, 304)
         Me.btnclear.Name = "btnclear"
         Me.btnclear.Size = New System.Drawing.Size(55, 39)
         Me.btnclear.TabIndex = 75
         Me.btnclear.Text = "Clear"
-        Me.btnclear.UseVisualStyleBackColor = True
+        Me.btnclear.UseVisualStyleBackColor = False
         '
         'txtaddcount
         '
         Me.txtaddcount.Font = New System.Drawing.Font("Meiryo UI", 10.0!)
-        Me.txtaddcount.Location = New System.Drawing.Point(859, 429)
+        Me.txtaddcount.Location = New System.Drawing.Point(902, 465)
         Me.txtaddcount.Name = "txtaddcount"
         Me.txtaddcount.Size = New System.Drawing.Size(79, 24)
         Me.txtaddcount.TabIndex = 74
@@ -355,7 +370,7 @@ Partial Class Sortimagewindow
         '
         Me.dgad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgad.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn22, Me.Column9, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18, Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn20, Me.DataGridViewTextBoxColumn21, Me.Column16, Me.Column10, Me.Column11, Me.Column12, Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16, Me.Column1, Me.Column2, Me.Column3, Me.Column4})
-        Me.dgad.Location = New System.Drawing.Point(11, 331)
+        Me.dgad.Location = New System.Drawing.Point(11, 352)
         Me.dgad.Name = "dgad"
         Me.dgad.RowTemplate.Height = 21
         Me.dgad.Size = New System.Drawing.Size(703, 148)
@@ -482,7 +497,7 @@ Partial Class Sortimagewindow
         'txtpass_csv
         '
         Me.txtpass_csv.Font = New System.Drawing.Font("Meiryo UI", 11.0!)
-        Me.txtpass_csv.Location = New System.Drawing.Point(1094, 429)
+        Me.txtpass_csv.Location = New System.Drawing.Point(1137, 465)
         Me.txtpass_csv.Name = "txtpass_csv"
         Me.txtpass_csv.ReadOnly = True
         Me.txtpass_csv.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -493,7 +508,7 @@ Partial Class Sortimagewindow
         '
         Me.dgload.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgload.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.c1, Me.c12, Me.key, Me.c6, Me.c7, Me.c8, Me.c9, Me.c10, Me.Column17, Me.Column13, Me.Column14, Me.Column15, Me.c2, Me.c3, Me.c4, Me.c5, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
-        Me.dgload.Location = New System.Drawing.Point(740, 487)
+        Me.dgload.Location = New System.Drawing.Point(783, 523)
         Me.dgload.Name = "dgload"
         Me.dgload.RowTemplate.Height = 21
         Me.dgload.Size = New System.Drawing.Size(365, 108)
@@ -620,7 +635,7 @@ Partial Class Sortimagewindow
         Me.chkreset_.CheckState = System.Windows.Forms.CheckState.Checked
         Me.chkreset_.Font = New System.Drawing.Font("Meiryo UI", 9.0!)
         Me.chkreset_.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.chkreset_.Location = New System.Drawing.Point(533, 16)
+        Me.chkreset_.Location = New System.Drawing.Point(533, 41)
         Me.chkreset_.Name = "chkreset_"
         Me.chkreset_.Size = New System.Drawing.Size(186, 19)
         Me.chkreset_.TabIndex = 70
@@ -630,7 +645,7 @@ Partial Class Sortimagewindow
         'txtimageheight
         '
         Me.txtimageheight.Font = New System.Drawing.Font("Meiryo UI", 10.0!)
-        Me.txtimageheight.Location = New System.Drawing.Point(735, 377)
+        Me.txtimageheight.Location = New System.Drawing.Point(778, 413)
         Me.txtimageheight.Name = "txtimageheight"
         Me.txtimageheight.Size = New System.Drawing.Size(55, 24)
         Me.txtimageheight.TabIndex = 69
@@ -640,7 +655,7 @@ Partial Class Sortimagewindow
         Me.listselect_pass_picture.Font = New System.Drawing.Font("Meiryo UI", 10.0!)
         Me.listselect_pass_picture.FormattingEnabled = True
         Me.listselect_pass_picture.ItemHeight = 17
-        Me.listselect_pass_picture.Location = New System.Drawing.Point(740, 90)
+        Me.listselect_pass_picture.Location = New System.Drawing.Point(783, 126)
         Me.listselect_pass_picture.Name = "listselect_pass_picture"
         Me.listselect_pass_picture.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.listselect_pass_picture.Size = New System.Drawing.Size(198, 72)
@@ -650,7 +665,7 @@ Partial Class Sortimagewindow
         '
         Me.txtpass_picturefolder.BackColor = System.Drawing.SystemColors.Control
         Me.txtpass_picturefolder.Font = New System.Drawing.Font("Meiryo UI", 11.0!)
-        Me.txtpass_picturefolder.Location = New System.Drawing.Point(1094, 397)
+        Me.txtpass_picturefolder.Location = New System.Drawing.Point(1137, 433)
         Me.txtpass_picturefolder.Name = "txtpass_picturefolder"
         Me.txtpass_picturefolder.ReadOnly = True
         Me.txtpass_picturefolder.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -660,7 +675,7 @@ Partial Class Sortimagewindow
         'txtnumbers
         '
         Me.txtnumbers.Font = New System.Drawing.Font("Meiryo UI", 10.0!)
-        Me.txtnumbers.Location = New System.Drawing.Point(786, 429)
+        Me.txtnumbers.Location = New System.Drawing.Point(829, 465)
         Me.txtnumbers.Name = "txtnumbers"
         Me.txtnumbers.Size = New System.Drawing.Size(55, 24)
         Me.txtnumbers.TabIndex = 66
@@ -670,7 +685,7 @@ Partial Class Sortimagewindow
         Me.listselect_picture.Font = New System.Drawing.Font("Meiryo UI", 10.0!)
         Me.listselect_picture.FormattingEnabled = True
         Me.listselect_picture.ItemHeight = 17
-        Me.listselect_picture.Location = New System.Drawing.Point(944, 90)
+        Me.listselect_picture.Location = New System.Drawing.Point(987, 126)
         Me.listselect_picture.Name = "listselect_picture"
         Me.listselect_picture.Size = New System.Drawing.Size(161, 72)
         Me.listselect_picture.TabIndex = 65
@@ -680,7 +695,7 @@ Partial Class Sortimagewindow
         Me.listname_picture.Font = New System.Drawing.Font("Meiryo UI", 10.0!)
         Me.listname_picture.FormattingEnabled = True
         Me.listname_picture.ItemHeight = 17
-        Me.listname_picture.Location = New System.Drawing.Point(944, 12)
+        Me.listname_picture.Location = New System.Drawing.Point(987, 48)
         Me.listname_picture.Name = "listname_picture"
         Me.listname_picture.Size = New System.Drawing.Size(161, 72)
         Me.listname_picture.TabIndex = 64
@@ -690,7 +705,7 @@ Partial Class Sortimagewindow
         Me.listfullpass_picture.Font = New System.Drawing.Font("Meiryo UI", 10.0!)
         Me.listfullpass_picture.FormattingEnabled = True
         Me.listfullpass_picture.ItemHeight = 17
-        Me.listfullpass_picture.Location = New System.Drawing.Point(740, 12)
+        Me.listfullpass_picture.Location = New System.Drawing.Point(783, 48)
         Me.listfullpass_picture.Name = "listfullpass_picture"
         Me.listfullpass_picture.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.listfullpass_picture.Size = New System.Drawing.Size(198, 72)
@@ -700,11 +715,76 @@ Partial Class Sortimagewindow
         '
         Me.dg1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.filename, Me.nameonly, Me.csvname, Me.dgadd, Me.dgpicture, Me.dg_textfullpass, Me.dg_textnumber})
-        Me.dg1.Location = New System.Drawing.Point(12, 45)
+        Me.dg1.Location = New System.Drawing.Point(12, 66)
         Me.dg1.Name = "dg1"
         Me.dg1.RowTemplate.Height = 21
         Me.dg1.Size = New System.Drawing.Size(512, 277)
         Me.dg1.TabIndex = 61
+        '
+        'btnok
+        '
+        Me.btnok.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.btnok.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnok.Font = New System.Drawing.Font("Meiryo UI", 11.0!)
+        Me.btnok.ForeColor = System.Drawing.SystemColors.Control
+        Me.btnok.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.btnok.Location = New System.Drawing.Point(534, 525)
+        Me.btnok.Name = "btnok"
+        Me.btnok.Size = New System.Drawing.Size(181, 44)
+        Me.btnok.TabIndex = 101
+        Me.btnok.Text = "OK"
+        Me.btnok.UseVisualStyleBackColor = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Meiryo UI", 9.0!)
+        Me.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label1.Location = New System.Drawing.Point(1154, 48)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(80, 15)
+        Me.Label1.TabIndex = 77
+        Me.Label1.Text = "Folder name"
+        '
+        'txtoutputname
+        '
+        Me.txtoutputname.Font = New System.Drawing.Font("Meiryo UI", 11.0!)
+        Me.txtoutputname.Location = New System.Drawing.Point(1157, 66)
+        Me.txtoutputname.Name = "txtoutputname"
+        Me.txtoutputname.Size = New System.Drawing.Size(126, 26)
+        Me.txtoutputname.TabIndex = 80
+        '
+        'btnclosewindow
+        '
+        Me.btnclosewindow.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer))
+        Me.btnclosewindow.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnclosewindow.Font = New System.Drawing.Font("Meiryo UI", 12.0!)
+        Me.btnclosewindow.ForeColor = System.Drawing.Color.Thistle
+        Me.btnclosewindow.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.btnclosewindow.Location = New System.Drawing.Point(691, 0)
+        Me.btnclosewindow.Name = "btnclosewindow"
+        Me.btnclosewindow.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.btnclosewindow.Size = New System.Drawing.Size(45, 26)
+        Me.btnclosewindow.TabIndex = 103
+        Me.btnclosewindow.Text = "×"
+        Me.btnclosewindow.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btnclosewindow.UseVisualStyleBackColor = False
+        '
+        'lbltitlebar
+        '
+        Me.lbltitlebar.AutoSize = True
+        Me.lbltitlebar.BackColor = System.Drawing.Color.Silver
+        Me.lbltitlebar.Font = New System.Drawing.Font("Meiryo UI", 9.75!)
+        Me.lbltitlebar.ForeColor = System.Drawing.Color.Black
+        Me.lbltitlebar.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.lbltitlebar.Location = New System.Drawing.Point(0, 0)
+        Me.lbltitlebar.Name = "lbltitlebar"
+        Me.lbltitlebar.Padding = New System.Windows.Forms.Padding(0, 3, 121, 7)
+        Me.lbltitlebar.Size = New System.Drawing.Size(899, 27)
+        Me.lbltitlebar.TabIndex = 102
+        Me.lbltitlebar.Text = "Sort template image                                                              " &
+    "                                                                                " &
+    "                  "
         '
         'filename
         '
@@ -727,6 +807,7 @@ Partial Class Sortimagewindow
         '
         'dgadd
         '
+        Me.dgadd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.dgadd.HeaderText = "Add"
         Me.dgadd.Name = "dgadd"
         Me.dgadd.Width = 70
@@ -753,41 +834,14 @@ Partial Class Sortimagewindow
         Me.dg_textnumber.Visible = False
         Me.dg_textnumber.Width = 2
         '
-        'btnok
-        '
-        Me.btnok.Font = New System.Drawing.Font("Meiryo UI", 11.0!)
-        Me.btnok.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.btnok.Location = New System.Drawing.Point(534, 504)
-        Me.btnok.Name = "btnok"
-        Me.btnok.Size = New System.Drawing.Size(181, 44)
-        Me.btnok.TabIndex = 101
-        Me.btnok.Text = "OK"
-        Me.btnok.UseVisualStyleBackColor = True
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Meiryo UI", 9.0!)
-        Me.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label1.Location = New System.Drawing.Point(1111, 12)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(80, 15)
-        Me.Label1.TabIndex = 77
-        Me.Label1.Text = "Folder name"
-        '
-        'txtoutputname
-        '
-        Me.txtoutputname.Font = New System.Drawing.Font("Meiryo UI", 11.0!)
-        Me.txtoutputname.Location = New System.Drawing.Point(1114, 30)
-        Me.txtoutputname.Name = "txtoutputname"
-        Me.txtoutputname.Size = New System.Drawing.Size(126, 26)
-        Me.txtoutputname.TabIndex = 80
-        '
         'Sortimagewindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(727, 566)
+        Me.BackColor = System.Drawing.Color.DarkGray
+        Me.ClientSize = New System.Drawing.Size(736, 591)
+        Me.Controls.Add(Me.btnclosewindow)
+        Me.Controls.Add(Me.lbltitlebar)
         Me.Controls.Add(Me.btnok)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
@@ -826,6 +880,7 @@ Partial Class Sortimagewindow
         Me.Controls.Add(Me.listname_picture)
         Me.Controls.Add(Me.listfullpass_picture)
         Me.Controls.Add(Me.dg1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Sortimagewindow"
         Me.Text = "Sortimagewindow"
         CType(Me.dgad, System.ComponentModel.ISupportInitialize).EndInit()
@@ -911,6 +966,11 @@ Partial Class Sortimagewindow
     Friend WithEvents listname_picture As ListBox
     Friend WithEvents listfullpass_picture As ListBox
     Friend WithEvents dg1 As DataGridView
+    Friend WithEvents btnok As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents txtoutputname As TextBox
+    Friend WithEvents btnclosewindow As Button
+    Friend WithEvents lbltitlebar As Label
     Friend WithEvents filename As DataGridViewTextBoxColumn
     Friend WithEvents nameonly As DataGridViewTextBoxColumn
     Friend WithEvents csvname As DataGridViewTextBoxColumn
@@ -918,7 +978,4 @@ Partial Class Sortimagewindow
     Friend WithEvents dgpicture As DataGridViewImageColumn
     Friend WithEvents dg_textfullpass As DataGridViewTextBoxColumn
     Friend WithEvents dg_textnumber As DataGridViewTextBoxColumn
-    Friend WithEvents btnok As Button
-    Friend WithEvents Label1 As Label
-    Friend WithEvents txtoutputname As TextBox
 End Class

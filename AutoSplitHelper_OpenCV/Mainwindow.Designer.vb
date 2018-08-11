@@ -375,6 +375,7 @@ Partial Class Mainwindow
         Me.CreateTextFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenTextFolderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteAddTemplateImageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SortTemplateImageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InformationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LicenseLToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -685,7 +686,7 @@ Partial Class Mainwindow
         Me.timcamera = New System.Windows.Forms.Timer(Me.components)
         Me.timcalib = New System.Windows.Forms.Timer(Me.components)
         Me.timash_hotkey_sleep = New System.Windows.Forms.Timer(Me.components)
-        Me.SortTemplateImageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.DGtable, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1576,7 +1577,6 @@ Partial Class Mainwindow
         '
         Me.pnl_other.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.pnl_other.Controls.Add(Me.btntext_openfolder)
-        Me.pnl_other.Controls.Add(Me.btntext_createtext)
         Me.pnl_other.Controls.Add(Me.txtpass_rtf)
         Me.pnl_other.Controls.Add(Me.Label112)
         Me.pnl_other.Controls.Add(Me.btnshow_chart)
@@ -3140,6 +3140,7 @@ Partial Class Mainwindow
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.chkmonitor_sizestate)
+        Me.GroupBox2.Controls.Add(Me.btntext_createtext)
         Me.GroupBox2.Controls.Add(Me.numtextwindow_sizex)
         Me.GroupBox2.Controls.Add(Me.lblcheckopening)
         Me.GroupBox2.Controls.Add(Me.numtextwindow_sizey)
@@ -3695,7 +3696,7 @@ Partial Class Mainwindow
         '
         'ToolToolStripMenuItem
         '
-        Me.ToolToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StartMonitoringMToolStripMenuItem, Me.ToolStripSeparator6, Me.PreviewGetTemplatePictureToolStripMenuItem, Me.CalibrationToolStripMenuItem1, Me.PositionSettingToolStripMenuItem, Me.ToolStripSeparator3, Me.ExpandTableToolStripMenuItem, Me.ToolStripSeparator7, Me.ViewTableToolStripMenuItem, Me.ToolStripSeparator2, Me.OpenTextWindowWToolStripMenuItem, Me.CreateTextFileToolStripMenuItem, Me.OpenTextFolderToolStripMenuItem, Me.DeleteAddTemplateImageToolStripMenuItem, Me.SortTemplateImageToolStripMenuItem})
+        Me.ToolToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StartMonitoringMToolStripMenuItem, Me.ToolStripSeparator6, Me.PreviewGetTemplatePictureToolStripMenuItem, Me.CalibrationToolStripMenuItem1, Me.PositionSettingToolStripMenuItem, Me.ToolStripSeparator3, Me.ExpandTableToolStripMenuItem, Me.ToolStripSeparator7, Me.ViewTableToolStripMenuItem, Me.ToolStripSeparator2, Me.OpenTextWindowWToolStripMenuItem, Me.CreateTextFileToolStripMenuItem, Me.OpenTextFolderToolStripMenuItem, Me.ToolStripSeparator8, Me.DeleteAddTemplateImageToolStripMenuItem, Me.SortTemplateImageToolStripMenuItem})
         Me.ToolToolStripMenuItem.Name = "ToolToolStripMenuItem"
         resources.ApplyResources(Me.ToolToolStripMenuItem, "ToolToolStripMenuItem")
         '
@@ -3775,8 +3776,15 @@ Partial Class Mainwindow
         '
         'DeleteAddTemplateImageToolStripMenuItem
         '
+        Me.DeleteAddTemplateImageToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
         Me.DeleteAddTemplateImageToolStripMenuItem.Name = "DeleteAddTemplateImageToolStripMenuItem"
         resources.ApplyResources(Me.DeleteAddTemplateImageToolStripMenuItem, "DeleteAddTemplateImageToolStripMenuItem")
+        '
+        'SortTemplateImageToolStripMenuItem
+        '
+        Me.SortTemplateImageToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
+        Me.SortTemplateImageToolStripMenuItem.Name = "SortTemplateImageToolStripMenuItem"
+        resources.ApplyResources(Me.SortTemplateImageToolStripMenuItem, "SortTemplateImageToolStripMenuItem")
         '
         'HelpToolStripMenuItem
         '
@@ -6291,10 +6299,10 @@ Partial Class Mainwindow
         '
         Me.timash_hotkey_sleep.Interval = 300
         '
-        'SortTemplateImageToolStripMenuItem
+        'ToolStripSeparator8
         '
-        Me.SortTemplateImageToolStripMenuItem.Name = "SortTemplateImageToolStripMenuItem"
-        resources.ApplyResources(Me.SortTemplateImageToolStripMenuItem, "SortTemplateImageToolStripMenuItem")
+        Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
+        resources.ApplyResources(Me.ToolStripSeparator8, "ToolStripSeparator8")
         '
         'Mainwindow
         '
@@ -7159,4 +7167,5 @@ Partial Class Mainwindow
     Friend WithEvents chkmonitor_sizestate As CheckBox
     Friend WithEvents DeleteAddTemplateImageToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SortTemplateImageToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator8 As ToolStripSeparator
 End Class

@@ -2587,7 +2587,7 @@
     <value>NoControl</value>
   </data>
   <data name="btntext_openfolder.Location" type="System.Drawing.Point, System.Drawing">
-    <value>394, 19</value>
+    <value>248, 19</value>
   </data>
   <data name="btntext_openfolder.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 1, 0, 0</value>
@@ -2613,42 +2613,6 @@
   <data name="&gt;&gt;btntext_openfolder.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="btntext_createtext.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btntext_createtext.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 8pt</value>
-  </data>
-  <data name="btntext_createtext.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btntext_createtext.Location" type="System.Drawing.Point, System.Drawing">
-    <value>248, 19</value>
-  </data>
-  <data name="btntext_createtext.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 1, 0, 0</value>
-  </data>
-  <data name="btntext_createtext.Size" type="System.Drawing.Size, System.Drawing">
-    <value>135, 26</value>
-  </data>
-  <data name="btntext_createtext.TabIndex" type="System.Int32, mscorlib">
-    <value>308</value>
-  </data>
-  <data name="btntext_createtext.Text" xml:space="preserve">
-    <value>Create Textfile</value>
-  </data>
-  <data name="&gt;&gt;btntext_createtext.Name" xml:space="preserve">
-    <value>btntext_createtext</value>
-  </data>
-  <data name="&gt;&gt;btntext_createtext.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btntext_createtext.Parent" xml:space="preserve">
-    <value>pnl_other</value>
-  </data>
-  <data name="&gt;&gt;btntext_createtext.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="txtpass_rtf.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 9pt</value>
   </data>
@@ -2671,7 +2635,7 @@
     <value>pnl_other</value>
   </data>
   <data name="&gt;&gt;txtpass_rtf.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="Label112.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2704,7 +2668,7 @@
     <value>pnl_other</value>
   </data>
   <data name="&gt;&gt;Label112.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="btnshow_chart.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -2740,7 +2704,7 @@
     <value>pnl_other</value>
   </data>
   <data name="&gt;&gt;btnshow_chart.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="chkshow_text.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2773,7 +2737,7 @@
     <value>pnl_other</value>
   </data>
   <data name="&gt;&gt;chkshow_text.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="chkcreate_temppicture.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2785,7 +2749,7 @@
     <value>NoControl</value>
   </data>
   <data name="chkcreate_temppicture.Location" type="System.Drawing.Point, System.Drawing">
-    <value>366, 154</value>
+    <value>366, 61</value>
   </data>
   <data name="chkcreate_temppicture.Size" type="System.Drawing.Size, System.Drawing">
     <value>228, 23</value>
@@ -2806,7 +2770,7 @@
     <value>pnl_other</value>
   </data>
   <data name="&gt;&gt;chkcreate_temppicture.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="txtpass_picturefolder.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 9pt</value>
@@ -2830,7 +2794,7 @@
     <value>pnl_other</value>
   </data>
   <data name="&gt;&gt;txtpass_picturefolder.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="txtpass_csv.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 9pt</value>
@@ -2854,7 +2818,7 @@
     <value>pnl_other</value>
   </data>
   <data name="&gt;&gt;txtpass_csv.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>7</value>
   </data>
   <data name="Label98.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2887,7 +2851,7 @@
     <value>pnl_other</value>
   </data>
   <data name="&gt;&gt;Label98.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>8</value>
   </data>
   <data name="Label26.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2920,7 +2884,7 @@
     <value>pnl_other</value>
   </data>
   <data name="&gt;&gt;Label26.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>9</value>
   </data>
   <data name="Label23.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2953,7 +2917,7 @@
     <value>pnl_other</value>
   </data>
   <data name="&gt;&gt;Label23.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>10</value>
   </data>
   <data name="lbllivesplit_state.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2986,10 +2950,10 @@
     <value>pnl_other</value>
   </data>
   <data name="&gt;&gt;lbllivesplit_state.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>11</value>
   </data>
   <data name="pnl_other.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1477, 360</value>
+    <value>1477, 381</value>
   </data>
   <data name="pnl_other.Size" type="System.Drawing.Size, System.Drawing">
     <value>672, 220</value>
@@ -7997,7 +7961,7 @@
     <value>NoControl</value>
   </data>
   <data name="chkmonitor_sizestate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>128, 43</value>
+    <value>160, 21</value>
   </data>
   <data name="chkmonitor_sizestate.Size" type="System.Drawing.Size, System.Drawing">
     <value>68, 23</value>
@@ -8020,8 +7984,44 @@
   <data name="&gt;&gt;chkmonitor_sizestate.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="btntext_createtext.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btntext_createtext.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 8pt</value>
+  </data>
+  <data name="btntext_createtext.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btntext_createtext.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 350</value>
+  </data>
+  <data name="btntext_createtext.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 1, 0, 0</value>
+  </data>
+  <data name="btntext_createtext.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 26</value>
+  </data>
+  <data name="btntext_createtext.TabIndex" type="System.Int32, mscorlib">
+    <value>308</value>
+  </data>
+  <data name="btntext_createtext.Text" xml:space="preserve">
+    <value>Create Textfile</value>
+  </data>
+  <data name="&gt;&gt;btntext_createtext.Name" xml:space="preserve">
+    <value>btntext_createtext</value>
+  </data>
+  <data name="&gt;&gt;btntext_createtext.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btntext_createtext.Parent" xml:space="preserve">
+    <value>GroupBox2</value>
+  </data>
+  <data name="&gt;&gt;btntext_createtext.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="numtextwindow_sizex.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 332</value>
+    <value>33, 318</value>
   </data>
   <data name="numtextwindow_sizex.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 24</value>
@@ -8039,7 +8039,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;numtextwindow_sizex.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="lblcheckopening.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -8075,10 +8075,10 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;lblcheckopening.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="numtextwindow_sizey.Location" type="System.Drawing.Point, System.Drawing">
-    <value>108, 332</value>
+    <value>108, 318</value>
   </data>
   <data name="numtextwindow_sizey.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 24</value>
@@ -8096,7 +8096,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;numtextwindow_sizey.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="numprofile.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 11pt</value>
@@ -8123,7 +8123,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;numprofile.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="Label38.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -8156,13 +8156,13 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;Label38.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="txtclickcount.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 9.75pt</value>
   </data>
   <data name="txtclickcount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>123, 66</value>
+    <value>125, 43</value>
   </data>
   <data name="txtclickcount.Size" type="System.Drawing.Size, System.Drawing">
     <value>29, 24</value>
@@ -8189,7 +8189,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;txtclickcount.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="txtprofile.Location" type="System.Drawing.Point, System.Drawing">
     <value>17, 43</value>
@@ -8201,7 +8201,7 @@
     <value>Vertical</value>
   </data>
   <data name="txtprofile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 33</value>
+    <value>42, 23</value>
   </data>
   <data name="txtprofile.TabIndex" type="System.Int32, mscorlib">
     <value>144</value>
@@ -8219,7 +8219,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;txtprofile.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="txtloadprofile.Location" type="System.Drawing.Point, System.Drawing">
     <value>65, 43</value>
@@ -8231,7 +8231,7 @@
     <value>Vertical</value>
   </data>
   <data name="txtloadprofile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 33</value>
+    <value>46, 23</value>
   </data>
   <data name="txtloadprofile.TabIndex" type="System.Int32, mscorlib">
     <value>145</value>
@@ -8246,7 +8246,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;txtloadprofile.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="numskip_ash.Location" type="System.Drawing.Point, System.Drawing">
     <value>128, 101</value>
@@ -8630,7 +8630,7 @@
     <value>13</value>
   </data>
   <data name="GroupBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 83</value>
+    <value>17, 69</value>
   </data>
   <data name="GroupBox3.Size" type="System.Drawing.Size, System.Drawing">
     <value>161, 147</value>
@@ -8651,7 +8651,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;GroupBox3.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="txtsavetempnumber.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -8855,7 +8855,7 @@
     <value>5</value>
   </data>
   <data name="Panel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 258</value>
+    <value>21, 244</value>
   </data>
   <data name="Panel5.Size" type="System.Drawing.Size, System.Drawing">
     <value>146, 71</value>
@@ -8873,13 +8873,13 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;Panel5.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="txttemp_picturepass.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 9pt</value>
   </data>
   <data name="txttemp_picturepass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>77, 233</value>
+    <value>77, 219</value>
   </data>
   <data name="txttemp_picturepass.Size" type="System.Drawing.Size, System.Drawing">
     <value>102, 23</value>
@@ -8897,7 +8897,7 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;txttemp_picturepass.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="Label71.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -8909,7 +8909,7 @@
     <value>NoControl</value>
   </data>
   <data name="Label71.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 233</value>
+    <value>18, 219</value>
   </data>
   <data name="Label71.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 18</value>
@@ -8930,13 +8930,13 @@
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;Label71.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="GroupBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>1889, 1</value>
   </data>
   <data name="GroupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>197, 361</value>
+    <value>197, 393</value>
   </data>
   <data name="GroupBox2.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -9713,82 +9713,85 @@
     <value>   File(&amp;F)   </value>
   </data>
   <data name="StartMonitoringMToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 24</value>
+    <value>296, 24</value>
   </data>
   <data name="StartMonitoringMToolStripMenuItem.Text" xml:space="preserve">
     <value>Start Monitoring(&amp;M)</value>
   </data>
   <data name="ToolStripSeparator6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>279, 6</value>
+    <value>293, 6</value>
   </data>
   <data name="PreviewGetTemplatePictureToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 24</value>
+    <value>296, 24</value>
   </data>
   <data name="PreviewGetTemplatePictureToolStripMenuItem.Text" xml:space="preserve">
     <value>Preview/Get template image(&amp;I)</value>
   </data>
   <data name="CalibrationToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 24</value>
+    <value>296, 24</value>
   </data>
   <data name="CalibrationToolStripMenuItem1.Text" xml:space="preserve">
     <value>Calibration(&amp;C)</value>
   </data>
   <data name="PositionSettingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 24</value>
+    <value>296, 24</value>
   </data>
   <data name="PositionSettingToolStripMenuItem.Text" xml:space="preserve">
     <value>Position Setting(&amp;P)</value>
   </data>
   <data name="ToolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>279, 6</value>
+    <value>293, 6</value>
   </data>
   <data name="ExpandTableToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 24</value>
+    <value>296, 24</value>
   </data>
   <data name="ExpandTableToolStripMenuItem.Text" xml:space="preserve">
     <value>Expand Table(&amp;T)</value>
   </data>
   <data name="ToolStripSeparator7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>279, 6</value>
+    <value>293, 6</value>
   </data>
   <data name="ViewTableToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 24</value>
+    <value>296, 24</value>
   </data>
   <data name="ViewTableToolStripMenuItem.Text" xml:space="preserve">
     <value>Open Graph(&amp;G)</value>
   </data>
   <data name="ToolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>279, 6</value>
+    <value>293, 6</value>
   </data>
   <data name="OpenTextWindowWToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 24</value>
+    <value>296, 24</value>
   </data>
   <data name="OpenTextWindowWToolStripMenuItem.Text" xml:space="preserve">
     <value>Open Text window(&amp;W)</value>
   </data>
   <data name="CreateTextFileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 24</value>
+    <value>296, 24</value>
   </data>
   <data name="CreateTextFileToolStripMenuItem.Text" xml:space="preserve">
-    <value>Create Text file(R)</value>
+    <value>Create Text file(&amp;R)</value>
   </data>
   <data name="OpenTextFolderToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 24</value>
+    <value>296, 24</value>
   </data>
   <data name="OpenTextFolderToolStripMenuItem.Text" xml:space="preserve">
-    <value>Open Text folder(O)</value>
+    <value>Open Text folder(&amp;O)</value>
+  </data>
+  <data name="ToolStripSeparator8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>293, 6</value>
   </data>
   <data name="DeleteAddTemplateImageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 24</value>
+    <value>296, 24</value>
   </data>
   <data name="DeleteAddTemplateImageToolStripMenuItem.Text" xml:space="preserve">
-    <value>Delete/Add Template image</value>
+    <value>Delete/Insert Template image(&amp;D)</value>
   </data>
   <data name="SortTemplateImageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 24</value>
+    <value>296, 24</value>
   </data>
   <data name="SortTemplateImageToolStripMenuItem.Text" xml:space="preserve">
-    <value>Sort Template image</value>
+    <value>Sort Template image(S)</value>
   </data>
   <data name="ToolToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>91, 25</value>
@@ -19629,6 +19632,12 @@
   <data name="&gt;&gt;DeleteAddTemplateImageToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;SortTemplateImageToolStripMenuItem.Name" xml:space="preserve">
+    <value>SortTemplateImageToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;SortTemplateImageToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;HelpToolStripMenuItem.Name" xml:space="preserve">
     <value>HelpToolStripMenuItem</value>
   </data>
@@ -19767,11 +19776,11 @@
   <data name="&gt;&gt;timash_hotkey_sleep.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;SortTemplateImageToolStripMenuItem.Name" xml:space="preserve">
-    <value>SortTemplateImageToolStripMenuItem</value>
+  <data name="&gt;&gt;ToolStripSeparator8.Name" xml:space="preserve">
+    <value>ToolStripSeparator8</value>
   </data>
-  <data name="&gt;&gt;SortTemplateImageToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;ToolStripSeparator8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Mainwindow</value>

@@ -13,17 +13,49 @@ Public Class Sortimagewindow
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        '■ウィンドウ位置調整
+        Me.Location = New Drawing.Point(Mainwindow.Location.X + 20, Mainwindow.Location.Y + 20)
+
+
+
         '■表の見た目を変更
-        dg1.DefaultCellStyle.ForeColor = Color.Black
+        dg1.AllowUserToResizeRows = False
+
+        dg1.EnableHeadersVisualStyles = False
+        dg1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
+        dg1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
+
+        dg1.DefaultCellStyle.ForeColor = Color.WhiteSmoke
         dg1.DefaultCellStyle.Font = New Font("Meiryo UI", 10)
+        dg1.DefaultCellStyle.BackColor = Color.FromArgb(40, 42, 44)
+
         dg1.ColumnHeadersDefaultCellStyle.Font = New Font("Meiryo UI", 9)
+        dg1.ColumnHeadersDefaultCellStyle.ForeColor = Color.WhiteSmoke
+
+        dg1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(84, 86, 88)
+        dg1.RowHeadersDefaultCellStyle.ForeColor = Color.WhiteSmoke
+
+        dg1.RowHeadersDefaultCellStyle.BackColor = Color.FromArgb(84, 86, 88)
         dg1.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         dg1.Columns(0).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
         dg1.RowHeadersWidth = 30
 
-        dgad.DefaultCellStyle.ForeColor = Color.Black
+
+        dg1.AllowUserToResizeRows = False
+
+        dgad.EnableHeadersVisualStyles = False
+        dgad.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
+        dgad.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
+        dgad.DefaultCellStyle.ForeColor = Color.WhiteSmoke
         dgad.DefaultCellStyle.Font = New Font("Meiryo UI", 10)
+        dgad.DefaultCellStyle.BackColor = Color.FromArgb(40, 42, 44)
+
         dgad.ColumnHeadersDefaultCellStyle.Font = New Font("Meiryo UI", 9)
+        dg1.ColumnHeadersDefaultCellStyle.ForeColor = Color.WhiteSmoke
+
+        dgad.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(84, 86, 88)
+        dgad.RowHeadersDefaultCellStyle.ForeColor = Color.WhiteSmoke
+        dgad.RowHeadersDefaultCellStyle.BackColor = Color.FromArgb(84, 86, 88)
         dgad.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         dgad.Columns(0).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
         dgad.RowHeadersWidth = 30
@@ -368,7 +400,11 @@ Public Class Sortimagewindow
             Dim rowfull As String = listfullpass_picture.Items(i)
             Dim rowname As String = listname_picture.Items(i)
             dg1.Rows.Add(rowfull, rowname, "", "", New Bitmap(rowfull), rowfull_text, rowname_text)
+
             dg1.Rows(i).Height = imageh + 6
+            If dg1.Rows(i).Height <= 20 Then
+                dg1.Rows(i).Height = 20
+            End If
         Next
 
 
@@ -382,6 +418,7 @@ Public Class Sortimagewindow
 
 
     End Sub
+
 
     Sub txtpass_csv_read()
 
@@ -593,7 +630,7 @@ Public Class Sortimagewindow
         'xxx_backupを選択し削除。defaultに戻るのでxxxに合わせる。
 
         Mainwindow.cmbprofile.SelectedItem = txtname.Text & "_backup"
-        Mainwindow.btndeleteprofile.PerformClick()
+        Mainwindow.deleteprofile_nomessage()
         Mainwindow.cmbprofile.SelectedItem = txtname.Text
 
 
@@ -601,6 +638,8 @@ Public Class Sortimagewindow
 
 
         MsgBox("ZIP終わり") '(My.Resources.Message.msg3) '"現在表示中のデータを保存しました。"
+
+        Me.Close()
 
     End Sub
 
@@ -907,10 +946,9 @@ Public Class Sortimagewindow
 
                 MsgBox("現在表示中のデータを保存しました。") '(My.Resources.Message.msg3) '"現在表示中のデータを保存しました。"
 
+                Me.Close()
+
             End If
-
-            'End If
-
 
 
 
@@ -925,6 +963,39 @@ Public Class Sortimagewindow
     End Sub
 
 
+
+
+    '■ラベルのドラッグでウィンドウを動かす■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+
+    Private mousePoint As Point
+    'Form1のMouseDownイベントハンドラ
+    Private Sub Form1_MouseDown(ByVal sender As Object,
+        ByVal e As System.Windows.Forms.MouseEventArgs) Handles lbltitlebar.MouseDown
+
+
+        If (e.Button And MouseButtons.Left) = MouseButtons.Left Then
+            '位置を記憶する
+            mousePoint = New Point(e.X, e.Y)
+        End If
+
+    End Sub
+
+    'Form1のMouseMoveイベントハンドラ
+    Private Sub Form1_MouseMove(ByVal sender As Object,
+        ByVal e As System.Windows.Forms.MouseEventArgs) Handles lbltitlebar.MouseMove
+
+
+        If (e.Button And MouseButtons.Left) = MouseButtons.Left Then
+            Me.Left += e.X - mousePoint.X
+            Me.Top += e.Y - mousePoint.Y
+
+        End If
+
+    End Sub
+
+    Private Sub btnclosewindow_Click(sender As Object, e As EventArgs) Handles btnclosewindow.Click
+        Me.Close()
+    End Sub
 
 
 

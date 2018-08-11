@@ -505,6 +505,9 @@ Public Class Mainwindow
     Private Sub Adjust_table()
 
         With DGtable
+
+            .AllowUserToResizeRows = False
+
             .EnableHeadersVisualStyles = False
             .ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
             .RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
@@ -561,6 +564,8 @@ Public Class Mainwindow
 
 
         With dgv2_template
+
+            .AllowUserToResizeRows = False
 
             .EnableHeadersVisualStyles = False
             .ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
@@ -12145,7 +12150,7 @@ Public Class Mainwindow
 
     End Sub
 
-    Private Sub btnaddprofile_Click_1(sender As Object, e As EventArgs) Handles btnaddprofile.Click
+    Private Sub btnaddprofile_Click(sender As Object, e As EventArgs) Handles btnaddprofile.Click
 
         'New profile/Add profileに類似記述
         Dim sameitem As Integer = cmbprofile.Items.IndexOf(cmbprofile.Text)
@@ -12206,20 +12211,44 @@ Public Class Mainwindow
 
     End Sub
 
-    Sub saveprofile()
+    Private Sub saveprofile_nomessage()
+
+
+        'New profile/Add profileに類似記述
         Dim sameitem As Integer = cmbprofile.Items.IndexOf(cmbprofile.Text)
         If sameitem = -1 Then
+
+            Console.Write("New!")
             cmbprofile.Items.Add(cmbprofile.Text)
+
+            '♥
+            'pictureフォルダのコピー
+            My.Computer.FileSystem.CopyDirectory(txtpass_picturefolder.Text, "./profile/" & cmbprofile.Text & "/picture/",
+                FileIO.UIOption.AllDialogs, FileIO.UICancelOption.DoNothing)
+
+            'textフォルダのコピー
+            My.Computer.FileSystem.CopyDirectory(txtpass_rtf.Text, "./profile/" & cmbprofile.Text & "/text/",
+                FileIO.UIOption.AllDialogs, FileIO.UICancelOption.DoNothing)
+
+            'csvファイルのコピー
+            System.IO.File.Copy(txtpass_csv.Text, "./profile/" & cmbprofile.Text & "/table.csv", True)
+
+            txtpass_picturefolder.Text = "./profile/" & cmbprofile.Text & "/picture"
+            txtpass_rtf.Text = "./profile/" & cmbprofile.Text & "/text"
+            txtpass_csv.Text = "./profile/" & cmbprofile.Text & "/table.csv"
+
         End If
+
         cmbprofile.SelectedItem = cmbprofile.Text
 
+
         Createarrayprofile()
+
 
         txtprofile.Clear()
         For ii = 0 To arrayprofile.Count - 1
             txtprofile.AppendText(arrayprofile(ii) & vbCrLf)
         Next
-
 
         Dim sw As New System.IO.StreamWriter("./profile/" & cmbprofile.SelectedItem & "/data.txt", False,
                                              System.Text.Encoding.GetEncoding("shift_jis"))
@@ -12233,6 +12262,9 @@ Public Class Mainwindow
         Dim myfilename = sfd.FileName
 
         CsvFileSave(myfilename)
+
+
+
 
 
     End Sub
@@ -12281,6 +12313,42 @@ Public Class Mainwindow
 
 
     End Sub
+
+    Sub deleteprofile_nomessage()
+
+        If cmbprofile.SelectedItem = "default" Then
+            MessageBox.Show(My.Resources.Message.msg47, messagebox_name) 'defaultは削除できません。
+
+            Exit Sub
+        End If
+
+
+
+        Try
+            ' System.IO.File.Delete("./profile/" & cmbprofile.SelectedItem & "/data.txt")
+            System.IO.File.Delete("./profile/" & cmbprofile.SelectedItem & "/data.txt")
+
+
+
+            System.IO.Directory.Delete(txtpass_picturefolder.Text, True)
+            System.IO.Directory.Delete(txtpass_rtf.Text, True)
+            System.IO.File.Delete(txtpass_csv.Text)
+            System.IO.Directory.Delete("./profile/" & cmbprofile.SelectedItem, True)
+
+            cmbprofile.Items.RemoveAt(cmbprofile.SelectedIndex)
+            cmbprofile.SelectedIndex = 0 '"default"
+
+        Catch
+            MessageBox.Show(My.Resources.Message.msg26 & vbCrLf & My.Resources.Message.msg27, messagebox_name)
+            '"csvファイルor画像フォルダの消去に失敗しました。" "※1度でも監視を行った場合、再起動の後プロファイルを削除して下さい。"
+        End Try
+
+
+
+
+
+    End Sub
+
 
     Private Sub cmbprofile_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbprofile.SelectedIndexChanged
 
@@ -13588,6 +13656,12 @@ Public Class Mainwindow
         btnstartopencv.PerformClick()
     End Sub
 
+
+
+
+
+
+
     Private Sub link_opencvsharp_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles link_opencvsharp.LinkClicked
         rtxtlicense.Clear()
         '現在のコードを実行しているAssemblyを取得
@@ -13998,6 +14072,8 @@ CInt(chkmonitor_sizestate.Checked)
 
     End Sub
 
+
+
     Private Sub DeleteAddTemplateImageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteAddTemplateImageToolStripMenuItem.Click
 
         '■プロファイルのバックアップを作成
@@ -14014,7 +14090,9 @@ CInt(chkmonitor_sizestate.Checked)
 
 
         cmbprofile.Text = cmbprofile.SelectedItem & "_backup"
-        btnaddprofile.PerformClick() '複製
+        saveprofile_nomessage() '複製
+
+        MessageBox.Show("プロファイルのバックアップを作成しました（xxx_backup）")
 
         cmbprofile.SelectedItem = temp_profilename
 
@@ -14022,7 +14100,6 @@ CInt(chkmonitor_sizestate.Checked)
 
 
     End Sub
-
 
     Private Sub SortTemplateImageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SortTemplateImageToolStripMenuItem.Click
 
@@ -14040,7 +14117,9 @@ CInt(chkmonitor_sizestate.Checked)
 
 
         cmbprofile.Text = cmbprofile.SelectedItem & "_backup"
-        btnaddprofile.PerformClick() '複製
+        saveprofile_nomessage() '複製
+
+        MessageBox.Show("プロファイルのバックアップを作成しました（xxx_backup）")
 
         cmbprofile.SelectedItem = temp_profilename
 

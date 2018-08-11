@@ -41,11 +41,16 @@ Public Class Del_Addimagewindow
 
     Private Sub Del_Addimagewindow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        'フォルダ内ファイル削除
+        '■ウィンドウ位置調整
+        Me.Location = New Drawing.Point(Mainwindow.Location.X + 20, Mainwindow.Location.Y + 20)
+
+
+        '■フォルダ内ファイル削除
         DeleteFolder("./temp/temp_deladd/copy")
         DeleteFolder("./temp/temp_deladd/nbmp")
         DeleteFolder("./temp/temp_deladd/text")
 
+        Console.WriteLine("temp/temp_deladd/以下のファイルを削除")
 
         txtpass_picturefolder.Text = Mainwindow.txtpass_picturefolder.Text
         txtpass_csv.Text = Mainwindow.txtpass_csv.Text
@@ -107,6 +112,8 @@ Public Class Del_Addimagewindow
             FileCount_bmponly -= 1
         End If
 
+        Console.WriteLine("画像ファイル数（reset、loading除く）：" & FileCount_bmponly)
+
 
         '→FileCount_bmponlyは、全てのbmpファイルからreset/loadingxx.bmpを取り除いた数になる。
         '■n.bmpのファイル数だけlistnumberに連番追加。
@@ -118,7 +125,7 @@ Public Class Del_Addimagewindow
 
         '■画像フォルダのコピー
         My.Computer.FileSystem.CopyDirectory(txtpass_picturefolder.Text, "./temp/temp_deladd/copy",
-    FileIO.UIOption.AllDialogs, FileIO.UICancelOption.DoNothing)
+            FileIO.UIOption.AllDialogs, FileIO.UICancelOption.DoNothing)
 
         'n.bmpをnフォルダにコピー
         For i = 0 To FileCount_bmponly - 1
@@ -174,84 +181,101 @@ Public Class Del_Addimagewindow
 
         Next
 
+        Console.WriteLine("temp_deladdフォルダへのコピー終了/起動終了")
+
+
 
 
     End Sub
 
 
-
+    Private bmpview_onoff As Integer = 1
 
     Private Sub btninsert_Click(sender As Object, e As EventArgs) Handles btninsert.Click
+        bmpview_onoff = 0
 
-        Try
-
-            Dim addpoint As Integer = listnumber.SelectedIndex + 1
-
-            '■表への反映
-            Copytable.Rows.Insert(addpoint + 1)
-
-            For j = 0 To 20 - 1 '列数実数指定。どうやればよいのか♥
-
-                Copytable(j, addpoint + 1).Value = Copytable(j, addpoint).Value
-
-            Next
-
-            Copytable(no.Index, addpoint + 1).Value = Copytable(no.Index, addpoint).Value & "_add"
+        If Not listnumber.SelectedItems.Count = 0 Then
 
 
+            Try
 
+                Dim addpoint As Integer = listnumber.SelectedIndex + 1
 
-            '■画像とlistへの反映
-            listnumber.Items.Add(listnumber.Items.Count + 1) 'Insert(addpoint, listnumber.SelectedIndex + 1 & "_add")
-            listcomment.Items.Insert(addpoint, listnumber.SelectedIndex + 1 & "_add")
+                '■表への反映
+                Copytable.Rows.Insert(addpoint + 1)
 
-            '画像ファイル複製＋リネーム
-            Dim copybmp_pass As String = "./temp/temp_deladd/nbmp/" & addpoint & ".bmp"
-            Dim copybmp_pass_add As String = "./temp/temp_deladd/nbmp/" & addpoint & "_add.bmp"
+                For j = 0 To 20 - 1 '列数実数指定。どうやればよいのか♥
 
-            System.IO.File.Copy(copybmp_pass, copybmp_pass_add)
+                    Copytable(j, addpoint + 1).Value = Copytable(j, addpoint).Value
 
+                Next
 
-
-            'xxx_add以外をリネーム
-            For i = listnumber.Items.Count - 1 To addpoint + 1 Step -1
-                System.IO.File.Move("./temp/temp_deladd/nbmp/" & i & ".bmp", "./temp/temp_deladd/nbmp/" & i + 1 & ".bmp")
-                Console.WriteLine(i)
-            Next
-
-            Application.DoEvents()
-
-            'xxx_addをリネーム
-            System.IO.File.Move("./temp/temp_deladd/nbmp/" & addpoint & "_add.bmp", "./temp/temp_deladd/nbmp/" & addpoint + 1 & ".bmp")
-            Console.WriteLine(addpoint & "_add.bmpリネーム")
-
-
-
-            '■テキストファイルへの反映
-            'テキストファイル複製＋リネーム
-            Dim copytext_pass As String = "./temp/temp_deladd/text/" & addpoint & ".rtf"
-            Dim copytext_pass_add As String = "./temp/temp_deladd/text/" & addpoint & "_add.rtf"
-
-            System.IO.File.Copy(copytext_pass, copytext_pass_add)
-
-            'xxx_add以外をリネーム
-            For i = listnumber.Items.Count - 1 To addpoint + 1 Step -1
-                System.IO.File.Move("./temp/temp_deladd/text/" & i & ".rtf", "./temp/temp_deladd/text/" & i + 1 & ".rtf")
-                Console.WriteLine(i)
-            Next
-
-            Application.DoEvents()
-
-            'xxx_addをリネーム
-            System.IO.File.Move("./temp/temp_deladd/text/" & addpoint & "_add.rtf", "./temp/temp_deladd/text/" & addpoint + 1 & ".rtf")
-            Console.WriteLine(addpoint & "_add.rtfリネーム")
+                Copytable(no.Index, addpoint + 1).Value = Copytable(no.Index, addpoint).Value & "_add"
 
 
 
 
-        Catch ex As Exception
+                '■画像とlistへの反映
+                listnumber.Items.Add(listnumber.Items.Count + 1) 'Insert(addpoint, listnumber.SelectedIndex + 1 & "_add")
+                listcomment.Items.Insert(addpoint, listcomment.SelectedItem) '(addpoint, listnumber.SelectedIndex + 1 & "_add")
 
-        End Try
+                '画像ファイル複製＋リネーム
+                Dim copybmp_pass As String = "./temp/temp_deladd/nbmp/" & addpoint & ".bmp"
+                Dim copybmp_pass_add As String = "./temp/temp_deladd/nbmp/" & addpoint & "_add.bmp"
+
+                System.IO.File.Copy(copybmp_pass, copybmp_pass_add)
+
+
+
+                'xxx_add以外をリネーム
+                For i = listnumber.Items.Count - 1 To addpoint + 1 Step -1
+                    System.IO.File.Move("./temp/temp_deladd/nbmp/" & i & ".bmp", "./temp/temp_deladd/nbmp/" & i + 1 & ".bmp")
+
+                Next
+
+                Application.DoEvents()
+
+                'xxx_addをリネーム
+                System.IO.File.Move("./temp/temp_deladd/nbmp/" & addpoint & "_add.bmp", "./temp/temp_deladd/nbmp/" & addpoint + 1 & ".bmp")
+                Console.WriteLine(addpoint & "_add.bmpリネーム")
+
+
+
+                '■テキストファイルへの反映
+                'テキストファイル複製＋リネーム
+                Dim copytext_pass As String = "./temp/temp_deladd/text/" & addpoint & ".rtf"
+                Dim copytext_pass_add As String = "./temp/temp_deladd/text/" & addpoint & "_add.rtf"
+
+                System.IO.File.Copy(copytext_pass, copytext_pass_add)
+
+                'xxx_add以外をリネーム
+                For i = listnumber.Items.Count - 1 To addpoint + 1 Step -1
+                    System.IO.File.Move("./temp/temp_deladd/text/" & i & ".rtf", "./temp/temp_deladd/text/" & i + 1 & ".rtf")
+
+                Next
+
+                Application.DoEvents()
+
+                'xxx_addをリネーム
+                System.IO.File.Move("./temp/temp_deladd/text/" & addpoint & "_add.rtf", "./temp/temp_deladd/text/" & addpoint + 1 & ".rtf")
+                Console.WriteLine(addpoint & "_add.rtfリネーム")
+
+
+
+
+            Catch ex As Exception
+
+            End Try
+
+            Console.WriteLine("Insert終了")
+            bmpview_onoff = 1
+            View_bmp()
+
+        Else
+            Console.WriteLine("リストボックス選択されていない")
+
+        End If
+
 
 
     End Sub
@@ -259,63 +283,81 @@ Public Class Del_Addimagewindow
 
 
     Private Sub btndelete_Click(sender As Object, e As EventArgs) Handles btndelete.Click
+        bmpview_onoff = 0
 
-        Try
-
-            Dim deletepoint As Integer = listnumber.SelectedIndex + 1
-
-            '■表への反映
-            Copytable.Rows.RemoveAt(deletepoint)
+        If Not listnumber.SelectedItems.Count = 0 Then
 
 
+            Try
 
-            '■画像ファイル、リストへの反映
-            listnumber.Items.RemoveAt(deletepoint - 1)
-            listcomment.Items.RemoveAt(deletepoint - 1)
+                Dim deletepoint As Integer = listnumber.SelectedIndex + 1
 
-            'ファイルの削除
-            File.Delete("./temp/temp_deladd/nbmp/" & deletepoint & ".bmp")
+                '■表への反映
+                Copytable.Rows.RemoveAt(deletepoint)
 
-            'リネーム
-            For i = deletepoint To listnumber.Items.Count Step 1
-                System.IO.File.Move("./temp/temp_deladd/nbmp/" & i + 1 & ".bmp", "./temp/temp_deladd/nbmp/" & i & ".bmp")
-                Console.WriteLine(i)
-            Next
+                Console.WriteLine("deletepoint：" & deletepoint)
 
-
-            '■テキストファイルへの反映
-            'ファイルの削除
-            File.Delete("./temp/temp_deladd/text/" & deletepoint & ".rtf")
-
-            'リネーム
-            For i = deletepoint To listnumber.Items.Count Step 1
-                System.IO.File.Move("./temp/temp_deladd/text/" & i + 1 & ".rtf", "./temp/temp_deladd/text/" & i & ".rtf")
-                Console.WriteLine(i)
-            Next
+                '■画像ファイル、リストへの反映
+                listnumber.Items.RemoveAt(listnumber.Items.Count - 1)
+                listcomment.Items.RemoveAt(deletepoint - 1)
 
 
+                'ファイルの削除
+                File.Delete("./temp/temp_deladd/nbmp/" & deletepoint & ".bmp")
+
+                'リネーム
+                For i = deletepoint To listnumber.Items.Count Step 1
+                    System.IO.File.Move("./temp/temp_deladd/nbmp/" & i + 1 & ".bmp", "./temp/temp_deladd/nbmp/" & i & ".bmp")
+
+                Next
 
 
-        Catch ex As Exception
+                '■テキストファイルへの反映
+                'ファイルの削除
+                File.Delete("./temp/temp_deladd/text/" & deletepoint & ".rtf")
 
-        End Try
+                'リネーム
+                For i = deletepoint To listnumber.Items.Count Step 1
+                    System.IO.File.Move("./temp/temp_deladd/text/" & i + 1 & ".rtf", "./temp/temp_deladd/text/" & i & ".rtf")
+
+                Next
+
+
+
+                Console.WriteLine("Delete終了")
+                bmpview_onoff = 1
+                View_bmp()
+
+            Catch ex As Exception
+
+            End Try
+
+        Else
+            Console.WriteLine("リストボックス選択されていない")
+
+
+
+        End If
 
 
     End Sub
 
 
-
+    '画像ファイルの表示
+    Private Sub View_bmp()
+        '■画像の読み込み（表示用）※ADD/DELETE時画像の参照先が狂うので一旦無し
+        Dim aa As String = "./temp/temp_deladd/nbmp/" & listnumber.SelectedItem & ".bmp"
+        Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
+            PictureBox1.Image = Image.FromStream(fs)
+        End Using
+    End Sub
 
     Private Sub listnumber_SelectedIndexChanged(sender As Object, e As EventArgs) Handles listnumber.SelectedIndexChanged
 
         listcomment.SelectedIndex = listnumber.SelectedIndex
-
-        ''■画像の読み込み（表示用）※ADD/DELETE時画像の参照先が狂うので一旦無し
-        'Dim aa As String = txtpass_picturefolder.Text & "/" & listnumber.SelectedItem & ".bmp"
-        'Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
-        '    PictureBox1.Image = Image.FromStream(fs)
-        'End Using
-
+        If bmpview_onoff = 1 Then
+            View_bmp()
+        End If
 
 
     End Sub
@@ -364,6 +406,7 @@ Public Class Del_Addimagewindow
 
             parser.Close()
 
+
         Catch ex As Exception
             MessageBox.Show(My.Resources.Message.msg1, "messagebox_name")
             '"表の読み込みに失敗しました。savefileフォルダに[table1.csv(カンマ区切り)]を作成してください。"
@@ -404,9 +447,12 @@ Public Class Del_Addimagewindow
 
 
         Console.WriteLine("終了")
+        MessageBox.Show("出力終了")
+        Me.Close()
 
 
     End Sub
+
 
     Private Sub CsvFileSave(ByVal myfilename As String)
 
@@ -481,4 +527,35 @@ Public Class Del_Addimagewindow
 
 
 
+    '■ラベルのドラッグでウィンドウを動かす■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+
+    Private mousePoint As Point
+    'Form1のMouseDownイベントハンドラ
+    Private Sub Form1_MouseDown(ByVal sender As Object,
+        ByVal e As System.Windows.Forms.MouseEventArgs) Handles lbltitlebar.MouseDown
+
+
+        If (e.Button And MouseButtons.Left) = MouseButtons.Left Then
+            '位置を記憶する
+            mousePoint = New Point(e.X, e.Y)
+        End If
+
+    End Sub
+
+    'Form1のMouseMoveイベントハンドラ
+    Private Sub Form1_MouseMove(ByVal sender As Object,
+        ByVal e As System.Windows.Forms.MouseEventArgs) Handles lbltitlebar.MouseMove
+
+
+        If (e.Button And MouseButtons.Left) = MouseButtons.Left Then
+            Me.Left += e.X - mousePoint.X
+            Me.Top += e.Y - mousePoint.Y
+
+        End If
+
+    End Sub
+
+    Private Sub btnclosewindow_Click(sender As Object, e As EventArgs) Handles btnclosewindow.Click
+        Me.Close()
+    End Sub
 End Class
