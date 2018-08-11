@@ -155,6 +155,21 @@ Public Class Mainwindow
 
         End If
 
+
+        '■Sortimageのフォルダ削除。画像ファイルロック防止の為起動時に＋Sort作成毎に別名フォルダ作成★
+        Try
+
+            If System.IO.Directory.Exists("./temp/temp_sort") Then
+                System.IO.Directory.Delete("./temp/temp_sort", True)
+
+            End If
+
+        Catch
+            Console.Write("temp/temp_sortファイル削除できず")
+        End Try
+
+
+
         '■「現在の設定」のサイズ
         grpgeneral.Size = New Drawing.Size(785, 295)
 
@@ -13754,6 +13769,9 @@ Public Class Mainwindow
 
     'Arrayprofileの作成はここ
     Private arrayprofile(128) As String
+
+
+
     Private Sub Createarrayprofile()
 
         arrayprofile = New String() {
@@ -13982,6 +14000,7 @@ CInt(chkmonitor_sizestate.Checked)
 
     Private Sub DeleteAddTemplateImageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteAddTemplateImageToolStripMenuItem.Click
 
+        '■プロファイルのバックアップを作成
         Dim temp_profilename As String = cmbprofile.Text
 
         If Not cmbprofile.FindStringExact(cmbprofile.SelectedItem & "_backup") = -1 Then
@@ -14004,10 +14023,31 @@ CInt(chkmonitor_sizestate.Checked)
 
     End Sub
 
-    Private Sub del_addimage()
+
+    Private Sub SortTemplateImageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SortTemplateImageToolStripMenuItem.Click
+
+        '■プロファイルのバックアップを作成
+        Dim temp_profilename As String = cmbprofile.Text
+
+        If Not cmbprofile.FindStringExact(cmbprofile.SelectedItem & "_backup") = -1 Then
+            ' 存在します。
+            cmbprofile.SelectedItem = cmbprofile.SelectedItem & "_backup"
+
+            'プロファイルを削除
+            btndeleteprofile.PerformClick()
+
+        End If
+
+
+        cmbprofile.Text = cmbprofile.SelectedItem & "_backup"
+        btnaddprofile.PerformClick() '複製
+
+        cmbprofile.SelectedItem = temp_profilename
+
+        Sortimagewindow.Show()
+
 
     End Sub
-
 
 End Class
 

@@ -89,7 +89,7 @@ Partial Class Del_Addimagewindow
         '
         'btnok
         '
-        Me.btnok.Location = New System.Drawing.Point(335, 222)
+        Me.btnok.Location = New System.Drawing.Point(212, 308)
         Me.btnok.Name = "btnok"
         Me.btnok.Size = New System.Drawing.Size(75, 23)
         Me.btnok.TabIndex = 4
@@ -98,7 +98,7 @@ Partial Class Del_Addimagewindow
         '
         'btninsert
         '
-        Me.btninsert.Location = New System.Drawing.Point(293, 12)
+        Me.btninsert.Location = New System.Drawing.Point(212, 12)
         Me.btninsert.Name = "btninsert"
         Me.btninsert.Size = New System.Drawing.Size(75, 23)
         Me.btninsert.TabIndex = 5
@@ -107,7 +107,7 @@ Partial Class Del_Addimagewindow
         '
         'btndelete
         '
-        Me.btndelete.Location = New System.Drawing.Point(293, 51)
+        Me.btndelete.Location = New System.Drawing.Point(212, 41)
         Me.btndelete.Name = "btndelete"
         Me.btndelete.Size = New System.Drawing.Size(75, 23)
         Me.btndelete.TabIndex = 6
@@ -117,7 +117,7 @@ Partial Class Del_Addimagewindow
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.PictureBox1.Location = New System.Drawing.Point(293, 125)
+        Me.PictureBox1.Location = New System.Drawing.Point(212, 199)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(117, 91)
         Me.PictureBox1.TabIndex = 7
@@ -127,9 +127,9 @@ Partial Class Del_Addimagewindow
         '
         Me.listcomment.FormattingEnabled = True
         Me.listcomment.ItemHeight = 15
-        Me.listcomment.Location = New System.Drawing.Point(131, 12)
+        Me.listcomment.Location = New System.Drawing.Point(80, 12)
         Me.listcomment.Name = "listcomment"
-        Me.listcomment.Size = New System.Drawing.Size(68, 319)
+        Me.listcomment.Size = New System.Drawing.Size(118, 319)
         Me.listcomment.TabIndex = 10
         '
         'Copytable
@@ -146,10 +146,10 @@ Partial Class Del_Addimagewindow
         Me.Copytable.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.Copytable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Copytable.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.no, Me.send, Me.key, Me.rate, Me.sleep, Me.timing, Me.darksleep, Me.darkthr, Me.seektime, Me.graph_count, Me.graph_rate, Me.graph_view, Me.posx, Me.posy, Me.sizex, Me.sizey, Me.ltx, Me.lty, Me.rbx, Me.rby})
-        Me.Copytable.Location = New System.Drawing.Point(435, 51)
+        Me.Copytable.Location = New System.Drawing.Point(378, 302)
         Me.Copytable.Name = "Copytable"
         Me.Copytable.RowTemplate.Height = 21
-        Me.Copytable.Size = New System.Drawing.Size(785, 146)
+        Me.Copytable.Size = New System.Drawing.Size(374, 146)
         Me.Copytable.TabIndex = 46
         '
         'no

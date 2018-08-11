@@ -685,6 +685,7 @@ Partial Class Mainwindow
         Me.timcamera = New System.Windows.Forms.Timer(Me.components)
         Me.timcalib = New System.Windows.Forms.Timer(Me.components)
         Me.timash_hotkey_sleep = New System.Windows.Forms.Timer(Me.components)
+        Me.SortTemplateImageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.DGtable, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -3694,7 +3695,7 @@ Partial Class Mainwindow
         '
         'ToolToolStripMenuItem
         '
-        Me.ToolToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StartMonitoringMToolStripMenuItem, Me.ToolStripSeparator6, Me.PreviewGetTemplatePictureToolStripMenuItem, Me.CalibrationToolStripMenuItem1, Me.PositionSettingToolStripMenuItem, Me.ToolStripSeparator3, Me.ExpandTableToolStripMenuItem, Me.ToolStripSeparator7, Me.ViewTableToolStripMenuItem, Me.ToolStripSeparator2, Me.OpenTextWindowWToolStripMenuItem, Me.CreateTextFileToolStripMenuItem, Me.OpenTextFolderToolStripMenuItem, Me.DeleteAddTemplateImageToolStripMenuItem})
+        Me.ToolToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StartMonitoringMToolStripMenuItem, Me.ToolStripSeparator6, Me.PreviewGetTemplatePictureToolStripMenuItem, Me.CalibrationToolStripMenuItem1, Me.PositionSettingToolStripMenuItem, Me.ToolStripSeparator3, Me.ExpandTableToolStripMenuItem, Me.ToolStripSeparator7, Me.ViewTableToolStripMenuItem, Me.ToolStripSeparator2, Me.OpenTextWindowWToolStripMenuItem, Me.CreateTextFileToolStripMenuItem, Me.OpenTextFolderToolStripMenuItem, Me.DeleteAddTemplateImageToolStripMenuItem, Me.SortTemplateImageToolStripMenuItem})
         Me.ToolToolStripMenuItem.Name = "ToolToolStripMenuItem"
         resources.ApplyResources(Me.ToolToolStripMenuItem, "ToolToolStripMenuItem")
         '
@@ -6290,6 +6291,11 @@ Partial Class Mainwindow
         '
         Me.timash_hotkey_sleep.Interval = 300
         '
+        'SortTemplateImageToolStripMenuItem
+        '
+        Me.SortTemplateImageToolStripMenuItem.Name = "SortTemplateImageToolStripMenuItem"
+        resources.ApplyResources(Me.SortTemplateImageToolStripMenuItem, "SortTemplateImageToolStripMenuItem")
+        '
         'Mainwindow
         '
         resources.ApplyResources(Me, "$this")
@@ -7152,4 +7158,5 @@ Partial Class Mainwindow
     Friend WithEvents OpenTextFolderToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents chkmonitor_sizestate As CheckBox
     Friend WithEvents DeleteAddTemplateImageToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SortTemplateImageToolStripMenuItem As ToolStripMenuItem
 End Class
