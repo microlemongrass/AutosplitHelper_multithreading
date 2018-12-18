@@ -7,14 +7,14 @@ Imports System.Runtime.InteropServices
 Imports OpenCvSharp
 Imports System.Windows.Threading
 Imports System.IO
-Imports System.Globalization
 Imports DirectShowLib
 Imports System.Net
-Imports System.Text.RegularExpressions
+
+
 
 Public Class Mainwindow
 
-
+    '■API
 
     '■キー入力を受け取る
     Private Declare Function GetKeyPress Lib "user32" Alias "GetAsyncKeyState" (ByVal key As Integer) As Integer
@@ -26,11 +26,13 @@ Public Class Mainwindow
     Delegate Function EnumWinProc _
         (ByVal hwnd As IntPtr, ByVal lParam As Integer) As Boolean
 
+
     Declare Function EnumChildWindows Lib "User32.dll" _
         (ByVal hWndParent As Integer, ByVal Proc As EnumChildProc, ByVal lParam As Integer) As Boolean
 
     Delegate Function EnumChildProc _
         (ByVal hwnd As IntPtr, ByVal lParam As Integer) As Boolean
+
 
     Declare Function SendMessage Lib "user32.dll" Alias "SendMessageA" _
         (ByVal hWnd As Integer, ByVal MSG As Integer,
@@ -39,6 +41,7 @@ Public Class Mainwindow
     Declare Function SendMessageStr Lib "user32.dll" Alias "SendMessageA" _
         (ByVal hWnd As Integer, ByVal MSG As Integer,
         ByVal wParam As Integer, ByVal lParam As StringBuilder) As Integer
+
 
     Declare Function FindWindow Lib "user32" Alias "FindWindowA" _
         (ByVal lpClassName As String, ByVal lpWindowName As String) As Integer
@@ -58,7 +61,7 @@ Public Class Mainwindow
 
 
 
-    '■ウィンドウタイトル取得用のAPI■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+    '■ウィンドウタイトル取得用のAPI
     <DllImport("user32.dll", CharSet:=CharSet.Auto, SetLastError:=True)>
     Private Shared Function GetWindowText(hWnd As IntPtr,
         lpString As StringBuilder, nMaxCount As Integer) As Integer
@@ -69,7 +72,7 @@ Public Class Mainwindow
     End Function
 
 
-    '■ウィンドウ位置を指定するためのAPI■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+    '■ウィンドウ位置を指定するためのAPI
     Private Declare Function MoveWindow Lib "user32" Alias "MoveWindow" _
     (ByVal hwnd As IntPtr, ByVal x As Integer, ByVal y As Integer,
     ByVal nWidth As Integer, ByVal nHeight As Integer,
@@ -114,9 +117,8 @@ Public Class Mainwindow
     Private livesplit_state As String = ""
 
     Friend messagebox_name As String = "Autosplit Helper"
+
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-
 
         '■DirectShowを利用した映像キャプチャデバイス一覧の取得
         cmbcv_device.Items.Clear()
@@ -141,19 +143,13 @@ Public Class Mainwindow
 
         End If
 
-        '■いるかわからないので後で確認。puttimeの適用♥
+
+        '■キー押下時間を設定。
         keydown_length = numpresstime.Value
 
+
         '■アプリ終了時のソフトの位置を記憶、復元
-
         Me.Location = New Drawing.Point(numsavex.Value, numsavey.Value)
-
-        '■テンプレート画像のテンポラリーファイル。監視などが安定しない時に使用している。
-        If System.IO.Directory.Exists("./temp/temp3") Then
-            System.IO.Directory.Delete("./temp/temp3", True) ' フォルダ (ディレクトリ) を削除する
-
-
-        End If
 
 
         '■Sortimageのフォルダ削除。画像ファイルロック防止の為起動時に＋Sort作成毎に別名フォルダ作成★
@@ -164,8 +160,9 @@ Public Class Mainwindow
 
             End If
 
-        Catch
+        Catch ex As Exception
             Console.Write("temp/temp_sortファイル削除できず")
+
         End Try
 
 
@@ -173,7 +170,7 @@ Public Class Mainwindow
         '■「現在の設定」のサイズ
         grpgeneral.Size = New Drawing.Size(785, 295)
 
-        '■Menustropのカラー変更
+        '■Menustripのカラー変更
         MenuStrip1.ForeColor = SystemColors.Control
 
         '■ウィンドウサイズの調整 
@@ -239,14 +236,14 @@ Public Class Mainwindow
         End If
 
 
-        '■コンボボックス読み込み1■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+        '■コンボボックス読み込み1
 
         'ComboBox1.BeginUpdate() より前に実行する事でかなり効果がある
         '必要な項目数だけしか表示しない。
         cmbtimer.IntegralHeight = False        'Windows Vista 以降で有効 
 
-        '読み込み中の描画をしない(これでかなり高速に処理できる)　
-        cmbtimer.BeginUpdate()  'こちらの効果の程は、Web 上でも色々紹介され一般的に知られている
+        '読み込み中の描画をしない(高速処理)　
+        cmbtimer.BeginUpdate()
 
         Dim st As New System.IO.StreamReader("./savedata/01_active1.txt", System.Text.Encoding.Default)
 
@@ -263,7 +260,7 @@ Public Class Mainwindow
         Debug.Print(cmbtimer.Items.Count.ToString)
 
 
-        '■コンボボックス読み込み2■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+        '■コンボボックス読み込み2
 
         cmbsomeapp.IntegralHeight = False
 
@@ -282,7 +279,7 @@ Public Class Mainwindow
 
 
 
-        '■コンボボックス読み込み3■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+        '■コンボボックス読み込み3
 
         cmbprofile.IntegralHeight = False
 
@@ -299,7 +296,7 @@ Public Class Mainwindow
         st5.Close()              'ファイルを閉じる
         cmbprofile.EndUpdate()   'コントロールの描画を再開
 
-        '■コンボボックス読み込み4■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+        '■コンボボックス読み込み4
 
         cmbcv_resolution.IntegralHeight = False
 
@@ -318,7 +315,7 @@ Public Class Mainwindow
 
 
 
-        '表の読み込み（設定タブ(table1)と位置タブ(position)両方））■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+        '表の読み込み（設定タブ(DGtable)と位置タブ(position)両方））■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
         '■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 
         Dim ii As Integer
@@ -353,15 +350,16 @@ Public Class Mainwindow
                 parser.Close()
 
 
-            Catch
+            Catch ex As Exception
                 MessageBox.Show(My.Resources.Message.msg1, messagebox_name)
                 '"表の読み込みに失敗しました。savefileフォルダに[table1.csv(カンマ区切り)]を作成してください。"
             End Try
 
+
         Next
 
-        '表の読み込み（設定タブ(table1)と位置タブ(position)両方））
 
+        '■表の読み込み（位置タブ(position)）
         For ii = 0 To 0
 
             Try
@@ -394,7 +392,7 @@ Public Class Mainwindow
 
 
                 ' MessageBox.Show(myfilename_table2 & "ファイル2の読み込みに成功しました。", "AutoSplit Helper by Image")
-            Catch
+            Catch ex As Exception
                 MessageBox.Show(My.Resources.Message.msg2, messagebox_name)
                 '"表の読み込みに失敗しました。savefileフォルダに[table2.csv(カンマ区切り)]を作成してください。"
             End Try
@@ -404,13 +402,13 @@ Public Class Mainwindow
 
 
 
-        '■sendkey,sendkey_reset,llayout,pass,active1,active2（コンボボックス）の読み込み■■■■■■■■■■■■■■■■■■■
+        '■sendkey,sendkey_reset,llayout,pass,active1,active2（コンボボックス）の読み込み
         Try
 
             cmbcv_device.SelectedIndex = numcv_device.Value
             cmbprofile.SelectedIndex = numprofile.Value
 
-        Catch
+        Catch ex As Exception
             MessageBox.Show(My.Resources.Message.msg3, messagebox_name) '"読み込みに失敗しました。設定が初期化されます。"
 
             cmbtimer.SelectedIndex = 0
@@ -468,12 +466,10 @@ Public Class Mainwindow
         '■ページの内容を取得♥
         Try
 
-
             rtxtupdate.Clear()
+
             Dim s1 As String = html
-
             Dim lefturl As String, righturl As String
-
             Dim filename As String
 
             filename = html
@@ -494,6 +490,7 @@ Public Class Mainwindow
             rtxtupdate.Text = s3
 
         Catch ex As Exception
+
             Console.WriteLine("インターネットに接続されていないようです。")
 
         End Try
@@ -597,9 +594,6 @@ Public Class Mainwindow
 
     Private Sub Mainwindow_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
 
-        ' フォルダ (ディレクトリ) を作成する
-        System.IO.Directory.CreateDirectory("./temp/temp3")
-
         '■Livesplitの名前付きパイプの接続状況表示。存在したら接続
 
         'タイマーのプロセスを探す
@@ -637,7 +631,6 @@ Public Class Mainwindow
     '■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 
     Private Sub lblset_monitoring_MouseClick(sender As Object, e As MouseEventArgs) Handles lblset_monitoring.MouseClick
-
 
         listsetcontents.SelectedIndex = 1
         listsetcontents.SelectedIndex = 0
@@ -2296,7 +2289,7 @@ Public Class Mainwindow
                             sw.AutoFlush = True
                             sw.WriteLine("setsplitname " & txtsetsplitname.Text & vbCrLf)
 
-                        Catch
+                        Catch ex As Exception
                             MessageBox.Show("error", messagebox_name)
 
 
@@ -2910,7 +2903,9 @@ Public Class Mainwindow
         pictempipl.Size = New Drawing.Size(numcv_sizex.Value, numcv_sizey.Value)
 
 
-        NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
+        'NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
+        capturecv.Read(frame)
+
         PictureBoxIpl1.ImageIpl = frame
 
         piczoom.Location = New Drawing.Point(0, numcv_sizey.Value) '(numcv_sizex.Value / 2) - 100
@@ -2942,7 +2937,9 @@ Public Class Mainwindow
         Try
 
 
-            NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
+            'NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
+            capturecv.Read(frame)
+
             PictureBoxIpl1.ImageIpl = frame
 
             '■選択行番号の再取得。■■■■■■■■■■■■■■■■■■
@@ -2953,7 +2950,7 @@ Public Class Mainwindow
             Dim psnumber As Integer = txtrowscount.Text
             txtno_comment.Text = psnumber & "," & CStr(DGtable(0, psnumber).Value)
 
-        Catch
+        Catch ex As Exception
             cvpreview.Stop()
 
             MessageBox.Show(My.Resources.Message.msg43, messagebox_name) '接続エラー。本体を再起動して下さい。
@@ -3416,7 +3413,7 @@ Public Class Mainwindow
 
             End With
 
-        Catch
+        Catch ex As Exception
 
             MessageBox.Show(My.Resources.Message.msgb7, messagebox_name) '"行選択状態でキャプチャして下さい。"
             Exit Sub
@@ -5023,7 +5020,9 @@ Public Class Mainwindow
 
     Private Sub timcamera_Tick(sender As Object, e As EventArgs) Handles timcamera.Tick
 
-        NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
+        'NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
+        capturecv.Read(frame)
+
         piccamera.ImageIpl = frame
 
 
@@ -5058,12 +5057,16 @@ Public Class Mainwindow
         piccalib_temp.Visible = True
         piccalib_temp.Size = New Drawing.Size(numcv_sizex.Value, numcv_sizey.Value)
 
-        NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
+        'NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
+        capturecv.Read(frame)
+
         piccalib_temp.ImageIpl = frame
 
         Application.DoEvents()
 
-        NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
+        'NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
+        capturecv.Read(frame)
+
         piccalib_temp.ImageIpl = frame
 
 
@@ -5224,7 +5227,7 @@ Public Class Mainwindow
             best()
 
 
-        Catch
+        Catch ex As Exception
 
         End Try
 
@@ -6659,25 +6662,7 @@ Public Class Mainwindow
             '■監視処理開始
 
 
-            ''■画像フォルダの一時ファイルを作成するかどうか
-            'If chkcreate_temppicture.Checked = True Then
-            '    ' 必要な変数を宣言する
-            '    Dim dtNow As DateTime = DateTime.Now
-            '    ' 時刻の部分だけを取得する
-            '    Dim tsNow As TimeSpan = dtNow.TimeOfDay
 
-            '    Dim r1 As String = tsNow.ToString().Replace(":", "-")
-            '    ' フォルダ (ディレクトリ) を作成する
-            '    System.IO.Directory.CreateDirectory("./temp/temp3/" & r1)
-
-            '    'ディレクトリ"picture/xxx"を"temp/temp3/xxx"にコピーする
-            '    My.Computer.FileSystem.CopyDirectory(txtpass_picturefolder.Text, "./temp/temp3/" & r1,
-            '    FileIO.UIOption.AllDialogs, FileIO.UICancelOption.DoNothing)
-
-            '    txttemp_picturepass.Text = txtpass_picturefolder.Text
-            '    txtpass_picturefolder.Text = "./temp/temp3/" & r1
-
-            'End If
 
 
             '■Livesplitの名前付きパイプの接続状況表示。存在したら接続
@@ -6824,7 +6809,9 @@ Public Class Mainwindow
             'Try
 
             '■プレビュー画面の更新
-            NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
+            'NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
+            capturecv.Read(frame)
+
             picipl_cap.ImageIpl = frame
             imgex = picipl_cap.ImageIpl
 
@@ -7341,7 +7328,7 @@ Public Class Mainwindow
                 btncv_downsize.PerformClick()
             End If
 
-            'Catch
+            'Catch ex As Exception
 
             '    MessageBox.Show("Error")
 
@@ -7622,7 +7609,9 @@ Public Class Mainwindow
 
         Try
             '■プレビュー画面の更新
-            NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
+            'NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
+            capturecv.Read(frame)
+
 
             If async_split_onoff = 1 Then
                 Async_split()
@@ -7721,7 +7710,9 @@ Public Class Mainwindow
                         g.DrawRectangle(DrawPen, maxloc_split.X, maxloc_split.Y, tplex.Width, tplex.Height)
 
                         '■プレビュー画面の更新
-                        NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
+                        'NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
+                        capturecv.Read(frame)
+
                         picipl_cap.ImageIpl = frame
 
                         '■split用タイマー停止
@@ -8065,7 +8056,9 @@ Public Class Mainwindow
 
 
                         '■プレビュー画面の更新
-                        NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
+                        'NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
+                        capturecv.Read(frame)
+
                         picipl_cap.ImageIpl = frame
 
 
@@ -8917,7 +8910,7 @@ Public Class Mainwindow
             'Application.DoEvents()'消しても動くなら消したほうが良い。
 
 
-        Catch
+        Catch ex As Exception
             MessageBox.Show(My.Resources.Message.msg46, messagebox_name) '仮想カメラの接続エラー。仮想カメラの再接続や本体の再起動を試してみて下さい。
 
             btncv_stop.PerformClick()
@@ -9127,7 +9120,9 @@ Public Class Mainwindow
                 txtstate.Text = My.Resources.Message.msg30 '"画像認識中"
 
                 '■プレビュー画面の更新
-                NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
+                'NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
+                capturecv.Read(frame)
+
                 picipl_cap.ImageIpl = frame
 
 
@@ -10435,7 +10430,9 @@ Public Class Mainwindow
     '■暗転用のキャプチャ。■■■■■■■■■■■■■■■■■■■■■■■■■■■■
     Private Sub timcv_forantencap_Tick(sender As Object, e As EventArgs) Handles timcv_forantencap.Tick
 
-        NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
+        'NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
+        capturecv.Read(frame)
+
         picipl_cap.ImageIpl = frame
 
     End Sub
@@ -12303,7 +12300,7 @@ Public Class Mainwindow
                 cmbprofile.Items.RemoveAt(cmbprofile.SelectedIndex)
                 cmbprofile.SelectedIndex = 0 '"default"
 
-            Catch
+            Catch ex As Exception
                 MessageBox.Show(My.Resources.Message.msg26 & vbCrLf & My.Resources.Message.msg27, messagebox_name)
                 '"csvファイルor画像フォルダの消去に失敗しました。" "※1度でも監視を行った場合、再起動の後プロファイルを削除して下さい。"
             End Try
@@ -12338,7 +12335,7 @@ Public Class Mainwindow
             cmbprofile.Items.RemoveAt(cmbprofile.SelectedIndex)
             cmbprofile.SelectedIndex = 0 '"default"
 
-        Catch
+        Catch ex As Exception
             MessageBox.Show(My.Resources.Message.msg26 & vbCrLf & My.Resources.Message.msg27, messagebox_name)
             '"csvファイルor画像フォルダの消去に失敗しました。" "※1度でも監視を行った場合、再起動の後プロファイルを削除して下さい。"
         End Try
@@ -13239,7 +13236,7 @@ Public Class Mainwindow
         Try
             Dim hwnd As Integer = CInt(txt2_selectedhwnd.Text)
             MoveWindow(hwnd, ltx, lty, rbx, rby, 1)
-        Catch
+        Catch ex As Exception
             timlockwindow.Enabled = False
             chklockwindow.Checked = False
             MessageBox.Show(My.Resources.Message.msg53, messagebox_name) 'ハンドルの取得がされていません
@@ -13376,12 +13373,7 @@ Public Class Mainwindow
     End Sub
 
 
-    Private Sub timchecktimer_Tick(sender As Object, e As EventArgs) Handles timchecktimer.Tick
-        lbltitlebar.Text =
-            "▷:" & cvtimer.IsEnabled &
-            " ⏸:" & timopencvsleep.Enabled &
-            " LR:" & cvtimer_loadremover1.IsEnabled
-    End Sub
+
 
     Private Sub Graph_setting()
         view_chart.Show()
@@ -13430,7 +13422,7 @@ Public Class Mainwindow
                     sw.AutoFlush = True
                     sw.WriteLine("setsplitname " & aa - 1 & " " & DGtable(no.Index, aa + CInt(numgraph_first.Value) - 1).Value & vbCrLf)
 
-                Catch
+                Catch ex As Exception
 
                     MessageBox.Show(My.Resources.Message.msg51, messagebox_name)
 
@@ -14127,68 +14119,3 @@ CInt(chkmonitor_sizestate.Checked)
 
 End Class
 
-#Region "Videoseek_全て"
-''■Videoplayerのシーク
-'If chkshowvideo.Checked = True Then
-
-'    If chkvideo_autoseek.Checked = True Then
-'        If chkcv_loop.Checked = True Then
-
-'            Videoplayer.playtime = DGtable(seektime.Index, CInt(lblcv_lap.Text - 0)).Value
-
-'            'Videoseekの値が"-1"ならば、シークなど何の操作もしない
-'            If Videoplayer.playtime = -1 Then
-
-'            Else
-
-'                Videoplayer.videoplay()
-
-
-'            End If
-
-
-'        ElseIf chkcv_loop.Checked = False Then
-
-'            Videoplayer.playtime = DGtable(seektime.Index, CInt(lblcv_lap.Text - 1)).Value
-
-'            'Videoseekの値が"-1"ならば、シークなど何の操作もしない
-'            If Videoplayer.playtime = -1 Then
-
-'            Else
-'                Videoplayer.videoplay()
-
-'            End If
-
-'        End If
-
-
-
-'    Else '最初の反応時にのみplayする
-
-'        If chkcv_loop.Checked = True Then
-'            If numnowloop.Value = 0 Then
-'                Videoplayer.playtime = DGtable(seektime.Index, CInt(lblcv_lap.Text)).Value
-'                Videoplayer.videoplay()
-
-'            End If
-'        ElseIf chkcv_loop.Checked = False Then
-
-'            If lblcv_lap.Text = 2 Then
-'                Videoplayer.playtime = DGtable(seektime.Index, CInt(lblcv_lap.Text - 1)).Value
-'                Videoplayer.videoplay()
-
-'            End If
-
-
-'        End If
-
-'    End If
-
-'End If
-#End Region
-
-'        lbltitlebar.Text = "T:" & cvtimer.IsEnabled & ",R:" & cvreset_timer.IsEnabled & ",RO:" & cvresetonly_timer.IsEnabled
-
-               ''■最初の画像の読み込み（表示用）
-                'Dim img As System.Drawing.Image = System.Drawing.Image.FromFile(aa)
-                'piccv_picture.Image = img
