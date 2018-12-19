@@ -51,7 +51,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  厳密に型指定されたこのリソース クラスを使用して、すべての検索リソースに対し、
+        '''  すべてについて、現在のスレッドの CurrentUICulture プロパティをオーバーライドします
         '''  現在のスレッドの CurrentUICulture プロパティをオーバーライドします。
         '''</summary>
         <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)>  _
@@ -709,6 +709,33 @@ Namespace My.Resources
         Friend Shared ReadOnly Property msgd06() As String
             Get
                 Return ResourceManager.GetString("msgd06", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  The settings / table contents have been changed. Do you want to overwrite? に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend Shared ReadOnly Property msge01() As String
+            Get
+                Return ResourceManager.GetString("msge01", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  The settings / table contents have been changed. Pressing &quot;OK&quot; will change the profile while not saving. に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend Shared ReadOnly Property msge02() As String
+            Get
+                Return ResourceManager.GetString("msge02", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Created a profile backup. に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend Shared ReadOnly Property msge03() As String
+            Get
+                Return ResourceManager.GetString("msge03", resourceCulture)
             End Get
         End Property
     End Class

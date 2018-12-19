@@ -333,4 +333,13 @@
   <data name="msgd06" xml:space="preserve">
     <value>The backup profile has been deleted.</value>
   </data>
+  <data name="msge01" xml:space="preserve">
+    <value>The settings / table contents have been changed. Do you want to overwrite?</value>
+  </data>
+  <data name="msge02" xml:space="preserve">
+    <value>The settings / table contents have been changed. Pressing "OK" will change the profile while not saving.</value>
+  </data>
+  <data name="msge03" xml:space="preserve">
+    <value>Created a profile backup.</value>
+  </data>
 </root>

@@ -333,4 +333,13 @@
   <data name="msgd06" xml:space="preserve">
     <value>バックアッププロファイルは削除されました。</value>
   </data>
+  <data name="msge01" xml:space="preserve">
+    <value>設定/表の内容が変更されています。上書きしますか？</value>
+  </data>
+  <data name="msge02" xml:space="preserve">
+    <value>設定/表の内容が変更されています。「OK」を押すと未保存のままプロファイルが変更されます。</value>
+  </data>
+  <data name="msge03" xml:space="preserve">
+    <value>プロファイルのバックアップを作成しました。</value>
+  </data>
 </root>

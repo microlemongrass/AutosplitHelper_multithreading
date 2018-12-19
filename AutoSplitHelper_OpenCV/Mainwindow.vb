@@ -12156,27 +12156,27 @@ Public Class Mainwindow
 
             If Setting_changeTF = 1 Or DGtable_changeTF = 1 Then
                 'メッセージボックスを表示する 
-                Dim result As DialogResult = MessageBox.Show("設定/表の内容が変更されています。上書きしますか？",
+                Dim result As DialogResult = MessageBox.Show(My.Resources.Message.msge01,
                                              "質問",
                                              MessageBoxButtons.YesNoCancel,
                                              MessageBoxIcon.Exclamation,
-                                             MessageBoxDefaultButton.Button2)
+                                             MessageBoxDefaultButton.Button2) '設定/表の内容が変更されています。上書きしますか？
 
                 '何が選択されたか調べる 
                 If result = DialogResult.Yes Then
                     '「はい」が選択された時 
-                    Console.WriteLine("「はい」が選択されました")
+                    Console.WriteLine("設定上書き「はい」が選択されました")
                     btnaddprofile.PerformClick()
                     Me.Close()
 
                 ElseIf result = DialogResult.No Then
                     '「いいえ」が選択された時 
-                    Console.WriteLine("「いいえ」が選択されました")
+                    Console.WriteLine("設定上書き「いいえ」が選択されました")
                     Me.Close()
 
                 ElseIf result = DialogResult.Cancel Then
                     '「キャンセル」が選択された時 
-                    Console.WriteLine("「キャンセル」が選択されました")
+                    Console.WriteLine("設定上書き「キャンセル」が選択されました")
                     Exit Sub
 
                 End If
@@ -12435,21 +12435,21 @@ Public Class Mainwindow
 
                 If Setting_changeTF = 1 Or DGtable_changeTF = 1 Then
                     'メッセージボックスを表示する 
-                    Dim result As DialogResult = MessageBox.Show("設定/表の内容が変更されています。OKを押すと未保存のままプロファイルが変更されます。",
+                    Dim result As DialogResult = MessageBox.Show(My.Resources.Message.msge02,
                                                  "質問",
                                                  MessageBoxButtons.OKCancel,
                                                  MessageBoxIcon.Exclamation,
-                                                 MessageBoxDefaultButton.Button2)
+                                                 MessageBoxDefaultButton.Button2) '設定/表の内容が変更されています。OKを押すと未保存のままプロファイルが変更されます。
 
                     '何が選択されたか調べる 
                     If result = DialogResult.OK Then
                         '「はい」が選択された時 
-                        Console.WriteLine("「OK」が選択されました")
+                        Console.WriteLine("設定変更「OK」が選択されました")
 
 
                     ElseIf result = DialogResult.Cancel Then
                         '「キャンセル」が選択された時 
-                        Console.WriteLine("「キャンセル」が選択されました")
+                        Console.WriteLine("設定変更「キャンセル」が選択されました")
                         '一時的にコンボボックスのイベントを無効にする。
                         RemoveHandler cmbprofile.SelectedIndexChanged, AddressOf cmbprofile_SelectedIndexChanged
                         cmbprofile.SelectedIndex = numprofile.Value
@@ -14243,8 +14243,8 @@ CInt(chkmonitor_sizestate.Checked)
         cmbprofile.Text = cmbprofile.SelectedItem & "_backup"
         saveprofile_nomessage() '複製
 
-        MessageBox.Show("プロファイルのバックアップを作成しました。" & "(" & temp_profilename & "_backup)", messagebox_name)
-
+        MessageBox.Show(My.Resources.Message.msge03 & "(" & temp_profilename & "_backup)", messagebox_name)
+        'プロファイルのバックアップを作成しました。
         cmbprofile.SelectedItem = temp_profilename
 
         Sortimagewindow.Show()
@@ -14297,7 +14297,7 @@ CInt(chkmonitor_sizestate.Checked)
 
                 lblnewestver.Text = "Newest: " & s3
 
-                If Not lblversion.Text = lblnewestver.Text Then
+                If Not lblversion.Text = s3 Then
                     MessageBox.Show(s3 & " is available.")
                 End If
 
