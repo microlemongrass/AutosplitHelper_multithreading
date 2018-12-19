@@ -553,13 +553,13 @@
     <value>15, 88</value>
   </data>
   <data name="btntemp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 30</value>
+    <value>56, 30</value>
   </data>
   <data name="btntemp.TabIndex" type="System.Int32, mscorlib">
     <value>281</value>
   </data>
   <data name="btntemp.Text" xml:space="preserve">
-    <value>Rep.</value>
+    <value>Replay</value>
   </data>
   <data name="&gt;&gt;btntemp.Name" xml:space="preserve">
     <value>btntemp</value>
@@ -835,10 +835,10 @@
     <value>NoControl</value>
   </data>
   <data name="trktemp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>66, 92</value>
+    <value>77, 92</value>
   </data>
   <data name="trktemp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>146, 45</value>
+    <value>135, 45</value>
   </data>
   <data name="trktemp.TabIndex" type="System.Int32, mscorlib">
     <value>279</value>
@@ -9794,13 +9794,13 @@
     <value>   Tool(&amp;T)   </value>
   </data>
   <data name="InformationToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 24</value>
+    <value>170, 24</value>
   </data>
   <data name="InformationToolStripMenuItem.Text" xml:space="preserve">
     <value>Information(&amp;I)</value>
   </data>
   <data name="LicenseLToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 24</value>
+    <value>170, 24</value>
   </data>
   <data name="LicenseLToolStripMenuItem.Text" xml:space="preserve">
     <value>License(&amp;L)</value>
