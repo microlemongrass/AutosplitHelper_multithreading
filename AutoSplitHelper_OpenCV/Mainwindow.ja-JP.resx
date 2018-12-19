@@ -132,6 +132,42 @@
   <data name="darkthr.HeaderText" xml:space="preserve">
     <value>色幅</value>
   </data>
+  <data name="piccap.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictempipl.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PictureBoxIpl1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="piczoom.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="picview_capture.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlview_window.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btntemp.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btncap.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnforward.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnback.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numloadno.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtno_comment.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="chkloading.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 22</value>
@@ -139,11 +175,17 @@
   <data name="chkloading.Text" xml:space="preserve">
     <value>ロード用</value>
   </data>
+  <data name="chkloading.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="chklimit.Size" type="System.Drawing.Size, System.Drawing">
     <value>83, 22</value>
   </data>
   <data name="chklimit.Text" xml:space="preserve">
     <value>限定探索</value>
+  </data>
+  <data name="chklimit.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="chkoverwrite.Size" type="System.Drawing.Size, System.Drawing">
     <value>94, 22</value>
@@ -151,11 +193,65 @@
   <data name="chkoverwrite.Text" xml:space="preserve">
     <value>上書き確認</value>
   </data>
+  <data name="chkoverwrite.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="trktemp.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlview_control.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PictureBox1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcur_load10.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcur_load9.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcur_load8.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcur_load7.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcur_load6.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcur_load5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcur_load4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcur_load3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcur_load2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="btncur_showtext.Text" xml:space="preserve">
     <value>表示</value>
   </data>
+  <data name="btncur_showtext.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcur_showtextwindow.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcur_showvideo.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblset_text.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="btncur_showvideo.Text" xml:space="preserve">
     <value>表示</value>
+  </data>
+  <data name="btncur_showvideo.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="Label97.Size" type="System.Drawing.Size, System.Drawing">
     <value>293, 19</value>
@@ -163,8 +259,50 @@
   <data name="Label97.Text" xml:space="preserve">
     <value>現在の設定（各ラベルをクリックで設定画面へ）</value>
   </data>
+  <data name="Label97.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblset_video.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcur_firstsplit.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="Label79.Text" xml:space="preserve">
     <value>最初のラップ                  :</value>
+  </data>
+  <data name="Label79.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcur_addcount.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcur_namedpipe.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcur_rendou.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcur_focus_after.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcur_focus_before.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcur_load1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcur_interval.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcur_loopcount.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcur_split.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcur_load.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="Label76.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 19</value>
@@ -172,11 +310,29 @@
   <data name="Label76.Text" xml:space="preserve">
     <value>監視間隔 : </value>
   </data>
+  <data name="Label76.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcur_reset.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcur_loop.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Panel4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="Label92.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 19</value>
   </data>
   <data name="Label92.Text" xml:space="preserve">
     <value>後 : </value>
+  </data>
+  <data name="Label92.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblset_focus.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="Label94.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 19</value>
@@ -184,11 +340,20 @@
   <data name="Label94.Text" xml:space="preserve">
     <value>前 : </value>
   </data>
+  <data name="Label94.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="Label90.Size" type="System.Drawing.Size, System.Drawing">
     <value>141, 19</value>
   </data>
   <data name="Label90.Text" xml:space="preserve">
     <value>名前付きパイプ　　 　:</value>
+  </data>
+  <data name="Label90.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblset_hotkey.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="Label89.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 19</value>
@@ -196,20 +361,71 @@
   <data name="Label89.Text" xml:space="preserve">
     <value>連動      　　　　     :</value>
   </data>
+  <data name="Label89.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btncur_clear_live.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btncur_clear_table.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btncur_clear_count.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="Label86.Size" type="System.Drawing.Size, System.Drawing">
     <value>178, 19</value>
   </data>
   <data name="Label86.Text" xml:space="preserve">
     <value>LiveSplitにカウント追加 　:</value>
   </data>
+  <data name="Label86.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblset_graph.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="btncur_webcamera.Text" xml:space="preserve">
     <value>接続</value>
+  </data>
+  <data name="btncur_webcamera.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblset_road.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcur_device_res_fps.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblset_device.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcur_device_name.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblset_monitoring.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="grpgeneral.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="btntext_openfolder.Text" xml:space="preserve">
     <value>フォルダを開く</value>
   </data>
+  <data name="btntext_openfolder.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtpass_rtf.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label112.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="btnshow_chart.Text" xml:space="preserve">
     <value>表示</value>
+  </data>
+  <data name="btnshow_chart.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="chkshow_text.Size" type="System.Drawing.Size, System.Drawing">
     <value>114, 23</value>
@@ -217,11 +433,17 @@
   <data name="chkshow_text.Text" xml:space="preserve">
     <value>テキストを表示</value>
   </data>
-  <data name="chkcreate_temppicture.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 23</value>
+  <data name="chkshow_text.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="chkcreate_temppicture.Text" xml:space="preserve">
-    <value>画像の一時フォルダを作成する</value>
+  <data name="Label98.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbllivesplit_state.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnl_other.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="chkvideo_manualstart.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 26</value>
@@ -229,11 +451,23 @@
   <data name="chkvideo_manualstart.Text" xml:space="preserve">
     <value>手動でRTAを開始</value>
   </data>
+  <data name="chkvideo_manualstart.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnselectvideo.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="chkvideo_showwinvideo.Size" type="System.Drawing.Size, System.Drawing">
     <value>243, 26</value>
   </data>
   <data name="chkvideo_showwinvideo.Text" xml:space="preserve">
     <value>ウィンドウキャプチャ用ウィンドウを表示</value>
+  </data>
+  <data name="chkvideo_showwinvideo.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numwin_interval.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="Label95.Size" type="System.Drawing.Size, System.Drawing">
     <value>109, 19</value>
@@ -241,14 +475,50 @@
   <data name="Label95.Text" xml:space="preserve">
     <value>更新間隔 (ms)</value>
   </data>
+  <data name="Label95.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numwin_locy.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numwin_locx.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="Label93.Size" type="System.Drawing.Size, System.Drawing">
     <value>39, 19</value>
   </data>
   <data name="Label93.Text" xml:space="preserve">
     <value>位置</value>
   </data>
+  <data name="Label93.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="GroupBox4.Text" xml:space="preserve">
     <value>ウィンドウキャプチャ用ウィンドウの設定（重め）</value>
+  </data>
+  <data name="Label91.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numvideo_sizey.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numvideo_sizex.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label84.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtvideo_startat.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label83.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label80.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtvideo_pass.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="chkvideo_autoseek.Size" type="System.Drawing.Size, System.Drawing">
     <value>132, 26</value>
@@ -256,14 +526,44 @@
   <data name="chkvideo_autoseek.Text" xml:space="preserve">
     <value>オートシークを行う</value>
   </data>
+  <data name="chkvideo_autoseek.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="chkshowvideo.Size" type="System.Drawing.Size, System.Drawing">
     <value>127, 26</value>
   </data>
   <data name="chkshowvideo.Text" xml:space="preserve">
     <value>ビデオを表示する</value>
   </data>
+  <data name="chkshowvideo.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label78.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnl_video.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="btnclosetable.Text" xml:space="preserve">
     <value>元に戻す</value>
+  </data>
+  <data name="chkload7.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkload1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkload8.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkload10.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkload3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkload6.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="Label29.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 19</value>
@@ -271,11 +571,29 @@
   <data name="Label29.Text" xml:space="preserve">
     <value>一致率</value>
   </data>
+  <data name="Label29.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label87.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numload_rate1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numload_delay1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="Label33.Size" type="System.Drawing.Size, System.Drawing">
     <value>39, 19</value>
   </data>
   <data name="Label33.Text" xml:space="preserve">
     <value>遅延</value>
+  </data>
+  <data name="Label33.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TabPage4.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="Label15.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 19</value>
@@ -283,11 +601,23 @@
   <data name="Label15.Text" xml:space="preserve">
     <value>一致率</value>
   </data>
+  <data name="numload_rate2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numload_delay2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="Label35.Size" type="System.Drawing.Size, System.Drawing">
     <value>39, 19</value>
   </data>
   <data name="Label35.Text" xml:space="preserve">
     <value>遅延</value>
+  </data>
+  <data name="Label35.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TabPage6.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="Label36.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 19</value>
@@ -295,11 +625,26 @@
   <data name="Label36.Text" xml:space="preserve">
     <value>一致率</value>
   </data>
+  <data name="Label36.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numload_rate3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numload_delay3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="Label37.Size" type="System.Drawing.Size, System.Drawing">
     <value>39, 19</value>
   </data>
   <data name="Label37.Text" xml:space="preserve">
     <value>遅延</value>
+  </data>
+  <data name="Label37.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TabPage7.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="Label40.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 19</value>
@@ -307,11 +652,26 @@
   <data name="Label40.Text" xml:space="preserve">
     <value>一致率</value>
   </data>
+  <data name="Label40.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numload_rate4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numload_delay4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="Label43.Size" type="System.Drawing.Size, System.Drawing">
     <value>39, 19</value>
   </data>
   <data name="Label43.Text" xml:space="preserve">
     <value>遅延</value>
+  </data>
+  <data name="Label43.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TabPage8.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="Label44.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 19</value>
@@ -319,11 +679,26 @@
   <data name="Label44.Text" xml:space="preserve">
     <value>一致率</value>
   </data>
+  <data name="Label44.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numload_rate5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numload_delay5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="Label45.Size" type="System.Drawing.Size, System.Drawing">
     <value>39, 19</value>
   </data>
   <data name="Label45.Text" xml:space="preserve">
     <value>遅延</value>
+  </data>
+  <data name="Label45.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TabPage9.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="Label47.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 19</value>
@@ -331,11 +706,26 @@
   <data name="Label47.Text" xml:space="preserve">
     <value>一致率</value>
   </data>
+  <data name="Label47.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numload_rate6.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numload_delay6.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="Label48.Size" type="System.Drawing.Size, System.Drawing">
     <value>39, 19</value>
   </data>
   <data name="Label48.Text" xml:space="preserve">
     <value>遅延</value>
+  </data>
+  <data name="Label48.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TabPage10.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="Label50.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 19</value>
@@ -343,11 +733,26 @@
   <data name="Label50.Text" xml:space="preserve">
     <value>一致率</value>
   </data>
+  <data name="Label50.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numload_rate7.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numload_delay7.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="Label54.Size" type="System.Drawing.Size, System.Drawing">
     <value>39, 19</value>
   </data>
   <data name="Label54.Text" xml:space="preserve">
     <value>遅延</value>
+  </data>
+  <data name="Label54.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TabPage11.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="Label55.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 19</value>
@@ -355,11 +760,26 @@
   <data name="Label55.Text" xml:space="preserve">
     <value>一致率</value>
   </data>
+  <data name="Label55.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numload_rate8.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numload_delay8.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="Label56.Size" type="System.Drawing.Size, System.Drawing">
     <value>39, 19</value>
   </data>
   <data name="Label56.Text" xml:space="preserve">
     <value>遅延</value>
+  </data>
+  <data name="Label56.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TabPage12.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="Label57.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 19</value>
@@ -367,11 +787,26 @@
   <data name="Label57.Text" xml:space="preserve">
     <value>一致率</value>
   </data>
+  <data name="Label57.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numload_rate9.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numload_delay9.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="Label58.Size" type="System.Drawing.Size, System.Drawing">
     <value>39, 19</value>
   </data>
   <data name="Label58.Text" xml:space="preserve">
     <value>遅延</value>
+  </data>
+  <data name="Label58.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TabPage13.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="Label59.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 19</value>
@@ -379,11 +814,44 @@
   <data name="Label59.Text" xml:space="preserve">
     <value>一致率</value>
   </data>
+  <data name="Label59.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numload_rate10.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numload_delay10.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="Label60.Size" type="System.Drawing.Size, System.Drawing">
     <value>39, 19</value>
   </data>
   <data name="Label60.Text" xml:space="preserve">
     <value>遅延</value>
+  </data>
+  <data name="Label60.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TabPage14.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TabControl2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkload5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkload4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkload2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkload9.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnl_loadremover.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="Label119.Size" type="System.Drawing.Size, System.Drawing">
     <value>213, 19</value>
@@ -391,11 +859,47 @@
   <data name="Label119.Text" xml:space="preserve">
     <value>↑ASHのホットキー (シングルキー)</value>
   </data>
+  <data name="Label119.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtreset_ash_key.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtundo_ash_key.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtskip_ash_key.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="Label96.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 19</value>
   </data>
   <data name="Label96.Text" xml:space="preserve">
     <value>キー押下時間 (ms)</value>
+  </data>
+  <data name="Label96.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numpresstime.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtresume_key.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label85.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label28.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkalt_resume.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkctrl_resume.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkshift_resume.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="chkundoskip.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 23</value>
@@ -413,17 +917,32 @@
     <value>名前付きパイプを使用
 　　　　　（LiveSplit）</value>
   </data>
+  <data name="pnl_hotkey.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="listsetcontents.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="Label62.Size" type="System.Drawing.Size, System.Drawing">
     <value>88, 19</value>
   </data>
   <data name="Label62.Text" xml:space="preserve">
     <value>フレームレート</value>
   </data>
+  <data name="Label62.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label81.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="Label61.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 19</value>
   </data>
   <data name="Label61.Text" xml:space="preserve">
     <value>解像度</value>
+  </data>
+  <data name="Label61.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="_moji6.Size" type="System.Drawing.Size, System.Drawing">
     <value>141, 19</value>
@@ -436,6 +955,15 @@
   </data>
   <data name="btnresetup.Text" xml:space="preserve">
     <value>適用</value>
+  </data>
+  <data name="pnl_cvparameter.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblpid_1st.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label82.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="chkactiveapp.Size" type="System.Drawing.Size, System.Drawing">
     <value>278, 23</value>
@@ -452,23 +980,119 @@
   <data name="Label1.Text" xml:space="preserve">
     <value>キー送信までの時間(ms)</value>
   </data>
+  <data name="pnl_focus.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="chkrename_livesplit.Size" type="System.Drawing.Size, System.Drawing">
     <value>300, 26</value>
   </data>
   <data name="chkrename_livesplit.Text" xml:space="preserve">
     <value>LiveSplitのSegment nameにカウント追加</value>
   </data>
+  <data name="chkrename_livesplit.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label88.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="btnreset_livesplit.Text" xml:space="preserve">
     <value>LiveSplitのカウント初期化</value>
+  </data>
+  <data name="btnreset_livesplit.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label67.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numgraph_first.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="btnreset_table.Text" xml:space="preserve">
     <value>表の初期化</value>
   </data>
+  <data name="btnreset_table.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="btnreset_count.Text" xml:space="preserve">
     <value>カウントリセット</value>
   </data>
+  <data name="btnreset_count.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnl_graph.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkmonitor_sizestate.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="btntext_createtext.Text" xml:space="preserve">
     <value>テキストファイル生成</value>
+  </data>
+  <data name="btntext_createtext.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numtextwindow_sizex.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numtextwindow_sizey.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkcreate_temppicture.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 23</value>
+  </data>
+  <data name="chkcreate_temppicture.Text" xml:space="preserve">
+    <value>画像の一時フォルダを作成する</value>
+  </data>
+  <data name="chkcreate_temppicture.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtclickcount.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numskip_ash.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numundo_ash.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numreset_ash.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblkeysforresume.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numsavex.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numsavey.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtsavetempnumber.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numtemp.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txt11.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txt22.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txt12.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txt21.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Panel5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txttemp_picturepass.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label71.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="_moji1.Size" type="System.Drawing.Size, System.Drawing">
     <value>68, 19</value>
@@ -506,6 +1130,9 @@
   <data name="btninsertsleep.Text" xml:space="preserve">
     <value>挿入</value>
   </data>
+  <data name="numloopcount.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="_moji2.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 19</value>
   </data>
@@ -518,14 +1145,26 @@
   <data name="chkcv_loadremover.Text" xml:space="preserve">
     <value>ロード除去    </value>
   </data>
+  <data name="chkcv_loadremover.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="chkcv_monitor.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 23</value>
   </data>
   <data name="chkcv_monitor.Text" xml:space="preserve">
     <value>ラップ</value>
   </data>
+  <data name="chkcv_monitor.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnl_parameter.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="btnstartopencv.Text" xml:space="preserve">
     <value>開始</value>
+  </data>
+  <data name="btndeleteprofile.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="NewProfileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>325, 24</value>
@@ -626,9 +1265,6 @@
   <data name="OpenTextWindowWToolStripMenuItem.Text" xml:space="preserve">
     <value>テキストウィンドウを開く(&amp;W)</value>
   </data>
-  <data name="CreateTextFileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>299, 24</value>
-  </data>
   <data name="OpenTextFolderToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>299, 24</value>
   </data>
@@ -662,6 +1298,264 @@
   <data name="LicenseLToolStripMenuItem.Text" xml:space="preserve">
     <value>ライセンス(&amp;L)</value>
   </data>
+  <data name="MenuStrip1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnclose_general.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PictureBox3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PictureBox4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label77.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbllooptrigger.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numnowloop.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblloopcount.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label73.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label74.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblresetcount.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblattemptcount.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbllapcount.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label68.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label69.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label70.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblreload_graph.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtsetsplitname.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label63.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbloadno.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtcv_ikiti_load10.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtcv_ikiti_load9.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtcv_ikiti_load8.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtcv_ikiti_load7.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtcv_ikiti_load6.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtcv_ikiti_load5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtcv_ikiti_load4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtcv_ikiti_load3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtcv_ikiti_load2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtcv_ikiti_load1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcv_nowmaxval_load1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtdelay_load10.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcv_maxval_load2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtdelay_load9.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcv_nowmaxval_load2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtdelay_load8.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcv_maxval_load3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtdelay_load7.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcv_nowmaxval_load3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtdelay_load6.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcv_maxval_load4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtdelay_load5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcv_nowmaxval_load4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtdelay_load4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcv_maxval_load5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtdelay_load3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcv_nowmaxval_load5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtdelay_load2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcv_maxval_load6.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtdelay_load1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcv_nowmaxval_load6.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcv_maxval_load7.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcv_maxval_load1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcv_nowmaxval_load7.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcv_nowmaxval_load10.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcv_maxval_load8.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcv_maxval_load10.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcv_nowmaxval_load8.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcv_nowmaxval_load9.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcv_maxval_load9.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GroupBox8.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chknow_load10.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chknow_load9.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chknow_load8.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chknow_load7.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chknow_load6.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chknow_load5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chknow_load4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chknow_load3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chknow_load2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chknow_load1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtdelay_load.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chknow_monitor.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chknow_load.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chknow_reset.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtrecord_load.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblrecord_pause_total.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblrecord_pause.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtrecord_load_total.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label30.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label34.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtcv_ikiti_load.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcv_nowmaxval_load.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblcv_maxval_load.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblsleeptime.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblloading.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="txtstate.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 18</value>
   </data>
@@ -680,14 +1574,53 @@
   <data name="btncv_stop.Text" xml:space="preserve">
     <value>停止</value>
   </data>
+  <data name="Label64.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label65.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label66.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="piccv_load.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PictureBox2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PictureBox7.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PictureBox8.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btntosetting01.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtrenameapp.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="chkmulti.Size" type="System.Drawing.Size, System.Drawing">
     <value>149, 23</value>
   </data>
   <data name="chkmulti.Text" xml:space="preserve">
     <value>ロード除去用に使用</value>
   </data>
+  <data name="chkmulti.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtpid_2nd.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="btnrenameapp.Text" xml:space="preserve">
     <value>選択したソフトのタイトルを変更</value>
+  </data>
+  <data name="btnrenameapp.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GroupBox9.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="btninsertzahyou.Text" xml:space="preserve">
     <value>表へ代入</value>
@@ -701,14 +1634,32 @@
   <data name="btn2_getwindowtitle.Text" xml:space="preserve">
     <value>ウィンドウタイトルを再取得</value>
   </data>
+  <data name="rdocalib_aspect_to43.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rdocalib_aspect_to169.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="rdocalib_aspect_none.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 19</value>
   </data>
   <data name="rdocalib_aspect_none.Text" xml:space="preserve">
     <value>変更しない</value>
   </data>
+  <data name="rdocalib_aspect_none.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pgbcalib_1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="btncalib_reset.Text" xml:space="preserve">
     <value>リセット</value>
+  </data>
+  <data name="btncalib_reset.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numcalib_hand_scaleheight.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="lblm1.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 15</value>
@@ -716,23 +1667,89 @@
   <data name="lblm1.Text" xml:space="preserve">
     <value>明るさ</value>
   </data>
+  <data name="lblm1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label101.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numcalib_hand_bright.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="btncalib_adjrgb.Text" xml:space="preserve">
     <value>自動調整</value>
+  </data>
+  <data name="btncalib_adjrgb.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="btncalib_adjbright.Text" xml:space="preserve">
     <value>自動調整</value>
   </data>
+  <data name="btncalib_adjbright.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numcalib_hand_g.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numcalib_hand_r.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numcalib_hand_b.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtcalib_save_bright.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtcalib_save_r.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtcalib_save_g.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtcalib_save_b.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="gbrgb.Text" xml:space="preserve">
     <value>色調整</value>
+  </data>
+  <data name="gbrgb.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="btncalib_insert.Text" xml:space="preserve">
     <value>適用</value>
   </data>
+  <data name="btncalib_insert.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="Label103.Text" xml:space="preserve">
     <value>アスペクト比変更                      </value>
   </data>
+  <data name="Label103.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numcalib_hand_scalewidth.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numcalib_hand_scale.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtcalib_save_scaleheight.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtcalib_save_scalewidth.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtcalib_save_scale.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label105.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="btncalib_adjaspect.Text" xml:space="preserve">
     <value>自動調整</value>
+  </data>
+  <data name="btncalib_adjaspect.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="Label104.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 15</value>
@@ -740,20 +1757,116 @@
   <data name="Label104.Text" xml:space="preserve">
     <value>幅 (%)</value>
   </data>
+  <data name="Label104.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="Label102.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 15</value>
   </data>
   <data name="Label102.Text" xml:space="preserve">
     <value>高さ (%)</value>
   </data>
+  <data name="Label102.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="btncalib_adjscale.Text" xml:space="preserve">
     <value>自動調整</value>
+  </data>
+  <data name="btncalib_adjscale.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="gbsetting.Text" xml:space="preserve">
     <value>設定</value>
   </data>
+  <data name="gbsetting.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="btncalib_resize.Text" xml:space="preserve">
     <value>現在のパラメータで保存</value>
+  </data>
+  <data name="btncalib_resize.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btncalib_cap.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btntosetting03.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numcalib_bright.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numcalib_r.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numcalib_scaleheight.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numcalib_g.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numcalib_b.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numcalib_scalewidth.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numcalib_scale.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtcalib_count.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="listcalib_2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtcalib_numbers.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label106.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label107.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label108.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtcalib_compfilename.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtcalib_1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="listcalib_1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnpreview.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="piccalib_resize.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkcalib_1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkcalib_2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtcalib_hand_name.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtcalib_max.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtcalib_scaleorcolor.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="grpcalib_1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label111.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="Label110.Size" type="System.Drawing.Size, System.Drawing">
     <value>67, 15</value>
@@ -761,17 +1874,77 @@
   <data name="Label110.Text" xml:space="preserve">
     <value>最高一致率</value>
   </data>
+  <data name="Label110.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label109.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtcalib_bestvalue.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="piccalib_bestresult.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="Label75.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 15</value>
   </data>
   <data name="Label75.Text" xml:space="preserve">
     <value>最適な画像</value>
   </data>
+  <data name="Label75.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtcalib_nowvalue.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label99.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="piccalib_handresult.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="Label100.Size" type="System.Drawing.Size, System.Drawing">
     <value>146, 15</value>
   </data>
   <data name="Label100.Text" xml:space="preserve">
     <value>Before (↓に画像をドロップ)</value>
+  </data>
+  <data name="Label100.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="piccalib_comp.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gbcalib_m1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="piccalib_temp.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="piccamera.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TabPage15.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PictureBox11.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PictureBox12.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btntosetting02.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label72.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rtxtupdate.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Panel3.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="Label25.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 20</value>
@@ -800,20 +1973,65 @@
   <data name="LinkLabel3.Text" xml:space="preserve">
     <value>HP (マニュアル有)</value>
   </data>
-  <data name="LinkLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>155, 181</value>
+  <data name="LinkLabel3.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="LinkLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 20</value>
+  <data name="Label31.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="LinkLabel1.Text" xml:space="preserve">
-    <value>Googleフォーム</value>
+  <data name="lblversion.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btntosetting04.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rtxtlicense.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="link_dobon.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label118.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label117.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label116.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="link_directshowlib.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label113.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="link_opencvsharp.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="link_inteltbb.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="Label114.Size" type="System.Drawing.Size, System.Drawing">
     <value>413, 20</value>
   </data>
   <data name="Label114.Text" xml:space="preserve">
     <value>このソフトウェアは以下のライブラリ、情報サイトを利用しています。</value>
+  </data>
+  <data name="Label114.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label115.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Panel2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TabPage16.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnview_close.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

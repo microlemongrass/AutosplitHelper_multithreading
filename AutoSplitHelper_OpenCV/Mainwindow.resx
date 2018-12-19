@@ -17787,13 +17787,13 @@
     <value>11, 13</value>
   </data>
   <data name="Label72.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 20</value>
+    <value>38, 20</value>
   </data>
   <data name="Label72.TabIndex" type="System.Int32, mscorlib">
     <value>223</value>
   </data>
   <data name="Label72.Text" xml:space="preserve">
-    <value>What's New</value>
+    <value>Log</value>
   </data>
   <data name="&gt;&gt;Label72.Name" xml:space="preserve">
     <value>Label72</value>
@@ -17807,28 +17807,28 @@
   <data name="&gt;&gt;Label72.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="rtxtupdate.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="rtxtlog.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 41</value>
   </data>
-  <data name="rtxtupdate.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="rtxtlog.Size" type="System.Drawing.Size, System.Drawing">
     <value>742, 176</value>
   </data>
-  <data name="rtxtupdate.TabIndex" type="System.Int32, mscorlib">
+  <data name="rtxtlog.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="rtxtupdate.Text" xml:space="preserve">
+  <data name="rtxtlog.Text" xml:space="preserve">
     <value />
   </data>
-  <data name="&gt;&gt;rtxtupdate.Name" xml:space="preserve">
-    <value>rtxtupdate</value>
+  <data name="&gt;&gt;rtxtlog.Name" xml:space="preserve">
+    <value>rtxtlog</value>
   </data>
-  <data name="&gt;&gt;rtxtupdate.Type" xml:space="preserve">
+  <data name="&gt;&gt;rtxtlog.Type" xml:space="preserve">
     <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;rtxtupdate.Parent" xml:space="preserve">
+  <data name="&gt;&gt;rtxtlog.Parent" xml:space="preserve">
     <value>Panel3</value>
   </data>
-  <data name="&gt;&gt;rtxtupdate.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;rtxtlog.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="Panel3.Location" type="System.Drawing.Point, System.Drawing">
@@ -17984,6 +17984,75 @@
   <data name="&gt;&gt;Label17.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="lblnewestver.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblnewestver.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 12pt</value>
+  </data>
+  <data name="lblnewestver.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblnewestver.Location" type="System.Drawing.Point, System.Drawing">
+    <value>495, 14</value>
+  </data>
+  <data name="lblnewestver.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 20</value>
+  </data>
+  <data name="lblnewestver.TabIndex" type="System.Int32, mscorlib">
+    <value>290</value>
+  </data>
+  <data name="lblnewestver.Text" xml:space="preserve">
+    <value>Newest:</value>
+  </data>
+  <data name="&gt;&gt;lblnewestver.Name" xml:space="preserve">
+    <value>lblnewestver</value>
+  </data>
+  <data name="&gt;&gt;lblnewestver.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblnewestver.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;lblnewestver.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btncheckupdate.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btncheckupdate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 8pt</value>
+  </data>
+  <data name="btncheckupdate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btncheckupdate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>647, 14</value>
+  </data>
+  <data name="btncheckupdate.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 1, 0, 0</value>
+  </data>
+  <data name="btncheckupdate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 26</value>
+  </data>
+  <data name="btncheckupdate.TabIndex" type="System.Int32, mscorlib">
+    <value>289</value>
+  </data>
+  <data name="btncheckupdate.Text" xml:space="preserve">
+    <value>Check version</value>
+  </data>
+  <data name="&gt;&gt;btncheckupdate.Name" xml:space="preserve">
+    <value>btncheckupdate</value>
+  </data>
+  <data name="&gt;&gt;btncheckupdate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btncheckupdate.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;btncheckupdate.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="LinkLabel3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -17994,16 +18063,16 @@
     <value>NoControl</value>
   </data>
   <data name="LinkLabel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>285, 181</value>
+    <value>146, 181</value>
   </data>
   <data name="LinkLabel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>249, 20</value>
+    <value>256, 20</value>
   </data>
   <data name="LinkLabel3.TabIndex" type="System.Int32, mscorlib">
     <value>113</value>
   </data>
   <data name="LinkLabel3.Text" xml:space="preserve">
-    <value>Homepage (There are manual)</value>
+    <value>Homepage (Manual is available)</value>
   </data>
   <data name="&gt;&gt;LinkLabel3.Name" xml:space="preserve">
     <value>LinkLabel3</value>
@@ -18015,7 +18084,7 @@
     <value>Panel1</value>
   </data>
   <data name="&gt;&gt;LinkLabel3.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="Label31.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -18048,7 +18117,7 @@
     <value>Panel1</value>
   </data>
   <data name="&gt;&gt;Label31.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="LinkLabel2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -18081,40 +18150,7 @@
     <value>Panel1</value>
   </data>
   <data name="&gt;&gt;LinkLabel2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="LinkLabel1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="LinkLabel1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 12pt</value>
-  </data>
-  <data name="LinkLabel1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="LinkLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>138, 181</value>
-  </data>
-  <data name="LinkLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 20</value>
-  </data>
-  <data name="LinkLabel1.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="LinkLabel1.Text" xml:space="preserve">
-    <value>Google form</value>
-  </data>
-  <data name="&gt;&gt;LinkLabel1.Name" xml:space="preserve">
-    <value>LinkLabel1</value>
-  </data>
-  <data name="&gt;&gt;LinkLabel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LinkLabel1.Parent" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;LinkLabel1.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="Label14.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -18147,7 +18183,7 @@
     <value>Panel1</value>
   </data>
   <data name="&gt;&gt;Label14.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="lblversion.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -18180,7 +18216,7 @@
     <value>Panel1</value>
   </data>
   <data name="&gt;&gt;lblversion.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="Panel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 62</value>

@@ -162,6 +162,7 @@ Public Class Mainwindow
 
         Catch ex As Exception
             Console.Write("temp/temp_sortファイル削除できず")
+            rtxtlog.AppendText(Now & " " & "temp/temp_sortファイルを削除できませんでした。" & vbCrLf & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
 
         End Try
 
@@ -353,6 +354,7 @@ Public Class Mainwindow
             Catch ex As Exception
                 MessageBox.Show(My.Resources.Message.msg1, messagebox_name)
                 '"表の読み込みに失敗しました。savefileフォルダに[table1.csv(カンマ区切り)]を作成してください。"
+                rtxtlog.AppendText(Now & " " & My.Resources.Message.msg1 & vbCrLf & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
             End Try
 
 
@@ -395,6 +397,7 @@ Public Class Mainwindow
             Catch ex As Exception
                 MessageBox.Show(My.Resources.Message.msg2, messagebox_name)
                 '"表の読み込みに失敗しました。savefileフォルダに[table2.csv(カンマ区切り)]を作成してください。"
+                rtxtlog.AppendText(Now & " " & My.Resources.Message.msg2 & vbCrLf & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
             End Try
 
         Next
@@ -410,6 +413,7 @@ Public Class Mainwindow
 
         Catch ex As Exception
             MessageBox.Show(My.Resources.Message.msg3, messagebox_name) '"読み込みに失敗しました。設定が初期化されます。"
+            rtxtlog.AppendText(Now & " " & My.Resources.Message.msg3 & vbCrLf & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
 
             cmbtimer.SelectedIndex = 0
             cmbsomeapp.SelectedIndex = 0
@@ -451,49 +455,9 @@ Public Class Mainwindow
         btnstartopencv.Enabled = False
         btnconnect_camera.Text = My.Resources.Message.msgc01
 
-
-        '■最新情報を受け取る
-        Dim wc1 As WebClient = New WebClient()
-        Dim st1 As Stream = wc1.OpenRead("http://bit.ly/ash_update_jp")
-
-        Dim enc1 As Encoding = Encoding.GetEncoding("Shift_JIS")
-        Dim sr1 As StreamReader = New StreamReader(st1, enc1)
-        Dim html As String = sr1.ReadToEnd()
-        sr1.Close()
-        st1.Close()
+        rtxtlog.AppendText(Now & " " & "Launched." & vbCrLf)
 
 
-        '■ページの内容を取得♥
-        Try
-
-            rtxtupdate.Clear()
-
-            Dim s1 As String = html
-            Dim lefturl As String, righturl As String
-            Dim filename As String
-
-            filename = html
-            lefturl = InStr(filename, "AutosplitterUpdatestart<br>") + 22  'Mid(filename, InStr(filename, "<url>") + 5)  '拡張子を返します
-
-            Dim s2 As String = "" & filename.Substring(lefturl) ', righturl - lefturl - 1) & ""  '4文字目から3文字を取得する
-
-            If s2.Contains("AutosplitterUpdateend") = True Then
-
-                righturl = InStr(filename, "AutosplitterUpdateend")
-                s2 = filename.Substring(lefturl, righturl - lefturl - 1) & ""  '4文字目から3文字を取得する
-
-
-            End If
-
-            Dim s3 As String = s2.Replace("<br>", "")
-
-            rtxtupdate.Text = s3
-
-        Catch ex As Exception
-
-            Console.WriteLine("インターネットに接続されていないようです。")
-
-        End Try
 
     End Sub
 
@@ -1748,6 +1712,7 @@ Public Class Mainwindow
                     End If
 
                 Catch ex As Exception
+                    rtxtlog.AppendText(Now & " " & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
 
                 End Try
 
@@ -1863,6 +1828,7 @@ Public Class Mainwindow
 
 
                 Catch ex As Exception
+                    rtxtlog.AppendText(Now & " " & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
 
                 End Try
 
@@ -1962,6 +1928,8 @@ Public Class Mainwindow
 
                 Catch ex As Exception
                     MessageBox.Show(ex.ToString, messagebox_name)
+                    rtxtlog.AppendText(Now & " " & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
+
                 End Try
 
 
@@ -2291,7 +2259,7 @@ Public Class Mainwindow
 
                         Catch ex As Exception
                             MessageBox.Show("error", messagebox_name)
-
+                            rtxtlog.AppendText(Now & " " & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
 
                         End Try
 
@@ -2954,6 +2922,7 @@ Public Class Mainwindow
             cvpreview.Stop()
 
             MessageBox.Show(My.Resources.Message.msg43, messagebox_name) '接続エラー。本体を再起動して下さい。
+            rtxtlog.AppendText(Now & " " & My.Resources.Message.msg43 & vbCrLf & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
 
         End Try
 
@@ -3132,13 +3101,14 @@ Public Class Mainwindow
             Catch ex As Exception
 
                 txtclickcount.Text = 0
-            Cursor.Clip = Rectangle.Empty
-            Me.Cursor = Cursors.Default
-            My.Forms.skeleton.Close()
-            piccap.Visible = False
-            cvpreview.Start()
+                Cursor.Clip = Rectangle.Empty
+                Me.Cursor = Cursors.Default
+                My.Forms.skeleton.Close()
+                piccap.Visible = False
+                cvpreview.Start()
 
-            MessageBox.Show(My.Resources.Message.msgb4, messagebox_name) '"無効な範囲です。")
+                MessageBox.Show(My.Resources.Message.msgb4, messagebox_name) '"無効な範囲です。")
+                rtxtlog.AppendText(Now & " " & My.Resources.Message.msgb4 & vbCrLf & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
 
             End Try
 
@@ -3416,6 +3386,8 @@ Public Class Mainwindow
         Catch ex As Exception
 
             MessageBox.Show(My.Resources.Message.msgb7, messagebox_name) '"行選択状態でキャプチャして下さい。"
+            rtxtlog.AppendText(Now & " " & My.Resources.Message.msgb7 & vbCrLf & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
+
             Exit Sub
 
 
@@ -5228,6 +5200,7 @@ Public Class Mainwindow
 
 
         Catch ex As Exception
+            rtxtlog.AppendText(Now & " " & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
 
         End Try
 
@@ -8912,6 +8885,7 @@ Public Class Mainwindow
 
         Catch ex As Exception
             MessageBox.Show(My.Resources.Message.msg46, messagebox_name) '仮想カメラの接続エラー。仮想カメラの再接続や本体の再起動を試してみて下さい。
+            rtxtlog.AppendText(Now & " " & My.Resources.Message.msg46 & vbCrLf & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
 
             btncv_stop.PerformClick()
 
@@ -9144,6 +9118,8 @@ Public Class Mainwindow
         Catch ex As Exception
             show_finish()
             MessageBox.Show(ex.Message, messagebox_name)
+            rtxtlog.AppendText(Now & " " & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
+
         End Try
 
     End Sub
@@ -10921,6 +10897,8 @@ Public Class Mainwindow
 
                         Catch ex As Exception
                             MessageBox.Show(ex.ToString, messagebox_name)
+                            rtxtlog.AppendText(Now & " " & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
+
                         End Try
 
                     End If
@@ -11185,6 +11163,7 @@ Public Class Mainwindow
                         Catch ex As Exception
 
                             MessageBox.Show(ex.ToString, messagebox_name)
+                            rtxtlog.AppendText(Now & " " & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
 
                         End Try
 
@@ -11434,6 +11413,8 @@ Public Class Mainwindow
 
                         Catch ex As Exception
                             MessageBox.Show(ex.ToString, messagebox_name)
+                            rtxtlog.AppendText(Now & " " & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
+
                         End Try
 
 
@@ -11908,6 +11889,8 @@ Public Class Mainwindow
 
                 MsgBox(My.Resources.Message.msg16, MsgBoxStyle.Exclamation)
                 '"Settingタブにある表の空欄を埋めてください。もしくは、設定ファイルが開かれた状態です。変更は保存されません。"
+                rtxtlog.AppendText(Now & " " & My.Resources.Message.msg16 & vbCrLf & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
+
                 DGtable.AllowUserToAddRows = True
 
                 ' Me.Close = False
@@ -11984,7 +11967,10 @@ Public Class Mainwindow
 
                 MsgBox(My.Resources.Message.msg16, MsgBoxStyle.Exclamation)
                 '"Window Positionタブにある表の空欄を埋めてください。もしくは、設定ファイルが開かれた状態です。変更は保存されません。"
+                rtxtlog.AppendText(Now & " " & My.Resources.Message.msg16 & vbCrLf & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
+
                 dgv2_template.AllowUserToAddRows = True
+
             End Try
 
         Next
@@ -12056,6 +12042,8 @@ Public Class Mainwindow
             Catch ex As Exception
 
                 MsgBox(My.Resources.Message.msg25, MsgBoxStyle.Exclamation) '"行内の空欄を埋めてください。"
+                rtxtlog.AppendText(Now & " " & My.Resources.Message.msg25 & vbCrLf & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
+
                 DGtable.AllowUserToAddRows = True
             End Try
 
@@ -12140,6 +12128,16 @@ Public Class Mainwindow
             MessageBox.Show(My.Resources.Message.msg14, messagebox_name)
             '"Settingタブの表に空欄、もしくはコメント列ではない箇所に数字以外が存在するようです。適切に入力後終了してください。また、最終行の空欄を削除してみてください"
         Else
+            '■ログの内容を書き込む
+            'Shift JISで書き込む
+            '書き込むファイルが既に存在している場合は、ファイルの末尾に追加する
+            Dim sw As New System.IO.StreamWriter("./log.txt", True, System.Text.Encoding.GetEncoding("UTF-8"))
+            'ログの内容を書き込む
+            sw.Write(rtxtlog.Text)
+            '閉じる
+            sw.Close()
+
+
             Me.Close()
         End If
 
@@ -12303,6 +12301,8 @@ Public Class Mainwindow
             Catch ex As Exception
                 MessageBox.Show(My.Resources.Message.msg26 & vbCrLf & My.Resources.Message.msg27, messagebox_name)
                 '"csvファイルor画像フォルダの消去に失敗しました。" "※1度でも監視を行った場合、再起動の後プロファイルを削除して下さい。"
+                rtxtlog.AppendText(Now & " " & My.Resources.Message.msg26 & vbCrLf & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
+
             End Try
 
         End If
@@ -12338,6 +12338,8 @@ Public Class Mainwindow
         Catch ex As Exception
             MessageBox.Show(My.Resources.Message.msg26 & vbCrLf & My.Resources.Message.msg27, messagebox_name)
             '"csvファイルor画像フォルダの消去に失敗しました。" "※1度でも監視を行った場合、再起動の後プロファイルを削除して下さい。"
+            rtxtlog.AppendText(Now & " " & My.Resources.Message.msg26 & vbCrLf & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
+
         End Try
 
 
@@ -13240,6 +13242,8 @@ Public Class Mainwindow
             timlockwindow.Enabled = False
             chklockwindow.Checked = False
             MessageBox.Show(My.Resources.Message.msg53, messagebox_name) 'ハンドルの取得がされていません
+            rtxtlog.AppendText(Now & " " & My.Resources.Message.msg53 & vbCrLf & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
+
         End Try
 
     End Sub
@@ -13247,16 +13251,6 @@ Public Class Mainwindow
     '======================================================================================================================
 
     '■ハイパーリンク。
-    Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object,
-        ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked _
-
-        'リンク先に移動したことにする
-        LinkLabel1.LinkVisited = True
-        'ブラウザで開く
-        System.Diagnostics.Process.Start("https://goo.gl/forms/3PfvTkckNYU4dBX33")
-
-    End Sub
-
     Private Sub LinkLabel2_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
         'リンク先に移動したことにする
         LinkLabel2.LinkVisited = True
@@ -13425,6 +13419,7 @@ Public Class Mainwindow
                 Catch ex As Exception
 
                     MessageBox.Show(My.Resources.Message.msg51, messagebox_name)
+                    rtxtlog.AppendText(Now & " " & My.Resources.Message.msg51 & vbCrLf & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
 
                 End Try
 
@@ -13796,6 +13791,7 @@ Public Class Mainwindow
 
         Catch ex As Exception
             MessageBox.Show(ex.Message, messagebox_name)
+            rtxtlog.AppendText(Now & " " & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
 
         End Try
 
@@ -13972,6 +13968,8 @@ CInt(chkmonitor_sizestate.Checked)
     End Sub
 
 
+
+
     '■Numericを全選択状態にする
     Private Sub numloopcount_Enter(sender As Object, e As EventArgs) Handles numloopcount.Enter
         numloopcount.Select(0, numloopcount.Text.Length)
@@ -14116,6 +14114,63 @@ CInt(chkmonitor_sizestate.Checked)
 
 
     End Sub
+
+
+    Private Sub btncheckupdate_Click(sender As Object, e As EventArgs) Handles btncheckupdate.Click
+
+        '■最新情報を受け取る
+        Dim wc1 As WebClient = New WebClient()
+        Dim st1 As Stream = wc1.OpenRead("https://mus.frailleaves.com/ash_update.html")
+
+        Dim enc1 As Encoding = Encoding.GetEncoding("Shift_JIS")
+        Dim sr1 As StreamReader = New StreamReader(st1, enc1)
+        Dim html As String = sr1.ReadToEnd()
+        sr1.Close()
+        st1.Close()
+
+
+        '■ページの内容を取得♥
+        Try
+
+            Dim s1 As String = html
+            Dim lefturl As String, righturl As String
+            Dim filename As String
+
+            filename = html
+            lefturl = InStr(filename, "AutosplitterUpdatestart<br>") + 22  'Mid(filename, InStr(filename, "<url>") + 5)  '拡張子を返します
+
+            Dim s2 As String = "" & filename.Substring(lefturl) ', righturl - lefturl - 1) & ""  '4文字目から3文字を取得する
+
+            If s2.Contains("AutosplitterUpdateend") = True Then
+
+                righturl = InStr(filename, "AutosplitterUpdateend")
+                s2 = filename.Substring(lefturl, righturl - lefturl - 1) & ""  '4文字目から3文字を取得する
+
+
+            End If
+
+            Dim s3 As String = s2.Replace("<br>", "")
+
+            lblnewestver.Text = "Newest: " & s3
+
+        Catch ex As Exception
+
+            Console.WriteLine("インターネットに接続されていないようです。")
+            rtxtlog.AppendText(Now & " " & "インターネットに接続されていないようです。" & vbCrLf & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
+
+        End Try
+
+    End Sub
+
+
+    Private DGtable_changeTF = 0
+
+    Private Sub DGtable_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles DGtable.CellValueChanged
+        DGtable_changeTF = 1
+
+    End Sub
+
+
 
 End Class
 

@@ -124,7 +124,6 @@ Partial Class Mainwindow
         Me.Label112 = New System.Windows.Forms.Label()
         Me.btnshow_chart = New System.Windows.Forms.Button()
         Me.chkshow_text = New System.Windows.Forms.CheckBox()
-        Me.chkcreate_temppicture = New System.Windows.Forms.CheckBox()
         Me.txtpass_picturefolder = New System.Windows.Forms.TextBox()
         Me.txtpass_csv = New System.Windows.Forms.TextBox()
         Me.Label98 = New System.Windows.Forms.Label()
@@ -298,6 +297,7 @@ Partial Class Mainwindow
         Me.numtextwindow_sizex = New System.Windows.Forms.NumericUpDown()
         Me.lblcheckopening = New System.Windows.Forms.Label()
         Me.numtextwindow_sizey = New System.Windows.Forms.NumericUpDown()
+        Me.chkcreate_temppicture = New System.Windows.Forms.CheckBox()
         Me.numprofile = New System.Windows.Forms.NumericUpDown()
         Me.Label38 = New System.Windows.Forms.Label()
         Me.txtclickcount = New System.Windows.Forms.TextBox()
@@ -642,7 +642,7 @@ Partial Class Mainwindow
         Me.btntosetting02 = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label72 = New System.Windows.Forms.Label()
-        Me.rtxtupdate = New System.Windows.Forms.RichTextBox()
+        Me.rtxtlog = New System.Windows.Forms.RichTextBox()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
@@ -651,7 +651,6 @@ Partial Class Mainwindow
         Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.lblversion = New System.Windows.Forms.Label()
         Me.TabPage16 = New System.Windows.Forms.TabPage()
@@ -686,6 +685,8 @@ Partial Class Mainwindow
         Me.timcamera = New System.Windows.Forms.Timer(Me.components)
         Me.timcalib = New System.Windows.Forms.Timer(Me.components)
         Me.timash_hotkey_sleep = New System.Windows.Forms.Timer(Me.components)
+        Me.btncheckupdate = New System.Windows.Forms.Button()
+        Me.lblnewestver = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.DGtable, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1628,16 +1629,6 @@ Partial Class Mainwindow
         Me.chkshow_text.ForeColor = System.Drawing.SystemColors.Control
         Me.chkshow_text.Name = "chkshow_text"
         Me.chkshow_text.UseVisualStyleBackColor = False
-        '
-        'chkcreate_temppicture
-        '
-        resources.ApplyResources(Me.chkcreate_temppicture, "chkcreate_temppicture")
-        Me.chkcreate_temppicture.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.chkcreate_temppicture.Checked = Global.AutoSplitHelper_OpenCV.My.MySettings.Default.chkcreate_temppicture
-        Me.chkcreate_temppicture.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Global.AutoSplitHelper_OpenCV.My.MySettings.Default, "chkcreate_temppicture", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
-        Me.chkcreate_temppicture.ForeColor = System.Drawing.SystemColors.Control
-        Me.chkcreate_temppicture.Name = "chkcreate_temppicture"
-        Me.chkcreate_temppicture.UseVisualStyleBackColor = False
         '
         'txtpass_picturefolder
         '
@@ -3186,6 +3177,16 @@ Partial Class Mainwindow
         Me.numtextwindow_sizey.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.numtextwindow_sizey.Name = "numtextwindow_sizey"
         Me.numtextwindow_sizey.Value = New Decimal(New Integer() {100, 0, 0, 0})
+        '
+        'chkcreate_temppicture
+        '
+        resources.ApplyResources(Me.chkcreate_temppicture, "chkcreate_temppicture")
+        Me.chkcreate_temppicture.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.chkcreate_temppicture.Checked = Global.AutoSplitHelper_OpenCV.My.MySettings.Default.chkcreate_temppicture
+        Me.chkcreate_temppicture.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Global.AutoSplitHelper_OpenCV.My.MySettings.Default, "chkcreate_temppicture", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.chkcreate_temppicture.ForeColor = System.Drawing.SystemColors.Control
+        Me.chkcreate_temppicture.Name = "chkcreate_temppicture"
+        Me.chkcreate_temppicture.UseVisualStyleBackColor = False
         '
         'numprofile
         '
@@ -5996,7 +5997,7 @@ Partial Class Mainwindow
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Panel3.Controls.Add(Me.Label72)
-        Me.Panel3.Controls.Add(Me.rtxtupdate)
+        Me.Panel3.Controls.Add(Me.rtxtlog)
         resources.ApplyResources(Me.Panel3, "Panel3")
         Me.Panel3.Name = "Panel3"
         '
@@ -6007,12 +6008,12 @@ Partial Class Mainwindow
         Me.Label72.ForeColor = System.Drawing.SystemColors.Control
         Me.Label72.Name = "Label72"
         '
-        'rtxtupdate
+        'rtxtlog
         '
-        Me.rtxtupdate.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.rtxtupdate.ForeColor = System.Drawing.Color.Snow
-        resources.ApplyResources(Me.rtxtupdate, "rtxtupdate")
-        Me.rtxtupdate.Name = "rtxtupdate"
+        Me.rtxtlog.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.rtxtlog.ForeColor = System.Drawing.Color.Snow
+        resources.ApplyResources(Me.rtxtlog, "rtxtlog")
+        Me.rtxtlog.Name = "rtxtlog"
         '
         'Label25
         '
@@ -6045,10 +6046,11 @@ Partial Class Mainwindow
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.lblnewestver)
+        Me.Panel1.Controls.Add(Me.btncheckupdate)
         Me.Panel1.Controls.Add(Me.LinkLabel3)
         Me.Panel1.Controls.Add(Me.Label31)
         Me.Panel1.Controls.Add(Me.LinkLabel2)
-        Me.Panel1.Controls.Add(Me.LinkLabel1)
         Me.Panel1.Controls.Add(Me.Label14)
         Me.Panel1.Controls.Add(Me.lblversion)
         resources.ApplyResources(Me.Panel1, "Panel1")
@@ -6078,15 +6080,6 @@ Partial Class Mainwindow
         Me.LinkLabel2.Name = "LinkLabel2"
         Me.LinkLabel2.TabStop = True
         Me.LinkLabel2.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        '
-        'LinkLabel1
-        '
-        resources.ApplyResources(Me.LinkLabel1, "LinkLabel1")
-        Me.LinkLabel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.LinkLabel1.LinkColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         '
         'Label14
         '
@@ -6283,9 +6276,6 @@ Partial Class Mainwindow
         'timlockwindow
         '
         '
-        'timchecktimer
-        '
-        '
         'timcamera
         '
         Me.timcamera.Interval = 33
@@ -6296,6 +6286,21 @@ Partial Class Mainwindow
         'timash_hotkey_sleep
         '
         Me.timash_hotkey_sleep.Interval = 300
+        '
+        'btncheckupdate
+        '
+        Me.btncheckupdate.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
+        resources.ApplyResources(Me.btncheckupdate, "btncheckupdate")
+        Me.btncheckupdate.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btncheckupdate.Name = "btncheckupdate"
+        Me.btncheckupdate.UseVisualStyleBackColor = False
+        '
+        'lblnewestver
+        '
+        resources.ApplyResources(Me.lblnewestver, "lblnewestver")
+        Me.lblnewestver.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.lblnewestver.ForeColor = System.Drawing.SystemColors.Control
+        Me.lblnewestver.Name = "lblnewestver"
         '
         'Mainwindow
         '
@@ -6524,7 +6529,6 @@ Partial Class Mainwindow
     Friend WithEvents btngettimer As Button
     Friend WithEvents btndelete_timer As Button
     Friend WithEvents Label18 As Label
-    Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents lbltitlebar As Label
     Friend WithEvents btnclosewindow As Button
     Friend WithEvents chkalt_reset As CheckBox
@@ -6994,7 +6998,7 @@ Partial Class Mainwindow
     Friend WithEvents btncur_showvideo As Button
     Friend WithEvents chkvideo_manualstart As CheckBox
     Friend WithEvents Label72 As Label
-    Friend WithEvents rtxtupdate As RichTextBox
+    Friend WithEvents rtxtlog As RichTextBox
     Friend WithEvents pnl_other As Panel
     Friend WithEvents Label98 As Label
     Friend WithEvents TabPage15 As TabPage
@@ -7160,4 +7164,6 @@ Partial Class Mainwindow
     Friend WithEvents DeleteAddTemplateImageToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SortTemplateImageToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator8 As ToolStripSeparator
+    Friend WithEvents lblnewestver As Label
+    Friend WithEvents btncheckupdate As Button
 End Class
