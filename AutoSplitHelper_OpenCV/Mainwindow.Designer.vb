@@ -648,6 +648,7 @@ Partial Class Mainwindow
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.lblnewestver = New System.Windows.Forms.Label()
         Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
@@ -685,151 +686,149 @@ Partial Class Mainwindow
         Me.timcamera = New System.Windows.Forms.Timer(Me.components)
         Me.timcalib = New System.Windows.Forms.Timer(Me.components)
         Me.timash_hotkey_sleep = New System.Windows.Forms.Timer(Me.components)
-        Me.btncheckupdate = New System.Windows.Forms.Button()
-        Me.lblnewestver = New System.Windows.Forms.Label()
-        Me.TabControl1.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
-        CType(Me.DGtable, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnlview_window.SuspendLayout()
-        CType(Me.piccap, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pictempipl, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBoxIpl1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.piczoom, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picview_capture, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnlview_control.SuspendLayout()
-        CType(Me.numloadno, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.trktemp, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.grpgeneral.SuspendLayout()
-        Me.Panel4.SuspendLayout()
-        Me.pnl_other.SuspendLayout()
-        Me.pnl_video.SuspendLayout()
-        Me.GroupBox4.SuspendLayout()
-        CType(Me.numwin_interval, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numwin_locy, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numwin_locx, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numvideo_sizey, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numvideo_sizex, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnl_loadremover.SuspendLayout()
-        Me.TabControl2.SuspendLayout()
-        Me.TabPage4.SuspendLayout()
-        CType(Me.numload_rate1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numload_delay1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage6.SuspendLayout()
-        CType(Me.numload_rate2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numload_delay2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage7.SuspendLayout()
-        CType(Me.numload_rate3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numload_delay3, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage8.SuspendLayout()
-        CType(Me.numload_rate4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numload_delay4, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage9.SuspendLayout()
-        CType(Me.numload_rate5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numload_delay5, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage10.SuspendLayout()
-        CType(Me.numload_rate6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numload_delay6, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage11.SuspendLayout()
-        CType(Me.numload_rate7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numload_delay7, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage12.SuspendLayout()
-        CType(Me.numload_rate8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numload_delay8, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage13.SuspendLayout()
-        CType(Me.numload_rate9, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numload_delay9, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage14.SuspendLayout()
-        CType(Me.numload_rate10, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numload_delay10, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnl_hotkey.SuspendLayout()
-        CType(Me.numpresstime, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnl_cvparameter.SuspendLayout()
-        CType(Me.numcv_framerate, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numcv_device, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnl_focus.SuspendLayout()
-        CType(Me.numsendsleep, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnl_graph.SuspendLayout()
-        CType(Me.numgraph_first, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox2.SuspendLayout()
-        CType(Me.numtextwindow_sizex, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numtextwindow_sizey, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numprofile, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox3.SuspendLayout()
-        CType(Me.numskip_ash, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numundo_ash, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numreset_ash, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numcv_sizex, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numcv_sizey, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numsavex, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numsavey, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel5.SuspendLayout()
-        CType(Me.numtemp, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnl_parameter.SuspendLayout()
-        CType(Me.numanten, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numstop, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numloopcount, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numcv_interval, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numpercent, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.MenuStrip1.SuspendLayout()
-        CType(Me.picunder, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage5.SuspendLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numnowloop, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox8.SuspendLayout()
-        CType(Me.piccv_load, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picipl_foranten, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.piccv_reset, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.piccv_picture, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picipl_cap, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage2.SuspendLayout()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox9.SuspendLayout()
-        Me.GroupBox7.SuspendLayout()
-        CType(Me.dgv2_template, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.num2_rbx, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.num2_rby, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.num2_lty, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.num2_ltx, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage15.SuspendLayout()
-        Me.gbsetting.SuspendLayout()
-        CType(Me.numcalib_hand_scaleheight, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.gbrgb.SuspendLayout()
-        CType(Me.numcalib_hand_bright, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numcalib_hand_g, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numcalib_hand_r, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numcalib_hand_b, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numcalib_hand_scalewidth, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numcalib_hand_scale, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numcalib_bright, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numcalib_r, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numcalib_scaleheight, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numcalib_g, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numcalib_b, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numcalib_scalewidth, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numcalib_scale, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.grpcalib_1.SuspendLayout()
-        CType(Me.piccalib_resize, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.gbcalib_m1.SuspendLayout()
-        CType(Me.piccalib_bestresult, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.piccalib_handresult, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.piccalib_comp, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.piccalib_temp, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.piccamera, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage3.SuspendLayout()
-        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel3.SuspendLayout()
-        Me.Panel1.SuspendLayout()
-        Me.TabPage16.SuspendLayout()
-        Me.Panel2.SuspendLayout()
-        Me.SuspendLayout()
+        Me.TabControl1.SuspendLayout
+        Me.TabPage1.SuspendLayout
+        CType(Me.DGtable, System.ComponentModel.ISupportInitialize).BeginInit
+        Me.pnlview_window.SuspendLayout
+        CType(Me.piccap, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.pictempipl, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBoxIpl1, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.piczoom, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.picview_capture, System.ComponentModel.ISupportInitialize).BeginInit
+        Me.pnlview_control.SuspendLayout
+        CType(Me.numloadno, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.trktemp, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit
+        Me.grpgeneral.SuspendLayout
+        Me.Panel4.SuspendLayout
+        Me.pnl_other.SuspendLayout
+        Me.pnl_video.SuspendLayout
+        Me.GroupBox4.SuspendLayout
+        CType(Me.numwin_interval, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numwin_locy, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numwin_locx, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numvideo_sizey, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numvideo_sizex, System.ComponentModel.ISupportInitialize).BeginInit
+        Me.pnl_loadremover.SuspendLayout
+        Me.TabControl2.SuspendLayout
+        Me.TabPage4.SuspendLayout
+        CType(Me.numload_rate1, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numload_delay1, System.ComponentModel.ISupportInitialize).BeginInit
+        Me.TabPage6.SuspendLayout
+        CType(Me.numload_rate2, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numload_delay2, System.ComponentModel.ISupportInitialize).BeginInit
+        Me.TabPage7.SuspendLayout
+        CType(Me.numload_rate3, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numload_delay3, System.ComponentModel.ISupportInitialize).BeginInit
+        Me.TabPage8.SuspendLayout
+        CType(Me.numload_rate4, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numload_delay4, System.ComponentModel.ISupportInitialize).BeginInit
+        Me.TabPage9.SuspendLayout
+        CType(Me.numload_rate5, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numload_delay5, System.ComponentModel.ISupportInitialize).BeginInit
+        Me.TabPage10.SuspendLayout
+        CType(Me.numload_rate6, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numload_delay6, System.ComponentModel.ISupportInitialize).BeginInit
+        Me.TabPage11.SuspendLayout
+        CType(Me.numload_rate7, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numload_delay7, System.ComponentModel.ISupportInitialize).BeginInit
+        Me.TabPage12.SuspendLayout
+        CType(Me.numload_rate8, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numload_delay8, System.ComponentModel.ISupportInitialize).BeginInit
+        Me.TabPage13.SuspendLayout
+        CType(Me.numload_rate9, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numload_delay9, System.ComponentModel.ISupportInitialize).BeginInit
+        Me.TabPage14.SuspendLayout
+        CType(Me.numload_rate10, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numload_delay10, System.ComponentModel.ISupportInitialize).BeginInit
+        Me.pnl_hotkey.SuspendLayout
+        CType(Me.numpresstime, System.ComponentModel.ISupportInitialize).BeginInit
+        Me.pnl_cvparameter.SuspendLayout
+        CType(Me.numcv_framerate, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numcv_device, System.ComponentModel.ISupportInitialize).BeginInit
+        Me.pnl_focus.SuspendLayout
+        CType(Me.numsendsleep, System.ComponentModel.ISupportInitialize).BeginInit
+        Me.pnl_graph.SuspendLayout
+        CType(Me.numgraph_first, System.ComponentModel.ISupportInitialize).BeginInit
+        Me.GroupBox2.SuspendLayout
+        CType(Me.numtextwindow_sizex, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numtextwindow_sizey, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numprofile, System.ComponentModel.ISupportInitialize).BeginInit
+        Me.GroupBox3.SuspendLayout
+        CType(Me.numskip_ash, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numundo_ash, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numreset_ash, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numcv_sizex, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numcv_sizey, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numsavex, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numsavey, System.ComponentModel.ISupportInitialize).BeginInit
+        Me.Panel5.SuspendLayout
+        CType(Me.numtemp, System.ComponentModel.ISupportInitialize).BeginInit
+        Me.pnl_parameter.SuspendLayout
+        CType(Me.numanten, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numstop, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numloopcount, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numcv_interval, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numpercent, System.ComponentModel.ISupportInitialize).BeginInit
+        Me.MenuStrip1.SuspendLayout
+        CType(Me.picunder, System.ComponentModel.ISupportInitialize).BeginInit
+        Me.TabPage5.SuspendLayout
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numnowloop, System.ComponentModel.ISupportInitialize).BeginInit
+        Me.GroupBox8.SuspendLayout
+        CType(Me.piccv_load, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.picipl_foranten, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.piccv_reset, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.piccv_picture, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.picipl_cap, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).BeginInit
+        Me.TabPage2.SuspendLayout
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit
+        Me.GroupBox9.SuspendLayout
+        Me.GroupBox7.SuspendLayout
+        CType(Me.dgv2_template, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.num2_rbx, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.num2_rby, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.num2_lty, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.num2_ltx, System.ComponentModel.ISupportInitialize).BeginInit
+        Me.TabPage15.SuspendLayout
+        Me.gbsetting.SuspendLayout
+        CType(Me.numcalib_hand_scaleheight, System.ComponentModel.ISupportInitialize).BeginInit
+        Me.gbrgb.SuspendLayout
+        CType(Me.numcalib_hand_bright, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numcalib_hand_g, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numcalib_hand_r, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numcalib_hand_b, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numcalib_hand_scalewidth, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numcalib_hand_scale, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numcalib_bright, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numcalib_r, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numcalib_scaleheight, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numcalib_g, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numcalib_b, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numcalib_scalewidth, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.numcalib_scale, System.ComponentModel.ISupportInitialize).BeginInit
+        Me.grpcalib_1.SuspendLayout
+        CType(Me.piccalib_resize, System.ComponentModel.ISupportInitialize).BeginInit
+        Me.gbcalib_m1.SuspendLayout
+        CType(Me.piccalib_bestresult, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.piccalib_handresult, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.piccalib_comp, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.piccalib_temp, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.piccamera, System.ComponentModel.ISupportInitialize).BeginInit
+        Me.TabPage3.SuspendLayout
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit
+        Me.Panel3.SuspendLayout
+        Me.Panel1.SuspendLayout
+        Me.TabPage16.SuspendLayout
+        Me.Panel2.SuspendLayout
+        Me.SuspendLayout
         '
         'TabControl1
         '
@@ -843,11 +842,12 @@ Partial Class Mainwindow
         Me.TabControl1.Multiline = True
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
+        Me.ToolTip1.SetToolTip(Me.TabControl1, resources.GetString("TabControl1.ToolTip"))
         '
         'TabPage1
         '
-        Me.TabPage1.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(75, Byte), Integer))
         resources.ApplyResources(Me.TabPage1, "TabPage1")
+        Me.TabPage1.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(75, Byte), Integer))
         Me.TabPage1.Controls.Add(Me.txtrowscount)
         Me.TabPage1.Controls.Add(Me.DGtable)
         Me.TabPage1.Controls.Add(Me.pnlview_window)
@@ -874,17 +874,20 @@ Partial Class Mainwindow
         Me.TabPage1.Controls.Add(Me.btnclose_general)
         Me.TabPage1.ForeColor = System.Drawing.SystemColors.ControlText
         Me.TabPage1.Name = "TabPage1"
+        Me.ToolTip1.SetToolTip(Me.TabPage1, resources.GetString("TabPage1.ToolTip"))
         '
         'txtrowscount
         '
-        Me.txtrowscount.BackColor = System.Drawing.SystemColors.ButtonFace
         resources.ApplyResources(Me.txtrowscount, "txtrowscount")
+        Me.txtrowscount.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.txtrowscount.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.txtrowscount.Name = "txtrowscount"
         Me.txtrowscount.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtrowscount, resources.GetString("txtrowscount.ToolTip"))
         '
         'DGtable
         '
+        resources.ApplyResources(Me.DGtable, "DGtable")
         Me.DGtable.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
         Me.DGtable.BorderStyle = System.Windows.Forms.BorderStyle.None
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -897,9 +900,9 @@ Partial Class Mainwindow
         Me.DGtable.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DGtable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGtable.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.no, Me.send, Me.key, Me.rate, Me.sleep, Me.timing, Me.darksleep, Me.darkthr, Me.seektime, Me.graph_count, Me.graph_rate, Me.graph_view, Me.posx, Me.posy, Me.sizex, Me.sizey, Me.ltx, Me.lty, Me.rbx, Me.rby})
-        resources.ApplyResources(Me.DGtable, "DGtable")
         Me.DGtable.Name = "DGtable"
         Me.DGtable.RowTemplate.Height = 21
+        Me.ToolTip1.SetToolTip(Me.DGtable, resources.GetString("DGtable.ToolTip"))
         '
         'no
         '
@@ -1003,6 +1006,7 @@ Partial Class Mainwindow
         '
         'pnlview_window
         '
+        resources.ApplyResources(Me.pnlview_window, "pnlview_window")
         Me.pnlview_window.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(34, Byte), Integer))
         Me.pnlview_window.Controls.Add(Me.piccap)
         Me.pnlview_window.Controls.Add(Me.pictempipl)
@@ -1010,21 +1014,23 @@ Partial Class Mainwindow
         Me.pnlview_window.Controls.Add(Me.PictureBoxIpl1)
         Me.pnlview_window.Controls.Add(Me.piczoom)
         Me.pnlview_window.Controls.Add(Me.picview_capture)
-        resources.ApplyResources(Me.pnlview_window, "pnlview_window")
         Me.pnlview_window.Name = "pnlview_window"
+        Me.ToolTip1.SetToolTip(Me.pnlview_window, resources.GetString("pnlview_window.ToolTip"))
         '
         'piccap
         '
-        Me.piccap.BackColor = System.Drawing.SystemColors.ControlDark
         resources.ApplyResources(Me.piccap, "piccap")
+        Me.piccap.BackColor = System.Drawing.SystemColors.ControlDark
         Me.piccap.Name = "piccap"
         Me.piccap.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.piccap, resources.GetString("piccap.ToolTip"))
         '
         'pictempipl
         '
         resources.ApplyResources(Me.pictempipl, "pictempipl")
         Me.pictempipl.Name = "pictempipl"
         Me.pictempipl.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.pictempipl, resources.GetString("pictempipl.ToolTip"))
         '
         'Label32
         '
@@ -1032,29 +1038,34 @@ Partial Class Mainwindow
         Me.Label32.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(34, Byte), Integer))
         Me.Label32.ForeColor = System.Drawing.SystemColors.Control
         Me.Label32.Name = "Label32"
+        Me.ToolTip1.SetToolTip(Me.Label32, resources.GetString("Label32.ToolTip"))
         '
         'PictureBoxIpl1
         '
         resources.ApplyResources(Me.PictureBoxIpl1, "PictureBoxIpl1")
         Me.PictureBoxIpl1.Name = "PictureBoxIpl1"
         Me.PictureBoxIpl1.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBoxIpl1, resources.GetString("PictureBoxIpl1.ToolTip"))
         '
         'piczoom
         '
-        Me.piczoom.BackColor = System.Drawing.SystemColors.ControlDark
         resources.ApplyResources(Me.piczoom, "piczoom")
+        Me.piczoom.BackColor = System.Drawing.SystemColors.ControlDark
         Me.piczoom.Name = "piczoom"
         Me.piczoom.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.piczoom, resources.GetString("piczoom.ToolTip"))
         '
         'picview_capture
         '
-        Me.picview_capture.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.picview_capture, "picview_capture")
+        Me.picview_capture.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.picview_capture.Name = "picview_capture"
         Me.picview_capture.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.picview_capture, resources.GetString("picview_capture.ToolTip"))
         '
         'pnlview_control
         '
+        resources.ApplyResources(Me.pnlview_control, "pnlview_control")
         Me.pnlview_control.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(34, Byte), Integer))
         Me.pnlview_control.Controls.Add(Me.btntemp)
         Me.pnlview_control.Controls.Add(Me.btncap)
@@ -1066,8 +1077,8 @@ Partial Class Mainwindow
         Me.pnlview_control.Controls.Add(Me.chklimit)
         Me.pnlview_control.Controls.Add(Me.chkoverwrite)
         Me.pnlview_control.Controls.Add(Me.trktemp)
-        resources.ApplyResources(Me.pnlview_control, "pnlview_control")
         Me.pnlview_control.Name = "pnlview_control"
+        Me.ToolTip1.SetToolTip(Me.pnlview_control, resources.GetString("pnlview_control.ToolTip"))
         '
         'btntemp
         '
@@ -1075,51 +1086,57 @@ Partial Class Mainwindow
         Me.btntemp.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btntemp.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btntemp.Name = "btntemp"
+        Me.ToolTip1.SetToolTip(Me.btntemp, resources.GetString("btntemp.ToolTip"))
         Me.btntemp.UseVisualStyleBackColor = False
         '
         'btncap
         '
-        Me.btncap.BackColor = System.Drawing.Color.FromArgb(CType(CType(90, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(12, Byte), Integer))
         resources.ApplyResources(Me.btncap, "btncap")
+        Me.btncap.BackColor = System.Drawing.Color.FromArgb(CType(CType(90, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(12, Byte), Integer))
         Me.btncap.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btncap.Name = "btncap"
+        Me.ToolTip1.SetToolTip(Me.btncap, resources.GetString("btncap.ToolTip"))
         Me.btncap.UseVisualStyleBackColor = False
         '
         'btnforward
         '
-        Me.btnforward.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btnforward, "btnforward")
+        Me.btnforward.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btnforward.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btnforward.Name = "btnforward"
+        Me.ToolTip1.SetToolTip(Me.btnforward, resources.GetString("btnforward.ToolTip"))
         Me.btnforward.UseVisualStyleBackColor = False
         '
         'btnback
         '
-        Me.btnback.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btnback, "btnback")
+        Me.btnback.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btnback.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btnback.Name = "btnback"
+        Me.ToolTip1.SetToolTip(Me.btnback, resources.GetString("btnback.ToolTip"))
         Me.btnback.UseVisualStyleBackColor = False
         '
         'numloadno
         '
+        resources.ApplyResources(Me.numloadno, "numloadno")
         Me.numloadno.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(34, Byte), Integer))
         Me.numloadno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numloadno, "numloadno")
         Me.numloadno.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.numloadno.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
         Me.numloadno.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.numloadno.Name = "numloadno"
+        Me.ToolTip1.SetToolTip(Me.numloadno, resources.GetString("numloadno.ToolTip"))
         Me.numloadno.Value = New Decimal(New Integer() {10, 0, 0, 0})
         '
         'txtno_comment
         '
+        resources.ApplyResources(Me.txtno_comment, "txtno_comment")
         Me.txtno_comment.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(34, Byte), Integer))
         Me.txtno_comment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtno_comment, "txtno_comment")
         Me.txtno_comment.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txtno_comment.Name = "txtno_comment"
         Me.txtno_comment.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtno_comment, resources.GetString("txtno_comment.ToolTip"))
         '
         'chkloading
         '
@@ -1127,6 +1144,7 @@ Partial Class Mainwindow
         Me.chkloading.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(34, Byte), Integer))
         Me.chkloading.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.chkloading.Name = "chkloading"
+        Me.ToolTip1.SetToolTip(Me.chkloading, resources.GetString("chkloading.ToolTip"))
         Me.chkloading.UseVisualStyleBackColor = False
         '
         'chklimit
@@ -1135,6 +1153,7 @@ Partial Class Mainwindow
         Me.chklimit.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(34, Byte), Integer))
         Me.chklimit.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.chklimit.Name = "chklimit"
+        Me.ToolTip1.SetToolTip(Me.chklimit, resources.GetString("chklimit.ToolTip"))
         Me.chklimit.UseVisualStyleBackColor = False
         '
         'chkoverwrite
@@ -1143,6 +1162,7 @@ Partial Class Mainwindow
         Me.chkoverwrite.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(34, Byte), Integer))
         Me.chkoverwrite.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.chkoverwrite.Name = "chkoverwrite"
+        Me.ToolTip1.SetToolTip(Me.chkoverwrite, resources.GetString("chkoverwrite.ToolTip"))
         Me.chkoverwrite.UseVisualStyleBackColor = False
         '
         'trktemp
@@ -1152,16 +1172,19 @@ Partial Class Mainwindow
         Me.trktemp.Maximum = 300
         Me.trktemp.Name = "trktemp"
         Me.trktemp.TickStyle = System.Windows.Forms.TickStyle.None
+        Me.ToolTip1.SetToolTip(Me.trktemp, resources.GetString("trktemp.ToolTip"))
         '
         'PictureBox1
         '
-        Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(95, Byte), Integer))
         resources.ApplyResources(Me.PictureBox1, "PictureBox1")
+        Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(95, Byte), Integer))
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox1, resources.GetString("PictureBox1.ToolTip"))
         '
         'grpgeneral
         '
+        resources.ApplyResources(Me.grpgeneral, "grpgeneral")
         Me.grpgeneral.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.grpgeneral.Controls.Add(Me.lblcur_load10)
         Me.grpgeneral.Controls.Add(Me.lblcur_load9)
@@ -1205,10 +1228,10 @@ Partial Class Mainwindow
         Me.grpgeneral.Controls.Add(Me.lblset_device)
         Me.grpgeneral.Controls.Add(Me.lblcur_device_name)
         Me.grpgeneral.Controls.Add(Me.lblset_monitoring)
-        resources.ApplyResources(Me.grpgeneral, "grpgeneral")
         Me.grpgeneral.ForeColor = System.Drawing.Color.FloralWhite
         Me.grpgeneral.Name = "grpgeneral"
         Me.grpgeneral.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.grpgeneral, resources.GetString("grpgeneral.ToolTip"))
         '
         'lblcur_load10
         '
@@ -1216,6 +1239,7 @@ Partial Class Mainwindow
         Me.lblcur_load10.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.lblcur_load10.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcur_load10.Name = "lblcur_load10"
+        Me.ToolTip1.SetToolTip(Me.lblcur_load10, resources.GetString("lblcur_load10.ToolTip"))
         '
         'lblcur_load9
         '
@@ -1223,6 +1247,7 @@ Partial Class Mainwindow
         Me.lblcur_load9.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.lblcur_load9.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcur_load9.Name = "lblcur_load9"
+        Me.ToolTip1.SetToolTip(Me.lblcur_load9, resources.GetString("lblcur_load9.ToolTip"))
         '
         'lblcur_load8
         '
@@ -1230,6 +1255,7 @@ Partial Class Mainwindow
         Me.lblcur_load8.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.lblcur_load8.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcur_load8.Name = "lblcur_load8"
+        Me.ToolTip1.SetToolTip(Me.lblcur_load8, resources.GetString("lblcur_load8.ToolTip"))
         '
         'lblcur_load7
         '
@@ -1237,6 +1263,7 @@ Partial Class Mainwindow
         Me.lblcur_load7.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.lblcur_load7.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcur_load7.Name = "lblcur_load7"
+        Me.ToolTip1.SetToolTip(Me.lblcur_load7, resources.GetString("lblcur_load7.ToolTip"))
         '
         'lblcur_load6
         '
@@ -1244,6 +1271,7 @@ Partial Class Mainwindow
         Me.lblcur_load6.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.lblcur_load6.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcur_load6.Name = "lblcur_load6"
+        Me.ToolTip1.SetToolTip(Me.lblcur_load6, resources.GetString("lblcur_load6.ToolTip"))
         '
         'lblcur_load5
         '
@@ -1251,6 +1279,7 @@ Partial Class Mainwindow
         Me.lblcur_load5.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.lblcur_load5.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcur_load5.Name = "lblcur_load5"
+        Me.ToolTip1.SetToolTip(Me.lblcur_load5, resources.GetString("lblcur_load5.ToolTip"))
         '
         'lblcur_load4
         '
@@ -1258,6 +1287,7 @@ Partial Class Mainwindow
         Me.lblcur_load4.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.lblcur_load4.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcur_load4.Name = "lblcur_load4"
+        Me.ToolTip1.SetToolTip(Me.lblcur_load4, resources.GetString("lblcur_load4.ToolTip"))
         '
         'lblcur_load3
         '
@@ -1265,6 +1295,7 @@ Partial Class Mainwindow
         Me.lblcur_load3.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.lblcur_load3.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcur_load3.Name = "lblcur_load3"
+        Me.ToolTip1.SetToolTip(Me.lblcur_load3, resources.GetString("lblcur_load3.ToolTip"))
         '
         'lblcur_load2
         '
@@ -1272,13 +1303,15 @@ Partial Class Mainwindow
         Me.lblcur_load2.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.lblcur_load2.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcur_load2.Name = "lblcur_load2"
+        Me.ToolTip1.SetToolTip(Me.lblcur_load2, resources.GetString("lblcur_load2.ToolTip"))
         '
         'btncur_showtext
         '
-        Me.btncur_showtext.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btncur_showtext, "btncur_showtext")
+        Me.btncur_showtext.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btncur_showtext.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btncur_showtext.Name = "btncur_showtext"
+        Me.ToolTip1.SetToolTip(Me.btncur_showtext, resources.GetString("btncur_showtext.ToolTip"))
         Me.btncur_showtext.UseVisualStyleBackColor = False
         '
         'lblcur_showtextwindow
@@ -1287,6 +1320,7 @@ Partial Class Mainwindow
         Me.lblcur_showtextwindow.BackColor = System.Drawing.Color.Crimson
         Me.lblcur_showtextwindow.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcur_showtextwindow.Name = "lblcur_showtextwindow"
+        Me.ToolTip1.SetToolTip(Me.lblcur_showtextwindow, resources.GetString("lblcur_showtextwindow.ToolTip"))
         '
         'lblcur_showvideo
         '
@@ -1294,6 +1328,7 @@ Partial Class Mainwindow
         Me.lblcur_showvideo.BackColor = System.Drawing.Color.Crimson
         Me.lblcur_showvideo.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcur_showvideo.Name = "lblcur_showvideo"
+        Me.ToolTip1.SetToolTip(Me.lblcur_showvideo, resources.GetString("lblcur_showvideo.ToolTip"))
         '
         'lblset_text
         '
@@ -1302,13 +1337,15 @@ Partial Class Mainwindow
         Me.lblset_text.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lblset_text.ForeColor = System.Drawing.Color.Gainsboro
         Me.lblset_text.Name = "lblset_text"
+        Me.ToolTip1.SetToolTip(Me.lblset_text, resources.GetString("lblset_text.ToolTip"))
         '
         'btncur_showvideo
         '
-        Me.btncur_showvideo.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btncur_showvideo, "btncur_showvideo")
+        Me.btncur_showvideo.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btncur_showvideo.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btncur_showvideo.Name = "btncur_showvideo"
+        Me.ToolTip1.SetToolTip(Me.btncur_showvideo, resources.GetString("btncur_showvideo.ToolTip"))
         Me.btncur_showvideo.UseVisualStyleBackColor = False
         '
         'Label97
@@ -1317,6 +1354,7 @@ Partial Class Mainwindow
         Me.Label97.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label97.ForeColor = System.Drawing.SystemColors.Control
         Me.Label97.Name = "Label97"
+        Me.ToolTip1.SetToolTip(Me.Label97, resources.GetString("Label97.ToolTip"))
         '
         'lblset_video
         '
@@ -1325,6 +1363,7 @@ Partial Class Mainwindow
         Me.lblset_video.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lblset_video.ForeColor = System.Drawing.Color.Gainsboro
         Me.lblset_video.Name = "lblset_video"
+        Me.ToolTip1.SetToolTip(Me.lblset_video, resources.GetString("lblset_video.ToolTip"))
         '
         'lblcur_firstsplit
         '
@@ -1332,6 +1371,7 @@ Partial Class Mainwindow
         Me.lblcur_firstsplit.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.lblcur_firstsplit.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcur_firstsplit.Name = "lblcur_firstsplit"
+        Me.ToolTip1.SetToolTip(Me.lblcur_firstsplit, resources.GetString("lblcur_firstsplit.ToolTip"))
         '
         'Label79
         '
@@ -1339,6 +1379,7 @@ Partial Class Mainwindow
         Me.Label79.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label79.ForeColor = System.Drawing.SystemColors.Control
         Me.Label79.Name = "Label79"
+        Me.ToolTip1.SetToolTip(Me.Label79, resources.GetString("Label79.ToolTip"))
         '
         'lblcur_addcount
         '
@@ -1346,6 +1387,7 @@ Partial Class Mainwindow
         Me.lblcur_addcount.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.lblcur_addcount.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcur_addcount.Name = "lblcur_addcount"
+        Me.ToolTip1.SetToolTip(Me.lblcur_addcount, resources.GetString("lblcur_addcount.ToolTip"))
         '
         'lblcur_namedpipe
         '
@@ -1353,6 +1395,7 @@ Partial Class Mainwindow
         Me.lblcur_namedpipe.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.lblcur_namedpipe.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcur_namedpipe.Name = "lblcur_namedpipe"
+        Me.ToolTip1.SetToolTip(Me.lblcur_namedpipe, resources.GetString("lblcur_namedpipe.ToolTip"))
         '
         'lblcur_rendou
         '
@@ -1360,6 +1403,7 @@ Partial Class Mainwindow
         Me.lblcur_rendou.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.lblcur_rendou.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcur_rendou.Name = "lblcur_rendou"
+        Me.ToolTip1.SetToolTip(Me.lblcur_rendou, resources.GetString("lblcur_rendou.ToolTip"))
         '
         'lblcur_focus_after
         '
@@ -1367,6 +1411,7 @@ Partial Class Mainwindow
         Me.lblcur_focus_after.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.lblcur_focus_after.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcur_focus_after.Name = "lblcur_focus_after"
+        Me.ToolTip1.SetToolTip(Me.lblcur_focus_after, resources.GetString("lblcur_focus_after.ToolTip"))
         '
         'lblcur_focus_before
         '
@@ -1374,6 +1419,7 @@ Partial Class Mainwindow
         Me.lblcur_focus_before.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.lblcur_focus_before.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcur_focus_before.Name = "lblcur_focus_before"
+        Me.ToolTip1.SetToolTip(Me.lblcur_focus_before, resources.GetString("lblcur_focus_before.ToolTip"))
         '
         'lblcur_load1
         '
@@ -1381,9 +1427,11 @@ Partial Class Mainwindow
         Me.lblcur_load1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.lblcur_load1.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcur_load1.Name = "lblcur_load1"
+        Me.ToolTip1.SetToolTip(Me.lblcur_load1, resources.GetString("lblcur_load1.ToolTip"))
         '
         'Panel4
         '
+        resources.ApplyResources(Me.Panel4, "Panel4")
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(46, Byte), Integer))
         Me.Panel4.Controls.Add(Me.lblcur_interval)
         Me.Panel4.Controls.Add(Me.lblcur_loopcount)
@@ -1392,8 +1440,8 @@ Partial Class Mainwindow
         Me.Panel4.Controls.Add(Me.Label76)
         Me.Panel4.Controls.Add(Me.lblcur_reset)
         Me.Panel4.Controls.Add(Me.lblcur_loop)
-        resources.ApplyResources(Me.Panel4, "Panel4")
         Me.Panel4.Name = "Panel4"
+        Me.ToolTip1.SetToolTip(Me.Panel4, resources.GetString("Panel4.ToolTip"))
         '
         'lblcur_interval
         '
@@ -1401,6 +1449,7 @@ Partial Class Mainwindow
         Me.lblcur_interval.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.lblcur_interval.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcur_interval.Name = "lblcur_interval"
+        Me.ToolTip1.SetToolTip(Me.lblcur_interval, resources.GetString("lblcur_interval.ToolTip"))
         '
         'lblcur_loopcount
         '
@@ -1408,6 +1457,7 @@ Partial Class Mainwindow
         Me.lblcur_loopcount.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(90, Byte), Integer), CType(CType(95, Byte), Integer))
         Me.lblcur_loopcount.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcur_loopcount.Name = "lblcur_loopcount"
+        Me.ToolTip1.SetToolTip(Me.lblcur_loopcount, resources.GetString("lblcur_loopcount.ToolTip"))
         '
         'lblcur_split
         '
@@ -1415,6 +1465,7 @@ Partial Class Mainwindow
         Me.lblcur_split.BackColor = System.Drawing.Color.Crimson
         Me.lblcur_split.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcur_split.Name = "lblcur_split"
+        Me.ToolTip1.SetToolTip(Me.lblcur_split, resources.GetString("lblcur_split.ToolTip"))
         '
         'lblcur_load
         '
@@ -1422,6 +1473,7 @@ Partial Class Mainwindow
         Me.lblcur_load.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(90, Byte), Integer), CType(CType(95, Byte), Integer))
         Me.lblcur_load.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcur_load.Name = "lblcur_load"
+        Me.ToolTip1.SetToolTip(Me.lblcur_load, resources.GetString("lblcur_load.ToolTip"))
         '
         'Label76
         '
@@ -1429,6 +1481,7 @@ Partial Class Mainwindow
         Me.Label76.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label76.ForeColor = System.Drawing.SystemColors.Control
         Me.Label76.Name = "Label76"
+        Me.ToolTip1.SetToolTip(Me.Label76, resources.GetString("Label76.ToolTip"))
         '
         'lblcur_reset
         '
@@ -1436,6 +1489,7 @@ Partial Class Mainwindow
         Me.lblcur_reset.BackColor = System.Drawing.Color.Crimson
         Me.lblcur_reset.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcur_reset.Name = "lblcur_reset"
+        Me.ToolTip1.SetToolTip(Me.lblcur_reset, resources.GetString("lblcur_reset.ToolTip"))
         '
         'lblcur_loop
         '
@@ -1443,6 +1497,7 @@ Partial Class Mainwindow
         Me.lblcur_loop.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(90, Byte), Integer), CType(CType(95, Byte), Integer))
         Me.lblcur_loop.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcur_loop.Name = "lblcur_loop"
+        Me.ToolTip1.SetToolTip(Me.lblcur_loop, resources.GetString("lblcur_loop.ToolTip"))
         '
         'Label92
         '
@@ -1450,6 +1505,7 @@ Partial Class Mainwindow
         Me.Label92.BackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.Label92.ForeColor = System.Drawing.SystemColors.Control
         Me.Label92.Name = "Label92"
+        Me.ToolTip1.SetToolTip(Me.Label92, resources.GetString("Label92.ToolTip"))
         '
         'lblset_focus
         '
@@ -1458,6 +1514,7 @@ Partial Class Mainwindow
         Me.lblset_focus.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lblset_focus.ForeColor = System.Drawing.Color.Gainsboro
         Me.lblset_focus.Name = "lblset_focus"
+        Me.ToolTip1.SetToolTip(Me.lblset_focus, resources.GetString("lblset_focus.ToolTip"))
         '
         'Label94
         '
@@ -1465,6 +1522,7 @@ Partial Class Mainwindow
         Me.Label94.BackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.Label94.ForeColor = System.Drawing.SystemColors.Control
         Me.Label94.Name = "Label94"
+        Me.ToolTip1.SetToolTip(Me.Label94, resources.GetString("Label94.ToolTip"))
         '
         'Label90
         '
@@ -1472,6 +1530,7 @@ Partial Class Mainwindow
         Me.Label90.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label90.ForeColor = System.Drawing.SystemColors.Control
         Me.Label90.Name = "Label90"
+        Me.ToolTip1.SetToolTip(Me.Label90, resources.GetString("Label90.ToolTip"))
         '
         'lblset_hotkey
         '
@@ -1480,6 +1539,7 @@ Partial Class Mainwindow
         Me.lblset_hotkey.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lblset_hotkey.ForeColor = System.Drawing.Color.Gainsboro
         Me.lblset_hotkey.Name = "lblset_hotkey"
+        Me.ToolTip1.SetToolTip(Me.lblset_hotkey, resources.GetString("lblset_hotkey.ToolTip"))
         '
         'Label89
         '
@@ -1487,29 +1547,33 @@ Partial Class Mainwindow
         Me.Label89.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label89.ForeColor = System.Drawing.SystemColors.Control
         Me.Label89.Name = "Label89"
+        Me.ToolTip1.SetToolTip(Me.Label89, resources.GetString("Label89.ToolTip"))
         '
         'btncur_clear_live
         '
-        Me.btncur_clear_live.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btncur_clear_live, "btncur_clear_live")
+        Me.btncur_clear_live.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btncur_clear_live.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btncur_clear_live.Name = "btncur_clear_live"
+        Me.ToolTip1.SetToolTip(Me.btncur_clear_live, resources.GetString("btncur_clear_live.ToolTip"))
         Me.btncur_clear_live.UseVisualStyleBackColor = False
         '
         'btncur_clear_table
         '
-        Me.btncur_clear_table.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btncur_clear_table, "btncur_clear_table")
+        Me.btncur_clear_table.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btncur_clear_table.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btncur_clear_table.Name = "btncur_clear_table"
+        Me.ToolTip1.SetToolTip(Me.btncur_clear_table, resources.GetString("btncur_clear_table.ToolTip"))
         Me.btncur_clear_table.UseVisualStyleBackColor = False
         '
         'btncur_clear_count
         '
-        Me.btncur_clear_count.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btncur_clear_count, "btncur_clear_count")
+        Me.btncur_clear_count.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btncur_clear_count.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btncur_clear_count.Name = "btncur_clear_count"
+        Me.ToolTip1.SetToolTip(Me.btncur_clear_count, resources.GetString("btncur_clear_count.ToolTip"))
         Me.btncur_clear_count.UseVisualStyleBackColor = False
         '
         'Label86
@@ -1518,6 +1582,7 @@ Partial Class Mainwindow
         Me.Label86.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label86.ForeColor = System.Drawing.SystemColors.Control
         Me.Label86.Name = "Label86"
+        Me.ToolTip1.SetToolTip(Me.Label86, resources.GetString("Label86.ToolTip"))
         '
         'lblset_graph
         '
@@ -1526,13 +1591,15 @@ Partial Class Mainwindow
         Me.lblset_graph.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lblset_graph.ForeColor = System.Drawing.Color.Gainsboro
         Me.lblset_graph.Name = "lblset_graph"
+        Me.ToolTip1.SetToolTip(Me.lblset_graph, resources.GetString("lblset_graph.ToolTip"))
         '
         'btncur_webcamera
         '
-        Me.btncur_webcamera.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btncur_webcamera, "btncur_webcamera")
+        Me.btncur_webcamera.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btncur_webcamera.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btncur_webcamera.Name = "btncur_webcamera"
+        Me.ToolTip1.SetToolTip(Me.btncur_webcamera, resources.GetString("btncur_webcamera.ToolTip"))
         Me.btncur_webcamera.UseVisualStyleBackColor = False
         '
         'lblset_road
@@ -1542,6 +1609,7 @@ Partial Class Mainwindow
         Me.lblset_road.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lblset_road.ForeColor = System.Drawing.Color.Gainsboro
         Me.lblset_road.Name = "lblset_road"
+        Me.ToolTip1.SetToolTip(Me.lblset_road, resources.GetString("lblset_road.ToolTip"))
         '
         'lblcur_device_res_fps
         '
@@ -1549,6 +1617,7 @@ Partial Class Mainwindow
         Me.lblcur_device_res_fps.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.lblcur_device_res_fps.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcur_device_res_fps.Name = "lblcur_device_res_fps"
+        Me.ToolTip1.SetToolTip(Me.lblcur_device_res_fps, resources.GetString("lblcur_device_res_fps.ToolTip"))
         '
         'lblset_device
         '
@@ -1557,6 +1626,7 @@ Partial Class Mainwindow
         Me.lblset_device.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lblset_device.ForeColor = System.Drawing.Color.Gainsboro
         Me.lblset_device.Name = "lblset_device"
+        Me.ToolTip1.SetToolTip(Me.lblset_device, resources.GetString("lblset_device.ToolTip"))
         '
         'lblcur_device_name
         '
@@ -1564,6 +1634,7 @@ Partial Class Mainwindow
         Me.lblcur_device_name.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.lblcur_device_name.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcur_device_name.Name = "lblcur_device_name"
+        Me.ToolTip1.SetToolTip(Me.lblcur_device_name, resources.GetString("lblcur_device_name.ToolTip"))
         '
         'lblset_monitoring
         '
@@ -1572,9 +1643,11 @@ Partial Class Mainwindow
         Me.lblset_monitoring.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lblset_monitoring.ForeColor = System.Drawing.Color.Gainsboro
         Me.lblset_monitoring.Name = "lblset_monitoring"
+        Me.ToolTip1.SetToolTip(Me.lblset_monitoring, resources.GetString("lblset_monitoring.ToolTip"))
         '
         'pnl_other
         '
+        resources.ApplyResources(Me.pnl_other, "pnl_other")
         Me.pnl_other.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.pnl_other.Controls.Add(Me.btntext_openfolder)
         Me.pnl_other.Controls.Add(Me.txtpass_rtf)
@@ -1587,25 +1660,27 @@ Partial Class Mainwindow
         Me.pnl_other.Controls.Add(Me.Label26)
         Me.pnl_other.Controls.Add(Me.Label23)
         Me.pnl_other.Controls.Add(Me.lbllivesplit_state)
-        resources.ApplyResources(Me.pnl_other, "pnl_other")
         Me.pnl_other.Name = "pnl_other"
+        Me.ToolTip1.SetToolTip(Me.pnl_other, resources.GetString("pnl_other.ToolTip"))
         '
         'btntext_openfolder
         '
-        Me.btntext_openfolder.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btntext_openfolder, "btntext_openfolder")
+        Me.btntext_openfolder.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btntext_openfolder.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btntext_openfolder.Name = "btntext_openfolder"
+        Me.ToolTip1.SetToolTip(Me.btntext_openfolder, resources.GetString("btntext_openfolder.ToolTip"))
         Me.btntext_openfolder.UseVisualStyleBackColor = False
         '
         'txtpass_rtf
         '
+        resources.ApplyResources(Me.txtpass_rtf, "txtpass_rtf")
         Me.txtpass_rtf.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.txtpass_rtf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtpass_rtf, "txtpass_rtf")
         Me.txtpass_rtf.ForeColor = System.Drawing.SystemColors.Control
         Me.txtpass_rtf.Name = "txtpass_rtf"
         Me.txtpass_rtf.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtpass_rtf, resources.GetString("txtpass_rtf.ToolTip"))
         '
         'Label112
         '
@@ -1613,13 +1688,15 @@ Partial Class Mainwindow
         Me.Label112.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label112.ForeColor = System.Drawing.SystemColors.Control
         Me.Label112.Name = "Label112"
+        Me.ToolTip1.SetToolTip(Me.Label112, resources.GetString("Label112.ToolTip"))
         '
         'btnshow_chart
         '
-        Me.btnshow_chart.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btnshow_chart, "btnshow_chart")
+        Me.btnshow_chart.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btnshow_chart.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btnshow_chart.Name = "btnshow_chart"
+        Me.ToolTip1.SetToolTip(Me.btnshow_chart, resources.GetString("btnshow_chart.ToolTip"))
         Me.btnshow_chart.UseVisualStyleBackColor = False
         '
         'chkshow_text
@@ -1628,25 +1705,28 @@ Partial Class Mainwindow
         Me.chkshow_text.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.chkshow_text.ForeColor = System.Drawing.SystemColors.Control
         Me.chkshow_text.Name = "chkshow_text"
+        Me.ToolTip1.SetToolTip(Me.chkshow_text, resources.GetString("chkshow_text.ToolTip"))
         Me.chkshow_text.UseVisualStyleBackColor = False
         '
         'txtpass_picturefolder
         '
+        resources.ApplyResources(Me.txtpass_picturefolder, "txtpass_picturefolder")
         Me.txtpass_picturefolder.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.txtpass_picturefolder.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtpass_picturefolder, "txtpass_picturefolder")
         Me.txtpass_picturefolder.ForeColor = System.Drawing.SystemColors.Control
         Me.txtpass_picturefolder.Name = "txtpass_picturefolder"
         Me.txtpass_picturefolder.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtpass_picturefolder, resources.GetString("txtpass_picturefolder.ToolTip"))
         '
         'txtpass_csv
         '
+        resources.ApplyResources(Me.txtpass_csv, "txtpass_csv")
         Me.txtpass_csv.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.txtpass_csv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtpass_csv, "txtpass_csv")
         Me.txtpass_csv.ForeColor = System.Drawing.SystemColors.Control
         Me.txtpass_csv.Name = "txtpass_csv"
         Me.txtpass_csv.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtpass_csv, resources.GetString("txtpass_csv.ToolTip"))
         '
         'Label98
         '
@@ -1654,6 +1734,7 @@ Partial Class Mainwindow
         Me.Label98.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label98.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label98.Name = "Label98"
+        Me.ToolTip1.SetToolTip(Me.Label98, resources.GetString("Label98.ToolTip"))
         '
         'Label26
         '
@@ -1661,6 +1742,7 @@ Partial Class Mainwindow
         Me.Label26.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label26.ForeColor = System.Drawing.SystemColors.Control
         Me.Label26.Name = "Label26"
+        Me.ToolTip1.SetToolTip(Me.Label26, resources.GetString("Label26.ToolTip"))
         '
         'Label23
         '
@@ -1668,6 +1750,7 @@ Partial Class Mainwindow
         Me.Label23.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label23.ForeColor = System.Drawing.SystemColors.Control
         Me.Label23.Name = "Label23"
+        Me.ToolTip1.SetToolTip(Me.Label23, resources.GetString("Label23.ToolTip"))
         '
         'lbllivesplit_state
         '
@@ -1675,9 +1758,11 @@ Partial Class Mainwindow
         Me.lbllivesplit_state.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.lbllivesplit_state.ForeColor = System.Drawing.SystemColors.Control
         Me.lbllivesplit_state.Name = "lbllivesplit_state"
+        Me.ToolTip1.SetToolTip(Me.lbllivesplit_state, resources.GetString("lbllivesplit_state.ToolTip"))
         '
         'pnl_video
         '
+        resources.ApplyResources(Me.pnl_video, "pnl_video")
         Me.pnl_video.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.pnl_video.Controls.Add(Me.chkvideo_manualstart)
         Me.pnl_video.Controls.Add(Me.btnselectvideo)
@@ -1693,8 +1778,8 @@ Partial Class Mainwindow
         Me.pnl_video.Controls.Add(Me.chkvideo_autoseek)
         Me.pnl_video.Controls.Add(Me.chkshowvideo)
         Me.pnl_video.Controls.Add(Me.Label78)
-        resources.ApplyResources(Me.pnl_video, "pnl_video")
         Me.pnl_video.Name = "pnl_video"
+        Me.ToolTip1.SetToolTip(Me.pnl_video, resources.GetString("pnl_video.ToolTip"))
         '
         'chkvideo_manualstart
         '
@@ -1702,17 +1787,20 @@ Partial Class Mainwindow
         Me.chkvideo_manualstart.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.chkvideo_manualstart.ForeColor = System.Drawing.SystemColors.Control
         Me.chkvideo_manualstart.Name = "chkvideo_manualstart"
+        Me.ToolTip1.SetToolTip(Me.chkvideo_manualstart, resources.GetString("chkvideo_manualstart.ToolTip"))
         Me.chkvideo_manualstart.UseVisualStyleBackColor = False
         '
         'btnselectvideo
         '
-        Me.btnselectvideo.BackColor = System.Drawing.SystemColors.Control
         resources.ApplyResources(Me.btnselectvideo, "btnselectvideo")
+        Me.btnselectvideo.BackColor = System.Drawing.SystemColors.Control
         Me.btnselectvideo.Name = "btnselectvideo"
+        Me.ToolTip1.SetToolTip(Me.btnselectvideo, resources.GetString("btnselectvideo.ToolTip"))
         Me.btnselectvideo.UseVisualStyleBackColor = False
         '
         'GroupBox4
         '
+        resources.ApplyResources(Me.GroupBox4, "GroupBox4")
         Me.GroupBox4.Controls.Add(Me.chkvideo_showwinvideo)
         Me.GroupBox4.Controls.Add(Me.numwin_interval)
         Me.GroupBox4.Controls.Add(Me.Label95)
@@ -1720,9 +1808,9 @@ Partial Class Mainwindow
         Me.GroupBox4.Controls.Add(Me.numwin_locx)
         Me.GroupBox4.Controls.Add(Me.Label93)
         Me.GroupBox4.ForeColor = System.Drawing.Color.Snow
-        resources.ApplyResources(Me.GroupBox4, "GroupBox4")
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.GroupBox4, resources.GetString("GroupBox4.ToolTip"))
         '
         'chkvideo_showwinvideo
         '
@@ -1730,17 +1818,19 @@ Partial Class Mainwindow
         Me.chkvideo_showwinvideo.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.chkvideo_showwinvideo.ForeColor = System.Drawing.SystemColors.Control
         Me.chkvideo_showwinvideo.Name = "chkvideo_showwinvideo"
+        Me.ToolTip1.SetToolTip(Me.chkvideo_showwinvideo, resources.GetString("chkvideo_showwinvideo.ToolTip"))
         Me.chkvideo_showwinvideo.UseVisualStyleBackColor = False
         '
         'numwin_interval
         '
+        resources.ApplyResources(Me.numwin_interval, "numwin_interval")
         Me.numwin_interval.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numwin_interval.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numwin_interval, "numwin_interval")
         Me.numwin_interval.ForeColor = System.Drawing.SystemColors.Control
         Me.numwin_interval.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.numwin_interval.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.numwin_interval.Name = "numwin_interval"
+        Me.ToolTip1.SetToolTip(Me.numwin_interval, resources.GetString("numwin_interval.ToolTip"))
         Me.numwin_interval.Value = New Decimal(New Integer() {10, 0, 0, 0})
         '
         'Label95
@@ -1749,27 +1839,30 @@ Partial Class Mainwindow
         Me.Label95.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label95.ForeColor = System.Drawing.SystemColors.Control
         Me.Label95.Name = "Label95"
+        Me.ToolTip1.SetToolTip(Me.Label95, resources.GetString("Label95.ToolTip"))
         '
         'numwin_locy
         '
+        resources.ApplyResources(Me.numwin_locy, "numwin_locy")
         Me.numwin_locy.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numwin_locy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numwin_locy, "numwin_locy")
         Me.numwin_locy.ForeColor = System.Drawing.SystemColors.Control
         Me.numwin_locy.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.numwin_locy.Minimum = New Decimal(New Integer() {10000, 0, 0, -2147483648})
         Me.numwin_locy.Name = "numwin_locy"
+        Me.ToolTip1.SetToolTip(Me.numwin_locy, resources.GetString("numwin_locy.ToolTip"))
         Me.numwin_locy.Value = New Decimal(New Integer() {180, 0, 0, 0})
         '
         'numwin_locx
         '
+        resources.ApplyResources(Me.numwin_locx, "numwin_locx")
         Me.numwin_locx.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numwin_locx.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numwin_locx, "numwin_locx")
         Me.numwin_locx.ForeColor = System.Drawing.SystemColors.Control
         Me.numwin_locx.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.numwin_locx.Minimum = New Decimal(New Integer() {10000, 0, 0, -2147483648})
         Me.numwin_locx.Name = "numwin_locx"
+        Me.ToolTip1.SetToolTip(Me.numwin_locx, resources.GetString("numwin_locx.ToolTip"))
         Me.numwin_locx.Value = New Decimal(New Integer() {320, 0, 0, 0})
         '
         'Label93
@@ -1778,6 +1871,7 @@ Partial Class Mainwindow
         Me.Label93.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label93.ForeColor = System.Drawing.SystemColors.Control
         Me.Label93.Name = "Label93"
+        Me.ToolTip1.SetToolTip(Me.Label93, resources.GetString("Label93.ToolTip"))
         '
         'Label91
         '
@@ -1785,25 +1879,28 @@ Partial Class Mainwindow
         Me.Label91.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label91.ForeColor = System.Drawing.SystemColors.Control
         Me.Label91.Name = "Label91"
+        Me.ToolTip1.SetToolTip(Me.Label91, resources.GetString("Label91.ToolTip"))
         '
         'numvideo_sizey
         '
+        resources.ApplyResources(Me.numvideo_sizey, "numvideo_sizey")
         Me.numvideo_sizey.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numvideo_sizey.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numvideo_sizey, "numvideo_sizey")
         Me.numvideo_sizey.ForeColor = System.Drawing.SystemColors.Control
         Me.numvideo_sizey.Maximum = New Decimal(New Integer() {360, 0, 0, 0})
         Me.numvideo_sizey.Name = "numvideo_sizey"
+        Me.ToolTip1.SetToolTip(Me.numvideo_sizey, resources.GetString("numvideo_sizey.ToolTip"))
         Me.numvideo_sizey.Value = New Decimal(New Integer() {180, 0, 0, 0})
         '
         'numvideo_sizex
         '
+        resources.ApplyResources(Me.numvideo_sizex, "numvideo_sizex")
         Me.numvideo_sizex.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numvideo_sizex.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numvideo_sizex, "numvideo_sizex")
         Me.numvideo_sizex.ForeColor = System.Drawing.SystemColors.Control
         Me.numvideo_sizex.Maximum = New Decimal(New Integer() {640, 0, 0, 0})
         Me.numvideo_sizex.Name = "numvideo_sizex"
+        Me.ToolTip1.SetToolTip(Me.numvideo_sizex, resources.GetString("numvideo_sizex.ToolTip"))
         Me.numvideo_sizex.Value = New Decimal(New Integer() {320, 0, 0, 0})
         '
         'Label84
@@ -1812,14 +1909,16 @@ Partial Class Mainwindow
         Me.Label84.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label84.ForeColor = System.Drawing.SystemColors.Control
         Me.Label84.Name = "Label84"
+        Me.ToolTip1.SetToolTip(Me.Label84, resources.GetString("Label84.ToolTip"))
         '
         'txtvideo_startat
         '
+        resources.ApplyResources(Me.txtvideo_startat, "txtvideo_startat")
         Me.txtvideo_startat.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.txtvideo_startat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtvideo_startat, "txtvideo_startat")
         Me.txtvideo_startat.ForeColor = System.Drawing.SystemColors.Control
         Me.txtvideo_startat.Name = "txtvideo_startat"
+        Me.ToolTip1.SetToolTip(Me.txtvideo_startat, resources.GetString("txtvideo_startat.ToolTip"))
         '
         'Label83
         '
@@ -1827,6 +1926,7 @@ Partial Class Mainwindow
         Me.Label83.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label83.ForeColor = System.Drawing.SystemColors.Control
         Me.Label83.Name = "Label83"
+        Me.ToolTip1.SetToolTip(Me.Label83, resources.GetString("Label83.ToolTip"))
         '
         'Label80
         '
@@ -1834,15 +1934,17 @@ Partial Class Mainwindow
         Me.Label80.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label80.ForeColor = System.Drawing.SystemColors.Control
         Me.Label80.Name = "Label80"
+        Me.ToolTip1.SetToolTip(Me.Label80, resources.GetString("Label80.ToolTip"))
         '
         'txtvideo_pass
         '
+        resources.ApplyResources(Me.txtvideo_pass, "txtvideo_pass")
         Me.txtvideo_pass.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.txtvideo_pass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtvideo_pass, "txtvideo_pass")
         Me.txtvideo_pass.ForeColor = System.Drawing.SystemColors.Control
         Me.txtvideo_pass.Name = "txtvideo_pass"
         Me.txtvideo_pass.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtvideo_pass, resources.GetString("txtvideo_pass.ToolTip"))
         '
         'chkvideo_autoseek
         '
@@ -1850,6 +1952,7 @@ Partial Class Mainwindow
         Me.chkvideo_autoseek.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.chkvideo_autoseek.ForeColor = System.Drawing.SystemColors.Control
         Me.chkvideo_autoseek.Name = "chkvideo_autoseek"
+        Me.ToolTip1.SetToolTip(Me.chkvideo_autoseek, resources.GetString("chkvideo_autoseek.ToolTip"))
         Me.chkvideo_autoseek.UseVisualStyleBackColor = False
         '
         'chkshowvideo
@@ -1858,6 +1961,7 @@ Partial Class Mainwindow
         Me.chkshowvideo.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.chkshowvideo.ForeColor = System.Drawing.SystemColors.Control
         Me.chkshowvideo.Name = "chkshowvideo"
+        Me.ToolTip1.SetToolTip(Me.chkshowvideo, resources.GetString("chkshowvideo.ToolTip"))
         Me.chkshowvideo.UseVisualStyleBackColor = False
         '
         'Label78
@@ -1866,17 +1970,20 @@ Partial Class Mainwindow
         Me.Label78.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label78.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label78.Name = "Label78"
+        Me.ToolTip1.SetToolTip(Me.Label78, resources.GetString("Label78.ToolTip"))
         '
         'btnclosetable
         '
-        Me.btnclosetable.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btnclosetable, "btnclosetable")
+        Me.btnclosetable.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btnclosetable.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btnclosetable.Name = "btnclosetable"
+        Me.ToolTip1.SetToolTip(Me.btnclosetable, resources.GetString("btnclosetable.ToolTip"))
         Me.btnclosetable.UseVisualStyleBackColor = False
         '
         'pnl_loadremover
         '
+        resources.ApplyResources(Me.pnl_loadremover, "pnl_loadremover")
         Me.pnl_loadremover.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.pnl_loadremover.Controls.Add(Me.chkload7)
         Me.pnl_loadremover.Controls.Add(Me.chkload1)
@@ -1889,8 +1996,8 @@ Partial Class Mainwindow
         Me.pnl_loadremover.Controls.Add(Me.chkload4)
         Me.pnl_loadremover.Controls.Add(Me.chkload2)
         Me.pnl_loadremover.Controls.Add(Me.chkload9)
-        resources.ApplyResources(Me.pnl_loadremover, "pnl_loadremover")
         Me.pnl_loadremover.Name = "pnl_loadremover"
+        Me.ToolTip1.SetToolTip(Me.pnl_loadremover, resources.GetString("pnl_loadremover.ToolTip"))
         '
         'chkload7
         '
@@ -1898,6 +2005,7 @@ Partial Class Mainwindow
         Me.chkload7.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.chkload7.ForeColor = System.Drawing.SystemColors.Control
         Me.chkload7.Name = "chkload7"
+        Me.ToolTip1.SetToolTip(Me.chkload7, resources.GetString("chkload7.ToolTip"))
         Me.chkload7.UseVisualStyleBackColor = False
         '
         'chkload1
@@ -1906,6 +2014,7 @@ Partial Class Mainwindow
         Me.chkload1.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.chkload1.ForeColor = System.Drawing.SystemColors.Control
         Me.chkload1.Name = "chkload1"
+        Me.ToolTip1.SetToolTip(Me.chkload1, resources.GetString("chkload1.ToolTip"))
         Me.chkload1.UseVisualStyleBackColor = False
         '
         'chkload8
@@ -1914,6 +2023,7 @@ Partial Class Mainwindow
         Me.chkload8.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.chkload8.ForeColor = System.Drawing.SystemColors.Control
         Me.chkload8.Name = "chkload8"
+        Me.ToolTip1.SetToolTip(Me.chkload8, resources.GetString("chkload8.ToolTip"))
         Me.chkload8.UseVisualStyleBackColor = False
         '
         'chkload10
@@ -1922,6 +2032,7 @@ Partial Class Mainwindow
         Me.chkload10.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.chkload10.ForeColor = System.Drawing.SystemColors.Control
         Me.chkload10.Name = "chkload10"
+        Me.ToolTip1.SetToolTip(Me.chkload10, resources.GetString("chkload10.ToolTip"))
         Me.chkload10.UseVisualStyleBackColor = False
         '
         'chkload3
@@ -1930,6 +2041,7 @@ Partial Class Mainwindow
         Me.chkload3.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.chkload3.ForeColor = System.Drawing.SystemColors.Control
         Me.chkload3.Name = "chkload3"
+        Me.ToolTip1.SetToolTip(Me.chkload3, resources.GetString("chkload3.ToolTip"))
         Me.chkload3.UseVisualStyleBackColor = False
         '
         'chkload6
@@ -1938,10 +2050,12 @@ Partial Class Mainwindow
         Me.chkload6.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.chkload6.ForeColor = System.Drawing.SystemColors.Control
         Me.chkload6.Name = "chkload6"
+        Me.ToolTip1.SetToolTip(Me.chkload6, resources.GetString("chkload6.ToolTip"))
         Me.chkload6.UseVisualStyleBackColor = False
         '
         'TabControl2
         '
+        resources.ApplyResources(Me.TabControl2, "TabControl2")
         Me.TabControl2.Controls.Add(Me.TabPage4)
         Me.TabControl2.Controls.Add(Me.TabPage6)
         Me.TabControl2.Controls.Add(Me.TabPage7)
@@ -1952,21 +2066,22 @@ Partial Class Mainwindow
         Me.TabControl2.Controls.Add(Me.TabPage12)
         Me.TabControl2.Controls.Add(Me.TabPage13)
         Me.TabControl2.Controls.Add(Me.TabPage14)
-        resources.ApplyResources(Me.TabControl2, "TabControl2")
         Me.TabControl2.Multiline = True
         Me.TabControl2.Name = "TabControl2"
         Me.TabControl2.SelectedIndex = 0
+        Me.ToolTip1.SetToolTip(Me.TabControl2, resources.GetString("TabControl2.ToolTip"))
         '
         'TabPage4
         '
+        resources.ApplyResources(Me.TabPage4, "TabPage4")
         Me.TabPage4.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.TabPage4.Controls.Add(Me.Label29)
         Me.TabPage4.Controls.Add(Me.Label87)
         Me.TabPage4.Controls.Add(Me.numload_rate1)
         Me.TabPage4.Controls.Add(Me.numload_delay1)
         Me.TabPage4.Controls.Add(Me.Label33)
-        resources.ApplyResources(Me.TabPage4, "TabPage4")
         Me.TabPage4.Name = "TabPage4"
+        Me.ToolTip1.SetToolTip(Me.TabPage4, resources.GetString("TabPage4.ToolTip"))
         '
         'Label29
         '
@@ -1974,6 +2089,7 @@ Partial Class Mainwindow
         Me.Label29.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label29.ForeColor = System.Drawing.SystemColors.Control
         Me.Label29.Name = "Label29"
+        Me.ToolTip1.SetToolTip(Me.Label29, resources.GetString("Label29.ToolTip"))
         '
         'Label87
         '
@@ -1981,25 +2097,28 @@ Partial Class Mainwindow
         Me.Label87.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label87.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label87.Name = "Label87"
+        Me.ToolTip1.SetToolTip(Me.Label87, resources.GetString("Label87.ToolTip"))
         '
         'numload_rate1
         '
+        resources.ApplyResources(Me.numload_rate1, "numload_rate1")
         Me.numload_rate1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numload_rate1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_rate1, "numload_rate1")
         Me.numload_rate1.ForeColor = System.Drawing.SystemColors.Control
         Me.numload_rate1.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.numload_rate1.Name = "numload_rate1"
+        Me.ToolTip1.SetToolTip(Me.numload_rate1, resources.GetString("numload_rate1.ToolTip"))
         Me.numload_rate1.Value = New Decimal(New Integer() {40, 0, 0, 0})
         '
         'numload_delay1
         '
+        resources.ApplyResources(Me.numload_delay1, "numload_delay1")
         Me.numload_delay1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numload_delay1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_delay1, "numload_delay1")
         Me.numload_delay1.ForeColor = System.Drawing.SystemColors.Control
         Me.numload_delay1.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
         Me.numload_delay1.Name = "numload_delay1"
+        Me.ToolTip1.SetToolTip(Me.numload_delay1, resources.GetString("numload_delay1.ToolTip"))
         Me.numload_delay1.Value = New Decimal(New Integer() {100000, 0, 0, 0})
         '
         'Label33
@@ -2008,16 +2127,18 @@ Partial Class Mainwindow
         Me.Label33.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label33.ForeColor = System.Drawing.SystemColors.Control
         Me.Label33.Name = "Label33"
+        Me.ToolTip1.SetToolTip(Me.Label33, resources.GetString("Label33.ToolTip"))
         '
         'TabPage6
         '
+        resources.ApplyResources(Me.TabPage6, "TabPage6")
         Me.TabPage6.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.TabPage6.Controls.Add(Me.Label15)
         Me.TabPage6.Controls.Add(Me.numload_rate2)
         Me.TabPage6.Controls.Add(Me.numload_delay2)
         Me.TabPage6.Controls.Add(Me.Label35)
-        resources.ApplyResources(Me.TabPage6, "TabPage6")
         Me.TabPage6.Name = "TabPage6"
+        Me.ToolTip1.SetToolTip(Me.TabPage6, resources.GetString("TabPage6.ToolTip"))
         '
         'Label15
         '
@@ -2025,25 +2146,28 @@ Partial Class Mainwindow
         Me.Label15.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.Label15.ForeColor = System.Drawing.SystemColors.Control
         Me.Label15.Name = "Label15"
+        Me.ToolTip1.SetToolTip(Me.Label15, resources.GetString("Label15.ToolTip"))
         '
         'numload_rate2
         '
+        resources.ApplyResources(Me.numload_rate2, "numload_rate2")
         Me.numload_rate2.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numload_rate2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_rate2, "numload_rate2")
         Me.numload_rate2.ForeColor = System.Drawing.SystemColors.Control
         Me.numload_rate2.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.numload_rate2.Name = "numload_rate2"
+        Me.ToolTip1.SetToolTip(Me.numload_rate2, resources.GetString("numload_rate2.ToolTip"))
         Me.numload_rate2.Value = New Decimal(New Integer() {40, 0, 0, 0})
         '
         'numload_delay2
         '
+        resources.ApplyResources(Me.numload_delay2, "numload_delay2")
         Me.numload_delay2.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numload_delay2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_delay2, "numload_delay2")
         Me.numload_delay2.ForeColor = System.Drawing.SystemColors.Control
         Me.numload_delay2.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
         Me.numload_delay2.Name = "numload_delay2"
+        Me.ToolTip1.SetToolTip(Me.numload_delay2, resources.GetString("numload_delay2.ToolTip"))
         Me.numload_delay2.Value = New Decimal(New Integer() {100000, 0, 0, 0})
         '
         'Label35
@@ -2052,16 +2176,18 @@ Partial Class Mainwindow
         Me.Label35.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.Label35.ForeColor = System.Drawing.SystemColors.Control
         Me.Label35.Name = "Label35"
+        Me.ToolTip1.SetToolTip(Me.Label35, resources.GetString("Label35.ToolTip"))
         '
         'TabPage7
         '
+        resources.ApplyResources(Me.TabPage7, "TabPage7")
         Me.TabPage7.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.TabPage7.Controls.Add(Me.Label36)
         Me.TabPage7.Controls.Add(Me.numload_rate3)
         Me.TabPage7.Controls.Add(Me.numload_delay3)
         Me.TabPage7.Controls.Add(Me.Label37)
-        resources.ApplyResources(Me.TabPage7, "TabPage7")
         Me.TabPage7.Name = "TabPage7"
+        Me.ToolTip1.SetToolTip(Me.TabPage7, resources.GetString("TabPage7.ToolTip"))
         '
         'Label36
         '
@@ -2069,25 +2195,28 @@ Partial Class Mainwindow
         Me.Label36.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label36.ForeColor = System.Drawing.SystemColors.Control
         Me.Label36.Name = "Label36"
+        Me.ToolTip1.SetToolTip(Me.Label36, resources.GetString("Label36.ToolTip"))
         '
         'numload_rate3
         '
+        resources.ApplyResources(Me.numload_rate3, "numload_rate3")
         Me.numload_rate3.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numload_rate3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_rate3, "numload_rate3")
         Me.numload_rate3.ForeColor = System.Drawing.SystemColors.Control
         Me.numload_rate3.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.numload_rate3.Name = "numload_rate3"
+        Me.ToolTip1.SetToolTip(Me.numload_rate3, resources.GetString("numload_rate3.ToolTip"))
         Me.numload_rate3.Value = New Decimal(New Integer() {40, 0, 0, 0})
         '
         'numload_delay3
         '
+        resources.ApplyResources(Me.numload_delay3, "numload_delay3")
         Me.numload_delay3.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numload_delay3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_delay3, "numload_delay3")
         Me.numload_delay3.ForeColor = System.Drawing.SystemColors.Control
         Me.numload_delay3.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
         Me.numload_delay3.Name = "numload_delay3"
+        Me.ToolTip1.SetToolTip(Me.numload_delay3, resources.GetString("numload_delay3.ToolTip"))
         Me.numload_delay3.Value = New Decimal(New Integer() {100000, 0, 0, 0})
         '
         'Label37
@@ -2096,16 +2225,18 @@ Partial Class Mainwindow
         Me.Label37.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label37.ForeColor = System.Drawing.SystemColors.Control
         Me.Label37.Name = "Label37"
+        Me.ToolTip1.SetToolTip(Me.Label37, resources.GetString("Label37.ToolTip"))
         '
         'TabPage8
         '
+        resources.ApplyResources(Me.TabPage8, "TabPage8")
         Me.TabPage8.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.TabPage8.Controls.Add(Me.Label40)
         Me.TabPage8.Controls.Add(Me.numload_rate4)
         Me.TabPage8.Controls.Add(Me.numload_delay4)
         Me.TabPage8.Controls.Add(Me.Label43)
-        resources.ApplyResources(Me.TabPage8, "TabPage8")
         Me.TabPage8.Name = "TabPage8"
+        Me.ToolTip1.SetToolTip(Me.TabPage8, resources.GetString("TabPage8.ToolTip"))
         '
         'Label40
         '
@@ -2113,25 +2244,28 @@ Partial Class Mainwindow
         Me.Label40.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label40.ForeColor = System.Drawing.SystemColors.Control
         Me.Label40.Name = "Label40"
+        Me.ToolTip1.SetToolTip(Me.Label40, resources.GetString("Label40.ToolTip"))
         '
         'numload_rate4
         '
+        resources.ApplyResources(Me.numload_rate4, "numload_rate4")
         Me.numload_rate4.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numload_rate4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_rate4, "numload_rate4")
         Me.numload_rate4.ForeColor = System.Drawing.SystemColors.Control
         Me.numload_rate4.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.numload_rate4.Name = "numload_rate4"
+        Me.ToolTip1.SetToolTip(Me.numload_rate4, resources.GetString("numload_rate4.ToolTip"))
         Me.numload_rate4.Value = New Decimal(New Integer() {40, 0, 0, 0})
         '
         'numload_delay4
         '
+        resources.ApplyResources(Me.numload_delay4, "numload_delay4")
         Me.numload_delay4.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numload_delay4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_delay4, "numload_delay4")
         Me.numload_delay4.ForeColor = System.Drawing.SystemColors.Control
         Me.numload_delay4.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
         Me.numload_delay4.Name = "numload_delay4"
+        Me.ToolTip1.SetToolTip(Me.numload_delay4, resources.GetString("numload_delay4.ToolTip"))
         Me.numload_delay4.Value = New Decimal(New Integer() {100000, 0, 0, 0})
         '
         'Label43
@@ -2140,16 +2274,18 @@ Partial Class Mainwindow
         Me.Label43.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label43.ForeColor = System.Drawing.SystemColors.Control
         Me.Label43.Name = "Label43"
+        Me.ToolTip1.SetToolTip(Me.Label43, resources.GetString("Label43.ToolTip"))
         '
         'TabPage9
         '
+        resources.ApplyResources(Me.TabPage9, "TabPage9")
         Me.TabPage9.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.TabPage9.Controls.Add(Me.Label44)
         Me.TabPage9.Controls.Add(Me.numload_rate5)
         Me.TabPage9.Controls.Add(Me.numload_delay5)
         Me.TabPage9.Controls.Add(Me.Label45)
-        resources.ApplyResources(Me.TabPage9, "TabPage9")
         Me.TabPage9.Name = "TabPage9"
+        Me.ToolTip1.SetToolTip(Me.TabPage9, resources.GetString("TabPage9.ToolTip"))
         '
         'Label44
         '
@@ -2157,25 +2293,28 @@ Partial Class Mainwindow
         Me.Label44.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label44.ForeColor = System.Drawing.SystemColors.Control
         Me.Label44.Name = "Label44"
+        Me.ToolTip1.SetToolTip(Me.Label44, resources.GetString("Label44.ToolTip"))
         '
         'numload_rate5
         '
+        resources.ApplyResources(Me.numload_rate5, "numload_rate5")
         Me.numload_rate5.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numload_rate5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_rate5, "numload_rate5")
         Me.numload_rate5.ForeColor = System.Drawing.SystemColors.Control
         Me.numload_rate5.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.numload_rate5.Name = "numload_rate5"
+        Me.ToolTip1.SetToolTip(Me.numload_rate5, resources.GetString("numload_rate5.ToolTip"))
         Me.numload_rate5.Value = New Decimal(New Integer() {40, 0, 0, 0})
         '
         'numload_delay5
         '
+        resources.ApplyResources(Me.numload_delay5, "numload_delay5")
         Me.numload_delay5.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numload_delay5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_delay5, "numload_delay5")
         Me.numload_delay5.ForeColor = System.Drawing.SystemColors.Control
         Me.numload_delay5.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
         Me.numload_delay5.Name = "numload_delay5"
+        Me.ToolTip1.SetToolTip(Me.numload_delay5, resources.GetString("numload_delay5.ToolTip"))
         Me.numload_delay5.Value = New Decimal(New Integer() {100000, 0, 0, 0})
         '
         'Label45
@@ -2184,16 +2323,18 @@ Partial Class Mainwindow
         Me.Label45.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label45.ForeColor = System.Drawing.SystemColors.Control
         Me.Label45.Name = "Label45"
+        Me.ToolTip1.SetToolTip(Me.Label45, resources.GetString("Label45.ToolTip"))
         '
         'TabPage10
         '
+        resources.ApplyResources(Me.TabPage10, "TabPage10")
         Me.TabPage10.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.TabPage10.Controls.Add(Me.Label47)
         Me.TabPage10.Controls.Add(Me.numload_rate6)
         Me.TabPage10.Controls.Add(Me.numload_delay6)
         Me.TabPage10.Controls.Add(Me.Label48)
-        resources.ApplyResources(Me.TabPage10, "TabPage10")
         Me.TabPage10.Name = "TabPage10"
+        Me.ToolTip1.SetToolTip(Me.TabPage10, resources.GetString("TabPage10.ToolTip"))
         '
         'Label47
         '
@@ -2201,25 +2342,28 @@ Partial Class Mainwindow
         Me.Label47.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label47.ForeColor = System.Drawing.SystemColors.Control
         Me.Label47.Name = "Label47"
+        Me.ToolTip1.SetToolTip(Me.Label47, resources.GetString("Label47.ToolTip"))
         '
         'numload_rate6
         '
+        resources.ApplyResources(Me.numload_rate6, "numload_rate6")
         Me.numload_rate6.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numload_rate6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_rate6, "numload_rate6")
         Me.numload_rate6.ForeColor = System.Drawing.SystemColors.Control
         Me.numload_rate6.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.numload_rate6.Name = "numload_rate6"
+        Me.ToolTip1.SetToolTip(Me.numload_rate6, resources.GetString("numload_rate6.ToolTip"))
         Me.numload_rate6.Value = New Decimal(New Integer() {40, 0, 0, 0})
         '
         'numload_delay6
         '
+        resources.ApplyResources(Me.numload_delay6, "numload_delay6")
         Me.numload_delay6.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numload_delay6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_delay6, "numload_delay6")
         Me.numload_delay6.ForeColor = System.Drawing.SystemColors.Control
         Me.numload_delay6.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
         Me.numload_delay6.Name = "numload_delay6"
+        Me.ToolTip1.SetToolTip(Me.numload_delay6, resources.GetString("numload_delay6.ToolTip"))
         Me.numload_delay6.Value = New Decimal(New Integer() {100000, 0, 0, 0})
         '
         'Label48
@@ -2228,16 +2372,18 @@ Partial Class Mainwindow
         Me.Label48.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label48.ForeColor = System.Drawing.SystemColors.Control
         Me.Label48.Name = "Label48"
+        Me.ToolTip1.SetToolTip(Me.Label48, resources.GetString("Label48.ToolTip"))
         '
         'TabPage11
         '
+        resources.ApplyResources(Me.TabPage11, "TabPage11")
         Me.TabPage11.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.TabPage11.Controls.Add(Me.Label50)
         Me.TabPage11.Controls.Add(Me.numload_rate7)
         Me.TabPage11.Controls.Add(Me.numload_delay7)
         Me.TabPage11.Controls.Add(Me.Label54)
-        resources.ApplyResources(Me.TabPage11, "TabPage11")
         Me.TabPage11.Name = "TabPage11"
+        Me.ToolTip1.SetToolTip(Me.TabPage11, resources.GetString("TabPage11.ToolTip"))
         '
         'Label50
         '
@@ -2245,25 +2391,28 @@ Partial Class Mainwindow
         Me.Label50.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label50.ForeColor = System.Drawing.SystemColors.Control
         Me.Label50.Name = "Label50"
+        Me.ToolTip1.SetToolTip(Me.Label50, resources.GetString("Label50.ToolTip"))
         '
         'numload_rate7
         '
+        resources.ApplyResources(Me.numload_rate7, "numload_rate7")
         Me.numload_rate7.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numload_rate7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_rate7, "numload_rate7")
         Me.numload_rate7.ForeColor = System.Drawing.SystemColors.Control
         Me.numload_rate7.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.numload_rate7.Name = "numload_rate7"
+        Me.ToolTip1.SetToolTip(Me.numload_rate7, resources.GetString("numload_rate7.ToolTip"))
         Me.numload_rate7.Value = New Decimal(New Integer() {40, 0, 0, 0})
         '
         'numload_delay7
         '
+        resources.ApplyResources(Me.numload_delay7, "numload_delay7")
         Me.numload_delay7.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numload_delay7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_delay7, "numload_delay7")
         Me.numload_delay7.ForeColor = System.Drawing.SystemColors.Control
         Me.numload_delay7.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
         Me.numload_delay7.Name = "numload_delay7"
+        Me.ToolTip1.SetToolTip(Me.numload_delay7, resources.GetString("numload_delay7.ToolTip"))
         Me.numload_delay7.Value = New Decimal(New Integer() {100000, 0, 0, 0})
         '
         'Label54
@@ -2272,16 +2421,18 @@ Partial Class Mainwindow
         Me.Label54.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label54.ForeColor = System.Drawing.SystemColors.Control
         Me.Label54.Name = "Label54"
+        Me.ToolTip1.SetToolTip(Me.Label54, resources.GetString("Label54.ToolTip"))
         '
         'TabPage12
         '
+        resources.ApplyResources(Me.TabPage12, "TabPage12")
         Me.TabPage12.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.TabPage12.Controls.Add(Me.Label55)
         Me.TabPage12.Controls.Add(Me.numload_rate8)
         Me.TabPage12.Controls.Add(Me.numload_delay8)
         Me.TabPage12.Controls.Add(Me.Label56)
-        resources.ApplyResources(Me.TabPage12, "TabPage12")
         Me.TabPage12.Name = "TabPage12"
+        Me.ToolTip1.SetToolTip(Me.TabPage12, resources.GetString("TabPage12.ToolTip"))
         '
         'Label55
         '
@@ -2289,25 +2440,28 @@ Partial Class Mainwindow
         Me.Label55.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label55.ForeColor = System.Drawing.SystemColors.Control
         Me.Label55.Name = "Label55"
+        Me.ToolTip1.SetToolTip(Me.Label55, resources.GetString("Label55.ToolTip"))
         '
         'numload_rate8
         '
+        resources.ApplyResources(Me.numload_rate8, "numload_rate8")
         Me.numload_rate8.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numload_rate8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_rate8, "numload_rate8")
         Me.numload_rate8.ForeColor = System.Drawing.SystemColors.Control
         Me.numload_rate8.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.numload_rate8.Name = "numload_rate8"
+        Me.ToolTip1.SetToolTip(Me.numload_rate8, resources.GetString("numload_rate8.ToolTip"))
         Me.numload_rate8.Value = New Decimal(New Integer() {40, 0, 0, 0})
         '
         'numload_delay8
         '
+        resources.ApplyResources(Me.numload_delay8, "numload_delay8")
         Me.numload_delay8.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numload_delay8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_delay8, "numload_delay8")
         Me.numload_delay8.ForeColor = System.Drawing.SystemColors.Control
         Me.numload_delay8.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
         Me.numload_delay8.Name = "numload_delay8"
+        Me.ToolTip1.SetToolTip(Me.numload_delay8, resources.GetString("numload_delay8.ToolTip"))
         Me.numload_delay8.Value = New Decimal(New Integer() {100000, 0, 0, 0})
         '
         'Label56
@@ -2316,16 +2470,18 @@ Partial Class Mainwindow
         Me.Label56.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label56.ForeColor = System.Drawing.SystemColors.Control
         Me.Label56.Name = "Label56"
+        Me.ToolTip1.SetToolTip(Me.Label56, resources.GetString("Label56.ToolTip"))
         '
         'TabPage13
         '
+        resources.ApplyResources(Me.TabPage13, "TabPage13")
         Me.TabPage13.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.TabPage13.Controls.Add(Me.Label57)
         Me.TabPage13.Controls.Add(Me.numload_rate9)
         Me.TabPage13.Controls.Add(Me.numload_delay9)
         Me.TabPage13.Controls.Add(Me.Label58)
-        resources.ApplyResources(Me.TabPage13, "TabPage13")
         Me.TabPage13.Name = "TabPage13"
+        Me.ToolTip1.SetToolTip(Me.TabPage13, resources.GetString("TabPage13.ToolTip"))
         '
         'Label57
         '
@@ -2333,25 +2489,28 @@ Partial Class Mainwindow
         Me.Label57.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label57.ForeColor = System.Drawing.SystemColors.Control
         Me.Label57.Name = "Label57"
+        Me.ToolTip1.SetToolTip(Me.Label57, resources.GetString("Label57.ToolTip"))
         '
         'numload_rate9
         '
+        resources.ApplyResources(Me.numload_rate9, "numload_rate9")
         Me.numload_rate9.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numload_rate9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_rate9, "numload_rate9")
         Me.numload_rate9.ForeColor = System.Drawing.SystemColors.Control
         Me.numload_rate9.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.numload_rate9.Name = "numload_rate9"
+        Me.ToolTip1.SetToolTip(Me.numload_rate9, resources.GetString("numload_rate9.ToolTip"))
         Me.numload_rate9.Value = New Decimal(New Integer() {40, 0, 0, 0})
         '
         'numload_delay9
         '
+        resources.ApplyResources(Me.numload_delay9, "numload_delay9")
         Me.numload_delay9.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numload_delay9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_delay9, "numload_delay9")
         Me.numload_delay9.ForeColor = System.Drawing.SystemColors.Control
         Me.numload_delay9.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
         Me.numload_delay9.Name = "numload_delay9"
+        Me.ToolTip1.SetToolTip(Me.numload_delay9, resources.GetString("numload_delay9.ToolTip"))
         Me.numload_delay9.Value = New Decimal(New Integer() {100000, 0, 0, 0})
         '
         'Label58
@@ -2360,16 +2519,18 @@ Partial Class Mainwindow
         Me.Label58.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label58.ForeColor = System.Drawing.SystemColors.Control
         Me.Label58.Name = "Label58"
+        Me.ToolTip1.SetToolTip(Me.Label58, resources.GetString("Label58.ToolTip"))
         '
         'TabPage14
         '
+        resources.ApplyResources(Me.TabPage14, "TabPage14")
         Me.TabPage14.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.TabPage14.Controls.Add(Me.Label59)
         Me.TabPage14.Controls.Add(Me.numload_rate10)
         Me.TabPage14.Controls.Add(Me.numload_delay10)
         Me.TabPage14.Controls.Add(Me.Label60)
-        resources.ApplyResources(Me.TabPage14, "TabPage14")
         Me.TabPage14.Name = "TabPage14"
+        Me.ToolTip1.SetToolTip(Me.TabPage14, resources.GetString("TabPage14.ToolTip"))
         '
         'Label59
         '
@@ -2377,25 +2538,28 @@ Partial Class Mainwindow
         Me.Label59.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label59.ForeColor = System.Drawing.SystemColors.Control
         Me.Label59.Name = "Label59"
+        Me.ToolTip1.SetToolTip(Me.Label59, resources.GetString("Label59.ToolTip"))
         '
         'numload_rate10
         '
+        resources.ApplyResources(Me.numload_rate10, "numload_rate10")
         Me.numload_rate10.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numload_rate10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_rate10, "numload_rate10")
         Me.numload_rate10.ForeColor = System.Drawing.SystemColors.Control
         Me.numload_rate10.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.numload_rate10.Name = "numload_rate10"
+        Me.ToolTip1.SetToolTip(Me.numload_rate10, resources.GetString("numload_rate10.ToolTip"))
         Me.numload_rate10.Value = New Decimal(New Integer() {40, 0, 0, 0})
         '
         'numload_delay10
         '
+        resources.ApplyResources(Me.numload_delay10, "numload_delay10")
         Me.numload_delay10.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numload_delay10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_delay10, "numload_delay10")
         Me.numload_delay10.ForeColor = System.Drawing.SystemColors.Control
         Me.numload_delay10.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
         Me.numload_delay10.Name = "numload_delay10"
+        Me.ToolTip1.SetToolTip(Me.numload_delay10, resources.GetString("numload_delay10.ToolTip"))
         Me.numload_delay10.Value = New Decimal(New Integer() {100000, 0, 0, 0})
         '
         'Label60
@@ -2404,6 +2568,7 @@ Partial Class Mainwindow
         Me.Label60.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label60.ForeColor = System.Drawing.SystemColors.Control
         Me.Label60.Name = "Label60"
+        Me.ToolTip1.SetToolTip(Me.Label60, resources.GetString("Label60.ToolTip"))
         '
         'chkload5
         '
@@ -2411,6 +2576,7 @@ Partial Class Mainwindow
         Me.chkload5.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.chkload5.ForeColor = System.Drawing.SystemColors.Control
         Me.chkload5.Name = "chkload5"
+        Me.ToolTip1.SetToolTip(Me.chkload5, resources.GetString("chkload5.ToolTip"))
         Me.chkload5.UseVisualStyleBackColor = False
         '
         'chkload4
@@ -2419,6 +2585,7 @@ Partial Class Mainwindow
         Me.chkload4.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.chkload4.ForeColor = System.Drawing.SystemColors.Control
         Me.chkload4.Name = "chkload4"
+        Me.ToolTip1.SetToolTip(Me.chkload4, resources.GetString("chkload4.ToolTip"))
         Me.chkload4.UseVisualStyleBackColor = False
         '
         'chkload2
@@ -2427,6 +2594,7 @@ Partial Class Mainwindow
         Me.chkload2.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.chkload2.ForeColor = System.Drawing.SystemColors.Control
         Me.chkload2.Name = "chkload2"
+        Me.ToolTip1.SetToolTip(Me.chkload2, resources.GetString("chkload2.ToolTip"))
         Me.chkload2.UseVisualStyleBackColor = False
         '
         'chkload9
@@ -2435,10 +2603,12 @@ Partial Class Mainwindow
         Me.chkload9.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.chkload9.ForeColor = System.Drawing.SystemColors.Control
         Me.chkload9.Name = "chkload9"
+        Me.ToolTip1.SetToolTip(Me.chkload9, resources.GetString("chkload9.ToolTip"))
         Me.chkload9.UseVisualStyleBackColor = False
         '
         'pnl_hotkey
         '
+        resources.ApplyResources(Me.pnl_hotkey, "pnl_hotkey")
         Me.pnl_hotkey.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.pnl_hotkey.Controls.Add(Me.Label119)
         Me.pnl_hotkey.Controls.Add(Me.txtreset_ash_key)
@@ -2479,8 +2649,8 @@ Partial Class Mainwindow
         Me.pnl_hotkey.Controls.Add(Me.chknamedpipe)
         Me.pnl_hotkey.Controls.Add(Me.chkshift_reset)
         Me.pnl_hotkey.Controls.Add(Me.chkshift_skip)
-        resources.ApplyResources(Me.pnl_hotkey, "pnl_hotkey")
         Me.pnl_hotkey.Name = "pnl_hotkey"
+        Me.ToolTip1.SetToolTip(Me.pnl_hotkey, resources.GetString("pnl_hotkey.ToolTip"))
         '
         'Label119
         '
@@ -2488,33 +2658,37 @@ Partial Class Mainwindow
         Me.Label119.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label119.ForeColor = System.Drawing.SystemColors.Control
         Me.Label119.Name = "Label119"
+        Me.ToolTip1.SetToolTip(Me.Label119, resources.GetString("Label119.ToolTip"))
         '
         'txtreset_ash_key
         '
+        resources.ApplyResources(Me.txtreset_ash_key, "txtreset_ash_key")
         Me.txtreset_ash_key.BackColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(2, Byte), Integer))
         Me.txtreset_ash_key.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtreset_ash_key, "txtreset_ash_key")
         Me.txtreset_ash_key.ForeColor = System.Drawing.SystemColors.Control
         Me.txtreset_ash_key.Name = "txtreset_ash_key"
         Me.txtreset_ash_key.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtreset_ash_key, resources.GetString("txtreset_ash_key.ToolTip"))
         '
         'txtundo_ash_key
         '
+        resources.ApplyResources(Me.txtundo_ash_key, "txtundo_ash_key")
         Me.txtundo_ash_key.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.txtundo_ash_key.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtundo_ash_key, "txtundo_ash_key")
         Me.txtundo_ash_key.ForeColor = System.Drawing.SystemColors.Control
         Me.txtundo_ash_key.Name = "txtundo_ash_key"
         Me.txtundo_ash_key.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtundo_ash_key, resources.GetString("txtundo_ash_key.ToolTip"))
         '
         'txtskip_ash_key
         '
+        resources.ApplyResources(Me.txtskip_ash_key, "txtskip_ash_key")
         Me.txtskip_ash_key.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.txtskip_ash_key.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtskip_ash_key, "txtskip_ash_key")
         Me.txtskip_ash_key.ForeColor = System.Drawing.SystemColors.Control
         Me.txtskip_ash_key.Name = "txtskip_ash_key"
         Me.txtskip_ash_key.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtskip_ash_key, resources.GetString("txtskip_ash_key.ToolTip"))
         '
         'Label96
         '
@@ -2522,25 +2696,28 @@ Partial Class Mainwindow
         Me.Label96.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label96.ForeColor = System.Drawing.SystemColors.Control
         Me.Label96.Name = "Label96"
+        Me.ToolTip1.SetToolTip(Me.Label96, resources.GetString("Label96.ToolTip"))
         '
         'numpresstime
         '
+        resources.ApplyResources(Me.numpresstime, "numpresstime")
         Me.numpresstime.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numpresstime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numpresstime, "numpresstime")
         Me.numpresstime.ForeColor = System.Drawing.SystemColors.Control
         Me.numpresstime.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.numpresstime.Name = "numpresstime"
+        Me.ToolTip1.SetToolTip(Me.numpresstime, resources.GetString("numpresstime.ToolTip"))
         Me.numpresstime.Value = New Decimal(New Integer() {50, 0, 0, 0})
         '
         'txtresume_key
         '
+        resources.ApplyResources(Me.txtresume_key, "txtresume_key")
         Me.txtresume_key.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.txtresume_key.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtresume_key, "txtresume_key")
         Me.txtresume_key.ForeColor = System.Drawing.SystemColors.Control
         Me.txtresume_key.Name = "txtresume_key"
         Me.txtresume_key.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtresume_key, resources.GetString("txtresume_key.ToolTip"))
         '
         'Label85
         '
@@ -2548,6 +2725,7 @@ Partial Class Mainwindow
         Me.Label85.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label85.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label85.Name = "Label85"
+        Me.ToolTip1.SetToolTip(Me.Label85, resources.GetString("Label85.ToolTip"))
         '
         'Label28
         '
@@ -2555,6 +2733,7 @@ Partial Class Mainwindow
         Me.Label28.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label28.ForeColor = System.Drawing.SystemColors.Control
         Me.Label28.Name = "Label28"
+        Me.ToolTip1.SetToolTip(Me.Label28, resources.GetString("Label28.ToolTip"))
         '
         'Label7
         '
@@ -2562,6 +2741,7 @@ Partial Class Mainwindow
         Me.Label7.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label7.ForeColor = System.Drawing.SystemColors.Control
         Me.Label7.Name = "Label7"
+        Me.ToolTip1.SetToolTip(Me.Label7, resources.GetString("Label7.ToolTip"))
         '
         'chkalt_resume
         '
@@ -2569,6 +2749,7 @@ Partial Class Mainwindow
         Me.chkalt_resume.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.chkalt_resume.ForeColor = System.Drawing.SystemColors.Control
         Me.chkalt_resume.Name = "chkalt_resume"
+        Me.ToolTip1.SetToolTip(Me.chkalt_resume, resources.GetString("chkalt_resume.ToolTip"))
         Me.chkalt_resume.UseVisualStyleBackColor = False
         '
         'chkctrl_resume
@@ -2577,16 +2758,18 @@ Partial Class Mainwindow
         Me.chkctrl_resume.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.chkctrl_resume.ForeColor = System.Drawing.SystemColors.Control
         Me.chkctrl_resume.Name = "chkctrl_resume"
+        Me.ToolTip1.SetToolTip(Me.chkctrl_resume, resources.GetString("chkctrl_resume.ToolTip"))
         Me.chkctrl_resume.UseVisualStyleBackColor = False
         '
         'txtsplit_key
         '
+        resources.ApplyResources(Me.txtsplit_key, "txtsplit_key")
         Me.txtsplit_key.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.txtsplit_key.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtsplit_key, "txtsplit_key")
         Me.txtsplit_key.ForeColor = System.Drawing.SystemColors.Control
         Me.txtsplit_key.Name = "txtsplit_key"
         Me.txtsplit_key.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtsplit_key, resources.GetString("txtsplit_key.ToolTip"))
         '
         'chkctrl_reset
         '
@@ -2594,6 +2777,7 @@ Partial Class Mainwindow
         Me.chkctrl_reset.BackColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(2, Byte), Integer))
         Me.chkctrl_reset.ForeColor = System.Drawing.SystemColors.Control
         Me.chkctrl_reset.Name = "chkctrl_reset"
+        Me.ToolTip1.SetToolTip(Me.chkctrl_reset, resources.GetString("chkctrl_reset.ToolTip"))
         Me.chkctrl_reset.UseVisualStyleBackColor = False
         '
         'Label8
@@ -2602,6 +2786,7 @@ Partial Class Mainwindow
         Me.Label8.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label8.ForeColor = System.Drawing.SystemColors.Control
         Me.Label8.Name = "Label8"
+        Me.ToolTip1.SetToolTip(Me.Label8, resources.GetString("Label8.ToolTip"))
         '
         'chkshift_resume
         '
@@ -2609,6 +2794,7 @@ Partial Class Mainwindow
         Me.chkshift_resume.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.chkshift_resume.ForeColor = System.Drawing.SystemColors.Control
         Me.chkshift_resume.Name = "chkshift_resume"
+        Me.ToolTip1.SetToolTip(Me.chkshift_resume, resources.GetString("chkshift_resume.ToolTip"))
         Me.chkshift_resume.UseVisualStyleBackColor = False
         '
         'Label9
@@ -2617,6 +2803,7 @@ Partial Class Mainwindow
         Me.Label9.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label9.ForeColor = System.Drawing.SystemColors.Control
         Me.Label9.Name = "Label9"
+        Me.ToolTip1.SetToolTip(Me.Label9, resources.GetString("Label9.ToolTip"))
         '
         'chkalt_reset
         '
@@ -2624,6 +2811,7 @@ Partial Class Mainwindow
         Me.chkalt_reset.BackColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(2, Byte), Integer))
         Me.chkalt_reset.ForeColor = System.Drawing.SystemColors.Control
         Me.chkalt_reset.Name = "chkalt_reset"
+        Me.ToolTip1.SetToolTip(Me.chkalt_reset, resources.GetString("chkalt_reset.ToolTip"))
         Me.chkalt_reset.UseVisualStyleBackColor = False
         '
         'chkundoskip
@@ -2632,25 +2820,28 @@ Partial Class Mainwindow
         Me.chkundoskip.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.chkundoskip.ForeColor = System.Drawing.SystemColors.Control
         Me.chkundoskip.Name = "chkundoskip"
+        Me.ToolTip1.SetToolTip(Me.chkundoskip, resources.GetString("chkundoskip.ToolTip"))
         Me.chkundoskip.UseVisualStyleBackColor = False
         '
         'txtpause_key
         '
+        resources.ApplyResources(Me.txtpause_key, "txtpause_key")
         Me.txtpause_key.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.txtpause_key.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtpause_key, "txtpause_key")
         Me.txtpause_key.ForeColor = System.Drawing.SystemColors.Control
         Me.txtpause_key.Name = "txtpause_key"
         Me.txtpause_key.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtpause_key, resources.GetString("txtpause_key.ToolTip"))
         '
         'txtreset_key
         '
+        resources.ApplyResources(Me.txtreset_key, "txtreset_key")
         Me.txtreset_key.BackColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(2, Byte), Integer))
         Me.txtreset_key.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtreset_key, "txtreset_key")
         Me.txtreset_key.ForeColor = System.Drawing.SystemColors.Control
         Me.txtreset_key.Name = "txtreset_key"
         Me.txtreset_key.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtreset_key, resources.GetString("txtreset_key.ToolTip"))
         '
         'chkalt
         '
@@ -2658,6 +2849,7 @@ Partial Class Mainwindow
         Me.chkalt.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.chkalt.ForeColor = System.Drawing.SystemColors.Control
         Me.chkalt.Name = "chkalt"
+        Me.ToolTip1.SetToolTip(Me.chkalt, resources.GetString("chkalt.ToolTip"))
         Me.chkalt.UseVisualStyleBackColor = False
         '
         'chkshift_undo
@@ -2666,6 +2858,7 @@ Partial Class Mainwindow
         Me.chkshift_undo.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.chkshift_undo.ForeColor = System.Drawing.SystemColors.Control
         Me.chkshift_undo.Name = "chkshift_undo"
+        Me.ToolTip1.SetToolTip(Me.chkshift_undo, resources.GetString("chkshift_undo.ToolTip"))
         Me.chkshift_undo.UseVisualStyleBackColor = False
         '
         'Label27
@@ -2674,6 +2867,7 @@ Partial Class Mainwindow
         Me.Label27.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label27.ForeColor = System.Drawing.SystemColors.Control
         Me.Label27.Name = "Label27"
+        Me.ToolTip1.SetToolTip(Me.Label27, resources.GetString("Label27.ToolTip"))
         '
         'Label10
         '
@@ -2681,6 +2875,7 @@ Partial Class Mainwindow
         Me.Label10.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label10.ForeColor = System.Drawing.SystemColors.Control
         Me.Label10.Name = "Label10"
+        Me.ToolTip1.SetToolTip(Me.Label10, resources.GetString("Label10.ToolTip"))
         '
         'chkctrl
         '
@@ -2688,6 +2883,7 @@ Partial Class Mainwindow
         Me.chkctrl.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.chkctrl.ForeColor = System.Drawing.SystemColors.Control
         Me.chkctrl.Name = "chkctrl"
+        Me.ToolTip1.SetToolTip(Me.chkctrl, resources.GetString("chkctrl.ToolTip"))
         Me.chkctrl.UseVisualStyleBackColor = False
         '
         'chkctrl_undo
@@ -2696,6 +2892,7 @@ Partial Class Mainwindow
         Me.chkctrl_undo.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.chkctrl_undo.ForeColor = System.Drawing.SystemColors.Control
         Me.chkctrl_undo.Name = "chkctrl_undo"
+        Me.ToolTip1.SetToolTip(Me.chkctrl_undo, resources.GetString("chkctrl_undo.ToolTip"))
         Me.chkctrl_undo.UseVisualStyleBackColor = False
         '
         'chkalt_pause
@@ -2704,16 +2901,18 @@ Partial Class Mainwindow
         Me.chkalt_pause.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.chkalt_pause.ForeColor = System.Drawing.SystemColors.Control
         Me.chkalt_pause.Name = "chkalt_pause"
+        Me.ToolTip1.SetToolTip(Me.chkalt_pause, resources.GetString("chkalt_pause.ToolTip"))
         Me.chkalt_pause.UseVisualStyleBackColor = False
         '
         'txtundo_key
         '
+        resources.ApplyResources(Me.txtundo_key, "txtundo_key")
         Me.txtundo_key.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.txtundo_key.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtundo_key, "txtundo_key")
         Me.txtundo_key.ForeColor = System.Drawing.SystemColors.Control
         Me.txtundo_key.Name = "txtundo_key"
         Me.txtundo_key.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtundo_key, resources.GetString("txtundo_key.ToolTip"))
         '
         'chkshift
         '
@@ -2721,6 +2920,7 @@ Partial Class Mainwindow
         Me.chkshift.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.chkshift.ForeColor = System.Drawing.SystemColors.Control
         Me.chkshift.Name = "chkshift"
+        Me.ToolTip1.SetToolTip(Me.chkshift, resources.GetString("chkshift.ToolTip"))
         Me.chkshift.UseVisualStyleBackColor = False
         '
         'chkalt_undo
@@ -2729,6 +2929,7 @@ Partial Class Mainwindow
         Me.chkalt_undo.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.chkalt_undo.ForeColor = System.Drawing.SystemColors.Control
         Me.chkalt_undo.Name = "chkalt_undo"
+        Me.ToolTip1.SetToolTip(Me.chkalt_undo, resources.GetString("chkalt_undo.ToolTip"))
         Me.chkalt_undo.UseVisualStyleBackColor = False
         '
         'chkctrl_pause
@@ -2737,16 +2938,18 @@ Partial Class Mainwindow
         Me.chkctrl_pause.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.chkctrl_pause.ForeColor = System.Drawing.SystemColors.Control
         Me.chkctrl_pause.Name = "chkctrl_pause"
+        Me.ToolTip1.SetToolTip(Me.chkctrl_pause, resources.GetString("chkctrl_pause.ToolTip"))
         Me.chkctrl_pause.UseVisualStyleBackColor = False
         '
         'txtskip_key
         '
+        resources.ApplyResources(Me.txtskip_key, "txtskip_key")
         Me.txtskip_key.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.txtskip_key.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtskip_key, "txtskip_key")
         Me.txtskip_key.ForeColor = System.Drawing.SystemColors.Control
         Me.txtskip_key.Name = "txtskip_key"
         Me.txtskip_key.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtskip_key, resources.GetString("txtskip_key.ToolTip"))
         '
         'chkshift_pause
         '
@@ -2754,6 +2957,7 @@ Partial Class Mainwindow
         Me.chkshift_pause.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.chkshift_pause.ForeColor = System.Drawing.SystemColors.Control
         Me.chkshift_pause.Name = "chkshift_pause"
+        Me.ToolTip1.SetToolTip(Me.chkshift_pause, resources.GetString("chkshift_pause.ToolTip"))
         Me.chkshift_pause.UseVisualStyleBackColor = False
         '
         'chkalt_skip
@@ -2762,6 +2966,7 @@ Partial Class Mainwindow
         Me.chkalt_skip.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.chkalt_skip.ForeColor = System.Drawing.SystemColors.Control
         Me.chkalt_skip.Name = "chkalt_skip"
+        Me.ToolTip1.SetToolTip(Me.chkalt_skip, resources.GetString("chkalt_skip.ToolTip"))
         Me.chkalt_skip.UseVisualStyleBackColor = False
         '
         'chkctrl_skip
@@ -2770,6 +2975,7 @@ Partial Class Mainwindow
         Me.chkctrl_skip.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.chkctrl_skip.ForeColor = System.Drawing.SystemColors.Control
         Me.chkctrl_skip.Name = "chkctrl_skip"
+        Me.ToolTip1.SetToolTip(Me.chkctrl_skip, resources.GetString("chkctrl_skip.ToolTip"))
         Me.chkctrl_skip.UseVisualStyleBackColor = False
         '
         'chknamedpipe
@@ -2778,6 +2984,7 @@ Partial Class Mainwindow
         Me.chknamedpipe.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.chknamedpipe.ForeColor = System.Drawing.SystemColors.Control
         Me.chknamedpipe.Name = "chknamedpipe"
+        Me.ToolTip1.SetToolTip(Me.chknamedpipe, resources.GetString("chknamedpipe.ToolTip"))
         Me.chknamedpipe.UseVisualStyleBackColor = False
         '
         'chkshift_reset
@@ -2786,6 +2993,7 @@ Partial Class Mainwindow
         Me.chkshift_reset.BackColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(2, Byte), Integer))
         Me.chkshift_reset.ForeColor = System.Drawing.SystemColors.Control
         Me.chkshift_reset.Name = "chkshift_reset"
+        Me.ToolTip1.SetToolTip(Me.chkshift_reset, resources.GetString("chkshift_reset.ToolTip"))
         Me.chkshift_reset.UseVisualStyleBackColor = False
         '
         'chkshift_skip
@@ -2794,20 +3002,23 @@ Partial Class Mainwindow
         Me.chkshift_skip.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.chkshift_skip.ForeColor = System.Drawing.SystemColors.Control
         Me.chkshift_skip.Name = "chkshift_skip"
+        Me.ToolTip1.SetToolTip(Me.chkshift_skip, resources.GetString("chkshift_skip.ToolTip"))
         Me.chkshift_skip.UseVisualStyleBackColor = False
         '
         'listsetcontents
         '
+        resources.ApplyResources(Me.listsetcontents, "listsetcontents")
         Me.listsetcontents.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.listsetcontents.BorderStyle = System.Windows.Forms.BorderStyle.None
-        resources.ApplyResources(Me.listsetcontents, "listsetcontents")
         Me.listsetcontents.ForeColor = System.Drawing.SystemColors.Control
         Me.listsetcontents.FormattingEnabled = True
         Me.listsetcontents.Items.AddRange(New Object() {resources.GetString("listsetcontents.Items"), resources.GetString("listsetcontents.Items1"), resources.GetString("listsetcontents.Items2"), resources.GetString("listsetcontents.Items3"), resources.GetString("listsetcontents.Items4"), resources.GetString("listsetcontents.Items5"), resources.GetString("listsetcontents.Items6"), resources.GetString("listsetcontents.Items7")})
         Me.listsetcontents.Name = "listsetcontents"
+        Me.ToolTip1.SetToolTip(Me.listsetcontents, resources.GetString("listsetcontents.ToolTip"))
         '
         'pnl_cvparameter
         '
+        resources.ApplyResources(Me.pnl_cvparameter, "pnl_cvparameter")
         Me.pnl_cvparameter.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.pnl_cvparameter.Controls.Add(Me.Label62)
         Me.pnl_cvparameter.Controls.Add(Me.Label81)
@@ -2820,8 +3031,8 @@ Partial Class Mainwindow
         Me.pnl_cvparameter.Controls.Add(Me.btnresetup)
         Me.pnl_cvparameter.Controls.Add(Me._moji5)
         Me.pnl_cvparameter.Controls.Add(Me.cmbcv_device)
-        resources.ApplyResources(Me.pnl_cvparameter, "pnl_cvparameter")
         Me.pnl_cvparameter.Name = "pnl_cvparameter"
+        Me.ToolTip1.SetToolTip(Me.pnl_cvparameter, resources.GetString("pnl_cvparameter.ToolTip"))
         '
         'Label62
         '
@@ -2829,6 +3040,7 @@ Partial Class Mainwindow
         Me.Label62.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label62.ForeColor = System.Drawing.SystemColors.Control
         Me.Label62.Name = "Label62"
+        Me.ToolTip1.SetToolTip(Me.Label62, resources.GetString("Label62.ToolTip"))
         '
         'Label81
         '
@@ -2836,6 +3048,7 @@ Partial Class Mainwindow
         Me.Label81.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label81.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label81.Name = "Label81"
+        Me.ToolTip1.SetToolTip(Me.Label81, resources.GetString("Label81.ToolTip"))
         '
         'Label61
         '
@@ -2843,6 +3056,7 @@ Partial Class Mainwindow
         Me.Label61.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label61.ForeColor = System.Drawing.SystemColors.Control
         Me.Label61.Name = "Label61"
+        Me.ToolTip1.SetToolTip(Me.Label61, resources.GetString("Label61.ToolTip"))
         '
         '_moji6
         '
@@ -2850,53 +3064,59 @@ Partial Class Mainwindow
         Me._moji6.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me._moji6.ForeColor = System.Drawing.SystemColors.Control
         Me._moji6.Name = "_moji6"
+        Me.ToolTip1.SetToolTip(Me._moji6, resources.GetString("_moji6.ToolTip"))
         '
         'numcv_framerate
         '
+        resources.ApplyResources(Me.numcv_framerate, "numcv_framerate")
         Me.numcv_framerate.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numcv_framerate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numcv_framerate, "numcv_framerate")
         Me.numcv_framerate.ForeColor = System.Drawing.SystemColors.Control
         Me.numcv_framerate.Maximum = New Decimal(New Integer() {180, 0, 0, 0})
         Me.numcv_framerate.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.numcv_framerate.Name = "numcv_framerate"
+        Me.ToolTip1.SetToolTip(Me.numcv_framerate, resources.GetString("numcv_framerate.ToolTip"))
         Me.numcv_framerate.Value = New Decimal(New Integer() {30, 0, 0, 0})
         '
         'btnconnect_camera
         '
-        Me.btnconnect_camera.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btnconnect_camera, "btnconnect_camera")
+        Me.btnconnect_camera.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btnconnect_camera.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btnconnect_camera.Name = "btnconnect_camera"
+        Me.ToolTip1.SetToolTip(Me.btnconnect_camera, resources.GetString("btnconnect_camera.ToolTip"))
         Me.btnconnect_camera.UseVisualStyleBackColor = False
         '
         'cmbcv_resolution
         '
+        resources.ApplyResources(Me.cmbcv_resolution, "cmbcv_resolution")
         Me.cmbcv_resolution.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.cmbcv_resolution.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        resources.ApplyResources(Me.cmbcv_resolution, "cmbcv_resolution")
         Me.cmbcv_resolution.ForeColor = System.Drawing.SystemColors.Control
         Me.cmbcv_resolution.FormattingEnabled = True
         Me.cmbcv_resolution.Name = "cmbcv_resolution"
+        Me.ToolTip1.SetToolTip(Me.cmbcv_resolution, resources.GetString("cmbcv_resolution.ToolTip"))
         '
         'numcv_device
         '
+        resources.ApplyResources(Me.numcv_device, "numcv_device")
         Me.numcv_device.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.numcv_device.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.numcv_device.DataBindings.Add(New System.Windows.Forms.Binding("Value", Global.AutoSplitHelper_OpenCV.My.MySettings.Default, "numcv_device", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
-        resources.ApplyResources(Me.numcv_device, "numcv_device")
         Me.numcv_device.ForeColor = System.Drawing.SystemColors.Control
         Me.numcv_device.Maximum = New Decimal(New Integer() {9999, 0, 0, 0})
         Me.numcv_device.Minimum = New Decimal(New Integer() {1920, 0, 0, -2147483648})
         Me.numcv_device.Name = "numcv_device"
+        Me.ToolTip1.SetToolTip(Me.numcv_device, resources.GetString("numcv_device.ToolTip"))
         Me.numcv_device.Value = Global.AutoSplitHelper_OpenCV.My.MySettings.Default.numcv_device
         '
         'btnresetup
         '
-        Me.btnresetup.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btnresetup, "btnresetup")
+        Me.btnresetup.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btnresetup.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btnresetup.Name = "btnresetup"
+        Me.ToolTip1.SetToolTip(Me.btnresetup, resources.GetString("btnresetup.ToolTip"))
         Me.btnresetup.UseVisualStyleBackColor = False
         '
         '_moji5
@@ -2905,19 +3125,22 @@ Partial Class Mainwindow
         Me._moji5.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me._moji5.ForeColor = System.Drawing.SystemColors.Control
         Me._moji5.Name = "_moji5"
+        Me.ToolTip1.SetToolTip(Me._moji5, resources.GetString("_moji5.ToolTip"))
         '
         'cmbcv_device
         '
+        resources.ApplyResources(Me.cmbcv_device, "cmbcv_device")
         Me.cmbcv_device.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.cmbcv_device.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        resources.ApplyResources(Me.cmbcv_device, "cmbcv_device")
         Me.cmbcv_device.ForeColor = System.Drawing.SystemColors.Control
         Me.cmbcv_device.FormattingEnabled = True
         Me.cmbcv_device.Items.AddRange(New Object() {resources.GetString("cmbcv_device.Items"), resources.GetString("cmbcv_device.Items1"), resources.GetString("cmbcv_device.Items2")})
         Me.cmbcv_device.Name = "cmbcv_device"
+        Me.ToolTip1.SetToolTip(Me.cmbcv_device, resources.GetString("cmbcv_device.ToolTip"))
         '
         'pnl_focus
         '
+        resources.ApplyResources(Me.pnl_focus, "pnl_focus")
         Me.pnl_focus.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.pnl_focus.Controls.Add(Me.lblpid_1st)
         Me.pnl_focus.Controls.Add(Me.Label82)
@@ -2933,8 +3156,8 @@ Partial Class Mainwindow
         Me.pnl_focus.Controls.Add(Me.cmbsomeapp)
         Me.pnl_focus.Controls.Add(Me.btnaddapp1)
         Me.pnl_focus.Controls.Add(Me.Label1)
-        resources.ApplyResources(Me.pnl_focus, "pnl_focus")
         Me.pnl_focus.Name = "pnl_focus"
+        Me.ToolTip1.SetToolTip(Me.pnl_focus, resources.GetString("pnl_focus.ToolTip"))
         '
         'lblpid_1st
         '
@@ -2942,6 +3165,7 @@ Partial Class Mainwindow
         Me.lblpid_1st.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.lblpid_1st.ForeColor = System.Drawing.Color.LightGray
         Me.lblpid_1st.Name = "lblpid_1st"
+        Me.ToolTip1.SetToolTip(Me.lblpid_1st, resources.GetString("lblpid_1st.ToolTip"))
         '
         'Label82
         '
@@ -2949,6 +3173,7 @@ Partial Class Mainwindow
         Me.Label82.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label82.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label82.Name = "Label82"
+        Me.ToolTip1.SetToolTip(Me.Label82, resources.GetString("Label82.ToolTip"))
         '
         'chkactiveapp
         '
@@ -2956,41 +3181,46 @@ Partial Class Mainwindow
         Me.chkactiveapp.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.chkactiveapp.ForeColor = System.Drawing.SystemColors.Control
         Me.chkactiveapp.Name = "chkactiveapp"
+        Me.ToolTip1.SetToolTip(Me.chkactiveapp, resources.GetString("chkactiveapp.ToolTip"))
         Me.chkactiveapp.UseVisualStyleBackColor = False
         '
         'cmbtimer
         '
+        resources.ApplyResources(Me.cmbtimer, "cmbtimer")
         Me.cmbtimer.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.cmbtimer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        resources.ApplyResources(Me.cmbtimer, "cmbtimer")
         Me.cmbtimer.ForeColor = System.Drawing.SystemColors.Control
         Me.cmbtimer.FormattingEnabled = True
         Me.cmbtimer.Name = "cmbtimer"
+        Me.ToolTip1.SetToolTip(Me.cmbtimer, resources.GetString("cmbtimer.ToolTip"))
         '
         'btnaddapp2
         '
-        Me.btnaddapp2.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btnaddapp2, "btnaddapp2")
+        Me.btnaddapp2.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btnaddapp2.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btnaddapp2.Name = "btnaddapp2"
+        Me.ToolTip1.SetToolTip(Me.btnaddapp2, resources.GetString("btnaddapp2.ToolTip"))
         Me.btnaddapp2.UseVisualStyleBackColor = False
         '
         'numsendsleep
         '
+        resources.ApplyResources(Me.numsendsleep, "numsendsleep")
         Me.numsendsleep.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numsendsleep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numsendsleep, "numsendsleep")
         Me.numsendsleep.ForeColor = System.Drawing.SystemColors.Control
         Me.numsendsleep.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
         Me.numsendsleep.Name = "numsendsleep"
+        Me.ToolTip1.SetToolTip(Me.numsendsleep, resources.GetString("numsendsleep.ToolTip"))
         Me.numsendsleep.Value = New Decimal(New Integer() {20, 0, 0, 0})
         '
         'btngetsomeactive
         '
-        Me.btngetsomeactive.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btngetsomeactive, "btngetsomeactive")
+        Me.btngetsomeactive.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btngetsomeactive.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btngetsomeactive.Name = "btngetsomeactive"
+        Me.ToolTip1.SetToolTip(Me.btngetsomeactive, resources.GetString("btngetsomeactive.ToolTip"))
         Me.btngetsomeactive.UseVisualStyleBackColor = False
         '
         'chkactivesomeapp
@@ -2999,47 +3229,53 @@ Partial Class Mainwindow
         Me.chkactivesomeapp.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.chkactivesomeapp.ForeColor = System.Drawing.SystemColors.Control
         Me.chkactivesomeapp.Name = "chkactivesomeapp"
+        Me.ToolTip1.SetToolTip(Me.chkactivesomeapp, resources.GetString("chkactivesomeapp.ToolTip"))
         Me.chkactivesomeapp.UseVisualStyleBackColor = False
         '
         'btndeleteitem_someapp
         '
-        Me.btndeleteitem_someapp.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btndeleteitem_someapp, "btndeleteitem_someapp")
+        Me.btndeleteitem_someapp.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btndeleteitem_someapp.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btndeleteitem_someapp.Name = "btndeleteitem_someapp"
+        Me.ToolTip1.SetToolTip(Me.btndeleteitem_someapp, resources.GetString("btndeleteitem_someapp.ToolTip"))
         Me.btndeleteitem_someapp.UseVisualStyleBackColor = False
         '
         'btngettimer
         '
-        Me.btngettimer.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btngettimer, "btngettimer")
+        Me.btngettimer.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btngettimer.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btngettimer.Name = "btngettimer"
+        Me.ToolTip1.SetToolTip(Me.btngettimer, resources.GetString("btngettimer.ToolTip"))
         Me.btngettimer.UseVisualStyleBackColor = False
         '
         'btndelete_timer
         '
-        Me.btndelete_timer.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btndelete_timer, "btndelete_timer")
+        Me.btndelete_timer.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btndelete_timer.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btndelete_timer.Name = "btndelete_timer"
+        Me.ToolTip1.SetToolTip(Me.btndelete_timer, resources.GetString("btndelete_timer.ToolTip"))
         Me.btndelete_timer.UseVisualStyleBackColor = False
         '
         'cmbsomeapp
         '
+        resources.ApplyResources(Me.cmbsomeapp, "cmbsomeapp")
         Me.cmbsomeapp.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.cmbsomeapp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        resources.ApplyResources(Me.cmbsomeapp, "cmbsomeapp")
         Me.cmbsomeapp.ForeColor = System.Drawing.SystemColors.Control
         Me.cmbsomeapp.FormattingEnabled = True
         Me.cmbsomeapp.Name = "cmbsomeapp"
+        Me.ToolTip1.SetToolTip(Me.cmbsomeapp, resources.GetString("cmbsomeapp.ToolTip"))
         '
         'btnaddapp1
         '
-        Me.btnaddapp1.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btnaddapp1, "btnaddapp1")
+        Me.btnaddapp1.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btnaddapp1.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btnaddapp1.Name = "btnaddapp1"
+        Me.ToolTip1.SetToolTip(Me.btnaddapp1, resources.GetString("btnaddapp1.ToolTip"))
         Me.btnaddapp1.UseVisualStyleBackColor = False
         '
         'Label1
@@ -3048,9 +3284,11 @@ Partial Class Mainwindow
         Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label1.ForeColor = System.Drawing.SystemColors.Control
         Me.Label1.Name = "Label1"
+        Me.ToolTip1.SetToolTip(Me.Label1, resources.GetString("Label1.ToolTip"))
         '
         'pnl_graph
         '
+        resources.ApplyResources(Me.pnl_graph, "pnl_graph")
         Me.pnl_graph.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.pnl_graph.Controls.Add(Me.chkrename_livesplit)
         Me.pnl_graph.Controls.Add(Me.Label88)
@@ -3059,8 +3297,8 @@ Partial Class Mainwindow
         Me.pnl_graph.Controls.Add(Me.numgraph_first)
         Me.pnl_graph.Controls.Add(Me.btnreset_table)
         Me.pnl_graph.Controls.Add(Me.btnreset_count)
-        resources.ApplyResources(Me.pnl_graph, "pnl_graph")
         Me.pnl_graph.Name = "pnl_graph"
+        Me.ToolTip1.SetToolTip(Me.pnl_graph, resources.GetString("pnl_graph.ToolTip"))
         '
         'chkrename_livesplit
         '
@@ -3068,6 +3306,7 @@ Partial Class Mainwindow
         Me.chkrename_livesplit.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.chkrename_livesplit.ForeColor = System.Drawing.SystemColors.Control
         Me.chkrename_livesplit.Name = "chkrename_livesplit"
+        Me.ToolTip1.SetToolTip(Me.chkrename_livesplit, resources.GetString("chkrename_livesplit.ToolTip"))
         Me.chkrename_livesplit.UseVisualStyleBackColor = False
         '
         'Label88
@@ -3076,13 +3315,15 @@ Partial Class Mainwindow
         Me.Label88.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label88.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label88.Name = "Label88"
+        Me.ToolTip1.SetToolTip(Me.Label88, resources.GetString("Label88.ToolTip"))
         '
         'btnreset_livesplit
         '
-        Me.btnreset_livesplit.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btnreset_livesplit, "btnreset_livesplit")
+        Me.btnreset_livesplit.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btnreset_livesplit.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btnreset_livesplit.Name = "btnreset_livesplit"
+        Me.ToolTip1.SetToolTip(Me.btnreset_livesplit, resources.GetString("btnreset_livesplit.ToolTip"))
         Me.btnreset_livesplit.UseVisualStyleBackColor = False
         '
         'Label67
@@ -3091,35 +3332,40 @@ Partial Class Mainwindow
         Me.Label67.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label67.ForeColor = System.Drawing.SystemColors.Control
         Me.Label67.Name = "Label67"
+        Me.ToolTip1.SetToolTip(Me.Label67, resources.GetString("Label67.ToolTip"))
         '
         'numgraph_first
         '
+        resources.ApplyResources(Me.numgraph_first, "numgraph_first")
         Me.numgraph_first.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numgraph_first.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numgraph_first, "numgraph_first")
         Me.numgraph_first.ForeColor = System.Drawing.SystemColors.Control
         Me.numgraph_first.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.numgraph_first.Name = "numgraph_first"
+        Me.ToolTip1.SetToolTip(Me.numgraph_first, resources.GetString("numgraph_first.ToolTip"))
         Me.numgraph_first.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'btnreset_table
         '
-        Me.btnreset_table.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btnreset_table, "btnreset_table")
+        Me.btnreset_table.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btnreset_table.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btnreset_table.Name = "btnreset_table"
+        Me.ToolTip1.SetToolTip(Me.btnreset_table, resources.GetString("btnreset_table.ToolTip"))
         Me.btnreset_table.UseVisualStyleBackColor = False
         '
         'btnreset_count
         '
-        Me.btnreset_count.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btnreset_count, "btnreset_count")
+        Me.btnreset_count.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btnreset_count.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btnreset_count.Name = "btnreset_count"
+        Me.ToolTip1.SetToolTip(Me.btnreset_count, resources.GetString("btnreset_count.ToolTip"))
         Me.btnreset_count.UseVisualStyleBackColor = False
         '
         'GroupBox2
         '
+        resources.ApplyResources(Me.GroupBox2, "GroupBox2")
         Me.GroupBox2.Controls.Add(Me.chkmonitor_sizestate)
         Me.GroupBox2.Controls.Add(Me.btntext_createtext)
         Me.GroupBox2.Controls.Add(Me.numtextwindow_sizex)
@@ -3136,9 +3382,9 @@ Partial Class Mainwindow
         Me.GroupBox2.Controls.Add(Me.txttemp_picturepass)
         Me.GroupBox2.Controls.Add(Me.Label71)
         Me.GroupBox2.ForeColor = System.Drawing.Color.Cornsilk
-        resources.ApplyResources(Me.GroupBox2, "GroupBox2")
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.GroupBox2, resources.GetString("GroupBox2.ToolTip"))
         '
         'chkmonitor_sizestate
         '
@@ -3148,14 +3394,16 @@ Partial Class Mainwindow
         Me.chkmonitor_sizestate.CheckState = System.Windows.Forms.CheckState.Checked
         Me.chkmonitor_sizestate.ForeColor = System.Drawing.SystemColors.Control
         Me.chkmonitor_sizestate.Name = "chkmonitor_sizestate"
+        Me.ToolTip1.SetToolTip(Me.chkmonitor_sizestate, resources.GetString("chkmonitor_sizestate.ToolTip"))
         Me.chkmonitor_sizestate.UseVisualStyleBackColor = False
         '
         'btntext_createtext
         '
-        Me.btntext_createtext.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btntext_createtext, "btntext_createtext")
+        Me.btntext_createtext.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btntext_createtext.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btntext_createtext.Name = "btntext_createtext"
+        Me.ToolTip1.SetToolTip(Me.btntext_createtext, resources.GetString("btntext_createtext.ToolTip"))
         Me.btntext_createtext.UseVisualStyleBackColor = False
         '
         'numtextwindow_sizex
@@ -3163,6 +3411,7 @@ Partial Class Mainwindow
         resources.ApplyResources(Me.numtextwindow_sizex, "numtextwindow_sizex")
         Me.numtextwindow_sizex.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.numtextwindow_sizex.Name = "numtextwindow_sizex"
+        Me.ToolTip1.SetToolTip(Me.numtextwindow_sizex, resources.GetString("numtextwindow_sizex.ToolTip"))
         Me.numtextwindow_sizex.Value = New Decimal(New Integer() {100, 0, 0, 0})
         '
         'lblcheckopening
@@ -3170,12 +3419,14 @@ Partial Class Mainwindow
         resources.ApplyResources(Me.lblcheckopening, "lblcheckopening")
         Me.lblcheckopening.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcheckopening.Name = "lblcheckopening"
+        Me.ToolTip1.SetToolTip(Me.lblcheckopening, resources.GetString("lblcheckopening.ToolTip"))
         '
         'numtextwindow_sizey
         '
         resources.ApplyResources(Me.numtextwindow_sizey, "numtextwindow_sizey")
         Me.numtextwindow_sizey.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.numtextwindow_sizey.Name = "numtextwindow_sizey"
+        Me.ToolTip1.SetToolTip(Me.numtextwindow_sizey, resources.GetString("numtextwindow_sizey.ToolTip"))
         Me.numtextwindow_sizey.Value = New Decimal(New Integer() {100, 0, 0, 0})
         '
         'chkcreate_temppicture
@@ -3186,18 +3437,20 @@ Partial Class Mainwindow
         Me.chkcreate_temppicture.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Global.AutoSplitHelper_OpenCV.My.MySettings.Default, "chkcreate_temppicture", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         Me.chkcreate_temppicture.ForeColor = System.Drawing.SystemColors.Control
         Me.chkcreate_temppicture.Name = "chkcreate_temppicture"
+        Me.ToolTip1.SetToolTip(Me.chkcreate_temppicture, resources.GetString("chkcreate_temppicture.ToolTip"))
         Me.chkcreate_temppicture.UseVisualStyleBackColor = False
         '
         'numprofile
         '
+        resources.ApplyResources(Me.numprofile, "numprofile")
         Me.numprofile.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.numprofile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.numprofile.DataBindings.Add(New System.Windows.Forms.Binding("Value", Global.AutoSplitHelper_OpenCV.My.MySettings.Default, "numprofile", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
-        resources.ApplyResources(Me.numprofile, "numprofile")
         Me.numprofile.ForeColor = System.Drawing.SystemColors.Control
         Me.numprofile.Maximum = New Decimal(New Integer() {9999, 0, 0, 0})
         Me.numprofile.Minimum = New Decimal(New Integer() {1920, 0, 0, -2147483648})
         Me.numprofile.Name = "numprofile"
+        Me.ToolTip1.SetToolTip(Me.numprofile, resources.GetString("numprofile.ToolTip"))
         Me.numprofile.Value = Global.AutoSplitHelper_OpenCV.My.MySettings.Default.numprofile
         '
         'Label38
@@ -3206,27 +3459,32 @@ Partial Class Mainwindow
         Me.Label38.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label38.ForeColor = System.Drawing.SystemColors.Control
         Me.Label38.Name = "Label38"
+        Me.ToolTip1.SetToolTip(Me.Label38, resources.GetString("Label38.ToolTip"))
         '
         'txtclickcount
         '
-        Me.txtclickcount.BackColor = System.Drawing.SystemColors.ButtonFace
         resources.ApplyResources(Me.txtclickcount, "txtclickcount")
+        Me.txtclickcount.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.txtclickcount.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.txtclickcount.Name = "txtclickcount"
         Me.txtclickcount.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtclickcount, resources.GetString("txtclickcount.ToolTip"))
         '
         'txtprofile
         '
         resources.ApplyResources(Me.txtprofile, "txtprofile")
         Me.txtprofile.Name = "txtprofile"
+        Me.ToolTip1.SetToolTip(Me.txtprofile, resources.GetString("txtprofile.ToolTip"))
         '
         'txtloadprofile
         '
         resources.ApplyResources(Me.txtloadprofile, "txtloadprofile")
         Me.txtloadprofile.Name = "txtloadprofile"
+        Me.ToolTip1.SetToolTip(Me.txtloadprofile, resources.GetString("txtloadprofile.ToolTip"))
         '
         'GroupBox3
         '
+        resources.ApplyResources(Me.GroupBox3, "GroupBox3")
         Me.GroupBox3.Controls.Add(Me.numskip_ash)
         Me.GroupBox3.Controls.Add(Me.numundo_ash)
         Me.GroupBox3.Controls.Add(Me.numreset_ash)
@@ -3242,9 +3500,9 @@ Partial Class Mainwindow
         Me.GroupBox3.Controls.Add(Me.lblkeysforskip)
         Me.GroupBox3.Controls.Add(Me.lblkeysforundo)
         Me.GroupBox3.ForeColor = System.Drawing.Color.Cornsilk
-        resources.ApplyResources(Me.GroupBox3, "GroupBox3")
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.GroupBox3, resources.GetString("GroupBox3.ToolTip"))
         '
         'numskip_ash
         '
@@ -3252,6 +3510,7 @@ Partial Class Mainwindow
         Me.numskip_ash.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.numskip_ash.Minimum = New Decimal(New Integer() {100, 0, 0, -2147483648})
         Me.numskip_ash.Name = "numskip_ash"
+        Me.ToolTip1.SetToolTip(Me.numskip_ash, resources.GetString("numskip_ash.ToolTip"))
         Me.numskip_ash.Value = New Decimal(New Integer() {100, 0, 0, 0})
         '
         'numundo_ash
@@ -3260,6 +3519,7 @@ Partial Class Mainwindow
         Me.numundo_ash.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.numundo_ash.Minimum = New Decimal(New Integer() {100, 0, 0, -2147483648})
         Me.numundo_ash.Name = "numundo_ash"
+        Me.ToolTip1.SetToolTip(Me.numundo_ash, resources.GetString("numundo_ash.ToolTip"))
         Me.numundo_ash.Value = New Decimal(New Integer() {100, 0, 0, 0})
         '
         'numreset_ash
@@ -3268,6 +3528,7 @@ Partial Class Mainwindow
         Me.numreset_ash.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.numreset_ash.Minimum = New Decimal(New Integer() {100, 0, 0, -2147483648})
         Me.numreset_ash.Name = "numreset_ash"
+        Me.ToolTip1.SetToolTip(Me.numreset_ash, resources.GetString("numreset_ash.ToolTip"))
         Me.numreset_ash.Value = New Decimal(New Integer() {100, 0, 0, 0})
         '
         'lblkeysforresume
@@ -3276,6 +3537,7 @@ Partial Class Mainwindow
         Me.lblkeysforresume.BackColor = System.Drawing.Color.Maroon
         Me.lblkeysforresume.ForeColor = System.Drawing.SystemColors.Control
         Me.lblkeysforresume.Name = "lblkeysforresume"
+        Me.ToolTip1.SetToolTip(Me.lblkeysforresume, resources.GetString("lblkeysforresume.ToolTip"))
         '
         'Label24
         '
@@ -3283,12 +3545,14 @@ Partial Class Mainwindow
         Me.Label24.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label24.ForeColor = System.Drawing.SystemColors.Control
         Me.Label24.Name = "Label24"
+        Me.ToolTip1.SetToolTip(Me.Label24, resources.GetString("Label24.ToolTip"))
         '
         'numcv_sizex
         '
         resources.ApplyResources(Me.numcv_sizex, "numcv_sizex")
         Me.numcv_sizex.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.numcv_sizex.Name = "numcv_sizex"
+        Me.ToolTip1.SetToolTip(Me.numcv_sizex, resources.GetString("numcv_sizex.ToolTip"))
         Me.numcv_sizex.Value = New Decimal(New Integer() {480, 0, 0, 0})
         '
         'lblkeysforpause
@@ -3297,30 +3561,34 @@ Partial Class Mainwindow
         Me.lblkeysforpause.BackColor = System.Drawing.Color.Red
         Me.lblkeysforpause.ForeColor = System.Drawing.SystemColors.Control
         Me.lblkeysforpause.Name = "lblkeysforpause"
+        Me.ToolTip1.SetToolTip(Me.lblkeysforpause, resources.GetString("lblkeysforpause.ToolTip"))
         '
         'numcv_sizey
         '
         resources.ApplyResources(Me.numcv_sizey, "numcv_sizey")
         Me.numcv_sizey.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.numcv_sizey.Name = "numcv_sizey"
+        Me.ToolTip1.SetToolTip(Me.numcv_sizey, resources.GetString("numcv_sizey.ToolTip"))
         Me.numcv_sizey.Value = New Decimal(New Integer() {270, 0, 0, 0})
         '
         'numsavex
         '
-        Me.numsavex.DataBindings.Add(New System.Windows.Forms.Binding("Value", Global.AutoSplitHelper_OpenCV.My.MySettings.Default, "numsavex", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         resources.ApplyResources(Me.numsavex, "numsavex")
+        Me.numsavex.DataBindings.Add(New System.Windows.Forms.Binding("Value", Global.AutoSplitHelper_OpenCV.My.MySettings.Default, "numsavex", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         Me.numsavex.Maximum = New Decimal(New Integer() {99999, 0, 0, 0})
         Me.numsavex.Minimum = New Decimal(New Integer() {99999, 0, 0, -2147483648})
         Me.numsavex.Name = "numsavex"
+        Me.ToolTip1.SetToolTip(Me.numsavex, resources.GetString("numsavex.ToolTip"))
         Me.numsavex.Value = Global.AutoSplitHelper_OpenCV.My.MySettings.Default.numsavex
         '
         'numsavey
         '
-        Me.numsavey.DataBindings.Add(New System.Windows.Forms.Binding("Value", Global.AutoSplitHelper_OpenCV.My.MySettings.Default, "numsavey", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         resources.ApplyResources(Me.numsavey, "numsavey")
+        Me.numsavey.DataBindings.Add(New System.Windows.Forms.Binding("Value", Global.AutoSplitHelper_OpenCV.My.MySettings.Default, "numsavey", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         Me.numsavey.Maximum = New Decimal(New Integer() {99999, 0, 0, 0})
         Me.numsavey.Minimum = New Decimal(New Integer() {99999, 0, 0, -2147483648})
         Me.numsavey.Name = "numsavey"
+        Me.ToolTip1.SetToolTip(Me.numsavey, resources.GetString("numsavey.ToolTip"))
         Me.numsavey.Value = Global.AutoSplitHelper_OpenCV.My.MySettings.Default.numsavey
         '
         'lblkeysforsend
@@ -3329,6 +3597,7 @@ Partial Class Mainwindow
         Me.lblkeysforsend.BackColor = System.Drawing.Color.Red
         Me.lblkeysforsend.ForeColor = System.Drawing.SystemColors.Control
         Me.lblkeysforsend.Name = "lblkeysforsend"
+        Me.ToolTip1.SetToolTip(Me.lblkeysforsend, resources.GetString("lblkeysforsend.ToolTip"))
         '
         'lblkeysforsend_reset
         '
@@ -3336,6 +3605,7 @@ Partial Class Mainwindow
         Me.lblkeysforsend_reset.BackColor = System.Drawing.Color.Maroon
         Me.lblkeysforsend_reset.ForeColor = System.Drawing.SystemColors.Control
         Me.lblkeysforsend_reset.Name = "lblkeysforsend_reset"
+        Me.ToolTip1.SetToolTip(Me.lblkeysforsend_reset, resources.GetString("lblkeysforsend_reset.ToolTip"))
         '
         'lblkeysforskip
         '
@@ -3343,6 +3613,7 @@ Partial Class Mainwindow
         Me.lblkeysforskip.BackColor = System.Drawing.Color.Maroon
         Me.lblkeysforskip.ForeColor = System.Drawing.SystemColors.Control
         Me.lblkeysforskip.Name = "lblkeysforskip"
+        Me.ToolTip1.SetToolTip(Me.lblkeysforskip, resources.GetString("lblkeysforskip.ToolTip"))
         '
         'lblkeysforundo
         '
@@ -3350,17 +3621,19 @@ Partial Class Mainwindow
         Me.lblkeysforundo.BackColor = System.Drawing.Color.Red
         Me.lblkeysforundo.ForeColor = System.Drawing.SystemColors.Control
         Me.lblkeysforundo.Name = "lblkeysforundo"
+        Me.ToolTip1.SetToolTip(Me.lblkeysforundo, resources.GetString("lblkeysforundo.ToolTip"))
         '
         'Panel5
         '
+        resources.ApplyResources(Me.Panel5, "Panel5")
         Me.Panel5.Controls.Add(Me.txtsavetempnumber)
         Me.Panel5.Controls.Add(Me.numtemp)
         Me.Panel5.Controls.Add(Me.txt11)
         Me.Panel5.Controls.Add(Me.txt22)
         Me.Panel5.Controls.Add(Me.txt12)
         Me.Panel5.Controls.Add(Me.txt21)
-        resources.ApplyResources(Me.Panel5, "Panel5")
         Me.Panel5.Name = "Panel5"
+        Me.ToolTip1.SetToolTip(Me.Panel5, resources.GetString("Panel5.ToolTip"))
         '
         'txtsavetempnumber
         '
@@ -3370,6 +3643,7 @@ Partial Class Mainwindow
         Me.txtsavetempnumber.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.txtsavetempnumber.Name = "txtsavetempnumber"
         Me.txtsavetempnumber.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtsavetempnumber, resources.GetString("txtsavetempnumber.ToolTip"))
         '
         'numtemp
         '
@@ -3379,47 +3653,53 @@ Partial Class Mainwindow
         Me.numtemp.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.numtemp.Maximum = New Decimal(New Integer() {300, 0, 0, 0})
         Me.numtemp.Name = "numtemp"
+        Me.ToolTip1.SetToolTip(Me.numtemp, resources.GetString("numtemp.ToolTip"))
         '
         'txt11
         '
-        Me.txt11.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(34, Byte), Integer))
         resources.ApplyResources(Me.txt11, "txt11")
+        Me.txt11.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(34, Byte), Integer))
         Me.txt11.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txt11.Name = "txt11"
         Me.txt11.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txt11, resources.GetString("txt11.ToolTip"))
         '
         'txt22
         '
-        Me.txt22.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(34, Byte), Integer))
         resources.ApplyResources(Me.txt22, "txt22")
+        Me.txt22.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(34, Byte), Integer))
         Me.txt22.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txt22.Name = "txt22"
         Me.txt22.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txt22, resources.GetString("txt22.ToolTip"))
         '
         'txt12
         '
-        Me.txt12.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(34, Byte), Integer))
         resources.ApplyResources(Me.txt12, "txt12")
+        Me.txt12.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(34, Byte), Integer))
         Me.txt12.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txt12.Name = "txt12"
         Me.txt12.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txt12, resources.GetString("txt12.ToolTip"))
         '
         'txt21
         '
-        Me.txt21.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(34, Byte), Integer))
         resources.ApplyResources(Me.txt21, "txt21")
+        Me.txt21.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(34, Byte), Integer))
         Me.txt21.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txt21.Name = "txt21"
         Me.txt21.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txt21, resources.GetString("txt21.ToolTip"))
         '
         'txttemp_picturepass
         '
+        resources.ApplyResources(Me.txttemp_picturepass, "txttemp_picturepass")
         Me.txttemp_picturepass.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.txttemp_picturepass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txttemp_picturepass, "txttemp_picturepass")
         Me.txttemp_picturepass.ForeColor = System.Drawing.SystemColors.Control
         Me.txttemp_picturepass.Name = "txttemp_picturepass"
         Me.txttemp_picturepass.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txttemp_picturepass, resources.GetString("txttemp_picturepass.ToolTip"))
         '
         'Label71
         '
@@ -3427,9 +3707,11 @@ Partial Class Mainwindow
         Me.Label71.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label71.ForeColor = System.Drawing.SystemColors.Control
         Me.Label71.Name = "Label71"
+        Me.ToolTip1.SetToolTip(Me.Label71, resources.GetString("Label71.ToolTip"))
         '
         'pnl_parameter
         '
+        resources.ApplyResources(Me.pnl_parameter, "pnl_parameter")
         Me.pnl_parameter.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.pnl_parameter.Controls.Add(Me._moji1)
         Me.pnl_parameter.Controls.Add(Me.Label2)
@@ -3448,8 +3730,8 @@ Partial Class Mainwindow
         Me.pnl_parameter.Controls.Add(Me.chkcv_loadremover)
         Me.pnl_parameter.Controls.Add(Me.numpercent)
         Me.pnl_parameter.Controls.Add(Me.chkcv_monitor)
-        resources.ApplyResources(Me.pnl_parameter, "pnl_parameter")
         Me.pnl_parameter.Name = "pnl_parameter"
+        Me.ToolTip1.SetToolTip(Me.pnl_parameter, resources.GetString("pnl_parameter.ToolTip"))
         '
         '_moji1
         '
@@ -3457,6 +3739,7 @@ Partial Class Mainwindow
         Me._moji1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me._moji1.ForeColor = System.Drawing.SystemColors.Control
         Me._moji1.Name = "_moji1"
+        Me.ToolTip1.SetToolTip(Me._moji1, resources.GetString("_moji1.ToolTip"))
         '
         'Label2
         '
@@ -3464,6 +3747,7 @@ Partial Class Mainwindow
         Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label2.ForeColor = System.Drawing.SystemColors.Control
         Me.Label2.Name = "Label2"
+        Me.ToolTip1.SetToolTip(Me.Label2, resources.GetString("Label2.ToolTip"))
         '
         'Label20
         '
@@ -3471,6 +3755,7 @@ Partial Class Mainwindow
         Me.Label20.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label20.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label20.Name = "Label20"
+        Me.ToolTip1.SetToolTip(Me.Label20, resources.GetString("Label20.ToolTip"))
         '
         '_moji3
         '
@@ -3478,23 +3763,26 @@ Partial Class Mainwindow
         Me._moji3.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me._moji3.ForeColor = System.Drawing.SystemColors.Control
         Me._moji3.Name = "_moji3"
+        Me.ToolTip1.SetToolTip(Me._moji3, resources.GetString("_moji3.ToolTip"))
         '
         'btninsertanten
         '
-        Me.btninsertanten.BackColor = System.Drawing.Color.Lavender
         resources.ApplyResources(Me.btninsertanten, "btninsertanten")
+        Me.btninsertanten.BackColor = System.Drawing.Color.Lavender
         Me.btninsertanten.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btninsertanten.Name = "btninsertanten"
+        Me.ToolTip1.SetToolTip(Me.btninsertanten, resources.GetString("btninsertanten.ToolTip"))
         Me.btninsertanten.UseVisualStyleBackColor = False
         '
         'numanten
         '
+        resources.ApplyResources(Me.numanten, "numanten")
         Me.numanten.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numanten.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numanten, "numanten")
         Me.numanten.ForeColor = System.Drawing.SystemColors.Control
         Me.numanten.Maximum = New Decimal(New Integer() {128, 0, 0, 0})
         Me.numanten.Name = "numanten"
+        Me.ToolTip1.SetToolTip(Me.numanten, resources.GetString("numanten.ToolTip"))
         Me.numanten.Value = New Decimal(New Integer() {10, 0, 0, 0})
         '
         'chkcv_loop
@@ -3503,14 +3791,16 @@ Partial Class Mainwindow
         Me.chkcv_loop.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.chkcv_loop.ForeColor = System.Drawing.SystemColors.Control
         Me.chkcv_loop.Name = "chkcv_loop"
+        Me.ToolTip1.SetToolTip(Me.chkcv_loop, resources.GetString("chkcv_loop.ToolTip"))
         Me.chkcv_loop.UseVisualStyleBackColor = False
         '
         'btninsertitti
         '
-        Me.btninsertitti.BackColor = System.Drawing.Color.Lavender
         resources.ApplyResources(Me.btninsertitti, "btninsertitti")
+        Me.btninsertitti.BackColor = System.Drawing.Color.Lavender
         Me.btninsertitti.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btninsertitti.Name = "btninsertitti"
+        Me.ToolTip1.SetToolTip(Me.btninsertitti, resources.GetString("btninsertitti.ToolTip"))
         Me.btninsertitti.UseVisualStyleBackColor = False
         '
         'chkcv_resetonoff
@@ -3519,47 +3809,52 @@ Partial Class Mainwindow
         Me.chkcv_resetonoff.BackColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(2, Byte), Integer))
         Me.chkcv_resetonoff.ForeColor = System.Drawing.SystemColors.Control
         Me.chkcv_resetonoff.Name = "chkcv_resetonoff"
+        Me.ToolTip1.SetToolTip(Me.chkcv_resetonoff, resources.GetString("chkcv_resetonoff.ToolTip"))
         Me.chkcv_resetonoff.UseVisualStyleBackColor = False
         '
         'btninsertsleep
         '
-        Me.btninsertsleep.BackColor = System.Drawing.Color.Lavender
         resources.ApplyResources(Me.btninsertsleep, "btninsertsleep")
+        Me.btninsertsleep.BackColor = System.Drawing.Color.Lavender
         Me.btninsertsleep.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btninsertsleep.Name = "btninsertsleep"
+        Me.ToolTip1.SetToolTip(Me.btninsertsleep, resources.GetString("btninsertsleep.ToolTip"))
         Me.btninsertsleep.UseVisualStyleBackColor = False
         '
         'numstop
         '
+        resources.ApplyResources(Me.numstop, "numstop")
         Me.numstop.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numstop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numstop, "numstop")
         Me.numstop.ForeColor = System.Drawing.SystemColors.Control
         Me.numstop.Maximum = New Decimal(New Integer() {9999, 0, 0, 0})
         Me.numstop.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.numstop.Name = "numstop"
+        Me.ToolTip1.SetToolTip(Me.numstop, resources.GetString("numstop.ToolTip"))
         Me.numstop.Value = New Decimal(New Integer() {10, 0, 0, 0})
         '
         'numloopcount
         '
+        resources.ApplyResources(Me.numloopcount, "numloopcount")
         Me.numloopcount.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numloopcount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numloopcount, "numloopcount")
         Me.numloopcount.ForeColor = System.Drawing.SystemColors.Control
         Me.numloopcount.Maximum = New Decimal(New Integer() {999, 0, 0, 0})
         Me.numloopcount.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.numloopcount.Name = "numloopcount"
+        Me.ToolTip1.SetToolTip(Me.numloopcount, resources.GetString("numloopcount.ToolTip"))
         Me.numloopcount.Value = New Decimal(New Integer() {10, 0, 0, 0})
         '
         'numcv_interval
         '
+        resources.ApplyResources(Me.numcv_interval, "numcv_interval")
         Me.numcv_interval.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numcv_interval.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numcv_interval, "numcv_interval")
         Me.numcv_interval.ForeColor = System.Drawing.SystemColors.Control
         Me.numcv_interval.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
         Me.numcv_interval.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.numcv_interval.Name = "numcv_interval"
+        Me.ToolTip1.SetToolTip(Me.numcv_interval, resources.GetString("numcv_interval.ToolTip"))
         Me.numcv_interval.Value = New Decimal(New Integer() {30, 0, 0, 0})
         '
         '_moji2
@@ -3568,6 +3863,7 @@ Partial Class Mainwindow
         Me._moji2.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me._moji2.ForeColor = System.Drawing.SystemColors.Control
         Me._moji2.Name = "_moji2"
+        Me.ToolTip1.SetToolTip(Me._moji2, resources.GetString("_moji2.ToolTip"))
         '
         'chkcv_loadremover
         '
@@ -3575,16 +3871,18 @@ Partial Class Mainwindow
         Me.chkcv_loadremover.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.chkcv_loadremover.ForeColor = System.Drawing.SystemColors.Control
         Me.chkcv_loadremover.Name = "chkcv_loadremover"
+        Me.ToolTip1.SetToolTip(Me.chkcv_loadremover, resources.GetString("chkcv_loadremover.ToolTip"))
         Me.chkcv_loadremover.UseVisualStyleBackColor = False
         '
         'numpercent
         '
+        resources.ApplyResources(Me.numpercent, "numpercent")
         Me.numpercent.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numpercent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numpercent, "numpercent")
         Me.numpercent.ForeColor = System.Drawing.SystemColors.Control
         Me.numpercent.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.numpercent.Name = "numpercent"
+        Me.ToolTip1.SetToolTip(Me.numpercent, resources.GetString("numpercent.ToolTip"))
         Me.numpercent.Value = New Decimal(New Integer() {40, 0, 0, 0})
         '
         'chkcv_monitor
@@ -3593,40 +3891,45 @@ Partial Class Mainwindow
         Me.chkcv_monitor.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.chkcv_monitor.ForeColor = System.Drawing.SystemColors.Control
         Me.chkcv_monitor.Name = "chkcv_monitor"
+        Me.ToolTip1.SetToolTip(Me.chkcv_monitor, resources.GetString("chkcv_monitor.ToolTip"))
         Me.chkcv_monitor.UseVisualStyleBackColor = False
         '
         'btnstartopencv
         '
-        Me.btnstartopencv.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(148, Byte), Integer))
         resources.ApplyResources(Me.btnstartopencv, "btnstartopencv")
+        Me.btnstartopencv.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(148, Byte), Integer))
         Me.btnstartopencv.Name = "btnstartopencv"
+        Me.ToolTip1.SetToolTip(Me.btnstartopencv, resources.GetString("btnstartopencv.ToolTip"))
         Me.btnstartopencv.UseVisualStyleBackColor = False
         '
         'btndeleteprofile
         '
-        Me.btndeleteprofile.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         resources.ApplyResources(Me.btndeleteprofile, "btndeleteprofile")
+        Me.btndeleteprofile.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.btndeleteprofile.ForeColor = System.Drawing.Color.DarkGray
         Me.btndeleteprofile.Image = Global.AutoSplitHelper_OpenCV.My.Resources.Resources.delete1
         Me.btndeleteprofile.Name = "btndeleteprofile"
+        Me.ToolTip1.SetToolTip(Me.btndeleteprofile, resources.GetString("btndeleteprofile.ToolTip"))
         Me.btndeleteprofile.UseVisualStyleBackColor = False
         '
         'btnaddprofile
         '
-        Me.btnaddprofile.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         resources.ApplyResources(Me.btnaddprofile, "btnaddprofile")
+        Me.btnaddprofile.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.btnaddprofile.ForeColor = System.Drawing.Color.DarkGray
         Me.btnaddprofile.Image = Global.AutoSplitHelper_OpenCV.My.Resources.Resources.save2
         Me.btnaddprofile.Name = "btnaddprofile"
+        Me.ToolTip1.SetToolTip(Me.btnaddprofile, resources.GetString("btnaddprofile.ToolTip"))
         Me.btnaddprofile.UseVisualStyleBackColor = False
         '
         'cmbprofile
         '
-        Me.cmbprofile.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         resources.ApplyResources(Me.cmbprofile, "cmbprofile")
+        Me.cmbprofile.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.cmbprofile.ForeColor = System.Drawing.SystemColors.Control
         Me.cmbprofile.FormattingEnabled = True
         Me.cmbprofile.Name = "cmbprofile"
+        Me.ToolTip1.SetToolTip(Me.cmbprofile, resources.GetString("cmbprofile.ToolTip"))
         '
         'MenuStrip1
         '
@@ -3636,191 +3939,195 @@ Partial Class Mainwindow
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuToolStripMenuItem, Me.ToolToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
+        Me.ToolTip1.SetToolTip(Me.MenuStrip1, resources.GetString("MenuStrip1.ToolTip"))
         '
         'MenuToolStripMenuItem
         '
+        resources.ApplyResources(Me.MenuToolStripMenuItem, "MenuToolStripMenuItem")
         Me.MenuToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewProfileToolStripMenuItem, Me.ImportToolStripMenuItem, Me.ToolStripSeparator1, Me.SaveProfileSToolStripMenuItem, Me.DeleteSelectedProfileToolStripMenuItem, Me.ToolStripSeparator4, Me.UploadTheCurrentProfileUToolStripMenuItem, Me.ToolStripSeparator5, Me.ExitToolStripMenuItem})
         Me.MenuToolStripMenuItem.Name = "MenuToolStripMenuItem"
-        resources.ApplyResources(Me.MenuToolStripMenuItem, "MenuToolStripMenuItem")
         '
         'NewProfileToolStripMenuItem
         '
+        resources.ApplyResources(Me.NewProfileToolStripMenuItem, "NewProfileToolStripMenuItem")
         Me.NewProfileToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
         Me.NewProfileToolStripMenuItem.Name = "NewProfileToolStripMenuItem"
-        resources.ApplyResources(Me.NewProfileToolStripMenuItem, "NewProfileToolStripMenuItem")
         '
         'ImportToolStripMenuItem
         '
+        resources.ApplyResources(Me.ImportToolStripMenuItem, "ImportToolStripMenuItem")
         Me.ImportToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
         Me.ImportToolStripMenuItem.Name = "ImportToolStripMenuItem"
-        resources.ApplyResources(Me.ImportToolStripMenuItem, "ImportToolStripMenuItem")
         '
         'ToolStripSeparator1
         '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
         resources.ApplyResources(Me.ToolStripSeparator1, "ToolStripSeparator1")
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
         '
         'SaveProfileSToolStripMenuItem
         '
+        resources.ApplyResources(Me.SaveProfileSToolStripMenuItem, "SaveProfileSToolStripMenuItem")
         Me.SaveProfileSToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
         Me.SaveProfileSToolStripMenuItem.Name = "SaveProfileSToolStripMenuItem"
-        resources.ApplyResources(Me.SaveProfileSToolStripMenuItem, "SaveProfileSToolStripMenuItem")
         '
         'DeleteSelectedProfileToolStripMenuItem
         '
+        resources.ApplyResources(Me.DeleteSelectedProfileToolStripMenuItem, "DeleteSelectedProfileToolStripMenuItem")
         Me.DeleteSelectedProfileToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
         Me.DeleteSelectedProfileToolStripMenuItem.Name = "DeleteSelectedProfileToolStripMenuItem"
-        resources.ApplyResources(Me.DeleteSelectedProfileToolStripMenuItem, "DeleteSelectedProfileToolStripMenuItem")
         '
         'ToolStripSeparator4
         '
-        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
         resources.ApplyResources(Me.ToolStripSeparator4, "ToolStripSeparator4")
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
         '
         'UploadTheCurrentProfileUToolStripMenuItem
         '
+        resources.ApplyResources(Me.UploadTheCurrentProfileUToolStripMenuItem, "UploadTheCurrentProfileUToolStripMenuItem")
         Me.UploadTheCurrentProfileUToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
         Me.UploadTheCurrentProfileUToolStripMenuItem.Name = "UploadTheCurrentProfileUToolStripMenuItem"
-        resources.ApplyResources(Me.UploadTheCurrentProfileUToolStripMenuItem, "UploadTheCurrentProfileUToolStripMenuItem")
         '
         'ToolStripSeparator5
         '
-        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
         resources.ApplyResources(Me.ToolStripSeparator5, "ToolStripSeparator5")
+        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
         '
         'ExitToolStripMenuItem
         '
+        resources.ApplyResources(Me.ExitToolStripMenuItem, "ExitToolStripMenuItem")
         Me.ExitToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        resources.ApplyResources(Me.ExitToolStripMenuItem, "ExitToolStripMenuItem")
         '
         'ToolToolStripMenuItem
         '
+        resources.ApplyResources(Me.ToolToolStripMenuItem, "ToolToolStripMenuItem")
         Me.ToolToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StartMonitoringMToolStripMenuItem, Me.ToolStripSeparator6, Me.PreviewGetTemplatePictureToolStripMenuItem, Me.CalibrationToolStripMenuItem1, Me.PositionSettingToolStripMenuItem, Me.ToolStripSeparator3, Me.ExpandTableToolStripMenuItem, Me.ToolStripSeparator7, Me.ViewTableToolStripMenuItem, Me.ToolStripSeparator2, Me.OpenTextWindowWToolStripMenuItem, Me.OpenTextFolderToolStripMenuItem, Me.ToolStripSeparator8, Me.DeleteAddTemplateImageToolStripMenuItem, Me.SortTemplateImageToolStripMenuItem})
         Me.ToolToolStripMenuItem.Name = "ToolToolStripMenuItem"
-        resources.ApplyResources(Me.ToolToolStripMenuItem, "ToolToolStripMenuItem")
         '
         'StartMonitoringMToolStripMenuItem
         '
+        resources.ApplyResources(Me.StartMonitoringMToolStripMenuItem, "StartMonitoringMToolStripMenuItem")
         Me.StartMonitoringMToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
         Me.StartMonitoringMToolStripMenuItem.Name = "StartMonitoringMToolStripMenuItem"
-        resources.ApplyResources(Me.StartMonitoringMToolStripMenuItem, "StartMonitoringMToolStripMenuItem")
         '
         'ToolStripSeparator6
         '
-        Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
         resources.ApplyResources(Me.ToolStripSeparator6, "ToolStripSeparator6")
+        Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
         '
         'PreviewGetTemplatePictureToolStripMenuItem
         '
+        resources.ApplyResources(Me.PreviewGetTemplatePictureToolStripMenuItem, "PreviewGetTemplatePictureToolStripMenuItem")
         Me.PreviewGetTemplatePictureToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
         Me.PreviewGetTemplatePictureToolStripMenuItem.Name = "PreviewGetTemplatePictureToolStripMenuItem"
-        resources.ApplyResources(Me.PreviewGetTemplatePictureToolStripMenuItem, "PreviewGetTemplatePictureToolStripMenuItem")
         '
         'CalibrationToolStripMenuItem1
         '
+        resources.ApplyResources(Me.CalibrationToolStripMenuItem1, "CalibrationToolStripMenuItem1")
         Me.CalibrationToolStripMenuItem1.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
         Me.CalibrationToolStripMenuItem1.Name = "CalibrationToolStripMenuItem1"
-        resources.ApplyResources(Me.CalibrationToolStripMenuItem1, "CalibrationToolStripMenuItem1")
         '
         'PositionSettingToolStripMenuItem
         '
+        resources.ApplyResources(Me.PositionSettingToolStripMenuItem, "PositionSettingToolStripMenuItem")
         Me.PositionSettingToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
         Me.PositionSettingToolStripMenuItem.Name = "PositionSettingToolStripMenuItem"
-        resources.ApplyResources(Me.PositionSettingToolStripMenuItem, "PositionSettingToolStripMenuItem")
         '
         'ToolStripSeparator3
         '
-        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
         resources.ApplyResources(Me.ToolStripSeparator3, "ToolStripSeparator3")
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
         '
         'ExpandTableToolStripMenuItem
         '
+        resources.ApplyResources(Me.ExpandTableToolStripMenuItem, "ExpandTableToolStripMenuItem")
         Me.ExpandTableToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
         Me.ExpandTableToolStripMenuItem.Name = "ExpandTableToolStripMenuItem"
-        resources.ApplyResources(Me.ExpandTableToolStripMenuItem, "ExpandTableToolStripMenuItem")
         '
         'ToolStripSeparator7
         '
-        Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
         resources.ApplyResources(Me.ToolStripSeparator7, "ToolStripSeparator7")
+        Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
         '
         'ViewTableToolStripMenuItem
         '
+        resources.ApplyResources(Me.ViewTableToolStripMenuItem, "ViewTableToolStripMenuItem")
         Me.ViewTableToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
         Me.ViewTableToolStripMenuItem.Name = "ViewTableToolStripMenuItem"
-        resources.ApplyResources(Me.ViewTableToolStripMenuItem, "ViewTableToolStripMenuItem")
         '
         'ToolStripSeparator2
         '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
         resources.ApplyResources(Me.ToolStripSeparator2, "ToolStripSeparator2")
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
         '
         'OpenTextWindowWToolStripMenuItem
         '
+        resources.ApplyResources(Me.OpenTextWindowWToolStripMenuItem, "OpenTextWindowWToolStripMenuItem")
         Me.OpenTextWindowWToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
         Me.OpenTextWindowWToolStripMenuItem.Name = "OpenTextWindowWToolStripMenuItem"
-        resources.ApplyResources(Me.OpenTextWindowWToolStripMenuItem, "OpenTextWindowWToolStripMenuItem")
         '
         'OpenTextFolderToolStripMenuItem
         '
+        resources.ApplyResources(Me.OpenTextFolderToolStripMenuItem, "OpenTextFolderToolStripMenuItem")
         Me.OpenTextFolderToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
         Me.OpenTextFolderToolStripMenuItem.Name = "OpenTextFolderToolStripMenuItem"
-        resources.ApplyResources(Me.OpenTextFolderToolStripMenuItem, "OpenTextFolderToolStripMenuItem")
         '
         'ToolStripSeparator8
         '
-        Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
         resources.ApplyResources(Me.ToolStripSeparator8, "ToolStripSeparator8")
+        Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
         '
         'DeleteAddTemplateImageToolStripMenuItem
         '
+        resources.ApplyResources(Me.DeleteAddTemplateImageToolStripMenuItem, "DeleteAddTemplateImageToolStripMenuItem")
         Me.DeleteAddTemplateImageToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
         Me.DeleteAddTemplateImageToolStripMenuItem.Name = "DeleteAddTemplateImageToolStripMenuItem"
-        resources.ApplyResources(Me.DeleteAddTemplateImageToolStripMenuItem, "DeleteAddTemplateImageToolStripMenuItem")
         '
         'SortTemplateImageToolStripMenuItem
         '
+        resources.ApplyResources(Me.SortTemplateImageToolStripMenuItem, "SortTemplateImageToolStripMenuItem")
         Me.SortTemplateImageToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
         Me.SortTemplateImageToolStripMenuItem.Name = "SortTemplateImageToolStripMenuItem"
-        resources.ApplyResources(Me.SortTemplateImageToolStripMenuItem, "SortTemplateImageToolStripMenuItem")
         '
         'HelpToolStripMenuItem
         '
+        resources.ApplyResources(Me.HelpToolStripMenuItem, "HelpToolStripMenuItem")
         Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InformationToolStripMenuItem, Me.LicenseLToolStripMenuItem})
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
         Me.HelpToolStripMenuItem.Padding = New System.Windows.Forms.Padding(0)
-        resources.ApplyResources(Me.HelpToolStripMenuItem, "HelpToolStripMenuItem")
         '
         'InformationToolStripMenuItem
         '
+        resources.ApplyResources(Me.InformationToolStripMenuItem, "InformationToolStripMenuItem")
         Me.InformationToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
         Me.InformationToolStripMenuItem.Name = "InformationToolStripMenuItem"
-        resources.ApplyResources(Me.InformationToolStripMenuItem, "InformationToolStripMenuItem")
         '
         'LicenseLToolStripMenuItem
         '
+        resources.ApplyResources(Me.LicenseLToolStripMenuItem, "LicenseLToolStripMenuItem")
         Me.LicenseLToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
         Me.LicenseLToolStripMenuItem.Name = "LicenseLToolStripMenuItem"
-        resources.ApplyResources(Me.LicenseLToolStripMenuItem, "LicenseLToolStripMenuItem")
         '
         'picunder
         '
-        Me.picunder.BackColor = System.Drawing.Color.FromArgb(CType(CType(90, Byte), Integer), CType(CType(95, Byte), Integer), CType(CType(105, Byte), Integer))
         resources.ApplyResources(Me.picunder, "picunder")
+        Me.picunder.BackColor = System.Drawing.Color.FromArgb(CType(CType(90, Byte), Integer), CType(CType(95, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.picunder.Name = "picunder"
         Me.picunder.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.picunder, resources.GetString("picunder.ToolTip"))
         '
         'btnclose_general
         '
-        Me.btnclose_general.BackColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(47, Byte), Integer))
         resources.ApplyResources(Me.btnclose_general, "btnclose_general")
+        Me.btnclose_general.BackColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(47, Byte), Integer))
         Me.btnclose_general.ForeColor = System.Drawing.Color.LightGray
         Me.btnclose_general.Name = "btnclose_general"
+        Me.ToolTip1.SetToolTip(Me.btnclose_general, resources.GetString("btnclose_general.ToolTip"))
         Me.btnclose_general.UseVisualStyleBackColor = False
         '
         'TabPage5
         '
+        resources.ApplyResources(Me.TabPage5, "TabPage5")
         Me.TabPage5.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(75, Byte), Integer))
         Me.TabPage5.Controls.Add(Me.PictureBox3)
         Me.TabPage5.Controls.Add(Me.PictureBox4)
@@ -3913,22 +4220,24 @@ Partial Class Mainwindow
         Me.TabPage5.Controls.Add(Me.picipl_cap)
         Me.TabPage5.Controls.Add(Me.PictureBox18)
         Me.TabPage5.Controls.Add(Me.PictureBox19)
-        resources.ApplyResources(Me.TabPage5, "TabPage5")
         Me.TabPage5.Name = "TabPage5"
+        Me.ToolTip1.SetToolTip(Me.TabPage5, resources.GetString("TabPage5.ToolTip"))
         '
         'PictureBox3
         '
-        Me.PictureBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(95, Byte), Integer))
         resources.ApplyResources(Me.PictureBox3, "PictureBox3")
+        Me.PictureBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(95, Byte), Integer))
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox3, resources.GetString("PictureBox3.ToolTip"))
         '
         'PictureBox4
         '
-        Me.PictureBox4.BackColor = System.Drawing.Color.FromArgb(CType(CType(90, Byte), Integer), CType(CType(95, Byte), Integer), CType(CType(105, Byte), Integer))
         resources.ApplyResources(Me.PictureBox4, "PictureBox4")
+        Me.PictureBox4.BackColor = System.Drawing.Color.FromArgb(CType(CType(90, Byte), Integer), CType(CType(95, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox4, resources.GetString("PictureBox4.ToolTip"))
         '
         'Label77
         '
@@ -3936,6 +4245,7 @@ Partial Class Mainwindow
         Me.Label77.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label77.ForeColor = System.Drawing.SystemColors.Control
         Me.Label77.Name = "Label77"
+        Me.ToolTip1.SetToolTip(Me.Label77, resources.GetString("Label77.ToolTip"))
         '
         'lbllooptrigger
         '
@@ -3943,15 +4253,17 @@ Partial Class Mainwindow
         Me.lbllooptrigger.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.lbllooptrigger.ForeColor = System.Drawing.SystemColors.Control
         Me.lbllooptrigger.Name = "lbllooptrigger"
+        Me.ToolTip1.SetToolTip(Me.lbllooptrigger, resources.GetString("lbllooptrigger.ToolTip"))
         '
         'numnowloop
         '
+        resources.ApplyResources(Me.numnowloop, "numnowloop")
         Me.numnowloop.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numnowloop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numnowloop, "numnowloop")
         Me.numnowloop.ForeColor = System.Drawing.SystemColors.Control
         Me.numnowloop.Maximum = New Decimal(New Integer() {999, 0, 0, 0})
         Me.numnowloop.Name = "numnowloop"
+        Me.ToolTip1.SetToolTip(Me.numnowloop, resources.GetString("numnowloop.ToolTip"))
         Me.numnowloop.Value = New Decimal(New Integer() {10, 0, 0, 0})
         '
         'lblloopcount
@@ -3960,6 +4272,7 @@ Partial Class Mainwindow
         Me.lblloopcount.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.lblloopcount.ForeColor = System.Drawing.Color.White
         Me.lblloopcount.Name = "lblloopcount"
+        Me.ToolTip1.SetToolTip(Me.lblloopcount, resources.GetString("lblloopcount.ToolTip"))
         '
         'Label73
         '
@@ -3967,6 +4280,7 @@ Partial Class Mainwindow
         Me.Label73.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label73.ForeColor = System.Drawing.SystemColors.Control
         Me.Label73.Name = "Label73"
+        Me.ToolTip1.SetToolTip(Me.Label73, resources.GetString("Label73.ToolTip"))
         '
         'Label74
         '
@@ -3974,6 +4288,7 @@ Partial Class Mainwindow
         Me.Label74.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label74.ForeColor = System.Drawing.SystemColors.Control
         Me.Label74.Name = "Label74"
+        Me.ToolTip1.SetToolTip(Me.Label74, resources.GetString("Label74.ToolTip"))
         '
         'lblresetcount
         '
@@ -3981,6 +4296,7 @@ Partial Class Mainwindow
         Me.lblresetcount.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.lblresetcount.ForeColor = System.Drawing.Color.White
         Me.lblresetcount.Name = "lblresetcount"
+        Me.ToolTip1.SetToolTip(Me.lblresetcount, resources.GetString("lblresetcount.ToolTip"))
         '
         'lblattemptcount
         '
@@ -3988,6 +4304,7 @@ Partial Class Mainwindow
         Me.lblattemptcount.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.lblattemptcount.ForeColor = System.Drawing.Color.White
         Me.lblattemptcount.Name = "lblattemptcount"
+        Me.ToolTip1.SetToolTip(Me.lblattemptcount, resources.GetString("lblattemptcount.ToolTip"))
         '
         'lbllapcount
         '
@@ -3995,6 +4312,7 @@ Partial Class Mainwindow
         Me.lbllapcount.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.lbllapcount.ForeColor = System.Drawing.Color.White
         Me.lbllapcount.Name = "lbllapcount"
+        Me.ToolTip1.SetToolTip(Me.lbllapcount, resources.GetString("lbllapcount.ToolTip"))
         '
         'Label68
         '
@@ -4002,6 +4320,7 @@ Partial Class Mainwindow
         Me.Label68.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label68.ForeColor = System.Drawing.SystemColors.Control
         Me.Label68.Name = "Label68"
+        Me.ToolTip1.SetToolTip(Me.Label68, resources.GetString("Label68.ToolTip"))
         '
         'Label69
         '
@@ -4009,6 +4328,7 @@ Partial Class Mainwindow
         Me.Label69.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label69.ForeColor = System.Drawing.SystemColors.Control
         Me.Label69.Name = "Label69"
+        Me.ToolTip1.SetToolTip(Me.Label69, resources.GetString("Label69.ToolTip"))
         '
         'Label70
         '
@@ -4016,6 +4336,7 @@ Partial Class Mainwindow
         Me.Label70.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label70.ForeColor = System.Drawing.SystemColors.Control
         Me.Label70.Name = "Label70"
+        Me.ToolTip1.SetToolTip(Me.Label70, resources.GetString("Label70.ToolTip"))
         '
         'lblreload_graph
         '
@@ -4023,15 +4344,17 @@ Partial Class Mainwindow
         Me.lblreload_graph.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.lblreload_graph.ForeColor = System.Drawing.SystemColors.Control
         Me.lblreload_graph.Name = "lblreload_graph"
+        Me.ToolTip1.SetToolTip(Me.lblreload_graph, resources.GetString("lblreload_graph.ToolTip"))
         '
         'txtsetsplitname
         '
+        resources.ApplyResources(Me.txtsetsplitname, "txtsetsplitname")
         Me.txtsetsplitname.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.txtsetsplitname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtsetsplitname, "txtsetsplitname")
         Me.txtsetsplitname.ForeColor = System.Drawing.SystemColors.Control
         Me.txtsetsplitname.Name = "txtsetsplitname"
         Me.txtsetsplitname.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtsetsplitname, resources.GetString("txtsetsplitname.ToolTip"))
         '
         'Label63
         '
@@ -4039,19 +4362,22 @@ Partial Class Mainwindow
         Me.Label63.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label63.ForeColor = System.Drawing.SystemColors.Control
         Me.Label63.Name = "Label63"
+        Me.ToolTip1.SetToolTip(Me.Label63, resources.GetString("Label63.ToolTip"))
         '
         'cmbloadno
         '
+        resources.ApplyResources(Me.cmbloadno, "cmbloadno")
         Me.cmbloadno.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.cmbloadno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        resources.ApplyResources(Me.cmbloadno, "cmbloadno")
         Me.cmbloadno.ForeColor = System.Drawing.SystemColors.Control
         Me.cmbloadno.FormattingEnabled = True
         Me.cmbloadno.Items.AddRange(New Object() {resources.GetString("cmbloadno.Items"), resources.GetString("cmbloadno.Items1"), resources.GetString("cmbloadno.Items2"), resources.GetString("cmbloadno.Items3"), resources.GetString("cmbloadno.Items4"), resources.GetString("cmbloadno.Items5"), resources.GetString("cmbloadno.Items6"), resources.GetString("cmbloadno.Items7"), resources.GetString("cmbloadno.Items8"), resources.GetString("cmbloadno.Items9")})
         Me.cmbloadno.Name = "cmbloadno"
+        Me.ToolTip1.SetToolTip(Me.cmbloadno, resources.GetString("cmbloadno.ToolTip"))
         '
         'GroupBox8
         '
+        resources.ApplyResources(Me.GroupBox8, "GroupBox8")
         Me.GroupBox8.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.GroupBox8.Controls.Add(Me.txtcv_ikiti_load10)
         Me.GroupBox8.Controls.Add(Me.txtcv_ikiti_load9)
@@ -4093,100 +4419,110 @@ Partial Class Mainwindow
         Me.GroupBox8.Controls.Add(Me.lblcv_nowmaxval_load8)
         Me.GroupBox8.Controls.Add(Me.lblcv_nowmaxval_load9)
         Me.GroupBox8.Controls.Add(Me.lblcv_maxval_load9)
-        resources.ApplyResources(Me.GroupBox8, "GroupBox8")
         Me.GroupBox8.ForeColor = System.Drawing.Color.PeachPuff
         Me.GroupBox8.Name = "GroupBox8"
         Me.GroupBox8.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.GroupBox8, resources.GetString("GroupBox8.ToolTip"))
         '
         'txtcv_ikiti_load10
         '
+        resources.ApplyResources(Me.txtcv_ikiti_load10, "txtcv_ikiti_load10")
         Me.txtcv_ikiti_load10.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.txtcv_ikiti_load10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtcv_ikiti_load10, "txtcv_ikiti_load10")
         Me.txtcv_ikiti_load10.ForeColor = System.Drawing.Color.Snow
         Me.txtcv_ikiti_load10.Name = "txtcv_ikiti_load10"
         Me.txtcv_ikiti_load10.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtcv_ikiti_load10, resources.GetString("txtcv_ikiti_load10.ToolTip"))
         '
         'txtcv_ikiti_load9
         '
+        resources.ApplyResources(Me.txtcv_ikiti_load9, "txtcv_ikiti_load9")
         Me.txtcv_ikiti_load9.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.txtcv_ikiti_load9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtcv_ikiti_load9, "txtcv_ikiti_load9")
         Me.txtcv_ikiti_load9.ForeColor = System.Drawing.Color.Snow
         Me.txtcv_ikiti_load9.Name = "txtcv_ikiti_load9"
         Me.txtcv_ikiti_load9.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtcv_ikiti_load9, resources.GetString("txtcv_ikiti_load9.ToolTip"))
         '
         'txtcv_ikiti_load8
         '
+        resources.ApplyResources(Me.txtcv_ikiti_load8, "txtcv_ikiti_load8")
         Me.txtcv_ikiti_load8.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.txtcv_ikiti_load8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtcv_ikiti_load8, "txtcv_ikiti_load8")
         Me.txtcv_ikiti_load8.ForeColor = System.Drawing.Color.Snow
         Me.txtcv_ikiti_load8.Name = "txtcv_ikiti_load8"
         Me.txtcv_ikiti_load8.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtcv_ikiti_load8, resources.GetString("txtcv_ikiti_load8.ToolTip"))
         '
         'txtcv_ikiti_load7
         '
+        resources.ApplyResources(Me.txtcv_ikiti_load7, "txtcv_ikiti_load7")
         Me.txtcv_ikiti_load7.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.txtcv_ikiti_load7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtcv_ikiti_load7, "txtcv_ikiti_load7")
         Me.txtcv_ikiti_load7.ForeColor = System.Drawing.Color.Snow
         Me.txtcv_ikiti_load7.Name = "txtcv_ikiti_load7"
         Me.txtcv_ikiti_load7.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtcv_ikiti_load7, resources.GetString("txtcv_ikiti_load7.ToolTip"))
         '
         'txtcv_ikiti_load6
         '
+        resources.ApplyResources(Me.txtcv_ikiti_load6, "txtcv_ikiti_load6")
         Me.txtcv_ikiti_load6.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.txtcv_ikiti_load6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtcv_ikiti_load6, "txtcv_ikiti_load6")
         Me.txtcv_ikiti_load6.ForeColor = System.Drawing.Color.Snow
         Me.txtcv_ikiti_load6.Name = "txtcv_ikiti_load6"
         Me.txtcv_ikiti_load6.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtcv_ikiti_load6, resources.GetString("txtcv_ikiti_load6.ToolTip"))
         '
         'txtcv_ikiti_load5
         '
+        resources.ApplyResources(Me.txtcv_ikiti_load5, "txtcv_ikiti_load5")
         Me.txtcv_ikiti_load5.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.txtcv_ikiti_load5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtcv_ikiti_load5, "txtcv_ikiti_load5")
         Me.txtcv_ikiti_load5.ForeColor = System.Drawing.Color.Snow
         Me.txtcv_ikiti_load5.Name = "txtcv_ikiti_load5"
         Me.txtcv_ikiti_load5.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtcv_ikiti_load5, resources.GetString("txtcv_ikiti_load5.ToolTip"))
         '
         'txtcv_ikiti_load4
         '
+        resources.ApplyResources(Me.txtcv_ikiti_load4, "txtcv_ikiti_load4")
         Me.txtcv_ikiti_load4.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.txtcv_ikiti_load4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtcv_ikiti_load4, "txtcv_ikiti_load4")
         Me.txtcv_ikiti_load4.ForeColor = System.Drawing.Color.Snow
         Me.txtcv_ikiti_load4.Name = "txtcv_ikiti_load4"
         Me.txtcv_ikiti_load4.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtcv_ikiti_load4, resources.GetString("txtcv_ikiti_load4.ToolTip"))
         '
         'txtcv_ikiti_load3
         '
+        resources.ApplyResources(Me.txtcv_ikiti_load3, "txtcv_ikiti_load3")
         Me.txtcv_ikiti_load3.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.txtcv_ikiti_load3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtcv_ikiti_load3, "txtcv_ikiti_load3")
         Me.txtcv_ikiti_load3.ForeColor = System.Drawing.Color.Snow
         Me.txtcv_ikiti_load3.Name = "txtcv_ikiti_load3"
         Me.txtcv_ikiti_load3.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtcv_ikiti_load3, resources.GetString("txtcv_ikiti_load3.ToolTip"))
         '
         'txtcv_ikiti_load2
         '
+        resources.ApplyResources(Me.txtcv_ikiti_load2, "txtcv_ikiti_load2")
         Me.txtcv_ikiti_load2.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.txtcv_ikiti_load2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtcv_ikiti_load2, "txtcv_ikiti_load2")
         Me.txtcv_ikiti_load2.ForeColor = System.Drawing.Color.Snow
         Me.txtcv_ikiti_load2.Name = "txtcv_ikiti_load2"
         Me.txtcv_ikiti_load2.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtcv_ikiti_load2, resources.GetString("txtcv_ikiti_load2.ToolTip"))
         '
         'txtcv_ikiti_load1
         '
+        resources.ApplyResources(Me.txtcv_ikiti_load1, "txtcv_ikiti_load1")
         Me.txtcv_ikiti_load1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.txtcv_ikiti_load1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtcv_ikiti_load1, "txtcv_ikiti_load1")
         Me.txtcv_ikiti_load1.ForeColor = System.Drawing.Color.Snow
         Me.txtcv_ikiti_load1.Name = "txtcv_ikiti_load1"
         Me.txtcv_ikiti_load1.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtcv_ikiti_load1, resources.GetString("txtcv_ikiti_load1.ToolTip"))
         '
         'lblcv_nowmaxval_load1
         '
@@ -4194,15 +4530,17 @@ Partial Class Mainwindow
         Me.lblcv_nowmaxval_load1.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.lblcv_nowmaxval_load1.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcv_nowmaxval_load1.Name = "lblcv_nowmaxval_load1"
+        Me.ToolTip1.SetToolTip(Me.lblcv_nowmaxval_load1, resources.GetString("lblcv_nowmaxval_load1.ToolTip"))
         '
         'txtdelay_load10
         '
+        resources.ApplyResources(Me.txtdelay_load10, "txtdelay_load10")
         Me.txtdelay_load10.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.txtdelay_load10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtdelay_load10, "txtdelay_load10")
         Me.txtdelay_load10.ForeColor = System.Drawing.Color.Snow
         Me.txtdelay_load10.Name = "txtdelay_load10"
         Me.txtdelay_load10.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtdelay_load10, resources.GetString("txtdelay_load10.ToolTip"))
         '
         'lblcv_maxval_load2
         '
@@ -4210,15 +4548,17 @@ Partial Class Mainwindow
         Me.lblcv_maxval_load2.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.lblcv_maxval_load2.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcv_maxval_load2.Name = "lblcv_maxval_load2"
+        Me.ToolTip1.SetToolTip(Me.lblcv_maxval_load2, resources.GetString("lblcv_maxval_load2.ToolTip"))
         '
         'txtdelay_load9
         '
+        resources.ApplyResources(Me.txtdelay_load9, "txtdelay_load9")
         Me.txtdelay_load9.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.txtdelay_load9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtdelay_load9, "txtdelay_load9")
         Me.txtdelay_load9.ForeColor = System.Drawing.Color.Snow
         Me.txtdelay_load9.Name = "txtdelay_load9"
         Me.txtdelay_load9.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtdelay_load9, resources.GetString("txtdelay_load9.ToolTip"))
         '
         'lblcv_nowmaxval_load2
         '
@@ -4226,15 +4566,17 @@ Partial Class Mainwindow
         Me.lblcv_nowmaxval_load2.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.lblcv_nowmaxval_load2.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcv_nowmaxval_load2.Name = "lblcv_nowmaxval_load2"
+        Me.ToolTip1.SetToolTip(Me.lblcv_nowmaxval_load2, resources.GetString("lblcv_nowmaxval_load2.ToolTip"))
         '
         'txtdelay_load8
         '
+        resources.ApplyResources(Me.txtdelay_load8, "txtdelay_load8")
         Me.txtdelay_load8.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.txtdelay_load8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtdelay_load8, "txtdelay_load8")
         Me.txtdelay_load8.ForeColor = System.Drawing.Color.Snow
         Me.txtdelay_load8.Name = "txtdelay_load8"
         Me.txtdelay_load8.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtdelay_load8, resources.GetString("txtdelay_load8.ToolTip"))
         '
         'lblcv_maxval_load3
         '
@@ -4242,15 +4584,17 @@ Partial Class Mainwindow
         Me.lblcv_maxval_load3.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.lblcv_maxval_load3.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcv_maxval_load3.Name = "lblcv_maxval_load3"
+        Me.ToolTip1.SetToolTip(Me.lblcv_maxval_load3, resources.GetString("lblcv_maxval_load3.ToolTip"))
         '
         'txtdelay_load7
         '
+        resources.ApplyResources(Me.txtdelay_load7, "txtdelay_load7")
         Me.txtdelay_load7.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.txtdelay_load7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtdelay_load7, "txtdelay_load7")
         Me.txtdelay_load7.ForeColor = System.Drawing.Color.Snow
         Me.txtdelay_load7.Name = "txtdelay_load7"
         Me.txtdelay_load7.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtdelay_load7, resources.GetString("txtdelay_load7.ToolTip"))
         '
         'lblcv_nowmaxval_load3
         '
@@ -4258,15 +4602,17 @@ Partial Class Mainwindow
         Me.lblcv_nowmaxval_load3.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.lblcv_nowmaxval_load3.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcv_nowmaxval_load3.Name = "lblcv_nowmaxval_load3"
+        Me.ToolTip1.SetToolTip(Me.lblcv_nowmaxval_load3, resources.GetString("lblcv_nowmaxval_load3.ToolTip"))
         '
         'txtdelay_load6
         '
+        resources.ApplyResources(Me.txtdelay_load6, "txtdelay_load6")
         Me.txtdelay_load6.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.txtdelay_load6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtdelay_load6, "txtdelay_load6")
         Me.txtdelay_load6.ForeColor = System.Drawing.Color.Snow
         Me.txtdelay_load6.Name = "txtdelay_load6"
         Me.txtdelay_load6.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtdelay_load6, resources.GetString("txtdelay_load6.ToolTip"))
         '
         'lblcv_maxval_load4
         '
@@ -4274,15 +4620,17 @@ Partial Class Mainwindow
         Me.lblcv_maxval_load4.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.lblcv_maxval_load4.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcv_maxval_load4.Name = "lblcv_maxval_load4"
+        Me.ToolTip1.SetToolTip(Me.lblcv_maxval_load4, resources.GetString("lblcv_maxval_load4.ToolTip"))
         '
         'txtdelay_load5
         '
+        resources.ApplyResources(Me.txtdelay_load5, "txtdelay_load5")
         Me.txtdelay_load5.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.txtdelay_load5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtdelay_load5, "txtdelay_load5")
         Me.txtdelay_load5.ForeColor = System.Drawing.Color.Snow
         Me.txtdelay_load5.Name = "txtdelay_load5"
         Me.txtdelay_load5.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtdelay_load5, resources.GetString("txtdelay_load5.ToolTip"))
         '
         'lblcv_nowmaxval_load4
         '
@@ -4290,15 +4638,17 @@ Partial Class Mainwindow
         Me.lblcv_nowmaxval_load4.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.lblcv_nowmaxval_load4.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcv_nowmaxval_load4.Name = "lblcv_nowmaxval_load4"
+        Me.ToolTip1.SetToolTip(Me.lblcv_nowmaxval_load4, resources.GetString("lblcv_nowmaxval_load4.ToolTip"))
         '
         'txtdelay_load4
         '
+        resources.ApplyResources(Me.txtdelay_load4, "txtdelay_load4")
         Me.txtdelay_load4.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.txtdelay_load4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtdelay_load4, "txtdelay_load4")
         Me.txtdelay_load4.ForeColor = System.Drawing.Color.Snow
         Me.txtdelay_load4.Name = "txtdelay_load4"
         Me.txtdelay_load4.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtdelay_load4, resources.GetString("txtdelay_load4.ToolTip"))
         '
         'lblcv_maxval_load5
         '
@@ -4306,15 +4656,17 @@ Partial Class Mainwindow
         Me.lblcv_maxval_load5.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.lblcv_maxval_load5.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcv_maxval_load5.Name = "lblcv_maxval_load5"
+        Me.ToolTip1.SetToolTip(Me.lblcv_maxval_load5, resources.GetString("lblcv_maxval_load5.ToolTip"))
         '
         'txtdelay_load3
         '
+        resources.ApplyResources(Me.txtdelay_load3, "txtdelay_load3")
         Me.txtdelay_load3.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.txtdelay_load3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtdelay_load3, "txtdelay_load3")
         Me.txtdelay_load3.ForeColor = System.Drawing.Color.Snow
         Me.txtdelay_load3.Name = "txtdelay_load3"
         Me.txtdelay_load3.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtdelay_load3, resources.GetString("txtdelay_load3.ToolTip"))
         '
         'lblcv_nowmaxval_load5
         '
@@ -4322,15 +4674,17 @@ Partial Class Mainwindow
         Me.lblcv_nowmaxval_load5.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.lblcv_nowmaxval_load5.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcv_nowmaxval_load5.Name = "lblcv_nowmaxval_load5"
+        Me.ToolTip1.SetToolTip(Me.lblcv_nowmaxval_load5, resources.GetString("lblcv_nowmaxval_load5.ToolTip"))
         '
         'txtdelay_load2
         '
+        resources.ApplyResources(Me.txtdelay_load2, "txtdelay_load2")
         Me.txtdelay_load2.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.txtdelay_load2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtdelay_load2, "txtdelay_load2")
         Me.txtdelay_load2.ForeColor = System.Drawing.Color.Snow
         Me.txtdelay_load2.Name = "txtdelay_load2"
         Me.txtdelay_load2.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtdelay_load2, resources.GetString("txtdelay_load2.ToolTip"))
         '
         'lblcv_maxval_load6
         '
@@ -4338,15 +4692,17 @@ Partial Class Mainwindow
         Me.lblcv_maxval_load6.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.lblcv_maxval_load6.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcv_maxval_load6.Name = "lblcv_maxval_load6"
+        Me.ToolTip1.SetToolTip(Me.lblcv_maxval_load6, resources.GetString("lblcv_maxval_load6.ToolTip"))
         '
         'txtdelay_load1
         '
+        resources.ApplyResources(Me.txtdelay_load1, "txtdelay_load1")
         Me.txtdelay_load1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.txtdelay_load1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtdelay_load1, "txtdelay_load1")
         Me.txtdelay_load1.ForeColor = System.Drawing.Color.Snow
         Me.txtdelay_load1.Name = "txtdelay_load1"
         Me.txtdelay_load1.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtdelay_load1, resources.GetString("txtdelay_load1.ToolTip"))
         '
         'lblcv_nowmaxval_load6
         '
@@ -4354,6 +4710,7 @@ Partial Class Mainwindow
         Me.lblcv_nowmaxval_load6.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.lblcv_nowmaxval_load6.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcv_nowmaxval_load6.Name = "lblcv_nowmaxval_load6"
+        Me.ToolTip1.SetToolTip(Me.lblcv_nowmaxval_load6, resources.GetString("lblcv_nowmaxval_load6.ToolTip"))
         '
         'lblcv_maxval_load7
         '
@@ -4361,6 +4718,7 @@ Partial Class Mainwindow
         Me.lblcv_maxval_load7.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.lblcv_maxval_load7.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcv_maxval_load7.Name = "lblcv_maxval_load7"
+        Me.ToolTip1.SetToolTip(Me.lblcv_maxval_load7, resources.GetString("lblcv_maxval_load7.ToolTip"))
         '
         'lblcv_maxval_load1
         '
@@ -4368,6 +4726,7 @@ Partial Class Mainwindow
         Me.lblcv_maxval_load1.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.lblcv_maxval_load1.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcv_maxval_load1.Name = "lblcv_maxval_load1"
+        Me.ToolTip1.SetToolTip(Me.lblcv_maxval_load1, resources.GetString("lblcv_maxval_load1.ToolTip"))
         '
         'lblcv_nowmaxval_load7
         '
@@ -4375,6 +4734,7 @@ Partial Class Mainwindow
         Me.lblcv_nowmaxval_load7.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.lblcv_nowmaxval_load7.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcv_nowmaxval_load7.Name = "lblcv_nowmaxval_load7"
+        Me.ToolTip1.SetToolTip(Me.lblcv_nowmaxval_load7, resources.GetString("lblcv_nowmaxval_load7.ToolTip"))
         '
         'lblcv_nowmaxval_load10
         '
@@ -4382,6 +4742,7 @@ Partial Class Mainwindow
         Me.lblcv_nowmaxval_load10.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.lblcv_nowmaxval_load10.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcv_nowmaxval_load10.Name = "lblcv_nowmaxval_load10"
+        Me.ToolTip1.SetToolTip(Me.lblcv_nowmaxval_load10, resources.GetString("lblcv_nowmaxval_load10.ToolTip"))
         '
         'lblcv_maxval_load8
         '
@@ -4389,6 +4750,7 @@ Partial Class Mainwindow
         Me.lblcv_maxval_load8.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.lblcv_maxval_load8.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcv_maxval_load8.Name = "lblcv_maxval_load8"
+        Me.ToolTip1.SetToolTip(Me.lblcv_maxval_load8, resources.GetString("lblcv_maxval_load8.ToolTip"))
         '
         'lblcv_maxval_load10
         '
@@ -4396,6 +4758,7 @@ Partial Class Mainwindow
         Me.lblcv_maxval_load10.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.lblcv_maxval_load10.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcv_maxval_load10.Name = "lblcv_maxval_load10"
+        Me.ToolTip1.SetToolTip(Me.lblcv_maxval_load10, resources.GetString("lblcv_maxval_load10.ToolTip"))
         '
         'lblcv_nowmaxval_load8
         '
@@ -4403,6 +4766,7 @@ Partial Class Mainwindow
         Me.lblcv_nowmaxval_load8.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.lblcv_nowmaxval_load8.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcv_nowmaxval_load8.Name = "lblcv_nowmaxval_load8"
+        Me.ToolTip1.SetToolTip(Me.lblcv_nowmaxval_load8, resources.GetString("lblcv_nowmaxval_load8.ToolTip"))
         '
         'lblcv_nowmaxval_load9
         '
@@ -4410,6 +4774,7 @@ Partial Class Mainwindow
         Me.lblcv_nowmaxval_load9.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.lblcv_nowmaxval_load9.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcv_nowmaxval_load9.Name = "lblcv_nowmaxval_load9"
+        Me.ToolTip1.SetToolTip(Me.lblcv_nowmaxval_load9, resources.GetString("lblcv_nowmaxval_load9.ToolTip"))
         '
         'lblcv_maxval_load9
         '
@@ -4417,141 +4782,157 @@ Partial Class Mainwindow
         Me.lblcv_maxval_load9.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.lblcv_maxval_load9.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcv_maxval_load9.Name = "lblcv_maxval_load9"
+        Me.ToolTip1.SetToolTip(Me.lblcv_maxval_load9, resources.GetString("lblcv_maxval_load9.ToolTip"))
         '
         'chknow_load10
         '
-        Me.chknow_load10.AutoCheck = False
         resources.ApplyResources(Me.chknow_load10, "chknow_load10")
+        Me.chknow_load10.AutoCheck = False
         Me.chknow_load10.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(75, Byte), Integer))
         Me.chknow_load10.ForeColor = System.Drawing.SystemColors.Control
         Me.chknow_load10.Name = "chknow_load10"
+        Me.ToolTip1.SetToolTip(Me.chknow_load10, resources.GetString("chknow_load10.ToolTip"))
         Me.chknow_load10.UseVisualStyleBackColor = False
         '
         'chknow_load9
         '
-        Me.chknow_load9.AutoCheck = False
         resources.ApplyResources(Me.chknow_load9, "chknow_load9")
+        Me.chknow_load9.AutoCheck = False
         Me.chknow_load9.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(75, Byte), Integer))
         Me.chknow_load9.ForeColor = System.Drawing.SystemColors.Control
         Me.chknow_load9.Name = "chknow_load9"
+        Me.ToolTip1.SetToolTip(Me.chknow_load9, resources.GetString("chknow_load9.ToolTip"))
         Me.chknow_load9.UseVisualStyleBackColor = False
         '
         'chknow_load8
         '
-        Me.chknow_load8.AutoCheck = False
         resources.ApplyResources(Me.chknow_load8, "chknow_load8")
+        Me.chknow_load8.AutoCheck = False
         Me.chknow_load8.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(75, Byte), Integer))
         Me.chknow_load8.ForeColor = System.Drawing.SystemColors.Control
         Me.chknow_load8.Name = "chknow_load8"
+        Me.ToolTip1.SetToolTip(Me.chknow_load8, resources.GetString("chknow_load8.ToolTip"))
         Me.chknow_load8.UseVisualStyleBackColor = False
         '
         'chknow_load7
         '
-        Me.chknow_load7.AutoCheck = False
         resources.ApplyResources(Me.chknow_load7, "chknow_load7")
+        Me.chknow_load7.AutoCheck = False
         Me.chknow_load7.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(75, Byte), Integer))
         Me.chknow_load7.ForeColor = System.Drawing.SystemColors.Control
         Me.chknow_load7.Name = "chknow_load7"
+        Me.ToolTip1.SetToolTip(Me.chknow_load7, resources.GetString("chknow_load7.ToolTip"))
         Me.chknow_load7.UseVisualStyleBackColor = False
         '
         'chknow_load6
         '
-        Me.chknow_load6.AutoCheck = False
         resources.ApplyResources(Me.chknow_load6, "chknow_load6")
+        Me.chknow_load6.AutoCheck = False
         Me.chknow_load6.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(75, Byte), Integer))
         Me.chknow_load6.ForeColor = System.Drawing.SystemColors.Control
         Me.chknow_load6.Name = "chknow_load6"
+        Me.ToolTip1.SetToolTip(Me.chknow_load6, resources.GetString("chknow_load6.ToolTip"))
         Me.chknow_load6.UseVisualStyleBackColor = False
         '
         'chknow_load5
         '
-        Me.chknow_load5.AutoCheck = False
         resources.ApplyResources(Me.chknow_load5, "chknow_load5")
+        Me.chknow_load5.AutoCheck = False
         Me.chknow_load5.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(75, Byte), Integer))
         Me.chknow_load5.ForeColor = System.Drawing.SystemColors.Control
         Me.chknow_load5.Name = "chknow_load5"
+        Me.ToolTip1.SetToolTip(Me.chknow_load5, resources.GetString("chknow_load5.ToolTip"))
         Me.chknow_load5.UseVisualStyleBackColor = False
         '
         'chknow_load4
         '
-        Me.chknow_load4.AutoCheck = False
         resources.ApplyResources(Me.chknow_load4, "chknow_load4")
+        Me.chknow_load4.AutoCheck = False
         Me.chknow_load4.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(75, Byte), Integer))
         Me.chknow_load4.ForeColor = System.Drawing.SystemColors.Control
         Me.chknow_load4.Name = "chknow_load4"
+        Me.ToolTip1.SetToolTip(Me.chknow_load4, resources.GetString("chknow_load4.ToolTip"))
         Me.chknow_load4.UseVisualStyleBackColor = False
         '
         'chknow_load3
         '
-        Me.chknow_load3.AutoCheck = False
         resources.ApplyResources(Me.chknow_load3, "chknow_load3")
+        Me.chknow_load3.AutoCheck = False
         Me.chknow_load3.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(75, Byte), Integer))
         Me.chknow_load3.ForeColor = System.Drawing.SystemColors.Control
         Me.chknow_load3.Name = "chknow_load3"
+        Me.ToolTip1.SetToolTip(Me.chknow_load3, resources.GetString("chknow_load3.ToolTip"))
         Me.chknow_load3.UseVisualStyleBackColor = False
         '
         'chknow_load2
         '
-        Me.chknow_load2.AutoCheck = False
         resources.ApplyResources(Me.chknow_load2, "chknow_load2")
+        Me.chknow_load2.AutoCheck = False
         Me.chknow_load2.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(75, Byte), Integer))
         Me.chknow_load2.ForeColor = System.Drawing.SystemColors.Control
         Me.chknow_load2.Name = "chknow_load2"
+        Me.ToolTip1.SetToolTip(Me.chknow_load2, resources.GetString("chknow_load2.ToolTip"))
         Me.chknow_load2.UseVisualStyleBackColor = False
         '
         'chknow_load1
         '
-        Me.chknow_load1.AutoCheck = False
         resources.ApplyResources(Me.chknow_load1, "chknow_load1")
+        Me.chknow_load1.AutoCheck = False
         Me.chknow_load1.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(75, Byte), Integer))
         Me.chknow_load1.ForeColor = System.Drawing.SystemColors.Control
         Me.chknow_load1.Name = "chknow_load1"
+        Me.ToolTip1.SetToolTip(Me.chknow_load1, resources.GetString("chknow_load1.ToolTip"))
         Me.chknow_load1.UseVisualStyleBackColor = False
         '
         'txtdelay_load
         '
+        resources.ApplyResources(Me.txtdelay_load, "txtdelay_load")
         Me.txtdelay_load.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.txtdelay_load.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtdelay_load, "txtdelay_load")
         Me.txtdelay_load.ForeColor = System.Drawing.Color.Snow
         Me.txtdelay_load.Name = "txtdelay_load"
         Me.txtdelay_load.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtdelay_load, resources.GetString("txtdelay_load.ToolTip"))
         '
         'chknow_monitor
         '
-        Me.chknow_monitor.AutoCheck = False
         resources.ApplyResources(Me.chknow_monitor, "chknow_monitor")
+        Me.chknow_monitor.AutoCheck = False
         Me.chknow_monitor.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(75, Byte), Integer))
         Me.chknow_monitor.ForeColor = System.Drawing.SystemColors.Control
         Me.chknow_monitor.Name = "chknow_monitor"
+        Me.ToolTip1.SetToolTip(Me.chknow_monitor, resources.GetString("chknow_monitor.ToolTip"))
         Me.chknow_monitor.UseVisualStyleBackColor = False
         '
         'chknow_load
         '
-        Me.chknow_load.AutoCheck = False
         resources.ApplyResources(Me.chknow_load, "chknow_load")
+        Me.chknow_load.AutoCheck = False
         Me.chknow_load.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.chknow_load.ForeColor = System.Drawing.SystemColors.Control
         Me.chknow_load.Name = "chknow_load"
+        Me.ToolTip1.SetToolTip(Me.chknow_load, resources.GetString("chknow_load.ToolTip"))
         Me.chknow_load.UseVisualStyleBackColor = False
         '
         'chknow_reset
         '
-        Me.chknow_reset.AutoCheck = False
         resources.ApplyResources(Me.chknow_reset, "chknow_reset")
+        Me.chknow_reset.AutoCheck = False
         Me.chknow_reset.BackColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(2, Byte), Integer))
         Me.chknow_reset.ForeColor = System.Drawing.SystemColors.Control
         Me.chknow_reset.Name = "chknow_reset"
+        Me.ToolTip1.SetToolTip(Me.chknow_reset, resources.GetString("chknow_reset.ToolTip"))
         Me.chknow_reset.UseVisualStyleBackColor = False
         '
         'txtrecord_load
         '
+        resources.ApplyResources(Me.txtrecord_load, "txtrecord_load")
         Me.txtrecord_load.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.txtrecord_load.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtrecord_load, "txtrecord_load")
         Me.txtrecord_load.ForeColor = System.Drawing.SystemColors.Control
         Me.txtrecord_load.Name = "txtrecord_load"
         Me.txtrecord_load.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtrecord_load, resources.GetString("txtrecord_load.ToolTip"))
         '
         'lblrecord_pause_total
         '
@@ -4559,6 +4940,7 @@ Partial Class Mainwindow
         Me.lblrecord_pause_total.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.lblrecord_pause_total.ForeColor = System.Drawing.SystemColors.Control
         Me.lblrecord_pause_total.Name = "lblrecord_pause_total"
+        Me.ToolTip1.SetToolTip(Me.lblrecord_pause_total, resources.GetString("lblrecord_pause_total.ToolTip"))
         '
         'lblrecord_pause
         '
@@ -4566,15 +4948,17 @@ Partial Class Mainwindow
         Me.lblrecord_pause.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.lblrecord_pause.ForeColor = System.Drawing.SystemColors.Control
         Me.lblrecord_pause.Name = "lblrecord_pause"
+        Me.ToolTip1.SetToolTip(Me.lblrecord_pause, resources.GetString("lblrecord_pause.ToolTip"))
         '
         'txtrecord_load_total
         '
+        resources.ApplyResources(Me.txtrecord_load_total, "txtrecord_load_total")
         Me.txtrecord_load_total.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.txtrecord_load_total.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtrecord_load_total, "txtrecord_load_total")
         Me.txtrecord_load_total.ForeColor = System.Drawing.SystemColors.Control
         Me.txtrecord_load_total.Name = "txtrecord_load_total"
         Me.txtrecord_load_total.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtrecord_load_total, resources.GetString("txtrecord_load_total.ToolTip"))
         '
         'Label30
         '
@@ -4582,6 +4966,7 @@ Partial Class Mainwindow
         Me.Label30.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.Label30.ForeColor = System.Drawing.SystemColors.Control
         Me.Label30.Name = "Label30"
+        Me.ToolTip1.SetToolTip(Me.Label30, resources.GetString("Label30.ToolTip"))
         '
         'Label34
         '
@@ -4589,15 +4974,17 @@ Partial Class Mainwindow
         Me.Label34.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.Label34.ForeColor = System.Drawing.SystemColors.Control
         Me.Label34.Name = "Label34"
+        Me.ToolTip1.SetToolTip(Me.Label34, resources.GetString("Label34.ToolTip"))
         '
         'txtcv_ikiti_load
         '
+        resources.ApplyResources(Me.txtcv_ikiti_load, "txtcv_ikiti_load")
         Me.txtcv_ikiti_load.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.txtcv_ikiti_load.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtcv_ikiti_load, "txtcv_ikiti_load")
         Me.txtcv_ikiti_load.ForeColor = System.Drawing.SystemColors.Control
         Me.txtcv_ikiti_load.Name = "txtcv_ikiti_load"
         Me.txtcv_ikiti_load.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtcv_ikiti_load, resources.GetString("txtcv_ikiti_load.ToolTip"))
         '
         'lblcv_nowmaxval_load
         '
@@ -4605,6 +4992,7 @@ Partial Class Mainwindow
         Me.lblcv_nowmaxval_load.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.lblcv_nowmaxval_load.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcv_nowmaxval_load.Name = "lblcv_nowmaxval_load"
+        Me.ToolTip1.SetToolTip(Me.lblcv_nowmaxval_load, resources.GetString("lblcv_nowmaxval_load.ToolTip"))
         '
         'lblcv_maxval_load
         '
@@ -4612,6 +5000,7 @@ Partial Class Mainwindow
         Me.lblcv_maxval_load.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.lblcv_maxval_load.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcv_maxval_load.Name = "lblcv_maxval_load"
+        Me.ToolTip1.SetToolTip(Me.lblcv_maxval_load, resources.GetString("lblcv_maxval_load.ToolTip"))
         '
         'lblsleeptime
         '
@@ -4619,6 +5008,7 @@ Partial Class Mainwindow
         Me.lblsleeptime.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(50, Byte), Integer))
         Me.lblsleeptime.ForeColor = System.Drawing.Color.Silver
         Me.lblsleeptime.Name = "lblsleeptime"
+        Me.ToolTip1.SetToolTip(Me.lblsleeptime, resources.GetString("lblsleeptime.ToolTip"))
         '
         'lblloading
         '
@@ -4626,47 +5016,53 @@ Partial Class Mainwindow
         Me.lblloading.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.lblloading.ForeColor = System.Drawing.SystemColors.Control
         Me.lblloading.Name = "lblloading"
+        Me.ToolTip1.SetToolTip(Me.lblloading, resources.GetString("lblloading.ToolTip"))
         '
         'txtcv_result_sizey
         '
-        Me.txtcv_result_sizey.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         resources.ApplyResources(Me.txtcv_result_sizey, "txtcv_result_sizey")
+        Me.txtcv_result_sizey.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.txtcv_result_sizey.ForeColor = System.Drawing.SystemColors.Control
         Me.txtcv_result_sizey.Name = "txtcv_result_sizey"
         Me.txtcv_result_sizey.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtcv_result_sizey, resources.GetString("txtcv_result_sizey.ToolTip"))
         '
         'txtcv_result_sizex
         '
-        Me.txtcv_result_sizex.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         resources.ApplyResources(Me.txtcv_result_sizex, "txtcv_result_sizex")
+        Me.txtcv_result_sizex.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.txtcv_result_sizex.ForeColor = System.Drawing.SystemColors.Control
         Me.txtcv_result_sizex.Name = "txtcv_result_sizex"
         Me.txtcv_result_sizex.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtcv_result_sizex, resources.GetString("txtcv_result_sizex.ToolTip"))
         '
         'txtcv_result_posy
         '
-        Me.txtcv_result_posy.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         resources.ApplyResources(Me.txtcv_result_posy, "txtcv_result_posy")
+        Me.txtcv_result_posy.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.txtcv_result_posy.ForeColor = System.Drawing.SystemColors.Control
         Me.txtcv_result_posy.Name = "txtcv_result_posy"
         Me.txtcv_result_posy.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtcv_result_posy, resources.GetString("txtcv_result_posy.ToolTip"))
         '
         'txtcv_result_posx
         '
-        Me.txtcv_result_posx.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         resources.ApplyResources(Me.txtcv_result_posx, "txtcv_result_posx")
+        Me.txtcv_result_posx.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.txtcv_result_posx.ForeColor = System.Drawing.SystemColors.Control
         Me.txtcv_result_posx.Name = "txtcv_result_posx"
         Me.txtcv_result_posx.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtcv_result_posx, resources.GetString("txtcv_result_posx.ToolTip"))
         '
         'txtcompikiti
         '
+        resources.ApplyResources(Me.txtcompikiti, "txtcompikiti")
         Me.txtcompikiti.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.txtcompikiti.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtcompikiti, "txtcompikiti")
         Me.txtcompikiti.ForeColor = System.Drawing.Color.Aquamarine
         Me.txtcompikiti.Name = "txtcompikiti"
         Me.txtcompikiti.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtcompikiti, resources.GetString("txtcompikiti.ToolTip"))
         '
         'txtstate
         '
@@ -4674,36 +5070,41 @@ Partial Class Mainwindow
         Me.txtstate.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.txtstate.ForeColor = System.Drawing.SystemColors.Control
         Me.txtstate.Name = "txtstate"
+        Me.ToolTip1.SetToolTip(Me.txtstate, resources.GetString("txtstate.ToolTip"))
         '
         'Label3
         '
         resources.ApplyResources(Me.Label3, "Label3")
         Me.Label3.ForeColor = System.Drawing.SystemColors.Control
         Me.Label3.Name = "Label3"
+        Me.ToolTip1.SetToolTip(Me.Label3, resources.GetString("Label3.ToolTip"))
         '
         'txtcv_result
         '
+        resources.ApplyResources(Me.txtcv_result, "txtcv_result")
         Me.txtcv_result.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.txtcv_result.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtcv_result, "txtcv_result")
         Me.txtcv_result.ForeColor = System.Drawing.SystemColors.Control
         Me.txtcv_result.Name = "txtcv_result"
         Me.txtcv_result.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtcv_result, resources.GetString("txtcv_result.ToolTip"))
         '
         'btncv_downsize
         '
-        Me.btncv_downsize.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btncv_downsize, "btncv_downsize")
+        Me.btncv_downsize.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btncv_downsize.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btncv_downsize.Name = "btncv_downsize"
+        Me.ToolTip1.SetToolTip(Me.btncv_downsize, resources.GetString("btncv_downsize.ToolTip"))
         Me.btncv_downsize.UseVisualStyleBackColor = False
         '
         'btncv_first
         '
-        Me.btncv_first.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btncv_first, "btncv_first")
+        Me.btncv_first.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btncv_first.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btncv_first.Name = "btncv_first"
+        Me.ToolTip1.SetToolTip(Me.btncv_first, resources.GetString("btncv_first.ToolTip"))
         Me.btncv_first.UseVisualStyleBackColor = False
         '
         'lblcv_lap
@@ -4711,6 +5112,7 @@ Partial Class Mainwindow
         resources.ApplyResources(Me.lblcv_lap, "lblcv_lap")
         Me.lblcv_lap.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcv_lap.Name = "lblcv_lap"
+        Me.ToolTip1.SetToolTip(Me.lblcv_lap, resources.GetString("lblcv_lap.ToolTip"))
         '
         'Label52
         '
@@ -4718,6 +5120,7 @@ Partial Class Mainwindow
         Me.Label52.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.Label52.ForeColor = System.Drawing.SystemColors.Control
         Me.Label52.Name = "Label52"
+        Me.ToolTip1.SetToolTip(Me.Label52, resources.GetString("Label52.ToolTip"))
         '
         'Label53
         '
@@ -4725,15 +5128,17 @@ Partial Class Mainwindow
         Me.Label53.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.Label53.ForeColor = System.Drawing.SystemColors.Control
         Me.Label53.Name = "Label53"
+        Me.ToolTip1.SetToolTip(Me.Label53, resources.GetString("Label53.ToolTip"))
         '
         'txtcv_ikiti
         '
+        resources.ApplyResources(Me.txtcv_ikiti, "txtcv_ikiti")
         Me.txtcv_ikiti.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.txtcv_ikiti.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtcv_ikiti, "txtcv_ikiti")
         Me.txtcv_ikiti.ForeColor = System.Drawing.SystemColors.Control
         Me.txtcv_ikiti.Name = "txtcv_ikiti"
         Me.txtcv_ikiti.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtcv_ikiti, resources.GetString("txtcv_ikiti.ToolTip"))
         '
         'lblcv_nowmaxval
         '
@@ -4741,6 +5146,7 @@ Partial Class Mainwindow
         Me.lblcv_nowmaxval.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.lblcv_nowmaxval.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcv_nowmaxval.Name = "lblcv_nowmaxval"
+        Me.ToolTip1.SetToolTip(Me.lblcv_nowmaxval, resources.GetString("lblcv_nowmaxval.ToolTip"))
         '
         'lblcv_maxval
         '
@@ -4748,6 +5154,7 @@ Partial Class Mainwindow
         Me.lblcv_maxval.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.lblcv_maxval.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcv_maxval.Name = "lblcv_maxval"
+        Me.ToolTip1.SetToolTip(Me.lblcv_maxval, resources.GetString("lblcv_maxval.ToolTip"))
         '
         'Label46
         '
@@ -4755,6 +5162,7 @@ Partial Class Mainwindow
         Me.Label46.BackColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(2, Byte), Integer))
         Me.Label46.ForeColor = System.Drawing.SystemColors.Control
         Me.Label46.Name = "Label46"
+        Me.ToolTip1.SetToolTip(Me.Label46, resources.GetString("Label46.ToolTip"))
         '
         'Label49
         '
@@ -4762,52 +5170,59 @@ Partial Class Mainwindow
         Me.Label49.BackColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(2, Byte), Integer))
         Me.Label49.ForeColor = System.Drawing.SystemColors.Control
         Me.Label49.Name = "Label49"
+        Me.ToolTip1.SetToolTip(Me.Label49, resources.GetString("Label49.ToolTip"))
         '
         'txtcv_ikiti_reset
         '
+        resources.ApplyResources(Me.txtcv_ikiti_reset, "txtcv_ikiti_reset")
         Me.txtcv_ikiti_reset.BackColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(2, Byte), Integer))
         Me.txtcv_ikiti_reset.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtcv_ikiti_reset, "txtcv_ikiti_reset")
         Me.txtcv_ikiti_reset.ForeColor = System.Drawing.SystemColors.Control
         Me.txtcv_ikiti_reset.Name = "txtcv_ikiti_reset"
         Me.txtcv_ikiti_reset.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtcv_ikiti_reset, resources.GetString("txtcv_ikiti_reset.ToolTip"))
         '
         'Label39
         '
         resources.ApplyResources(Me.Label39, "Label39")
         Me.Label39.ForeColor = System.Drawing.SystemColors.Control
         Me.Label39.Name = "Label39"
+        Me.ToolTip1.SetToolTip(Me.Label39, resources.GetString("Label39.ToolTip"))
         '
         'Label41
         '
         resources.ApplyResources(Me.Label41, "Label41")
         Me.Label41.ForeColor = System.Drawing.SystemColors.Control
         Me.Label41.Name = "Label41"
+        Me.ToolTip1.SetToolTip(Me.Label41, resources.GetString("Label41.ToolTip"))
         '
         'txtcv_posy
         '
-        Me.txtcv_posy.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         resources.ApplyResources(Me.txtcv_posy, "txtcv_posy")
+        Me.txtcv_posy.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.txtcv_posy.ForeColor = System.Drawing.SystemColors.Control
         Me.txtcv_posy.Name = "txtcv_posy"
         Me.txtcv_posy.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtcv_posy, resources.GetString("txtcv_posy.ToolTip"))
         '
         'txtcv_posx
         '
-        Me.txtcv_posx.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         resources.ApplyResources(Me.txtcv_posx, "txtcv_posx")
+        Me.txtcv_posx.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.txtcv_posx.ForeColor = System.Drawing.SystemColors.Control
         Me.txtcv_posx.Name = "txtcv_posx"
         Me.txtcv_posx.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtcv_posx, resources.GetString("txtcv_posx.ToolTip"))
         '
         'txtcv_antenyn
         '
+        resources.ApplyResources(Me.txtcv_antenyn, "txtcv_antenyn")
         Me.txtcv_antenyn.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.txtcv_antenyn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtcv_antenyn, "txtcv_antenyn")
         Me.txtcv_antenyn.ForeColor = System.Drawing.Color.Aquamarine
         Me.txtcv_antenyn.Name = "txtcv_antenyn"
         Me.txtcv_antenyn.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtcv_antenyn, resources.GetString("txtcv_antenyn.ToolTip"))
         '
         'lblcv_nowmaxval_reset
         '
@@ -4815,6 +5230,7 @@ Partial Class Mainwindow
         Me.lblcv_nowmaxval_reset.BackColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(2, Byte), Integer))
         Me.lblcv_nowmaxval_reset.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcv_nowmaxval_reset.Name = "lblcv_nowmaxval_reset"
+        Me.ToolTip1.SetToolTip(Me.lblcv_nowmaxval_reset, resources.GetString("lblcv_nowmaxval_reset.ToolTip"))
         '
         'lblcv_maxval_reset
         '
@@ -4822,12 +5238,14 @@ Partial Class Mainwindow
         Me.lblcv_maxval_reset.BackColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(2, Byte), Integer))
         Me.lblcv_maxval_reset.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcv_maxval_reset.Name = "lblcv_maxval_reset"
+        Me.ToolTip1.SetToolTip(Me.lblcv_maxval_reset, resources.GetString("lblcv_maxval_reset.ToolTip"))
         '
         'btncv_stop
         '
-        Me.btncv_stop.BackColor = System.Drawing.Color.FromArgb(CType(CType(202, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(255, Byte), Integer))
         resources.ApplyResources(Me.btncv_stop, "btncv_stop")
+        Me.btncv_stop.BackColor = System.Drawing.Color.FromArgb(CType(CType(202, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btncv_stop.Name = "btncv_stop"
+        Me.ToolTip1.SetToolTip(Me.btncv_stop, resources.GetString("btncv_stop.ToolTip"))
         Me.btncv_stop.UseVisualStyleBackColor = False
         '
         'lblcv_sendview
@@ -4836,6 +5254,7 @@ Partial Class Mainwindow
         Me.lblcv_sendview.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(50, Byte), Integer))
         Me.lblcv_sendview.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcv_sendview.Name = "lblcv_sendview"
+        Me.ToolTip1.SetToolTip(Me.lblcv_sendview, resources.GetString("lblcv_sendview.ToolTip"))
         '
         'lblcv_comment
         '
@@ -4843,6 +5262,7 @@ Partial Class Mainwindow
         Me.lblcv_comment.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.lblcv_comment.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcv_comment.Name = "lblcv_comment"
+        Me.ToolTip1.SetToolTip(Me.lblcv_comment, resources.GetString("lblcv_comment.ToolTip"))
         '
         'lblcv_sleepcount
         '
@@ -4850,30 +5270,34 @@ Partial Class Mainwindow
         Me.lblcv_sleepcount.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(50, Byte), Integer))
         Me.lblcv_sleepcount.ForeColor = System.Drawing.SystemColors.Control
         Me.lblcv_sleepcount.Name = "lblcv_sleepcount"
+        Me.ToolTip1.SetToolTip(Me.lblcv_sleepcount, resources.GetString("lblcv_sleepcount.ToolTip"))
         '
         'txtcv_antentime
         '
+        resources.ApplyResources(Me.txtcv_antentime, "txtcv_antentime")
         Me.txtcv_antentime.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.txtcv_antentime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtcv_antentime, "txtcv_antentime")
         Me.txtcv_antentime.ForeColor = System.Drawing.Color.Snow
         Me.txtcv_antentime.Name = "txtcv_antentime"
         Me.txtcv_antentime.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtcv_antentime, resources.GetString("txtcv_antentime.ToolTip"))
         '
         'btncv_forward
         '
-        Me.btncv_forward.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btncv_forward, "btncv_forward")
+        Me.btncv_forward.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btncv_forward.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btncv_forward.Name = "btncv_forward"
+        Me.ToolTip1.SetToolTip(Me.btncv_forward, resources.GetString("btncv_forward.ToolTip"))
         Me.btncv_forward.UseVisualStyleBackColor = False
         '
         'btncv_back
         '
-        Me.btncv_back.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btncv_back, "btncv_back")
+        Me.btncv_back.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btncv_back.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btncv_back.Name = "btncv_back"
+        Me.ToolTip1.SetToolTip(Me.btncv_back, resources.GetString("btncv_back.ToolTip"))
         Me.btncv_back.UseVisualStyleBackColor = False
         '
         'Label51
@@ -4881,12 +5305,14 @@ Partial Class Mainwindow
         resources.ApplyResources(Me.Label51, "Label51")
         Me.Label51.ForeColor = System.Drawing.SystemColors.Control
         Me.Label51.Name = "Label51"
+        Me.ToolTip1.SetToolTip(Me.Label51, resources.GetString("Label51.ToolTip"))
         '
         'Label42
         '
         resources.ApplyResources(Me.Label42, "Label42")
         Me.Label42.ForeColor = System.Drawing.SystemColors.Control
         Me.Label42.Name = "Label42"
+        Me.ToolTip1.SetToolTip(Me.Label42, resources.GetString("Label42.ToolTip"))
         '
         'Label64
         '
@@ -4894,6 +5320,7 @@ Partial Class Mainwindow
         Me.Label64.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label64.ForeColor = System.Drawing.SystemColors.Control
         Me.Label64.Name = "Label64"
+        Me.ToolTip1.SetToolTip(Me.Label64, resources.GetString("Label64.ToolTip"))
         '
         'Label65
         '
@@ -4901,6 +5328,7 @@ Partial Class Mainwindow
         Me.Label65.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label65.ForeColor = System.Drawing.SystemColors.Control
         Me.Label65.Name = "Label65"
+        Me.ToolTip1.SetToolTip(Me.Label65, resources.GetString("Label65.ToolTip"))
         '
         'Label66
         '
@@ -4908,72 +5336,83 @@ Partial Class Mainwindow
         Me.Label66.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label66.ForeColor = System.Drawing.SystemColors.Control
         Me.Label66.Name = "Label66"
+        Me.ToolTip1.SetToolTip(Me.Label66, resources.GetString("Label66.ToolTip"))
         '
         'piccv_load
         '
-        Me.piccv_load.BackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(13, Byte), Integer), CType(CType(13, Byte), Integer))
         resources.ApplyResources(Me.piccv_load, "piccv_load")
+        Me.piccv_load.BackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(13, Byte), Integer), CType(CType(13, Byte), Integer))
         Me.piccv_load.Name = "piccv_load"
         Me.piccv_load.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.piccv_load, resources.GetString("piccv_load.ToolTip"))
         '
         'PictureBox2
         '
-        Me.PictureBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
         resources.ApplyResources(Me.PictureBox2, "PictureBox2")
+        Me.PictureBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox2, resources.GetString("PictureBox2.ToolTip"))
         '
         'picipl_foranten
         '
-        Me.picipl_foranten.BackColor = System.Drawing.Color.SlateGray
         resources.ApplyResources(Me.picipl_foranten, "picipl_foranten")
+        Me.picipl_foranten.BackColor = System.Drawing.Color.SlateGray
         Me.picipl_foranten.Name = "picipl_foranten"
         Me.picipl_foranten.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.picipl_foranten, resources.GetString("picipl_foranten.ToolTip"))
         '
         'piccv_reset
         '
-        Me.piccv_reset.BackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(13, Byte), Integer), CType(CType(13, Byte), Integer))
         resources.ApplyResources(Me.piccv_reset, "piccv_reset")
+        Me.piccv_reset.BackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(13, Byte), Integer), CType(CType(13, Byte), Integer))
         Me.piccv_reset.Name = "piccv_reset"
         Me.piccv_reset.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.piccv_reset, resources.GetString("piccv_reset.ToolTip"))
         '
         'piccv_picture
         '
-        Me.piccv_picture.BackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(13, Byte), Integer), CType(CType(13, Byte), Integer))
         resources.ApplyResources(Me.piccv_picture, "piccv_picture")
+        Me.piccv_picture.BackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(13, Byte), Integer), CType(CType(13, Byte), Integer))
         Me.piccv_picture.Name = "piccv_picture"
         Me.piccv_picture.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.piccv_picture, resources.GetString("piccv_picture.ToolTip"))
         '
         'PictureBox17
         '
-        Me.PictureBox17.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
         resources.ApplyResources(Me.PictureBox17, "PictureBox17")
+        Me.PictureBox17.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
         Me.PictureBox17.Name = "PictureBox17"
         Me.PictureBox17.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox17, resources.GetString("PictureBox17.ToolTip"))
         '
         'picipl_cap
         '
-        Me.picipl_cap.BackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(13, Byte), Integer), CType(CType(13, Byte), Integer))
         resources.ApplyResources(Me.picipl_cap, "picipl_cap")
+        Me.picipl_cap.BackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(13, Byte), Integer), CType(CType(13, Byte), Integer))
         Me.picipl_cap.Name = "picipl_cap"
         Me.picipl_cap.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.picipl_cap, resources.GetString("picipl_cap.ToolTip"))
         '
         'PictureBox18
         '
-        Me.PictureBox18.BackColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(2, Byte), Integer))
         resources.ApplyResources(Me.PictureBox18, "PictureBox18")
+        Me.PictureBox18.BackColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(2, Byte), Integer))
         Me.PictureBox18.Name = "PictureBox18"
         Me.PictureBox18.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox18, resources.GetString("PictureBox18.ToolTip"))
         '
         'PictureBox19
         '
-        Me.PictureBox19.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(50, Byte), Integer))
         resources.ApplyResources(Me.PictureBox19, "PictureBox19")
+        Me.PictureBox19.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(50, Byte), Integer))
         Me.PictureBox19.Name = "PictureBox19"
         Me.PictureBox19.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox19, resources.GetString("PictureBox19.ToolTip"))
         '
         'TabPage2
         '
+        resources.ApplyResources(Me.TabPage2, "TabPage2")
         Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(75, Byte), Integer))
         Me.TabPage2.Controls.Add(Me.PictureBox7)
         Me.TabPage2.Controls.Add(Me.PictureBox8)
@@ -5007,50 +5446,55 @@ Partial Class Mainwindow
         Me.TabPage2.Controls.Add(Me.list2_hwnd)
         Me.TabPage2.Controls.Add(Me.btn2_gethwnd)
         Me.TabPage2.Controls.Add(Me.btn2_getwindowtitle)
-        resources.ApplyResources(Me.TabPage2, "TabPage2")
         Me.TabPage2.Name = "TabPage2"
+        Me.ToolTip1.SetToolTip(Me.TabPage2, resources.GetString("TabPage2.ToolTip"))
         '
         'PictureBox7
         '
-        Me.PictureBox7.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(95, Byte), Integer))
         resources.ApplyResources(Me.PictureBox7, "PictureBox7")
+        Me.PictureBox7.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(95, Byte), Integer))
         Me.PictureBox7.Name = "PictureBox7"
         Me.PictureBox7.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox7, resources.GetString("PictureBox7.ToolTip"))
         '
         'PictureBox8
         '
-        Me.PictureBox8.BackColor = System.Drawing.Color.FromArgb(CType(CType(90, Byte), Integer), CType(CType(95, Byte), Integer), CType(CType(105, Byte), Integer))
         resources.ApplyResources(Me.PictureBox8, "PictureBox8")
+        Me.PictureBox8.BackColor = System.Drawing.Color.FromArgb(CType(CType(90, Byte), Integer), CType(CType(95, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.PictureBox8.Name = "PictureBox8"
         Me.PictureBox8.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox8, resources.GetString("PictureBox8.ToolTip"))
         '
         'btntosetting01
         '
-        Me.btntosetting01.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btntosetting01, "btntosetting01")
+        Me.btntosetting01.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btntosetting01.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btntosetting01.Name = "btntosetting01"
+        Me.ToolTip1.SetToolTip(Me.btntosetting01, resources.GetString("btntosetting01.ToolTip"))
         Me.btntosetting01.UseVisualStyleBackColor = False
         '
         'GroupBox9
         '
+        resources.ApplyResources(Me.GroupBox9, "GroupBox9")
         Me.GroupBox9.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.GroupBox9.Controls.Add(Me.txtrenameapp)
         Me.GroupBox9.Controls.Add(Me.chkmulti)
         Me.GroupBox9.Controls.Add(Me.txtpid_2nd)
         Me.GroupBox9.Controls.Add(Me.btnrenameapp)
-        resources.ApplyResources(Me.GroupBox9, "GroupBox9")
         Me.GroupBox9.ForeColor = System.Drawing.Color.PeachPuff
         Me.GroupBox9.Name = "GroupBox9"
         Me.GroupBox9.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.GroupBox9, resources.GetString("GroupBox9.ToolTip"))
         '
         'txtrenameapp
         '
+        resources.ApplyResources(Me.txtrenameapp, "txtrenameapp")
         Me.txtrenameapp.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.txtrenameapp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtrenameapp, "txtrenameapp")
         Me.txtrenameapp.ForeColor = System.Drawing.SystemColors.Control
         Me.txtrenameapp.Name = "txtrenameapp"
+        Me.ToolTip1.SetToolTip(Me.txtrenameapp, resources.GetString("txtrenameapp.ToolTip"))
         '
         'chkmulti
         '
@@ -5058,98 +5502,111 @@ Partial Class Mainwindow
         Me.chkmulti.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.chkmulti.ForeColor = System.Drawing.SystemColors.Control
         Me.chkmulti.Name = "chkmulti"
+        Me.ToolTip1.SetToolTip(Me.chkmulti, resources.GetString("chkmulti.ToolTip"))
         Me.chkmulti.UseVisualStyleBackColor = False
         '
         'txtpid_2nd
         '
+        resources.ApplyResources(Me.txtpid_2nd, "txtpid_2nd")
         Me.txtpid_2nd.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.txtpid_2nd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtpid_2nd, "txtpid_2nd")
         Me.txtpid_2nd.ForeColor = System.Drawing.SystemColors.Control
         Me.txtpid_2nd.Name = "txtpid_2nd"
+        Me.ToolTip1.SetToolTip(Me.txtpid_2nd, resources.GetString("txtpid_2nd.ToolTip"))
         '
         'btnrenameapp
         '
-        Me.btnrenameapp.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btnrenameapp, "btnrenameapp")
+        Me.btnrenameapp.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btnrenameapp.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btnrenameapp.Name = "btnrenameapp"
+        Me.ToolTip1.SetToolTip(Me.btnrenameapp, resources.GetString("btnrenameapp.ToolTip"))
         Me.btnrenameapp.UseVisualStyleBackColor = False
         '
         'GroupBox7
         '
+        resources.ApplyResources(Me.GroupBox7, "GroupBox7")
         Me.GroupBox7.Controls.Add(Me.lblm13)
         Me.GroupBox7.Controls.Add(Me.rich2_hwnddetail)
         Me.GroupBox7.Controls.Add(Me.txt2_windowtitle2)
         Me.GroupBox7.Controls.Add(Me.btn2_gethwnd2)
         Me.GroupBox7.Controls.Add(Me.list2_hwnd2)
         Me.GroupBox7.Controls.Add(Me.lbl2_parent_kid)
-        resources.ApplyResources(Me.GroupBox7, "GroupBox7")
         Me.GroupBox7.Name = "GroupBox7"
         Me.GroupBox7.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.GroupBox7, resources.GetString("GroupBox7.ToolTip"))
         '
         'lblm13
         '
         resources.ApplyResources(Me.lblm13, "lblm13")
         Me.lblm13.ForeColor = System.Drawing.SystemColors.Control
         Me.lblm13.Name = "lblm13"
+        Me.ToolTip1.SetToolTip(Me.lblm13, resources.GetString("lblm13.ToolTip"))
         '
         'rich2_hwnddetail
         '
-        Me.rich2_hwnddetail.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         resources.ApplyResources(Me.rich2_hwnddetail, "rich2_hwnddetail")
+        Me.rich2_hwnddetail.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.rich2_hwnddetail.ForeColor = System.Drawing.SystemColors.Control
         Me.rich2_hwnddetail.Name = "rich2_hwnddetail"
+        Me.ToolTip1.SetToolTip(Me.rich2_hwnddetail, resources.GetString("rich2_hwnddetail.ToolTip"))
         '
         'txt2_windowtitle2
         '
-        Me.txt2_windowtitle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         resources.ApplyResources(Me.txt2_windowtitle2, "txt2_windowtitle2")
+        Me.txt2_windowtitle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.txt2_windowtitle2.ForeColor = System.Drawing.SystemColors.Control
         Me.txt2_windowtitle2.Name = "txt2_windowtitle2"
+        Me.ToolTip1.SetToolTip(Me.txt2_windowtitle2, resources.GetString("txt2_windowtitle2.ToolTip"))
         '
         'btn2_gethwnd2
         '
-        Me.btn2_gethwnd2.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         resources.ApplyResources(Me.btn2_gethwnd2, "btn2_gethwnd2")
+        Me.btn2_gethwnd2.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.btn2_gethwnd2.Name = "btn2_gethwnd2"
+        Me.ToolTip1.SetToolTip(Me.btn2_gethwnd2, resources.GetString("btn2_gethwnd2.ToolTip"))
         Me.btn2_gethwnd2.UseVisualStyleBackColor = False
         '
         'list2_hwnd2
         '
-        Me.list2_hwnd2.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         resources.ApplyResources(Me.list2_hwnd2, "list2_hwnd2")
+        Me.list2_hwnd2.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.list2_hwnd2.ForeColor = System.Drawing.SystemColors.Control
         Me.list2_hwnd2.FormattingEnabled = True
         Me.list2_hwnd2.Name = "list2_hwnd2"
+        Me.ToolTip1.SetToolTip(Me.list2_hwnd2, resources.GetString("list2_hwnd2.ToolTip"))
         '
         'lbl2_parent_kid
         '
         resources.ApplyResources(Me.lbl2_parent_kid, "lbl2_parent_kid")
         Me.lbl2_parent_kid.ForeColor = System.Drawing.SystemColors.Control
         Me.lbl2_parent_kid.Name = "lbl2_parent_kid"
+        Me.ToolTip1.SetToolTip(Me.lbl2_parent_kid, resources.GetString("lbl2_parent_kid.ToolTip"))
         '
         'txtprocess
         '
+        resources.ApplyResources(Me.txtprocess, "txtprocess")
         Me.txtprocess.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.txtprocess.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txtprocess, "txtprocess")
         Me.txtprocess.ForeColor = System.Drawing.SystemColors.Control
         Me.txtprocess.Name = "txtprocess"
         Me.txtprocess.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtprocess, resources.GetString("txtprocess.ToolTip"))
         '
         'Label19
         '
         resources.ApplyResources(Me.Label19, "Label19")
         Me.Label19.ForeColor = System.Drawing.SystemColors.Control
         Me.Label19.Name = "Label19"
+        Me.ToolTip1.SetToolTip(Me.Label19, resources.GetString("Label19.ToolTip"))
         '
         'btninsertzahyou
         '
-        Me.btninsertzahyou.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btninsertzahyou, "btninsertzahyou")
+        Me.btninsertzahyou.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btninsertzahyou.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btninsertzahyou.Name = "btninsertzahyou"
+        Me.ToolTip1.SetToolTip(Me.btninsertzahyou, resources.GetString("btninsertzahyou.ToolTip"))
         Me.btninsertzahyou.UseVisualStyleBackColor = False
         '
         'chklockwindow
@@ -5157,6 +5614,7 @@ Partial Class Mainwindow
         resources.ApplyResources(Me.chklockwindow, "chklockwindow")
         Me.chklockwindow.ForeColor = System.Drawing.SystemColors.Control
         Me.chklockwindow.Name = "chklockwindow"
+        Me.ToolTip1.SetToolTip(Me.chklockwindow, resources.GetString("chklockwindow.ToolTip"))
         Me.chklockwindow.UseVisualStyleBackColor = True
         '
         'Label4
@@ -5164,93 +5622,106 @@ Partial Class Mainwindow
         resources.ApplyResources(Me.Label4, "Label4")
         Me.Label4.ForeColor = System.Drawing.SystemColors.Control
         Me.Label4.Name = "Label4"
+        Me.ToolTip1.SetToolTip(Me.Label4, resources.GetString("Label4.ToolTip"))
         '
         'Label5
         '
         resources.ApplyResources(Me.Label5, "Label5")
         Me.Label5.ForeColor = System.Drawing.SystemColors.Control
         Me.Label5.Name = "Label5"
+        Me.ToolTip1.SetToolTip(Me.Label5, resources.GetString("Label5.ToolTip"))
         '
         'Label6
         '
         resources.ApplyResources(Me.Label6, "Label6")
         Me.Label6.ForeColor = System.Drawing.SystemColors.Control
         Me.Label6.Name = "Label6"
+        Me.ToolTip1.SetToolTip(Me.Label6, resources.GetString("Label6.ToolTip"))
         '
         'Label11
         '
         resources.ApplyResources(Me.Label11, "Label11")
         Me.Label11.ForeColor = System.Drawing.SystemColors.Control
         Me.Label11.Name = "Label11"
+        Me.ToolTip1.SetToolTip(Me.Label11, resources.GetString("Label11.ToolTip"))
         '
         'Label12
         '
         resources.ApplyResources(Me.Label12, "Label12")
         Me.Label12.ForeColor = System.Drawing.SystemColors.Control
         Me.Label12.Name = "Label12"
+        Me.ToolTip1.SetToolTip(Me.Label12, resources.GetString("Label12.ToolTip"))
         '
         'Label13
         '
         resources.ApplyResources(Me.Label13, "Label13")
         Me.Label13.ForeColor = System.Drawing.SystemColors.Control
         Me.Label13.Name = "Label13"
+        Me.ToolTip1.SetToolTip(Me.Label13, resources.GetString("Label13.ToolTip"))
         '
         'Label21
         '
         resources.ApplyResources(Me.Label21, "Label21")
         Me.Label21.ForeColor = System.Drawing.SystemColors.Control
         Me.Label21.Name = "Label21"
+        Me.ToolTip1.SetToolTip(Me.Label21, resources.GetString("Label21.ToolTip"))
         '
         'Label22
         '
         resources.ApplyResources(Me.Label22, "Label22")
         Me.Label22.ForeColor = System.Drawing.SystemColors.Control
         Me.Label22.Name = "Label22"
+        Me.ToolTip1.SetToolTip(Me.Label22, resources.GetString("Label22.ToolTip"))
         '
         'txt2_rby
         '
+        resources.ApplyResources(Me.txt2_rby, "txt2_rby")
         Me.txt2_rby.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.txt2_rby.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txt2_rby, "txt2_rby")
         Me.txt2_rby.ForeColor = System.Drawing.SystemColors.Control
         Me.txt2_rby.Name = "txt2_rby"
         Me.txt2_rby.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txt2_rby, resources.GetString("txt2_rby.ToolTip"))
         '
         'txt2_rbx
         '
+        resources.ApplyResources(Me.txt2_rbx, "txt2_rbx")
         Me.txt2_rbx.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.txt2_rbx.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txt2_rbx, "txt2_rbx")
         Me.txt2_rbx.ForeColor = System.Drawing.SystemColors.Control
         Me.txt2_rbx.Name = "txt2_rbx"
         Me.txt2_rbx.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txt2_rbx, resources.GetString("txt2_rbx.ToolTip"))
         '
         'txt2_lty
         '
+        resources.ApplyResources(Me.txt2_lty, "txt2_lty")
         Me.txt2_lty.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.txt2_lty.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txt2_lty, "txt2_lty")
         Me.txt2_lty.ForeColor = System.Drawing.SystemColors.Control
         Me.txt2_lty.Name = "txt2_lty"
         Me.txt2_lty.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txt2_lty, resources.GetString("txt2_lty.ToolTip"))
         '
         'txt2_ltx
         '
+        resources.ApplyResources(Me.txt2_ltx, "txt2_ltx")
         Me.txt2_ltx.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.txt2_ltx.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txt2_ltx, "txt2_ltx")
         Me.txt2_ltx.ForeColor = System.Drawing.SystemColors.Control
         Me.txt2_ltx.Name = "txt2_ltx"
         Me.txt2_ltx.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txt2_ltx, resources.GetString("txt2_ltx.ToolTip"))
         '
         'dgv2_template
         '
+        resources.ApplyResources(Me.dgv2_template, "dgv2_template")
         Me.dgv2_template.BackgroundColor = System.Drawing.SystemColors.GrayText
         Me.dgv2_template.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv2_template.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.applysize, Me.Comment, Me.windowltx, Me.windowlty, Me.windowrbx, Me.windowsrby})
-        resources.ApplyResources(Me.dgv2_template, "dgv2_template")
         Me.dgv2_template.Name = "dgv2_template"
         Me.dgv2_template.RowTemplate.Height = 21
+        Me.ToolTip1.SetToolTip(Me.dgv2_template, resources.GetString("dgv2_template.ToolTip"))
         '
         'applysize
         '
@@ -5285,98 +5756,109 @@ Partial Class Mainwindow
         '
         'txt2_selectedhwnd
         '
-        Me.txt2_selectedhwnd.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         resources.ApplyResources(Me.txt2_selectedhwnd, "txt2_selectedhwnd")
+        Me.txt2_selectedhwnd.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.txt2_selectedhwnd.ForeColor = System.Drawing.SystemColors.Control
         Me.txt2_selectedhwnd.Name = "txt2_selectedhwnd"
+        Me.ToolTip1.SetToolTip(Me.txt2_selectedhwnd, resources.GetString("txt2_selectedhwnd.ToolTip"))
         '
         'txt2_Selectedwindowtitle
         '
+        resources.ApplyResources(Me.txt2_Selectedwindowtitle, "txt2_Selectedwindowtitle")
         Me.txt2_Selectedwindowtitle.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.txt2_Selectedwindowtitle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txt2_Selectedwindowtitle, "txt2_Selectedwindowtitle")
         Me.txt2_Selectedwindowtitle.ForeColor = System.Drawing.SystemColors.Control
         Me.txt2_Selectedwindowtitle.Name = "txt2_Selectedwindowtitle"
+        Me.ToolTip1.SetToolTip(Me.txt2_Selectedwindowtitle, resources.GetString("txt2_Selectedwindowtitle.ToolTip"))
         '
         'num2_rbx
         '
+        resources.ApplyResources(Me.num2_rbx, "num2_rbx")
         Me.num2_rbx.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.num2_rbx.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.num2_rbx, "num2_rbx")
         Me.num2_rbx.ForeColor = System.Drawing.SystemColors.Control
         Me.num2_rbx.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
         Me.num2_rbx.Minimum = New Decimal(New Integer() {100000, 0, 0, -2147483648})
         Me.num2_rbx.Name = "num2_rbx"
+        Me.ToolTip1.SetToolTip(Me.num2_rbx, resources.GetString("num2_rbx.ToolTip"))
         Me.num2_rbx.Value = New Decimal(New Integer() {500, 0, 0, 0})
         '
         'num2_rby
         '
+        resources.ApplyResources(Me.num2_rby, "num2_rby")
         Me.num2_rby.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.num2_rby.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.num2_rby, "num2_rby")
         Me.num2_rby.ForeColor = System.Drawing.SystemColors.Control
         Me.num2_rby.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
         Me.num2_rby.Minimum = New Decimal(New Integer() {100000, 0, 0, -2147483648})
         Me.num2_rby.Name = "num2_rby"
+        Me.ToolTip1.SetToolTip(Me.num2_rby, resources.GetString("num2_rby.ToolTip"))
         Me.num2_rby.Value = New Decimal(New Integer() {500, 0, 0, 0})
         '
         'num2_lty
         '
+        resources.ApplyResources(Me.num2_lty, "num2_lty")
         Me.num2_lty.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.num2_lty.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.num2_lty, "num2_lty")
         Me.num2_lty.ForeColor = System.Drawing.SystemColors.Control
         Me.num2_lty.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
         Me.num2_lty.Minimum = New Decimal(New Integer() {100000, 0, 0, -2147483648})
         Me.num2_lty.Name = "num2_lty"
+        Me.ToolTip1.SetToolTip(Me.num2_lty, resources.GetString("num2_lty.ToolTip"))
         Me.num2_lty.Value = New Decimal(New Integer() {500, 0, 0, 0})
         '
         'num2_ltx
         '
+        resources.ApplyResources(Me.num2_ltx, "num2_ltx")
         Me.num2_ltx.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.num2_ltx.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.num2_ltx, "num2_ltx")
         Me.num2_ltx.ForeColor = System.Drawing.SystemColors.Control
         Me.num2_ltx.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
         Me.num2_ltx.Minimum = New Decimal(New Integer() {100000, 0, 0, -2147483648})
         Me.num2_ltx.Name = "num2_ltx"
+        Me.ToolTip1.SetToolTip(Me.num2_ltx, resources.GetString("num2_ltx.ToolTip"))
         Me.num2_ltx.Value = New Decimal(New Integer() {500, 0, 0, 0})
         '
         'list2_alltitle
         '
+        resources.ApplyResources(Me.list2_alltitle, "list2_alltitle")
         Me.list2_alltitle.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.list2_alltitle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.list2_alltitle, "list2_alltitle")
         Me.list2_alltitle.ForeColor = System.Drawing.SystemColors.Control
         Me.list2_alltitle.FormattingEnabled = True
         Me.list2_alltitle.Name = "list2_alltitle"
+        Me.ToolTip1.SetToolTip(Me.list2_alltitle, resources.GetString("list2_alltitle.ToolTip"))
         '
         'list2_hwnd
         '
+        resources.ApplyResources(Me.list2_hwnd, "list2_hwnd")
         Me.list2_hwnd.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.list2_hwnd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.list2_hwnd, "list2_hwnd")
         Me.list2_hwnd.ForeColor = System.Drawing.SystemColors.Control
         Me.list2_hwnd.FormattingEnabled = True
         Me.list2_hwnd.Name = "list2_hwnd"
+        Me.ToolTip1.SetToolTip(Me.list2_hwnd, resources.GetString("list2_hwnd.ToolTip"))
         '
         'btn2_gethwnd
         '
-        Me.btn2_gethwnd.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         resources.ApplyResources(Me.btn2_gethwnd, "btn2_gethwnd")
+        Me.btn2_gethwnd.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.btn2_gethwnd.Name = "btn2_gethwnd"
+        Me.ToolTip1.SetToolTip(Me.btn2_gethwnd, resources.GetString("btn2_gethwnd.ToolTip"))
         Me.btn2_gethwnd.UseVisualStyleBackColor = False
         '
         'btn2_getwindowtitle
         '
-        Me.btn2_getwindowtitle.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btn2_getwindowtitle, "btn2_getwindowtitle")
+        Me.btn2_getwindowtitle.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btn2_getwindowtitle.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btn2_getwindowtitle.Name = "btn2_getwindowtitle"
+        Me.ToolTip1.SetToolTip(Me.btn2_getwindowtitle, resources.GetString("btn2_getwindowtitle.ToolTip"))
         Me.btn2_getwindowtitle.UseVisualStyleBackColor = False
         '
         'TabPage15
         '
+        resources.ApplyResources(Me.TabPage15, "TabPage15")
         Me.TabPage15.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(75, Byte), Integer))
         Me.TabPage15.Controls.Add(Me.gbsetting)
         Me.TabPage15.Controls.Add(Me.btncalib_resize)
@@ -5394,11 +5876,12 @@ Partial Class Mainwindow
         Me.TabPage15.Controls.Add(Me.gbcalib_m1)
         Me.TabPage15.Controls.Add(Me.piccalib_temp)
         Me.TabPage15.Controls.Add(Me.piccamera)
-        resources.ApplyResources(Me.TabPage15, "TabPage15")
         Me.TabPage15.Name = "TabPage15"
+        Me.ToolTip1.SetToolTip(Me.TabPage15, resources.GetString("TabPage15.ToolTip"))
         '
         'gbsetting
         '
+        resources.ApplyResources(Me.gbsetting, "gbsetting")
         Me.gbsetting.Controls.Add(Me.rdocalib_aspect_to43)
         Me.gbsetting.Controls.Add(Me.rdocalib_aspect_to169)
         Me.gbsetting.Controls.Add(Me.rdocalib_aspect_none)
@@ -5418,16 +5901,17 @@ Partial Class Mainwindow
         Me.gbsetting.Controls.Add(Me.Label104)
         Me.gbsetting.Controls.Add(Me.Label102)
         Me.gbsetting.Controls.Add(Me.btncalib_adjscale)
-        resources.ApplyResources(Me.gbsetting, "gbsetting")
         Me.gbsetting.ForeColor = System.Drawing.Color.Snow
         Me.gbsetting.Name = "gbsetting"
         Me.gbsetting.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.gbsetting, resources.GetString("gbsetting.ToolTip"))
         '
         'rdocalib_aspect_to43
         '
         resources.ApplyResources(Me.rdocalib_aspect_to43, "rdocalib_aspect_to43")
         Me.rdocalib_aspect_to43.Name = "rdocalib_aspect_to43"
         Me.rdocalib_aspect_to43.TabStop = True
+        Me.ToolTip1.SetToolTip(Me.rdocalib_aspect_to43, resources.GetString("rdocalib_aspect_to43.ToolTip"))
         Me.rdocalib_aspect_to43.UseVisualStyleBackColor = True
         '
         'rdocalib_aspect_to169
@@ -5435,6 +5919,7 @@ Partial Class Mainwindow
         resources.ApplyResources(Me.rdocalib_aspect_to169, "rdocalib_aspect_to169")
         Me.rdocalib_aspect_to169.Name = "rdocalib_aspect_to169"
         Me.rdocalib_aspect_to169.TabStop = True
+        Me.ToolTip1.SetToolTip(Me.rdocalib_aspect_to169, resources.GetString("rdocalib_aspect_to169.ToolTip"))
         Me.rdocalib_aspect_to169.UseVisualStyleBackColor = True
         '
         'rdocalib_aspect_none
@@ -5442,35 +5927,40 @@ Partial Class Mainwindow
         resources.ApplyResources(Me.rdocalib_aspect_none, "rdocalib_aspect_none")
         Me.rdocalib_aspect_none.Name = "rdocalib_aspect_none"
         Me.rdocalib_aspect_none.TabStop = True
+        Me.ToolTip1.SetToolTip(Me.rdocalib_aspect_none, resources.GetString("rdocalib_aspect_none.ToolTip"))
         Me.rdocalib_aspect_none.UseVisualStyleBackColor = True
         '
         'pgbcalib_1
         '
-        Me.pgbcalib_1.ForeColor = System.Drawing.Color.LightSalmon
         resources.ApplyResources(Me.pgbcalib_1, "pgbcalib_1")
+        Me.pgbcalib_1.ForeColor = System.Drawing.Color.LightSalmon
         Me.pgbcalib_1.Name = "pgbcalib_1"
         Me.pgbcalib_1.Style = System.Windows.Forms.ProgressBarStyle.Continuous
+        Me.ToolTip1.SetToolTip(Me.pgbcalib_1, resources.GetString("pgbcalib_1.ToolTip"))
         '
         'btncalib_reset
         '
-        Me.btncalib_reset.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
         resources.ApplyResources(Me.btncalib_reset, "btncalib_reset")
+        Me.btncalib_reset.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
         Me.btncalib_reset.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btncalib_reset.Name = "btncalib_reset"
+        Me.ToolTip1.SetToolTip(Me.btncalib_reset, resources.GetString("btncalib_reset.ToolTip"))
         Me.btncalib_reset.UseVisualStyleBackColor = False
         '
         'numcalib_hand_scaleheight
         '
+        resources.ApplyResources(Me.numcalib_hand_scaleheight, "numcalib_hand_scaleheight")
         Me.numcalib_hand_scaleheight.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.numcalib_hand_scaleheight.DecimalPlaces = 3
-        resources.ApplyResources(Me.numcalib_hand_scaleheight, "numcalib_hand_scaleheight")
         Me.numcalib_hand_scaleheight.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.numcalib_hand_scaleheight.Maximum = New Decimal(New Integer() {500, 0, 0, 0})
         Me.numcalib_hand_scaleheight.Name = "numcalib_hand_scaleheight"
+        Me.ToolTip1.SetToolTip(Me.numcalib_hand_scaleheight, resources.GetString("numcalib_hand_scaleheight.ToolTip"))
         Me.numcalib_hand_scaleheight.Value = New Decimal(New Integer() {100, 0, 0, 0})
         '
         'gbrgb
         '
+        resources.ApplyResources(Me.gbrgb, "gbrgb")
         Me.gbrgb.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
         Me.gbrgb.Controls.Add(Me.lblm1)
         Me.gbrgb.Controls.Add(Me.Label101)
@@ -5484,107 +5974,120 @@ Partial Class Mainwindow
         Me.gbrgb.Controls.Add(Me.txtcalib_save_r)
         Me.gbrgb.Controls.Add(Me.txtcalib_save_g)
         Me.gbrgb.Controls.Add(Me.txtcalib_save_b)
-        resources.ApplyResources(Me.gbrgb, "gbrgb")
         Me.gbrgb.ForeColor = System.Drawing.Color.Snow
         Me.gbrgb.Name = "gbrgb"
         Me.gbrgb.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.gbrgb, resources.GetString("gbrgb.ToolTip"))
         '
         'lblm1
         '
         resources.ApplyResources(Me.lblm1, "lblm1")
         Me.lblm1.Name = "lblm1"
+        Me.ToolTip1.SetToolTip(Me.lblm1, resources.GetString("lblm1.ToolTip"))
         '
         'Label101
         '
         resources.ApplyResources(Me.Label101, "Label101")
         Me.Label101.Name = "Label101"
+        Me.ToolTip1.SetToolTip(Me.Label101, resources.GetString("Label101.ToolTip"))
         '
         'numcalib_hand_bright
         '
-        Me.numcalib_hand_bright.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer))
         resources.ApplyResources(Me.numcalib_hand_bright, "numcalib_hand_bright")
+        Me.numcalib_hand_bright.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.numcalib_hand_bright.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.numcalib_hand_bright.Maximum = New Decimal(New Integer() {256, 0, 0, 0})
         Me.numcalib_hand_bright.Minimum = New Decimal(New Integer() {256, 0, 0, -2147483648})
         Me.numcalib_hand_bright.Name = "numcalib_hand_bright"
+        Me.ToolTip1.SetToolTip(Me.numcalib_hand_bright, resources.GetString("numcalib_hand_bright.ToolTip"))
         '
         'btncalib_adjrgb
         '
-        Me.btncalib_adjrgb.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btncalib_adjrgb, "btncalib_adjrgb")
+        Me.btncalib_adjrgb.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btncalib_adjrgb.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btncalib_adjrgb.Name = "btncalib_adjrgb"
+        Me.ToolTip1.SetToolTip(Me.btncalib_adjrgb, resources.GetString("btncalib_adjrgb.ToolTip"))
         Me.btncalib_adjrgb.UseVisualStyleBackColor = False
         '
         'btncalib_adjbright
         '
-        Me.btncalib_adjbright.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btncalib_adjbright, "btncalib_adjbright")
+        Me.btncalib_adjbright.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btncalib_adjbright.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btncalib_adjbright.Name = "btncalib_adjbright"
+        Me.ToolTip1.SetToolTip(Me.btncalib_adjbright, resources.GetString("btncalib_adjbright.ToolTip"))
         Me.btncalib_adjbright.UseVisualStyleBackColor = False
         '
         'numcalib_hand_g
         '
-        Me.numcalib_hand_g.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer))
         resources.ApplyResources(Me.numcalib_hand_g, "numcalib_hand_g")
+        Me.numcalib_hand_g.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.numcalib_hand_g.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.numcalib_hand_g.Maximum = New Decimal(New Integer() {256, 0, 0, 0})
         Me.numcalib_hand_g.Minimum = New Decimal(New Integer() {256, 0, 0, -2147483648})
         Me.numcalib_hand_g.Name = "numcalib_hand_g"
+        Me.ToolTip1.SetToolTip(Me.numcalib_hand_g, resources.GetString("numcalib_hand_g.ToolTip"))
         '
         'numcalib_hand_r
         '
-        Me.numcalib_hand_r.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer))
         resources.ApplyResources(Me.numcalib_hand_r, "numcalib_hand_r")
+        Me.numcalib_hand_r.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.numcalib_hand_r.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.numcalib_hand_r.Maximum = New Decimal(New Integer() {256, 0, 0, 0})
         Me.numcalib_hand_r.Minimum = New Decimal(New Integer() {256, 0, 0, -2147483648})
         Me.numcalib_hand_r.Name = "numcalib_hand_r"
+        Me.ToolTip1.SetToolTip(Me.numcalib_hand_r, resources.GetString("numcalib_hand_r.ToolTip"))
         '
         'numcalib_hand_b
         '
-        Me.numcalib_hand_b.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer))
         resources.ApplyResources(Me.numcalib_hand_b, "numcalib_hand_b")
+        Me.numcalib_hand_b.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.numcalib_hand_b.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.numcalib_hand_b.Maximum = New Decimal(New Integer() {256, 0, 0, 0})
         Me.numcalib_hand_b.Minimum = New Decimal(New Integer() {256, 0, 0, -2147483648})
         Me.numcalib_hand_b.Name = "numcalib_hand_b"
+        Me.ToolTip1.SetToolTip(Me.numcalib_hand_b, resources.GetString("numcalib_hand_b.ToolTip"))
         '
         'txtcalib_save_bright
         '
-        Me.txtcalib_save_bright.BackColor = System.Drawing.Color.LightSteelBlue
         resources.ApplyResources(Me.txtcalib_save_bright, "txtcalib_save_bright")
+        Me.txtcalib_save_bright.BackColor = System.Drawing.Color.LightSteelBlue
         Me.txtcalib_save_bright.Name = "txtcalib_save_bright"
         Me.txtcalib_save_bright.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtcalib_save_bright, resources.GetString("txtcalib_save_bright.ToolTip"))
         '
         'txtcalib_save_r
         '
-        Me.txtcalib_save_r.BackColor = System.Drawing.Color.LightSteelBlue
         resources.ApplyResources(Me.txtcalib_save_r, "txtcalib_save_r")
+        Me.txtcalib_save_r.BackColor = System.Drawing.Color.LightSteelBlue
         Me.txtcalib_save_r.Name = "txtcalib_save_r"
         Me.txtcalib_save_r.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtcalib_save_r, resources.GetString("txtcalib_save_r.ToolTip"))
         '
         'txtcalib_save_g
         '
-        Me.txtcalib_save_g.BackColor = System.Drawing.Color.LightSteelBlue
         resources.ApplyResources(Me.txtcalib_save_g, "txtcalib_save_g")
+        Me.txtcalib_save_g.BackColor = System.Drawing.Color.LightSteelBlue
         Me.txtcalib_save_g.Name = "txtcalib_save_g"
         Me.txtcalib_save_g.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtcalib_save_g, resources.GetString("txtcalib_save_g.ToolTip"))
         '
         'txtcalib_save_b
         '
-        Me.txtcalib_save_b.BackColor = System.Drawing.Color.LightSteelBlue
         resources.ApplyResources(Me.txtcalib_save_b, "txtcalib_save_b")
+        Me.txtcalib_save_b.BackColor = System.Drawing.Color.LightSteelBlue
         Me.txtcalib_save_b.Name = "txtcalib_save_b"
         Me.txtcalib_save_b.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtcalib_save_b, resources.GetString("txtcalib_save_b.ToolTip"))
         '
         'btncalib_insert
         '
-        Me.btncalib_insert.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
         resources.ApplyResources(Me.btncalib_insert, "btncalib_insert")
+        Me.btncalib_insert.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
         Me.btncalib_insert.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btncalib_insert.Name = "btncalib_insert"
+        Me.ToolTip1.SetToolTip(Me.btncalib_insert, resources.GetString("btncalib_insert.ToolTip"))
         Me.btncalib_insert.UseVisualStyleBackColor = False
         '
         'Label103
@@ -5592,100 +6095,114 @@ Partial Class Mainwindow
         resources.ApplyResources(Me.Label103, "Label103")
         Me.Label103.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label103.Name = "Label103"
+        Me.ToolTip1.SetToolTip(Me.Label103, resources.GetString("Label103.ToolTip"))
         '
         'numcalib_hand_scalewidth
         '
+        resources.ApplyResources(Me.numcalib_hand_scalewidth, "numcalib_hand_scalewidth")
         Me.numcalib_hand_scalewidth.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.numcalib_hand_scalewidth.DecimalPlaces = 3
-        resources.ApplyResources(Me.numcalib_hand_scalewidth, "numcalib_hand_scalewidth")
         Me.numcalib_hand_scalewidth.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.numcalib_hand_scalewidth.Maximum = New Decimal(New Integer() {500, 0, 0, 0})
         Me.numcalib_hand_scalewidth.Name = "numcalib_hand_scalewidth"
+        Me.ToolTip1.SetToolTip(Me.numcalib_hand_scalewidth, resources.GetString("numcalib_hand_scalewidth.ToolTip"))
         Me.numcalib_hand_scalewidth.Value = New Decimal(New Integer() {100, 0, 0, 0})
         '
         'numcalib_hand_scale
         '
+        resources.ApplyResources(Me.numcalib_hand_scale, "numcalib_hand_scale")
         Me.numcalib_hand_scale.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.numcalib_hand_scale.DecimalPlaces = 3
-        resources.ApplyResources(Me.numcalib_hand_scale, "numcalib_hand_scale")
         Me.numcalib_hand_scale.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.numcalib_hand_scale.Maximum = New Decimal(New Integer() {500, 0, 0, 0})
         Me.numcalib_hand_scale.Name = "numcalib_hand_scale"
+        Me.ToolTip1.SetToolTip(Me.numcalib_hand_scale, resources.GetString("numcalib_hand_scale.ToolTip"))
         Me.numcalib_hand_scale.Value = New Decimal(New Integer() {100, 0, 0, 0})
         '
         'txtcalib_save_scaleheight
         '
-        Me.txtcalib_save_scaleheight.BackColor = System.Drawing.Color.LightSteelBlue
         resources.ApplyResources(Me.txtcalib_save_scaleheight, "txtcalib_save_scaleheight")
+        Me.txtcalib_save_scaleheight.BackColor = System.Drawing.Color.LightSteelBlue
         Me.txtcalib_save_scaleheight.Name = "txtcalib_save_scaleheight"
         Me.txtcalib_save_scaleheight.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtcalib_save_scaleheight, resources.GetString("txtcalib_save_scaleheight.ToolTip"))
         '
         'txtcalib_save_scalewidth
         '
-        Me.txtcalib_save_scalewidth.BackColor = System.Drawing.Color.LightSteelBlue
         resources.ApplyResources(Me.txtcalib_save_scalewidth, "txtcalib_save_scalewidth")
+        Me.txtcalib_save_scalewidth.BackColor = System.Drawing.Color.LightSteelBlue
         Me.txtcalib_save_scalewidth.Name = "txtcalib_save_scalewidth"
         Me.txtcalib_save_scalewidth.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtcalib_save_scalewidth, resources.GetString("txtcalib_save_scalewidth.ToolTip"))
         '
         'txtcalib_save_scale
         '
-        Me.txtcalib_save_scale.BackColor = System.Drawing.Color.LightSteelBlue
         resources.ApplyResources(Me.txtcalib_save_scale, "txtcalib_save_scale")
+        Me.txtcalib_save_scale.BackColor = System.Drawing.Color.LightSteelBlue
         Me.txtcalib_save_scale.Name = "txtcalib_save_scale"
         Me.txtcalib_save_scale.ReadOnly = True
+        Me.ToolTip1.SetToolTip(Me.txtcalib_save_scale, resources.GetString("txtcalib_save_scale.ToolTip"))
         '
         'Label105
         '
         resources.ApplyResources(Me.Label105, "Label105")
         Me.Label105.Name = "Label105"
+        Me.ToolTip1.SetToolTip(Me.Label105, resources.GetString("Label105.ToolTip"))
         '
         'btncalib_adjaspect
         '
-        Me.btncalib_adjaspect.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btncalib_adjaspect, "btncalib_adjaspect")
+        Me.btncalib_adjaspect.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btncalib_adjaspect.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btncalib_adjaspect.Name = "btncalib_adjaspect"
+        Me.ToolTip1.SetToolTip(Me.btncalib_adjaspect, resources.GetString("btncalib_adjaspect.ToolTip"))
         Me.btncalib_adjaspect.UseVisualStyleBackColor = False
         '
         'Label104
         '
         resources.ApplyResources(Me.Label104, "Label104")
         Me.Label104.Name = "Label104"
+        Me.ToolTip1.SetToolTip(Me.Label104, resources.GetString("Label104.ToolTip"))
         '
         'Label102
         '
         resources.ApplyResources(Me.Label102, "Label102")
         Me.Label102.Name = "Label102"
+        Me.ToolTip1.SetToolTip(Me.Label102, resources.GetString("Label102.ToolTip"))
         '
         'btncalib_adjscale
         '
-        Me.btncalib_adjscale.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btncalib_adjscale, "btncalib_adjscale")
+        Me.btncalib_adjscale.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btncalib_adjscale.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btncalib_adjscale.Name = "btncalib_adjscale"
+        Me.ToolTip1.SetToolTip(Me.btncalib_adjscale, resources.GetString("btncalib_adjscale.ToolTip"))
         Me.btncalib_adjscale.UseVisualStyleBackColor = False
         '
         'btncalib_resize
         '
-        Me.btncalib_resize.BackColor = System.Drawing.Color.Wheat
         resources.ApplyResources(Me.btncalib_resize, "btncalib_resize")
+        Me.btncalib_resize.BackColor = System.Drawing.Color.Wheat
         Me.btncalib_resize.Name = "btncalib_resize"
+        Me.ToolTip1.SetToolTip(Me.btncalib_resize, resources.GetString("btncalib_resize.ToolTip"))
         Me.btncalib_resize.UseVisualStyleBackColor = False
         '
         'btncalib_cap
         '
-        Me.btncalib_cap.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btncalib_cap, "btncalib_cap")
+        Me.btncalib_cap.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btncalib_cap.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btncalib_cap.Name = "btncalib_cap"
+        Me.ToolTip1.SetToolTip(Me.btncalib_cap, resources.GetString("btncalib_cap.ToolTip"))
         Me.btncalib_cap.UseVisualStyleBackColor = False
         '
         'btntosetting03
         '
-        Me.btntosetting03.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btntosetting03, "btntosetting03")
+        Me.btntosetting03.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btntosetting03.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btntosetting03.Name = "btntosetting03"
+        Me.ToolTip1.SetToolTip(Me.btntosetting03, resources.GetString("btntosetting03.ToolTip"))
         Me.btntosetting03.UseVisualStyleBackColor = False
         '
         'numcalib_bright
@@ -5694,6 +6211,7 @@ Partial Class Mainwindow
         Me.numcalib_bright.Maximum = New Decimal(New Integer() {256, 0, 0, 0})
         Me.numcalib_bright.Minimum = New Decimal(New Integer() {256, 0, 0, -2147483648})
         Me.numcalib_bright.Name = "numcalib_bright"
+        Me.ToolTip1.SetToolTip(Me.numcalib_bright, resources.GetString("numcalib_bright.ToolTip"))
         '
         'numcalib_r
         '
@@ -5701,13 +6219,15 @@ Partial Class Mainwindow
         Me.numcalib_r.Maximum = New Decimal(New Integer() {256, 0, 0, 0})
         Me.numcalib_r.Minimum = New Decimal(New Integer() {256, 0, 0, -2147483648})
         Me.numcalib_r.Name = "numcalib_r"
+        Me.ToolTip1.SetToolTip(Me.numcalib_r, resources.GetString("numcalib_r.ToolTip"))
         '
         'numcalib_scaleheight
         '
-        Me.numcalib_scaleheight.DecimalPlaces = 3
         resources.ApplyResources(Me.numcalib_scaleheight, "numcalib_scaleheight")
+        Me.numcalib_scaleheight.DecimalPlaces = 3
         Me.numcalib_scaleheight.Maximum = New Decimal(New Integer() {500, 0, 0, 0})
         Me.numcalib_scaleheight.Name = "numcalib_scaleheight"
+        Me.ToolTip1.SetToolTip(Me.numcalib_scaleheight, resources.GetString("numcalib_scaleheight.ToolTip"))
         Me.numcalib_scaleheight.Value = New Decimal(New Integer() {100, 0, 0, 0})
         '
         'numcalib_g
@@ -5716,6 +6236,7 @@ Partial Class Mainwindow
         Me.numcalib_g.Maximum = New Decimal(New Integer() {256, 0, 0, 0})
         Me.numcalib_g.Minimum = New Decimal(New Integer() {256, 0, 0, -2147483648})
         Me.numcalib_g.Name = "numcalib_g"
+        Me.ToolTip1.SetToolTip(Me.numcalib_g, resources.GetString("numcalib_g.ToolTip"))
         '
         'numcalib_b
         '
@@ -5723,30 +6244,35 @@ Partial Class Mainwindow
         Me.numcalib_b.Maximum = New Decimal(New Integer() {256, 0, 0, 0})
         Me.numcalib_b.Minimum = New Decimal(New Integer() {256, 0, 0, -2147483648})
         Me.numcalib_b.Name = "numcalib_b"
+        Me.ToolTip1.SetToolTip(Me.numcalib_b, resources.GetString("numcalib_b.ToolTip"))
         '
         'numcalib_scalewidth
         '
-        Me.numcalib_scalewidth.DecimalPlaces = 3
         resources.ApplyResources(Me.numcalib_scalewidth, "numcalib_scalewidth")
+        Me.numcalib_scalewidth.DecimalPlaces = 3
         Me.numcalib_scalewidth.Maximum = New Decimal(New Integer() {500, 0, 0, 0})
         Me.numcalib_scalewidth.Name = "numcalib_scalewidth"
+        Me.ToolTip1.SetToolTip(Me.numcalib_scalewidth, resources.GetString("numcalib_scalewidth.ToolTip"))
         Me.numcalib_scalewidth.Value = New Decimal(New Integer() {100, 0, 0, 0})
         '
         'numcalib_scale
         '
-        Me.numcalib_scale.DecimalPlaces = 3
         resources.ApplyResources(Me.numcalib_scale, "numcalib_scale")
+        Me.numcalib_scale.DecimalPlaces = 3
         Me.numcalib_scale.Maximum = New Decimal(New Integer() {500, 0, 0, 0})
         Me.numcalib_scale.Name = "numcalib_scale"
+        Me.ToolTip1.SetToolTip(Me.numcalib_scale, resources.GetString("numcalib_scale.ToolTip"))
         Me.numcalib_scale.Value = New Decimal(New Integer() {100, 0, 0, 0})
         '
         'txtcalib_count
         '
         resources.ApplyResources(Me.txtcalib_count, "txtcalib_count")
         Me.txtcalib_count.Name = "txtcalib_count"
+        Me.ToolTip1.SetToolTip(Me.txtcalib_count, resources.GetString("txtcalib_count.ToolTip"))
         '
         'grpcalib_1
         '
+        resources.ApplyResources(Me.grpcalib_1, "grpcalib_1")
         Me.grpcalib_1.Controls.Add(Me.listcalib_2)
         Me.grpcalib_1.Controls.Add(Me.txtcalib_numbers)
         Me.grpcalib_1.Controls.Add(Me.Label106)
@@ -5762,98 +6288,114 @@ Partial Class Mainwindow
         Me.grpcalib_1.Controls.Add(Me.txtcalib_hand_name)
         Me.grpcalib_1.Controls.Add(Me.txtcalib_max)
         Me.grpcalib_1.Controls.Add(Me.txtcalib_scaleorcolor)
-        resources.ApplyResources(Me.grpcalib_1, "grpcalib_1")
         Me.grpcalib_1.Name = "grpcalib_1"
         Me.grpcalib_1.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.grpcalib_1, resources.GetString("grpcalib_1.ToolTip"))
         '
         'listcalib_2
         '
-        Me.listcalib_2.FormattingEnabled = True
         resources.ApplyResources(Me.listcalib_2, "listcalib_2")
+        Me.listcalib_2.FormattingEnabled = True
         Me.listcalib_2.Name = "listcalib_2"
+        Me.ToolTip1.SetToolTip(Me.listcalib_2, resources.GetString("listcalib_2.ToolTip"))
         '
         'txtcalib_numbers
         '
         resources.ApplyResources(Me.txtcalib_numbers, "txtcalib_numbers")
         Me.txtcalib_numbers.Name = "txtcalib_numbers"
+        Me.ToolTip1.SetToolTip(Me.txtcalib_numbers, resources.GetString("txtcalib_numbers.ToolTip"))
         '
         'Label106
         '
         resources.ApplyResources(Me.Label106, "Label106")
         Me.Label106.Name = "Label106"
+        Me.ToolTip1.SetToolTip(Me.Label106, resources.GetString("Label106.ToolTip"))
         '
         'Label107
         '
         resources.ApplyResources(Me.Label107, "Label107")
         Me.Label107.Name = "Label107"
+        Me.ToolTip1.SetToolTip(Me.Label107, resources.GetString("Label107.ToolTip"))
         '
         'Label108
         '
         resources.ApplyResources(Me.Label108, "Label108")
         Me.Label108.Name = "Label108"
+        Me.ToolTip1.SetToolTip(Me.Label108, resources.GetString("Label108.ToolTip"))
         '
         'txtcalib_compfilename
         '
         resources.ApplyResources(Me.txtcalib_compfilename, "txtcalib_compfilename")
         Me.txtcalib_compfilename.Name = "txtcalib_compfilename"
+        Me.ToolTip1.SetToolTip(Me.txtcalib_compfilename, resources.GetString("txtcalib_compfilename.ToolTip"))
         '
         'txtcalib_1
         '
         resources.ApplyResources(Me.txtcalib_1, "txtcalib_1")
         Me.txtcalib_1.Name = "txtcalib_1"
+        Me.ToolTip1.SetToolTip(Me.txtcalib_1, resources.GetString("txtcalib_1.ToolTip"))
         '
         'listcalib_1
         '
-        Me.listcalib_1.FormattingEnabled = True
         resources.ApplyResources(Me.listcalib_1, "listcalib_1")
+        Me.listcalib_1.FormattingEnabled = True
         Me.listcalib_1.Name = "listcalib_1"
+        Me.ToolTip1.SetToolTip(Me.listcalib_1, resources.GetString("listcalib_1.ToolTip"))
         '
         'btnpreview
         '
         resources.ApplyResources(Me.btnpreview, "btnpreview")
         Me.btnpreview.Name = "btnpreview"
+        Me.ToolTip1.SetToolTip(Me.btnpreview, resources.GetString("btnpreview.ToolTip"))
         Me.btnpreview.UseVisualStyleBackColor = True
         '
         'piccalib_resize
         '
-        Me.piccalib_resize.BackColor = System.Drawing.SystemColors.ControlLightLight
         resources.ApplyResources(Me.piccalib_resize, "piccalib_resize")
+        Me.piccalib_resize.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.piccalib_resize.Name = "piccalib_resize"
         Me.piccalib_resize.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.piccalib_resize, resources.GetString("piccalib_resize.ToolTip"))
         '
         'chkcalib_1
         '
         resources.ApplyResources(Me.chkcalib_1, "chkcalib_1")
         Me.chkcalib_1.Name = "chkcalib_1"
+        Me.ToolTip1.SetToolTip(Me.chkcalib_1, resources.GetString("chkcalib_1.ToolTip"))
         Me.chkcalib_1.UseVisualStyleBackColor = True
         '
         'chkcalib_2
         '
         resources.ApplyResources(Me.chkcalib_2, "chkcalib_2")
         Me.chkcalib_2.Name = "chkcalib_2"
+        Me.ToolTip1.SetToolTip(Me.chkcalib_2, resources.GetString("chkcalib_2.ToolTip"))
         Me.chkcalib_2.UseVisualStyleBackColor = True
         '
         'txtcalib_hand_name
         '
-        Me.txtcalib_hand_name.BackColor = System.Drawing.Color.Yellow
         resources.ApplyResources(Me.txtcalib_hand_name, "txtcalib_hand_name")
+        Me.txtcalib_hand_name.BackColor = System.Drawing.Color.Yellow
         Me.txtcalib_hand_name.Name = "txtcalib_hand_name"
+        Me.ToolTip1.SetToolTip(Me.txtcalib_hand_name, resources.GetString("txtcalib_hand_name.ToolTip"))
         '
         'txtcalib_max
         '
-        Me.txtcalib_max.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         resources.ApplyResources(Me.txtcalib_max, "txtcalib_max")
+        Me.txtcalib_max.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.txtcalib_max.ForeColor = System.Drawing.SystemColors.Info
         Me.txtcalib_max.Name = "txtcalib_max"
+        Me.ToolTip1.SetToolTip(Me.txtcalib_max, resources.GetString("txtcalib_max.ToolTip"))
         '
         'txtcalib_scaleorcolor
         '
-        Me.txtcalib_scaleorcolor.BackColor = System.Drawing.Color.Yellow
         resources.ApplyResources(Me.txtcalib_scaleorcolor, "txtcalib_scaleorcolor")
+        Me.txtcalib_scaleorcolor.BackColor = System.Drawing.Color.Yellow
         Me.txtcalib_scaleorcolor.Name = "txtcalib_scaleorcolor"
+        Me.ToolTip1.SetToolTip(Me.txtcalib_scaleorcolor, resources.GetString("txtcalib_scaleorcolor.ToolTip"))
         '
         'gbcalib_m1
         '
+        resources.ApplyResources(Me.gbcalib_m1, "gbcalib_m1")
         Me.gbcalib_m1.Controls.Add(Me.Label111)
         Me.gbcalib_m1.Controls.Add(Me.Label110)
         Me.gbcalib_m1.Controls.Add(Me.Label109)
@@ -5865,21 +6407,23 @@ Partial Class Mainwindow
         Me.gbcalib_m1.Controls.Add(Me.piccalib_handresult)
         Me.gbcalib_m1.Controls.Add(Me.Label100)
         Me.gbcalib_m1.Controls.Add(Me.piccalib_comp)
-        resources.ApplyResources(Me.gbcalib_m1, "gbcalib_m1")
         Me.gbcalib_m1.Name = "gbcalib_m1"
         Me.gbcalib_m1.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.gbcalib_m1, resources.GetString("gbcalib_m1.ToolTip"))
         '
         'Label111
         '
         resources.ApplyResources(Me.Label111, "Label111")
         Me.Label111.ForeColor = System.Drawing.Color.Snow
         Me.Label111.Name = "Label111"
+        Me.ToolTip1.SetToolTip(Me.Label111, resources.GetString("Label111.ToolTip"))
         '
         'Label110
         '
         resources.ApplyResources(Me.Label110, "Label110")
         Me.Label110.ForeColor = System.Drawing.Color.Snow
         Me.Label110.Name = "Label110"
+        Me.ToolTip1.SetToolTip(Me.Label110, resources.GetString("Label110.ToolTip"))
         '
         'Label109
         '
@@ -5887,77 +6431,89 @@ Partial Class Mainwindow
         Me.Label109.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.Label109.ForeColor = System.Drawing.Color.Snow
         Me.Label109.Name = "Label109"
+        Me.ToolTip1.SetToolTip(Me.Label109, resources.GetString("Label109.ToolTip"))
         '
         'txtcalib_bestvalue
         '
-        Me.txtcalib_bestvalue.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
         resources.ApplyResources(Me.txtcalib_bestvalue, "txtcalib_bestvalue")
+        Me.txtcalib_bestvalue.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
         Me.txtcalib_bestvalue.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txtcalib_bestvalue.Name = "txtcalib_bestvalue"
+        Me.ToolTip1.SetToolTip(Me.txtcalib_bestvalue, resources.GetString("txtcalib_bestvalue.ToolTip"))
         '
         'piccalib_bestresult
         '
-        Me.piccalib_bestresult.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer))
         resources.ApplyResources(Me.piccalib_bestresult, "piccalib_bestresult")
+        Me.piccalib_bestresult.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.piccalib_bestresult.Name = "piccalib_bestresult"
         Me.piccalib_bestresult.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.piccalib_bestresult, resources.GetString("piccalib_bestresult.ToolTip"))
         '
         'Label75
         '
         resources.ApplyResources(Me.Label75, "Label75")
         Me.Label75.ForeColor = System.Drawing.Color.Snow
         Me.Label75.Name = "Label75"
+        Me.ToolTip1.SetToolTip(Me.Label75, resources.GetString("Label75.ToolTip"))
         '
         'txtcalib_nowvalue
         '
+        resources.ApplyResources(Me.txtcalib_nowvalue, "txtcalib_nowvalue")
         Me.txtcalib_nowvalue.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.txtcalib_nowvalue.BorderStyle = System.Windows.Forms.BorderStyle.None
-        resources.ApplyResources(Me.txtcalib_nowvalue, "txtcalib_nowvalue")
         Me.txtcalib_nowvalue.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txtcalib_nowvalue.Name = "txtcalib_nowvalue"
+        Me.ToolTip1.SetToolTip(Me.txtcalib_nowvalue, resources.GetString("txtcalib_nowvalue.ToolTip"))
         '
         'Label99
         '
         resources.ApplyResources(Me.Label99, "Label99")
         Me.Label99.ForeColor = System.Drawing.Color.Snow
         Me.Label99.Name = "Label99"
+        Me.ToolTip1.SetToolTip(Me.Label99, resources.GetString("Label99.ToolTip"))
         '
         'piccalib_handresult
         '
-        Me.piccalib_handresult.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer))
         resources.ApplyResources(Me.piccalib_handresult, "piccalib_handresult")
+        Me.piccalib_handresult.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.piccalib_handresult.Name = "piccalib_handresult"
         Me.piccalib_handresult.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.piccalib_handresult, resources.GetString("piccalib_handresult.ToolTip"))
         '
         'Label100
         '
         resources.ApplyResources(Me.Label100, "Label100")
         Me.Label100.ForeColor = System.Drawing.Color.Snow
         Me.Label100.Name = "Label100"
+        Me.ToolTip1.SetToolTip(Me.Label100, resources.GetString("Label100.ToolTip"))
         '
         'piccalib_comp
         '
-        Me.piccalib_comp.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer))
         resources.ApplyResources(Me.piccalib_comp, "piccalib_comp")
+        Me.piccalib_comp.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.piccalib_comp.Name = "piccalib_comp"
         Me.piccalib_comp.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.piccalib_comp, resources.GetString("piccalib_comp.ToolTip"))
         '
         'piccalib_temp
         '
-        Me.piccalib_temp.BackColor = System.Drawing.Color.Snow
         resources.ApplyResources(Me.piccalib_temp, "piccalib_temp")
+        Me.piccalib_temp.BackColor = System.Drawing.Color.Snow
         Me.piccalib_temp.Name = "piccalib_temp"
         Me.piccalib_temp.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.piccalib_temp, resources.GetString("piccalib_temp.ToolTip"))
         '
         'piccamera
         '
-        Me.piccamera.BackColor = System.Drawing.Color.Snow
         resources.ApplyResources(Me.piccamera, "piccamera")
+        Me.piccamera.BackColor = System.Drawing.Color.Snow
         Me.piccamera.Name = "piccamera"
         Me.piccamera.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.piccamera, resources.GetString("piccamera.ToolTip"))
         '
         'TabPage3
         '
+        resources.ApplyResources(Me.TabPage3, "TabPage3")
         Me.TabPage3.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(75, Byte), Integer))
         Me.TabPage3.Controls.Add(Me.PictureBox11)
         Me.TabPage3.Controls.Add(Me.PictureBox12)
@@ -5968,38 +6524,42 @@ Partial Class Mainwindow
         Me.TabPage3.Controls.Add(Me.Label16)
         Me.TabPage3.Controls.Add(Me.Label17)
         Me.TabPage3.Controls.Add(Me.Panel1)
-        resources.ApplyResources(Me.TabPage3, "TabPage3")
         Me.TabPage3.Name = "TabPage3"
+        Me.ToolTip1.SetToolTip(Me.TabPage3, resources.GetString("TabPage3.ToolTip"))
         '
         'PictureBox11
         '
-        Me.PictureBox11.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(95, Byte), Integer))
         resources.ApplyResources(Me.PictureBox11, "PictureBox11")
+        Me.PictureBox11.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(95, Byte), Integer))
         Me.PictureBox11.Name = "PictureBox11"
         Me.PictureBox11.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox11, resources.GetString("PictureBox11.ToolTip"))
         '
         'PictureBox12
         '
-        Me.PictureBox12.BackColor = System.Drawing.Color.FromArgb(CType(CType(90, Byte), Integer), CType(CType(95, Byte), Integer), CType(CType(105, Byte), Integer))
         resources.ApplyResources(Me.PictureBox12, "PictureBox12")
+        Me.PictureBox12.BackColor = System.Drawing.Color.FromArgb(CType(CType(90, Byte), Integer), CType(CType(95, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.PictureBox12.Name = "PictureBox12"
         Me.PictureBox12.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox12, resources.GetString("PictureBox12.ToolTip"))
         '
         'btntosetting02
         '
-        Me.btntosetting02.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btntosetting02, "btntosetting02")
+        Me.btntosetting02.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btntosetting02.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btntosetting02.Name = "btntosetting02"
+        Me.ToolTip1.SetToolTip(Me.btntosetting02, resources.GetString("btntosetting02.ToolTip"))
         Me.btntosetting02.UseVisualStyleBackColor = False
         '
         'Panel3
         '
+        resources.ApplyResources(Me.Panel3, "Panel3")
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Panel3.Controls.Add(Me.Label72)
         Me.Panel3.Controls.Add(Me.rtxtlog)
-        resources.ApplyResources(Me.Panel3, "Panel3")
         Me.Panel3.Name = "Panel3"
+        Me.ToolTip1.SetToolTip(Me.Panel3, resources.GetString("Panel3.ToolTip"))
         '
         'Label72
         '
@@ -6007,13 +6567,15 @@ Partial Class Mainwindow
         Me.Label72.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label72.ForeColor = System.Drawing.SystemColors.Control
         Me.Label72.Name = "Label72"
+        Me.ToolTip1.SetToolTip(Me.Label72, resources.GetString("Label72.ToolTip"))
         '
         'rtxtlog
         '
+        resources.ApplyResources(Me.rtxtlog, "rtxtlog")
         Me.rtxtlog.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.rtxtlog.ForeColor = System.Drawing.Color.Snow
-        resources.ApplyResources(Me.rtxtlog, "rtxtlog")
         Me.rtxtlog.Name = "rtxtlog"
+        Me.ToolTip1.SetToolTip(Me.rtxtlog, resources.GetString("rtxtlog.ToolTip"))
         '
         'Label25
         '
@@ -6021,6 +6583,7 @@ Partial Class Mainwindow
         Me.Label25.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label25.ForeColor = System.Drawing.SystemColors.Control
         Me.Label25.Name = "Label25"
+        Me.ToolTip1.SetToolTip(Me.Label25, resources.GetString("Label25.ToolTip"))
         '
         'Label18
         '
@@ -6028,6 +6591,7 @@ Partial Class Mainwindow
         Me.Label18.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label18.ForeColor = System.Drawing.SystemColors.Control
         Me.Label18.Name = "Label18"
+        Me.ToolTip1.SetToolTip(Me.Label18, resources.GetString("Label18.ToolTip"))
         '
         'Label16
         '
@@ -6035,6 +6599,7 @@ Partial Class Mainwindow
         Me.Label16.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label16.ForeColor = System.Drawing.SystemColors.Control
         Me.Label16.Name = "Label16"
+        Me.ToolTip1.SetToolTip(Me.Label16, resources.GetString("Label16.ToolTip"))
         '
         'Label17
         '
@@ -6042,19 +6607,28 @@ Partial Class Mainwindow
         Me.Label17.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label17.ForeColor = System.Drawing.SystemColors.Control
         Me.Label17.Name = "Label17"
+        Me.ToolTip1.SetToolTip(Me.Label17, resources.GetString("Label17.ToolTip"))
         '
         'Panel1
         '
+        resources.ApplyResources(Me.Panel1, "Panel1")
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Panel1.Controls.Add(Me.lblnewestver)
-        Me.Panel1.Controls.Add(Me.btncheckupdate)
         Me.Panel1.Controls.Add(Me.LinkLabel3)
         Me.Panel1.Controls.Add(Me.Label31)
         Me.Panel1.Controls.Add(Me.LinkLabel2)
         Me.Panel1.Controls.Add(Me.Label14)
         Me.Panel1.Controls.Add(Me.lblversion)
-        resources.ApplyResources(Me.Panel1, "Panel1")
         Me.Panel1.Name = "Panel1"
+        Me.ToolTip1.SetToolTip(Me.Panel1, resources.GetString("Panel1.ToolTip"))
+        '
+        'lblnewestver
+        '
+        resources.ApplyResources(Me.lblnewestver, "lblnewestver")
+        Me.lblnewestver.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.lblnewestver.ForeColor = System.Drawing.SystemColors.Control
+        Me.lblnewestver.Name = "lblnewestver"
+        Me.ToolTip1.SetToolTip(Me.lblnewestver, resources.GetString("lblnewestver.ToolTip"))
         '
         'LinkLabel3
         '
@@ -6063,6 +6637,7 @@ Partial Class Mainwindow
         Me.LinkLabel3.LinkColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.LinkLabel3.Name = "LinkLabel3"
         Me.LinkLabel3.TabStop = True
+        Me.ToolTip1.SetToolTip(Me.LinkLabel3, resources.GetString("LinkLabel3.ToolTip"))
         Me.LinkLabel3.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         '
         'Label31
@@ -6071,6 +6646,7 @@ Partial Class Mainwindow
         Me.Label31.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label31.ForeColor = System.Drawing.SystemColors.Control
         Me.Label31.Name = "Label31"
+        Me.ToolTip1.SetToolTip(Me.Label31, resources.GetString("Label31.ToolTip"))
         '
         'LinkLabel2
         '
@@ -6079,6 +6655,7 @@ Partial Class Mainwindow
         Me.LinkLabel2.LinkColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.LinkLabel2.Name = "LinkLabel2"
         Me.LinkLabel2.TabStop = True
+        Me.ToolTip1.SetToolTip(Me.LinkLabel2, resources.GetString("LinkLabel2.ToolTip"))
         Me.LinkLabel2.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         '
         'Label14
@@ -6087,6 +6664,7 @@ Partial Class Mainwindow
         Me.Label14.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label14.ForeColor = System.Drawing.SystemColors.Control
         Me.Label14.Name = "Label14"
+        Me.ToolTip1.SetToolTip(Me.Label14, resources.GetString("Label14.ToolTip"))
         '
         'lblversion
         '
@@ -6094,33 +6672,38 @@ Partial Class Mainwindow
         Me.lblversion.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.lblversion.ForeColor = System.Drawing.SystemColors.Control
         Me.lblversion.Name = "lblversion"
+        Me.ToolTip1.SetToolTip(Me.lblversion, resources.GetString("lblversion.ToolTip"))
         '
         'TabPage16
         '
+        resources.ApplyResources(Me.TabPage16, "TabPage16")
         Me.TabPage16.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(75, Byte), Integer))
         Me.TabPage16.Controls.Add(Me.btntosetting04)
         Me.TabPage16.Controls.Add(Me.rtxtlicense)
         Me.TabPage16.Controls.Add(Me.Panel2)
-        resources.ApplyResources(Me.TabPage16, "TabPage16")
         Me.TabPage16.Name = "TabPage16"
+        Me.ToolTip1.SetToolTip(Me.TabPage16, resources.GetString("TabPage16.ToolTip"))
         '
         'btntosetting04
         '
-        Me.btntosetting04.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btntosetting04, "btntosetting04")
+        Me.btntosetting04.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btntosetting04.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btntosetting04.Name = "btntosetting04"
+        Me.ToolTip1.SetToolTip(Me.btntosetting04, resources.GetString("btntosetting04.ToolTip"))
         Me.btntosetting04.UseVisualStyleBackColor = False
         '
         'rtxtlicense
         '
+        resources.ApplyResources(Me.rtxtlicense, "rtxtlicense")
         Me.rtxtlicense.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.rtxtlicense.ForeColor = System.Drawing.Color.Snow
-        resources.ApplyResources(Me.rtxtlicense, "rtxtlicense")
         Me.rtxtlicense.Name = "rtxtlicense"
+        Me.ToolTip1.SetToolTip(Me.rtxtlicense, resources.GetString("rtxtlicense.ToolTip"))
         '
         'Panel2
         '
+        resources.ApplyResources(Me.Panel2, "Panel2")
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Panel2.Controls.Add(Me.link_dobon)
         Me.Panel2.Controls.Add(Me.Label118)
@@ -6132,8 +6715,8 @@ Partial Class Mainwindow
         Me.Panel2.Controls.Add(Me.link_inteltbb)
         Me.Panel2.Controls.Add(Me.Label114)
         Me.Panel2.Controls.Add(Me.Label115)
-        resources.ApplyResources(Me.Panel2, "Panel2")
         Me.Panel2.Name = "Panel2"
+        Me.ToolTip1.SetToolTip(Me.Panel2, resources.GetString("Panel2.ToolTip"))
         '
         'link_dobon
         '
@@ -6142,6 +6725,7 @@ Partial Class Mainwindow
         Me.link_dobon.LinkColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.link_dobon.Name = "link_dobon"
         Me.link_dobon.TabStop = True
+        Me.ToolTip1.SetToolTip(Me.link_dobon, resources.GetString("link_dobon.ToolTip"))
         Me.link_dobon.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         '
         'Label118
@@ -6150,6 +6734,7 @@ Partial Class Mainwindow
         Me.Label118.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label118.ForeColor = System.Drawing.SystemColors.Control
         Me.Label118.Name = "Label118"
+        Me.ToolTip1.SetToolTip(Me.Label118, resources.GetString("Label118.ToolTip"))
         '
         'Label117
         '
@@ -6157,6 +6742,7 @@ Partial Class Mainwindow
         Me.Label117.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label117.ForeColor = System.Drawing.SystemColors.Control
         Me.Label117.Name = "Label117"
+        Me.ToolTip1.SetToolTip(Me.Label117, resources.GetString("Label117.ToolTip"))
         '
         'Label116
         '
@@ -6164,6 +6750,7 @@ Partial Class Mainwindow
         Me.Label116.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label116.ForeColor = System.Drawing.SystemColors.Control
         Me.Label116.Name = "Label116"
+        Me.ToolTip1.SetToolTip(Me.Label116, resources.GetString("Label116.ToolTip"))
         '
         'link_directshowlib
         '
@@ -6172,6 +6759,7 @@ Partial Class Mainwindow
         Me.link_directshowlib.LinkColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.link_directshowlib.Name = "link_directshowlib"
         Me.link_directshowlib.TabStop = True
+        Me.ToolTip1.SetToolTip(Me.link_directshowlib, resources.GetString("link_directshowlib.ToolTip"))
         Me.link_directshowlib.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         '
         'Label113
@@ -6180,6 +6768,7 @@ Partial Class Mainwindow
         Me.Label113.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label113.ForeColor = System.Drawing.SystemColors.Control
         Me.Label113.Name = "Label113"
+        Me.ToolTip1.SetToolTip(Me.Label113, resources.GetString("Label113.ToolTip"))
         '
         'link_opencvsharp
         '
@@ -6188,6 +6777,7 @@ Partial Class Mainwindow
         Me.link_opencvsharp.LinkColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.link_opencvsharp.Name = "link_opencvsharp"
         Me.link_opencvsharp.TabStop = True
+        Me.ToolTip1.SetToolTip(Me.link_opencvsharp, resources.GetString("link_opencvsharp.ToolTip"))
         Me.link_opencvsharp.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         '
         'link_inteltbb
@@ -6197,6 +6787,7 @@ Partial Class Mainwindow
         Me.link_inteltbb.LinkColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.link_inteltbb.Name = "link_inteltbb"
         Me.link_inteltbb.TabStop = True
+        Me.ToolTip1.SetToolTip(Me.link_inteltbb, resources.GetString("link_inteltbb.ToolTip"))
         Me.link_inteltbb.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         '
         'Label114
@@ -6205,6 +6796,7 @@ Partial Class Mainwindow
         Me.Label114.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label114.ForeColor = System.Drawing.SystemColors.Control
         Me.Label114.Name = "Label114"
+        Me.ToolTip1.SetToolTip(Me.Label114, resources.GetString("Label114.ToolTip"))
         '
         'Label115
         '
@@ -6212,18 +6804,25 @@ Partial Class Mainwindow
         Me.Label115.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label115.ForeColor = System.Drawing.SystemColors.Control
         Me.Label115.Name = "Label115"
+        Me.ToolTip1.SetToolTip(Me.Label115, resources.GetString("Label115.ToolTip"))
         '
         'btnview_close
         '
-        Me.btnview_close.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer))
         resources.ApplyResources(Me.btnview_close, "btnview_close")
+        Me.btnview_close.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer))
         Me.btnview_close.ForeColor = System.Drawing.Color.Thistle
         Me.btnview_close.Name = "btnview_close"
+        Me.ToolTip1.SetToolTip(Me.btnview_close, resources.GetString("btnview_close.ToolTip"))
         Me.btnview_close.UseVisualStyleBackColor = False
         '
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        resources.ApplyResources(Me.OpenFileDialog1, "OpenFileDialog1")
+        '
+        'SaveFileDialog1
+        '
+        resources.ApplyResources(Me.SaveFileDialog1, "SaveFileDialog1")
         '
         'lbltitlebar
         '
@@ -6231,21 +6830,24 @@ Partial Class Mainwindow
         Me.lbltitlebar.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer))
         Me.lbltitlebar.ForeColor = System.Drawing.SystemColors.Control
         Me.lbltitlebar.Name = "lbltitlebar"
+        Me.ToolTip1.SetToolTip(Me.lbltitlebar, resources.GetString("lbltitlebar.ToolTip"))
         '
         'btnclosewindow
         '
-        Me.btnclosewindow.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer))
         resources.ApplyResources(Me.btnclosewindow, "btnclosewindow")
+        Me.btnclosewindow.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer))
         Me.btnclosewindow.ForeColor = System.Drawing.Color.Thistle
         Me.btnclosewindow.Name = "btnclosewindow"
+        Me.ToolTip1.SetToolTip(Me.btnclosewindow, resources.GetString("btnclosewindow.ToolTip"))
         Me.btnclosewindow.UseVisualStyleBackColor = False
         '
         'btnsaisyouka
         '
-        Me.btnsaisyouka.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer))
         resources.ApplyResources(Me.btnsaisyouka, "btnsaisyouka")
+        Me.btnsaisyouka.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer))
         Me.btnsaisyouka.ForeColor = System.Drawing.Color.Thistle
         Me.btnsaisyouka.Name = "btnsaisyouka"
+        Me.ToolTip1.SetToolTip(Me.btnsaisyouka, resources.GetString("btnsaisyouka.ToolTip"))
         Me.btnsaisyouka.UseVisualStyleBackColor = False
         '
         'timopencvsleep
@@ -6287,21 +6889,6 @@ Partial Class Mainwindow
         '
         Me.timash_hotkey_sleep.Interval = 300
         '
-        'btncheckupdate
-        '
-        Me.btncheckupdate.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
-        resources.ApplyResources(Me.btncheckupdate, "btncheckupdate")
-        Me.btncheckupdate.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.btncheckupdate.Name = "btncheckupdate"
-        Me.btncheckupdate.UseVisualStyleBackColor = False
-        '
-        'lblnewestver
-        '
-        resources.ApplyResources(Me.lblnewestver, "lblnewestver")
-        Me.lblnewestver.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.lblnewestver.ForeColor = System.Drawing.SystemColors.Control
-        Me.lblnewestver.Name = "lblnewestver"
-        '
         'Mainwindow
         '
         resources.ApplyResources(Me, "$this")
@@ -6316,192 +6903,193 @@ Partial Class Mainwindow
         Me.MainMenuStrip = Me.MenuStrip1
         Me.MaximizeBox = False
         Me.Name = "Mainwindow"
+        Me.ToolTip1.SetToolTip(Me, resources.GetString("$this.ToolTip"))
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
-        Me.TabPage1.PerformLayout()
-        CType(Me.DGtable, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage1.PerformLayout
+        CType(Me.DGtable, System.ComponentModel.ISupportInitialize).EndInit
         Me.pnlview_window.ResumeLayout(False)
-        Me.pnlview_window.PerformLayout()
-        CType(Me.piccap, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pictempipl, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBoxIpl1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.piczoom, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picview_capture, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlview_window.PerformLayout
+        CType(Me.piccap, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.pictempipl, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBoxIpl1, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.piczoom, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.picview_capture, System.ComponentModel.ISupportInitialize).EndInit
         Me.pnlview_control.ResumeLayout(False)
-        Me.pnlview_control.PerformLayout()
-        CType(Me.numloadno, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.trktemp, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlview_control.PerformLayout
+        CType(Me.numloadno, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.trktemp, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit
         Me.grpgeneral.ResumeLayout(False)
-        Me.grpgeneral.PerformLayout()
+        Me.grpgeneral.PerformLayout
         Me.Panel4.ResumeLayout(False)
-        Me.Panel4.PerformLayout()
+        Me.Panel4.PerformLayout
         Me.pnl_other.ResumeLayout(False)
-        Me.pnl_other.PerformLayout()
+        Me.pnl_other.PerformLayout
         Me.pnl_video.ResumeLayout(False)
-        Me.pnl_video.PerformLayout()
+        Me.pnl_video.PerformLayout
         Me.GroupBox4.ResumeLayout(False)
-        Me.GroupBox4.PerformLayout()
-        CType(Me.numwin_interval, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numwin_locy, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numwin_locx, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numvideo_sizey, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numvideo_sizex, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox4.PerformLayout
+        CType(Me.numwin_interval, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numwin_locy, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numwin_locx, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numvideo_sizey, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numvideo_sizex, System.ComponentModel.ISupportInitialize).EndInit
         Me.pnl_loadremover.ResumeLayout(False)
-        Me.pnl_loadremover.PerformLayout()
+        Me.pnl_loadremover.PerformLayout
         Me.TabControl2.ResumeLayout(False)
         Me.TabPage4.ResumeLayout(False)
-        Me.TabPage4.PerformLayout()
-        CType(Me.numload_rate1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numload_delay1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage4.PerformLayout
+        CType(Me.numload_rate1, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numload_delay1, System.ComponentModel.ISupportInitialize).EndInit
         Me.TabPage6.ResumeLayout(False)
-        Me.TabPage6.PerformLayout()
-        CType(Me.numload_rate2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numload_delay2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage6.PerformLayout
+        CType(Me.numload_rate2, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numload_delay2, System.ComponentModel.ISupportInitialize).EndInit
         Me.TabPage7.ResumeLayout(False)
-        Me.TabPage7.PerformLayout()
-        CType(Me.numload_rate3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numload_delay3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage7.PerformLayout
+        CType(Me.numload_rate3, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numload_delay3, System.ComponentModel.ISupportInitialize).EndInit
         Me.TabPage8.ResumeLayout(False)
-        Me.TabPage8.PerformLayout()
-        CType(Me.numload_rate4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numload_delay4, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage8.PerformLayout
+        CType(Me.numload_rate4, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numload_delay4, System.ComponentModel.ISupportInitialize).EndInit
         Me.TabPage9.ResumeLayout(False)
-        Me.TabPage9.PerformLayout()
-        CType(Me.numload_rate5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numload_delay5, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage9.PerformLayout
+        CType(Me.numload_rate5, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numload_delay5, System.ComponentModel.ISupportInitialize).EndInit
         Me.TabPage10.ResumeLayout(False)
-        Me.TabPage10.PerformLayout()
-        CType(Me.numload_rate6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numload_delay6, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage10.PerformLayout
+        CType(Me.numload_rate6, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numload_delay6, System.ComponentModel.ISupportInitialize).EndInit
         Me.TabPage11.ResumeLayout(False)
-        Me.TabPage11.PerformLayout()
-        CType(Me.numload_rate7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numload_delay7, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage11.PerformLayout
+        CType(Me.numload_rate7, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numload_delay7, System.ComponentModel.ISupportInitialize).EndInit
         Me.TabPage12.ResumeLayout(False)
-        Me.TabPage12.PerformLayout()
-        CType(Me.numload_rate8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numload_delay8, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage12.PerformLayout
+        CType(Me.numload_rate8, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numload_delay8, System.ComponentModel.ISupportInitialize).EndInit
         Me.TabPage13.ResumeLayout(False)
-        Me.TabPage13.PerformLayout()
-        CType(Me.numload_rate9, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numload_delay9, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage13.PerformLayout
+        CType(Me.numload_rate9, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numload_delay9, System.ComponentModel.ISupportInitialize).EndInit
         Me.TabPage14.ResumeLayout(False)
-        Me.TabPage14.PerformLayout()
-        CType(Me.numload_rate10, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numload_delay10, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage14.PerformLayout
+        CType(Me.numload_rate10, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numload_delay10, System.ComponentModel.ISupportInitialize).EndInit
         Me.pnl_hotkey.ResumeLayout(False)
-        Me.pnl_hotkey.PerformLayout()
-        CType(Me.numpresstime, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnl_hotkey.PerformLayout
+        CType(Me.numpresstime, System.ComponentModel.ISupportInitialize).EndInit
         Me.pnl_cvparameter.ResumeLayout(False)
-        Me.pnl_cvparameter.PerformLayout()
-        CType(Me.numcv_framerate, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numcv_device, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnl_cvparameter.PerformLayout
+        CType(Me.numcv_framerate, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numcv_device, System.ComponentModel.ISupportInitialize).EndInit
         Me.pnl_focus.ResumeLayout(False)
-        Me.pnl_focus.PerformLayout()
-        CType(Me.numsendsleep, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnl_focus.PerformLayout
+        CType(Me.numsendsleep, System.ComponentModel.ISupportInitialize).EndInit
         Me.pnl_graph.ResumeLayout(False)
-        Me.pnl_graph.PerformLayout()
-        CType(Me.numgraph_first, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnl_graph.PerformLayout
+        CType(Me.numgraph_first, System.ComponentModel.ISupportInitialize).EndInit
         Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
-        CType(Me.numtextwindow_sizex, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numtextwindow_sizey, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numprofile, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox2.PerformLayout
+        CType(Me.numtextwindow_sizex, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numtextwindow_sizey, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numprofile, System.ComponentModel.ISupportInitialize).EndInit
         Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox3.PerformLayout()
-        CType(Me.numskip_ash, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numundo_ash, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numreset_ash, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numcv_sizex, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numcv_sizey, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numsavex, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numsavey, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox3.PerformLayout
+        CType(Me.numskip_ash, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numundo_ash, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numreset_ash, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numcv_sizex, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numcv_sizey, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numsavex, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numsavey, System.ComponentModel.ISupportInitialize).EndInit
         Me.Panel5.ResumeLayout(False)
-        Me.Panel5.PerformLayout()
-        CType(Me.numtemp, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel5.PerformLayout
+        CType(Me.numtemp, System.ComponentModel.ISupportInitialize).EndInit
         Me.pnl_parameter.ResumeLayout(False)
-        Me.pnl_parameter.PerformLayout()
-        CType(Me.numanten, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numstop, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numloopcount, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numcv_interval, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numpercent, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnl_parameter.PerformLayout
+        CType(Me.numanten, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numstop, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numloopcount, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numcv_interval, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numpercent, System.ComponentModel.ISupportInitialize).EndInit
         Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
-        CType(Me.picunder, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip1.PerformLayout
+        CType(Me.picunder, System.ComponentModel.ISupportInitialize).EndInit
         Me.TabPage5.ResumeLayout(False)
-        Me.TabPage5.PerformLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numnowloop, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage5.PerformLayout
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numnowloop, System.ComponentModel.ISupportInitialize).EndInit
         Me.GroupBox8.ResumeLayout(False)
-        Me.GroupBox8.PerformLayout()
-        CType(Me.piccv_load, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picipl_foranten, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.piccv_reset, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.piccv_picture, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picipl_cap, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox8.PerformLayout
+        CType(Me.piccv_load, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.picipl_foranten, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.piccv_reset, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.piccv_picture, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.picipl_cap, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).EndInit
         Me.TabPage2.ResumeLayout(False)
-        Me.TabPage2.PerformLayout()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage2.PerformLayout
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit
         Me.GroupBox9.ResumeLayout(False)
-        Me.GroupBox9.PerformLayout()
+        Me.GroupBox9.PerformLayout
         Me.GroupBox7.ResumeLayout(False)
-        Me.GroupBox7.PerformLayout()
-        CType(Me.dgv2_template, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.num2_rbx, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.num2_rby, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.num2_lty, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.num2_ltx, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox7.PerformLayout
+        CType(Me.dgv2_template, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.num2_rbx, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.num2_rby, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.num2_lty, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.num2_ltx, System.ComponentModel.ISupportInitialize).EndInit
         Me.TabPage15.ResumeLayout(False)
-        Me.TabPage15.PerformLayout()
+        Me.TabPage15.PerformLayout
         Me.gbsetting.ResumeLayout(False)
-        Me.gbsetting.PerformLayout()
-        CType(Me.numcalib_hand_scaleheight, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.gbsetting.PerformLayout
+        CType(Me.numcalib_hand_scaleheight, System.ComponentModel.ISupportInitialize).EndInit
         Me.gbrgb.ResumeLayout(False)
-        Me.gbrgb.PerformLayout()
-        CType(Me.numcalib_hand_bright, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numcalib_hand_g, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numcalib_hand_r, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numcalib_hand_b, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numcalib_hand_scalewidth, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numcalib_hand_scale, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numcalib_bright, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numcalib_r, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numcalib_scaleheight, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numcalib_g, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numcalib_b, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numcalib_scalewidth, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numcalib_scale, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.gbrgb.PerformLayout
+        CType(Me.numcalib_hand_bright, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numcalib_hand_g, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numcalib_hand_r, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numcalib_hand_b, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numcalib_hand_scalewidth, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numcalib_hand_scale, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numcalib_bright, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numcalib_r, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numcalib_scaleheight, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numcalib_g, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numcalib_b, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numcalib_scalewidth, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.numcalib_scale, System.ComponentModel.ISupportInitialize).EndInit
         Me.grpcalib_1.ResumeLayout(False)
-        Me.grpcalib_1.PerformLayout()
-        CType(Me.piccalib_resize, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.grpcalib_1.PerformLayout
+        CType(Me.piccalib_resize, System.ComponentModel.ISupportInitialize).EndInit
         Me.gbcalib_m1.ResumeLayout(False)
-        Me.gbcalib_m1.PerformLayout()
-        CType(Me.piccalib_bestresult, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.piccalib_handresult, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.piccalib_comp, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.piccalib_temp, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.piccamera, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.gbcalib_m1.PerformLayout
+        CType(Me.piccalib_bestresult, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.piccalib_handresult, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.piccalib_comp, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.piccalib_temp, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.piccamera, System.ComponentModel.ISupportInitialize).EndInit
         Me.TabPage3.ResumeLayout(False)
-        Me.TabPage3.PerformLayout()
-        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage3.PerformLayout
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit
         Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
+        Me.Panel3.PerformLayout
         Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
+        Me.Panel1.PerformLayout
         Me.TabPage16.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
+        Me.Panel2.PerformLayout
         Me.ResumeLayout(False)
-        Me.PerformLayout()
+        Me.PerformLayout
 
     End Sub
     Friend WithEvents DGtable As DataGridView
@@ -7165,5 +7753,4 @@ Partial Class Mainwindow
     Friend WithEvents SortTemplateImageToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator8 As ToolStripSeparator
     Friend WithEvents lblnewestver As Label
-    Friend WithEvents btncheckupdate As Button
 End Class

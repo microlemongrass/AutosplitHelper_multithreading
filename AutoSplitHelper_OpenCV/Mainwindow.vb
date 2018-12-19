@@ -115,6 +115,7 @@ Public Class Mainwindow
 
     Private pipeServer As System.IO.Pipes.NamedPipeClientStream = New System.IO.Pipes.NamedPipeClientStream("LiveSplit") 'Livesplitの名前付きパイプを利用する。
     Private livesplit_state As String = ""
+    Private ASH_state As Integer = 0 '0:起動時、1:起動時以外★
 
     Friend messagebox_name As String = "Autosplit Helper"
 
@@ -456,7 +457,9 @@ Public Class Mainwindow
         btnconnect_camera.Text = My.Resources.Message.msgc01
 
         rtxtlog.AppendText(Now & " " & "Launched." & vbCrLf)
+        ASH_state = 1
 
+        checkupdate() 'バージョン確認
 
 
     End Sub
@@ -919,8 +922,8 @@ Public Class Mainwindow
 
         txtprofile.Clear()
 
-        For ii = 0 To arrayprofile.Count - 1
-            txtprofile.AppendText(arrayprofile(ii) & vbCrLf)
+        For ii = 0 To arrayprofile_save.Count - 1
+            txtprofile.AppendText(arrayprofile_save(ii) & vbCrLf)
 
         Next
 
@@ -12138,12 +12141,60 @@ Public Class Mainwindow
             sw.Close()
 
 
-            Me.Close()
+            '■設定、表に変更がある場合、確認メッセージを表示。★
+
+            'arrayprofile_saveに現在の設定を書き込む
+            Createarrayprofile()
+
+            Dim Setting_changeTF As Integer = 0
+
+            For i = 0 To 128
+                If Not arrayprofile_before(i) = arrayprofile_save(i) Then
+                    Setting_changeTF = 1
+                End If
+            Next
+
+            If Setting_changeTF = 1 Or DGtable_changeTF = 1 Then
+                'メッセージボックスを表示する 
+                Dim result As DialogResult = MessageBox.Show("設定/表の内容が変更されています。上書きしますか？",
+                                             "質問",
+                                             MessageBoxButtons.YesNoCancel,
+                                             MessageBoxIcon.Exclamation,
+                                             MessageBoxDefaultButton.Button2)
+
+                '何が選択されたか調べる 
+                If result = DialogResult.Yes Then
+                    '「はい」が選択された時 
+                    Console.WriteLine("「はい」が選択されました")
+                    btnaddprofile.PerformClick()
+                    Me.Close()
+
+                ElseIf result = DialogResult.No Then
+                    '「いいえ」が選択された時 
+                    Console.WriteLine("「いいえ」が選択されました")
+                    Me.Close()
+
+                ElseIf result = DialogResult.Cancel Then
+                    '「キャンセル」が選択された時 
+                    Console.WriteLine("「キャンセル」が選択されました")
+                    Exit Sub
+
+                End If
+
+            Else
+                Me.Close()
+
+
+            End If
+
+
         End If
 
 
 
     End Sub
+
+
 
     Private Sub btnaddprofile_Click(sender As Object, e As EventArgs) Handles btnaddprofile.Click
 
@@ -12172,15 +12223,18 @@ Public Class Mainwindow
 
         End If
 
+
         cmbprofile.SelectedItem = cmbprofile.Text
+
+
 
 
         Createarrayprofile()
 
 
         txtprofile.Clear()
-        For ii = 0 To arrayprofile.Count - 1
-            txtprofile.AppendText(arrayprofile(ii) & vbCrLf)
+        For ii = 0 To arrayprofile_save.Count - 1
+            txtprofile.AppendText(arrayprofile_save(ii) & vbCrLf)
         Next
 
         Dim sw As New System.IO.StreamWriter("./profile/" & cmbprofile.SelectedItem & "/data.txt", False,
@@ -12197,6 +12251,12 @@ Public Class Mainwindow
         CsvFileSave(myfilename)
 
 
+        DGtable_changeTF = 0 'CSV保存したので変更有無の初期化★
+
+        For i = 0 To 128
+            arrayprofile_before(i) = arrayprofile_save(i) '設定保存したのでarraybeforeを更新★
+        Next
+        Console.WriteLine("Arrayprofile_before更新")
 
         MessageBox.Show("Saved.", messagebox_name)
 
@@ -12241,8 +12301,8 @@ Public Class Mainwindow
 
 
         txtprofile.Clear()
-        For ii = 0 To arrayprofile.Count - 1
-            txtprofile.AppendText(arrayprofile(ii) & vbCrLf)
+        For ii = 0 To arrayprofile_save.Count - 1
+            txtprofile.AppendText(arrayprofile_save(ii) & vbCrLf)
         Next
 
         Dim sw As New System.IO.StreamWriter("./profile/" & cmbprofile.SelectedItem & "/data.txt", False,
@@ -12349,10 +12409,61 @@ Public Class Mainwindow
     End Sub
 
 
+
     Private Sub cmbprofile_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbprofile.SelectedIndexChanged
 
         'コンボボックス読み込み3■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
         If System.IO.File.Exists("./profile/" & cmbprofile.SelectedItem & "/data.txt") Then
+
+            '■設定、表に変更がある場合、確認メッセージを表示（起動時を除く）。★
+            If ASH_state = 0 Then
+                'チェックしない
+
+            ElseIf ASH_state = 1 Then
+
+                Createarrayprofile()  'arrayprofile_saveに現在の設定を書き込む
+
+                Dim Setting_changeTF As Integer = 0
+
+                For i = 0 To 128
+                    If Not arrayprofile_before(i) = arrayprofile_save(i) Then
+                        Setting_changeTF = 1
+
+                    End If
+
+                Next
+
+                If Setting_changeTF = 1 Or DGtable_changeTF = 1 Then
+                    'メッセージボックスを表示する 
+                    Dim result As DialogResult = MessageBox.Show("設定/表の内容が変更されています。OKを押すと未保存のままプロファイルが変更されます。",
+                                                 "質問",
+                                                 MessageBoxButtons.OKCancel,
+                                                 MessageBoxIcon.Exclamation,
+                                                 MessageBoxDefaultButton.Button2)
+
+                    '何が選択されたか調べる 
+                    If result = DialogResult.OK Then
+                        '「はい」が選択された時 
+                        Console.WriteLine("「OK」が選択されました")
+
+
+                    ElseIf result = DialogResult.Cancel Then
+                        '「キャンセル」が選択された時 
+                        Console.WriteLine("「キャンセル」が選択されました")
+                        '一時的にコンボボックスのイベントを無効にする。
+                        RemoveHandler cmbprofile.SelectedIndexChanged, AddressOf cmbprofile_SelectedIndexChanged
+                        cmbprofile.SelectedIndex = numprofile.Value
+                        AddHandler cmbprofile.SelectedIndexChanged, AddressOf cmbprofile_SelectedIndexChanged
+
+                        Exit Sub
+
+                    End If
+
+                End If
+
+            End If
+
+
 
             '■仮想カメラの切断
             If btnconnect_camera.Text = My.Resources.Message.msgc01 Then
@@ -12387,6 +12498,12 @@ Public Class Mainwindow
             st3.Close()              'ファイルを閉じる
 
             cmbprofile.EndUpdate()   'コントロールの描画を再開
+
+            For i = 0 To 128
+                arrayprofile_before(i) = txtloadprofile.Lines(i)
+                Console.WriteLine(arrayprofile_before(i))
+            Next
+
 
             '各パラメーターを読む
             txtpass_csv.Text = txtloadprofile.Lines(1)
@@ -12507,6 +12624,8 @@ Public Class Mainwindow
             numtextwindow_sizey.Value = txtloadprofile.Lines(125)
 
             chkmonitor_sizestate.Checked = txtloadprofile.Lines(128)
+
+
 
 
             Dim parser As TextFieldParser = New TextFieldParser(txtpass_csv.Text, Encoding.GetEncoding("Shift_JIS"))
@@ -12721,7 +12840,15 @@ Public Class Mainwindow
 
             End If
 
+            DGtable_changeTF = 0 'DGTableの変更履歴リセット
+
         End If
+
+
+
+
+
+
     End Sub
 
 
@@ -12872,6 +12999,7 @@ Public Class Mainwindow
             If sameitem = -1 Then
                 cmbprofile.Items.Add(cmbprofile.Text)
             End If
+
             cmbprofile.SelectedItem = cmbprofile.Text
 
 
@@ -12879,8 +13007,8 @@ Public Class Mainwindow
 
 
             txtprofile.Clear()
-            For ii = 0 To arrayprofile.Count - 1
-                txtprofile.AppendText(arrayprofile(ii) & vbCrLf)
+            For ii = 0 To arrayprofile_save.Count - 1
+                txtprofile.AppendText(arrayprofile_save(ii) & vbCrLf)
             Next
 
             Dim sw As New System.IO.StreamWriter("./profile/" & cmbprofile.SelectedItem & "/data.txt", False,
@@ -13827,13 +13955,14 @@ Public Class Mainwindow
 
 
     'Arrayprofileの作成はここ
-    Private arrayprofile(128) As String
+    Private arrayprofile_save(128) As String
+    Private arrayprofile_before(128) As String
 
 
 
     Private Sub Createarrayprofile()
 
-        arrayprofile = New String() {
+        arrayprofile_save = New String() {
 "##########Path##########",
 txtpass_csv.Text,
 txtpass_picturefolder.Text,
@@ -14064,6 +14193,9 @@ CInt(chkmonitor_sizestate.Checked)
     Private Sub DeleteAddTemplateImageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteAddTemplateImageToolStripMenuItem.Click
 
         '■プロファイルのバックアップを作成
+        '■ASH_stateを0にして上書き確認を消す
+        ASH_state = 0
+
         Dim temp_profilename As String = cmbprofile.Text
 
         If Not cmbprofile.FindStringExact(cmbprofile.SelectedItem & "_backup") = -1 Then
@@ -14085,12 +14217,17 @@ CInt(chkmonitor_sizestate.Checked)
 
         Del_Addimagewindow.Show()
 
+        ASH_state = 1
+
 
     End Sub
 
     Private Sub SortTemplateImageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SortTemplateImageToolStripMenuItem.Click
 
         '■プロファイルのバックアップを作成
+        'ASH_Stateを0にして上書きチェック回避
+        ASH_state = 0
+
         Dim temp_profilename As String = cmbprofile.Text
 
         If Not cmbprofile.FindStringExact(cmbprofile.SelectedItem & "_backup") = -1 Then
@@ -14112,53 +14249,68 @@ CInt(chkmonitor_sizestate.Checked)
 
         Sortimagewindow.Show()
 
+        ASH_state = 1
+
 
     End Sub
 
 
-    Private Sub btncheckupdate_Click(sender As Object, e As EventArgs) Handles btncheckupdate.Click
+    Private Sub checkupdate()
 
-        '■最新情報を受け取る
-        Dim wc1 As WebClient = New WebClient()
-        Dim st1 As Stream = wc1.OpenRead("https://mus.frailleaves.com/ash_update.html")
+        'ネットワークに接続されているか調べる★
+        If System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable() Then
+            Console.WriteLine("ネットワークに接続されています。")
 
-        Dim enc1 As Encoding = Encoding.GetEncoding("Shift_JIS")
-        Dim sr1 As StreamReader = New StreamReader(st1, enc1)
-        Dim html As String = sr1.ReadToEnd()
-        sr1.Close()
-        st1.Close()
+            Try
+                '■最新情報を受け取る
+                Dim wc1 As WebClient = New WebClient()
+                Dim st1 As Stream = wc1.OpenRead("https://mus.frailleaves.com/ash_update.html")
 
-
-        '■ページの内容を取得♥
-        Try
-
-            Dim s1 As String = html
-            Dim lefturl As String, righturl As String
-            Dim filename As String
-
-            filename = html
-            lefturl = InStr(filename, "AutosplitterUpdatestart<br>") + 22  'Mid(filename, InStr(filename, "<url>") + 5)  '拡張子を返します
-
-            Dim s2 As String = "" & filename.Substring(lefturl) ', righturl - lefturl - 1) & ""  '4文字目から3文字を取得する
-
-            If s2.Contains("AutosplitterUpdateend") = True Then
-
-                righturl = InStr(filename, "AutosplitterUpdateend")
-                s2 = filename.Substring(lefturl, righturl - lefturl - 1) & ""  '4文字目から3文字を取得する
+                Dim enc1 As Encoding = Encoding.GetEncoding("Shift_JIS")
+                Dim sr1 As StreamReader = New StreamReader(st1, enc1)
+                Dim html As String = sr1.ReadToEnd()
+                sr1.Close()
+                st1.Close()
 
 
-            End If
+                '■ページの内容を取得♥
 
-            Dim s3 As String = s2.Replace("<br>", "")
 
-            lblnewestver.Text = "Newest: " & s3
+                Dim s1 As String = html
+                Dim lefturl As String, righturl As String
+                Dim filename As String
 
-        Catch ex As Exception
+                filename = html
+                lefturl = InStr(filename, "AutosplitterUpdatestart<br>") + 22  'Mid(filename, InStr(filename, "<url>") + 5)  '拡張子を返します
 
-            Console.WriteLine("インターネットに接続されていないようです。")
-            rtxtlog.AppendText(Now & " " & "インターネットに接続されていないようです。" & vbCrLf & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
+                Dim s2 As String = "" & filename.Substring(lefturl) ', righturl - lefturl - 1) & ""  '4文字目から3文字を取得する
 
-        End Try
+                If s2.Contains("AutosplitterUpdateend") = True Then
+
+                    righturl = InStr(filename, "AutosplitterUpdateend")
+                    s2 = filename.Substring(lefturl, righturl - lefturl - 1) & ""  '4文字目から3文字を取得する
+
+
+                End If
+
+                Dim s3 As String = s2.Replace("<br>", "")
+
+                lblnewestver.Text = "Newest: " & s3
+
+                If Not lblversion.Text = lblnewestver.Text Then
+                    MessageBox.Show(s3 & " is available.")
+                End If
+
+            Catch ex As Exception
+
+                Console.WriteLine("インターネットに接続されていないようです。")
+                rtxtlog.AppendText(Now & " " & "インターネットに接続されていないようです。" & vbCrLf & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
+
+            End Try
+
+        Else
+            Console.WriteLine("ネットワークに接続されていません。")
+        End If
 
     End Sub
 
