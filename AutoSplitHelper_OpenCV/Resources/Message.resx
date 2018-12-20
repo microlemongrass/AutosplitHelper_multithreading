@@ -342,4 +342,10 @@
   <data name="msge03" xml:space="preserve">
     <value>Created a profile backup.</value>
   </data>
+  <data name="msge04" xml:space="preserve">
+    <value>The key code is blank. Please set Hotkey again and try monitoring.</value>
+  </data>
+  <data name="msge05" xml:space="preserve">
+    <value>Unknown error. Please check log [Help -&gt; Information] and tell me.</value>
+  </data>
 </root>

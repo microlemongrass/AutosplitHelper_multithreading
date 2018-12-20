@@ -342,4 +342,10 @@
   <data name="msge03" xml:space="preserve">
     <value>プロファイルのバックアップを作成しました。</value>
   </data>
+  <data name="msge04" xml:space="preserve">
+    <value>キーコードが空欄になっています。Hotkeyの設定をし直して再度お試しください。</value>
+  </data>
+  <data name="msge05" xml:space="preserve">
+    <value>不明なエラー。設定→インフォメーションのログの内容を確認し、製作者にお知らせください。</value>
+  </data>
 </root>

@@ -15,11 +15,10 @@ Imports System.Net
 Public Class Mainwindow
 
     '■API
-
-    '■キー入力を受け取る
+    'キー入力を受け取る
     Private Declare Function GetKeyPress Lib "user32" Alias "GetAsyncKeyState" (ByVal key As Integer) As Integer
 
-    '■ウィンドウタイトルからハンドル値を取得するためのAPI
+    'ウィンドウタイトルからハンドル値を取得するためのAPI
     Declare Function EnumWindows Lib "User32.dll" _
         (ByVal Proc As EnumWinProc, ByVal lParam As Integer) As Boolean
 
@@ -51,17 +50,17 @@ Public Class Mainwindow
          ByVal lpszClass As String, ByVal lpszWindow As String) As Integer
 
 
-    '■正確な時間を計るためのAPI
+    '正確な時間を計るためのAPI
     Declare Function timeGetTime Lib "winmm.dll" Alias "timeGetTime" () As Long
 
-    '■変数msecを倍精度浮動小数点型で宣言(小数点も入れることが出来る）
+    '変数msecを倍精度浮動小数点型で宣言(小数点も入れることが出来る）
     Dim msec As Double
     Dim msec_load As Double
     Dim msec_pause As Double
 
 
 
-    '■ウィンドウタイトル取得用のAPI
+    'ウィンドウタイトル取得用のAPI
     <DllImport("user32.dll", CharSet:=CharSet.Auto, SetLastError:=True)>
     Private Shared Function GetWindowText(hWnd As IntPtr,
         lpString As StringBuilder, nMaxCount As Integer) As Integer
@@ -72,14 +71,14 @@ Public Class Mainwindow
     End Function
 
 
-    '■ウィンドウ位置を指定するためのAPI
+    'ウィンドウ位置を指定するためのAPI
     Private Declare Function MoveWindow Lib "user32" Alias "MoveWindow" _
     (ByVal hwnd As IntPtr, ByVal x As Integer, ByVal y As Integer,
     ByVal nWidth As Integer, ByVal nHeight As Integer,
     ByVal bRepaint As Integer) As Integer
 
 
-    '■GetWindowRect（Window の位置等を取得）の宣言
+    'GetWindowRect（Window の位置等を取得）の宣言
     <DllImport("user32.dll", CharSet:=CharSet.Auto)>
     Private Shared Function GetWindowRect(ByVal hWnd As IntPtr, ByRef lpRect As RECT) As Boolean
     End Function
@@ -94,7 +93,7 @@ Public Class Mainwindow
         lpString As String) As Integer
     End Function
 
-    '■RECT 構造体
+    'RECT 構造体
     Private Structure RECT
         Public Left As Integer
         Public Top As Integer
@@ -114,10 +113,11 @@ Public Class Mainwindow
     '■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 
     Private pipeServer As System.IO.Pipes.NamedPipeClientStream = New System.IO.Pipes.NamedPipeClientStream("LiveSplit") 'Livesplitの名前付きパイプを利用する。
-    Private livesplit_state As String = ""
+    Private livesplit_state As String = "" 'LiveSplitが起動されているかどうかを表示
     Private ASH_state As Integer = 0 '0:起動時、1:起動時以外★
 
-    Friend messagebox_name As String = "Autosplit Helper"
+    Friend messagebox_name As String = "Autosplit Helper" 'メッセージボックスのタイトル用
+
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -6304,339 +6304,369 @@ Public Class Mainwindow
 
 
 
-    '■監視の処理■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+    '■監視の処理■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+    '■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
     Private Sub btnstartopencv_Click(sender As Object, e As EventArgs) Handles btnstartopencv.Click
 
-
-        '♥
-        '■ビデオプレイヤーを表示するかどうか
-        If chkshowvideo.Checked = True And Videoplayer.Visible = False Then
-            'MessageBox.Show(My.Resources.Message.msg44) 'ビデオプレイヤーが表示されていません。
-            Videoplayer.Show()
-
-        End If
-
-        If chkshow_text.Checked = True And Textwindow.Visible = False Then
-            'MessageBox.Show("テキストビューワーが表示されていません。") 'ビデオプレイヤーが表示されていません。
-            Textwindow.Show()
-
-
-        End If
+        Try
 
 
 
-
-
-
-
-        '■ウィンドウサイズの調整
-        Me.Size = New Drawing.Point(800, 600)
-        DGtable.Size = New Drawing.Point(785, 146)
-
-
-        '■画像フォルダ選択がなされているかどうか
-        If txtpass_picturefolder.Text = "" Or txtpass_picturefolder.Text = "フォルダを選択して下さい…" Then '画像フォルダは選択ができた時点で中身は大丈夫…なはず
-            MessageBox.Show(My.Resources.Message.msg5, messagebox_name,
-                    MessageBoxButtons.OK) '"画像フォルダ選択がされていません。"
-
-            Exit Sub
-
-        End If
-
-
-        '■画像（1.bmp、Reset.bmp）が存在するかどうか。いずれの場合も1.bmpの存在確認は必要。
-
-        If chkcv_resetonoff.Checked = False Then '→1.bmpがあれば良い。
-
-            If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\1.bmp") Then
-
-                MessageBox.Show(My.Resources.Message.msg22, messagebox_name) '"1.bmpが存在しません。"
+            '■画像フォルダ選択がなされているかどうか
+            If txtpass_picturefolder.Text = "" Or txtpass_picturefolder.Text = "フォルダを選択して下さい…" Then '画像フォルダは選択ができた時点で中身は大丈夫…なはず
+                MessageBox.Show(My.Resources.Message.msg5, messagebox_name,
+                        MessageBoxButtons.OK) '"画像フォルダ選択がされていません。"
 
                 Exit Sub
 
             End If
 
-        ElseIf chkcv_resetonoff.Checked = True Then '→1.bmp、reset.bmpがあれば良い。
+            '■画像（1.bmp、Reset.bmp）が存在するかどうか。いずれの場合も1.bmpの存在確認は必要。
 
-            If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\1.bmp") Or Not System.IO.File.Exists(txtpass_picturefolder.Text & "\reset.bmp") Then
+            If chkcv_resetonoff.Checked = False Then '→1.bmpがあれば良い。
 
-                MessageBox.Show(My.Resources.Message.msg23, messagebox_name) '"1.bmpもしくはreset.bmpが存在しません。"
+                If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\1.bmp") Then
 
-                Exit Sub
-
-            End If
-
-        End If
-
-        '■Load remover用の画像があるかどうか
-        If chkcv_loadremover.Checked = True Then
-
-            If chkload1.Checked = True Then
-
-                If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\loading1.bmp") Then
-
-                    MessageBox.Show(My.Resources.Message.msg40, messagebox_name) '"loading.bmpが存在しません。"
-
-                    Exit Sub
-
-                End If
-
-            ElseIf chkload2.Checked = True Then
-
-                If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\loading2.bmp") Then
-
-                    MessageBox.Show(My.Resources.Message.msg40, messagebox_name) '"loading.bmpが存在しません。"
-
-                    Exit Sub
-
-                End If
-
-            ElseIf chkload3.Checked = True Then
-
-                If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\loading3.bmp") Then
-
-                    MessageBox.Show(My.Resources.Message.msg40, messagebox_name) '"loading.bmpが存在しません。"
-
-                    Exit Sub
-
-                End If
-
-            ElseIf chkload4.Checked = True Then
-
-                If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\loading4.bmp") Then
-
-                    MessageBox.Show(My.Resources.Message.msg40, messagebox_name) '"loading.bmpが存在しません。"
-
-                    Exit Sub
-
-                End If
-
-            ElseIf chkload5.Checked = True Then
-
-                If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\loading5.bmp") Then
-
-                    MessageBox.Show(My.Resources.Message.msg40, messagebox_name) '"loading.bmpが存在しません。"
-
-                    Exit Sub
-
-                End If
-
-            ElseIf chkload6.Checked = True Then
-
-                If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\loading6.bmp") Then
-
-                    MessageBox.Show(My.Resources.Message.msg40, messagebox_name) '"loading.bmpが存在しません。"
-
-                    Exit Sub
-
-                End If
-
-            ElseIf chkload7.Checked = True Then
-
-                If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\loading7.bmp") Then
-
-                    MessageBox.Show(My.Resources.Message.msg40, messagebox_name) '"loading.bmpが存在しません。"
-
-                    Exit Sub
-
-                End If
-
-            ElseIf chkload8.Checked = True Then
-
-                If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\loading8.bmp") Then
-
-                    MessageBox.Show(My.Resources.Message.msg40, messagebox_name) '"loading.bmpが存在しません。"
-
-                    Exit Sub
-
-                End If
-
-            ElseIf chkload9.Checked = True Then
-
-                If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\loading9.bmp") Then
-
-                    MessageBox.Show(My.Resources.Message.msg40, messagebox_name) '"loading.bmpが存在しません。"
-
-                    Exit Sub
-
-                End If
-
-            ElseIf chkload10.Checked = True Then
-
-                If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\loading10.bmp") Then
-
-                    MessageBox.Show(My.Resources.Message.msg40, messagebox_name) '"loading.bmpが存在しません。"
+                    MessageBox.Show(My.Resources.Message.msg22, messagebox_name) '"1.bmpが存在しません。"
 
                     Exit Sub
 
                 End If
 
 
+            ElseIf chkcv_resetonoff.Checked = True Then '→1.bmp、reset.bmpがあれば良い。
+
+                If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\1.bmp") Or
+                   Not System.IO.File.Exists(txtpass_picturefolder.Text & "\reset.bmp") Then
+
+                    MessageBox.Show(My.Resources.Message.msg23, messagebox_name) '"1.bmpもしくはreset.bmpが存在しません。"
+
+                    Exit Sub
+
+                End If
 
             End If
 
 
-        End If
+            '■Load remover用の画像があるかどうかチェック
+            If chkcv_loadremover.Checked = True Then
+
+                If chkload1.Checked = True Then
+
+                    If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\loading1.bmp") Then
+
+                        MessageBox.Show(My.Resources.Message.msg40, messagebox_name) '"loading.bmpが存在しません。"
+
+                        Exit Sub
+
+                    End If
+
+                ElseIf chkload2.Checked = True Then
+
+                    If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\loading2.bmp") Then
+
+                        MessageBox.Show(My.Resources.Message.msg40, messagebox_name) '"loading.bmpが存在しません。"
+
+                        Exit Sub
+
+                    End If
+
+                ElseIf chkload3.Checked = True Then
+
+                    If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\loading3.bmp") Then
+
+                        MessageBox.Show(My.Resources.Message.msg40, messagebox_name) '"loading.bmpが存在しません。"
+
+                        Exit Sub
+
+                    End If
+
+                ElseIf chkload4.Checked = True Then
+
+                    If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\loading4.bmp") Then
+
+                        MessageBox.Show(My.Resources.Message.msg40, messagebox_name) '"loading.bmpが存在しません。"
+
+                        Exit Sub
+
+                    End If
+
+                ElseIf chkload5.Checked = True Then
+
+                    If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\loading5.bmp") Then
+
+                        MessageBox.Show(My.Resources.Message.msg40, messagebox_name) '"loading.bmpが存在しません。"
+
+                        Exit Sub
+
+                    End If
+
+                ElseIf chkload6.Checked = True Then
+
+                    If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\loading6.bmp") Then
+
+                        MessageBox.Show(My.Resources.Message.msg40, messagebox_name) '"loading.bmpが存在しません。"
+
+                        Exit Sub
+
+                    End If
+
+                ElseIf chkload7.Checked = True Then
+
+                    If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\loading7.bmp") Then
+
+                        MessageBox.Show(My.Resources.Message.msg40, messagebox_name) '"loading.bmpが存在しません。"
+
+                        Exit Sub
+
+                    End If
+
+                ElseIf chkload8.Checked = True Then
+
+                    If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\loading8.bmp") Then
+
+                        MessageBox.Show(My.Resources.Message.msg40, messagebox_name) '"loading.bmpが存在しません。"
+
+                        Exit Sub
+
+                    End If
+
+                ElseIf chkload9.Checked = True Then
+
+                    If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\loading9.bmp") Then
+
+                        MessageBox.Show(My.Resources.Message.msg40, messagebox_name) '"loading.bmpが存在しません。"
+
+                        Exit Sub
+
+                    End If
+
+                ElseIf chkload10.Checked = True Then
+
+                    If Not System.IO.File.Exists(txtpass_picturefolder.Text & "\loading10.bmp") Then
+
+                        MessageBox.Show(My.Resources.Message.msg40, messagebox_name) '"loading.bmpが存在しません。"
+
+                        Exit Sub
+
+                    End If
 
 
-        '■seektimeに整数が入っているか★★書く場所がおかしい
-        Dim TableRowsCount As Integer = DGtable.Rows.Count - 1
 
-        For i = 0 To TableRowsCount - 1
-
-            If Validation.IsNumeric(CStr(DGtable(seektime.Index, i).Value)) Then
-                '数字が入っているので問題ない
-
-            Else
-                '数字以外が入っている
-                MessageBox.Show(My.Resources.Message.msg45, messagebox_name) 'Time列に数字以外の文字が入っています。
-
-
-                Exit Sub
+                End If
 
 
             End If
 
 
-        Next
+
+            '■ビデオプレイヤーを表示する設定＋表示されていない場合、表示する。
+            If chkshowvideo.Checked = True And Videoplayer.Visible = False Then
+                Console.WriteLine("ビデオプレイヤーが表示されていない")
+                Videoplayer.Show()
+
+            End If
+
+            '■テキストビューワーを表示する設定＋表示されていない場合、表示する。
+            If chkshow_text.Checked = True And Textwindow.Visible = False Then
+                Console.WriteLine("テキストビューワーが表示されていない")
+                Textwindow.Show()
+
+            End If
 
 
 
-        Dim TableCount As Integer = DGtable.Rows.Count - 1
 
-        '■RTFファイル数　画像ファイル数と表データの数に齟齬がないか
 
-        Dim FileCount_rtfonly As Integer
 
-        If chkshow_text.Checked = True Then
-            Dim di_text As New System.IO.DirectoryInfo(txtpass_rtf.Text)
-            Dim files_text As System.IO.FileInfo() = di_text.GetFiles("*.rtf", System.IO.SearchOption.TopDirectoryOnly)
 
-            For Each f As System.IO.FileInfo In files_text
-                FileCount_rtfonly += 1
+            '■ウィンドウサイズの調整
+            Me.Size = New Drawing.Point(800, 600)
+            DGtable.Size = New Drawing.Point(785, 146)
+
+
+
+
+
+            '■seektimeに整数が入っているか★★書く場所がおかしい
+            Dim TableRowsCount As Integer = DGtable.Rows.Count - 1
+
+            For i = 0 To TableRowsCount - 1
+
+                If Validation.IsNumeric(CStr(DGtable(seektime.Index, i).Value)) Then
+                    '数字が入っているので問題ない
+
+                Else
+                    '数字以外が入っている
+                    MessageBox.Show(My.Resources.Message.msg45, messagebox_name) 'Time列に数字以外の文字が入っています。
+
+                    Exit Sub
+
+
+                End If
+
+
             Next
 
-            If Not FileCount_rtfonly = TableCount - 1 Then
-                MessageBox.Show(My.Resources.Message.msgd01, messagebox_name) '"Rtfファイルが存在しないか、数がテンプレート数と一致していません。"
+
+
+            Dim TableCount As Integer = DGtable.Rows.Count - 1
+
+
+            '■Rtfファイル数と表データの数に齟齬がないか
+            Dim FileCount_rtfonly As Integer
+
+            If chkshow_text.Checked = True Then
+                Dim di_text As New System.IO.DirectoryInfo(txtpass_rtf.Text)
+                Dim files_text As System.IO.FileInfo() = di_text.GetFiles("*.rtf", System.IO.SearchOption.TopDirectoryOnly)
+
+                For Each f As System.IO.FileInfo In files_text
+                    FileCount_rtfonly += 1
+                Next
+
+                If Not FileCount_rtfonly = TableCount - 1 Then
+                    MessageBox.Show(My.Resources.Message.msgd01, messagebox_name) '"Rtfファイルが存在しないか、数がテンプレート数と一致していません。"
+
+                    Exit Sub
+                End If
+
+
+            End If
+
+
+
+            '■画像ファイル数と表データの数に齟齬がないか。
+            '　全てのbmpファイル数をカウントし、loading、resetを除外している。
+            Dim di As New System.IO.DirectoryInfo(txtpass_picturefolder.Text)
+            Dim files As System.IO.FileInfo() = di.GetFiles("*.bmp", System.IO.SearchOption.TopDirectoryOnly)
+            Dim FileCount_bmponly As Integer
+
+            For Each f As System.IO.FileInfo In files
+                FileCount_bmponly += 1
+            Next
+
+
+            If System.IO.File.Exists(txtpass_picturefolder.Text & "\reset.bmp") Then
+                FileCount_bmponly -= 1
+            End If
+
+            If System.IO.File.Exists(txtpass_picturefolder.Text & "\loading1.bmp") Then
+                FileCount_bmponly -= 1
+            End If
+
+            If System.IO.File.Exists(txtpass_picturefolder.Text & "\loading2.bmp") Then
+                FileCount_bmponly -= 1
+            End If
+
+            If System.IO.File.Exists(txtpass_picturefolder.Text & "\loading3.bmp") Then
+                FileCount_bmponly -= 1
+            End If
+
+            If System.IO.File.Exists(txtpass_picturefolder.Text & "\loading4.bmp") Then
+                FileCount_bmponly -= 1
+            End If
+
+            If System.IO.File.Exists(txtpass_picturefolder.Text & "\loading5.bmp") Then
+                FileCount_bmponly -= 1
+            End If
+
+            If System.IO.File.Exists(txtpass_picturefolder.Text & "\loading6.bmp") Then
+                FileCount_bmponly -= 1
+            End If
+
+            If System.IO.File.Exists(txtpass_picturefolder.Text & "\loading7.bmp") Then
+                FileCount_bmponly -= 1
+            End If
+
+            If System.IO.File.Exists(txtpass_picturefolder.Text & "\loading8.bmp") Then
+                FileCount_bmponly -= 1
+            End If
+
+            If System.IO.File.Exists(txtpass_picturefolder.Text & "\loading9.bmp") Then
+                FileCount_bmponly -= 1
+            End If
+
+            If System.IO.File.Exists(txtpass_picturefolder.Text & "\loading10.bmp") Then
+                FileCount_bmponly -= 1
+            End If
+
+            '→FileCount_bmponlyは、全てのbmpファイルからreset/loadingxx.bmpを取り除いた数になる。
+
+
+            'ファイル数: FileCount
+            '除リセット、ロード: FileCount_numberonly
+            '行数: TableCount
+
+            If chkcv_loop.Checked = True Then 'ファイル数を考慮する必要なし。
+
+            ElseIf chkcv_loop.Checked = False Then
+
+                If chkcv_resetonoff.Checked = False Then
+
+                    If Not FileCount_bmponly = TableCount - 1 Then
+                        MessageBox.Show(My.Resources.Message.msg6 & vbCrLf &
+                                       "Table line number(s): " & TableCount - 1 & " (exclude Reset line)" & vbCrLf &
+                                       "Bmpfile number(s): " & FileCount_bmponly & vbCrLf &
+                                       "Textfile number(s): " & FileCount_rtfonly,
+                                        "AutoSplit Helper by Image", MessageBoxButtons.OK) '"画像ファイル数と表のデータ数が一致しません。"
+
+                        Exit Sub
+
+                    End If
+
+                ElseIf chkcv_resetonoff.Checked = True Then
+
+                    FileCount_bmponly += 1 'resetの分を補填
+
+                    If Not FileCount_bmponly = TableCount Then
+                        MessageBox.Show(My.Resources.Message.msg6 & vbCrLf &
+                                       "Table line number(s): " & TableCount & " (include Reset line)" & vbCrLf &
+                                       "Bmpfile number(s): " & FileCount_bmponly & vbCrLf &
+                                       "Textfile number(s): " & FileCount_rtfonly,
+                                        "AutoSplit Helper by Image", MessageBoxButtons.OK) '"画像ファイル数と表のデータ数が一致しません。"
+
+                        Exit Sub
+
+                    End If
+
+                End If
+
+
+
+
+            End If
+
+
+            '■適切な解像度を入力しているか確認
+            If (numcv_sizex.Value Mod 16 = 0 And numcv_sizey.Value Mod 9 = 0) Or (numcv_sizex.Value Mod 4 = 0 And numcv_sizey.Value Mod 3 = 0) Then
+
+            Else
+
+                MessageBox.Show(My.Resources.Message.msg52, messagebox_name) 'サイズは16:9または4:3の比で入力してください。
 
                 Exit Sub
+
             End If
 
 
-        End If
+            '■キーコードが空欄になっていないか確認
+            If lblkeysforsend.Text = "" Or lblkeysforsend_reset.Text = "" Or lblkeysforpause.Text = "" Or
+               lblkeysforresume.Text = "" Or lblkeysforundo.Text = "" Or lblkeysforskip.Text = "" Then
 
+                MessageBox.Show(My.Resources.Message.msge04, messagebox_name)
 
+                Exit Sub 'キーコードが空欄になっています。Hotkeyの設定をし直して再度お試しください。
 
-
-
-        Dim di As New System.IO.DirectoryInfo(txtpass_picturefolder.Text)
-        Dim files As System.IO.FileInfo() = di.GetFiles("*.bmp", System.IO.SearchOption.TopDirectoryOnly)
-        Dim FileCount_bmponly As Integer
-
-        For Each f As System.IO.FileInfo In files
-            FileCount_bmponly += 1
-        Next
-
-
-
-        If System.IO.File.Exists(txtpass_picturefolder.Text & "\reset.bmp") Then
-            FileCount_bmponly -= 1
-        End If
-
-        If System.IO.File.Exists(txtpass_picturefolder.Text & "\loading1.bmp") Then
-            FileCount_bmponly -= 1
-        End If
-
-        If System.IO.File.Exists(txtpass_picturefolder.Text & "\loading2.bmp") Then
-            FileCount_bmponly -= 1
-        End If
-
-        If System.IO.File.Exists(txtpass_picturefolder.Text & "\loading3.bmp") Then
-            FileCount_bmponly -= 1
-        End If
-
-        If System.IO.File.Exists(txtpass_picturefolder.Text & "\loading4.bmp") Then
-            FileCount_bmponly -= 1
-        End If
-
-        If System.IO.File.Exists(txtpass_picturefolder.Text & "\loading5.bmp") Then
-            FileCount_bmponly -= 1
-        End If
-
-        If System.IO.File.Exists(txtpass_picturefolder.Text & "\loading6.bmp") Then
-            FileCount_bmponly -= 1
-        End If
-
-        If System.IO.File.Exists(txtpass_picturefolder.Text & "\loading7.bmp") Then
-            FileCount_bmponly -= 1
-        End If
-
-        If System.IO.File.Exists(txtpass_picturefolder.Text & "\loading8.bmp") Then
-            FileCount_bmponly -= 1
-        End If
-
-        If System.IO.File.Exists(txtpass_picturefolder.Text & "\loading9.bmp") Then
-            FileCount_bmponly -= 1
-        End If
-
-        If System.IO.File.Exists(txtpass_picturefolder.Text & "\loading10.bmp") Then
-            FileCount_bmponly -= 1
-        End If
-
-        '→FileCount_bmponlyは、全てのbmpファイルからreset/loadingxx.bmpを取り除いた数になる。
-
-
-        'MessageBox.Show("ファイル数:" & FileCount & vbCrLf & "除リセット、ロード:" & FileCount_numberonly & vbCrLf & "行数:" & TableCount)
-
-        If chkcv_loop.Checked = True Then 'ファイル数を考慮する必要なし。
-
-        ElseIf chkcv_loop.Checked = False Then
-
-            If chkcv_resetonoff.Checked = False Then
-
-                If Not FileCount_bmponly = TableCount - 1 Then
-                    MessageBox.Show(My.Resources.Message.msg6 & vbCrLf &
-                                   "Table line number(s): " & TableCount - 1 & " (exclude Reset line)" & vbCrLf &
-                                   "Bmpfile number(s): " & FileCount_bmponly & vbCrLf &
-                                   "Textfile number(s): " & FileCount_rtfonly,
-                                    "AutoSplit Helper by Image", MessageBoxButtons.OK) '"画像ファイル数と表のデータ数が一致しません。"
-
-                    Exit Sub
-
-                End If
-
-            ElseIf chkcv_resetonoff.Checked = True Then
-
-                FileCount_bmponly += 1 'resetの分を補填
-
-                If Not FileCount_bmponly = TableCount Then
-                    MessageBox.Show(My.Resources.Message.msg6 & vbCrLf &
-                                   "Table line number(s): " & TableCount & " (include Reset line)" & vbCrLf &
-                                   "Bmpfile number(s): " & FileCount_bmponly & vbCrLf &
-                                   "Textfile number(s): " & FileCount_rtfonly,
-                                    "AutoSplit Helper by Image", MessageBoxButtons.OK) '"画像ファイル数と表のデータ数が一致しません。"
-
-                    Exit Sub
-
-                End If
 
             End If
 
 
 
 
-        End If
+            '■↑のExit Subを切り抜けたので監視処理開始■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 
-
-
-
-
-
-        '■適切な解像度を入力しているか確認
-        If (numcv_sizex.Value Mod 16 = 0 And numcv_sizey.Value Mod 9 = 0) Or (numcv_sizex.Value Mod 4 = 0 And numcv_sizey.Value Mod 3 = 0) Then
-
-            '■監視処理開始
-
+            '■一時的にDGTableのイベントを無効にする。監視終了時に有効にする。
+            RemoveHandler DGtable.CellValueChanged, AddressOf DGtable_CellValueChanged
 
 
 
@@ -6683,6 +6713,8 @@ Public Class Mainwindow
 
             End If
 
+
+            '■タイマーのインターバルを設定
             cvtimer.Interval = New TimeSpan(0, 0, 0, 0, numcv_interval.Text - 1)
             cvsleep_split.Interval = New TimeSpan(0, 0, 0, 0, 15)
             cvtimer_change.Interval = New TimeSpan(0, 0, 0, 0, numcv_interval.Text)
@@ -6776,20 +6808,17 @@ Public Class Mainwindow
             lblloopcount.Text = numnowloop.Value & "/" & numloopcount.Value
 
 
-
             txtrecord_load.Text = 0.ToString("00:00.00")
             txtrecord_load_total.Text = 0.ToString("00:00.00")
 
 
 
-            'Try
-
             '■プレビュー画面の更新
-            'NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
-            capturecv.Read(frame)
+            capturecv.Read(frame) 'NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
 
             picipl_cap.ImageIpl = frame
             imgex = picipl_cap.ImageIpl
+
 
             '■画像読み込み用■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 
@@ -6865,10 +6894,10 @@ Public Class Mainwindow
                 chknow_reset.Checked = True
 
 
-            ElseIf chkcv_resetonoff.Checked = False Then '適当な画像を読み込む。
+            ElseIf chkcv_resetonoff.Checked = False Then '適当な画像(1.bmp)を読み込む。
 
                 '■最初の画像の読み込み
-                Dim aa_reset As String = txtpass_picturefolder.Text & "\" & 2 & ".bmp"
+                Dim aa_reset As String = txtpass_picturefolder.Text & "\" & 1 & ".bmp"
                 tplex_r = Cv2.ImRead(aa_reset, ImreadModes.Color)
 
                 '■リセット画像の読み込み（表示用）
@@ -7073,86 +7102,15 @@ Public Class Mainwindow
 
                 End If
 
+                cmbloadno.SelectedIndex = 0
 
 
 
             ElseIf chkcv_loadremover.Checked = False Then
-
+                'ローディング関連のもの全て無効にする（停止時に有効にするように）
                 chknow_load.Checked = False
 
-
-
-                '■最初の画像の読み込み
-                Dim aa_load1 As String = txtpass_picturefolder.Text & "\" & 1 & ".bmp"
-                tplex_load1 = Cv2.ImRead(aa_load1, ImreadModes.Color)
-
-                '■ローディング画像の読み込み（表示用）
-                Using fs As FileStream = New FileStream(aa_load1, FileMode.Open, FileAccess.Read)
-                    piccv_load.Image = Image.FromStream(fs)
-                End Using
-
-
-
-                '■最初の画像の読み込み
-                Dim aa_load2 As String = txtpass_picturefolder.Text & "\" & 1 & ".bmp"
-                tplex_load2 = Cv2.ImRead(aa_load2, ImreadModes.Color)
-
-
-
-
-                '■最初の画像の読み込み
-                Dim aa_load3 As String = txtpass_picturefolder.Text & "\" & 1 & ".bmp"
-                tplex_load3 = Cv2.ImRead(aa_load3, ImreadModes.Color)
-
-
-
-
-                '■最初の画像の読み込み
-                Dim aa_load4 As String = txtpass_picturefolder.Text & "\" & 1 & ".bmp"
-                tplex_load4 = Cv2.ImRead(aa_load4, ImreadModes.Color)
-
-
-
-
-
-                '■最初の画像の読み込み
-                Dim aa_load5 As String = txtpass_picturefolder.Text & "\" & 1 & ".bmp"
-                tplex_load5 = Cv2.ImRead(aa_load5, ImreadModes.Color)
-
-
-
-
-                '■最初の画像の読み込み
-                Dim aa_load6 As String = txtpass_picturefolder.Text & "\" & 1 & ".bmp"
-                tplex_load6 = Cv2.ImRead(aa_load6, ImreadModes.Color)
-
-
-
-
-                '■最初の画像の読み込み
-                Dim aa_load7 As String = txtpass_picturefolder.Text & "\" & 1 & ".bmp"
-                tplex_load7 = Cv2.ImRead(aa_load7, ImreadModes.Color)
-
-
-
-
-                '■最初の画像の読み込み
-                Dim aa_load8 As String = txtpass_picturefolder.Text & "\" & 1 & ".bmp"
-                tplex_load8 = Cv2.ImRead(aa_load8, ImreadModes.Color)
-
-
-
-
-                '■最初の画像の読み込み
-                Dim aa_load9 As String = txtpass_picturefolder.Text & "\" & 1 & ".bmp"
-                tplex_load9 = Cv2.ImRead(aa_load9, ImreadModes.Color)
-
-
-
-
-                '■最初の画像の読み込み
-                Dim aa_load10 As String = txtpass_picturefolder.Text & "\" & 1 & ".bmp"
-                tplex_load10 = Cv2.ImRead(aa_load10, ImreadModes.Color)
+                cmbloadno.Enabled = False
 
 
             End If
@@ -7181,6 +7139,7 @@ Public Class Mainwindow
 
             End If
 
+            '■Load removerを始める。
             If chkcv_loadremover.Checked = True Then
 
                 If chkload1.Checked = True Then
@@ -7288,7 +7247,6 @@ Public Class Mainwindow
             End If
 
 
-            cmbloadno.SelectedIndex = 0
 
 
 
@@ -7300,25 +7258,23 @@ Public Class Mainwindow
             btnstartopencv.Enabled = False
 
             If chkmonitor_sizestate.Checked = True Then
+
             Else
                 btncv_downsize.PerformClick()
+
             End If
 
-            'Catch ex As Exception
-
-            '    MessageBox.Show("Error")
-
-            'End Try
 
 
+        Catch ex As Exception
+
+            MessageBox.Show(My.Resources.Message.msge05, messagebox_name)
+            rtxtlog.AppendText(Now & " " & My.Resources.Message.msge05 & vbCrLf & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
+            '不明なエラー。設定→インフォメーションのログの内容を確認し、製作者にお知らせください。
+
+        End Try
 
 
-        Else
-
-            MessageBox.Show(My.Resources.Message.msg52, messagebox_name) 'サイズは16:9または4:3の比で入力してください。
-
-
-        End If
 
         '■表示がバグることがあるのでリフレッシュ
         Me.Refresh()
@@ -7584,11 +7540,10 @@ Public Class Mainwindow
     Private Sub OpenCV_Monitor_Tick(sender As Object, e As EventArgs) Handles cvtimer.Tick
 
         Try
-            '■プレビュー画面の更新
-            'NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
-            capturecv.Read(frame)
+            '■プレビュー画面の更新★
+            capturecv.Read(frame) 'NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
 
-
+            'テンプレートマッチングのみ非同期に行う。チェックが付いているもののみマッチングを行う。
             If async_split_onoff = 1 Then
                 Async_split()
             End If
@@ -7641,7 +7596,7 @@ Public Class Mainwindow
             picipl_cap.ImageIpl = frame
 
 
-            '■Videoplayer_wincapに別タイマーで稼働させている。パフォーマンスが悪いようならこちらに書く★
+            '■Videoplayer_wincapに別タイマーで稼働させている。パフォーマンスが悪いようならこちらに書く★♥
             'Videoplayer_wincap.picVideo.Image = Videoplayer_wincap.bmp
             'Videoplayer_wincap.ltx = Videoplayer.Location.X
             'Videoplayer_wincap.lty = Videoplayer.Location.Y + Videoplayer.lbltitlebar.Height
@@ -7651,6 +7606,7 @@ Public Class Mainwindow
 
             '■テンプレートマッチング（スプリット）
             If chknow_monitor.Checked = True Then
+
                 If async_split_onoff = 1 Then
                     '■テンプレートマッチングの結果を表示
                     If Not maxval_split = 1 Then
@@ -7664,20 +7620,19 @@ Public Class Mainwindow
 
                     '■マッチングされた。小数点以下まで加味。
                     If CDbl(lblcv_maxval.Text) > CDbl(txtcv_ikiti.Text) Then
-                        Dim key As Short = lblkeysforsend.Text
 
                         '一致した場所が指定範囲内にあるかどうか
-
                         If maxloc_split.X < DGtable(ltx.Index, number).Value Or
-                       maxloc_split.X + tplex.Width > DGtable(rbx.Index, number).Value Or
-                       maxloc_split.Y < DGtable(lty.Index, number).Value Or
-                       maxloc_split.Y + tplex.Height > DGtable(rby.Index, number).Value Then
+                           maxloc_split.X + tplex.Width > DGtable(rbx.Index, number).Value Or
+                           maxloc_split.Y < DGtable(lty.Index, number).Value Or
+                           maxloc_split.Y + tplex.Height > DGtable(rby.Index, number).Value Then
 
                             lblcv_maxval.Text = 0
 
                             Exit Sub
 
                         End If
+
                         Console.WriteLine("Match")
                         reflesh_img = 1
                         '■一致した場所に四角を描画
@@ -7976,8 +7931,6 @@ Public Class Mainwindow
                 End If
 
             End If
-
-
 
 
 
@@ -8882,8 +8835,6 @@ Public Class Mainwindow
 
             End If
 
-
-            'Application.DoEvents()'消しても動くなら消したほうが良い。
 
 
         Catch ex As Exception
@@ -10240,8 +10191,8 @@ Public Class Mainwindow
         '追従する場合、ltx,ltyを補正する。
 
 
-        Dim ltx As Integer = maxloc_split.X 'DGtable(posx.Index, number).Value 'txtcv_posx.Text
-        Dim lty As Integer = maxloc_split.Y 'DGtable(posy.Index, number).Value '.Text
+        Dim ltx As Integer = maxloc_split.X 'DGtable(posx.Index, number).Value
+        Dim lty As Integer = maxloc_split.Y 'DGtable(posy.Index, number).Value
         Dim rbx As Integer = tplex.Width 'DGtable(sizex.Index, number).Value
         Dim rby As Integer = tplex.Height 'DGtable(sizey.Index, number).Value
 
@@ -10811,7 +10762,7 @@ Public Class Mainwindow
         async_load9_onoff = 0
         async_load10_onoff = 0
 
-
+        cmbloadno.Enabled = True
 
 
 
@@ -10829,6 +10780,10 @@ Public Class Mainwindow
         btncv_downsize.Text = My.Resources.Message.msg35 '"たたむ"
         Me.Width = 800
         Me.Height = 562
+
+        '■DGTableのイベントを有効にする。
+        AddHandler DGtable.CellValueChanged, AddressOf DGtable_CellValueChanged
+
 
         '■表示がバグることがあるのでリフレッシュ
         Me.Refresh()
@@ -12113,7 +12068,7 @@ Public Class Mainwindow
     '■ウィンドウを閉じる。
     Private Sub btnclosewindow_Click(sender As Object, e As EventArgs) Handles btnclosewindow.Click
 
-        DGtable.AllowUserToAddRows = False
+        DGtable.AllowUserToAddRows = False 'Trueのままだと空白セルと判断される。
 
         Dim rowcount1 As Integer = DGtable.Rows.Count
         Dim errorcount As Integer = 0
@@ -12124,21 +12079,25 @@ Public Class Mainwindow
                 errorcount += 1
 
             End If
+
         Next
 
 
         If errorcount <> 0 Then
             MessageBox.Show(My.Resources.Message.msg14, messagebox_name)
             '"Settingタブの表に空欄、もしくはコメント列ではない箇所に数字以外が存在するようです。適切に入力後終了してください。また、最終行の空欄を削除してみてください"
+
         Else
+
+
             '■ログの内容を書き込む
-            'Shift JISで書き込む
+
             '書き込むファイルが既に存在している場合は、ファイルの末尾に追加する
             Dim sw As New System.IO.StreamWriter("./log.txt", True, System.Text.Encoding.GetEncoding("UTF-8"))
-            'ログの内容を書き込む
-            sw.Write(rtxtlog.Text)
-            '閉じる
-            sw.Close()
+
+            sw.Write(rtxtlog.Text) 'ログの内容を書き込む
+
+            sw.Close() '閉じる
 
 
             '■設定、表に変更がある場合、確認メッセージを表示。★
@@ -12151,10 +12110,13 @@ Public Class Mainwindow
             For i = 0 To 128
                 If Not arrayprofile_before(i) = arrayprofile_save(i) Then
                     Setting_changeTF = 1
+                    Console.WriteLine("SettingTF array: " & i)
+
                 End If
             Next
 
             If Setting_changeTF = 1 Or DGtable_changeTF = 1 Then
+                Console.WriteLine("Setting: " & Setting_changeTF & ", DGTable: " & DGtable_changeTF)
                 'メッセージボックスを表示する 
                 Dim result As DialogResult = MessageBox.Show(My.Resources.Message.msge01,
                                              "質問",
@@ -12182,6 +12144,7 @@ Public Class Mainwindow
                 End If
 
             Else
+
                 Me.Close()
 
 
@@ -12501,7 +12464,7 @@ Public Class Mainwindow
 
             For i = 0 To 128
                 arrayprofile_before(i) = txtloadprofile.Lines(i)
-                Console.WriteLine(arrayprofile_before(i))
+                'Console.WriteLine(arrayprofile_before(i))
             Next
 
 
@@ -12881,6 +12844,7 @@ Public Class Mainwindow
 
     Private Sub Newcsv()
 
+
         Dim inputText As String
 
         inputText = InputBox(My.Resources.Message.msg37, My.Resources.Message.msg38, "New", Me.Location.X + 50, Me.Location.Y + 95)
@@ -12958,7 +12922,6 @@ Public Class Mainwindow
 
 
             DGtable.Rows.Add()
-
 
             Adjust_table()
 
@@ -14318,8 +14281,9 @@ CInt(chkmonitor_sizestate.Checked)
     Private DGtable_changeTF = 0
 
     Private Sub DGtable_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles DGtable.CellValueChanged
+        Console.WriteLine("DGTableの内容が変更された。")
         DGtable_changeTF = 1
-
+        'あっどはんどらで切る
     End Sub
 
 

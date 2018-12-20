@@ -738,5 +738,23 @@ Namespace My.Resources
                 Return ResourceManager.GetString("msge03", resourceCulture)
             End Get
         End Property
+        
+        '''<summary>
+        '''  The key code is blank. Please set Hotkey again and try monitoring. に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend Shared ReadOnly Property msge04() As String
+            Get
+                Return ResourceManager.GetString("msge04", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Unknown error. Please check log [Help -&gt; Information] and tell me. に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend Shared ReadOnly Property msge05() As String
+            Get
+                Return ResourceManager.GetString("msge05", resourceCulture)
+            End Get
+        End Property
     End Class
 End Namespace
