@@ -1,0 +1,34 @@
+Comment: Comment.
+
+Snd: Send. Specify the presence or absence of hot key transmission.
+     0->No  1->Yes
+
+
+Key: Specify which hot key to send.
+     0->Split  1->Pause  2->Resume
+
+Thr.: Specify threshold of image matching [0 - 100]. The higher the value, the more severe the judgment.
+      When the coincidence rate of the image exceeds this value, it is judged that they match.
+
+Sleep: After matching, specify the time to start looking for the next image.
+       If the next image recognition is set to be long enough not to hinder the image recognition, the risk of false recognition will be reduced.
+
+
+T: Timing. Specify the timing of hot key transmission.
+
+  0: Send immediately                                                                                                  
+  1: Send after waiting "Delay"
+  2: The range specified by PX/PY/SX/SY(D) is darkened+ after waiting "Delay"
+  3: After matching, the image is transmitted after disappearance from the screen + after waiting "Delay" (by template matching)
+  4: After matching, the image is transmitted after disappearance from the screen + after waiting "Delay" (by color matching)
+
+ *For 3 and 4, basically it is OK if you use 3.
+ *If both before and after matching are monochrome, 3 can not be used, so please use 4.
+
+Delay: Specify the time to send a hot key after matching (ms).
+
+C.Al.: Color Allowance [0-128]. Specify the threshold of darkness(T=2 only). If the dark screen is not perfect black, increase this value.
+
+Seek: Specify seek time of movie after image matching. (s). Not set with "-1"
+
+Other: I explain with Manual with images.

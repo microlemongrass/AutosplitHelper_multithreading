@@ -27,6 +27,7 @@ Partial Class Mainwindow
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.btndescription_table = New System.Windows.Forms.Button()
         Me.txtrowscount = New System.Windows.Forms.TextBox()
         Me.DGtable = New System.Windows.Forms.DataGridView()
         Me.no = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -153,64 +154,35 @@ Partial Class Mainwindow
         Me.Label78 = New System.Windows.Forms.Label()
         Me.btnclosetable = New System.Windows.Forms.Button()
         Me.pnl_loadremover = New System.Windows.Forms.Panel()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.Label87 = New System.Windows.Forms.Label()
+        Me.numload_rate10 = New System.Windows.Forms.NumericUpDown()
+        Me.numload_delay10 = New System.Windows.Forms.NumericUpDown()
+        Me.numload_rate9 = New System.Windows.Forms.NumericUpDown()
+        Me.numload_delay9 = New System.Windows.Forms.NumericUpDown()
+        Me.numload_rate8 = New System.Windows.Forms.NumericUpDown()
+        Me.numload_delay8 = New System.Windows.Forms.NumericUpDown()
+        Me.numload_rate7 = New System.Windows.Forms.NumericUpDown()
+        Me.numload_delay7 = New System.Windows.Forms.NumericUpDown()
+        Me.numload_rate6 = New System.Windows.Forms.NumericUpDown()
+        Me.numload_delay6 = New System.Windows.Forms.NumericUpDown()
+        Me.numload_rate5 = New System.Windows.Forms.NumericUpDown()
+        Me.numload_delay5 = New System.Windows.Forms.NumericUpDown()
+        Me.numload_rate4 = New System.Windows.Forms.NumericUpDown()
+        Me.numload_delay4 = New System.Windows.Forms.NumericUpDown()
+        Me.numload_rate3 = New System.Windows.Forms.NumericUpDown()
+        Me.numload_delay3 = New System.Windows.Forms.NumericUpDown()
+        Me.numload_rate2 = New System.Windows.Forms.NumericUpDown()
+        Me.numload_delay2 = New System.Windows.Forms.NumericUpDown()
+        Me.numload_rate1 = New System.Windows.Forms.NumericUpDown()
         Me.chkload7 = New System.Windows.Forms.CheckBox()
+        Me.numload_delay1 = New System.Windows.Forms.NumericUpDown()
         Me.chkload1 = New System.Windows.Forms.CheckBox()
+        Me.Label33 = New System.Windows.Forms.Label()
         Me.chkload8 = New System.Windows.Forms.CheckBox()
         Me.chkload10 = New System.Windows.Forms.CheckBox()
         Me.chkload3 = New System.Windows.Forms.CheckBox()
         Me.chkload6 = New System.Windows.Forms.CheckBox()
-        Me.TabControl2 = New System.Windows.Forms.TabControl()
-        Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.Label29 = New System.Windows.Forms.Label()
-        Me.Label87 = New System.Windows.Forms.Label()
-        Me.numload_rate1 = New System.Windows.Forms.NumericUpDown()
-        Me.numload_delay1 = New System.Windows.Forms.NumericUpDown()
-        Me.Label33 = New System.Windows.Forms.Label()
-        Me.TabPage6 = New System.Windows.Forms.TabPage()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.numload_rate2 = New System.Windows.Forms.NumericUpDown()
-        Me.numload_delay2 = New System.Windows.Forms.NumericUpDown()
-        Me.Label35 = New System.Windows.Forms.Label()
-        Me.TabPage7 = New System.Windows.Forms.TabPage()
-        Me.Label36 = New System.Windows.Forms.Label()
-        Me.numload_rate3 = New System.Windows.Forms.NumericUpDown()
-        Me.numload_delay3 = New System.Windows.Forms.NumericUpDown()
-        Me.Label37 = New System.Windows.Forms.Label()
-        Me.TabPage8 = New System.Windows.Forms.TabPage()
-        Me.Label40 = New System.Windows.Forms.Label()
-        Me.numload_rate4 = New System.Windows.Forms.NumericUpDown()
-        Me.numload_delay4 = New System.Windows.Forms.NumericUpDown()
-        Me.Label43 = New System.Windows.Forms.Label()
-        Me.TabPage9 = New System.Windows.Forms.TabPage()
-        Me.Label44 = New System.Windows.Forms.Label()
-        Me.numload_rate5 = New System.Windows.Forms.NumericUpDown()
-        Me.numload_delay5 = New System.Windows.Forms.NumericUpDown()
-        Me.Label45 = New System.Windows.Forms.Label()
-        Me.TabPage10 = New System.Windows.Forms.TabPage()
-        Me.Label47 = New System.Windows.Forms.Label()
-        Me.numload_rate6 = New System.Windows.Forms.NumericUpDown()
-        Me.numload_delay6 = New System.Windows.Forms.NumericUpDown()
-        Me.Label48 = New System.Windows.Forms.Label()
-        Me.TabPage11 = New System.Windows.Forms.TabPage()
-        Me.Label50 = New System.Windows.Forms.Label()
-        Me.numload_rate7 = New System.Windows.Forms.NumericUpDown()
-        Me.numload_delay7 = New System.Windows.Forms.NumericUpDown()
-        Me.Label54 = New System.Windows.Forms.Label()
-        Me.TabPage12 = New System.Windows.Forms.TabPage()
-        Me.Label55 = New System.Windows.Forms.Label()
-        Me.numload_rate8 = New System.Windows.Forms.NumericUpDown()
-        Me.numload_delay8 = New System.Windows.Forms.NumericUpDown()
-        Me.Label56 = New System.Windows.Forms.Label()
-        Me.TabPage13 = New System.Windows.Forms.TabPage()
-        Me.Label57 = New System.Windows.Forms.Label()
-        Me.numload_rate9 = New System.Windows.Forms.NumericUpDown()
-        Me.numload_delay9 = New System.Windows.Forms.NumericUpDown()
-        Me.Label58 = New System.Windows.Forms.Label()
-        Me.TabPage14 = New System.Windows.Forms.TabPage()
-        Me.Label59 = New System.Windows.Forms.Label()
-        Me.numload_rate10 = New System.Windows.Forms.NumericUpDown()
-        Me.numload_delay10 = New System.Windows.Forms.NumericUpDown()
-        Me.Label60 = New System.Windows.Forms.Label()
         Me.chkload5 = New System.Windows.Forms.CheckBox()
         Me.chkload4 = New System.Windows.Forms.CheckBox()
         Me.chkload2 = New System.Windows.Forms.CheckBox()
@@ -641,6 +613,7 @@ Partial Class Mainwindow
         Me.PictureBox12 = New System.Windows.Forms.PictureBox()
         Me.btntosetting02 = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.lbldpi = New System.Windows.Forms.Label()
         Me.Label72 = New System.Windows.Forms.Label()
         Me.rtxtlog = New System.Windows.Forms.RichTextBox()
         Me.Label25 = New System.Windows.Forms.Label()
@@ -686,8 +659,8 @@ Partial Class Mainwindow
         Me.timcamera = New System.Windows.Forms.Timer(Me.components)
         Me.timcalib = New System.Windows.Forms.Timer(Me.components)
         Me.timash_hotkey_sleep = New System.Windows.Forms.Timer(Me.components)
-        Me.TabControl1.SuspendLayout
-        Me.TabPage1.SuspendLayout
+        Me.TabControl1.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
         CType(Me.DGtable, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlview_window.SuspendLayout()
         CType(Me.piccap, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -710,37 +683,26 @@ Partial Class Mainwindow
         CType(Me.numvideo_sizey, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numvideo_sizex, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnl_loadremover.SuspendLayout()
-        Me.TabControl2.SuspendLayout()
-        Me.TabPage4.SuspendLayout()
-        CType(Me.numload_rate1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numload_delay1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage6.SuspendLayout()
-        CType(Me.numload_rate2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numload_delay2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage7.SuspendLayout()
-        CType(Me.numload_rate3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numload_delay3, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage8.SuspendLayout()
-        CType(Me.numload_rate4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numload_delay4, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage9.SuspendLayout()
-        CType(Me.numload_rate5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numload_delay5, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage10.SuspendLayout()
-        CType(Me.numload_rate6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numload_delay6, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage11.SuspendLayout()
-        CType(Me.numload_rate7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numload_delay7, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage12.SuspendLayout()
-        CType(Me.numload_rate8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numload_delay8, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage13.SuspendLayout()
-        CType(Me.numload_rate9, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numload_delay9, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage14.SuspendLayout()
         CType(Me.numload_rate10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numload_delay10, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numload_rate9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numload_delay9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numload_rate8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numload_delay8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numload_rate7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numload_delay7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numload_rate6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numload_delay6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numload_rate5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numload_delay5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numload_rate4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numload_delay4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numload_rate3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numload_delay3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numload_rate2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numload_delay2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numload_rate1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numload_delay1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnl_hotkey.SuspendLayout()
         CType(Me.numpresstime, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnl_cvparameter.SuspendLayout()
@@ -847,6 +809,7 @@ Partial Class Mainwindow
         '
         Me.TabPage1.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(75, Byte), Integer))
         resources.ApplyResources(Me.TabPage1, "TabPage1")
+        Me.TabPage1.Controls.Add(Me.btndescription_table)
         Me.TabPage1.Controls.Add(Me.txtrowscount)
         Me.TabPage1.Controls.Add(Me.DGtable)
         Me.TabPage1.Controls.Add(Me.pnlview_window)
@@ -873,6 +836,14 @@ Partial Class Mainwindow
         Me.TabPage1.Controls.Add(Me.btnclose_general)
         Me.TabPage1.ForeColor = System.Drawing.SystemColors.ControlText
         Me.TabPage1.Name = "TabPage1"
+        '
+        'btndescription_table
+        '
+        resources.ApplyResources(Me.btndescription_table, "btndescription_table")
+        Me.btndescription_table.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.btndescription_table.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btndescription_table.Name = "btndescription_table"
+        Me.btndescription_table.UseVisualStyleBackColor = False
         '
         'txtrowscount
         '
@@ -1002,6 +973,7 @@ Partial Class Mainwindow
         '
         'pnlview_window
         '
+        resources.ApplyResources(Me.pnlview_window, "pnlview_window")
         Me.pnlview_window.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(34, Byte), Integer))
         Me.pnlview_window.Controls.Add(Me.piccap)
         Me.pnlview_window.Controls.Add(Me.pictempipl)
@@ -1009,7 +981,6 @@ Partial Class Mainwindow
         Me.pnlview_window.Controls.Add(Me.PictureBoxIpl1)
         Me.pnlview_window.Controls.Add(Me.piczoom)
         Me.pnlview_window.Controls.Add(Me.picview_capture)
-        resources.ApplyResources(Me.pnlview_window, "pnlview_window")
         Me.pnlview_window.Name = "pnlview_window"
         '
         'piccap
@@ -1054,6 +1025,7 @@ Partial Class Mainwindow
         '
         'pnlview_control
         '
+        resources.ApplyResources(Me.pnlview_control, "pnlview_control")
         Me.pnlview_control.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(34, Byte), Integer))
         Me.pnlview_control.Controls.Add(Me.btntemp)
         Me.pnlview_control.Controls.Add(Me.btncap)
@@ -1065,7 +1037,6 @@ Partial Class Mainwindow
         Me.pnlview_control.Controls.Add(Me.chklimit)
         Me.pnlview_control.Controls.Add(Me.chkoverwrite)
         Me.pnlview_control.Controls.Add(Me.trktemp)
-        resources.ApplyResources(Me.pnlview_control, "pnlview_control")
         Me.pnlview_control.Name = "pnlview_control"
         '
         'btntemp
@@ -1078,33 +1049,33 @@ Partial Class Mainwindow
         '
         'btncap
         '
-        Me.btncap.BackColor = System.Drawing.Color.FromArgb(CType(CType(90, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(12, Byte), Integer))
         resources.ApplyResources(Me.btncap, "btncap")
+        Me.btncap.BackColor = System.Drawing.Color.FromArgb(CType(CType(90, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(12, Byte), Integer))
         Me.btncap.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btncap.Name = "btncap"
         Me.btncap.UseVisualStyleBackColor = False
         '
         'btnforward
         '
-        Me.btnforward.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btnforward, "btnforward")
+        Me.btnforward.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btnforward.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btnforward.Name = "btnforward"
         Me.btnforward.UseVisualStyleBackColor = False
         '
         'btnback
         '
-        Me.btnback.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btnback, "btnback")
+        Me.btnback.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btnback.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btnback.Name = "btnback"
         Me.btnback.UseVisualStyleBackColor = False
         '
         'numloadno
         '
+        resources.ApplyResources(Me.numloadno, "numloadno")
         Me.numloadno.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(34, Byte), Integer))
         Me.numloadno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numloadno, "numloadno")
         Me.numloadno.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.numloadno.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
         Me.numloadno.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
@@ -1161,6 +1132,7 @@ Partial Class Mainwindow
         '
         'grpgeneral
         '
+        resources.ApplyResources(Me.grpgeneral, "grpgeneral")
         Me.grpgeneral.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.grpgeneral.Controls.Add(Me.lblcur_load10)
         Me.grpgeneral.Controls.Add(Me.lblcur_load9)
@@ -1204,7 +1176,6 @@ Partial Class Mainwindow
         Me.grpgeneral.Controls.Add(Me.lblset_device)
         Me.grpgeneral.Controls.Add(Me.lblcur_device_name)
         Me.grpgeneral.Controls.Add(Me.lblset_monitoring)
-        resources.ApplyResources(Me.grpgeneral, "grpgeneral")
         Me.grpgeneral.ForeColor = System.Drawing.Color.FloralWhite
         Me.grpgeneral.Name = "grpgeneral"
         Me.grpgeneral.TabStop = False
@@ -1274,8 +1245,8 @@ Partial Class Mainwindow
         '
         'btncur_showtext
         '
-        Me.btncur_showtext.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btncur_showtext, "btncur_showtext")
+        Me.btncur_showtext.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btncur_showtext.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btncur_showtext.Name = "btncur_showtext"
         Me.btncur_showtext.UseVisualStyleBackColor = False
@@ -1304,8 +1275,8 @@ Partial Class Mainwindow
         '
         'btncur_showvideo
         '
-        Me.btncur_showvideo.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btncur_showvideo, "btncur_showvideo")
+        Me.btncur_showvideo.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btncur_showvideo.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btncur_showvideo.Name = "btncur_showvideo"
         Me.btncur_showvideo.UseVisualStyleBackColor = False
@@ -1383,6 +1354,7 @@ Partial Class Mainwindow
         '
         'Panel4
         '
+        resources.ApplyResources(Me.Panel4, "Panel4")
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(46, Byte), Integer))
         Me.Panel4.Controls.Add(Me.lblcur_interval)
         Me.Panel4.Controls.Add(Me.lblcur_loopcount)
@@ -1391,7 +1363,6 @@ Partial Class Mainwindow
         Me.Panel4.Controls.Add(Me.Label76)
         Me.Panel4.Controls.Add(Me.lblcur_reset)
         Me.Panel4.Controls.Add(Me.lblcur_loop)
-        resources.ApplyResources(Me.Panel4, "Panel4")
         Me.Panel4.Name = "Panel4"
         '
         'lblcur_interval
@@ -1489,24 +1460,24 @@ Partial Class Mainwindow
         '
         'btncur_clear_live
         '
-        Me.btncur_clear_live.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btncur_clear_live, "btncur_clear_live")
+        Me.btncur_clear_live.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btncur_clear_live.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btncur_clear_live.Name = "btncur_clear_live"
         Me.btncur_clear_live.UseVisualStyleBackColor = False
         '
         'btncur_clear_table
         '
-        Me.btncur_clear_table.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btncur_clear_table, "btncur_clear_table")
+        Me.btncur_clear_table.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btncur_clear_table.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btncur_clear_table.Name = "btncur_clear_table"
         Me.btncur_clear_table.UseVisualStyleBackColor = False
         '
         'btncur_clear_count
         '
-        Me.btncur_clear_count.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btncur_clear_count, "btncur_clear_count")
+        Me.btncur_clear_count.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btncur_clear_count.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btncur_clear_count.Name = "btncur_clear_count"
         Me.btncur_clear_count.UseVisualStyleBackColor = False
@@ -1528,8 +1499,8 @@ Partial Class Mainwindow
         '
         'btncur_webcamera
         '
-        Me.btncur_webcamera.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btncur_webcamera, "btncur_webcamera")
+        Me.btncur_webcamera.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btncur_webcamera.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btncur_webcamera.Name = "btncur_webcamera"
         Me.btncur_webcamera.UseVisualStyleBackColor = False
@@ -1574,6 +1545,7 @@ Partial Class Mainwindow
         '
         'pnl_other
         '
+        resources.ApplyResources(Me.pnl_other, "pnl_other")
         Me.pnl_other.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.pnl_other.Controls.Add(Me.btntext_openfolder)
         Me.pnl_other.Controls.Add(Me.txtpass_rtf)
@@ -1586,13 +1558,12 @@ Partial Class Mainwindow
         Me.pnl_other.Controls.Add(Me.Label26)
         Me.pnl_other.Controls.Add(Me.Label23)
         Me.pnl_other.Controls.Add(Me.lbllivesplit_state)
-        resources.ApplyResources(Me.pnl_other, "pnl_other")
         Me.pnl_other.Name = "pnl_other"
         '
         'btntext_openfolder
         '
-        Me.btntext_openfolder.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btntext_openfolder, "btntext_openfolder")
+        Me.btntext_openfolder.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btntext_openfolder.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btntext_openfolder.Name = "btntext_openfolder"
         Me.btntext_openfolder.UseVisualStyleBackColor = False
@@ -1615,8 +1586,8 @@ Partial Class Mainwindow
         '
         'btnshow_chart
         '
-        Me.btnshow_chart.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btnshow_chart, "btnshow_chart")
+        Me.btnshow_chart.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btnshow_chart.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btnshow_chart.Name = "btnshow_chart"
         Me.btnshow_chart.UseVisualStyleBackColor = False
@@ -1677,6 +1648,7 @@ Partial Class Mainwindow
         '
         'pnl_video
         '
+        resources.ApplyResources(Me.pnl_video, "pnl_video")
         Me.pnl_video.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.pnl_video.Controls.Add(Me.chkvideo_manualstart)
         Me.pnl_video.Controls.Add(Me.btnselectvideo)
@@ -1692,7 +1664,6 @@ Partial Class Mainwindow
         Me.pnl_video.Controls.Add(Me.chkvideo_autoseek)
         Me.pnl_video.Controls.Add(Me.chkshowvideo)
         Me.pnl_video.Controls.Add(Me.Label78)
-        resources.ApplyResources(Me.pnl_video, "pnl_video")
         Me.pnl_video.Name = "pnl_video"
         '
         'chkvideo_manualstart
@@ -1705,13 +1676,14 @@ Partial Class Mainwindow
         '
         'btnselectvideo
         '
-        Me.btnselectvideo.BackColor = System.Drawing.SystemColors.Control
         resources.ApplyResources(Me.btnselectvideo, "btnselectvideo")
+        Me.btnselectvideo.BackColor = System.Drawing.SystemColors.Control
         Me.btnselectvideo.Name = "btnselectvideo"
         Me.btnselectvideo.UseVisualStyleBackColor = False
         '
         'GroupBox4
         '
+        resources.ApplyResources(Me.GroupBox4, "GroupBox4")
         Me.GroupBox4.Controls.Add(Me.chkvideo_showwinvideo)
         Me.GroupBox4.Controls.Add(Me.numwin_interval)
         Me.GroupBox4.Controls.Add(Me.Label95)
@@ -1719,7 +1691,6 @@ Partial Class Mainwindow
         Me.GroupBox4.Controls.Add(Me.numwin_locx)
         Me.GroupBox4.Controls.Add(Me.Label93)
         Me.GroupBox4.ForeColor = System.Drawing.Color.Snow
-        resources.ApplyResources(Me.GroupBox4, "GroupBox4")
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.TabStop = False
         '
@@ -1733,9 +1704,9 @@ Partial Class Mainwindow
         '
         'numwin_interval
         '
+        resources.ApplyResources(Me.numwin_interval, "numwin_interval")
         Me.numwin_interval.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numwin_interval.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numwin_interval, "numwin_interval")
         Me.numwin_interval.ForeColor = System.Drawing.SystemColors.Control
         Me.numwin_interval.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.numwin_interval.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
@@ -1751,9 +1722,9 @@ Partial Class Mainwindow
         '
         'numwin_locy
         '
+        resources.ApplyResources(Me.numwin_locy, "numwin_locy")
         Me.numwin_locy.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numwin_locy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numwin_locy, "numwin_locy")
         Me.numwin_locy.ForeColor = System.Drawing.SystemColors.Control
         Me.numwin_locy.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.numwin_locy.Minimum = New Decimal(New Integer() {10000, 0, 0, -2147483648})
@@ -1762,9 +1733,9 @@ Partial Class Mainwindow
         '
         'numwin_locx
         '
+        resources.ApplyResources(Me.numwin_locx, "numwin_locx")
         Me.numwin_locx.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numwin_locx.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numwin_locx, "numwin_locx")
         Me.numwin_locx.ForeColor = System.Drawing.SystemColors.Control
         Me.numwin_locx.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.numwin_locx.Minimum = New Decimal(New Integer() {10000, 0, 0, -2147483648})
@@ -1787,9 +1758,9 @@ Partial Class Mainwindow
         '
         'numvideo_sizey
         '
+        resources.ApplyResources(Me.numvideo_sizey, "numvideo_sizey")
         Me.numvideo_sizey.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numvideo_sizey.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numvideo_sizey, "numvideo_sizey")
         Me.numvideo_sizey.ForeColor = System.Drawing.SystemColors.Control
         Me.numvideo_sizey.Maximum = New Decimal(New Integer() {360, 0, 0, 0})
         Me.numvideo_sizey.Name = "numvideo_sizey"
@@ -1797,9 +1768,9 @@ Partial Class Mainwindow
         '
         'numvideo_sizex
         '
+        resources.ApplyResources(Me.numvideo_sizex, "numvideo_sizex")
         Me.numvideo_sizex.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numvideo_sizex.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numvideo_sizex, "numvideo_sizex")
         Me.numvideo_sizex.ForeColor = System.Drawing.SystemColors.Control
         Me.numvideo_sizex.Maximum = New Decimal(New Integer() {640, 0, 0, 0})
         Me.numvideo_sizex.Name = "numvideo_sizex"
@@ -1868,28 +1839,254 @@ Partial Class Mainwindow
         '
         'btnclosetable
         '
-        Me.btnclosetable.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btnclosetable, "btnclosetable")
+        Me.btnclosetable.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btnclosetable.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btnclosetable.Name = "btnclosetable"
         Me.btnclosetable.UseVisualStyleBackColor = False
         '
         'pnl_loadremover
         '
+        resources.ApplyResources(Me.pnl_loadremover, "pnl_loadremover")
         Me.pnl_loadremover.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.pnl_loadremover.Controls.Add(Me.Label29)
+        Me.pnl_loadremover.Controls.Add(Me.Label87)
+        Me.pnl_loadremover.Controls.Add(Me.numload_rate10)
+        Me.pnl_loadremover.Controls.Add(Me.numload_delay10)
+        Me.pnl_loadremover.Controls.Add(Me.numload_rate9)
+        Me.pnl_loadremover.Controls.Add(Me.numload_delay9)
+        Me.pnl_loadremover.Controls.Add(Me.numload_rate8)
+        Me.pnl_loadremover.Controls.Add(Me.numload_delay8)
+        Me.pnl_loadremover.Controls.Add(Me.numload_rate7)
+        Me.pnl_loadremover.Controls.Add(Me.numload_delay7)
+        Me.pnl_loadremover.Controls.Add(Me.numload_rate6)
+        Me.pnl_loadremover.Controls.Add(Me.numload_delay6)
+        Me.pnl_loadremover.Controls.Add(Me.numload_rate5)
+        Me.pnl_loadremover.Controls.Add(Me.numload_delay5)
+        Me.pnl_loadremover.Controls.Add(Me.numload_rate4)
+        Me.pnl_loadremover.Controls.Add(Me.numload_delay4)
+        Me.pnl_loadremover.Controls.Add(Me.numload_rate3)
+        Me.pnl_loadremover.Controls.Add(Me.numload_delay3)
+        Me.pnl_loadremover.Controls.Add(Me.numload_rate2)
+        Me.pnl_loadremover.Controls.Add(Me.numload_delay2)
+        Me.pnl_loadremover.Controls.Add(Me.numload_rate1)
         Me.pnl_loadremover.Controls.Add(Me.chkload7)
+        Me.pnl_loadremover.Controls.Add(Me.numload_delay1)
         Me.pnl_loadremover.Controls.Add(Me.chkload1)
+        Me.pnl_loadremover.Controls.Add(Me.Label33)
         Me.pnl_loadremover.Controls.Add(Me.chkload8)
         Me.pnl_loadremover.Controls.Add(Me.chkload10)
         Me.pnl_loadremover.Controls.Add(Me.chkload3)
         Me.pnl_loadremover.Controls.Add(Me.chkload6)
-        Me.pnl_loadremover.Controls.Add(Me.TabControl2)
         Me.pnl_loadremover.Controls.Add(Me.chkload5)
         Me.pnl_loadremover.Controls.Add(Me.chkload4)
         Me.pnl_loadremover.Controls.Add(Me.chkload2)
         Me.pnl_loadremover.Controls.Add(Me.chkload9)
-        resources.ApplyResources(Me.pnl_loadremover, "pnl_loadremover")
         Me.pnl_loadremover.Name = "pnl_loadremover"
+        '
+        'Label29
+        '
+        resources.ApplyResources(Me.Label29, "Label29")
+        Me.Label29.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.Label29.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label29.Name = "Label29"
+        '
+        'Label87
+        '
+        resources.ApplyResources(Me.Label87, "Label87")
+        Me.Label87.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Label87.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label87.Name = "Label87"
+        '
+        'numload_rate10
+        '
+        resources.ApplyResources(Me.numload_rate10, "numload_rate10")
+        Me.numload_rate10.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.numload_rate10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.numload_rate10.ForeColor = System.Drawing.SystemColors.Control
+        Me.numload_rate10.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.numload_rate10.Name = "numload_rate10"
+        Me.numload_rate10.Value = New Decimal(New Integer() {40, 0, 0, 0})
+        '
+        'numload_delay10
+        '
+        resources.ApplyResources(Me.numload_delay10, "numload_delay10")
+        Me.numload_delay10.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.numload_delay10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.numload_delay10.ForeColor = System.Drawing.SystemColors.Control
+        Me.numload_delay10.Maximum = New Decimal(New Integer() {99999, 0, 0, 0})
+        Me.numload_delay10.Name = "numload_delay10"
+        Me.numload_delay10.Value = New Decimal(New Integer() {99999, 0, 0, 0})
+        '
+        'numload_rate9
+        '
+        resources.ApplyResources(Me.numload_rate9, "numload_rate9")
+        Me.numload_rate9.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.numload_rate9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.numload_rate9.ForeColor = System.Drawing.SystemColors.Control
+        Me.numload_rate9.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.numload_rate9.Name = "numload_rate9"
+        Me.numload_rate9.Value = New Decimal(New Integer() {40, 0, 0, 0})
+        '
+        'numload_delay9
+        '
+        resources.ApplyResources(Me.numload_delay9, "numload_delay9")
+        Me.numload_delay9.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.numload_delay9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.numload_delay9.ForeColor = System.Drawing.SystemColors.Control
+        Me.numload_delay9.Maximum = New Decimal(New Integer() {99999, 0, 0, 0})
+        Me.numload_delay9.Name = "numload_delay9"
+        Me.numload_delay9.Value = New Decimal(New Integer() {99999, 0, 0, 0})
+        '
+        'numload_rate8
+        '
+        resources.ApplyResources(Me.numload_rate8, "numload_rate8")
+        Me.numload_rate8.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.numload_rate8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.numload_rate8.ForeColor = System.Drawing.SystemColors.Control
+        Me.numload_rate8.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.numload_rate8.Name = "numload_rate8"
+        Me.numload_rate8.Value = New Decimal(New Integer() {40, 0, 0, 0})
+        '
+        'numload_delay8
+        '
+        resources.ApplyResources(Me.numload_delay8, "numload_delay8")
+        Me.numload_delay8.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.numload_delay8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.numload_delay8.ForeColor = System.Drawing.SystemColors.Control
+        Me.numload_delay8.Maximum = New Decimal(New Integer() {99999, 0, 0, 0})
+        Me.numload_delay8.Name = "numload_delay8"
+        Me.numload_delay8.Value = New Decimal(New Integer() {99999, 0, 0, 0})
+        '
+        'numload_rate7
+        '
+        resources.ApplyResources(Me.numload_rate7, "numload_rate7")
+        Me.numload_rate7.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.numload_rate7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.numload_rate7.ForeColor = System.Drawing.SystemColors.Control
+        Me.numload_rate7.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.numload_rate7.Name = "numload_rate7"
+        Me.numload_rate7.Value = New Decimal(New Integer() {40, 0, 0, 0})
+        '
+        'numload_delay7
+        '
+        resources.ApplyResources(Me.numload_delay7, "numload_delay7")
+        Me.numload_delay7.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.numload_delay7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.numload_delay7.ForeColor = System.Drawing.SystemColors.Control
+        Me.numload_delay7.Maximum = New Decimal(New Integer() {99999, 0, 0, 0})
+        Me.numload_delay7.Name = "numload_delay7"
+        Me.numload_delay7.Value = New Decimal(New Integer() {99999, 0, 0, 0})
+        '
+        'numload_rate6
+        '
+        resources.ApplyResources(Me.numload_rate6, "numload_rate6")
+        Me.numload_rate6.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.numload_rate6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.numload_rate6.ForeColor = System.Drawing.SystemColors.Control
+        Me.numload_rate6.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.numload_rate6.Name = "numload_rate6"
+        Me.numload_rate6.Value = New Decimal(New Integer() {40, 0, 0, 0})
+        '
+        'numload_delay6
+        '
+        resources.ApplyResources(Me.numload_delay6, "numload_delay6")
+        Me.numload_delay6.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.numload_delay6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.numload_delay6.ForeColor = System.Drawing.SystemColors.Control
+        Me.numload_delay6.Maximum = New Decimal(New Integer() {99999, 0, 0, 0})
+        Me.numload_delay6.Name = "numload_delay6"
+        Me.numload_delay6.Value = New Decimal(New Integer() {99999, 0, 0, 0})
+        '
+        'numload_rate5
+        '
+        resources.ApplyResources(Me.numload_rate5, "numload_rate5")
+        Me.numload_rate5.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.numload_rate5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.numload_rate5.ForeColor = System.Drawing.SystemColors.Control
+        Me.numload_rate5.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.numload_rate5.Name = "numload_rate5"
+        Me.numload_rate5.Value = New Decimal(New Integer() {40, 0, 0, 0})
+        '
+        'numload_delay5
+        '
+        resources.ApplyResources(Me.numload_delay5, "numload_delay5")
+        Me.numload_delay5.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.numload_delay5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.numload_delay5.ForeColor = System.Drawing.SystemColors.Control
+        Me.numload_delay5.Maximum = New Decimal(New Integer() {99999, 0, 0, 0})
+        Me.numload_delay5.Name = "numload_delay5"
+        Me.numload_delay5.Value = New Decimal(New Integer() {99999, 0, 0, 0})
+        '
+        'numload_rate4
+        '
+        resources.ApplyResources(Me.numload_rate4, "numload_rate4")
+        Me.numload_rate4.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.numload_rate4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.numload_rate4.ForeColor = System.Drawing.SystemColors.Control
+        Me.numload_rate4.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.numload_rate4.Name = "numload_rate4"
+        Me.numload_rate4.Value = New Decimal(New Integer() {40, 0, 0, 0})
+        '
+        'numload_delay4
+        '
+        resources.ApplyResources(Me.numload_delay4, "numload_delay4")
+        Me.numload_delay4.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.numload_delay4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.numload_delay4.ForeColor = System.Drawing.SystemColors.Control
+        Me.numload_delay4.Maximum = New Decimal(New Integer() {99999, 0, 0, 0})
+        Me.numload_delay4.Name = "numload_delay4"
+        Me.numload_delay4.Value = New Decimal(New Integer() {99999, 0, 0, 0})
+        '
+        'numload_rate3
+        '
+        resources.ApplyResources(Me.numload_rate3, "numload_rate3")
+        Me.numload_rate3.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.numload_rate3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.numload_rate3.ForeColor = System.Drawing.SystemColors.Control
+        Me.numload_rate3.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.numload_rate3.Name = "numload_rate3"
+        Me.numload_rate3.Value = New Decimal(New Integer() {40, 0, 0, 0})
+        '
+        'numload_delay3
+        '
+        resources.ApplyResources(Me.numload_delay3, "numload_delay3")
+        Me.numload_delay3.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.numload_delay3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.numload_delay3.ForeColor = System.Drawing.SystemColors.Control
+        Me.numload_delay3.Maximum = New Decimal(New Integer() {99999, 0, 0, 0})
+        Me.numload_delay3.Name = "numload_delay3"
+        Me.numload_delay3.Value = New Decimal(New Integer() {99999, 0, 0, 0})
+        '
+        'numload_rate2
+        '
+        resources.ApplyResources(Me.numload_rate2, "numload_rate2")
+        Me.numload_rate2.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.numload_rate2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.numload_rate2.ForeColor = System.Drawing.SystemColors.Control
+        Me.numload_rate2.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.numload_rate2.Name = "numload_rate2"
+        Me.numload_rate2.Value = New Decimal(New Integer() {40, 0, 0, 0})
+        '
+        'numload_delay2
+        '
+        resources.ApplyResources(Me.numload_delay2, "numload_delay2")
+        Me.numload_delay2.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.numload_delay2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.numload_delay2.ForeColor = System.Drawing.SystemColors.Control
+        Me.numload_delay2.Maximum = New Decimal(New Integer() {99999, 0, 0, 0})
+        Me.numload_delay2.Name = "numload_delay2"
+        Me.numload_delay2.Value = New Decimal(New Integer() {99999, 0, 0, 0})
+        '
+        'numload_rate1
+        '
+        resources.ApplyResources(Me.numload_rate1, "numload_rate1")
+        Me.numload_rate1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.numload_rate1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.numload_rate1.ForeColor = System.Drawing.SystemColors.Control
+        Me.numload_rate1.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.numload_rate1.Name = "numload_rate1"
+        Me.numload_rate1.Value = New Decimal(New Integer() {40, 0, 0, 0})
         '
         'chkload7
         '
@@ -1899,6 +2096,16 @@ Partial Class Mainwindow
         Me.chkload7.Name = "chkload7"
         Me.chkload7.UseVisualStyleBackColor = False
         '
+        'numload_delay1
+        '
+        resources.ApplyResources(Me.numload_delay1, "numload_delay1")
+        Me.numload_delay1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.numload_delay1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.numload_delay1.ForeColor = System.Drawing.SystemColors.Control
+        Me.numload_delay1.Maximum = New Decimal(New Integer() {99999, 0, 0, 0})
+        Me.numload_delay1.Name = "numload_delay1"
+        Me.numload_delay1.Value = New Decimal(New Integer() {99999, 0, 0, 0})
+        '
         'chkload1
         '
         resources.ApplyResources(Me.chkload1, "chkload1")
@@ -1906,6 +2113,13 @@ Partial Class Mainwindow
         Me.chkload1.ForeColor = System.Drawing.SystemColors.Control
         Me.chkload1.Name = "chkload1"
         Me.chkload1.UseVisualStyleBackColor = False
+        '
+        'Label33
+        '
+        resources.ApplyResources(Me.Label33, "Label33")
+        Me.Label33.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.Label33.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label33.Name = "Label33"
         '
         'chkload8
         '
@@ -1938,471 +2152,6 @@ Partial Class Mainwindow
         Me.chkload6.ForeColor = System.Drawing.SystemColors.Control
         Me.chkload6.Name = "chkload6"
         Me.chkload6.UseVisualStyleBackColor = False
-        '
-        'TabControl2
-        '
-        Me.TabControl2.Controls.Add(Me.TabPage4)
-        Me.TabControl2.Controls.Add(Me.TabPage6)
-        Me.TabControl2.Controls.Add(Me.TabPage7)
-        Me.TabControl2.Controls.Add(Me.TabPage8)
-        Me.TabControl2.Controls.Add(Me.TabPage9)
-        Me.TabControl2.Controls.Add(Me.TabPage10)
-        Me.TabControl2.Controls.Add(Me.TabPage11)
-        Me.TabControl2.Controls.Add(Me.TabPage12)
-        Me.TabControl2.Controls.Add(Me.TabPage13)
-        Me.TabControl2.Controls.Add(Me.TabPage14)
-        resources.ApplyResources(Me.TabControl2, "TabControl2")
-        Me.TabControl2.Multiline = True
-        Me.TabControl2.Name = "TabControl2"
-        Me.TabControl2.SelectedIndex = 0
-        '
-        'TabPage4
-        '
-        Me.TabPage4.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.TabPage4.Controls.Add(Me.Label29)
-        Me.TabPage4.Controls.Add(Me.Label87)
-        Me.TabPage4.Controls.Add(Me.numload_rate1)
-        Me.TabPage4.Controls.Add(Me.numload_delay1)
-        Me.TabPage4.Controls.Add(Me.Label33)
-        resources.ApplyResources(Me.TabPage4, "TabPage4")
-        Me.TabPage4.Name = "TabPage4"
-        '
-        'Label29
-        '
-        resources.ApplyResources(Me.Label29, "Label29")
-        Me.Label29.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.Label29.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label29.Name = "Label29"
-        '
-        'Label87
-        '
-        resources.ApplyResources(Me.Label87, "Label87")
-        Me.Label87.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Label87.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label87.Name = "Label87"
-        '
-        'numload_rate1
-        '
-        Me.numload_rate1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.numload_rate1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_rate1, "numload_rate1")
-        Me.numload_rate1.ForeColor = System.Drawing.SystemColors.Control
-        Me.numload_rate1.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.numload_rate1.Name = "numload_rate1"
-        Me.numload_rate1.Value = New Decimal(New Integer() {40, 0, 0, 0})
-        '
-        'numload_delay1
-        '
-        Me.numload_delay1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.numload_delay1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_delay1, "numload_delay1")
-        Me.numload_delay1.ForeColor = System.Drawing.SystemColors.Control
-        Me.numload_delay1.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
-        Me.numload_delay1.Name = "numload_delay1"
-        Me.numload_delay1.Value = New Decimal(New Integer() {100000, 0, 0, 0})
-        '
-        'Label33
-        '
-        resources.ApplyResources(Me.Label33, "Label33")
-        Me.Label33.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.Label33.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label33.Name = "Label33"
-        '
-        'TabPage6
-        '
-        Me.TabPage6.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.TabPage6.Controls.Add(Me.Label15)
-        Me.TabPage6.Controls.Add(Me.numload_rate2)
-        Me.TabPage6.Controls.Add(Me.numload_delay2)
-        Me.TabPage6.Controls.Add(Me.Label35)
-        resources.ApplyResources(Me.TabPage6, "TabPage6")
-        Me.TabPage6.Name = "TabPage6"
-        '
-        'Label15
-        '
-        resources.ApplyResources(Me.Label15, "Label15")
-        Me.Label15.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label15.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label15.Name = "Label15"
-        '
-        'numload_rate2
-        '
-        Me.numload_rate2.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.numload_rate2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_rate2, "numload_rate2")
-        Me.numload_rate2.ForeColor = System.Drawing.SystemColors.Control
-        Me.numload_rate2.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.numload_rate2.Name = "numload_rate2"
-        Me.numload_rate2.Value = New Decimal(New Integer() {40, 0, 0, 0})
-        '
-        'numload_delay2
-        '
-        Me.numload_delay2.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.numload_delay2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_delay2, "numload_delay2")
-        Me.numload_delay2.ForeColor = System.Drawing.SystemColors.Control
-        Me.numload_delay2.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
-        Me.numload_delay2.Name = "numload_delay2"
-        Me.numload_delay2.Value = New Decimal(New Integer() {100000, 0, 0, 0})
-        '
-        'Label35
-        '
-        resources.ApplyResources(Me.Label35, "Label35")
-        Me.Label35.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Label35.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label35.Name = "Label35"
-        '
-        'TabPage7
-        '
-        Me.TabPage7.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.TabPage7.Controls.Add(Me.Label36)
-        Me.TabPage7.Controls.Add(Me.numload_rate3)
-        Me.TabPage7.Controls.Add(Me.numload_delay3)
-        Me.TabPage7.Controls.Add(Me.Label37)
-        resources.ApplyResources(Me.TabPage7, "TabPage7")
-        Me.TabPage7.Name = "TabPage7"
-        '
-        'Label36
-        '
-        resources.ApplyResources(Me.Label36, "Label36")
-        Me.Label36.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.Label36.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label36.Name = "Label36"
-        '
-        'numload_rate3
-        '
-        Me.numload_rate3.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.numload_rate3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_rate3, "numload_rate3")
-        Me.numload_rate3.ForeColor = System.Drawing.SystemColors.Control
-        Me.numload_rate3.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.numload_rate3.Name = "numload_rate3"
-        Me.numload_rate3.Value = New Decimal(New Integer() {40, 0, 0, 0})
-        '
-        'numload_delay3
-        '
-        Me.numload_delay3.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.numload_delay3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_delay3, "numload_delay3")
-        Me.numload_delay3.ForeColor = System.Drawing.SystemColors.Control
-        Me.numload_delay3.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
-        Me.numload_delay3.Name = "numload_delay3"
-        Me.numload_delay3.Value = New Decimal(New Integer() {100000, 0, 0, 0})
-        '
-        'Label37
-        '
-        resources.ApplyResources(Me.Label37, "Label37")
-        Me.Label37.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.Label37.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label37.Name = "Label37"
-        '
-        'TabPage8
-        '
-        Me.TabPage8.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.TabPage8.Controls.Add(Me.Label40)
-        Me.TabPage8.Controls.Add(Me.numload_rate4)
-        Me.TabPage8.Controls.Add(Me.numload_delay4)
-        Me.TabPage8.Controls.Add(Me.Label43)
-        resources.ApplyResources(Me.TabPage8, "TabPage8")
-        Me.TabPage8.Name = "TabPage8"
-        '
-        'Label40
-        '
-        resources.ApplyResources(Me.Label40, "Label40")
-        Me.Label40.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.Label40.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label40.Name = "Label40"
-        '
-        'numload_rate4
-        '
-        Me.numload_rate4.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.numload_rate4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_rate4, "numload_rate4")
-        Me.numload_rate4.ForeColor = System.Drawing.SystemColors.Control
-        Me.numload_rate4.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.numload_rate4.Name = "numload_rate4"
-        Me.numload_rate4.Value = New Decimal(New Integer() {40, 0, 0, 0})
-        '
-        'numload_delay4
-        '
-        Me.numload_delay4.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.numload_delay4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_delay4, "numload_delay4")
-        Me.numload_delay4.ForeColor = System.Drawing.SystemColors.Control
-        Me.numload_delay4.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
-        Me.numload_delay4.Name = "numload_delay4"
-        Me.numload_delay4.Value = New Decimal(New Integer() {100000, 0, 0, 0})
-        '
-        'Label43
-        '
-        resources.ApplyResources(Me.Label43, "Label43")
-        Me.Label43.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.Label43.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label43.Name = "Label43"
-        '
-        'TabPage9
-        '
-        Me.TabPage9.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.TabPage9.Controls.Add(Me.Label44)
-        Me.TabPage9.Controls.Add(Me.numload_rate5)
-        Me.TabPage9.Controls.Add(Me.numload_delay5)
-        Me.TabPage9.Controls.Add(Me.Label45)
-        resources.ApplyResources(Me.TabPage9, "TabPage9")
-        Me.TabPage9.Name = "TabPage9"
-        '
-        'Label44
-        '
-        resources.ApplyResources(Me.Label44, "Label44")
-        Me.Label44.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.Label44.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label44.Name = "Label44"
-        '
-        'numload_rate5
-        '
-        Me.numload_rate5.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.numload_rate5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_rate5, "numload_rate5")
-        Me.numload_rate5.ForeColor = System.Drawing.SystemColors.Control
-        Me.numload_rate5.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.numload_rate5.Name = "numload_rate5"
-        Me.numload_rate5.Value = New Decimal(New Integer() {40, 0, 0, 0})
-        '
-        'numload_delay5
-        '
-        Me.numload_delay5.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.numload_delay5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_delay5, "numload_delay5")
-        Me.numload_delay5.ForeColor = System.Drawing.SystemColors.Control
-        Me.numload_delay5.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
-        Me.numload_delay5.Name = "numload_delay5"
-        Me.numload_delay5.Value = New Decimal(New Integer() {100000, 0, 0, 0})
-        '
-        'Label45
-        '
-        resources.ApplyResources(Me.Label45, "Label45")
-        Me.Label45.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.Label45.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label45.Name = "Label45"
-        '
-        'TabPage10
-        '
-        Me.TabPage10.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.TabPage10.Controls.Add(Me.Label47)
-        Me.TabPage10.Controls.Add(Me.numload_rate6)
-        Me.TabPage10.Controls.Add(Me.numload_delay6)
-        Me.TabPage10.Controls.Add(Me.Label48)
-        resources.ApplyResources(Me.TabPage10, "TabPage10")
-        Me.TabPage10.Name = "TabPage10"
-        '
-        'Label47
-        '
-        resources.ApplyResources(Me.Label47, "Label47")
-        Me.Label47.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.Label47.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label47.Name = "Label47"
-        '
-        'numload_rate6
-        '
-        Me.numload_rate6.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.numload_rate6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_rate6, "numload_rate6")
-        Me.numload_rate6.ForeColor = System.Drawing.SystemColors.Control
-        Me.numload_rate6.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.numload_rate6.Name = "numload_rate6"
-        Me.numload_rate6.Value = New Decimal(New Integer() {40, 0, 0, 0})
-        '
-        'numload_delay6
-        '
-        Me.numload_delay6.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.numload_delay6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_delay6, "numload_delay6")
-        Me.numload_delay6.ForeColor = System.Drawing.SystemColors.Control
-        Me.numload_delay6.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
-        Me.numload_delay6.Name = "numload_delay6"
-        Me.numload_delay6.Value = New Decimal(New Integer() {100000, 0, 0, 0})
-        '
-        'Label48
-        '
-        resources.ApplyResources(Me.Label48, "Label48")
-        Me.Label48.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.Label48.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label48.Name = "Label48"
-        '
-        'TabPage11
-        '
-        Me.TabPage11.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.TabPage11.Controls.Add(Me.Label50)
-        Me.TabPage11.Controls.Add(Me.numload_rate7)
-        Me.TabPage11.Controls.Add(Me.numload_delay7)
-        Me.TabPage11.Controls.Add(Me.Label54)
-        resources.ApplyResources(Me.TabPage11, "TabPage11")
-        Me.TabPage11.Name = "TabPage11"
-        '
-        'Label50
-        '
-        resources.ApplyResources(Me.Label50, "Label50")
-        Me.Label50.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.Label50.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label50.Name = "Label50"
-        '
-        'numload_rate7
-        '
-        Me.numload_rate7.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.numload_rate7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_rate7, "numload_rate7")
-        Me.numload_rate7.ForeColor = System.Drawing.SystemColors.Control
-        Me.numload_rate7.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.numload_rate7.Name = "numload_rate7"
-        Me.numload_rate7.Value = New Decimal(New Integer() {40, 0, 0, 0})
-        '
-        'numload_delay7
-        '
-        Me.numload_delay7.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.numload_delay7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_delay7, "numload_delay7")
-        Me.numload_delay7.ForeColor = System.Drawing.SystemColors.Control
-        Me.numload_delay7.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
-        Me.numload_delay7.Name = "numload_delay7"
-        Me.numload_delay7.Value = New Decimal(New Integer() {100000, 0, 0, 0})
-        '
-        'Label54
-        '
-        resources.ApplyResources(Me.Label54, "Label54")
-        Me.Label54.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.Label54.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label54.Name = "Label54"
-        '
-        'TabPage12
-        '
-        Me.TabPage12.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.TabPage12.Controls.Add(Me.Label55)
-        Me.TabPage12.Controls.Add(Me.numload_rate8)
-        Me.TabPage12.Controls.Add(Me.numload_delay8)
-        Me.TabPage12.Controls.Add(Me.Label56)
-        resources.ApplyResources(Me.TabPage12, "TabPage12")
-        Me.TabPage12.Name = "TabPage12"
-        '
-        'Label55
-        '
-        resources.ApplyResources(Me.Label55, "Label55")
-        Me.Label55.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.Label55.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label55.Name = "Label55"
-        '
-        'numload_rate8
-        '
-        Me.numload_rate8.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.numload_rate8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_rate8, "numload_rate8")
-        Me.numload_rate8.ForeColor = System.Drawing.SystemColors.Control
-        Me.numload_rate8.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.numload_rate8.Name = "numload_rate8"
-        Me.numload_rate8.Value = New Decimal(New Integer() {40, 0, 0, 0})
-        '
-        'numload_delay8
-        '
-        Me.numload_delay8.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.numload_delay8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_delay8, "numload_delay8")
-        Me.numload_delay8.ForeColor = System.Drawing.SystemColors.Control
-        Me.numload_delay8.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
-        Me.numload_delay8.Name = "numload_delay8"
-        Me.numload_delay8.Value = New Decimal(New Integer() {100000, 0, 0, 0})
-        '
-        'Label56
-        '
-        resources.ApplyResources(Me.Label56, "Label56")
-        Me.Label56.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.Label56.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label56.Name = "Label56"
-        '
-        'TabPage13
-        '
-        Me.TabPage13.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.TabPage13.Controls.Add(Me.Label57)
-        Me.TabPage13.Controls.Add(Me.numload_rate9)
-        Me.TabPage13.Controls.Add(Me.numload_delay9)
-        Me.TabPage13.Controls.Add(Me.Label58)
-        resources.ApplyResources(Me.TabPage13, "TabPage13")
-        Me.TabPage13.Name = "TabPage13"
-        '
-        'Label57
-        '
-        resources.ApplyResources(Me.Label57, "Label57")
-        Me.Label57.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.Label57.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label57.Name = "Label57"
-        '
-        'numload_rate9
-        '
-        Me.numload_rate9.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.numload_rate9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_rate9, "numload_rate9")
-        Me.numload_rate9.ForeColor = System.Drawing.SystemColors.Control
-        Me.numload_rate9.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.numload_rate9.Name = "numload_rate9"
-        Me.numload_rate9.Value = New Decimal(New Integer() {40, 0, 0, 0})
-        '
-        'numload_delay9
-        '
-        Me.numload_delay9.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.numload_delay9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_delay9, "numload_delay9")
-        Me.numload_delay9.ForeColor = System.Drawing.SystemColors.Control
-        Me.numload_delay9.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
-        Me.numload_delay9.Name = "numload_delay9"
-        Me.numload_delay9.Value = New Decimal(New Integer() {100000, 0, 0, 0})
-        '
-        'Label58
-        '
-        resources.ApplyResources(Me.Label58, "Label58")
-        Me.Label58.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.Label58.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label58.Name = "Label58"
-        '
-        'TabPage14
-        '
-        Me.TabPage14.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.TabPage14.Controls.Add(Me.Label59)
-        Me.TabPage14.Controls.Add(Me.numload_rate10)
-        Me.TabPage14.Controls.Add(Me.numload_delay10)
-        Me.TabPage14.Controls.Add(Me.Label60)
-        resources.ApplyResources(Me.TabPage14, "TabPage14")
-        Me.TabPage14.Name = "TabPage14"
-        '
-        'Label59
-        '
-        resources.ApplyResources(Me.Label59, "Label59")
-        Me.Label59.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.Label59.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label59.Name = "Label59"
-        '
-        'numload_rate10
-        '
-        Me.numload_rate10.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.numload_rate10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_rate10, "numload_rate10")
-        Me.numload_rate10.ForeColor = System.Drawing.SystemColors.Control
-        Me.numload_rate10.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.numload_rate10.Name = "numload_rate10"
-        Me.numload_rate10.Value = New Decimal(New Integer() {40, 0, 0, 0})
-        '
-        'numload_delay10
-        '
-        Me.numload_delay10.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.numload_delay10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numload_delay10, "numload_delay10")
-        Me.numload_delay10.ForeColor = System.Drawing.SystemColors.Control
-        Me.numload_delay10.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
-        Me.numload_delay10.Name = "numload_delay10"
-        Me.numload_delay10.Value = New Decimal(New Integer() {100000, 0, 0, 0})
-        '
-        'Label60
-        '
-        resources.ApplyResources(Me.Label60, "Label60")
-        Me.Label60.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.Label60.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label60.Name = "Label60"
         '
         'chkload5
         '
@@ -2438,6 +2187,7 @@ Partial Class Mainwindow
         '
         'pnl_hotkey
         '
+        resources.ApplyResources(Me.pnl_hotkey, "pnl_hotkey")
         Me.pnl_hotkey.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.pnl_hotkey.Controls.Add(Me.Label119)
         Me.pnl_hotkey.Controls.Add(Me.txtreset_ash_key)
@@ -2478,7 +2228,6 @@ Partial Class Mainwindow
         Me.pnl_hotkey.Controls.Add(Me.chknamedpipe)
         Me.pnl_hotkey.Controls.Add(Me.chkshift_reset)
         Me.pnl_hotkey.Controls.Add(Me.chkshift_skip)
-        resources.ApplyResources(Me.pnl_hotkey, "pnl_hotkey")
         Me.pnl_hotkey.Name = "pnl_hotkey"
         '
         'Label119
@@ -2524,9 +2273,9 @@ Partial Class Mainwindow
         '
         'numpresstime
         '
+        resources.ApplyResources(Me.numpresstime, "numpresstime")
         Me.numpresstime.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numpresstime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numpresstime, "numpresstime")
         Me.numpresstime.ForeColor = System.Drawing.SystemColors.Control
         Me.numpresstime.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.numpresstime.Name = "numpresstime"
@@ -2807,6 +2556,7 @@ Partial Class Mainwindow
         '
         'pnl_cvparameter
         '
+        resources.ApplyResources(Me.pnl_cvparameter, "pnl_cvparameter")
         Me.pnl_cvparameter.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.pnl_cvparameter.Controls.Add(Me.Label62)
         Me.pnl_cvparameter.Controls.Add(Me.Label81)
@@ -2819,7 +2569,6 @@ Partial Class Mainwindow
         Me.pnl_cvparameter.Controls.Add(Me.btnresetup)
         Me.pnl_cvparameter.Controls.Add(Me._moji5)
         Me.pnl_cvparameter.Controls.Add(Me.cmbcv_device)
-        resources.ApplyResources(Me.pnl_cvparameter, "pnl_cvparameter")
         Me.pnl_cvparameter.Name = "pnl_cvparameter"
         '
         'Label62
@@ -2852,9 +2601,9 @@ Partial Class Mainwindow
         '
         'numcv_framerate
         '
+        resources.ApplyResources(Me.numcv_framerate, "numcv_framerate")
         Me.numcv_framerate.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numcv_framerate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numcv_framerate, "numcv_framerate")
         Me.numcv_framerate.ForeColor = System.Drawing.SystemColors.Control
         Me.numcv_framerate.Maximum = New Decimal(New Integer() {180, 0, 0, 0})
         Me.numcv_framerate.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
@@ -2863,8 +2612,8 @@ Partial Class Mainwindow
         '
         'btnconnect_camera
         '
-        Me.btnconnect_camera.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btnconnect_camera, "btnconnect_camera")
+        Me.btnconnect_camera.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btnconnect_camera.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btnconnect_camera.Name = "btnconnect_camera"
         Me.btnconnect_camera.UseVisualStyleBackColor = False
@@ -2880,20 +2629,20 @@ Partial Class Mainwindow
         '
         'numcv_device
         '
+        resources.ApplyResources(Me.numcv_device, "numcv_device")
         Me.numcv_device.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.numcv_device.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.numcv_device.DataBindings.Add(New System.Windows.Forms.Binding("Value", Global.AutoSplitHelper_OpenCV.My.MySettings.Default, "numcv_device", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
-        resources.ApplyResources(Me.numcv_device, "numcv_device")
         Me.numcv_device.ForeColor = System.Drawing.SystemColors.Control
-        Me.numcv_device.Maximum = New Decimal(New Integer() {9999, 0, 0, 0})
+        Me.numcv_device.Maximum = New Decimal(New Integer() {99, 0, 0, 0})
         Me.numcv_device.Minimum = New Decimal(New Integer() {1920, 0, 0, -2147483648})
         Me.numcv_device.Name = "numcv_device"
         Me.numcv_device.Value = Global.AutoSplitHelper_OpenCV.My.MySettings.Default.numcv_device
         '
         'btnresetup
         '
-        Me.btnresetup.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btnresetup, "btnresetup")
+        Me.btnresetup.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btnresetup.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btnresetup.Name = "btnresetup"
         Me.btnresetup.UseVisualStyleBackColor = False
@@ -2917,6 +2666,7 @@ Partial Class Mainwindow
         '
         'pnl_focus
         '
+        resources.ApplyResources(Me.pnl_focus, "pnl_focus")
         Me.pnl_focus.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.pnl_focus.Controls.Add(Me.lblpid_1st)
         Me.pnl_focus.Controls.Add(Me.Label82)
@@ -2932,7 +2682,6 @@ Partial Class Mainwindow
         Me.pnl_focus.Controls.Add(Me.cmbsomeapp)
         Me.pnl_focus.Controls.Add(Me.btnaddapp1)
         Me.pnl_focus.Controls.Add(Me.Label1)
-        resources.ApplyResources(Me.pnl_focus, "pnl_focus")
         Me.pnl_focus.Name = "pnl_focus"
         '
         'lblpid_1st
@@ -2968,17 +2717,17 @@ Partial Class Mainwindow
         '
         'btnaddapp2
         '
-        Me.btnaddapp2.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btnaddapp2, "btnaddapp2")
+        Me.btnaddapp2.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btnaddapp2.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btnaddapp2.Name = "btnaddapp2"
         Me.btnaddapp2.UseVisualStyleBackColor = False
         '
         'numsendsleep
         '
+        resources.ApplyResources(Me.numsendsleep, "numsendsleep")
         Me.numsendsleep.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numsendsleep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numsendsleep, "numsendsleep")
         Me.numsendsleep.ForeColor = System.Drawing.SystemColors.Control
         Me.numsendsleep.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
         Me.numsendsleep.Name = "numsendsleep"
@@ -2986,8 +2735,8 @@ Partial Class Mainwindow
         '
         'btngetsomeactive
         '
-        Me.btngetsomeactive.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btngetsomeactive, "btngetsomeactive")
+        Me.btngetsomeactive.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btngetsomeactive.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btngetsomeactive.Name = "btngetsomeactive"
         Me.btngetsomeactive.UseVisualStyleBackColor = False
@@ -3002,24 +2751,24 @@ Partial Class Mainwindow
         '
         'btndeleteitem_someapp
         '
-        Me.btndeleteitem_someapp.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btndeleteitem_someapp, "btndeleteitem_someapp")
+        Me.btndeleteitem_someapp.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btndeleteitem_someapp.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btndeleteitem_someapp.Name = "btndeleteitem_someapp"
         Me.btndeleteitem_someapp.UseVisualStyleBackColor = False
         '
         'btngettimer
         '
-        Me.btngettimer.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btngettimer, "btngettimer")
+        Me.btngettimer.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btngettimer.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btngettimer.Name = "btngettimer"
         Me.btngettimer.UseVisualStyleBackColor = False
         '
         'btndelete_timer
         '
-        Me.btndelete_timer.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btndelete_timer, "btndelete_timer")
+        Me.btndelete_timer.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btndelete_timer.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btndelete_timer.Name = "btndelete_timer"
         Me.btndelete_timer.UseVisualStyleBackColor = False
@@ -3035,8 +2784,8 @@ Partial Class Mainwindow
         '
         'btnaddapp1
         '
-        Me.btnaddapp1.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btnaddapp1, "btnaddapp1")
+        Me.btnaddapp1.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btnaddapp1.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btnaddapp1.Name = "btnaddapp1"
         Me.btnaddapp1.UseVisualStyleBackColor = False
@@ -3050,6 +2799,7 @@ Partial Class Mainwindow
         '
         'pnl_graph
         '
+        resources.ApplyResources(Me.pnl_graph, "pnl_graph")
         Me.pnl_graph.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.pnl_graph.Controls.Add(Me.chkrename_livesplit)
         Me.pnl_graph.Controls.Add(Me.Label88)
@@ -3058,7 +2808,6 @@ Partial Class Mainwindow
         Me.pnl_graph.Controls.Add(Me.numgraph_first)
         Me.pnl_graph.Controls.Add(Me.btnreset_table)
         Me.pnl_graph.Controls.Add(Me.btnreset_count)
-        resources.ApplyResources(Me.pnl_graph, "pnl_graph")
         Me.pnl_graph.Name = "pnl_graph"
         '
         'chkrename_livesplit
@@ -3078,8 +2827,8 @@ Partial Class Mainwindow
         '
         'btnreset_livesplit
         '
-        Me.btnreset_livesplit.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btnreset_livesplit, "btnreset_livesplit")
+        Me.btnreset_livesplit.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btnreset_livesplit.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btnreset_livesplit.Name = "btnreset_livesplit"
         Me.btnreset_livesplit.UseVisualStyleBackColor = False
@@ -3093,9 +2842,9 @@ Partial Class Mainwindow
         '
         'numgraph_first
         '
+        resources.ApplyResources(Me.numgraph_first, "numgraph_first")
         Me.numgraph_first.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numgraph_first.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numgraph_first, "numgraph_first")
         Me.numgraph_first.ForeColor = System.Drawing.SystemColors.Control
         Me.numgraph_first.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.numgraph_first.Name = "numgraph_first"
@@ -3103,22 +2852,23 @@ Partial Class Mainwindow
         '
         'btnreset_table
         '
-        Me.btnreset_table.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btnreset_table, "btnreset_table")
+        Me.btnreset_table.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btnreset_table.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btnreset_table.Name = "btnreset_table"
         Me.btnreset_table.UseVisualStyleBackColor = False
         '
         'btnreset_count
         '
-        Me.btnreset_count.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btnreset_count, "btnreset_count")
+        Me.btnreset_count.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btnreset_count.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btnreset_count.Name = "btnreset_count"
         Me.btnreset_count.UseVisualStyleBackColor = False
         '
         'GroupBox2
         '
+        resources.ApplyResources(Me.GroupBox2, "GroupBox2")
         Me.GroupBox2.Controls.Add(Me.chkmonitor_sizestate)
         Me.GroupBox2.Controls.Add(Me.btntext_createtext)
         Me.GroupBox2.Controls.Add(Me.numtextwindow_sizex)
@@ -3135,7 +2885,6 @@ Partial Class Mainwindow
         Me.GroupBox2.Controls.Add(Me.txttemp_picturepass)
         Me.GroupBox2.Controls.Add(Me.Label71)
         Me.GroupBox2.ForeColor = System.Drawing.Color.Cornsilk
-        resources.ApplyResources(Me.GroupBox2, "GroupBox2")
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.TabStop = False
         '
@@ -3151,8 +2900,8 @@ Partial Class Mainwindow
         '
         'btntext_createtext
         '
-        Me.btntext_createtext.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btntext_createtext, "btntext_createtext")
+        Me.btntext_createtext.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btntext_createtext.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btntext_createtext.Name = "btntext_createtext"
         Me.btntext_createtext.UseVisualStyleBackColor = False
@@ -3189,10 +2938,10 @@ Partial Class Mainwindow
         '
         'numprofile
         '
+        resources.ApplyResources(Me.numprofile, "numprofile")
         Me.numprofile.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.numprofile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.numprofile.DataBindings.Add(New System.Windows.Forms.Binding("Value", Global.AutoSplitHelper_OpenCV.My.MySettings.Default, "numprofile", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
-        resources.ApplyResources(Me.numprofile, "numprofile")
         Me.numprofile.ForeColor = System.Drawing.SystemColors.Control
         Me.numprofile.Maximum = New Decimal(New Integer() {9999, 0, 0, 0})
         Me.numprofile.Minimum = New Decimal(New Integer() {1920, 0, 0, -2147483648})
@@ -3226,6 +2975,7 @@ Partial Class Mainwindow
         '
         'GroupBox3
         '
+        resources.ApplyResources(Me.GroupBox3, "GroupBox3")
         Me.GroupBox3.Controls.Add(Me.numskip_ash)
         Me.GroupBox3.Controls.Add(Me.numundo_ash)
         Me.GroupBox3.Controls.Add(Me.numreset_ash)
@@ -3241,7 +2991,6 @@ Partial Class Mainwindow
         Me.GroupBox3.Controls.Add(Me.lblkeysforskip)
         Me.GroupBox3.Controls.Add(Me.lblkeysforundo)
         Me.GroupBox3.ForeColor = System.Drawing.Color.Cornsilk
-        resources.ApplyResources(Me.GroupBox3, "GroupBox3")
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.TabStop = False
         '
@@ -3306,8 +3055,8 @@ Partial Class Mainwindow
         '
         'numsavex
         '
-        Me.numsavex.DataBindings.Add(New System.Windows.Forms.Binding("Value", Global.AutoSplitHelper_OpenCV.My.MySettings.Default, "numsavex", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         resources.ApplyResources(Me.numsavex, "numsavex")
+        Me.numsavex.DataBindings.Add(New System.Windows.Forms.Binding("Value", Global.AutoSplitHelper_OpenCV.My.MySettings.Default, "numsavex", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         Me.numsavex.Maximum = New Decimal(New Integer() {99999, 0, 0, 0})
         Me.numsavex.Minimum = New Decimal(New Integer() {99999, 0, 0, -2147483648})
         Me.numsavex.Name = "numsavex"
@@ -3315,8 +3064,8 @@ Partial Class Mainwindow
         '
         'numsavey
         '
-        Me.numsavey.DataBindings.Add(New System.Windows.Forms.Binding("Value", Global.AutoSplitHelper_OpenCV.My.MySettings.Default, "numsavey", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         resources.ApplyResources(Me.numsavey, "numsavey")
+        Me.numsavey.DataBindings.Add(New System.Windows.Forms.Binding("Value", Global.AutoSplitHelper_OpenCV.My.MySettings.Default, "numsavey", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         Me.numsavey.Maximum = New Decimal(New Integer() {99999, 0, 0, 0})
         Me.numsavey.Minimum = New Decimal(New Integer() {99999, 0, 0, -2147483648})
         Me.numsavey.Name = "numsavey"
@@ -3352,13 +3101,13 @@ Partial Class Mainwindow
         '
         'Panel5
         '
+        resources.ApplyResources(Me.Panel5, "Panel5")
         Me.Panel5.Controls.Add(Me.txtsavetempnumber)
         Me.Panel5.Controls.Add(Me.numtemp)
         Me.Panel5.Controls.Add(Me.txt11)
         Me.Panel5.Controls.Add(Me.txt22)
         Me.Panel5.Controls.Add(Me.txt12)
         Me.Panel5.Controls.Add(Me.txt21)
-        resources.ApplyResources(Me.Panel5, "Panel5")
         Me.Panel5.Name = "Panel5"
         '
         'txtsavetempnumber
@@ -3429,6 +3178,7 @@ Partial Class Mainwindow
         '
         'pnl_parameter
         '
+        resources.ApplyResources(Me.pnl_parameter, "pnl_parameter")
         Me.pnl_parameter.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.pnl_parameter.Controls.Add(Me._moji1)
         Me.pnl_parameter.Controls.Add(Me.Label2)
@@ -3447,7 +3197,6 @@ Partial Class Mainwindow
         Me.pnl_parameter.Controls.Add(Me.chkcv_loadremover)
         Me.pnl_parameter.Controls.Add(Me.numpercent)
         Me.pnl_parameter.Controls.Add(Me.chkcv_monitor)
-        resources.ApplyResources(Me.pnl_parameter, "pnl_parameter")
         Me.pnl_parameter.Name = "pnl_parameter"
         '
         '_moji1
@@ -3480,17 +3229,17 @@ Partial Class Mainwindow
         '
         'btninsertanten
         '
-        Me.btninsertanten.BackColor = System.Drawing.Color.Lavender
         resources.ApplyResources(Me.btninsertanten, "btninsertanten")
+        Me.btninsertanten.BackColor = System.Drawing.Color.Lavender
         Me.btninsertanten.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btninsertanten.Name = "btninsertanten"
         Me.btninsertanten.UseVisualStyleBackColor = False
         '
         'numanten
         '
+        resources.ApplyResources(Me.numanten, "numanten")
         Me.numanten.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numanten.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numanten, "numanten")
         Me.numanten.ForeColor = System.Drawing.SystemColors.Control
         Me.numanten.Maximum = New Decimal(New Integer() {128, 0, 0, 0})
         Me.numanten.Name = "numanten"
@@ -3506,8 +3255,8 @@ Partial Class Mainwindow
         '
         'btninsertitti
         '
-        Me.btninsertitti.BackColor = System.Drawing.Color.Lavender
         resources.ApplyResources(Me.btninsertitti, "btninsertitti")
+        Me.btninsertitti.BackColor = System.Drawing.Color.Lavender
         Me.btninsertitti.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btninsertitti.Name = "btninsertitti"
         Me.btninsertitti.UseVisualStyleBackColor = False
@@ -3522,28 +3271,28 @@ Partial Class Mainwindow
         '
         'btninsertsleep
         '
-        Me.btninsertsleep.BackColor = System.Drawing.Color.Lavender
         resources.ApplyResources(Me.btninsertsleep, "btninsertsleep")
+        Me.btninsertsleep.BackColor = System.Drawing.Color.Lavender
         Me.btninsertsleep.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btninsertsleep.Name = "btninsertsleep"
         Me.btninsertsleep.UseVisualStyleBackColor = False
         '
         'numstop
         '
+        resources.ApplyResources(Me.numstop, "numstop")
         Me.numstop.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numstop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numstop, "numstop")
         Me.numstop.ForeColor = System.Drawing.SystemColors.Control
-        Me.numstop.Maximum = New Decimal(New Integer() {9999, 0, 0, 0})
+        Me.numstop.Maximum = New Decimal(New Integer() {999, 0, 0, 0})
         Me.numstop.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.numstop.Name = "numstop"
         Me.numstop.Value = New Decimal(New Integer() {10, 0, 0, 0})
         '
         'numloopcount
         '
+        resources.ApplyResources(Me.numloopcount, "numloopcount")
         Me.numloopcount.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numloopcount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numloopcount, "numloopcount")
         Me.numloopcount.ForeColor = System.Drawing.SystemColors.Control
         Me.numloopcount.Maximum = New Decimal(New Integer() {999, 0, 0, 0})
         Me.numloopcount.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
@@ -3552,11 +3301,11 @@ Partial Class Mainwindow
         '
         'numcv_interval
         '
+        resources.ApplyResources(Me.numcv_interval, "numcv_interval")
         Me.numcv_interval.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numcv_interval.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numcv_interval, "numcv_interval")
         Me.numcv_interval.ForeColor = System.Drawing.SystemColors.Control
-        Me.numcv_interval.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
+        Me.numcv_interval.Maximum = New Decimal(New Integer() {99999, 0, 0, 0})
         Me.numcv_interval.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.numcv_interval.Name = "numcv_interval"
         Me.numcv_interval.Value = New Decimal(New Integer() {30, 0, 0, 0})
@@ -3578,9 +3327,9 @@ Partial Class Mainwindow
         '
         'numpercent
         '
+        resources.ApplyResources(Me.numpercent, "numpercent")
         Me.numpercent.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numpercent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numpercent, "numpercent")
         Me.numpercent.ForeColor = System.Drawing.SystemColors.Control
         Me.numpercent.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.numpercent.Name = "numpercent"
@@ -3596,15 +3345,15 @@ Partial Class Mainwindow
         '
         'btnstartopencv
         '
-        Me.btnstartopencv.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(148, Byte), Integer))
         resources.ApplyResources(Me.btnstartopencv, "btnstartopencv")
+        Me.btnstartopencv.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(148, Byte), Integer))
         Me.btnstartopencv.Name = "btnstartopencv"
         Me.btnstartopencv.UseVisualStyleBackColor = False
         '
         'btndeleteprofile
         '
-        Me.btndeleteprofile.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         resources.ApplyResources(Me.btndeleteprofile, "btndeleteprofile")
+        Me.btndeleteprofile.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.btndeleteprofile.ForeColor = System.Drawing.Color.DarkGray
         Me.btndeleteprofile.Image = Global.AutoSplitHelper_OpenCV.My.Resources.Resources.delete1
         Me.btndeleteprofile.Name = "btndeleteprofile"
@@ -3612,8 +3361,8 @@ Partial Class Mainwindow
         '
         'btnaddprofile
         '
-        Me.btnaddprofile.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         resources.ApplyResources(Me.btnaddprofile, "btnaddprofile")
+        Me.btnaddprofile.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.btnaddprofile.ForeColor = System.Drawing.Color.DarkGray
         Me.btnaddprofile.Image = Global.AutoSplitHelper_OpenCV.My.Resources.Resources.save2
         Me.btnaddprofile.Name = "btnaddprofile"
@@ -3629,9 +3378,10 @@ Partial Class Mainwindow
         '
         'MenuStrip1
         '
-        resources.ApplyResources(Me.MenuStrip1, "MenuStrip1")
         Me.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
+        resources.ApplyResources(Me.MenuStrip1, "MenuStrip1")
         Me.MenuStrip1.GripMargin = New System.Windows.Forms.Padding(2)
+        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(21, 21)
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuToolStripMenuItem, Me.ToolToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
@@ -3812,8 +3562,8 @@ Partial Class Mainwindow
         '
         'btnclose_general
         '
-        Me.btnclose_general.BackColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(47, Byte), Integer))
         resources.ApplyResources(Me.btnclose_general, "btnclose_general")
+        Me.btnclose_general.BackColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(47, Byte), Integer))
         Me.btnclose_general.ForeColor = System.Drawing.Color.LightGray
         Me.btnclose_general.Name = "btnclose_general"
         Me.btnclose_general.UseVisualStyleBackColor = False
@@ -3945,9 +3695,9 @@ Partial Class Mainwindow
         '
         'numnowloop
         '
+        resources.ApplyResources(Me.numnowloop, "numnowloop")
         Me.numnowloop.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.numnowloop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.numnowloop, "numnowloop")
         Me.numnowloop.ForeColor = System.Drawing.SystemColors.Control
         Me.numnowloop.Maximum = New Decimal(New Integer() {999, 0, 0, 0})
         Me.numnowloop.Name = "numnowloop"
@@ -4051,6 +3801,7 @@ Partial Class Mainwindow
         '
         'GroupBox8
         '
+        resources.ApplyResources(Me.GroupBox8, "GroupBox8")
         Me.GroupBox8.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.GroupBox8.Controls.Add(Me.txtcv_ikiti_load10)
         Me.GroupBox8.Controls.Add(Me.txtcv_ikiti_load9)
@@ -4092,7 +3843,6 @@ Partial Class Mainwindow
         Me.GroupBox8.Controls.Add(Me.lblcv_nowmaxval_load8)
         Me.GroupBox8.Controls.Add(Me.lblcv_nowmaxval_load9)
         Me.GroupBox8.Controls.Add(Me.lblcv_maxval_load9)
-        resources.ApplyResources(Me.GroupBox8, "GroupBox8")
         Me.GroupBox8.ForeColor = System.Drawing.Color.PeachPuff
         Me.GroupBox8.Name = "GroupBox8"
         Me.GroupBox8.TabStop = False
@@ -4691,16 +4441,16 @@ Partial Class Mainwindow
         '
         'btncv_downsize
         '
-        Me.btncv_downsize.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btncv_downsize, "btncv_downsize")
+        Me.btncv_downsize.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btncv_downsize.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btncv_downsize.Name = "btncv_downsize"
         Me.btncv_downsize.UseVisualStyleBackColor = False
         '
         'btncv_first
         '
-        Me.btncv_first.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btncv_first, "btncv_first")
+        Me.btncv_first.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btncv_first.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btncv_first.Name = "btncv_first"
         Me.btncv_first.UseVisualStyleBackColor = False
@@ -4824,8 +4574,8 @@ Partial Class Mainwindow
         '
         'btncv_stop
         '
-        Me.btncv_stop.BackColor = System.Drawing.Color.FromArgb(CType(CType(202, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(255, Byte), Integer))
         resources.ApplyResources(Me.btncv_stop, "btncv_stop")
+        Me.btncv_stop.BackColor = System.Drawing.Color.FromArgb(CType(CType(202, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btncv_stop.Name = "btncv_stop"
         Me.btncv_stop.UseVisualStyleBackColor = False
         '
@@ -4861,16 +4611,16 @@ Partial Class Mainwindow
         '
         'btncv_forward
         '
-        Me.btncv_forward.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btncv_forward, "btncv_forward")
+        Me.btncv_forward.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btncv_forward.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btncv_forward.Name = "btncv_forward"
         Me.btncv_forward.UseVisualStyleBackColor = False
         '
         'btncv_back
         '
-        Me.btncv_back.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btncv_back, "btncv_back")
+        Me.btncv_back.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btncv_back.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btncv_back.Name = "btncv_back"
         Me.btncv_back.UseVisualStyleBackColor = False
@@ -5025,20 +4775,20 @@ Partial Class Mainwindow
         '
         'btntosetting01
         '
-        Me.btntosetting01.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btntosetting01, "btntosetting01")
+        Me.btntosetting01.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btntosetting01.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btntosetting01.Name = "btntosetting01"
         Me.btntosetting01.UseVisualStyleBackColor = False
         '
         'GroupBox9
         '
+        resources.ApplyResources(Me.GroupBox9, "GroupBox9")
         Me.GroupBox9.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.GroupBox9.Controls.Add(Me.txtrenameapp)
         Me.GroupBox9.Controls.Add(Me.chkmulti)
         Me.GroupBox9.Controls.Add(Me.txtpid_2nd)
         Me.GroupBox9.Controls.Add(Me.btnrenameapp)
-        resources.ApplyResources(Me.GroupBox9, "GroupBox9")
         Me.GroupBox9.ForeColor = System.Drawing.Color.PeachPuff
         Me.GroupBox9.Name = "GroupBox9"
         Me.GroupBox9.TabStop = False
@@ -5069,21 +4819,21 @@ Partial Class Mainwindow
         '
         'btnrenameapp
         '
-        Me.btnrenameapp.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btnrenameapp, "btnrenameapp")
+        Me.btnrenameapp.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btnrenameapp.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btnrenameapp.Name = "btnrenameapp"
         Me.btnrenameapp.UseVisualStyleBackColor = False
         '
         'GroupBox7
         '
+        resources.ApplyResources(Me.GroupBox7, "GroupBox7")
         Me.GroupBox7.Controls.Add(Me.lblm13)
         Me.GroupBox7.Controls.Add(Me.rich2_hwnddetail)
         Me.GroupBox7.Controls.Add(Me.txt2_windowtitle2)
         Me.GroupBox7.Controls.Add(Me.btn2_gethwnd2)
         Me.GroupBox7.Controls.Add(Me.list2_hwnd2)
         Me.GroupBox7.Controls.Add(Me.lbl2_parent_kid)
-        resources.ApplyResources(Me.GroupBox7, "GroupBox7")
         Me.GroupBox7.Name = "GroupBox7"
         Me.GroupBox7.TabStop = False
         '
@@ -5109,8 +4859,8 @@ Partial Class Mainwindow
         '
         'btn2_gethwnd2
         '
-        Me.btn2_gethwnd2.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         resources.ApplyResources(Me.btn2_gethwnd2, "btn2_gethwnd2")
+        Me.btn2_gethwnd2.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.btn2_gethwnd2.Name = "btn2_gethwnd2"
         Me.btn2_gethwnd2.UseVisualStyleBackColor = False
         '
@@ -5145,8 +4895,8 @@ Partial Class Mainwindow
         '
         'btninsertzahyou
         '
-        Me.btninsertzahyou.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btninsertzahyou, "btninsertzahyou")
+        Me.btninsertzahyou.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btninsertzahyou.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btninsertzahyou.Name = "btninsertzahyou"
         Me.btninsertzahyou.UseVisualStyleBackColor = False
@@ -5253,7 +5003,6 @@ Partial Class Mainwindow
         '
         'applysize
         '
-        Me.applysize.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
         resources.ApplyResources(Me.applysize, "applysize")
         Me.applysize.Name = "applysize"
         '
@@ -5299,9 +5048,9 @@ Partial Class Mainwindow
         '
         'num2_rbx
         '
+        resources.ApplyResources(Me.num2_rbx, "num2_rbx")
         Me.num2_rbx.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.num2_rbx.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.num2_rbx, "num2_rbx")
         Me.num2_rbx.ForeColor = System.Drawing.SystemColors.Control
         Me.num2_rbx.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
         Me.num2_rbx.Minimum = New Decimal(New Integer() {100000, 0, 0, -2147483648})
@@ -5310,9 +5059,9 @@ Partial Class Mainwindow
         '
         'num2_rby
         '
+        resources.ApplyResources(Me.num2_rby, "num2_rby")
         Me.num2_rby.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.num2_rby.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.num2_rby, "num2_rby")
         Me.num2_rby.ForeColor = System.Drawing.SystemColors.Control
         Me.num2_rby.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
         Me.num2_rby.Minimum = New Decimal(New Integer() {100000, 0, 0, -2147483648})
@@ -5321,9 +5070,9 @@ Partial Class Mainwindow
         '
         'num2_lty
         '
+        resources.ApplyResources(Me.num2_lty, "num2_lty")
         Me.num2_lty.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.num2_lty.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.num2_lty, "num2_lty")
         Me.num2_lty.ForeColor = System.Drawing.SystemColors.Control
         Me.num2_lty.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
         Me.num2_lty.Minimum = New Decimal(New Integer() {100000, 0, 0, -2147483648})
@@ -5332,9 +5081,9 @@ Partial Class Mainwindow
         '
         'num2_ltx
         '
+        resources.ApplyResources(Me.num2_ltx, "num2_ltx")
         Me.num2_ltx.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.num2_ltx.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.num2_ltx, "num2_ltx")
         Me.num2_ltx.ForeColor = System.Drawing.SystemColors.Control
         Me.num2_ltx.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
         Me.num2_ltx.Minimum = New Decimal(New Integer() {100000, 0, 0, -2147483648})
@@ -5361,15 +5110,15 @@ Partial Class Mainwindow
         '
         'btn2_gethwnd
         '
-        Me.btn2_gethwnd.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         resources.ApplyResources(Me.btn2_gethwnd, "btn2_gethwnd")
+        Me.btn2_gethwnd.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.btn2_gethwnd.Name = "btn2_gethwnd"
         Me.btn2_gethwnd.UseVisualStyleBackColor = False
         '
         'btn2_getwindowtitle
         '
-        Me.btn2_getwindowtitle.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btn2_getwindowtitle, "btn2_getwindowtitle")
+        Me.btn2_getwindowtitle.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btn2_getwindowtitle.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btn2_getwindowtitle.Name = "btn2_getwindowtitle"
         Me.btn2_getwindowtitle.UseVisualStyleBackColor = False
@@ -5398,6 +5147,7 @@ Partial Class Mainwindow
         '
         'gbsetting
         '
+        resources.ApplyResources(Me.gbsetting, "gbsetting")
         Me.gbsetting.Controls.Add(Me.rdocalib_aspect_to43)
         Me.gbsetting.Controls.Add(Me.rdocalib_aspect_to169)
         Me.gbsetting.Controls.Add(Me.rdocalib_aspect_none)
@@ -5417,7 +5167,6 @@ Partial Class Mainwindow
         Me.gbsetting.Controls.Add(Me.Label104)
         Me.gbsetting.Controls.Add(Me.Label102)
         Me.gbsetting.Controls.Add(Me.btncalib_adjscale)
-        resources.ApplyResources(Me.gbsetting, "gbsetting")
         Me.gbsetting.ForeColor = System.Drawing.Color.Snow
         Me.gbsetting.Name = "gbsetting"
         Me.gbsetting.TabStop = False
@@ -5452,17 +5201,17 @@ Partial Class Mainwindow
         '
         'btncalib_reset
         '
-        Me.btncalib_reset.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
         resources.ApplyResources(Me.btncalib_reset, "btncalib_reset")
+        Me.btncalib_reset.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
         Me.btncalib_reset.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btncalib_reset.Name = "btncalib_reset"
         Me.btncalib_reset.UseVisualStyleBackColor = False
         '
         'numcalib_hand_scaleheight
         '
+        resources.ApplyResources(Me.numcalib_hand_scaleheight, "numcalib_hand_scaleheight")
         Me.numcalib_hand_scaleheight.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.numcalib_hand_scaleheight.DecimalPlaces = 3
-        resources.ApplyResources(Me.numcalib_hand_scaleheight, "numcalib_hand_scaleheight")
         Me.numcalib_hand_scaleheight.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.numcalib_hand_scaleheight.Maximum = New Decimal(New Integer() {500, 0, 0, 0})
         Me.numcalib_hand_scaleheight.Name = "numcalib_hand_scaleheight"
@@ -5470,6 +5219,7 @@ Partial Class Mainwindow
         '
         'gbrgb
         '
+        resources.ApplyResources(Me.gbrgb, "gbrgb")
         Me.gbrgb.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
         Me.gbrgb.Controls.Add(Me.lblm1)
         Me.gbrgb.Controls.Add(Me.Label101)
@@ -5483,7 +5233,6 @@ Partial Class Mainwindow
         Me.gbrgb.Controls.Add(Me.txtcalib_save_r)
         Me.gbrgb.Controls.Add(Me.txtcalib_save_g)
         Me.gbrgb.Controls.Add(Me.txtcalib_save_b)
-        resources.ApplyResources(Me.gbrgb, "gbrgb")
         Me.gbrgb.ForeColor = System.Drawing.Color.Snow
         Me.gbrgb.Name = "gbrgb"
         Me.gbrgb.TabStop = False
@@ -5500,8 +5249,8 @@ Partial Class Mainwindow
         '
         'numcalib_hand_bright
         '
-        Me.numcalib_hand_bright.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer))
         resources.ApplyResources(Me.numcalib_hand_bright, "numcalib_hand_bright")
+        Me.numcalib_hand_bright.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.numcalib_hand_bright.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.numcalib_hand_bright.Maximum = New Decimal(New Integer() {256, 0, 0, 0})
         Me.numcalib_hand_bright.Minimum = New Decimal(New Integer() {256, 0, 0, -2147483648})
@@ -5509,24 +5258,24 @@ Partial Class Mainwindow
         '
         'btncalib_adjrgb
         '
-        Me.btncalib_adjrgb.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btncalib_adjrgb, "btncalib_adjrgb")
+        Me.btncalib_adjrgb.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btncalib_adjrgb.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btncalib_adjrgb.Name = "btncalib_adjrgb"
         Me.btncalib_adjrgb.UseVisualStyleBackColor = False
         '
         'btncalib_adjbright
         '
-        Me.btncalib_adjbright.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btncalib_adjbright, "btncalib_adjbright")
+        Me.btncalib_adjbright.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btncalib_adjbright.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btncalib_adjbright.Name = "btncalib_adjbright"
         Me.btncalib_adjbright.UseVisualStyleBackColor = False
         '
         'numcalib_hand_g
         '
-        Me.numcalib_hand_g.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer))
         resources.ApplyResources(Me.numcalib_hand_g, "numcalib_hand_g")
+        Me.numcalib_hand_g.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.numcalib_hand_g.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.numcalib_hand_g.Maximum = New Decimal(New Integer() {256, 0, 0, 0})
         Me.numcalib_hand_g.Minimum = New Decimal(New Integer() {256, 0, 0, -2147483648})
@@ -5534,8 +5283,8 @@ Partial Class Mainwindow
         '
         'numcalib_hand_r
         '
-        Me.numcalib_hand_r.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer))
         resources.ApplyResources(Me.numcalib_hand_r, "numcalib_hand_r")
+        Me.numcalib_hand_r.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.numcalib_hand_r.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.numcalib_hand_r.Maximum = New Decimal(New Integer() {256, 0, 0, 0})
         Me.numcalib_hand_r.Minimum = New Decimal(New Integer() {256, 0, 0, -2147483648})
@@ -5543,8 +5292,8 @@ Partial Class Mainwindow
         '
         'numcalib_hand_b
         '
-        Me.numcalib_hand_b.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer))
         resources.ApplyResources(Me.numcalib_hand_b, "numcalib_hand_b")
+        Me.numcalib_hand_b.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.numcalib_hand_b.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.numcalib_hand_b.Maximum = New Decimal(New Integer() {256, 0, 0, 0})
         Me.numcalib_hand_b.Minimum = New Decimal(New Integer() {256, 0, 0, -2147483648})
@@ -5580,8 +5329,8 @@ Partial Class Mainwindow
         '
         'btncalib_insert
         '
-        Me.btncalib_insert.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
         resources.ApplyResources(Me.btncalib_insert, "btncalib_insert")
+        Me.btncalib_insert.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
         Me.btncalib_insert.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btncalib_insert.Name = "btncalib_insert"
         Me.btncalib_insert.UseVisualStyleBackColor = False
@@ -5594,9 +5343,9 @@ Partial Class Mainwindow
         '
         'numcalib_hand_scalewidth
         '
+        resources.ApplyResources(Me.numcalib_hand_scalewidth, "numcalib_hand_scalewidth")
         Me.numcalib_hand_scalewidth.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.numcalib_hand_scalewidth.DecimalPlaces = 3
-        resources.ApplyResources(Me.numcalib_hand_scalewidth, "numcalib_hand_scalewidth")
         Me.numcalib_hand_scalewidth.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.numcalib_hand_scalewidth.Maximum = New Decimal(New Integer() {500, 0, 0, 0})
         Me.numcalib_hand_scalewidth.Name = "numcalib_hand_scalewidth"
@@ -5604,9 +5353,9 @@ Partial Class Mainwindow
         '
         'numcalib_hand_scale
         '
+        resources.ApplyResources(Me.numcalib_hand_scale, "numcalib_hand_scale")
         Me.numcalib_hand_scale.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.numcalib_hand_scale.DecimalPlaces = 3
-        resources.ApplyResources(Me.numcalib_hand_scale, "numcalib_hand_scale")
         Me.numcalib_hand_scale.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.numcalib_hand_scale.Maximum = New Decimal(New Integer() {500, 0, 0, 0})
         Me.numcalib_hand_scale.Name = "numcalib_hand_scale"
@@ -5640,8 +5389,8 @@ Partial Class Mainwindow
         '
         'btncalib_adjaspect
         '
-        Me.btncalib_adjaspect.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btncalib_adjaspect, "btncalib_adjaspect")
+        Me.btncalib_adjaspect.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btncalib_adjaspect.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btncalib_adjaspect.Name = "btncalib_adjaspect"
         Me.btncalib_adjaspect.UseVisualStyleBackColor = False
@@ -5658,31 +5407,31 @@ Partial Class Mainwindow
         '
         'btncalib_adjscale
         '
-        Me.btncalib_adjscale.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btncalib_adjscale, "btncalib_adjscale")
+        Me.btncalib_adjscale.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btncalib_adjscale.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btncalib_adjscale.Name = "btncalib_adjscale"
         Me.btncalib_adjscale.UseVisualStyleBackColor = False
         '
         'btncalib_resize
         '
-        Me.btncalib_resize.BackColor = System.Drawing.Color.Wheat
         resources.ApplyResources(Me.btncalib_resize, "btncalib_resize")
+        Me.btncalib_resize.BackColor = System.Drawing.Color.Wheat
         Me.btncalib_resize.Name = "btncalib_resize"
         Me.btncalib_resize.UseVisualStyleBackColor = False
         '
         'btncalib_cap
         '
-        Me.btncalib_cap.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btncalib_cap, "btncalib_cap")
+        Me.btncalib_cap.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btncalib_cap.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btncalib_cap.Name = "btncalib_cap"
         Me.btncalib_cap.UseVisualStyleBackColor = False
         '
         'btntosetting03
         '
-        Me.btntosetting03.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btntosetting03, "btntosetting03")
+        Me.btntosetting03.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btntosetting03.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btntosetting03.Name = "btntosetting03"
         Me.btntosetting03.UseVisualStyleBackColor = False
@@ -5703,8 +5452,8 @@ Partial Class Mainwindow
         '
         'numcalib_scaleheight
         '
-        Me.numcalib_scaleheight.DecimalPlaces = 3
         resources.ApplyResources(Me.numcalib_scaleheight, "numcalib_scaleheight")
+        Me.numcalib_scaleheight.DecimalPlaces = 3
         Me.numcalib_scaleheight.Maximum = New Decimal(New Integer() {500, 0, 0, 0})
         Me.numcalib_scaleheight.Name = "numcalib_scaleheight"
         Me.numcalib_scaleheight.Value = New Decimal(New Integer() {100, 0, 0, 0})
@@ -5725,16 +5474,16 @@ Partial Class Mainwindow
         '
         'numcalib_scalewidth
         '
-        Me.numcalib_scalewidth.DecimalPlaces = 3
         resources.ApplyResources(Me.numcalib_scalewidth, "numcalib_scalewidth")
+        Me.numcalib_scalewidth.DecimalPlaces = 3
         Me.numcalib_scalewidth.Maximum = New Decimal(New Integer() {500, 0, 0, 0})
         Me.numcalib_scalewidth.Name = "numcalib_scalewidth"
         Me.numcalib_scalewidth.Value = New Decimal(New Integer() {100, 0, 0, 0})
         '
         'numcalib_scale
         '
-        Me.numcalib_scale.DecimalPlaces = 3
         resources.ApplyResources(Me.numcalib_scale, "numcalib_scale")
+        Me.numcalib_scale.DecimalPlaces = 3
         Me.numcalib_scale.Maximum = New Decimal(New Integer() {500, 0, 0, 0})
         Me.numcalib_scale.Name = "numcalib_scale"
         Me.numcalib_scale.Value = New Decimal(New Integer() {100, 0, 0, 0})
@@ -5746,6 +5495,7 @@ Partial Class Mainwindow
         '
         'grpcalib_1
         '
+        resources.ApplyResources(Me.grpcalib_1, "grpcalib_1")
         Me.grpcalib_1.Controls.Add(Me.listcalib_2)
         Me.grpcalib_1.Controls.Add(Me.txtcalib_numbers)
         Me.grpcalib_1.Controls.Add(Me.Label106)
@@ -5761,7 +5511,6 @@ Partial Class Mainwindow
         Me.grpcalib_1.Controls.Add(Me.txtcalib_hand_name)
         Me.grpcalib_1.Controls.Add(Me.txtcalib_max)
         Me.grpcalib_1.Controls.Add(Me.txtcalib_scaleorcolor)
-        resources.ApplyResources(Me.grpcalib_1, "grpcalib_1")
         Me.grpcalib_1.Name = "grpcalib_1"
         Me.grpcalib_1.TabStop = False
         '
@@ -5853,6 +5602,7 @@ Partial Class Mainwindow
         '
         'gbcalib_m1
         '
+        resources.ApplyResources(Me.gbcalib_m1, "gbcalib_m1")
         Me.gbcalib_m1.Controls.Add(Me.Label111)
         Me.gbcalib_m1.Controls.Add(Me.Label110)
         Me.gbcalib_m1.Controls.Add(Me.Label109)
@@ -5864,7 +5614,6 @@ Partial Class Mainwindow
         Me.gbcalib_m1.Controls.Add(Me.piccalib_handresult)
         Me.gbcalib_m1.Controls.Add(Me.Label100)
         Me.gbcalib_m1.Controls.Add(Me.piccalib_comp)
-        resources.ApplyResources(Me.gbcalib_m1, "gbcalib_m1")
         Me.gbcalib_m1.Name = "gbcalib_m1"
         Me.gbcalib_m1.TabStop = False
         '
@@ -5986,19 +5735,27 @@ Partial Class Mainwindow
         '
         'btntosetting02
         '
-        Me.btntosetting02.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btntosetting02, "btntosetting02")
+        Me.btntosetting02.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btntosetting02.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btntosetting02.Name = "btntosetting02"
         Me.btntosetting02.UseVisualStyleBackColor = False
         '
         'Panel3
         '
+        resources.ApplyResources(Me.Panel3, "Panel3")
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Panel3.Controls.Add(Me.lbldpi)
         Me.Panel3.Controls.Add(Me.Label72)
         Me.Panel3.Controls.Add(Me.rtxtlog)
-        resources.ApplyResources(Me.Panel3, "Panel3")
         Me.Panel3.Name = "Panel3"
+        '
+        'lbldpi
+        '
+        resources.ApplyResources(Me.lbldpi, "lbldpi")
+        Me.lbldpi.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.lbldpi.ForeColor = System.Drawing.SystemColors.Control
+        Me.lbldpi.Name = "lbldpi"
         '
         'Label72
         '
@@ -6044,6 +5801,7 @@ Partial Class Mainwindow
         '
         'Panel1
         '
+        resources.ApplyResources(Me.Panel1, "Panel1")
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Panel1.Controls.Add(Me.lblnewestver)
         Me.Panel1.Controls.Add(Me.LinkLabel3)
@@ -6051,7 +5809,6 @@ Partial Class Mainwindow
         Me.Panel1.Controls.Add(Me.LinkLabel2)
         Me.Panel1.Controls.Add(Me.Label14)
         Me.Panel1.Controls.Add(Me.lblversion)
-        resources.ApplyResources(Me.Panel1, "Panel1")
         Me.Panel1.Name = "Panel1"
         '
         'lblnewestver
@@ -6111,8 +5868,8 @@ Partial Class Mainwindow
         '
         'btntosetting04
         '
-        Me.btntosetting04.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         resources.ApplyResources(Me.btntosetting04, "btntosetting04")
+        Me.btntosetting04.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.btntosetting04.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btntosetting04.Name = "btntosetting04"
         Me.btntosetting04.UseVisualStyleBackColor = False
@@ -6126,6 +5883,7 @@ Partial Class Mainwindow
         '
         'Panel2
         '
+        resources.ApplyResources(Me.Panel2, "Panel2")
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Panel2.Controls.Add(Me.link_dobon)
         Me.Panel2.Controls.Add(Me.Label118)
@@ -6137,7 +5895,6 @@ Partial Class Mainwindow
         Me.Panel2.Controls.Add(Me.link_inteltbb)
         Me.Panel2.Controls.Add(Me.Label114)
         Me.Panel2.Controls.Add(Me.Label115)
-        resources.ApplyResources(Me.Panel2, "Panel2")
         Me.Panel2.Name = "Panel2"
         '
         'link_dobon
@@ -6220,8 +5977,8 @@ Partial Class Mainwindow
         '
         'btnview_close
         '
-        Me.btnview_close.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer))
         resources.ApplyResources(Me.btnview_close, "btnview_close")
+        Me.btnview_close.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer))
         Me.btnview_close.ForeColor = System.Drawing.Color.Thistle
         Me.btnview_close.Name = "btnview_close"
         Me.btnview_close.UseVisualStyleBackColor = False
@@ -6239,16 +5996,16 @@ Partial Class Mainwindow
         '
         'btnclosewindow
         '
-        Me.btnclosewindow.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer))
         resources.ApplyResources(Me.btnclosewindow, "btnclosewindow")
+        Me.btnclosewindow.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer))
         Me.btnclosewindow.ForeColor = System.Drawing.Color.Thistle
         Me.btnclosewindow.Name = "btnclosewindow"
         Me.btnclosewindow.UseVisualStyleBackColor = False
         '
         'btnsaisyouka
         '
-        Me.btnsaisyouka.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer))
         resources.ApplyResources(Me.btnsaisyouka, "btnsaisyouka")
+        Me.btnsaisyouka.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer))
         Me.btnsaisyouka.ForeColor = System.Drawing.Color.Thistle
         Me.btnsaisyouka.Name = "btnsaisyouka"
         Me.btnsaisyouka.UseVisualStyleBackColor = False
@@ -6339,47 +6096,26 @@ Partial Class Mainwindow
         CType(Me.numvideo_sizex, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnl_loadremover.ResumeLayout(False)
         Me.pnl_loadremover.PerformLayout()
-        Me.TabControl2.ResumeLayout(False)
-        Me.TabPage4.ResumeLayout(False)
-        Me.TabPage4.PerformLayout()
-        CType(Me.numload_rate1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numload_delay1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage6.ResumeLayout(False)
-        Me.TabPage6.PerformLayout()
-        CType(Me.numload_rate2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numload_delay2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage7.ResumeLayout(False)
-        Me.TabPage7.PerformLayout()
-        CType(Me.numload_rate3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numload_delay3, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage8.ResumeLayout(False)
-        Me.TabPage8.PerformLayout()
-        CType(Me.numload_rate4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numload_delay4, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage9.ResumeLayout(False)
-        Me.TabPage9.PerformLayout()
-        CType(Me.numload_rate5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numload_delay5, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage10.ResumeLayout(False)
-        Me.TabPage10.PerformLayout()
-        CType(Me.numload_rate6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numload_delay6, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage11.ResumeLayout(False)
-        Me.TabPage11.PerformLayout()
-        CType(Me.numload_rate7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numload_delay7, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage12.ResumeLayout(False)
-        Me.TabPage12.PerformLayout()
-        CType(Me.numload_rate8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numload_delay8, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage13.ResumeLayout(False)
-        Me.TabPage13.PerformLayout()
-        CType(Me.numload_rate9, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numload_delay9, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage14.ResumeLayout(False)
-        Me.TabPage14.PerformLayout()
         CType(Me.numload_rate10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.numload_delay10, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numload_rate9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numload_delay9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numload_rate8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numload_delay8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numload_rate7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numload_delay7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numload_rate6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numload_delay6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numload_rate5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numload_delay5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numload_rate4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numload_delay4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numload_rate3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numload_delay3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numload_rate2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numload_delay2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numload_rate1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numload_delay1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnl_hotkey.ResumeLayout(False)
         Me.pnl_hotkey.PerformLayout()
         CType(Me.numpresstime, System.ComponentModel.ISupportInitialize).EndInit()
@@ -6488,6 +6224,7 @@ Partial Class Mainwindow
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.TabPage16.ResumeLayout(False)
+        Me.TabPage16.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
@@ -6714,17 +6451,6 @@ Partial Class Mainwindow
     Friend WithEvents chknow_reset As CheckBox
     Friend WithEvents txtdelay_load As TextBox
     Friend WithEvents Label31 As Label
-    Friend WithEvents TabControl2 As TabControl
-    Friend WithEvents TabPage4 As TabPage
-    Friend WithEvents TabPage6 As TabPage
-    Friend WithEvents TabPage7 As TabPage
-    Friend WithEvents TabPage8 As TabPage
-    Friend WithEvents TabPage9 As TabPage
-    Friend WithEvents TabPage10 As TabPage
-    Friend WithEvents TabPage11 As TabPage
-    Friend WithEvents TabPage12 As TabPage
-    Friend WithEvents TabPage13 As TabPage
-    Friend WithEvents TabPage14 As TabPage
     Friend WithEvents chkload7 As CheckBox
     Friend WithEvents chkload8 As CheckBox
     Friend WithEvents chkload9 As CheckBox
@@ -6735,42 +6461,24 @@ Partial Class Mainwindow
     Friend WithEvents chkload6 As CheckBox
     Friend WithEvents chkload5 As CheckBox
     Friend WithEvents chkload1 As CheckBox
-    Friend WithEvents Label15 As Label
     Friend WithEvents numload_rate2 As NumericUpDown
     Friend WithEvents numload_delay2 As NumericUpDown
-    Friend WithEvents Label35 As Label
-    Friend WithEvents Label36 As Label
     Friend WithEvents numload_rate3 As NumericUpDown
     Friend WithEvents numload_delay3 As NumericUpDown
-    Friend WithEvents Label37 As Label
-    Friend WithEvents Label40 As Label
     Friend WithEvents numload_rate4 As NumericUpDown
     Friend WithEvents numload_delay4 As NumericUpDown
-    Friend WithEvents Label43 As Label
-    Friend WithEvents Label44 As Label
     Friend WithEvents numload_rate5 As NumericUpDown
     Friend WithEvents numload_delay5 As NumericUpDown
-    Friend WithEvents Label45 As Label
-    Friend WithEvents Label47 As Label
     Friend WithEvents numload_rate6 As NumericUpDown
     Friend WithEvents numload_delay6 As NumericUpDown
-    Friend WithEvents Label48 As Label
-    Friend WithEvents Label50 As Label
     Friend WithEvents numload_rate7 As NumericUpDown
     Friend WithEvents numload_delay7 As NumericUpDown
-    Friend WithEvents Label54 As Label
-    Friend WithEvents Label55 As Label
     Friend WithEvents numload_rate8 As NumericUpDown
     Friend WithEvents numload_delay8 As NumericUpDown
-    Friend WithEvents Label56 As Label
-    Friend WithEvents Label57 As Label
     Friend WithEvents numload_rate9 As NumericUpDown
     Friend WithEvents numload_delay9 As NumericUpDown
-    Friend WithEvents Label58 As Label
-    Friend WithEvents Label59 As Label
     Friend WithEvents numload_rate10 As NumericUpDown
     Friend WithEvents numload_delay10 As NumericUpDown
-    Friend WithEvents Label60 As Label
     Friend WithEvents chknow_load10 As CheckBox
     Friend WithEvents chknow_load9 As CheckBox
     Friend WithEvents chknow_load8 As CheckBox
@@ -7155,4 +6863,6 @@ Partial Class Mainwindow
     Friend WithEvents SortTemplateImageToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator8 As ToolStripSeparator
     Friend WithEvents lblnewestver As Label
+    Friend WithEvents lbldpi As Label
+    Friend WithEvents btndescription_table As Button
 End Class

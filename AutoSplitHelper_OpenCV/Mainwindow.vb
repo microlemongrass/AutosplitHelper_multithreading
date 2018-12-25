@@ -118,8 +118,17 @@ Public Class Mainwindow
 
     Friend messagebox_name As String = "Autosplit Helper" 'メッセージボックスのタイトル用
 
+    Private Dpi_rate As Double
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        '★■PCのDPIを取得し、全てのサイズ変更処理に対して補正する。
+        Using gfx As Graphics = Me.CreateGraphics()
+            Dim userDPI = CInt(gfx.DpiX)
+            Dpi_rate = Math.Round(userDPI / 96, 2, MidpointRounding.AwayFromZero)
+            Console.WriteLine("userDPI: " & userDPI & " 、PCの表示倍率: " & Dpi_rate & "倍")
+            lbldpi.Text = "Your PC's DPI: " & userDPI & " (" & 100 * Dpi_rate & " %)"
+        End Using
 
         '■DirectShowを利用した映像キャプチャデバイス一覧の取得
         cmbcv_device.Items.Clear()
@@ -170,14 +179,18 @@ Public Class Mainwindow
 
 
         '■「現在の設定」のサイズ
-        grpgeneral.Size = New Drawing.Size(785, 295)
+        grpgeneral.Location = New Drawing.Point(7 * Dpi_rate, 250 * Dpi_rate)
+        grpgeneral.Size = New Drawing.Size(785 * Dpi_rate, 295 * Dpi_rate)
+
+        '■設定を閉じるボタンの位置
+        btnclose_general.Location = New Drawing.Point(120 * Dpi_rate, 265 * Dpi_rate + pnl_parameter.Height + (2 * Dpi_rate))
 
         '■Menustripのカラー変更
         MenuStrip1.ForeColor = SystemColors.Control
 
         '■ウィンドウサイズの調整 
-        Me.Size = New Drawing.Point(800, 600)
-        DGtable.Size = New Drawing.Point(785, 146)
+        Me.Size = New Drawing.Point(800 * Dpi_rate, 600 * Dpi_rate)
+        DGtable.Size = New Drawing.Point(785 * Dpi_rate, 146 * Dpi_rate)
 
         '■バインドされているコントロールがあると、タブを開かないとエラーが出るので一旦開く
         TabControl1.SelectedTab = TabPage1
@@ -448,6 +461,8 @@ Public Class Mainwindow
         btncv_first.Enabled = False
 
 
+
+
         '■リセットの部分の背景変更
         DGtable.Rows(0).DefaultCellStyle.BackColor = Color.FromArgb(58, 16, 16) 'Color.MistyRose
 
@@ -602,14 +617,8 @@ Public Class Mainwindow
         listsetcontents.SelectedIndex = 1
         listsetcontents.SelectedIndex = 0
 
-        '280+15 -> 22
-        For i = 0 To 68
-            grpgeneral.Height -= 4
-            Application.DoEvents()
+        grpgeneral.Visible = False
 
-        Next
-
-        grpgeneral.Height = 22
 
 
     End Sub
@@ -619,14 +628,8 @@ Public Class Mainwindow
         listsetcontents.SelectedIndex = 0
         listsetcontents.SelectedIndex = 1
 
-        '280+15 -> 22
-        For i = 0 To 68
-            grpgeneral.Height -= 4
-            Application.DoEvents()
+        grpgeneral.Visible = False
 
-        Next
-
-        grpgeneral.Height = 22
 
 
     End Sub
@@ -636,14 +639,8 @@ Public Class Mainwindow
         listsetcontents.SelectedIndex = 0
         listsetcontents.SelectedIndex = 2
 
-        '280+15 -> 22
-        For i = 0 To 68
-            grpgeneral.Height -= 4
-            Application.DoEvents()
+        grpgeneral.Visible = False
 
-        Next
-
-        grpgeneral.Height = 22
 
 
     End Sub
@@ -653,14 +650,8 @@ Public Class Mainwindow
         listsetcontents.SelectedIndex = 0
         listsetcontents.SelectedIndex = 3
 
-        '280+15 -> 22
-        For i = 0 To 68
-            grpgeneral.Height -= 4
-            Application.DoEvents()
+        grpgeneral.Visible = False
 
-        Next
-
-        grpgeneral.Height = 22
 
 
     End Sub
@@ -670,14 +661,8 @@ Public Class Mainwindow
         listsetcontents.SelectedIndex = 0
         listsetcontents.SelectedIndex = 4
 
-        '280+15 -> 22
-        For i = 0 To 68
-            grpgeneral.Height -= 4
-            Application.DoEvents()
+        grpgeneral.Visible = False
 
-        Next
-
-        grpgeneral.Height = 22
 
 
     End Sub
@@ -687,14 +672,8 @@ Public Class Mainwindow
         listsetcontents.SelectedIndex = 0
         listsetcontents.SelectedIndex = 5
 
-        '280+15 -> 22
-        For i = 0 To 68
-            grpgeneral.Height -= 4
-            Application.DoEvents()
+        grpgeneral.Visible = False
 
-        Next
-
-        grpgeneral.Height = 22
 
 
     End Sub
@@ -704,14 +683,8 @@ Public Class Mainwindow
         listsetcontents.SelectedIndex = 0
         listsetcontents.SelectedIndex = 6
 
-        '280+15 -> 22
-        For i = 0 To 68
-            grpgeneral.Height -= 4
-            Application.DoEvents()
+        grpgeneral.Visible = False
 
-        Next
-
-        grpgeneral.Height = 22
 
 
     End Sub
@@ -721,14 +694,8 @@ Public Class Mainwindow
         listsetcontents.SelectedIndex = 0
         listsetcontents.SelectedIndex = 7
 
-        '280+15 -> 22
-        For i = 0 To 68
-            grpgeneral.Height -= 4
-            Application.DoEvents()
+        grpgeneral.Visible = False
 
-        Next
-
-        grpgeneral.Height = 22
 
     End Sub
 
@@ -749,28 +716,28 @@ Public Class Mainwindow
         Select Case listsetcontents.SelectedIndex
 
             Case 0 'Parameter
-                pnl_parameter.Location = New Drawing.Point(120, 265)
+                pnl_parameter.Location = New Drawing.Point(120 * Dpi_rate, 265 * Dpi_rate)
 
             Case 1 'OpenCV Parameter
-                pnl_cvparameter.Location = New Drawing.Point(120, 265)
+                pnl_cvparameter.Location = New Drawing.Point(120 * Dpi_rate, 265 * Dpi_rate)
 
             Case 2 'Focus
-                pnl_focus.Location = New Drawing.Point(120, 265)
+                pnl_focus.Location = New Drawing.Point(120 * Dpi_rate, 265 * Dpi_rate)
 
             Case 3 'Hot key
-                pnl_hotkey.Location = New Drawing.Point(120, 265)
+                pnl_hotkey.Location = New Drawing.Point(120 * Dpi_rate, 265 * Dpi_rate)
 
             Case 4 'Load remover
-                pnl_loadremover.Location = New Drawing.Point(120, 265)
+                pnl_loadremover.Location = New Drawing.Point(120 * Dpi_rate, 265 * Dpi_rate)
 
             Case 5 'Graph
-                pnl_graph.Location = New Drawing.Point(120, 265)
+                pnl_graph.Location = New Drawing.Point(120 * Dpi_rate, 265 * Dpi_rate)
 
             Case 6 'Video
-                pnl_video.Location = New Drawing.Point(120, 265)
+                pnl_video.Location = New Drawing.Point(120 * Dpi_rate, 265 * Dpi_rate)
 
             Case 7 'Other
-                pnl_other.Location = New Drawing.Point(120, 265)
+                pnl_other.Location = New Drawing.Point(120 * Dpi_rate, 265 * Dpi_rate)
 
 
         End Select
@@ -782,13 +749,9 @@ Public Class Mainwindow
 
     Private Sub btnclose_general_Click(sender As Object, e As EventArgs) Handles btnclose_general.Click
 
-        For i = 0 To 68
-            grpgeneral.Height += 4
-            Application.DoEvents()
 
-        Next
 
-        grpgeneral.Height = 295
+        grpgeneral.Visible = True
 
 
     End Sub
@@ -2815,24 +2778,39 @@ Public Class Mainwindow
     Private Sub cv_preview()
         '適切な解像度を入力しているか確認
         If (numcv_sizex.Value Mod 16 = 0 And numcv_sizey.Value Mod 9 = 0) Or (numcv_sizex.Value Mod 4 = 0 And numcv_sizey.Value Mod 3 = 0) Then
+            Console.WriteLine(numcv_sizex.Value & ", " & numcv_sizey.Value)
 
-            Me.Size = New Drawing.Size(numcv_sizex.Value + pnlview_control.Width, 23 + numcv_sizey.Value + piczoom.Height + DGtable.Height + 20 + 40)
+            PictureBoxIpl1.Size = New Drawing.Size(numcv_sizex.Value, numcv_sizey.Value)
 
-            btnview_close.Location = New Drawing.Point(numcv_sizex.Value + pnlview_control.Width - btnview_close.Width, 0)
+            piczoom.Location = New Drawing.Point(0, numcv_sizey.Value)
+            picview_capture.Location = New Drawing.Point((piczoom.Width + 5) * Dpi_rate, (numcv_sizey.Value + 30) * Dpi_rate) '(numcv_sizex.Value / 2) - 100
 
-            btnclosewindow.Location = New Drawing.Point(1500, 0)
-            btnsaisyouka.Location = New Drawing.Point(1500, 0)
+            pnlview_window.Location = New Drawing.Point(0, lbltitlebar.Height - (2 * Dpi_rate))
+            pnlview_window.Size = New Drawing.Size(numcv_sizex.Value * Dpi_rate, (numcv_sizey.Value + piczoom.Height) * Dpi_rate)
 
-            pnlview_window.Size = New Drawing.Size(numcv_sizex.Value, numcv_sizey.Value + piczoom.Height)
-            pnlview_window.Location = New Drawing.Point(0, 0 + 23) 'lbltitlebar.Height
+            pnlview_control.Location = New Drawing.Point(pnlview_window.Width, lbltitlebar.Height - (2 * Dpi_rate))
+            pnlview_control.Size = New Drawing.Size(220 * Dpi_rate, 300 * Dpi_rate)
 
-            pnlview_control.Location = New Drawing.Point(numcv_sizex.Value, 0 + 23)
+
+
+
+
+            txtrowscount.Location = New Drawing.Point(8 * Dpi_rate, (lbltitlebar.Height + numcv_sizey.Value + piczoom.Height + 4) * Dpi_rate)
+
+
+            Me.Size = New Drawing.Size((pnlview_window.Width + pnlview_control.Width),
+                                       (lbltitlebar.Height + numcv_sizey.Value + piczoom.Height + DGtable.Height + 60) * Dpi_rate)
+
+            btnclosewindow.Location = New Drawing.Point((Me.Width - btnclosewindow.Width), 0)
+            btnsaisyouka.Location = New Drawing.Point((Me.Width - btnclosewindow.Width - btnsaisyouka.Width), 0)
+
+            btnview_close.Location = New Drawing.Point((Me.Width - 2.2 * btnclosewindow.Width - btnsaisyouka.Width - btnview_close.Width), 0)
+
+            DGtable.Location = New Drawing.Point(8 * Dpi_rate, (lbltitlebar.Height + numcv_sizey.Value + piczoom.Height + 6) * Dpi_rate)
+            DGtable.Size = New Drawing.Size(525 * Dpi_rate, 146 * Dpi_rate)
 
             MenuStrip1.Visible = False
 
-            DGtable.Location = New Drawing.Point(8, 23 + numcv_sizey.Value + piczoom.Height + 6)
-            DGtable.Size = New Drawing.Size(525, 146)
-            txtrowscount.Location = New Drawing.Point(8, 23 + numcv_sizey.Value + piczoom.Height + 4)
 
 
             pnl_parameter.Location = New Drawing.Point(10000, 0)
@@ -2849,10 +2827,22 @@ Public Class Mainwindow
             listsetcontents.Visible = False
 
 
-            grpgeneral.Size = New Drawing.Size(785, 295)
             grpgeneral.Visible = False
 
+
+
+            Label32.Location = New Drawing.Point((piczoom.Width + 10) * Dpi_rate, (numcv_sizey.Value + 30 - 17) * Dpi_rate) '(numcv_sizex.Value / 2) - 100
+
+
+            pictempipl.Size = New Drawing.Size(numcv_sizex.Value, numcv_sizey.Value)
+
+
+
+
+
+
             Load_preview()
+
 
             btnstartopencv.Enabled = False
 
@@ -2870,8 +2860,6 @@ Public Class Mainwindow
 
         lbltitlebar.Text = My.Resources.Message.msgb2 '"Preview"
 
-        PictureBoxIpl1.Size = New Drawing.Size(numcv_sizex.Value, numcv_sizey.Value)
-        pictempipl.Size = New Drawing.Size(numcv_sizex.Value, numcv_sizey.Value)
 
 
         'NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
@@ -2879,9 +2867,6 @@ Public Class Mainwindow
 
         PictureBoxIpl1.ImageIpl = frame
 
-        piczoom.Location = New Drawing.Point(0, numcv_sizey.Value) '(numcv_sizex.Value / 2) - 100
-        picview_capture.Location = New Drawing.Point(piczoom.Width + 10, numcv_sizey.Value + 30) '(numcv_sizex.Value / 2) - 100
-        Label32.Location = New Drawing.Point(piczoom.Width + 10, numcv_sizey.Value + 30 - 17) '(numcv_sizex.Value / 2) - 100
 
         cvpreview.Interval = New TimeSpan(0, 0, 0, 0, 30)
         cvpreview_zoom.Interval = New TimeSpan(0, 0, 0, 0, 30)
@@ -4869,24 +4854,23 @@ Public Class Mainwindow
 
     Private Sub btnview_close_Click(sender As Object, e As EventArgs) Handles btnview_close.Click
 
-        Me.Size = New Drawing.Size(800， 600)
+        Me.Size = New Drawing.Size(800 * Dpi_rate， 600 * Dpi_rate)
 
-        btnclosewindow.Location = New Drawing.Point(Me.Width - btnclosewindow.Width, 0)
-        btnsaisyouka.Location = New Drawing.Point(Me.Width - btnclosewindow.Width - btnsaisyouka.Width, 0)
-        btnview_close.Location = New Drawing.Point(1500, 0)
+        btnclosewindow.Location = New Drawing.Point((Me.Width - btnclosewindow.Width), 0)
+        btnsaisyouka.Location = New Drawing.Point((Me.Width - btnclosewindow.Width - btnsaisyouka.Width), 0)
+        btnview_close.Location = New Drawing.Point(1500 * Dpi_rate, 0)
 
-        pnlview_window.Location = New Drawing.Point(1500, 0 + 23) 'lbltitlebar.Height
+        pnlview_window.Location = New Drawing.Point(1500 * Dpi_rate, lbltitlebar.Height * Dpi_rate) 'lbltitlebar.Height
 
-        pnlview_control.Location = New Drawing.Point(1500, 0 + 23)
+        pnlview_control.Location = New Drawing.Point(1500 * Dpi_rate, lbltitlebar.Height * Dpi_rate)
 
         MenuStrip1.Visible = True
 
-        DGtable.Location = New Drawing.Point(7, 71)
-        DGtable.Size = New Drawing.Size(785, 146)
-        txtrowscount.Location = New Drawing.Point(7, 70)
+        DGtable.Location = New Drawing.Point(7 * Dpi_rate, 71 * Dpi_rate)
+        DGtable.Size = New Drawing.Size(785 * Dpi_rate, 146 * Dpi_rate)
+        txtrowscount.Location = New Drawing.Point(7 * Dpi_rate, 70 * Dpi_rate)
 
 
-        grpgeneral.Size = New Drawing.Size(785, 295)
         grpgeneral.Visible = True
 
         btnclose_general.Visible = True
@@ -4931,16 +4915,21 @@ Public Class Mainwindow
 
         lbltitlebar.Text = "[" & cmbprofile.SelectedItem & "]" & " Calibration"
 
+        piccamera.Location = New Drawing.Point(27 * Dpi_rate, 110 * Dpi_rate)
         piccamera.Size = New Drawing.Size(numcv_sizex.Value, numcv_sizey.Value)
-        gbcalib_m1.Location = New Drawing.Point(piccamera.Location.X, piccamera.Location.Y + numcv_sizey.Value + 5)
 
-        gbsetting.Location = New Drawing.Point(piccamera.Location.X + numcv_sizex.Value + 30, piccamera.Location.Y - btncalib_cap.Height - 11)
-        btncalib_cap.Location = New Drawing.Point(piccamera.Location.X, piccamera.Location.Y - btncalib_cap.Height - 3)
-        btncalib_resize.Location = New Drawing.Point(piccamera.Location.X, piccamera.Location.Y + numcv_sizey.Value + gbcalib_m1.Height + 5)
-        Me.Size = New Drawing.Point(piccamera.Location.X + piccamera.Width + gbsetting.Width + 50, piccamera.Location.Y + piccamera.Height + gbcalib_m1.Height + 90)
+        gbcalib_m1.Location = New Drawing.Point(piccamera.Location.X * Dpi_rate, (piccamera.Location.Y + (numcv_sizey.Value * Dpi_rate) + 5))
+        gbsetting.Location = New Drawing.Point((piccamera.Location.X + numcv_sizex.Value + 30) * Dpi_rate, (piccamera.Location.Y - btncalib_cap.Height - 11))
 
-        btnclosewindow.Location = New Drawing.Point(Me.Width - btnclosewindow.Width, 0)
-        btnsaisyouka.Location = New Drawing.Point(Me.Width - btnclosewindow.Width - btnsaisyouka.Width, 0)
+        btncalib_cap.Location = New Drawing.Point(piccamera.Location.X, (piccamera.Location.Y - btncalib_cap.Height - 3))
+        btncalib_resize.Location = New Drawing.Point(piccamera.Location.X * Dpi_rate, gbcalib_m1.Location.Y + gbcalib_m1.Height + 5)
+
+
+        Me.Size = New Drawing.Point(gbsetting.Location.X + gbsetting.Width + (50 * Dpi_rate),
+                                    (gbcalib_m1.Location.Y + gbcalib_m1.Height + (90 * Dpi_rate)))
+
+
+
 
         timcamera.Enabled = True
 
@@ -4980,7 +4969,8 @@ Public Class Mainwindow
 
         listcalib_1.SelectedIndex = 0
 
-        btnclosewindow.Location = New Drawing.Point(Me.Width - btnclosewindow.Width, 0)
+        btnclosewindow.Location = New Drawing.Point((Me.Width - btnclosewindow.Width), 0)
+        btnsaisyouka.Location = New Drawing.Point((Me.Width - btnclosewindow.Width - btnsaisyouka.Width), 0)
 
         txtcalib_save_scale.Text = 100
         txtcalib_save_scalewidth.Text = 100
@@ -6481,8 +6471,8 @@ Public Class Mainwindow
 
 
             '■ウィンドウサイズの調整
-            Me.Size = New Drawing.Point(800, 600)
-            DGtable.Size = New Drawing.Point(785, 146)
+            Me.Size = New Drawing.Point(800 * Dpi_rate, 600 * Dpi_rate)
+            DGtable.Size = New Drawing.Point(785 * Dpi_rate, 146 * Dpi_rate)
 
 
 
@@ -7540,8 +7530,10 @@ Public Class Mainwindow
     Private Sub OpenCV_Monitor_Tick(sender As Object, e As EventArgs) Handles cvtimer.Tick
 
         Try
+
             '■プレビュー画面の更新★
             capturecv.Read(frame) 'NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
+
 
             'テンプレートマッチングのみ非同期に行う。チェックが付いているもののみマッチングを行う。
             If async_split_onoff = 1 Then
@@ -8852,112 +8844,120 @@ Public Class Mainwindow
 
     Private Sub cmbloadno_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbloadno.SelectedIndexChanged
 
-        If chkcv_loadremover.Checked = True Then
-
-            If cmbloadno.SelectedIndex = 1 - 1 Then
-
-                '■画像の表示
-                Dim aa As String = txtpass_picturefolder.Text & "\loading1.bmp"
-
-                '■画像の表示（表示用）
-                Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
-                    piccv_load.Image = Image.FromStream(fs)
-                End Using
+        Try
 
 
-            ElseIf cmbloadno.SelectedIndex = 2 - 1 Then
+            If chkcv_loadremover.Checked = True Then
 
-                '■画像の表示
-                Dim aa As String = txtpass_picturefolder.Text & "\loading2.bmp"
+                If cmbloadno.SelectedIndex = 1 - 1 Then
 
-                '■画像の表示（表示用）
-                Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
-                    piccv_load.Image = Image.FromStream(fs)
-                End Using
+                    '■画像の表示
+                    Dim aa As String = txtpass_picturefolder.Text & "\loading1.bmp"
 
-            ElseIf cmbloadno.SelectedIndex = 3 - 1 Then
+                    '■画像の表示（表示用）
+                    Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
+                        piccv_load.Image = Image.FromStream(fs)
+                    End Using
 
-                '■画像の表示
-                Dim aa As String = txtpass_picturefolder.Text & "\loading3.bmp"
 
-                '■画像の表示（表示用）
-                Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
-                    piccv_load.Image = Image.FromStream(fs)
-                End Using
+                ElseIf cmbloadno.SelectedIndex = 2 - 1 Then
 
-            ElseIf cmbloadno.SelectedIndex = 4 - 1 Then
+                    '■画像の表示
+                    Dim aa As String = txtpass_picturefolder.Text & "\loading2.bmp"
 
-                '■画像の表示
-                Dim aa As String = txtpass_picturefolder.Text & "\loading4.bmp"
+                    '■画像の表示（表示用）
+                    Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
+                        piccv_load.Image = Image.FromStream(fs)
+                    End Using
 
-                '■画像の表示（表示用）
-                Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
-                    piccv_load.Image = Image.FromStream(fs)
-                End Using
+                ElseIf cmbloadno.SelectedIndex = 3 - 1 Then
 
-            ElseIf cmbloadno.SelectedIndex = 5 - 1 Then
+                    '■画像の表示
+                    Dim aa As String = txtpass_picturefolder.Text & "\loading3.bmp"
 
-                '■画像の表示
-                Dim aa As String = txtpass_picturefolder.Text & "\loading5.bmp"
+                    '■画像の表示（表示用）
+                    Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
+                        piccv_load.Image = Image.FromStream(fs)
+                    End Using
 
-                '■画像の表示（表示用）
-                Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
-                    piccv_load.Image = Image.FromStream(fs)
-                End Using
+                ElseIf cmbloadno.SelectedIndex = 4 - 1 Then
 
-            ElseIf cmbloadno.SelectedIndex = 6 - 1 Then
+                    '■画像の表示
+                    Dim aa As String = txtpass_picturefolder.Text & "\loading4.bmp"
 
-                '■画像の表示
-                Dim aa As String = txtpass_picturefolder.Text & "\loading6.bmp"
+                    '■画像の表示（表示用）
+                    Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
+                        piccv_load.Image = Image.FromStream(fs)
+                    End Using
 
-                '■画像の表示（表示用）
-                Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
-                    piccv_load.Image = Image.FromStream(fs)
-                End Using
+                ElseIf cmbloadno.SelectedIndex = 5 - 1 Then
 
-            ElseIf cmbloadno.SelectedIndex = 7 - 1 Then
+                    '■画像の表示
+                    Dim aa As String = txtpass_picturefolder.Text & "\loading5.bmp"
 
-                '■画像の表示
-                Dim aa As String = txtpass_picturefolder.Text & "\loading7.bmp"
+                    '■画像の表示（表示用）
+                    Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
+                        piccv_load.Image = Image.FromStream(fs)
+                    End Using
 
-                '■画像の表示（表示用）
-                Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
-                    piccv_load.Image = Image.FromStream(fs)
-                End Using
+                ElseIf cmbloadno.SelectedIndex = 6 - 1 Then
 
-            ElseIf cmbloadno.SelectedIndex = 8 - 1 Then
+                    '■画像の表示
+                    Dim aa As String = txtpass_picturefolder.Text & "\loading6.bmp"
 
-                '■画像の表示
-                Dim aa As String = txtpass_picturefolder.Text & "\loading8.bmp"
+                    '■画像の表示（表示用）
+                    Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
+                        piccv_load.Image = Image.FromStream(fs)
+                    End Using
 
-                '■画像の表示（表示用）
-                Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
-                    piccv_load.Image = Image.FromStream(fs)
-                End Using
+                ElseIf cmbloadno.SelectedIndex = 7 - 1 Then
 
-            ElseIf cmbloadno.SelectedIndex = 9 - 1 Then
+                    '■画像の表示
+                    Dim aa As String = txtpass_picturefolder.Text & "\loading7.bmp"
 
-                '■画像の表示
-                Dim aa As String = txtpass_picturefolder.Text & "\loading9.bmp"
+                    '■画像の表示（表示用）
+                    Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
+                        piccv_load.Image = Image.FromStream(fs)
+                    End Using
 
-                '■画像の表示（表示用）
-                Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
-                    piccv_load.Image = Image.FromStream(fs)
-                End Using
+                ElseIf cmbloadno.SelectedIndex = 8 - 1 Then
 
-            ElseIf cmbloadno.SelectedIndex = 10 - 1 Then
+                    '■画像の表示
+                    Dim aa As String = txtpass_picturefolder.Text & "\loading8.bmp"
 
-                '■画像の表示
-                Dim aa As String = txtpass_picturefolder.Text & "\loading10.bmp"
+                    '■画像の表示（表示用）
+                    Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
+                        piccv_load.Image = Image.FromStream(fs)
+                    End Using
 
-                '■画像の表示（表示用）
-                Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
-                    piccv_load.Image = Image.FromStream(fs)
-                End Using
+                ElseIf cmbloadno.SelectedIndex = 9 - 1 Then
+
+                    '■画像の表示
+                    Dim aa As String = txtpass_picturefolder.Text & "\loading9.bmp"
+
+                    '■画像の表示（表示用）
+                    Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
+                        piccv_load.Image = Image.FromStream(fs)
+                    End Using
+
+                ElseIf cmbloadno.SelectedIndex = 10 - 1 Then
+
+                    '■画像の表示
+                    Dim aa As String = txtpass_picturefolder.Text & "\loading10.bmp"
+
+                    '■画像の表示（表示用）
+                    Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
+                        piccv_load.Image = Image.FromStream(fs)
+                    End Using
+
+                End If
 
             End If
 
-        End If
+        Catch ex As Exception
+            rtxtlog.AppendText(Now & " " & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
+
+        End Try
 
     End Sub
 
@@ -10724,7 +10724,7 @@ Public Class Mainwindow
 
         lblloading.Text = "play"
 
-        lblcv_sendview.Text = "Send"
+        lblcv_sendview.Text = "Match"
 
         timcv_anten.Enabled = False
         timcv_perfectanten.Enabled = False
@@ -10778,8 +10778,7 @@ Public Class Mainwindow
         TabControl1.SelectedIndex = 0 'タブ移動
 
         btncv_downsize.Text = My.Resources.Message.msg35 '"たたむ"
-        Me.Width = 800
-        Me.Height = 562
+        Me.Size = New Drawing.Size(800 * Dpi_rate, 562 * Dpi_rate)
 
         '■DGTableのイベントを有効にする。
         AddHandler DGtable.CellValueChanged, AddressOf DGtable_CellValueChanged
@@ -12017,14 +12016,13 @@ Public Class Mainwindow
     Private Sub TabControl1_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles TabControl1.SelectedIndexChanged
         Console.WriteLine("Tab Changed")
 
-        Me.Size = New Drawing.Point(800, 600)
-        DGtable.Size = New Drawing.Point(785, 146)
+        Me.Size = New Drawing.Point(800 * Dpi_rate, 600 * Dpi_rate)
+        DGtable.Size = New Drawing.Point(785 * Dpi_rate, 146 * Dpi_rate)
 
         btncv_downsize.Text = My.Resources.Message.msg35 '"たたむ"
 
-        btnclosewindow.Location = New Drawing.Point(Me.Size.Width - btnclosewindow.Size.Width, btnclosewindow.Location.Y)
-        btnsaisyouka.Location = New Drawing.Point(Me.Size.Width - 89, btnsaisyouka.Location.Y)
-
+        btnclosewindow.Location = New Drawing.Point((Me.Width - btnclosewindow.Width), 0)
+        btnsaisyouka.Location = New Drawing.Point((Me.Width - btnclosewindow.Width - btnsaisyouka.Width), 0)
 
 
 
@@ -12433,15 +12431,21 @@ Public Class Mainwindow
 
             ElseIf btnconnect_camera.Text = My.Resources.Message.msgc02 Then
 
+                btncur_webcamera.Enabled = False
+                btnconnect_camera.Enabled = False
+                btnresetup.Enabled = False
+
                 btnconnect_camera.Text = My.Resources.Message.msgc01
+                btncur_webcamera.Text = My.Resources.Message.msgc01
 
                 capturecv.Release()
 
                 btnstartopencv.Enabled = False
 
                 btnconnect_camera.BackColor = Color.FromArgb(50, 52, 54)
+                btncur_webcamera.BackColor = Color.FromArgb(50, 52, 54)
 
-
+                webcam_sleep.Start()
 
             End If
 
@@ -12818,20 +12822,21 @@ Public Class Mainwindow
     Private Sub btncv_downsize_Click(sender As Object, e As EventArgs) Handles btncv_downsize.Click
         If btncv_downsize.Text = My.Resources.Message.msg35 Then '"たたむ"
             btncv_downsize.Text = My.Resources.Message.msg36 '"広げる"
-            Me.Width = 288
-            Me.Height = 155
+            Me.Size = New Drawing.Size(288 * Dpi_rate, 155 * Dpi_rate)
 
-            btnclosewindow.Location = New Drawing.Point(Me.Size.Width - btnclosewindow.Size.Width, btnclosewindow.Location.Y)
-            btnsaisyouka.Location = New Drawing.Point(Me.Size.Width - 89, btnsaisyouka.Location.Y)
+
+            btnclosewindow.Location = New Drawing.Point((Me.Width - btnclosewindow.Width), 0)
+            btnsaisyouka.Location = New Drawing.Point((Me.Width - btnclosewindow.Width - btnsaisyouka.Width), 0)
 
             chkmonitor_sizestate.Checked = False
 
         ElseIf btncv_downsize.Text = My.Resources.Message.msg36 Then '"広げる"
             btncv_downsize.Text = My.Resources.Message.msg35 '"たたむ"
-            Me.Width = 800
-            Me.Height = 562
-            btnclosewindow.Location = New Drawing.Point(Me.Size.Width - btnclosewindow.Size.Width, btnclosewindow.Location.Y)
-            btnsaisyouka.Location = New Drawing.Point(Me.Size.Width - 89, btnsaisyouka.Location.Y)
+
+            Me.Size = New Drawing.Size(800 * Dpi_rate, 562 * Dpi_rate)
+
+            btnclosewindow.Location = New Drawing.Point((Me.Width - btnclosewindow.Width), 0)
+            btnsaisyouka.Location = New Drawing.Point((Me.Width - btnclosewindow.Width - btnsaisyouka.Width), 0)
 
             chkmonitor_sizestate.Checked = True
 
@@ -13009,14 +13014,10 @@ Public Class Mainwindow
 
     Private Sub Tableview_()
 
-        'btnclosewindow.Location = New Drawing.Point(Me.Size.Width - btnclosewindow.Size.Width + 186, btnclosewindow.Location.Y)
-        'btnsaisyouka.Location = New Drawing.Point(Me.Size.Width - 89 + 186, btnsaisyouka.Location.Y)
+        Me.Size = New Drawing.Point(1111 * Dpi_rate, 600 * Dpi_rate)
 
-
-        Me.Size = New Drawing.Point(1111, 600)
-
-        btnclosewindow.Location = New Drawing.Point(Me.Size.Width - btnclosewindow.Size.Width, btnclosewindow.Location.Y)
-        btnsaisyouka.Location = New Drawing.Point(Me.Size.Width - 89, btnsaisyouka.Location.Y)
+        btnclosewindow.Location = New Drawing.Point((Me.Width - btnclosewindow.Width), 0)
+        btnsaisyouka.Location = New Drawing.Point((Me.Width - btnclosewindow.Width - btnsaisyouka.Width), 0)
 
 
         DGtable.Height = 457
@@ -13030,11 +13031,12 @@ Public Class Mainwindow
 
     Private Sub btnclosetable_Click(sender As Object, e As EventArgs) Handles btnclosetable.Click
 
-        Me.Size = New Drawing.Point(800, 600)
-        DGtable.Size = New Drawing.Point(785, 146)
+        Me.Size = New Drawing.Point(800 * Dpi_rate, 600 * Dpi_rate)
+        DGtable.Size = New Drawing.Point(785 * Dpi_rate, 146 * Dpi_rate)
 
-        btnclosewindow.Location = New Drawing.Point(Me.Size.Width - btnclosewindow.Size.Width, btnclosewindow.Location.Y)
-        btnsaisyouka.Location = New Drawing.Point(Me.Size.Width - 89, btnsaisyouka.Location.Y)
+        btnclosewindow.Location = New Drawing.Point((Me.Width - btnclosewindow.Width), 0)
+        btnsaisyouka.Location = New Drawing.Point((Me.Width - btnclosewindow.Width - btnsaisyouka.Width), 0)
+
     End Sub
 
 
@@ -13354,7 +13356,7 @@ Public Class Mainwindow
         'リンク先に移動したことにする
         LinkLabel3.LinkVisited = True
         'ブラウザで開く
-        System.Diagnostics.Process.Start("http://ephemeral-leaf.com/")
+        System.Diagnostics.Process.Start("https://frailleaves.com/myownsoftware/ash-howtouse/")
 
     End Sub
 
@@ -14073,6 +14075,8 @@ CInt(chkmonitor_sizestate.Checked)
 
     End Sub
 
+
+
     Private Sub numstop_Enter(sender As Object, e As EventArgs) Handles numstop.Enter
         numstop.Select(0, numstop.Text.Length)
 
@@ -14286,7 +14290,9 @@ CInt(chkmonitor_sizestate.Checked)
         'あっどはんどらで切る
     End Sub
 
-
+    Private Sub btndescription_table_Click(sender As Object, e As EventArgs) Handles btndescription_table.Click
+        Table_description.Show()
+    End Sub
 
 End Class
 

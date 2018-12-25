@@ -228,6 +228,12 @@
     <Compile Include="tableview.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Table_description.Designer.vb">
+      <DependentUpon>Table_description.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Table_description.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Textwindow.Designer.vb">
       <DependentUpon>Textwindow.vb</DependentUpon>
     </Compile>
@@ -338,6 +344,9 @@
     <EmbeddedResource Include="tableview.resx">
       <DependentUpon>tableview.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Table_description.resx">
+      <DependentUpon>Table_description.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Textwindow.resx">
       <DependentUpon>Textwindow.vb</DependentUpon>
     </EmbeddedResource>
@@ -396,6 +405,8 @@
     <EmbeddedResource Include="Resources\Licence[Intel_TBB].txt" />
     <EmbeddedResource Include="Resources\License[DOBONNET].txt" />
     <EmbeddedResource Include="Resources\License[OpenCVsharp].txt" />
+    <EmbeddedResource Include="Resources\Description_Table.txt" />
+    <EmbeddedResource Include="Resources\Description_Table_en.txt" />
     <Content Include="wes.ico" />
   </ItemGroup>
   <ItemGroup>
