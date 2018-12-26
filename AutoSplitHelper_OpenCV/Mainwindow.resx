@@ -139,7 +139,7 @@
     <value>NoControl</value>
   </data>
   <data name="btndescription_table.Location" type="System.Drawing.Point, System.Drawing">
-    <value>667, 226</value>
+    <value>667, 223</value>
   </data>
   <data name="btndescription_table.Size" type="System.Drawing.Size, System.Drawing">
     <value>126, 26</value>
@@ -7761,7 +7761,7 @@ Remover</value>
     <value>16, 48</value>
   </data>
   <data name="numcv_sizex.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 24</value>
+    <value>69, 24</value>
   </data>
   <data name="numcv_sizex.TabIndex" type="System.Int32, mscorlib">
     <value>200</value>
@@ -7818,7 +7818,7 @@ Remover</value>
     <value>16, 75</value>
   </data>
   <data name="numcv_sizey.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 24</value>
+    <value>69, 24</value>
   </data>
   <data name="numcv_sizey.TabIndex" type="System.Int32, mscorlib">
     <value>201</value>
@@ -7842,7 +7842,7 @@ Remover</value>
     <value>16, 105</value>
   </data>
   <data name="numsavex.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 24</value>
+    <value>69, 24</value>
   </data>
   <data name="numsavex.TabIndex" type="System.Int32, mscorlib">
     <value>252</value>
@@ -7863,10 +7863,10 @@ Remover</value>
     <value>True</value>
   </data>
   <data name="numsavey.Location" type="System.Drawing.Point, System.Drawing">
-    <value>55, 105</value>
+    <value>17, 133</value>
   </data>
   <data name="numsavey.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 24</value>
+    <value>69, 24</value>
   </data>
   <data name="numsavey.TabIndex" type="System.Int32, mscorlib">
     <value>251</value>
@@ -8019,7 +8019,7 @@ Remover</value>
     <value>17, 69</value>
   </data>
   <data name="GroupBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 171</value>
+    <value>220, 192</value>
   </data>
   <data name="GroupBox3.TabIndex" type="System.Int32, mscorlib">
     <value>204</value>
@@ -15057,6 +15057,9 @@ Remover</value>
   <data name="rdocalib_aspect_none.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 9pt</value>
   </data>
+  <data name="rdocalib_aspect_none.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="rdocalib_aspect_none.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 66</value>
   </data>
@@ -17359,7 +17362,7 @@ Remover</value>
     <value>NoControl</value>
   </data>
   <data name="lbldpi.Location" type="System.Drawing.Point, System.Drawing">
-    <value>440, 13</value>
+    <value>445, 13</value>
   </data>
   <data name="lbldpi.Size" type="System.Drawing.Size, System.Drawing">
     <value>128, 20</value>
@@ -17680,7 +17683,7 @@ Remover</value>
     <value>112</value>
   </data>
   <data name="Label31.Text" xml:space="preserve">
-    <value> (2018/12/19)</value>
+    <value> (2018/12/25)</value>
   </data>
   <data name="&gt;&gt;Label31.Name" xml:space="preserve">
     <value>Label31</value>
@@ -17779,7 +17782,7 @@ Remover</value>
     <value>5</value>
   </data>
   <data name="lblversion.Text" xml:space="preserve">
-    <value>V1.32</value>
+    <value>V1.33</value>
   </data>
   <data name="&gt;&gt;lblversion.Name" xml:space="preserve">
     <value>lblversion</value>
@@ -18515,6 +18518,9 @@ Remover</value>
   </metadata>
   <metadata name="timash_hotkey_sleep.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>659, 5</value>
+  </metadata>
+  <metadata name="timashupdate.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>499, 56</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -19394,6 +19400,12 @@ Remover</value>
     <value>timash_hotkey_sleep</value>
   </data>
   <data name="&gt;&gt;timash_hotkey_sleep.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timashupdate.Name" xml:space="preserve">
+    <value>timashupdate</value>
+  </data>
+  <data name="&gt;&gt;timashupdate.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

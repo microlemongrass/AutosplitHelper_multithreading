@@ -3,16 +3,6 @@ Imports Microsoft.Win32
 
 Public Class dialog_sharetemplate
 
-    '■レジストリの書き換え。
-    Private Const FEATURE_BROWSER_EMULATION As String = "Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BROWSER_EMULATION"
-
-    Private regkey_emu As RegistryKey = Registry.CurrentUser.CreateSubKey(FEATURE_BROWSER_EMULATION)
-    Private process_name As String = (Process.GetCurrentProcess.ProcessName + ".exe")
-
-
-
-
-
 
     Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK_Button.Click
         Me.DialogResult = System.Windows.Forms.DialogResult.OK
@@ -53,21 +43,12 @@ Public Class dialog_sharetemplate
             '■クリップボードにパスをコピー
             Clipboard.SetText("""" & stFilePath & """")
 
+            MessageBox.Show("Copied.")
 
-            '■ブラウザを表示。
-            web1.Visible = True
-            web1.Dock = DockStyle.Fill
-            web1.Url = New Uri("http://ephemeral-leaf.com/ash/fileupload/")
+            System.Diagnostics.Process.Start("https://ux.getuploader.com/share_template/")
 
-            Do
-                Application.DoEvents()
-            Loop Until web1.ReadyState = WebBrowserReadyState.Complete And web1.IsBusy = False
-
-            web1.Document.Window.ScrollTo(New Point(0, 270))
-            Me.BringToFront()
-
+            Me.Close()
         End If
-
 
 
     End Sub
@@ -79,33 +60,8 @@ Public Class dialog_sharetemplate
 
     Private Sub dialog_sharetemplate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Location = New Point(Mainwindow.Location.X + 100, Mainwindow.Location.Y + 50)
-        Me.Size = New Size(437, 640)
-        web1.Visible = False
+        'Me.Size = New Size(437, 640)
         txtshare_profilename.Text = Mainwindow.cmbprofile.SelectedItem
-
-        Try
-            Me.regkey_emu.SetValue(Me.process_name, 11001, RegistryValueKind.DWord)
-            Console.WriteLine("レジストリの登録（Webbrowserのバージョンを7→11）に成功しました。")
-
-        Catch ex As Exception
-            Console.WriteLine("レジストリの登録（Webbrowserのバージョンを7→11）に失敗しました。")
-
-        End Try
-
-    End Sub
-
-    Private Sub dialog_sharetemplate_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-
-        Try
-            Me.regkey_emu.DeleteValue(Me.process_name)
-            Me.regkey_emu.Close()
-
-            Console.WriteLine("レジストリの削除に成功しました。" & vbCrLf & "再度追加を行う場合は、このアプリを再起動して下さい。")
-
-        Catch ex As Exception
-            Console.WriteLine("レジストリの削除に失敗しました。")
-
-        End Try
 
 
     End Sub

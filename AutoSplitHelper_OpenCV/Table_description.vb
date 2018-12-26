@@ -9,7 +9,7 @@
         '指定されたマニフェストリソースを読み込む
         Dim sr As New System.IO.StreamReader(
             myAssembly.GetManifestResourceStream("AutoSplitHelper_OpenCV.Description_Table.txt"),
-                System.Text.Encoding.GetEncoding("Shift-JIS"))
+                System.Text.Encoding.UTF8)
         '内容を読み込む
         Dim s As String = sr.ReadToEnd()
         '後始末

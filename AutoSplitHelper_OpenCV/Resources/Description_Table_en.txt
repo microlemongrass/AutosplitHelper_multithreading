@@ -1,4 +1,4 @@
-Comment: Comment.
+﻿Comment: Comment.
 
 Snd: Send. Specify the presence or absence of hot key transmission.
      0->No  1->Yes

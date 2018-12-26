@@ -659,6 +659,7 @@ Partial Class Mainwindow
         Me.timcamera = New System.Windows.Forms.Timer(Me.components)
         Me.timcalib = New System.Windows.Forms.Timer(Me.components)
         Me.timash_hotkey_sleep = New System.Windows.Forms.Timer(Me.components)
+        Me.timashupdate = New System.Windows.Forms.Timer(Me.components)
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.DGtable, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -6049,6 +6050,11 @@ Partial Class Mainwindow
         '
         Me.timash_hotkey_sleep.Interval = 300
         '
+        'timashupdate
+        '
+        Me.timashupdate.Enabled = True
+        Me.timashupdate.Interval = 1000
+        '
         'Mainwindow
         '
         resources.ApplyResources(Me, "$this")
@@ -6865,4 +6871,5 @@ Partial Class Mainwindow
     Friend WithEvents lblnewestver As Label
     Friend WithEvents lbldpi As Label
     Friend WithEvents btndescription_table As Button
+    Friend WithEvents timashupdate As Timer
 End Class

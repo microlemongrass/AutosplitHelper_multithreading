@@ -340,7 +340,7 @@ Public Class Mainwindow
 
                 Dim myfilename_table1 As String = "./profile/default/table.csv"
 
-                Dim parser As TextFieldParser = New TextFieldParser(myfilename_table1, Encoding.GetEncoding("Shift_JIS"))
+                Dim parser As TextFieldParser = New TextFieldParser(myfilename_table1, Encoding.UTF8) '.GetEncoding("Shift_JIS"))
                 parser.TextFieldType = FieldType.Delimited
                 parser.SetDelimiters(",") ' 区切り文字はコンマ
 
@@ -382,7 +382,7 @@ Public Class Mainwindow
 
                 Dim myfilename_position As String = "./savedata/position.csv"
 
-                Dim parser As TextFieldParser = New TextFieldParser(myfilename_position, Encoding.GetEncoding("Shift_JIS"))
+                Dim parser As TextFieldParser = New TextFieldParser(myfilename_position, Encoding.UTF8) '.GetEncoding("Shift_JIS"))
                 parser.TextFieldType = FieldType.Delimited
                 parser.SetDelimiters(",") ' 区切り文字はコンマ
 
@@ -474,7 +474,7 @@ Public Class Mainwindow
         rtxtlog.AppendText(Now & " " & "Launched." & vbCrLf)
         ASH_state = 1
 
-        checkupdate() 'バージョン確認
+
 
 
     End Sub
@@ -600,6 +600,9 @@ Public Class Mainwindow
         '表示がバグるので、対症。
         Threading.Thread.Sleep(50)
         TabControl1.SelectedIndex = 0
+
+        checkupdate()
+
         Me.Refresh()
 
 
@@ -839,7 +842,7 @@ Public Class Mainwindow
 
         '■csvファイルの内容を表に表示
 
-        Dim parser As TextFieldParser = New TextFieldParser(txtpass_csv.Text, Encoding.GetEncoding("Shift_JIS"))
+        Dim parser As TextFieldParser = New TextFieldParser(txtpass_csv.Text, Encoding.UTF8) '.GetEncoding("Shift_JIS"))
 
         parser.TextFieldType = FieldType.Delimited
         parser.SetDelimiters(",") ' 区切り文字はコンマ
@@ -892,7 +895,7 @@ Public Class Mainwindow
 
         'Dim sw As New System.IO.StreamWriter("./savedata/profile/" & cmbprofile.SelectedItem & ".txt", False, System.Text.Encoding.GetEncoding("shift_jis"))
         Dim sw As New System.IO.StreamWriter("./profile/" & cmbprofile.SelectedItem & "/data.txt", False,
-                                             System.Text.Encoding.GetEncoding("shift_jis"))
+                                             System.Text.Encoding.UTF8) '.GetEncoding("Shift_JIS"))
 
         sw.Write(txtprofile.Text)
 
@@ -2785,10 +2788,10 @@ Public Class Mainwindow
             piczoom.Location = New Drawing.Point(0, numcv_sizey.Value)
             picview_capture.Location = New Drawing.Point((piczoom.Width + 5) * Dpi_rate, (numcv_sizey.Value + 30) * Dpi_rate) '(numcv_sizex.Value / 2) - 100
 
-            pnlview_window.Location = New Drawing.Point(0, lbltitlebar.Height - (2 * Dpi_rate))
+            pnlview_window.Location = New Drawing.Point(0, lbltitlebar.Height - (4 * Dpi_rate))
             pnlview_window.Size = New Drawing.Size(numcv_sizex.Value * Dpi_rate, (numcv_sizey.Value + piczoom.Height) * Dpi_rate)
 
-            pnlview_control.Location = New Drawing.Point(pnlview_window.Width, lbltitlebar.Height - (2 * Dpi_rate))
+            pnlview_control.Location = New Drawing.Point(pnlview_window.Width, lbltitlebar.Height - (4 * Dpi_rate))
             pnlview_control.Size = New Drawing.Size(220 * Dpi_rate, 300 * Dpi_rate)
 
 
@@ -2801,10 +2804,10 @@ Public Class Mainwindow
             Me.Size = New Drawing.Size((pnlview_window.Width + pnlview_control.Width),
                                        (lbltitlebar.Height + numcv_sizey.Value + piczoom.Height + DGtable.Height + 60) * Dpi_rate)
 
-            btnclosewindow.Location = New Drawing.Point((Me.Width - btnclosewindow.Width), 0)
-            btnsaisyouka.Location = New Drawing.Point((Me.Width - btnclosewindow.Width - btnsaisyouka.Width), 0)
+            btnclosewindow.Location = New Drawing.Point(10000, 0) '((Me.Width - btnclosewindow.Width), 0)
+            btnsaisyouka.Location = New Drawing.Point(10000, 0) '((Me.Width - btnclosewindow.Width - btnsaisyouka.Width), 0)
 
-            btnview_close.Location = New Drawing.Point((Me.Width - 2.2 * btnclosewindow.Width - btnsaisyouka.Width - btnview_close.Width), 0)
+            btnview_close.Location = New Drawing.Point(Me.Width - btnview_close.Width, 0)
 
             DGtable.Location = New Drawing.Point(8 * Dpi_rate, (lbltitlebar.Height + numcv_sizey.Value + piczoom.Height + 6) * Dpi_rate)
             DGtable.Size = New Drawing.Size(525 * Dpi_rate, 146 * Dpi_rate)
@@ -11794,7 +11797,7 @@ Public Class Mainwindow
                 'Dim FileName As String = myfilename ' SaveFileName
                 '現在のファイルに上書き保存
                 Using swCsv As New System.IO.StreamWriter(myfilename1,
-                                          False, System.Text.Encoding.GetEncoding("SHIFT_JIS"))
+                                          False, System.Text.Encoding.UTF8) '.GetEncoding("Shift_JIS"))
                     Dim sf As String = Chr(34)          'データの前側の括り
                     Dim se As String = Chr(34) & ","    'データの後ろの括りとデータの区切りの "," 
                     Dim i, j As Integer
@@ -11869,7 +11872,7 @@ Public Class Mainwindow
                 'Dim FileName As String = myfilename ' SaveFileName
                 '現在のファイルに上書き保存
                 Using swCsv As New System.IO.StreamWriter(myfilename2,
-                                          False, System.Text.Encoding.GetEncoding("SHIFT_JIS"))
+                                          False, System.Text.Encoding.UTF8) '.GetEncoding("Shift_JIS"))
                     Dim sf As String = Chr(34)          'データの前側の括り
                     Dim se As String = Chr(34) & ","    'データの後ろの括りとデータの区切りの "," 
                     Dim i, j As Integer
@@ -11946,7 +11949,7 @@ Public Class Mainwindow
                 'Dim FileName As String = myfilename ' SaveFileName
                 '現在のファイルに上書き保存
                 Using swCsv As New System.IO.StreamWriter(txtpass_csv.Text,
-                                          False, System.Text.Encoding.GetEncoding("SHIFT_JIS"))
+                                          False, System.Text.Encoding.UTF8) '.GetEncoding("Shift_JIS"))
                     Dim sf As String = Chr(34)          'データの前側の括り
                     Dim se As String = Chr(34) & ","    'データの後ろの括りとデータの区切りの "," 
                     Dim i, j As Integer
@@ -12199,7 +12202,7 @@ Public Class Mainwindow
         Next
 
         Dim sw As New System.IO.StreamWriter("./profile/" & cmbprofile.SelectedItem & "/data.txt", False,
-                                             System.Text.Encoding.GetEncoding("shift_jis"))
+                                             System.Text.Encoding.UTF8) '.GetEncoding("Shift_JIS"))
 
         sw.Write(txtprofile.Text)
 
@@ -12267,7 +12270,7 @@ Public Class Mainwindow
         Next
 
         Dim sw As New System.IO.StreamWriter("./profile/" & cmbprofile.SelectedItem & "/data.txt", False,
-                                             System.Text.Encoding.GetEncoding("shift_jis"))
+                                             System.Text.Encoding.UTF8) '.GetEncoding("Shift_JIS"))
 
         sw.Write(txtprofile.Text)
 
@@ -12595,7 +12598,7 @@ Public Class Mainwindow
 
 
 
-            Dim parser As TextFieldParser = New TextFieldParser(txtpass_csv.Text, Encoding.GetEncoding("Shift_JIS"))
+            Dim parser As TextFieldParser = New TextFieldParser(txtpass_csv.Text, Encoding.UTF8) '.GetEncoding("Shift_JIS"))
             parser.TextFieldType = FieldType.Delimited
             parser.SetDelimiters(",") ' 区切り文字はコンマ
 
@@ -12899,7 +12902,7 @@ Public Class Mainwindow
             End Try
 
             '■ブランクファイルを読み込む
-            Dim parser As TextFieldParser = New TextFieldParser("./savedata/blank.csv", Encoding.GetEncoding("Shift_JIS"))
+            Dim parser As TextFieldParser = New TextFieldParser("./savedata/blank.csv", Encoding.UTF8) '.GetEncoding("Shift_JIS"))
             parser.TextFieldType = FieldType.Delimited
             parser.SetDelimiters(",") ' 区切り文字はコンマ
 
@@ -12980,7 +12983,7 @@ Public Class Mainwindow
             Next
 
             Dim sw As New System.IO.StreamWriter("./profile/" & cmbprofile.SelectedItem & "/data.txt", False,
-                                                 System.Text.Encoding.GetEncoding("shift_jis"))
+                                                 System.Text.Encoding.UTF8) '.GetEncoding("Shift_JIS"))
 
             sw.Write(txtprofile.Text)
 
@@ -13749,7 +13752,7 @@ Public Class Mainwindow
         '指定されたマニフェストリソースを読み込む
         Dim sr As New System.IO.StreamReader(
             myAssembly.GetManifestResourceStream("AutoSplitHelper_OpenCV.License[OpenCVsharp].txt"),
-                System.Text.Encoding.GetEncoding("shift-jis"))
+                System.Text.Encoding.UTF8)
         '内容を読み込む
         Dim s As String = sr.ReadToEnd()
         '後始末
@@ -13769,7 +13772,7 @@ Public Class Mainwindow
         '指定されたマニフェストリソースを読み込む
         Dim sr As New System.IO.StreamReader(
             myAssembly.GetManifestResourceStream("AutoSplitHelper_OpenCV.Licence[Intel_TBB].txt"),
-                System.Text.Encoding.GetEncoding("shift-jis"))
+                System.Text.Encoding.UTF8)
         '内容を読み込む
         Dim s As String = sr.ReadToEnd()
         '後始末
@@ -13786,7 +13789,7 @@ Public Class Mainwindow
         '指定されたマニフェストリソースを読み込む
         Dim sr As New System.IO.StreamReader(
             myAssembly.GetManifestResourceStream("AutoSplitHelper_OpenCV.License[Directshowlib-2005].txt"),
-                System.Text.Encoding.GetEncoding("shift-jis"))
+                System.Text.Encoding.UTF8)
         '内容を読み込む
         Dim s As String = sr.ReadToEnd()
         '後始末
@@ -13803,7 +13806,7 @@ Public Class Mainwindow
         '指定されたマニフェストリソースを読み込む
         Dim sr As New System.IO.StreamReader(
             myAssembly.GetManifestResourceStream("AutoSplitHelper_OpenCV.License[DOBONNET].txt"),
-                System.Text.Encoding.GetEncoding("shift-jis"))
+                System.Text.Encoding.UTF8)
         '内容を読み込む
         Dim s As String = sr.ReadToEnd()
         '後始末
@@ -14082,6 +14085,7 @@ CInt(chkmonitor_sizestate.Checked)
 
     End Sub
 
+
     Private Sub numanten_Enter(sender As Object, e As EventArgs) Handles numanten.Enter
         numanten.Select(0, numanten.Text.Length)
 
@@ -14233,7 +14237,7 @@ CInt(chkmonitor_sizestate.Checked)
                 Dim wc1 As WebClient = New WebClient()
                 Dim st1 As Stream = wc1.OpenRead("https://mus.frailleaves.com/ash_update.html")
 
-                Dim enc1 As Encoding = Encoding.GetEncoding("Shift_JIS")
+                Dim enc1 As Encoding = Encoding.UTF8
                 Dim sr1 As StreamReader = New StreamReader(st1, enc1)
                 Dim html As String = sr1.ReadToEnd()
                 sr1.Close()
@@ -14241,8 +14245,6 @@ CInt(chkmonitor_sizestate.Checked)
 
 
                 '■ページの内容を取得♥
-
-
                 Dim s1 As String = html
                 Dim lefturl As String, righturl As String
                 Dim filename As String
@@ -14252,20 +14254,27 @@ CInt(chkmonitor_sizestate.Checked)
 
                 Dim s2 As String = "" & filename.Substring(lefturl) ', righturl - lefturl - 1) & ""  '4文字目から3文字を取得する
 
-                If s2.Contains("AutosplitterUpdateend") = True Then
-
-                    righturl = InStr(filename, "AutosplitterUpdateend")
-                    s2 = filename.Substring(lefturl, righturl - lefturl - 1) & ""  '4文字目から3文字を取得する
-
-
-                End If
+                righturl = InStr(filename, "AutosplitterUpdateend")
+                s2 = filename.Substring(lefturl, righturl - lefturl - 1) & ""  '4文字目から3文字を取得する
 
                 Dim s3 As String = s2.Replace("<br>", "")
-
+                Console.WriteLine("Now: " & lblversion.Text & ", New: " & s3)
                 lblnewestver.Text = "Newest: " & s3
 
+
+                '■バージョンが更新されていたら通知する。★♥
                 If Not lblversion.Text = s3 Then
-                    MessageBox.Show(s3 & " is available.")
+                    Dim leftcontent As String, rightcontent As String
+
+                    leftcontent = InStr(filename, "Autosplittercontentstart") + 23  'Mid(filename, InStr(filename, "<url>") + 5)  '拡張子を返します
+                    Dim s4 As String = "" & filename.Substring(leftcontent)
+                    rightcontent = InStr(filename, "Autosplittercontentend")
+                    s4 = filename.Substring(leftcontent, rightcontent - leftcontent - 1) & ""  '4文字目から3文字を取得する
+
+                    lbltitlebar.Text = "[" & cmbprofile.SelectedItem & "]" & s3 & " is available! Details: Help -> Information."
+                    rtxtlog.AppendText(s4 & vbCrLf)
+
+
                 End If
 
             Catch ex As Exception
@@ -14279,13 +14288,15 @@ CInt(chkmonitor_sizestate.Checked)
             Console.WriteLine("ネットワークに接続されていません。")
         End If
 
+
+
     End Sub
 
 
     Private DGtable_changeTF = 0
 
     Private Sub DGtable_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles DGtable.CellValueChanged
-        Console.WriteLine("DGTableの内容が変更された。")
+        'Console.WriteLine("DGTableの内容が変更された。")
         DGtable_changeTF = 1
         'あっどはんどらで切る
     End Sub
@@ -14293,6 +14304,7 @@ CInt(chkmonitor_sizestate.Checked)
     Private Sub btndescription_table_Click(sender As Object, e As EventArgs) Handles btndescription_table.Click
         Table_description.Show()
     End Sub
+
 
 End Class
 
