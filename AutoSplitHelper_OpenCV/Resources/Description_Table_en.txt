@@ -1,7 +1,12 @@
 ﻿Comment: Comment.
 
 Snd: Send. Specify the presence or absence of hot key transmission.
-     0->No  1->Yes
+     0->[OpenCV]No            1->[OpenCV]Yes
+　　　2→[RGB_compare]No　　　3→[RGB_compare]Yes
+　　　4→[RGB_Specified color occupies the screen]No　5→[RGB_Specified color occupies the screen]Yes
+
+    *RGB_compare: Whether the picture within the range specified when acquiring the template matches without any deviation of 1px
+     RGB_Specified color occupies the screen：Whether the color within the specified range when acquiring the template is equal to or greater than the specified ratio.
 
 
 Key: Specify which hot key to send.

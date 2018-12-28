@@ -1647,7 +1647,7 @@ Public Class Mainwindow
 
     '■キー送信全体 （スプリット）
     Private Sub allkeysend()
-
+        Console.WriteLine("ALLKEYSEND")
         If chknamedpipe.Checked = True Then
 
             'タイマーのプロセスを探す
@@ -2792,13 +2792,10 @@ Public Class Mainwindow
             pnlview_window.Size = New Drawing.Size(numcv_sizex.Value * Dpi_rate, (numcv_sizey.Value + piczoom.Height) * Dpi_rate)
 
             pnlview_control.Location = New Drawing.Point(pnlview_window.Width, lbltitlebar.Height - (4 * Dpi_rate))
-            pnlview_control.Size = New Drawing.Size(220 * Dpi_rate, 300 * Dpi_rate)
+            pnlview_control.Size = New Drawing.Size(220 * Dpi_rate, 340 * Dpi_rate)
 
 
 
-
-
-            txtrowscount.Location = New Drawing.Point(8 * Dpi_rate, (lbltitlebar.Height + numcv_sizey.Value + piczoom.Height + 4) * Dpi_rate)
 
 
             Me.Size = New Drawing.Size((pnlview_window.Width + pnlview_control.Width),
@@ -2809,8 +2806,10 @@ Public Class Mainwindow
 
             btnview_close.Location = New Drawing.Point(Me.Width - btnview_close.Width, 0)
 
-            DGtable.Location = New Drawing.Point(8 * Dpi_rate, (lbltitlebar.Height + numcv_sizey.Value + piczoom.Height + 6) * Dpi_rate)
+            DGtable.Location = New Drawing.Point(8 * Dpi_rate, (pnlview_control.Location.Y + pnlview_control.Height + 9) * Dpi_rate)
             DGtable.Size = New Drawing.Size(525 * Dpi_rate, 146 * Dpi_rate)
+
+            txtrowscount.Location = New Drawing.Point(8 * Dpi_rate, DGtable.Location.Y * Dpi_rate)
 
             MenuStrip1.Visible = False
 
@@ -2826,7 +2825,6 @@ Public Class Mainwindow
             pnl_other.Location = New Drawing.Point(10000, 0)
 
             btnclose_general.Visible = False
-            picunder.Visible = False
             listsetcontents.Visible = False
 
 
@@ -2920,7 +2918,13 @@ Public Class Mainwindow
 
     End Sub
 
+    '■OpenCVキャプチャ→限定探索、ローディングあり。C&Dでキャプチャ＆保存
+    '■RGBキャプチャ（一部）→限定探索、ローディングなし。C&Dでキャプチャ＆保存。
+    '　↑保存データは同じ
+    '■RGBキャプチャー（全画面）→限定探索、ローディングなし。1クリックで保存。RGB値を別に取得。
+    'pic_capに画像の一部or全部。PX,PY,SX,SYの挿入間違えずに。画像を止めてクリックでRGB取得でも良いかも。
     Private Sub btncap_Click(sender As Object, e As EventArgs) Handles btncap.Click
+
 
         piccap.Visible = True
         piccap.Size = New Drawing.Size(numcv_sizex.Value, numcv_sizey.Value)
@@ -2943,6 +2947,11 @@ Public Class Mainwindow
 
         lbltitlebar.Text = My.Resources.Message.msgb1 '"Preview キャプチャ中"
 
+        If rdocapture_rgbfull.Checked = True Then
+            txtclickcount.Text = 10
+            lbltitlebar.Text = "Click to get RGB value."
+        End If
+
 
     End Sub
 
@@ -2954,12 +2963,15 @@ Public Class Mainwindow
             txt11.Text = CInt(Cursor.Position.X.ToString()) - Me.Location.X
             txt12.Text = CInt(Cursor.Position.Y.ToString()) - Me.Location.Y - lbltitlebar.Height
 
-            skeleton.Show(Me)
+
 
             If txtclickcount.Text = 0 Then
-
+                skeleton.Show(Me)
             ElseIf txtclickcount.Text = 1 Then
+                skeleton.Show(Me)
                 skeleton.BackColor = Color.Tomato
+
+            ElseIf txtclickcount.Text = 10 Then
 
 
             End If
@@ -2980,8 +2992,11 @@ Public Class Mainwindow
     End Sub
 
     Private Sub piccap_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles piccap.MouseUp
+        'ローディング時は限定探索無効
+        'piccap：全範囲の画像、picview_capture：指定範囲の画像
 
         If e.Button = MouseButtons.Left Then
+
 
             lbltitlebar.Text = My.Resources.Message.msgb2 '"Preview"
 
@@ -2989,50 +3004,67 @@ Public Class Mainwindow
             txt22.Text = CInt(System.Windows.Forms.Cursor.Position.Y.ToString()) - Me.Location.Y - lbltitlebar.Height
 
             Try
+                'RGB全画面取得の時以外では範囲選択内の画像を取得する。
+                If txtclickcount.Text = 0 Then
 
-                '描画先とするImageオブジェクトを作成する
-                Dim canvas As New Bitmap(CInt(txt21.Text - txt11.Text), CInt(txt22.Text - txt12.Text))
-                'ImageオブジェクトのGraphicsオブジェクトを作成する
-                Dim g As Graphics = Graphics.FromImage(canvas)
+                    '描画先とするImageオブジェクトを作成する
+                    Dim canvas As New Bitmap(CInt(txt21.Text - txt11.Text), CInt(txt22.Text - txt12.Text))
+                    'ImageオブジェクトのGraphicsオブジェクトを作成する
+                    Dim g As Graphics = Graphics.FromImage(canvas)
 
-                '画像ファイルのImageオブジェクトを作成する
-                Dim img As New Bitmap(piccap.Image)
+                    '画像ファイルのImageオブジェクトを作成する
+                    Dim img As New Bitmap(piccap.Image)
 
-                '切り取る部分の範囲を決定する。ここでは、位置(10,10)、大きさ100x100
-                Dim srcRect As New Rectangle(txt11.Text, txt12.Text, canvas.Width, canvas.Height)
-                '描画する部分の範囲を決定する。ここでは、位置(0,0)、大きさ100x100で描画する
-                Dim desRect As New Rectangle(0, 0, srcRect.Width, srcRect.Height)
-                '画像の一部を描画する
-                g.DrawImage(img, desRect, srcRect, GraphicsUnit.Pixel)
+                    '切り取る部分の範囲を決定する。ここでは、位置(10,10)、大きさ100x100
+                    Dim srcRect As New Rectangle(txt11.Text, txt12.Text, canvas.Width, canvas.Height)
+                    '描画する部分の範囲を決定する。ここでは、位置(0,0)、大きさ100x100で描画する
+                    Dim desRect As New Rectangle(0, 0, srcRect.Width, srcRect.Height)
+                    '画像の一部を描画する
+                    g.DrawImage(img, desRect, srcRect, GraphicsUnit.Pixel)
 
-                'Graphicsオブジェクトのリソースを解放する
-                g.Dispose()
+                    'Graphicsオブジェクトのリソースを解放する
+                    g.Dispose()
 
-                'PictureBox1に表示する
-                picview_capture.Image = canvas
+                    'PictureBox1に表示する
+                    picview_capture.Image = canvas
+
+                End If
 
                 '■クリックカウント0,1とLoad用の画像かどうか
                 If txtclickcount.Text = 0 Then
+
                     Cursor.Clip = Rectangle.Empty
                     Me.Cursor = Cursors.Default
                     My.Forms.skeleton.Close()
 
-                    If chkloading.Checked = True Then 'limit,overwriteはオフにしておく
+                    '■RGB値取得
+                    GetRGB()
+
+                    If chkloading.Checked = False Then 'limit,overwriteはオフにしておく
+                        Console.WriteLine("OpenCV通常。")
+
+                        '■画像の保存＋表へ挿入
+                        savepicture(picview_capture)
+
+
+                    ElseIf chkloading.Checked = True Then
+                        Console.WriteLine("OpenCV_Loading")
+
                         Dim savedir As String = txtpass_picturefolder.Text
                         Dim picname_load As String = savedir & "\loading" & numloadno.Value & ".bmp"
 
+                        '■ローディング画像の保存。表は関わらない。
                         picview_capture.Image.Save(picname_load, ImageFormat.Bmp)
-
-
-                    ElseIf chkloading.Checked = False Then
-
-                        savepicture()
 
 
                     End If
 
 
-                    If chklimit.Checked = False Then
+
+                    If chklimit.Checked = False And rdocapture_opencv.Checked = True Then
+                        Console.WriteLine("OpenCV通常_画像保存後。")
+                        '■OpenCV＋通常。loading=Falseで画像、表保存済みなので後処理のみ。
+
                         lbltitlebar.Text = My.Resources.Message.msgb2 '"Preview"
 
                         piccap.Visible = False
@@ -3054,9 +3086,19 @@ Public Class Mainwindow
 
 
 
-                    ElseIf chklimit.Checked = True Then
+                    ElseIf chklimit.Checked = True Or rdocapture_rgb.Checked = True Then '★
+                        Console.WriteLine("OpenCV_LimitもしくはRGB_一部")
+                        '画像を保持してもう1度操作（count = 1にする）
+                        'Limit→範囲選択の前処理、RGB→RGB値取得の前処理
 
-                        lbltitlebar.Text = My.Resources.Message.msgb3 '"Preview キャプチャ中（監視範囲指定）"
+                        If rdocapture_opencv.Checked = True Then
+                            lbltitlebar.Text = My.Resources.Message.msgb3 '"Preview キャプチャ中（監視範囲指定）"
+
+
+                        ElseIf rdocapture_rgb.Checked = True Then
+                            lbltitlebar.Text = "Click to get RGB value." 'My.Resources.Message.msgb3 '"Preview キャプチャ中（監視範囲指定）"
+
+                        End If
 
                         txtclickcount.Text = 1
                         Me.Cursor = Cursors.Cross
@@ -3068,10 +3110,24 @@ Public Class Mainwindow
 
 
 
-                ElseIf txtclickcount.Text = 1 Then 'キャプチャ画像を映しっぱなしにして2回目のキャプチャ
+                ElseIf txtclickcount.Text = 1 Then
+                    'OpenCV_Limit→指定範囲の値を表に挿入。
+                    'RGB_通常→RGB値を表に挿入。
 
-                    inserttable2()
+                    Cursor.Clip = Rectangle.Empty
+                    Me.Cursor = Cursors.Default
+                    My.Forms.skeleton.Close()
 
+                    If rdocapture_opencv.Checked = True Then
+                        inserttable_limit()
+
+                    ElseIf rdocapture_rgb.Checked = True Then
+
+                        inserttable_rgb()
+
+                    End If
+
+                    '共通の後処理。
                     lbltitlebar.Text = My.Resources.Message.msgb2 '"Preview"
                     txtclickcount.Text = 0
 
@@ -3079,6 +3135,39 @@ Public Class Mainwindow
                     PictureBoxIpl1.Image = Nothing
                     piccap.Image = Nothing '2017-05-07　OpenCVSharp3に変更したら、これ書かないとだめになった
 
+
+                    If btntemp.BackColor = Color.Maroon Then
+                        pictempipl.Visible = True
+
+
+                    End If
+
+
+
+                ElseIf txtclickcount.Text = 10 Then 'RGB値取得(通常のキャプチャと同じ挙動で。)
+                    'Savepictureで全範囲画像、表への挿入＋RGB値の表への挿入
+
+                    lbltitlebar.Text = My.Resources.Message.msgb2 '"Preview"
+
+                    piccap.Visible = False
+                    cvpreview.Start()
+
+                    Cursor.Clip = Rectangle.Empty
+                    Me.Cursor = Cursors.Default
+                    My.Forms.skeleton.Close()
+
+                    '■RGB値取得
+                    GetRGB()
+
+                    savepicture(piccap)
+
+                    '共通の後処理。
+                    lbltitlebar.Text = My.Resources.Message.msgb2 '"Preview"
+                    txtclickcount.Text = 0
+
+                    PictureBoxIpl1.ImageIpl = Nothing
+                    PictureBoxIpl1.Image = Nothing
+                    piccap.Image = Nothing '2017-05-07　OpenCVSharp3に変更したら、これ書かないとだめになった
 
                     If btntemp.BackColor = Color.Maroon Then
                         pictempipl.Visible = True
@@ -3104,6 +3193,7 @@ Public Class Mainwindow
             End Try
 
         End If
+        Console.WriteLine("clockcount: " & txtclickcount.Text)
 
 
         '■選択行番号の再取得。■■■■■■■■■■■■■■■■■■
@@ -3115,8 +3205,32 @@ Public Class Mainwindow
 
     End Sub
 
+    Private _scrCap As Bitmap
+    Private Rvalue, Gvalue, Bvalue As Integer
+
+    Sub GetRGB()
+
+        _scrCap = New Bitmap(1, 1)
+
+        Dim g As Graphics = Graphics.FromImage(_scrCap)
+        'カーソル先端1ピクセルのスクリーンをコピー
+        g.CopyFromScreen(Cursor.Position.X, Cursor.Position.Y, 0, 0, _scrCap.Size)
+
+        g.Dispose()
+
+        Dim col As Color = _scrCap.GetPixel(0, 0)
+        'コピーした画像から色を取得
+        Rvalue = col.R
+        Gvalue = col.G
+        Bvalue = col.B
+
+
+        Console.WriteLine("R:" & col.R & "G:" & col.G & "B:" & col.B)
+
+    End Sub
+
     '■画像ファイルの保存とテキストファイルの生成★
-    Sub savepicture()
+    Sub savepicture(captureimage As PictureBox)
 
         Try
 
@@ -3128,12 +3242,13 @@ Public Class Mainwindow
             Dim picname_reset As String = savedir & "\reset.bmp"
 
             '■上書き確認の有無
-            With picview_capture
+            With captureimage
+                Console.WriteLine("sdfsfsdfsfdfsfsdfsdfsdf")
                 If Not (.Image Is Nothing) Then
 
                     '上書き確認しない
                     If chkoverwrite.Checked = False Then
-
+                        Console.WriteLine("inserttable")
                         inserttable()
 
                         If psnumber = 0 Then
@@ -3410,44 +3525,72 @@ Public Class Mainwindow
             End If
 
             '■表へ各パラメータを代入。
-            DGtable(send.Index, aaa).Value = 1
+            If rdocapture_opencv.Checked = True Then
+                DGtable(send.Index, aaa).Value = 1
+            Else
+                DGtable(send.Index, aaa).Value = 3
+            End If
+
+
             DGtable(key.Index, aaa).Value = 0
             DGtable(rate.Index, aaa).Value = numpercent.Text
             DGtable(sleep.Index, aaa).Value = numstop.Text
             DGtable(timing.Index, aaa).Value = 0
-            DGtable(posx.Index, aaa).Value = (numcv_sizex.Text / 2) - 20 'lblform2_posx.Text
-            DGtable(posy.Index, aaa).Value = (numcv_sizey.Text / 2) - 20 'lblform2_posy.Text
-            DGtable(sizex.Index, aaa).Value = 40
-            DGtable(sizey.Index, aaa).Value = 40
-            DGtable(darksleep.Index, aaa).Value = 0
-            DGtable(darkthr.Index, aaa).Value = numanten.Text
-            DGtable(ltx.Index, aaa).Value = 0
-            DGtable(lty.Index, aaa).Value = 0
-            DGtable(rbx.Index, aaa).Value = 1000
-            DGtable(rby.Index, aaa).Value = 1000
 
-            DGtable(graph_count.Index, aaa).Value = 0
-            DGtable(graph_rate.Index, aaa).Value = 0
-            DGtable(graph_view.Index, aaa).Value = 0
+            If rdocapture_opencv.Checked = True Then
+                DGtable(posx.Index, aaa).Value = (numcv_sizex.Text / 2) - 20 'lblform2_posx.Text
+                DGtable(posy.Index, aaa).Value = (numcv_sizey.Text / 2) - 20 'lblform2_posy.Text
+                DGtable(sizex.Index, aaa).Value = 40
+                DGtable(sizey.Index, aaa).Value = 40
 
-            DGtable(seektime.Index, aaa).Value = -1
+            ElseIf rdocapture_rgb.Checked = True Then
+                DGtable(posx.Index, aaa).Value = txt11.Text
+                DGtable(posy.Index, aaa).Value = txt12.Text
+                DGtable(sizex.Index, aaa).Value = CInt(txt21.Text - txt11.Text)
+                DGtable(sizey.Index, aaa).Value = CInt(txt22.Text - txt12.Text)
 
-
-            '表をスクロールさせる
-            DGtable.FirstDisplayedScrollingRowIndex = txtrowscount.Text
-
-            '最終行を選択している状態の場合、1行追加する。
-            If DGtable.RowCount - 1 <= aaa Then
-                DGtable.Rows.Add(1)
+            ElseIf rdocapture_rgbfull.Checked = True Then
+                DGtable(posx.Index, aaa).Value = 0
+                DGtable(posy.Index, aaa).Value = 0
+                DGtable(sizex.Index, aaa).Value = numcv_sizex.Value
+                DGtable(sizey.Index, aaa).Value = numcv_sizey.Value
 
             End If
 
-        End If
+
+            DGtable(darksleep.Index, aaa).Value = 0
+                DGtable(darkthr.Index, aaa).Value = numanten.Text
+                DGtable(ltx.Index, aaa).Value = 0
+                DGtable(lty.Index, aaa).Value = 0
+                DGtable(rbx.Index, aaa).Value = 1000
+                DGtable(rby.Index, aaa).Value = 1000
+
+                DGtable(graph_count.Index, aaa).Value = 0
+                DGtable(graph_rate.Index, aaa).Value = 0
+                DGtable(graph_view.Index, aaa).Value = 0
+
+                DGtable(color_r.Index, aaa).Value = Rvalue
+                DGtable(color_g.Index, aaa).Value = Gvalue
+                DGtable(color_b.Index, aaa).Value = Bvalue
+
+                DGtable(seektime.Index, aaa).Value = -1
+
+
+                '表をスクロールさせる
+                DGtable.FirstDisplayedScrollingRowIndex = txtrowscount.Text
+
+                '最終行を選択している状態の場合、1行追加する。
+                If DGtable.RowCount - 1 <= aaa Then
+                    DGtable.Rows.Add(1)
+
+                End If
+
+            End If
 
 
     End Sub
 
-    Sub inserttable2()
+    Sub inserttable_limit()
 
         txtclickcount.Text = 0
 
@@ -3472,9 +3615,7 @@ Public Class Mainwindow
             DGtable(rby.Index, aaa - 1).Value = txt22.Text
 
 
-            Cursor.Clip = Rectangle.Empty
-            Me.Cursor = Cursors.Default
-            My.Forms.skeleton.Close()
+
             piccap.Visible = False
             cvpreview.Start()
 
@@ -3484,6 +3625,42 @@ Public Class Mainwindow
 
     End Sub
 
+    Sub inserttable_rgb() 'まだ触れてない★
+
+        txtclickcount.Text = 0
+
+        '■RGB値取得
+        GetRGB()
+
+        '■行選択がされている状態時のみ各パラメータを送信。
+        Dim selectedRowCount As Integer = DGtable.Rows.GetRowCount(DataGridViewElementStates.Selected)
+
+        If selectedRowCount > 0 Then
+
+            Dim sb As New System.Text.StringBuilder()
+
+            sb.Append("Row: ")
+            sb.Append(DGtable.SelectedRows(0).Index.ToString())
+            sb.Append(Environment.NewLine)
+
+            Dim aaa As Integer = DGtable.SelectedRows(0).Index.ToString()
+
+
+            '■表へ各パラメータを代入。
+            DGtable(color_r.Index, aaa - 1).Value = Rvalue
+            DGtable(color_g.Index, aaa - 1).Value = Gvalue
+            DGtable(color_b.Index, aaa - 1).Value = Bvalue
+
+
+
+            piccap.Visible = False
+            cvpreview.Start()
+
+
+        End If
+
+
+    End Sub
 
     '現在のコードを実行しているAssemblyを取得
     Dim myAssembly As System.Reflection.Assembly = System.Reflection.Assembly.GetExecutingAssembly()
@@ -4877,7 +5054,6 @@ Public Class Mainwindow
         grpgeneral.Visible = True
 
         btnclose_general.Visible = True
-        picunder.Visible = True
         listsetcontents.Visible = True
 
 
@@ -6295,6 +6471,8 @@ Public Class Mainwindow
     Private tplex_load10 As Mat
     Private imgex As Mat
 
+    Private cv_method As Integer = 0
+
 
 
     '■監視の処理■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
@@ -6302,6 +6480,8 @@ Public Class Mainwindow
     Private Sub btnstartopencv_Click(sender As Object, e As EventArgs) Handles btnstartopencv.Click
 
         Try
+
+#Region "監視前のチェック"
 
 
 
@@ -6654,7 +6834,7 @@ Public Class Mainwindow
             End If
 
 
-
+#End Region
 
             '■↑のExit Subを切り抜けたので監視処理開始■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 
@@ -6812,6 +6992,8 @@ Public Class Mainwindow
             picipl_cap.ImageIpl = frame
             imgex = picipl_cap.ImageIpl
 
+            '■★Methodに番号を送る。どの方式で監視を行うか。
+            cv_method = DGtable(send.Index, CInt(lblcv_lap.Text) - 0).Value '表の2行目のMethod値を取得。0/1:OpenCV、2/3:RGB、4/5:RGB(色の割合)
 
             '■画像読み込み用■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 
@@ -6839,10 +7021,22 @@ Public Class Mainwindow
             txtcv_ikiti_load9.Text = numload_rate9.Value
             txtcv_ikiti_load10.Text = numload_rate10.Value
 
+            txtcv_color_r.Text = DGtable(color_r.Index, CInt(lblcv_lap.Text)).Value
+            txtcv_color_g.Text = DGtable(color_g.Index, CInt(lblcv_lap.Text)).Value
+            txtcv_color_b.Text = DGtable(color_b.Index, CInt(lblcv_lap.Text)).Value
+
+            color_lower_limit_r = txtcv_color_r.Text - DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+            color_lower_limit_g = txtcv_color_g.Text - DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+            color_lower_limit_b = txtcv_color_b.Text - DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+
+            color_upper_limit_r = txtcv_color_r.Text + DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+            color_upper_limit_g = txtcv_color_g.Text + DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+            color_upper_limit_b = txtcv_color_b.Text + DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+
+            ColorAllowance = DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+
 
             If chkcv_monitor.Checked = True Then
-
-
 
                 '■最初の画像の読み込み
                 Dim aa As String = txtpass_picturefolder.Text & "\" & 1 & ".bmp"
@@ -7115,15 +7309,20 @@ Public Class Mainwindow
 
             End If
 
+            '■★Methodに番号を送る。どの方式で監視を行うか。
+            cv_method = DGtable(send.Index, CInt(lblcv_lap.Text) - 0).Value '表の2行目のMethod値を取得。0/1:OpenCV、2/3:RGB、4/5:RGB(色の割合)
+
+
             '■■監視スタート■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
             '■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-
+            onetimematching()
             '■モニタリング画面に現在の設定を表示
             If chkcv_monitor.Checked = True Then
                 chknow_monitor.Checked = True
-                async_split_onoff = 1
+
 
             End If
+
 
             '開始時はオフにしておき、1度splitした時に監視をする。
             If chkcv_resetonoff.Checked = True Then
@@ -7204,7 +7403,7 @@ Public Class Mainwindow
             'ビデオ再生あり、かつ手動スタート  →ビデオプレーヤー表示、タイマースタートしない
             'ビデオ再生あり、かつ自動スタート  →ビデオプレーヤー表示、タイマースタートする
 
-            onetimematching()
+
 
             If chkshowvideo.Checked = False Then
                 Console.WriteLine("ビデオ再生なし")
@@ -7498,6 +7697,290 @@ Public Class Mainwindow
 
     End Sub
 
+    '■マッチングRGB通常
+    Private Sub RGBmethod()
+
+        Dim number As Integer = lblcv_lap.Text
+
+        Dim ltx As Integer = DGtable(posx.Index, number).Value
+        Dim lty As Integer = DGtable(posy.Index, number).Value
+        Dim rbx As Integer = DGtable(sizex.Index, number).Value
+        Dim rby As Integer = DGtable(sizey.Index, number).Value
+
+        txtcompikiti.Text = rbx * rby
+
+        Dim comptimer As Integer = 0
+
+        '■画像の一部を切り取って（トリミングして）表示する■■■■■■■■■■■■■■■■
+
+        '描画先とするImageオブジェクトを作成する
+        Dim canvas As New Bitmap(rbx, rby)
+        'ImageオブジェクトのGraphicsオブジェクトを作成する
+        Dim g As Graphics = Graphics.FromImage(canvas)
+
+        '画像ファイルのImageオブジェクトを作成する
+        Dim img As Bitmap = picipl_cap.Image
+
+        '切り取る部分の範囲を決定する。ここでは、位置(10,10)、大きさ100x100
+        Dim srcRect As New Rectangle(ltx, lty, rbx, rby)
+        '描画する部分の範囲を決定する。ここでは、位置(0,0)、大きさ100x100で描画する
+        Dim desRect As New Rectangle(0, 0, srcRect.Width, srcRect.Height)
+        '画像の一部を描画する
+        g.DrawImage(img, desRect, srcRect, GraphicsUnit.Pixel)
+
+        'PictureBox1に表示する
+        'picipl_foranten.Image = canvas
+
+        'Graphicsオブジェクトのリソースを解放する
+        g.Dispose()
+
+
+
+
+        '#CaptureのRGB取得を行う■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+        Dim cap As Bitmap = canvas 'picipl_foranten.Image
+        Dim pic As Bitmap = piccv_picture.Image
+
+        '##CaptureのRGB取得の準備を行う###################################################################
+        Dim pixelFormat_cap As PixelFormat = cap.PixelFormat
+        Dim pixelSize_cap As Integer = Image.GetPixelFormatSize(pixelFormat_cap) / 8
+        If pixelSize_cap < 3 OrElse 4 < pixelSize_cap Then
+            Throw New ArgumentException(
+                "1ピクセルあたり24または32ビットの形式のイメージのみ有効です。",
+                "img")
+        End If
+
+        'Bitmapをロックする
+        Dim bmpData_cap As BitmapData =
+            cap.LockBits(New Rectangle(0, 0, cap.Width, cap.Height),
+                         ImageLockMode.ReadWrite, pixelFormat_cap)
+
+        If bmpData_cap.Stride < 0 Then
+            cap.UnlockBits(bmpData_cap)
+            Throw New ArgumentException(
+                "ボトムアップ形式のイメージには対応していません。",
+                "img")
+        End If
+
+
+        '##PictureのRGB取得の準備を行う■■■■■■■■
+
+        Dim pixelFormat_pic As PixelFormat = pic.PixelFormat
+        Dim pixelSize_pic As Integer = 0.125 * Image.GetPixelFormatSize(pixelFormat_pic) ' / 8
+        If pixelSize_pic < 3 OrElse 4 < pixelSize_pic Then
+            Throw New ArgumentException(
+                "1ピクセルあたり24または32ビットの形式のイメージのみ有効です。",
+                "img")
+        End If
+
+
+        'Bitmapをロックする
+        Dim bmpData_pic As BitmapData =
+            pic.LockBits(New Rectangle(0, 0, pic.Width, pic.Height),
+                         ImageLockMode.ReadWrite, pixelFormat_pic)
+
+        If bmpData_pic.Stride < 0 Then
+            pic.UnlockBits(bmpData_pic)
+            Throw New ArgumentException(
+                "ボトムアップ形式のイメージには対応していません。",
+                "img")
+        End If
+
+
+        '#######################################################################################################################
+        '##################PGB取得の準備が終了。px毎の色情報を取得し、差を取る。################################################
+        '#######################################################################################################################
+
+        '範囲内の全ピクセルの色を取得する
+        For y As Integer = 0 To rby - 1 'bmpData.Height - 1 
+            For x As Integer = 0 To rbx - 1 'bmpData.Width - 1
+
+                'キャプチャ画像の全ピクセルの色を取得する
+                Dim adr_cap As IntPtr = bmpData_cap.Scan0
+                Dim pos_cap As Integer = y * bmpData_cap.Stride + x * pixelSize_cap
+                Dim cap_b As Byte = Marshal.ReadByte(adr_cap, pos_cap + 0)
+                Dim cap_g As Byte = Marshal.ReadByte(adr_cap, pos_cap + 1)
+                Dim cap_r As Byte = Marshal.ReadByte(adr_cap, pos_cap + 2) 'System.Runtime.InteropServices.
+
+                'ピクチャ画像の全ピクセルの色を取得する
+                Dim adr_pic As IntPtr = bmpData_pic.Scan0
+                Dim pos_pic As Integer = y * bmpData_pic.Stride + x * pixelSize_pic
+                Dim pic_b As Byte = Marshal.ReadByte(adr_pic, pos_pic + 0)
+                Dim pic_g As Byte = Marshal.ReadByte(adr_pic, pos_pic + 1)
+                Dim pic_r As Byte = Marshal.ReadByte(adr_pic, pos_pic + 2)
+
+
+                '2枚の画像のRGBの差を取る
+                Dim distR As Integer = Math.Abs(CInt(cap_r) - CInt(pic_r))
+                Dim distG As Integer = Math.Abs(CInt(cap_g) - CInt(pic_g))
+                Dim distB As Integer = Math.Abs(CInt(cap_b) - CInt(pic_b))
+
+
+                '色差が少ない場合、カウントプラス
+
+                If distR <= ColorAllowance And'DGtable(darkthr.Index, number).Value
+                   distG <= ColorAllowance And
+                   distB <= ColorAllowance Then
+
+                    comptimer += 1
+
+                End If
+
+            Next
+
+        Next
+
+
+        'ロックを解除する
+        cap.UnlockBits(bmpData_cap)
+        pic.UnlockBits(bmpData_pic)
+
+
+        '■テンプレートマッチングの結果を表示
+        lblcv_nowmaxval.Text = Math.Round(100 * (comptimer / txtcompikiti.Text), 2, MidpointRounding.AwayFromZero) '100 * maxval
+        'Console.WriteLine("RGBnormal " & comptimer & "/" & txtcompikiti.Text & ",   " & lblcv_nowmaxval.Text)
+        If CDbl(lblcv_maxval.Text) < lblcv_nowmaxval.Text Then
+            lblcv_maxval.Text = lblcv_nowmaxval.Text
+
+        End If
+
+        canvas.Dispose()
+
+
+    End Sub
+
+    Private color_lower_limit_r As Integer = 0
+    Private color_lower_limit_g As Integer = 0
+    Private color_lower_limit_b As Integer = 0
+
+    Private color_upper_limit_r As Integer = 0
+    Private color_upper_limit_g As Integer = 0
+    Private color_upper_limit_b As Integer = 0
+
+    Private ColorAllowance As Integer = 0
+
+    '■マッチングRGB色の割合
+    'テンプレート情報は不要。表のR,G,Bを参照する。
+    Private Sub RGBmethod_color()
+
+        Dim number As Integer = lblcv_lap.Text
+
+        Dim ltx As Integer = DGtable(posx.Index, number).Value
+        Dim lty As Integer = DGtable(posy.Index, number).Value
+        Dim rbx As Integer = DGtable(sizex.Index, number).Value
+        Dim rby As Integer = DGtable(sizey.Index, number).Value
+
+        txtcompikiti.Text = rbx * rby
+
+        Dim comptimer As Integer = 0
+
+        '■画像の一部を切り取って（トリミングして）表示する■■■■■■■■■■■■■■■■
+
+        '描画先とするImageオブジェクトを作成する
+        Dim canvas As New Bitmap(rbx, rby)
+        'ImageオブジェクトのGraphicsオブジェクトを作成する
+        Dim g As Graphics = Graphics.FromImage(canvas)
+
+        '画像ファイルのImageオブジェクトを作成する
+        Dim img As Bitmap = picipl_cap.Image
+
+        '切り取る部分の範囲を決定する。ここでは、位置(10,10)、大きさ100x100
+        Dim srcRect As New Rectangle(ltx, lty, rbx, rby)
+        '描画する部分の範囲を決定する。ここでは、位置(0,0)、大きさ100x100で描画する
+        Dim desRect As New Rectangle(0, 0, srcRect.Width, srcRect.Height)
+        '画像の一部を描画する
+        g.DrawImage(img, desRect, srcRect, GraphicsUnit.Pixel)
+
+        'PictureBox1に表示する
+        picipl_foranten.Image = canvas
+
+        'Graphicsオブジェクトのリソースを解放する
+        g.Dispose()
+
+
+
+        '#CaptureのRGB取得を行う■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+        Dim cap As Bitmap = picipl_foranten.Image
+
+        '##CaptureのRGB取得の準備を行う###################################################################
+        Dim pixelFormat_cap As PixelFormat = cap.PixelFormat
+        Dim pixelSize_cap As Integer = Image.GetPixelFormatSize(pixelFormat_cap) / 8
+        If pixelSize_cap < 3 OrElse 4 < pixelSize_cap Then
+            Throw New ArgumentException(
+                "1ピクセルあたり24または32ビットの形式のイメージのみ有効です。",
+                "img")
+        End If
+
+        'Bitmapをロックする
+        Dim bmpData_cap As BitmapData =
+            cap.LockBits(New Rectangle(0, 0, cap.Width, cap.Height),
+                         ImageLockMode.ReadWrite, pixelFormat_cap)
+
+        If bmpData_cap.Stride < 0 Then
+            cap.UnlockBits(bmpData_cap)
+            Throw New ArgumentException(
+                "ボトムアップ形式のイメージには対応していません。",
+                "img")
+        End If
+
+
+        '#######################################################################################################################
+        '##################PGB取得の準備が終了。px毎の色情報を取得し、差を取る。################################################
+        '#######################################################################################################################
+
+        '範囲内の全ピクセルの色を取得する
+        For y As Integer = 0 To rby - 1 'bmpData.Height - 1 
+            For x As Integer = 0 To rbx - 1 'bmpData.Width - 1
+
+                'キャプチャ画像の全ピクセルの色を取得する
+                Dim adr_cap As IntPtr = bmpData_cap.Scan0
+                Dim pos_cap As Integer = y * bmpData_cap.Stride + x * pixelSize_cap
+                Dim cap_b As Byte = Marshal.ReadByte(adr_cap, pos_cap + 0)
+                Dim cap_g As Byte = Marshal.ReadByte(adr_cap, pos_cap + 1)
+                Dim cap_r As Byte = Marshal.ReadByte(adr_cap, pos_cap + 2) 'System.Runtime.InteropServices.
+
+                '2枚の画像のRGBの差を取る
+                Dim distR As Integer = Math.Abs(CInt(cap_r))
+                Dim distG As Integer = Math.Abs(CInt(cap_g))
+                Dim distB As Integer = Math.Abs(CInt(cap_b))
+
+
+                '色差が少ない場合、カウントプラス
+                If distR >= color_lower_limit_r And
+                   distR <= color_upper_limit_r And
+                   distG >= color_lower_limit_g And
+                   distG <= color_upper_limit_g And
+                   distB >= color_lower_limit_b And
+                   distB <= color_upper_limit_b Then
+
+                    comptimer += 1
+
+                End If
+
+
+            Next
+        Next
+
+
+        'ロックを解除する
+        cap.UnlockBits(bmpData_cap)
+
+
+
+        '■テンプレートマッチングの結果を表示
+        lblcv_nowmaxval.Text = Math.Round(100 * (comptimer / txtcompikiti.Text), 2, MidpointRounding.AwayFromZero)
+        'Console.WriteLine("RGBcolor " & comptimer & "/" & txtcompikiti.Text & ",   " & lblcv_nowmaxval.Text)
+
+        If CDbl(lblcv_maxval.Text) < lblcv_nowmaxval.Text Then
+            lblcv_maxval.Text = lblcv_nowmaxval.Text
+
+        End If
+
+        canvas.Dispose()
+
+
+    End Sub
+
 
     '最初のラップだけホットキー（Livesplit）で取る。
     Private Sub cvtimer_manualstart_Tick(sender As Object, e As EventArgs) Handles cvtimer_manualstart.Tick
@@ -7532,18 +8015,33 @@ Public Class Mainwindow
     '■監視中■■■■■■■■■■■■■■■■■■■■■■■■■■■■
     Private Sub OpenCV_Monitor_Tick(sender As Object, e As EventArgs) Handles cvtimer.Tick
 
-        Try
+        'Try
 
-            '■プレビュー画面の更新★
-            capturecv.Read(frame) 'NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
+        '■プレビュー画面の更新★
+        capturecv.Read(frame) 'NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
+
+            ''■プレビュー画面の更新（表示のみ）
+            picipl_cap.ImageIpl = frame
 
 
-            'テンプレートマッチングのみ非同期に行う。チェックが付いているもののみマッチングを行う。
-            If async_split_onoff = 1 Then
+        'テンプレートマッチングのみ非同期に行う。チェックが付いているもののみマッチングを行う。
+        If async_split_onoff = 1 Then
+
+            If cv_method = 0 Or cv_method = 1 Then
                 Async_split()
+
+            ElseIf cv_method = 2 Or cv_method = 3 Then
+                RGBmethod()
+
+            ElseIf cv_method = 4 Or cv_method = 5 Then
+                RGBmethod_color()
+
             End If
 
-            If async_reset_onoff = 1 Then
+        End If
+
+
+        If async_reset_onoff = 1 Then
                 Async_reset()
             End If
 
@@ -7587,8 +8085,6 @@ Public Class Mainwindow
                 Async_load10()
             End If
 
-            ''■プレビュー画面の更新（表示のみ）
-            picipl_cap.ImageIpl = frame
 
 
             '■Videoplayer_wincapに別タイマーで稼働させている。パフォーマンスが悪いようならこちらに書く★♥
@@ -7602,7 +8098,9 @@ Public Class Mainwindow
             '■テンプレートマッチング（スプリット）
             If chknow_monitor.Checked = True Then
 
-                If async_split_onoff = 1 Then
+            If async_split_onoff = 1 Then
+                If cv_method = 0 Or cv_method = 1 Then
+
                     '■テンプレートマッチングの結果を表示
                     If Not maxval_split = 1 Then
                         lblcv_nowmaxval.Text = Math.Round(100 * maxval_split, 2, MidpointRounding.AwayFromZero) '100 * maxval
@@ -7613,14 +8111,18 @@ Public Class Mainwindow
                         End If
                     End If
 
-                    '■マッチングされた。小数点以下まで加味。
-                    If CDbl(lblcv_maxval.Text) > CDbl(txtcv_ikiti.Text) Then
+                End If
+
+
+
+                '■マッチングされた。小数点以下まで加味。
+                If CDbl(lblcv_maxval.Text) > CDbl(txtcv_ikiti.Text) Then
 
                         '一致した場所が指定範囲内にあるかどうか
                         If maxloc_split.X < DGtable(ltx.Index, number).Value Or
-                           maxloc_split.X + tplex.Width > DGtable(rbx.Index, number).Value Or
-                           maxloc_split.Y < DGtable(lty.Index, number).Value Or
-                           maxloc_split.Y + tplex.Height > DGtable(rby.Index, number).Value Then
+                       maxloc_split.X + tplex.Width > DGtable(rbx.Index, number).Value Or
+                       maxloc_split.Y < DGtable(lty.Index, number).Value Or
+                       maxloc_split.Y + tplex.Height > DGtable(rby.Index, number).Value Then
 
                             lblcv_maxval.Text = 0
 
@@ -7630,6 +8132,7 @@ Public Class Mainwindow
 
                         Console.WriteLine("Match")
                         reflesh_img = 1
+
                         '■一致した場所に四角を描画
                         Dim g As Graphics = picipl_cap.CreateGraphics
                         Dim DrawPen As New Pen(Color.Red, 3)
@@ -7658,7 +8161,10 @@ Public Class Mainwindow
 
                             lblcv_lap.Text = 1 '常に最初の画像をPicture2に表示
 
-                            If DGtable(send.Index, CInt(lblcv_lap.Text - 0)).Value = 0 Then 'ホットキー送信をスルーする
+                            If DGtable(send.Index, CInt(lblcv_lap.Text - 0)).Value = 0 Or
+                           DGtable(send.Index, CInt(lblcv_lap.Text - 0)).Value = 2 Or
+                           DGtable(send.Index, CInt(lblcv_lap.Text - 0)).Value = 4 Then 'ホットキー送信をスルーする
+
                                 txtstate.Text = My.Resources.Message.msg31 '"待機中"
 
 
@@ -7672,7 +8178,9 @@ Public Class Mainwindow
 
 
 
-                            ElseIf DGtable(send.Index, CInt(lblcv_lap.Text - 0)).Value = 1 Then 'ホットキーを送信する
+                            ElseIf DGtable(send.Index, CInt(lblcv_lap.Text - 0)).Value = 1 Or
+                               DGtable(send.Index, CInt(lblcv_lap.Text - 0)).Value = 3 Or
+                               DGtable(send.Index, CInt(lblcv_lap.Text - 0)).Value = 5 Then 'ホットキーを送信する。
 
 
                                 If DGtable(timing.Index, CInt(lblcv_lap.Text - 0)).Value = 4 Then
@@ -7767,39 +8275,43 @@ Public Class Mainwindow
                             lblcv_lap.Text += 1
 
 
-                            'カラムS＝0の時、スルーする
-                            If DGtable(send.Index, CInt(lblcv_lap.Text - 1)).Value = 0 Then 'ホットキー送信をスルーする
+                        'カラムS＝0の時、スルーする
+                        If DGtable(send.Index, CInt(lblcv_lap.Text - 1)).Value = 0 Or
+                           DGtable(send.Index, CInt(lblcv_lap.Text - 1)).Value = 2 Or
+                           DGtable(send.Index, CInt(lblcv_lap.Text - 1)).Value = 4 Then 'ホットキー送信をスルーする
 
-                                '■画像ファイルが存在するかどうかのチェック。■■■■■■■■■■■■■
-                                If System.IO.File.Exists(txtpass_picturefolder.Text & "\" & number & ".bmp") Then
-                                    txtstate.Text = My.Resources.Message.msg31 '"待機中"
+                            '■画像ファイルが存在するかどうかのチェック。■■■■■■■■■■■■■
+                            If System.IO.File.Exists(txtpass_picturefolder.Text & "\" & number & ".bmp") Then
+                                txtstate.Text = My.Resources.Message.msg31 '"待機中"
 
-                                    msec = CDbl(timeGetTime)
+                                msec = CDbl(timeGetTime)
 
-                                    cvsleep_split.Start()
-                                    lblcv_sendview.Visible = True
-                                    lblsleeptime.Visible = True
-
-
-
-
-                                Else '画像ファイルが存在しない
-
-                                    'lblcv_lap.Text = 1★
-
-                                    show_finish()
-
-                                    'MessageBox.Show(My.Resources.Message.msg7, "AutoSplit Helper by Image") '"画像ファイルが存在しません。"
-
-                                End If
+                                cvsleep_split.Start()
+                                lblcv_sendview.Visible = True
+                                lblsleeptime.Visible = True
 
 
 
-                            ElseIf DGtable(send.Index, CInt(lblcv_lap.Text - 1)).Value = 1 Then 'ホットキーを送信する
+
+                            Else '画像ファイルが存在しない
+
+                                'lblcv_lap.Text = 1★
+
+                                show_finish()
+
+                                'MessageBox.Show(My.Resources.Message.msg7, "AutoSplit Helper by Image") '"画像ファイルが存在しません。"
+
+                            End If
 
 
 
-                                If DGtable(timing.Index, CInt(lblcv_lap.Text - 1)).Value = 4 Then
+                        ElseIf DGtable(send.Index, CInt(lblcv_lap.Text - 1)).Value = 1 Or
+                           DGtable(send.Index, CInt(lblcv_lap.Text - 1)).Value = 3 Or
+                           DGtable(send.Index, CInt(lblcv_lap.Text - 1)).Value = 5 Then 'ホットキーを送信する
+
+
+
+                            If DGtable(timing.Index, CInt(lblcv_lap.Text - 1)).Value = 4 Then
                                     txtstate.Text = My.Resources.Message.msg32 '"場面転換待機中"
 
                                     cvtimer_changergb.Start()
@@ -7875,11 +8387,11 @@ Public Class Mainwindow
 
                                     Else ' ファイルが存在しない
 
-                                        'lblcv_lap.Text = 1★
+                                    'lblcv_lap.Text = 1★
 
-                                        allkeysend()
+                                    allkeysend()
 
-                                        If lblreload_graph.Text = 1 Then
+                                    If lblreload_graph.Text = 1 Then
 
                                             '■グラフ更新
                                             graph_split()
@@ -7929,8 +8441,10 @@ Public Class Mainwindow
 
 
 
-            '■テンプレートマッチング（リセット）
-            If chknow_reset.Checked = True Then
+
+
+        '■テンプレートマッチング（リセット）
+        If chknow_reset.Checked = True Then
                 If async_reset_onoff = 1 Then '★
 
                     '■リセット結果表示
@@ -7947,35 +8461,55 @@ Public Class Mainwindow
                     If CDbl(lblcv_maxval_reset.Text) > CDbl(txtcv_ikiti_reset.Text) Then
 
 
-                        '■一致した場所が指定範囲内にあるかどうか
+                    '■一致した場所が指定範囲内にあるかどうか
 
-                        If maxloc_reset.X < DGtable(ltx.Index, 0).Value Or
-                           maxloc_reset.X + tplex_r.Width > DGtable(rbx.Index, 0).Value Or
-                           maxloc_reset.Y < DGtable(lty.Index, 0).Value Or
-                           maxloc_reset.Y + tplex_r.Height > DGtable(rby.Index, 0).Value Then
-
-                            lblcv_maxval_reset.Text = 0
-                            Exit Sub
-
-
-                        End If
-
-                        '■グラフ更新
-                        graph_reset()
-
-
-                        lblcv_lap.Text = 1
-                        number = 1
-                        txtstate.Text = My.Resources.Message.msg30 '"画像認識中"
-
-                        lblcv_sendview.Visible = False
-                        lblsleeptime.Visible = False
-                        cvsleep_split.Stop()
-
-                        lblcv_comment.Text = "Next:" & DGtable(no.Index, CInt(lblcv_lap.Text) - 0).Value '表の１列目の文字を表示
-                        txtcv_ikiti.Text = DGtable(rate.Index, CInt(lblcv_lap.Text)).Value
+                    If maxloc_reset.X < DGtable(ltx.Index, 0).Value Or
+                       maxloc_reset.X + tplex_r.Width > DGtable(rbx.Index, 0).Value Or
+                       maxloc_reset.Y < DGtable(lty.Index, 0).Value Or
+                       maxloc_reset.Y + tplex_r.Height > DGtable(rby.Index, 0).Value Then
 
                         lblcv_maxval_reset.Text = 0
+                        Exit Sub
+
+
+                    End If
+
+                    '■グラフ更新
+                    graph_reset()
+
+
+                    lblcv_lap.Text = 1
+                    number = 1
+                    txtstate.Text = My.Resources.Message.msg30 '"画像認識中"
+
+
+
+                    lblcv_sendview.Visible = False
+                    lblsleeptime.Visible = False
+                    cvsleep_split.Stop()
+
+                    lblcv_comment.Text = "Next:" & DGtable(no.Index, CInt(lblcv_lap.Text) - 0).Value '表の１列目の文字を表示
+                    txtcv_ikiti.Text = DGtable(rate.Index, CInt(lblcv_lap.Text)).Value
+
+                    txtcv_color_r.Text = DGtable(color_r.Index, CInt(lblcv_lap.Text)).Value
+                    txtcv_color_g.Text = DGtable(color_g.Index, CInt(lblcv_lap.Text)).Value
+                    txtcv_color_b.Text = DGtable(color_b.Index, CInt(lblcv_lap.Text)).Value
+
+                    color_lower_limit_r = txtcv_color_r.Text - DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+                    color_lower_limit_g = txtcv_color_g.Text - DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+                    color_lower_limit_b = txtcv_color_b.Text - DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+
+                    color_upper_limit_r = txtcv_color_r.Text + DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+                    color_upper_limit_g = txtcv_color_g.Text + DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+                    color_upper_limit_b = txtcv_color_b.Text + DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+
+                    ColorAllowance = DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+
+                    '■★Methodに番号を送る。どの方式で監視を行うか。
+                    cv_method = DGtable(send.Index, CInt(lblcv_lap.Text)).Value '表の2行目のMethod値を取得。0/1:OpenCV、2/3:RGB、4/5:RGB(色の割合)
+
+
+                    lblcv_maxval_reset.Text = 0
                         lblcv_nowmaxval_reset.Text = 0
 
 
@@ -8013,8 +8547,9 @@ Public Class Mainwindow
 
                         chknow_reset.Checked = False
                         async_reset_onoff = 0 '★
+                    async_split_onoff = 1 '★
 
-                        If chkcv_monitor.Checked = True Then
+                    If chkcv_monitor.Checked = True Then
 
                             chknow_monitor.Checked = True
 
@@ -8832,13 +9367,13 @@ Public Class Mainwindow
 
 
 
-        Catch ex As Exception
-            MessageBox.Show(My.Resources.Message.msg46, messagebox_name) '仮想カメラの接続エラー。仮想カメラの再接続や本体の再起動を試してみて下さい。
-            rtxtlog.AppendText(Now & " " & My.Resources.Message.msg46 & vbCrLf & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
+        'Catch ex As Exception
+        '    MessageBox.Show(My.Resources.Message.msg46, messagebox_name) '仮想カメラの接続エラー。仮想カメラの再接続や本体の再起動を試してみて下さい。
+        '    rtxtlog.AppendText(Now & " " & My.Resources.Message.msg46 & vbCrLf & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
 
-            btncv_stop.PerformClick()
+        '    btncv_stop.PerformClick()
 
-        End Try
+        'End Try
 
 
 
@@ -9030,6 +9565,9 @@ Public Class Mainwindow
 
                 Dim number As Integer = lblcv_lap.Text
 
+                '■★Methodに番号を送る。どの方式で監視を行うか。
+                cv_method = DGtable(send.Index, CInt(lblcv_lap.Text) - 0).Value '表の2行目のMethod値を取得。0/1:OpenCV、2/3:RGB、4/5:RGB(色の割合)
+
 
                 If chkcv_loop.Checked = False Then
                     lblcv_comment.Text = "Next:" & DGtable(no.Index, CInt(lblcv_lap.Text) - 0).Value
@@ -9044,6 +9582,22 @@ Public Class Mainwindow
 
                 txtcv_ikiti.Text = DGtable(rate.Index, CInt(lblcv_lap.Text)).Value
                 lblcv_sleepcount.Text = DGtable(sleep.Index, CInt(lblcv_lap.Text)).Value
+
+                txtcv_color_r.Text = DGtable(color_r.Index, CInt(lblcv_lap.Text)).Value
+                txtcv_color_g.Text = DGtable(color_g.Index, CInt(lblcv_lap.Text)).Value
+                txtcv_color_b.Text = DGtable(color_b.Index, CInt(lblcv_lap.Text)).Value
+
+                color_lower_limit_r = txtcv_color_r.Text - DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+                color_lower_limit_g = txtcv_color_g.Text - DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+                color_lower_limit_b = txtcv_color_b.Text - DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+
+                color_upper_limit_r = txtcv_color_r.Text + DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+                color_upper_limit_g = txtcv_color_g.Text + DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+                color_upper_limit_b = txtcv_color_b.Text + DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+
+                ColorAllowance = DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+
+
 
                 lblcv_maxval.Text = 0
                 lblcv_maxval_reset.Text = 0
@@ -9085,12 +9639,14 @@ Public Class Mainwindow
 
     Private Sub onetimematching() 'なぜかマッチングを1回挟まないと、連続でマッチング判定が起こってしまう（誤判定）
 
+
+
         Using res1 As New Mat(imgex.Width - tplex.Width + 1, imgex.Height - tplex.Height + 1, MatType.CV_32FC1)
 
-            Cv2.MatchTemplate(imgex, tplex, res1, TemplateMatchModes.CCoeffNormed)
-            Cv2.MinMaxLoc(res1, minval_split, maxval_split, minloc_split, maxloc_split, Nothing)
+                Cv2.MatchTemplate(imgex, tplex, res1, TemplateMatchModes.CCoeffNormed)
+                Cv2.MinMaxLoc(res1, minval_split, maxval_split, minloc_split, maxloc_split, Nothing)
 
-        End Using
+            End Using
 
         async_split_onoff = 1 '♥
 
@@ -10192,8 +10748,6 @@ Public Class Mainwindow
         End If
 
         '追従する場合、ltx,ltyを補正する。
-
-
         Dim ltx As Integer = maxloc_split.X 'DGtable(posx.Index, number).Value
         Dim lty As Integer = maxloc_split.Y 'DGtable(posy.Index, number).Value
         Dim rbx As Integer = tplex.Width 'DGtable(sizex.Index, number).Value
@@ -10357,6 +10911,7 @@ Public Class Mainwindow
 
 
     End Sub
+
 
 
 
@@ -10927,6 +11482,7 @@ Public Class Mainwindow
             'ラップを1つ元に戻す。
             lblcv_lap.Text -= 1
             lblcv_comment.Text = "Next:" & DGtable(no.Index, CInt(lblcv_lap.Text) - 0).Value '表の2列目の文字を表示
+            lblcv_sendview.Text = "Match"
 
             Dim number As String = lblcv_lap.Text
 
@@ -10944,6 +11500,9 @@ Public Class Mainwindow
             If chkshow_text.Checked = True Then
                 Textwindow.rtxt1.LoadFile(txtpass_rtf.Text & "/" & number & ".rtf", RichTextBoxStreamType.RichText)
             End If
+
+            '■★Methodに番号を送る。どの方式で監視を行うか。
+            cv_method = DGtable(send.Index, CInt(lblcv_lap.Text) - 0).Value '表の2行目のMethod値を取得。0/1:OpenCV、2/3:RGB、4/5:RGB(色の割合)
 
 
             '後処理##########################################################################################
@@ -10977,6 +11536,20 @@ Public Class Mainwindow
             txtcv_ikiti.Text = DGtable(rate.Index, CInt(lblcv_lap.Text)).Value
             lblcv_sleepcount.Text = DGtable(sleep.Index, CInt(lblcv_lap.Text)).Value
 
+            txtcv_color_r.Text = DGtable(color_r.Index, CInt(lblcv_lap.Text)).Value
+            txtcv_color_g.Text = DGtable(color_g.Index, CInt(lblcv_lap.Text)).Value
+            txtcv_color_b.Text = DGtable(color_b.Index, CInt(lblcv_lap.Text)).Value
+
+            color_lower_limit_r = txtcv_color_r.Text - DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+            color_lower_limit_g = txtcv_color_g.Text - DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+            color_lower_limit_b = txtcv_color_b.Text - DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+
+            color_upper_limit_r = txtcv_color_r.Text + DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+            color_upper_limit_g = txtcv_color_g.Text + DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+            color_upper_limit_b = txtcv_color_b.Text + DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+
+            ColorAllowance = DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+
             lblcv_maxval.Text = 0
             cvsleep_split.Stop()
             lblcv_sendview.Visible = False
@@ -10993,12 +11566,12 @@ Public Class Mainwindow
 
             If chkcv_monitor.Checked = True Then
                 chknow_monitor.Checked = True
-
+                onetimematching() '★
             End If
 
             If chkcv_resetonoff.Checked = True Then
                 chknow_reset.Checked = True
-
+                onetimematching_reset() '★
             End If
 
             If chkcv_loadremover.Checked = True Then
@@ -11191,6 +11764,7 @@ Public Class Mainwindow
             'ラップを1つ進ませる。
             lblcv_lap.Text += 1
             lblcv_comment.Text = "Next:" & DGtable(no.Index, CInt(lblcv_lap.Text) - 0).Value '表の2列目の文字を表示
+            lblcv_sendview.Text = "Match"
 
             Dim number As String = lblcv_lap.Text
 
@@ -11208,6 +11782,8 @@ Public Class Mainwindow
                 Textwindow.rtxt1.LoadFile(txtpass_rtf.Text & "/" & number & ".rtf", RichTextBoxStreamType.RichText)
             End If
 
+            '■★Methodに番号を送る。どの方式で監視を行うか。
+            cv_method = DGtable(send.Index, CInt(lblcv_lap.Text) - 0).Value '表の2行目のMethod値を取得。0/1:OpenCV、2/3:RGB、4/5:RGB(色の割合)
 
             '後処理##########################################################################################
             cvtimer_change.Stop()
@@ -11239,6 +11815,20 @@ Public Class Mainwindow
             txtcv_ikiti.Text = DGtable(rate.Index, CInt(lblcv_lap.Text)).Value
             lblcv_sleepcount.Text = DGtable(sleep.Index, CInt(lblcv_lap.Text)).Value
 
+            txtcv_color_r.Text = DGtable(color_r.Index, CInt(lblcv_lap.Text)).Value
+            txtcv_color_g.Text = DGtable(color_g.Index, CInt(lblcv_lap.Text)).Value
+            txtcv_color_b.Text = DGtable(color_b.Index, CInt(lblcv_lap.Text)).Value
+
+            color_lower_limit_r = txtcv_color_r.Text - DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+            color_lower_limit_g = txtcv_color_g.Text - DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+            color_lower_limit_b = txtcv_color_b.Text - DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+
+            color_upper_limit_r = txtcv_color_r.Text + DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+            color_upper_limit_g = txtcv_color_g.Text + DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+            color_upper_limit_b = txtcv_color_b.Text + DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+
+            ColorAllowance = DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+
             lblcv_maxval.Text = 0
             cvsleep_split.Stop()
             lblcv_sendview.Visible = False
@@ -11255,12 +11845,12 @@ Public Class Mainwindow
 
             If chkcv_monitor.Checked = True Then
                 chknow_monitor.Checked = True
-
+                onetimematching() '★
             End If
 
             If chkcv_resetonoff.Checked = True Then
                 chknow_reset.Checked = True
-
+                onetimematching_reset() '★
             End If
 
             If chkcv_loadremover.Checked = True Then
@@ -11431,7 +12021,7 @@ Public Class Mainwindow
             '■ラップ番号を1にする。
             lblcv_lap.Text = 1
             lblcv_comment.Text = "Next:" & DGtable(no.Index, CInt(lblcv_lap.Text) - 0).Value '表の2列目の文字を表示
-
+            lblcv_sendview.Text = "Match"
             Dim number As String = lblcv_lap.Text
 
             '■テンプレート画像の更新
@@ -11448,6 +12038,8 @@ Public Class Mainwindow
                 Textwindow.rtxt1.LoadFile(txtpass_rtf.Text & "/" & number & ".rtf", RichTextBoxStreamType.RichText)
             End If
 
+            '■★Methodに番号を送る。どの方式で監視を行うか。
+            cv_method = DGtable(send.Index, CInt(lblcv_lap.Text) - 0).Value '表の2行目のMethod値を取得。0/1:OpenCV、2/3:RGB、4/5:RGB(色の割合)
 
             '後処理##########################################################################################
             cvtimer_change.Stop()
@@ -11479,6 +12071,20 @@ Public Class Mainwindow
             txtcv_ikiti.Text = DGtable(rate.Index, CInt(lblcv_lap.Text)).Value
             lblcv_sleepcount.Text = DGtable(sleep.Index, CInt(lblcv_lap.Text)).Value
 
+            txtcv_color_r.Text = DGtable(color_r.Index, CInt(lblcv_lap.Text)).Value
+            txtcv_color_g.Text = DGtable(color_g.Index, CInt(lblcv_lap.Text)).Value
+            txtcv_color_b.Text = DGtable(color_b.Index, CInt(lblcv_lap.Text)).Value
+
+            color_lower_limit_r = txtcv_color_r.Text - DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+            color_lower_limit_g = txtcv_color_g.Text - DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+            color_lower_limit_b = txtcv_color_b.Text - DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+
+            color_upper_limit_r = txtcv_color_r.Text + DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+            color_upper_limit_g = txtcv_color_g.Text + DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+            color_upper_limit_b = txtcv_color_b.Text + DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+
+            ColorAllowance = DGtable(darkthr.Index, CInt(lblcv_lap.Text)).Value
+
             lblcv_maxval.Text = 0
             cvsleep_split.Stop()
             lblcv_sendview.Visible = False
@@ -11496,7 +12102,7 @@ Public Class Mainwindow
 
             If chkcv_monitor.Checked = True Then
                 chknow_monitor.Checked = True
-
+                onetimematching() '★
             End If
 
             If chkcv_resetonoff.Checked = True Then
@@ -11556,6 +12162,8 @@ Public Class Mainwindow
                 End If
 
             End If
+
+            async_reset_onoff = 0 '★
 
             If chkcv_monitor.Checked = True Then
                 async_split_onoff = 1
@@ -12956,6 +13564,11 @@ Public Class Mainwindow
             DGtable(graph_rate.Index, 0).Value = 0
             DGtable(graph_view.Index, 0).Value = 0
 
+            DGtable(color_r.Index, 0).Value = 0
+            DGtable(color_g.Index, 0).Value = 0
+            DGtable(color_b.Index, 0).Value = 0
+
+
             DGtable(seektime.Index, 0).Value = -1
 
 
@@ -13023,7 +13636,7 @@ Public Class Mainwindow
         btnsaisyouka.Location = New Drawing.Point((Me.Width - btnclosewindow.Width - btnsaisyouka.Width), 0)
 
 
-        DGtable.Height = 457
+        DGtable.Height = 457 '♥
         DGtable.Width = 1097
 
 
@@ -13359,7 +13972,7 @@ Public Class Mainwindow
         'リンク先に移動したことにする
         LinkLabel3.LinkVisited = True
         'ブラウザで開く
-        System.Diagnostics.Process.Start("https://frailleaves.com/myownsoftware/ash-howtouse/")
+        System.Diagnostics.Process.Start("https://frailleaves.com/myownsoftware/autosplit-helper/")
 
     End Sub
 
@@ -14084,6 +14697,7 @@ CInt(chkmonitor_sizestate.Checked)
         numstop.Select(0, numstop.Text.Length)
 
     End Sub
+
 
 
     Private Sub numanten_Enter(sender As Object, e As EventArgs) Handles numanten.Enter

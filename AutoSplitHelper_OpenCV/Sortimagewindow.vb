@@ -441,7 +441,7 @@ Public Class Sortimagewindow
 
 
         '■複製先のtable.csvを読み込み
-        Dim parser As TextFieldParser = New TextFieldParser(txtpass_csv.Text, Encoding.GetEncoding("Shift_JIS"))
+        Dim parser As TextFieldParser = New TextFieldParser(txtpass_csv.Text, Encoding.UTF8) 'GetEncoding("Shift_JIS"))
         parser.TextFieldType = FieldType.Delimited
         parser.SetDelimiters(",") ' 区切り文字はコンマ
 
@@ -516,6 +516,9 @@ Public Class Sortimagewindow
                 dgad(17, count).Value = dgload(17, CInt(e.RowIndex.ToString())).Value
                 dgad(18, count).Value = dgload(18, CInt(e.RowIndex.ToString())).Value
                 dgad(19, count).Value = dgload(19, CInt(e.RowIndex.ToString())).Value
+                dgad(20, count).Value = dgload(20, CInt(e.RowIndex.ToString())).Value
+                dgad(21, count).Value = dgload(21, CInt(e.RowIndex.ToString())).Value
+                dgad(22, count).Value = dgload(22, CInt(e.RowIndex.ToString())).Value
 
                 '表をスクロールさせる
                 dgad.FirstDisplayedScrollingRowIndex = txtaddcount.Text
@@ -698,7 +701,7 @@ Public Class Sortimagewindow
             '現在のファイルに上書き保存
 
             Using swCsv As New System.IO.StreamWriter(filename,
-                                          False, System.Text.Encoding.GetEncoding("SHIFT_JIS"))
+                                          False, System.Text.Encoding.UTF8) 'GetEncoding("SHIFT_JIS"))
                 Dim sf As String = Chr(34)          'データの前側の括り
                 Dim se As String = Chr(34) & ","    'データの後ろの括りとデータの区切りの "," 
                 Dim i, j As Integer
@@ -922,7 +925,7 @@ Public Class Sortimagewindow
 
                     Dim myfilename_table1 As String = "./profile/" & Mainwindow.cmbprofile.SelectedItem & "/table.csv"
 
-                    Dim parser As TextFieldParser = New TextFieldParser(myfilename_table1, Encoding.GetEncoding("Shift_JIS"))
+                    Dim parser As TextFieldParser = New TextFieldParser(myfilename_table1, Encoding.UTF8) 'GetEncoding("Shift_JIS"))
                     parser.TextFieldType = FieldType.Delimited
                     parser.SetDelimiters(",") ' 区切り文字はコンマ
 

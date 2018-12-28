@@ -43,6 +43,9 @@ Partial Class Del_Addimagewindow
         Me.darksleep = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.darkthr = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.seektime = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.graph_count = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.graph_rate = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.graph_view = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -77,56 +80,55 @@ Partial Class Del_Addimagewindow
         '
         'listnumber
         '
-        resources.ApplyResources(Me.listnumber, "listnumber")
         Me.listnumber.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.listnumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        resources.ApplyResources(Me.listnumber, "listnumber")
         Me.listnumber.ForeColor = System.Drawing.SystemColors.Control
         Me.listnumber.FormattingEnabled = True
         Me.listnumber.Name = "listnumber"
         '
         'btnok
         '
-        resources.ApplyResources(Me.btnok, "btnok")
         Me.btnok.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(55, Byte), Integer))
+        resources.ApplyResources(Me.btnok, "btnok")
         Me.btnok.ForeColor = System.Drawing.SystemColors.Control
         Me.btnok.Name = "btnok"
         Me.btnok.UseVisualStyleBackColor = False
         '
         'btninsert
         '
-        resources.ApplyResources(Me.btninsert, "btninsert")
         Me.btninsert.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
+        resources.ApplyResources(Me.btninsert, "btninsert")
         Me.btninsert.ForeColor = System.Drawing.SystemColors.Control
         Me.btninsert.Name = "btninsert"
         Me.btninsert.UseVisualStyleBackColor = False
         '
         'btndelete
         '
-        resources.ApplyResources(Me.btndelete, "btndelete")
         Me.btndelete.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
+        resources.ApplyResources(Me.btndelete, "btndelete")
         Me.btndelete.ForeColor = System.Drawing.SystemColors.Control
         Me.btndelete.Name = "btndelete"
         Me.btndelete.UseVisualStyleBackColor = False
         '
         'PictureBox1
         '
-        resources.ApplyResources(Me.PictureBox1, "PictureBox1")
         Me.PictureBox1.BackColor = System.Drawing.Color.DimGray
+        resources.ApplyResources(Me.PictureBox1, "PictureBox1")
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.TabStop = False
         '
         'listcomment
         '
-        resources.ApplyResources(Me.listcomment, "listcomment")
         Me.listcomment.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.listcomment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        resources.ApplyResources(Me.listcomment, "listcomment")
         Me.listcomment.ForeColor = System.Drawing.SystemColors.Control
         Me.listcomment.FormattingEnabled = True
         Me.listcomment.Name = "listcomment"
         '
         'Copytable
         '
-        resources.ApplyResources(Me.Copytable, "Copytable")
         Me.Copytable.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
         Me.Copytable.BorderStyle = System.Windows.Forms.BorderStyle.None
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -138,7 +140,8 @@ Partial Class Del_Addimagewindow
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.Copytable.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.Copytable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Copytable.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.no, Me.send, Me.key, Me.rate, Me.sleep, Me.timing, Me.darksleep, Me.darkthr, Me.seektime, Me.graph_count, Me.graph_rate, Me.graph_view, Me.posx, Me.posy, Me.sizex, Me.sizey, Me.ltx, Me.lty, Me.rbx, Me.rby})
+        Me.Copytable.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.no, Me.send, Me.key, Me.rate, Me.sleep, Me.timing, Me.darksleep, Me.darkthr, Me.seektime, Me.Column1, Me.Column2, Me.Column3, Me.graph_count, Me.graph_rate, Me.graph_view, Me.posx, Me.posy, Me.sizex, Me.sizey, Me.ltx, Me.lty, Me.rbx, Me.rby})
+        resources.ApplyResources(Me.Copytable, "Copytable")
         Me.Copytable.Name = "Copytable"
         Me.Copytable.RowTemplate.Height = 21
         '
@@ -186,6 +189,21 @@ Partial Class Del_Addimagewindow
         '
         resources.ApplyResources(Me.seektime, "seektime")
         Me.seektime.Name = "seektime"
+        '
+        'Column1
+        '
+        resources.ApplyResources(Me.Column1, "Column1")
+        Me.Column1.Name = "Column1"
+        '
+        'Column2
+        '
+        resources.ApplyResources(Me.Column2, "Column2")
+        Me.Column2.Name = "Column2"
+        '
+        'Column3
+        '
+        resources.ApplyResources(Me.Column3, "Column3")
+        Me.Column3.Name = "Column3"
         '
         'graph_count
         '
@@ -251,8 +269,8 @@ Partial Class Del_Addimagewindow
         '
         'btnclosewindow
         '
-        resources.ApplyResources(Me.btnclosewindow, "btnclosewindow")
         Me.btnclosewindow.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer))
+        resources.ApplyResources(Me.btnclosewindow, "btnclosewindow")
         Me.btnclosewindow.ForeColor = System.Drawing.Color.Thistle
         Me.btnclosewindow.Name = "btnclosewindow"
         Me.btnclosewindow.UseVisualStyleBackColor = False
@@ -294,6 +312,8 @@ Partial Class Del_Addimagewindow
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents listcomment As ListBox
     Friend WithEvents Copytable As DataGridView
+    Friend WithEvents lbltitlebar As Label
+    Friend WithEvents btnclosewindow As Button
     Friend WithEvents no As DataGridViewTextBoxColumn
     Friend WithEvents send As DataGridViewTextBoxColumn
     Friend WithEvents key As DataGridViewTextBoxColumn
@@ -303,6 +323,9 @@ Partial Class Del_Addimagewindow
     Friend WithEvents darksleep As DataGridViewTextBoxColumn
     Friend WithEvents darkthr As DataGridViewTextBoxColumn
     Friend WithEvents seektime As DataGridViewTextBoxColumn
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents graph_count As DataGridViewTextBoxColumn
     Friend WithEvents graph_rate As DataGridViewTextBoxColumn
     Friend WithEvents graph_view As DataGridViewTextBoxColumn
@@ -314,6 +337,4 @@ Partial Class Del_Addimagewindow
     Friend WithEvents lty As DataGridViewTextBoxColumn
     Friend WithEvents rbx As DataGridViewTextBoxColumn
     Friend WithEvents rby As DataGridViewTextBoxColumn
-    Friend WithEvents lbltitlebar As Label
-    Friend WithEvents btnclosewindow As Button
 End Class

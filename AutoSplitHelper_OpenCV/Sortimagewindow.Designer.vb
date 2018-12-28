@@ -47,48 +47,8 @@ Partial Class Sortimagewindow
         Me.btnclear = New System.Windows.Forms.Button()
         Me.txtaddcount = New System.Windows.Forms.TextBox()
         Me.dgad = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn22 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn19 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn20 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn21 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.txtpass_csv = New System.Windows.Forms.TextBox()
         Me.dgload = New System.Windows.Forms.DataGridView()
-        Me.c1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.c12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.key = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.c6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.c7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.c8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.c9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.c10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.c2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.c3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.c4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.c5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.chkreset_ = New System.Windows.Forms.CheckBox()
         Me.txtimageheight = New System.Windows.Forms.TextBox()
         Me.listselect_pass_picture = New System.Windows.Forms.ListBox()
@@ -111,6 +71,52 @@ Partial Class Sortimagewindow
         Me.btnclosewindow = New System.Windows.Forms.Button()
         Me.lbltitlebar = New System.Windows.Forms.Label()
         Me.btnexpandwindow = New System.Windows.Forms.Button()
+        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn22 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn19 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn20 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn21 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column19 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column20 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.c1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.c12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.key = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.c6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.c7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.c8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.c9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.c10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column21 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column22 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column23 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.c2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.c3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.c4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.c5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgad, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgload, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dg1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -169,8 +175,8 @@ Partial Class Sortimagewindow
         '
         'txtlistcount
         '
-        resources.ApplyResources(Me.txtlistcount, "txtlistcount")
         Me.txtlistcount.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        resources.ApplyResources(Me.txtlistcount, "txtlistcount")
         Me.txtlistcount.ForeColor = System.Drawing.SystemColors.Control
         Me.txtlistcount.Name = "txtlistcount"
         '
@@ -202,24 +208,24 @@ Partial Class Sortimagewindow
         '
         'btn1clear
         '
-        resources.ApplyResources(Me.btn1clear, "btn1clear")
         Me.btn1clear.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
+        resources.ApplyResources(Me.btn1clear, "btn1clear")
         Me.btn1clear.ForeColor = System.Drawing.SystemColors.Control
         Me.btn1clear.Name = "btn1clear"
         Me.btn1clear.UseVisualStyleBackColor = False
         '
         'listcsvname
         '
-        resources.ApplyResources(Me.listcsvname, "listcsvname")
         Me.listcsvname.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        resources.ApplyResources(Me.listcsvname, "listcsvname")
         Me.listcsvname.ForeColor = System.Drawing.SystemColors.Control
         Me.listcsvname.FormattingEnabled = True
         Me.listcsvname.Name = "listcsvname"
         '
         'btnzip
         '
-        resources.ApplyResources(Me.btnzip, "btnzip")
         Me.btnzip.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
+        resources.ApplyResources(Me.btnzip, "btnzip")
         Me.btnzip.ForeColor = System.Drawing.SystemColors.Control
         Me.btnzip.Name = "btnzip"
         Me.btnzip.UseVisualStyleBackColor = False
@@ -242,8 +248,8 @@ Partial Class Sortimagewindow
         '
         'btnclear
         '
-        resources.ApplyResources(Me.btnclear, "btnclear")
         Me.btnclear.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
+        resources.ApplyResources(Me.btnclear, "btnclear")
         Me.btnclear.ForeColor = System.Drawing.SystemColors.Control
         Me.btnclear.Name = "btnclear"
         Me.btnclear.UseVisualStyleBackColor = False
@@ -255,11 +261,160 @@ Partial Class Sortimagewindow
         '
         'dgad
         '
-        resources.ApplyResources(Me.dgad, "dgad")
         Me.dgad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgad.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn22, Me.Column9, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18, Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn20, Me.DataGridViewTextBoxColumn21, Me.Column16, Me.Column10, Me.Column11, Me.Column12, Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16, Me.Column1, Me.Column2, Me.Column3, Me.Column4})
+        Me.dgad.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn22, Me.Column9, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18, Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn20, Me.DataGridViewTextBoxColumn21, Me.Column16, Me.Column18, Me.Column19, Me.Column20, Me.Column10, Me.Column11, Me.Column12, Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16, Me.Column1, Me.Column2, Me.Column3, Me.Column4})
+        resources.ApplyResources(Me.dgad, "dgad")
         Me.dgad.Name = "dgad"
         Me.dgad.RowTemplate.Height = 21
+        '
+        'txtpass_csv
+        '
+        resources.ApplyResources(Me.txtpass_csv, "txtpass_csv")
+        Me.txtpass_csv.Name = "txtpass_csv"
+        Me.txtpass_csv.ReadOnly = True
+        '
+        'dgload
+        '
+        Me.dgload.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgload.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.c1, Me.c12, Me.key, Me.c6, Me.c7, Me.c8, Me.c9, Me.c10, Me.Column17, Me.Column21, Me.Column22, Me.Column23, Me.Column13, Me.Column14, Me.Column15, Me.c2, Me.c3, Me.c4, Me.c5, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
+        resources.ApplyResources(Me.dgload, "dgload")
+        Me.dgload.Name = "dgload"
+        Me.dgload.RowTemplate.Height = 21
+        '
+        'chkreset_
+        '
+        resources.ApplyResources(Me.chkreset_, "chkreset_")
+        Me.chkreset_.Checked = True
+        Me.chkreset_.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chkreset_.ForeColor = System.Drawing.SystemColors.Control
+        Me.chkreset_.Name = "chkreset_"
+        Me.chkreset_.UseVisualStyleBackColor = True
+        '
+        'txtimageheight
+        '
+        resources.ApplyResources(Me.txtimageheight, "txtimageheight")
+        Me.txtimageheight.Name = "txtimageheight"
+        '
+        'listselect_pass_picture
+        '
+        resources.ApplyResources(Me.listselect_pass_picture, "listselect_pass_picture")
+        Me.listselect_pass_picture.FormattingEnabled = True
+        Me.listselect_pass_picture.Name = "listselect_pass_picture"
+        '
+        'txtpass_picturefolder
+        '
+        Me.txtpass_picturefolder.BackColor = System.Drawing.SystemColors.Control
+        resources.ApplyResources(Me.txtpass_picturefolder, "txtpass_picturefolder")
+        Me.txtpass_picturefolder.Name = "txtpass_picturefolder"
+        Me.txtpass_picturefolder.ReadOnly = True
+        '
+        'txtnumbers
+        '
+        resources.ApplyResources(Me.txtnumbers, "txtnumbers")
+        Me.txtnumbers.Name = "txtnumbers"
+        '
+        'listselect_picture
+        '
+        resources.ApplyResources(Me.listselect_picture, "listselect_picture")
+        Me.listselect_picture.FormattingEnabled = True
+        Me.listselect_picture.Name = "listselect_picture"
+        '
+        'listname_picture
+        '
+        resources.ApplyResources(Me.listname_picture, "listname_picture")
+        Me.listname_picture.FormattingEnabled = True
+        Me.listname_picture.Name = "listname_picture"
+        '
+        'listfullpass_picture
+        '
+        resources.ApplyResources(Me.listfullpass_picture, "listfullpass_picture")
+        Me.listfullpass_picture.FormattingEnabled = True
+        Me.listfullpass_picture.Name = "listfullpass_picture"
+        '
+        'dg1
+        '
+        Me.dg1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dg1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.filename, Me.nameonly, Me.csvname, Me.dgadd, Me.dgpicture, Me.dg_textfullpass, Me.dg_textnumber})
+        resources.ApplyResources(Me.dg1, "dg1")
+        Me.dg1.Name = "dg1"
+        Me.dg1.RowTemplate.Height = 21
+        '
+        'filename
+        '
+        resources.ApplyResources(Me.filename, "filename")
+        Me.filename.Name = "filename"
+        '
+        'nameonly
+        '
+        resources.ApplyResources(Me.nameonly, "nameonly")
+        Me.nameonly.Name = "nameonly"
+        '
+        'csvname
+        '
+        resources.ApplyResources(Me.csvname, "csvname")
+        Me.csvname.Name = "csvname"
+        '
+        'dgadd
+        '
+        Me.dgadd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        resources.ApplyResources(Me.dgadd, "dgadd")
+        Me.dgadd.Name = "dgadd"
+        '
+        'dgpicture
+        '
+        resources.ApplyResources(Me.dgpicture, "dgpicture")
+        Me.dgpicture.Name = "dgpicture"
+        '
+        'dg_textfullpass
+        '
+        resources.ApplyResources(Me.dg_textfullpass, "dg_textfullpass")
+        Me.dg_textfullpass.Name = "dg_textfullpass"
+        '
+        'dg_textnumber
+        '
+        resources.ApplyResources(Me.dg_textnumber, "dg_textnumber")
+        Me.dg_textnumber.Name = "dg_textnumber"
+        '
+        'btnok
+        '
+        Me.btnok.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(55, Byte), Integer))
+        resources.ApplyResources(Me.btnok, "btnok")
+        Me.btnok.ForeColor = System.Drawing.SystemColors.Control
+        Me.btnok.Name = "btnok"
+        Me.btnok.UseVisualStyleBackColor = False
+        '
+        'Label1
+        '
+        resources.ApplyResources(Me.Label1, "Label1")
+        Me.Label1.Name = "Label1"
+        '
+        'txtoutputname
+        '
+        resources.ApplyResources(Me.txtoutputname, "txtoutputname")
+        Me.txtoutputname.Name = "txtoutputname"
+        '
+        'btnclosewindow
+        '
+        Me.btnclosewindow.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer))
+        resources.ApplyResources(Me.btnclosewindow, "btnclosewindow")
+        Me.btnclosewindow.ForeColor = System.Drawing.Color.Thistle
+        Me.btnclosewindow.Name = "btnclosewindow"
+        Me.btnclosewindow.UseVisualStyleBackColor = False
+        '
+        'lbltitlebar
+        '
+        resources.ApplyResources(Me.lbltitlebar, "lbltitlebar")
+        Me.lbltitlebar.BackColor = System.Drawing.Color.DarkGray
+        Me.lbltitlebar.ForeColor = System.Drawing.Color.Black
+        Me.lbltitlebar.Name = "lbltitlebar"
+        '
+        'btnexpandwindow
+        '
+        Me.btnexpandwindow.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
+        resources.ApplyResources(Me.btnexpandwindow, "btnexpandwindow")
+        Me.btnexpandwindow.ForeColor = System.Drawing.SystemColors.Control
+        Me.btnexpandwindow.Name = "btnexpandwindow"
+        Me.btnexpandwindow.UseVisualStyleBackColor = False
         '
         'DataGridViewTextBoxColumn12
         '
@@ -305,6 +460,21 @@ Partial Class Sortimagewindow
         '
         resources.ApplyResources(Me.Column16, "Column16")
         Me.Column16.Name = "Column16"
+        '
+        'Column18
+        '
+        resources.ApplyResources(Me.Column18, "Column18")
+        Me.Column18.Name = "Column18"
+        '
+        'Column19
+        '
+        resources.ApplyResources(Me.Column19, "Column19")
+        Me.Column19.Name = "Column19"
+        '
+        'Column20
+        '
+        resources.ApplyResources(Me.Column20, "Column20")
+        Me.Column20.Name = "Column20"
         '
         'Column10
         '
@@ -361,20 +531,6 @@ Partial Class Sortimagewindow
         resources.ApplyResources(Me.Column4, "Column4")
         Me.Column4.Name = "Column4"
         '
-        'txtpass_csv
-        '
-        resources.ApplyResources(Me.txtpass_csv, "txtpass_csv")
-        Me.txtpass_csv.Name = "txtpass_csv"
-        Me.txtpass_csv.ReadOnly = True
-        '
-        'dgload
-        '
-        resources.ApplyResources(Me.dgload, "dgload")
-        Me.dgload.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgload.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.c1, Me.c12, Me.key, Me.c6, Me.c7, Me.c8, Me.c9, Me.c10, Me.Column17, Me.Column13, Me.Column14, Me.Column15, Me.c2, Me.c3, Me.c4, Me.c5, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
-        Me.dgload.Name = "dgload"
-        Me.dgload.RowTemplate.Height = 21
-        '
         'c1
         '
         resources.ApplyResources(Me.c1, "c1")
@@ -419,6 +575,21 @@ Partial Class Sortimagewindow
         '
         resources.ApplyResources(Me.Column17, "Column17")
         Me.Column17.Name = "Column17"
+        '
+        'Column21
+        '
+        resources.ApplyResources(Me.Column21, "Column21")
+        Me.Column21.Name = "Column21"
+        '
+        'Column22
+        '
+        resources.ApplyResources(Me.Column22, "Column22")
+        Me.Column22.Name = "Column22"
+        '
+        'Column23
+        '
+        resources.ApplyResources(Me.Column23, "Column23")
+        Me.Column23.Name = "Column23"
         '
         'Column13
         '
@@ -474,141 +645,6 @@ Partial Class Sortimagewindow
         '
         resources.ApplyResources(Me.Column8, "Column8")
         Me.Column8.Name = "Column8"
-        '
-        'chkreset_
-        '
-        resources.ApplyResources(Me.chkreset_, "chkreset_")
-        Me.chkreset_.Checked = True
-        Me.chkreset_.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chkreset_.ForeColor = System.Drawing.SystemColors.Control
-        Me.chkreset_.Name = "chkreset_"
-        Me.chkreset_.UseVisualStyleBackColor = True
-        '
-        'txtimageheight
-        '
-        resources.ApplyResources(Me.txtimageheight, "txtimageheight")
-        Me.txtimageheight.Name = "txtimageheight"
-        '
-        'listselect_pass_picture
-        '
-        resources.ApplyResources(Me.listselect_pass_picture, "listselect_pass_picture")
-        Me.listselect_pass_picture.FormattingEnabled = True
-        Me.listselect_pass_picture.Name = "listselect_pass_picture"
-        '
-        'txtpass_picturefolder
-        '
-        resources.ApplyResources(Me.txtpass_picturefolder, "txtpass_picturefolder")
-        Me.txtpass_picturefolder.BackColor = System.Drawing.SystemColors.Control
-        Me.txtpass_picturefolder.Name = "txtpass_picturefolder"
-        Me.txtpass_picturefolder.ReadOnly = True
-        '
-        'txtnumbers
-        '
-        resources.ApplyResources(Me.txtnumbers, "txtnumbers")
-        Me.txtnumbers.Name = "txtnumbers"
-        '
-        'listselect_picture
-        '
-        resources.ApplyResources(Me.listselect_picture, "listselect_picture")
-        Me.listselect_picture.FormattingEnabled = True
-        Me.listselect_picture.Name = "listselect_picture"
-        '
-        'listname_picture
-        '
-        resources.ApplyResources(Me.listname_picture, "listname_picture")
-        Me.listname_picture.FormattingEnabled = True
-        Me.listname_picture.Name = "listname_picture"
-        '
-        'listfullpass_picture
-        '
-        resources.ApplyResources(Me.listfullpass_picture, "listfullpass_picture")
-        Me.listfullpass_picture.FormattingEnabled = True
-        Me.listfullpass_picture.Name = "listfullpass_picture"
-        '
-        'dg1
-        '
-        resources.ApplyResources(Me.dg1, "dg1")
-        Me.dg1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dg1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.filename, Me.nameonly, Me.csvname, Me.dgadd, Me.dgpicture, Me.dg_textfullpass, Me.dg_textnumber})
-        Me.dg1.Name = "dg1"
-        Me.dg1.RowTemplate.Height = 21
-        '
-        'filename
-        '
-        resources.ApplyResources(Me.filename, "filename")
-        Me.filename.Name = "filename"
-        '
-        'nameonly
-        '
-        resources.ApplyResources(Me.nameonly, "nameonly")
-        Me.nameonly.Name = "nameonly"
-        '
-        'csvname
-        '
-        resources.ApplyResources(Me.csvname, "csvname")
-        Me.csvname.Name = "csvname"
-        '
-        'dgadd
-        '
-        Me.dgadd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        resources.ApplyResources(Me.dgadd, "dgadd")
-        Me.dgadd.Name = "dgadd"
-        '
-        'dgpicture
-        '
-        resources.ApplyResources(Me.dgpicture, "dgpicture")
-        Me.dgpicture.Name = "dgpicture"
-        '
-        'dg_textfullpass
-        '
-        resources.ApplyResources(Me.dg_textfullpass, "dg_textfullpass")
-        Me.dg_textfullpass.Name = "dg_textfullpass"
-        '
-        'dg_textnumber
-        '
-        resources.ApplyResources(Me.dg_textnumber, "dg_textnumber")
-        Me.dg_textnumber.Name = "dg_textnumber"
-        '
-        'btnok
-        '
-        resources.ApplyResources(Me.btnok, "btnok")
-        Me.btnok.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(55, Byte), Integer))
-        Me.btnok.ForeColor = System.Drawing.SystemColors.Control
-        Me.btnok.Name = "btnok"
-        Me.btnok.UseVisualStyleBackColor = False
-        '
-        'Label1
-        '
-        resources.ApplyResources(Me.Label1, "Label1")
-        Me.Label1.Name = "Label1"
-        '
-        'txtoutputname
-        '
-        resources.ApplyResources(Me.txtoutputname, "txtoutputname")
-        Me.txtoutputname.Name = "txtoutputname"
-        '
-        'btnclosewindow
-        '
-        resources.ApplyResources(Me.btnclosewindow, "btnclosewindow")
-        Me.btnclosewindow.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer))
-        Me.btnclosewindow.ForeColor = System.Drawing.Color.Thistle
-        Me.btnclosewindow.Name = "btnclosewindow"
-        Me.btnclosewindow.UseVisualStyleBackColor = False
-        '
-        'lbltitlebar
-        '
-        resources.ApplyResources(Me.lbltitlebar, "lbltitlebar")
-        Me.lbltitlebar.BackColor = System.Drawing.Color.DarkGray
-        Me.lbltitlebar.ForeColor = System.Drawing.Color.Black
-        Me.lbltitlebar.Name = "lbltitlebar"
-        '
-        'btnexpandwindow
-        '
-        resources.ApplyResources(Me.btnexpandwindow, "btnexpandwindow")
-        Me.btnexpandwindow.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
-        Me.btnexpandwindow.ForeColor = System.Drawing.SystemColors.Control
-        Me.btnexpandwindow.Name = "btnexpandwindow"
-        Me.btnexpandwindow.UseVisualStyleBackColor = False
         '
         'Sortimagewindow
         '
@@ -692,26 +728,6 @@ Partial Class Sortimagewindow
     Friend WithEvents dgad As DataGridView
     Friend WithEvents txtpass_csv As TextBox
     Friend WithEvents dgload As DataGridView
-    Friend WithEvents c1 As DataGridViewTextBoxColumn
-    Friend WithEvents c12 As DataGridViewTextBoxColumn
-    Friend WithEvents key As DataGridViewTextBoxColumn
-    Friend WithEvents c6 As DataGridViewTextBoxColumn
-    Friend WithEvents c7 As DataGridViewTextBoxColumn
-    Friend WithEvents c8 As DataGridViewTextBoxColumn
-    Friend WithEvents c9 As DataGridViewTextBoxColumn
-    Friend WithEvents c10 As DataGridViewTextBoxColumn
-    Friend WithEvents Column17 As DataGridViewTextBoxColumn
-    Friend WithEvents Column13 As DataGridViewTextBoxColumn
-    Friend WithEvents Column14 As DataGridViewTextBoxColumn
-    Friend WithEvents Column15 As DataGridViewTextBoxColumn
-    Friend WithEvents c2 As DataGridViewTextBoxColumn
-    Friend WithEvents c3 As DataGridViewTextBoxColumn
-    Friend WithEvents c4 As DataGridViewTextBoxColumn
-    Friend WithEvents c5 As DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As DataGridViewTextBoxColumn
-    Friend WithEvents Column6 As DataGridViewTextBoxColumn
-    Friend WithEvents Column7 As DataGridViewTextBoxColumn
-    Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents chkreset_ As CheckBox
     Friend WithEvents txtimageheight As TextBox
     Friend WithEvents listselect_pass_picture As ListBox
@@ -733,6 +749,7 @@ Partial Class Sortimagewindow
     Friend WithEvents dgpicture As DataGridViewImageColumn
     Friend WithEvents dg_textfullpass As DataGridViewTextBoxColumn
     Friend WithEvents dg_textnumber As DataGridViewTextBoxColumn
+    Friend WithEvents btnexpandwindow As Button
     Friend WithEvents DataGridViewTextBoxColumn12 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn22 As DataGridViewTextBoxColumn
     Friend WithEvents Column9 As DataGridViewTextBoxColumn
@@ -742,6 +759,9 @@ Partial Class Sortimagewindow
     Friend WithEvents DataGridViewTextBoxColumn20 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn21 As DataGridViewTextBoxColumn
     Friend WithEvents Column16 As DataGridViewTextBoxColumn
+    Friend WithEvents Column18 As DataGridViewTextBoxColumn
+    Friend WithEvents Column19 As DataGridViewTextBoxColumn
+    Friend WithEvents Column20 As DataGridViewTextBoxColumn
     Friend WithEvents Column10 As DataGridViewTextBoxColumn
     Friend WithEvents Column11 As DataGridViewTextBoxColumn
     Friend WithEvents Column12 As DataGridViewTextBoxColumn
@@ -753,5 +773,27 @@ Partial Class Sortimagewindow
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
-    Friend WithEvents btnexpandwindow As Button
+    Friend WithEvents c1 As DataGridViewTextBoxColumn
+    Friend WithEvents c12 As DataGridViewTextBoxColumn
+    Friend WithEvents key As DataGridViewTextBoxColumn
+    Friend WithEvents c6 As DataGridViewTextBoxColumn
+    Friend WithEvents c7 As DataGridViewTextBoxColumn
+    Friend WithEvents c8 As DataGridViewTextBoxColumn
+    Friend WithEvents c9 As DataGridViewTextBoxColumn
+    Friend WithEvents c10 As DataGridViewTextBoxColumn
+    Friend WithEvents Column17 As DataGridViewTextBoxColumn
+    Friend WithEvents Column21 As DataGridViewTextBoxColumn
+    Friend WithEvents Column22 As DataGridViewTextBoxColumn
+    Friend WithEvents Column23 As DataGridViewTextBoxColumn
+    Friend WithEvents Column13 As DataGridViewTextBoxColumn
+    Friend WithEvents Column14 As DataGridViewTextBoxColumn
+    Friend WithEvents Column15 As DataGridViewTextBoxColumn
+    Friend WithEvents c2 As DataGridViewTextBoxColumn
+    Friend WithEvents c3 As DataGridViewTextBoxColumn
+    Friend WithEvents c4 As DataGridViewTextBoxColumn
+    Friend WithEvents c5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
 End Class

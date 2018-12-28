@@ -39,6 +39,9 @@ Partial Class Mainwindow
         Me.darksleep = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.darkthr = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.seektime = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.color_r = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.color_g = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.color_b = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.graph_count = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.graph_rate = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.graph_view = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -58,6 +61,9 @@ Partial Class Mainwindow
         Me.piczoom = New System.Windows.Forms.PictureBox()
         Me.picview_capture = New System.Windows.Forms.PictureBox()
         Me.pnlview_control = New System.Windows.Forms.Panel()
+        Me.rdocapture_rgbfull = New System.Windows.Forms.RadioButton()
+        Me.rdocapture_rgb = New System.Windows.Forms.RadioButton()
+        Me.rdocapture_opencv = New System.Windows.Forms.RadioButton()
         Me.btntemp = New System.Windows.Forms.Button()
         Me.btncap = New System.Windows.Forms.Button()
         Me.btnforward = New System.Windows.Forms.Button()
@@ -68,7 +74,6 @@ Partial Class Mainwindow
         Me.chklimit = New System.Windows.Forms.CheckBox()
         Me.chkoverwrite = New System.Windows.Forms.CheckBox()
         Me.trktemp = New System.Windows.Forms.TrackBar()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.grpgeneral = New System.Windows.Forms.GroupBox()
         Me.lblcur_load10 = New System.Windows.Forms.Label()
         Me.lblcur_load9 = New System.Windows.Forms.Label()
@@ -351,9 +356,13 @@ Partial Class Mainwindow
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InformationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LicenseLToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.picunder = New System.Windows.Forms.PictureBox()
         Me.btnclose_general = New System.Windows.Forms.Button()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.txtcv_color_b = New System.Windows.Forms.TextBox()
+        Me.txtcv_color_g = New System.Windows.Forms.TextBox()
+        Me.txtcv_color_r = New System.Windows.Forms.TextBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.txtcv_method = New System.Windows.Forms.TextBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.Label77 = New System.Windows.Forms.Label()
@@ -672,7 +681,6 @@ Partial Class Mainwindow
         Me.pnlview_control.SuspendLayout()
         CType(Me.numloadno, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.trktemp, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpgeneral.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.pnl_other.SuspendLayout()
@@ -734,7 +742,6 @@ Partial Class Mainwindow
         CType(Me.numcv_interval, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numpercent, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
-        CType(Me.picunder, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage5.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -810,12 +817,11 @@ Partial Class Mainwindow
         '
         Me.TabPage1.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(75, Byte), Integer))
         resources.ApplyResources(Me.TabPage1, "TabPage1")
-        Me.TabPage1.Controls.Add(Me.btndescription_table)
         Me.TabPage1.Controls.Add(Me.txtrowscount)
         Me.TabPage1.Controls.Add(Me.DGtable)
+        Me.TabPage1.Controls.Add(Me.btndescription_table)
         Me.TabPage1.Controls.Add(Me.pnlview_window)
         Me.TabPage1.Controls.Add(Me.pnlview_control)
-        Me.TabPage1.Controls.Add(Me.PictureBox1)
         Me.TabPage1.Controls.Add(Me.grpgeneral)
         Me.TabPage1.Controls.Add(Me.pnl_other)
         Me.TabPage1.Controls.Add(Me.pnl_video)
@@ -833,7 +839,6 @@ Partial Class Mainwindow
         Me.TabPage1.Controls.Add(Me.btnaddprofile)
         Me.TabPage1.Controls.Add(Me.cmbprofile)
         Me.TabPage1.Controls.Add(Me.MenuStrip1)
-        Me.TabPage1.Controls.Add(Me.picunder)
         Me.TabPage1.Controls.Add(Me.btnclose_general)
         Me.TabPage1.ForeColor = System.Drawing.SystemColors.ControlText
         Me.TabPage1.Name = "TabPage1"
@@ -867,7 +872,7 @@ Partial Class Mainwindow
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DGtable.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DGtable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGtable.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.no, Me.send, Me.key, Me.rate, Me.sleep, Me.timing, Me.darksleep, Me.darkthr, Me.seektime, Me.graph_count, Me.graph_rate, Me.graph_view, Me.posx, Me.posy, Me.sizex, Me.sizey, Me.ltx, Me.lty, Me.rbx, Me.rby})
+        Me.DGtable.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.no, Me.send, Me.key, Me.rate, Me.sleep, Me.timing, Me.darksleep, Me.darkthr, Me.seektime, Me.color_r, Me.color_g, Me.color_b, Me.graph_count, Me.graph_rate, Me.graph_view, Me.posx, Me.posy, Me.sizex, Me.sizey, Me.ltx, Me.lty, Me.rbx, Me.rby})
         resources.ApplyResources(Me.DGtable, "DGtable")
         Me.DGtable.Name = "DGtable"
         Me.DGtable.RowTemplate.Height = 21
@@ -916,6 +921,21 @@ Partial Class Mainwindow
         '
         resources.ApplyResources(Me.seektime, "seektime")
         Me.seektime.Name = "seektime"
+        '
+        'color_r
+        '
+        resources.ApplyResources(Me.color_r, "color_r")
+        Me.color_r.Name = "color_r"
+        '
+        'color_g
+        '
+        resources.ApplyResources(Me.color_g, "color_g")
+        Me.color_g.Name = "color_g"
+        '
+        'color_b
+        '
+        resources.ApplyResources(Me.color_b, "color_b")
+        Me.color_b.Name = "color_b"
         '
         'graph_count
         '
@@ -1028,6 +1048,9 @@ Partial Class Mainwindow
         '
         resources.ApplyResources(Me.pnlview_control, "pnlview_control")
         Me.pnlview_control.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(34, Byte), Integer))
+        Me.pnlview_control.Controls.Add(Me.rdocapture_rgbfull)
+        Me.pnlview_control.Controls.Add(Me.rdocapture_rgb)
+        Me.pnlview_control.Controls.Add(Me.rdocapture_opencv)
         Me.pnlview_control.Controls.Add(Me.btntemp)
         Me.pnlview_control.Controls.Add(Me.btncap)
         Me.pnlview_control.Controls.Add(Me.btnforward)
@@ -1039,6 +1062,29 @@ Partial Class Mainwindow
         Me.pnlview_control.Controls.Add(Me.chkoverwrite)
         Me.pnlview_control.Controls.Add(Me.trktemp)
         Me.pnlview_control.Name = "pnlview_control"
+        '
+        'rdocapture_rgbfull
+        '
+        resources.ApplyResources(Me.rdocapture_rgbfull, "rdocapture_rgbfull")
+        Me.rdocapture_rgbfull.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.rdocapture_rgbfull.Name = "rdocapture_rgbfull"
+        Me.rdocapture_rgbfull.UseVisualStyleBackColor = True
+        '
+        'rdocapture_rgb
+        '
+        resources.ApplyResources(Me.rdocapture_rgb, "rdocapture_rgb")
+        Me.rdocapture_rgb.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.rdocapture_rgb.Name = "rdocapture_rgb"
+        Me.rdocapture_rgb.UseVisualStyleBackColor = True
+        '
+        'rdocapture_opencv
+        '
+        resources.ApplyResources(Me.rdocapture_opencv, "rdocapture_opencv")
+        Me.rdocapture_opencv.Checked = True
+        Me.rdocapture_opencv.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.rdocapture_opencv.Name = "rdocapture_opencv"
+        Me.rdocapture_opencv.TabStop = True
+        Me.rdocapture_opencv.UseVisualStyleBackColor = True
         '
         'btntemp
         '
@@ -1123,13 +1169,6 @@ Partial Class Mainwindow
         Me.trktemp.Maximum = 300
         Me.trktemp.Name = "trktemp"
         Me.trktemp.TickStyle = System.Windows.Forms.TickStyle.None
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(95, Byte), Integer))
-        resources.ApplyResources(Me.PictureBox1, "PictureBox1")
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.TabStop = False
         '
         'grpgeneral
         '
@@ -3554,13 +3593,6 @@ Partial Class Mainwindow
         Me.LicenseLToolStripMenuItem.Name = "LicenseLToolStripMenuItem"
         resources.ApplyResources(Me.LicenseLToolStripMenuItem, "LicenseLToolStripMenuItem")
         '
-        'picunder
-        '
-        Me.picunder.BackColor = System.Drawing.Color.FromArgb(CType(CType(90, Byte), Integer), CType(CType(95, Byte), Integer), CType(CType(105, Byte), Integer))
-        resources.ApplyResources(Me.picunder, "picunder")
-        Me.picunder.Name = "picunder"
-        Me.picunder.TabStop = False
-        '
         'btnclose_general
         '
         resources.ApplyResources(Me.btnclose_general, "btnclose_general")
@@ -3572,6 +3604,11 @@ Partial Class Mainwindow
         'TabPage5
         '
         Me.TabPage5.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(75, Byte), Integer))
+        Me.TabPage5.Controls.Add(Me.txtcv_color_b)
+        Me.TabPage5.Controls.Add(Me.txtcv_color_g)
+        Me.TabPage5.Controls.Add(Me.txtcv_color_r)
+        Me.TabPage5.Controls.Add(Me.Label15)
+        Me.TabPage5.Controls.Add(Me.txtcv_method)
         Me.TabPage5.Controls.Add(Me.PictureBox3)
         Me.TabPage5.Controls.Add(Me.PictureBox4)
         Me.TabPage5.Controls.Add(Me.Label77)
@@ -3665,6 +3702,44 @@ Partial Class Mainwindow
         Me.TabPage5.Controls.Add(Me.PictureBox19)
         resources.ApplyResources(Me.TabPage5, "TabPage5")
         Me.TabPage5.Name = "TabPage5"
+        '
+        'txtcv_color_b
+        '
+        Me.txtcv_color_b.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        resources.ApplyResources(Me.txtcv_color_b, "txtcv_color_b")
+        Me.txtcv_color_b.ForeColor = System.Drawing.SystemColors.Control
+        Me.txtcv_color_b.Name = "txtcv_color_b"
+        Me.txtcv_color_b.ReadOnly = True
+        '
+        'txtcv_color_g
+        '
+        Me.txtcv_color_g.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        resources.ApplyResources(Me.txtcv_color_g, "txtcv_color_g")
+        Me.txtcv_color_g.ForeColor = System.Drawing.SystemColors.Control
+        Me.txtcv_color_g.Name = "txtcv_color_g"
+        Me.txtcv_color_g.ReadOnly = True
+        '
+        'txtcv_color_r
+        '
+        Me.txtcv_color_r.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        resources.ApplyResources(Me.txtcv_color_r, "txtcv_color_r")
+        Me.txtcv_color_r.ForeColor = System.Drawing.SystemColors.Control
+        Me.txtcv_color_r.Name = "txtcv_color_r"
+        Me.txtcv_color_r.ReadOnly = True
+        '
+        'Label15
+        '
+        resources.ApplyResources(Me.Label15, "Label15")
+        Me.Label15.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label15.Name = "Label15"
+        '
+        'txtcv_method
+        '
+        Me.txtcv_method.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        resources.ApplyResources(Me.txtcv_method, "txtcv_method")
+        Me.txtcv_method.ForeColor = System.Drawing.SystemColors.Control
+        Me.txtcv_method.Name = "txtcv_method"
+        Me.txtcv_method.ReadOnly = True
         '
         'PictureBox3
         '
@@ -6084,7 +6159,6 @@ Partial Class Mainwindow
         Me.pnlview_control.PerformLayout()
         CType(Me.numloadno, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.trktemp, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grpgeneral.ResumeLayout(False)
         Me.grpgeneral.PerformLayout()
         Me.Panel4.ResumeLayout(False)
@@ -6161,7 +6235,6 @@ Partial Class Mainwindow
         CType(Me.numpercent, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
-        CType(Me.picunder, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage5.ResumeLayout(False)
         Me.TabPage5.PerformLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
@@ -6270,7 +6343,6 @@ Partial Class Mainwindow
     Friend WithEvents lblkeysforsend_reset As Label
     Friend WithEvents btnsaisyouka As Button
     Friend WithEvents Label25 As Label
-    Friend WithEvents picunder As PictureBox
     Friend WithEvents DirectoryEntry1 As DirectoryServices.DirectoryEntry
     Friend WithEvents timopencvsleep As Timer
     Friend WithEvents timcv_perfectanten As Timer
@@ -6779,7 +6851,6 @@ Partial Class Mainwindow
     Friend WithEvents Label109 As Label
     Friend WithEvents Label111 As Label
     Friend WithEvents LinkLabel3 As LinkLabel
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents PictureBox7 As PictureBox
@@ -6792,26 +6863,6 @@ Partial Class Mainwindow
     Friend WithEvents ToolStripSeparator5 As ToolStripSeparator
     Friend WithEvents StartMonitoringMToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator6 As ToolStripSeparator
-    Friend WithEvents no As DataGridViewTextBoxColumn
-    Friend WithEvents send As DataGridViewTextBoxColumn
-    Friend WithEvents key As DataGridViewTextBoxColumn
-    Friend WithEvents rate As DataGridViewTextBoxColumn
-    Friend WithEvents sleep As DataGridViewTextBoxColumn
-    Friend WithEvents timing As DataGridViewTextBoxColumn
-    Friend WithEvents darksleep As DataGridViewTextBoxColumn
-    Friend WithEvents darkthr As DataGridViewTextBoxColumn
-    Friend WithEvents seektime As DataGridViewTextBoxColumn
-    Friend WithEvents graph_count As DataGridViewTextBoxColumn
-    Friend WithEvents graph_rate As DataGridViewTextBoxColumn
-    Friend WithEvents graph_view As DataGridViewTextBoxColumn
-    Friend WithEvents posx As DataGridViewTextBoxColumn
-    Friend WithEvents posy As DataGridViewTextBoxColumn
-    Friend WithEvents sizex As DataGridViewTextBoxColumn
-    Friend WithEvents sizey As DataGridViewTextBoxColumn
-    Friend WithEvents ltx As DataGridViewTextBoxColumn
-    Friend WithEvents lty As DataGridViewTextBoxColumn
-    Friend WithEvents rbx As DataGridViewTextBoxColumn
-    Friend WithEvents rby As DataGridViewTextBoxColumn
     Friend WithEvents rdocalib_aspect_to43 As RadioButton
     Friend WithEvents rdocalib_aspect_to169 As RadioButton
     Friend WithEvents rdocalib_aspect_none As RadioButton
@@ -6872,4 +6923,35 @@ Partial Class Mainwindow
     Friend WithEvents lbldpi As Label
     Friend WithEvents btndescription_table As Button
     Friend WithEvents timashupdate As Timer
+    Friend WithEvents Label15 As Label
+    Friend WithEvents txtcv_method As TextBox
+    Friend WithEvents rdocapture_rgb As RadioButton
+    Friend WithEvents rdocapture_opencv As RadioButton
+    Friend WithEvents rdocapture_rgbfull As RadioButton
+    Friend WithEvents txtcv_color_b As TextBox
+    Friend WithEvents txtcv_color_g As TextBox
+    Friend WithEvents txtcv_color_r As TextBox
+    Friend WithEvents no As DataGridViewTextBoxColumn
+    Friend WithEvents send As DataGridViewTextBoxColumn
+    Friend WithEvents key As DataGridViewTextBoxColumn
+    Friend WithEvents rate As DataGridViewTextBoxColumn
+    Friend WithEvents sleep As DataGridViewTextBoxColumn
+    Friend WithEvents timing As DataGridViewTextBoxColumn
+    Friend WithEvents darksleep As DataGridViewTextBoxColumn
+    Friend WithEvents darkthr As DataGridViewTextBoxColumn
+    Friend WithEvents seektime As DataGridViewTextBoxColumn
+    Friend WithEvents color_r As DataGridViewTextBoxColumn
+    Friend WithEvents color_g As DataGridViewTextBoxColumn
+    Friend WithEvents color_b As DataGridViewTextBoxColumn
+    Friend WithEvents graph_count As DataGridViewTextBoxColumn
+    Friend WithEvents graph_rate As DataGridViewTextBoxColumn
+    Friend WithEvents graph_view As DataGridViewTextBoxColumn
+    Friend WithEvents posx As DataGridViewTextBoxColumn
+    Friend WithEvents posy As DataGridViewTextBoxColumn
+    Friend WithEvents sizex As DataGridViewTextBoxColumn
+    Friend WithEvents sizey As DataGridViewTextBoxColumn
+    Friend WithEvents ltx As DataGridViewTextBoxColumn
+    Friend WithEvents lty As DataGridViewTextBoxColumn
+    Friend WithEvents rbx As DataGridViewTextBoxColumn
+    Friend WithEvents rby As DataGridViewTextBoxColumn
 End Class

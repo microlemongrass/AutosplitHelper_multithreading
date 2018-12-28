@@ -152,7 +152,7 @@ Public Class Del_Addimagewindow
 
                 Dim myfilename_table1 As String = "./profile/" & Mainwindow.cmbprofile.SelectedItem & "/table.csv"
 
-                Dim parser As TextFieldParser = New TextFieldParser(myfilename_table1, Encoding.GetEncoding("Shift_JIS"))
+                Dim parser As TextFieldParser = New TextFieldParser(myfilename_table1, Encoding.UTF8) 'GetEncoding("Shift_JIS"))
                 parser.TextFieldType = FieldType.Delimited
                 parser.SetDelimiters(",") ' 区切り文字はコンマ
 
@@ -207,7 +207,7 @@ Public Class Del_Addimagewindow
                 '■表への反映
                 Copytable.Rows.Insert(addpoint + 1)
 
-                For j = 0 To 20 - 1 '列数実数指定。どうやればよいのか♥
+                For j = 0 To 23 - 1 '列数実数指定。どうやればよいのか♥
 
                     Copytable(j, addpoint + 1).Value = Copytable(j, addpoint).Value
 
@@ -385,7 +385,7 @@ Public Class Del_Addimagewindow
 
             Dim myfilename_table1 As String = "./profile/" & Mainwindow.cmbprofile.SelectedItem & "/table.csv"
 
-            Dim parser As TextFieldParser = New TextFieldParser(myfilename_table1, Encoding.GetEncoding("Shift_JIS"))
+            Dim parser As TextFieldParser = New TextFieldParser(myfilename_table1, Encoding.UTF8) 'GetEncoding("Shift_JIS"))
             parser.TextFieldType = FieldType.Delimited
             parser.SetDelimiters(",") ' 区切り文字はコンマ
 
@@ -469,7 +469,7 @@ Public Class Del_Addimagewindow
                 'Dim FileName As String = myfilename ' SaveFileName
                 '現在のファイルに上書き保存
                 Using swCsv As New System.IO.StreamWriter(txtpass_csv.Text,
-                                          False, System.Text.Encoding.GetEncoding("SHIFT_JIS"))
+                                          False, System.Text.Encoding.UTF8) 'GetEncoding("SHIFT_JIS"))
                     Dim sf As String = Chr(34)          'データの前側の括り
                     Dim se As String = Chr(34) & ","    'データの後ろの括りとデータの区切りの "," 
                     Dim i, j As Integer
