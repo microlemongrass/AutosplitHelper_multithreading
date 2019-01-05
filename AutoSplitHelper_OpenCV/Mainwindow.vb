@@ -463,6 +463,7 @@ Public Class Mainwindow
 
             cmbcv_device.SelectedIndex = 0
 
+            cmbcv_resolution_input.SelectedIndex = 0
             cmbcv_resolution_view.SelectedIndex = 0
             cmbprofile.SelectedIndex = 0
 
@@ -6616,13 +6617,15 @@ Public Class Mainwindow
         btnsaisyouka.Location = New Drawing.Point((Me.Width - btnclosewindow.Width - btnsaisyouka.Width), 0)
 
         Cropping_preview.Show()
-        Cropping_preview.Size = New Drawing.Size(numcrop_resolution_x.Value, numcrop_resolution_y.Value + (50 * Dpi_rate))
+        Cropping_preview.Size = New Drawing.Size(numcrop_resolution_x.Value + (50 * Dpi_rate), numcrop_resolution_y.Value + (50 * Dpi_rate))
         Cropping_preview.picipl_crop.Size = New Drawing.Size(numcrop_resolution_x.Value, numcrop_resolution_y.Value)
 
         '■inputの解像度を表示
         capturecv.Read(frame)
 
         Cropping_preview.picipl_crop.ImageIpl = frame
+
+
 
 
 
@@ -6650,7 +6653,7 @@ Public Class Mainwindow
             End If
 
             Cropping_preview.Size = New Drawing.Size(
-                numcrop_rate.Value * crop_aspect_x * 2,
+                numcrop_rate.Value * crop_aspect_x * 2 + (50 * Dpi_rate),
                 numcrop_rate.Value * crop_aspect_y * 2 + (50 * Dpi_rate))
 
             Cropping_preview.picipl_crop.Size = New Drawing.Size(
@@ -6690,15 +6693,17 @@ Public Class Mainwindow
         txtcrop_size_x.Text = numcrop_rate.Value * crop_aspect_x * 2
         txtcrop_size_y.Text = numcrop_rate.Value * crop_aspect_y * 2
 
-        If numcrop_resolution_x.Value < numcrop_position_x.Value + CInt(txtcrop_size_x.Text) Or
-           numcrop_resolution_y.Value < numcrop_position_y.Value + CInt(txtcrop_size_y.Text) Then
+        If numcrop_resolution_x.Value > numcrop_position_x.Value + CInt(txtcrop_size_x.Text) And
+           numcrop_resolution_y.Value > numcrop_position_y.Value + CInt(txtcrop_size_y.Text) Then
 
-            numcrop_position_x.Value = numcrop_resolution_x.Value - CInt(txtcrop_size_x.Text)
-            numcrop_position_y.Value = numcrop_resolution_y.Value - CInt(txtcrop_size_y.Text)
+            lblcrop_status.Text = "Crop status : 許された"
+            Crop_apply()
+        Else
+            lblcrop_status.Text = "Crop status : 許されない"
 
         End If
 
-        Crop_apply()
+
 
 
     End Sub
@@ -6744,7 +6749,7 @@ Public Class Mainwindow
 
 
             Cropping_preview.Size = New Drawing.Size(
-            numcrop_rate.Value * crop_aspect_x * 2,
+            numcrop_rate.Value * crop_aspect_x * 2 + (50 * Dpi_rate),
             numcrop_rate.Value * crop_aspect_y * 2 + (50 * Dpi_rate))
 
             Cropping_preview.picipl_crop.Size = New Drawing.Size(
@@ -13872,107 +13877,114 @@ Public Class Mainwindow
             numcv_interval.Value = txtloadprofile.Lines(17)
 
             cmbcv_device.SelectedIndex = txtloadprofile.Lines(20)
-            cmbcv_resolution_view.SelectedIndex = txtloadprofile.Lines(21)
-            numcv_framerate.Value = txtloadprofile.Lines(22)
+            cmbcv_resolution_input.SelectedIndex = txtloadprofile.Lines(21)
+            cmbcv_resolution_view.SelectedIndex = txtloadprofile.Lines(22)
+            numcv_framerate.Value = txtloadprofile.Lines(23)
+            chkcv_crop.Checked = txtloadprofile.Lines(24)
+            txtcv_crop_posx.Text = txtloadprofile.Lines(25)
+            txtcv_crop_posy.Text = txtloadprofile.Lines(26)
+            txtcv_crop_sizex.Text = txtloadprofile.Lines(27)
+            txtcv_crop_sizey.Text = txtloadprofile.Lines(28)
+            chkcv_grayscale.Checked = txtloadprofile.Lines(29)
 
-            chkactiveapp.Checked = txtloadprofile.Lines(25)
-            cmbtimer.SelectedItem = txtloadprofile.Lines(26)
-            chkactivesomeapp.Checked = txtloadprofile.Lines(27)
-            cmbsomeapp.SelectedItem = txtloadprofile.Lines(28)
-            numsendsleep.Value = txtloadprofile.Lines(29)
+            chkactiveapp.Checked = txtloadprofile.Lines(32)
+            cmbtimer.SelectedItem = txtloadprofile.Lines(33)
+            chkactivesomeapp.Checked = txtloadprofile.Lines(34)
+            cmbsomeapp.SelectedItem = txtloadprofile.Lines(35)
+            numsendsleep.Value = txtloadprofile.Lines(36)
 
-            chkshift.Checked = txtloadprofile.Lines(32)
-            chkctrl.Checked = txtloadprofile.Lines(33)
-            chkalt.Checked = txtloadprofile.Lines(34)
-            txtsplit_key.Text = txtloadprofile.Lines(35)
-            lblkeysforsend.Text = txtloadprofile.Lines(36)
-            chkshift_reset.Checked = txtloadprofile.Lines(37)
-            chkctrl_reset.Checked = txtloadprofile.Lines(38)
-            chkalt_reset.Checked = txtloadprofile.Lines(39)
-            txtreset_key.Text = txtloadprofile.Lines(40)
-            lblkeysforsend_reset.Text = txtloadprofile.Lines(41)
-            chkshift_undo.Checked = txtloadprofile.Lines(42)
-            chkctrl_undo.Checked = txtloadprofile.Lines(43)
-            chkalt_undo.Checked = txtloadprofile.Lines(44)
-            txtundo_key.Text = txtloadprofile.Lines(45)
-            lblkeysforundo.Text = txtloadprofile.Lines(46)
-            chkshift_skip.Checked = txtloadprofile.Lines(47)
-            chkctrl_skip.Checked = txtloadprofile.Lines(48)
-            chkalt_skip.Checked = txtloadprofile.Lines(49)
-            txtskip_key.Text = txtloadprofile.Lines(50)
-            lblkeysforskip.Text = txtloadprofile.Lines(51)
-            chkshift_pause.Checked = txtloadprofile.Lines(52)
-            chkctrl_pause.Checked = txtloadprofile.Lines(53)
-            chkalt_pause.Checked = txtloadprofile.Lines(54)
-            txtpause_key.Text = txtloadprofile.Lines(55)
-            lblkeysforpause.Text = txtloadprofile.Lines(56)
-            chkshift_resume.Checked = txtloadprofile.Lines(57)
-            chkctrl_resume.Checked = txtloadprofile.Lines(58)
-            chkalt_resume.Checked = txtloadprofile.Lines(59)
-            txtresume_key.Text = txtloadprofile.Lines(60)
-            lblkeysforresume.Text = txtloadprofile.Lines(61)
-            txtreset_ash_key.Text = txtloadprofile.Lines(62)
-            numreset_ash.Value = txtloadprofile.Lines(63)
-            txtundo_ash_key.Text = txtloadprofile.Lines(64)
-            numundo_ash.Value = txtloadprofile.Lines(65)
-            txtskip_ash_key.Text = txtloadprofile.Lines(66)
-            numskip_ash.Value = txtloadprofile.Lines(67)
-            chkundoskip.Checked = txtloadprofile.Lines(68)
-            chknamedpipe.Checked = txtloadprofile.Lines(69)
-            numpresstime.Value = txtloadprofile.Lines(70)
+            chkshift.Checked = txtloadprofile.Lines(39)
+            chkctrl.Checked = txtloadprofile.Lines(40)
+            chkalt.Checked = txtloadprofile.Lines(41)
+            txtsplit_key.Text = txtloadprofile.Lines(42)
+            lblkeysforsend.Text = txtloadprofile.Lines(43)
+            chkshift_reset.Checked = txtloadprofile.Lines(44)
+            chkctrl_reset.Checked = txtloadprofile.Lines(45)
+            chkalt_reset.Checked = txtloadprofile.Lines(46)
+            txtreset_key.Text = txtloadprofile.Lines(47)
+            lblkeysforsend_reset.Text = txtloadprofile.Lines(48)
+            chkshift_undo.Checked = txtloadprofile.Lines(49)
+            chkctrl_undo.Checked = txtloadprofile.Lines(50)
+            chkalt_undo.Checked = txtloadprofile.Lines(51)
+            txtundo_key.Text = txtloadprofile.Lines(52)
+            lblkeysforundo.Text = txtloadprofile.Lines(53)
+            chkshift_skip.Checked = txtloadprofile.Lines(54)
+            chkctrl_skip.Checked = txtloadprofile.Lines(55)
+            chkalt_skip.Checked = txtloadprofile.Lines(56)
+            txtskip_key.Text = txtloadprofile.Lines(57)
+            lblkeysforskip.Text = txtloadprofile.Lines(58)
+            chkshift_pause.Checked = txtloadprofile.Lines(59)
+            chkctrl_pause.Checked = txtloadprofile.Lines(60)
+            chkalt_pause.Checked = txtloadprofile.Lines(61)
+            txtpause_key.Text = txtloadprofile.Lines(62)
+            lblkeysforpause.Text = txtloadprofile.Lines(63)
+            chkshift_resume.Checked = txtloadprofile.Lines(64)
+            chkctrl_resume.Checked = txtloadprofile.Lines(65)
+            chkalt_resume.Checked = txtloadprofile.Lines(66)
+            txtresume_key.Text = txtloadprofile.Lines(67)
+            lblkeysforresume.Text = txtloadprofile.Lines(68)
+            txtreset_ash_key.Text = txtloadprofile.Lines(69)
+            numreset_ash.Value = txtloadprofile.Lines(70)
+            txtundo_ash_key.Text = txtloadprofile.Lines(71)
+            numundo_ash.Value = txtloadprofile.Lines(72)
+            txtskip_ash_key.Text = txtloadprofile.Lines(73)
+            numskip_ash.Value = txtloadprofile.Lines(74)
+            chkundoskip.Checked = txtloadprofile.Lines(75)
+            chknamedpipe.Checked = txtloadprofile.Lines(76)
+            numpresstime.Value = txtloadprofile.Lines(77)
 
-            chkload1.Checked = txtloadprofile.Lines(73)
-            chkload2.Checked = txtloadprofile.Lines(74)
-            chkload3.Checked = txtloadprofile.Lines(75)
-            chkload4.Checked = txtloadprofile.Lines(76)
-            chkload5.Checked = txtloadprofile.Lines(77)
-            chkload6.Checked = txtloadprofile.Lines(78)
-            chkload7.Checked = txtloadprofile.Lines(79)
-            chkload8.Checked = txtloadprofile.Lines(80)
-            chkload9.Checked = txtloadprofile.Lines(81)
-            chkload10.Checked = txtloadprofile.Lines(82)
-            numload_rate1.Value = txtloadprofile.Lines(83)
-            numload_rate2.Value = txtloadprofile.Lines(84)
-            numload_rate3.Value = txtloadprofile.Lines(85)
-            numload_rate4.Value = txtloadprofile.Lines(86)
-            numload_rate5.Value = txtloadprofile.Lines(87)
-            numload_rate6.Value = txtloadprofile.Lines(88)
-            numload_rate7.Value = txtloadprofile.Lines(89)
-            numload_rate8.Value = txtloadprofile.Lines(90)
-            numload_rate9.Value = txtloadprofile.Lines(91)
-            numload_rate10.Value = txtloadprofile.Lines(92)
-            numload_delay1.Value = txtloadprofile.Lines(93)
-            numload_delay2.Value = txtloadprofile.Lines(94)
-            numload_delay3.Value = txtloadprofile.Lines(95)
-            numload_delay4.Value = txtloadprofile.Lines(96)
-            numload_delay5.Value = txtloadprofile.Lines(97)
-            numload_delay6.Value = txtloadprofile.Lines(98)
-            numload_delay7.Value = txtloadprofile.Lines(99)
-            numload_delay8.Value = txtloadprofile.Lines(100)
-            numload_delay9.Value = txtloadprofile.Lines(101)
-            numload_delay10.Value = txtloadprofile.Lines(102)
+            chkload1.Checked = txtloadprofile.Lines(80)
+            chkload2.Checked = txtloadprofile.Lines(81)
+            chkload3.Checked = txtloadprofile.Lines(82)
+            chkload4.Checked = txtloadprofile.Lines(83)
+            chkload5.Checked = txtloadprofile.Lines(84)
+            chkload6.Checked = txtloadprofile.Lines(85)
+            chkload7.Checked = txtloadprofile.Lines(86)
+            chkload8.Checked = txtloadprofile.Lines(87)
+            chkload9.Checked = txtloadprofile.Lines(88)
+            chkload10.Checked = txtloadprofile.Lines(89)
+            numload_rate1.Value = txtloadprofile.Lines(90)
+            numload_rate2.Value = txtloadprofile.Lines(91)
+            numload_rate3.Value = txtloadprofile.Lines(92)
+            numload_rate4.Value = txtloadprofile.Lines(93)
+            numload_rate5.Value = txtloadprofile.Lines(94)
+            numload_rate6.Value = txtloadprofile.Lines(95)
+            numload_rate7.Value = txtloadprofile.Lines(96)
+            numload_rate8.Value = txtloadprofile.Lines(97)
+            numload_rate9.Value = txtloadprofile.Lines(98)
+            numload_rate10.Value = txtloadprofile.Lines(99)
+            numload_delay1.Value = txtloadprofile.Lines(100)
+            numload_delay2.Value = txtloadprofile.Lines(101)
+            numload_delay3.Value = txtloadprofile.Lines(102)
+            numload_delay4.Value = txtloadprofile.Lines(103)
+            numload_delay5.Value = txtloadprofile.Lines(104)
+            numload_delay6.Value = txtloadprofile.Lines(105)
+            numload_delay7.Value = txtloadprofile.Lines(106)
+            numload_delay8.Value = txtloadprofile.Lines(107)
+            numload_delay9.Value = txtloadprofile.Lines(108)
+            numload_delay10.Value = txtloadprofile.Lines(109)
 
-            numgraph_first.Value = txtloadprofile.Lines(105)
-            chkrename_livesplit.Checked = txtloadprofile.Lines(106)
-            numloopcount.Value = txtloadprofile.Lines(107)
+            numgraph_first.Value = txtloadprofile.Lines(112)
+            chkrename_livesplit.Checked = txtloadprofile.Lines(113)
+            numloopcount.Value = txtloadprofile.Lines(114)
 
-            chkshowvideo.Checked = txtloadprofile.Lines(110)
-            chkvideo_autoseek.Checked = txtloadprofile.Lines(111)
-            chkvideo_manualstart.Checked = txtloadprofile.Lines(112)
-            txtvideo_pass.Text = txtloadprofile.Lines(113)
-            txtvideo_startat.Text = txtloadprofile.Lines(114)
-            numvideo_sizex.Value = txtloadprofile.Lines(115)
-            numvideo_sizey.Value = txtloadprofile.Lines(116)
-            chkvideo_showwinvideo.Checked = txtloadprofile.Lines(117)
-            numwin_locx.Value = txtloadprofile.Lines(118)
-            numwin_locy.Value = txtloadprofile.Lines(119)
-            numwin_interval.Value = txtloadprofile.Lines(120)
+            chkshowvideo.Checked = txtloadprofile.Lines(117)
+            chkvideo_autoseek.Checked = txtloadprofile.Lines(118)
+            chkvideo_manualstart.Checked = txtloadprofile.Lines(119)
+            txtvideo_pass.Text = txtloadprofile.Lines(120)
+            txtvideo_startat.Text = txtloadprofile.Lines(121)
+            numvideo_sizex.Value = txtloadprofile.Lines(122)
+            numvideo_sizey.Value = txtloadprofile.Lines(123)
+            chkvideo_showwinvideo.Checked = txtloadprofile.Lines(124)
+            numwin_locx.Value = txtloadprofile.Lines(125)
+            numwin_locy.Value = txtloadprofile.Lines(126)
+            numwin_interval.Value = txtloadprofile.Lines(127)
 
-            chkshow_text.Checked = txtloadprofile.Lines(123)
-            numtextwindow_sizex.Value = txtloadprofile.Lines(124)
-            numtextwindow_sizey.Value = txtloadprofile.Lines(125)
+            chkshow_text.Checked = txtloadprofile.Lines(130)
+            numtextwindow_sizex.Value = txtloadprofile.Lines(131)
+            numtextwindow_sizey.Value = txtloadprofile.Lines(132)
 
-            chkmonitor_sizestate.Checked = txtloadprofile.Lines(128)
+            chkmonitor_sizestate.Checked = txtloadprofile.Lines(135)
 
 
 
@@ -15320,8 +15332,15 @@ numcv_interval.Value,
 "-",
 "##########OpenCV Parameter##########",
 cmbcv_device.SelectedIndex,
+cmbcv_resolution_input.SelectedIndex,
 cmbcv_resolution_view.SelectedIndex,
 numcv_framerate.Value,
+CInt(chkcv_crop.Checked),
+txtcv_crop_posx.Text,
+txtcv_crop_posy.Text,
+txtcv_crop_sizex.Text,
+txtcv_crop_sizey.Text,
+CInt(chkcv_grayscale.Checked),
 "-",
 "##########Focus##########",
 CInt(chkactiveapp.Checked),

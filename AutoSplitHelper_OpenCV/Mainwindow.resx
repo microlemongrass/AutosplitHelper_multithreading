@@ -6203,26 +6203,92 @@ Remover</value>
   <data name="pnl_cvparameter.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="chkcv_grayscale.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkcv_grayscale.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 11pt</value>
+  </data>
+  <data name="chkcv_grayscale.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkcv_grayscale.Location" type="System.Drawing.Point, System.Drawing">
+    <value>423, 130</value>
+  </data>
+  <data name="chkcv_grayscale.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 23</value>
+  </data>
+  <data name="chkcv_grayscale.TabIndex" type="System.Int32, mscorlib">
+    <value>274</value>
+  </data>
+  <data name="chkcv_grayscale.Text" xml:space="preserve">
+    <value>Grayscale</value>
+  </data>
+  <data name="&gt;&gt;chkcv_grayscale.Name" xml:space="preserve">
+    <value>chkcv_grayscale</value>
+  </data>
+  <data name="&gt;&gt;chkcv_grayscale.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkcv_grayscale.Parent" xml:space="preserve">
+    <value>pnl_cvparameter</value>
+  </data>
+  <data name="&gt;&gt;chkcv_grayscale.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Label58.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label58.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 8.25pt</value>
+  </data>
+  <data name="Label58.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label58.Location" type="System.Drawing.Point, System.Drawing">
+    <value>576, 77</value>
+  </data>
+  <data name="Label58.Size" type="System.Drawing.Size, System.Drawing">
+    <value>13, 14</value>
+  </data>
+  <data name="Label58.TabIndex" type="System.Int32, mscorlib">
+    <value>273</value>
+  </data>
+  <data name="Label58.Text" xml:space="preserve">
+    <value>x</value>
+  </data>
+  <data name="&gt;&gt;Label58.Name" xml:space="preserve">
+    <value>Label58</value>
+  </data>
+  <data name="&gt;&gt;Label58.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label58.Parent" xml:space="preserve">
+    <value>pnl_cvparameter</value>
+  </data>
+  <data name="&gt;&gt;Label58.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="Label55.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="Label55.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 11pt</value>
+    <value>Meiryo UI, 8.25pt</value>
   </data>
   <data name="Label55.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="Label55.Location" type="System.Drawing.Point, System.Drawing">
-    <value>543, 126</value>
+    <value>464, 81</value>
   </data>
   <data name="Label55.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 19</value>
+    <value>11, 14</value>
   </data>
   <data name="Label55.TabIndex" type="System.Int32, mscorlib">
-    <value>269</value>
+    <value>272</value>
   </data>
   <data name="Label55.Text" xml:space="preserve">
-    <value>16:9</value>
+    <value>,</value>
   </data>
   <data name="&gt;&gt;Label55.Name" xml:space="preserve">
     <value>Label55</value>
@@ -6234,16 +6300,82 @@ Remover</value>
     <value>pnl_cvparameter</value>
   </data>
   <data name="&gt;&gt;Label55.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
-  <data name="txtcv_crop_sizey.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="Label56.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label56.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 8.25pt</value>
   </data>
+  <data name="Label56.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label56.Location" type="System.Drawing.Point, System.Drawing">
+    <value>589, 59</value>
+  </data>
+  <data name="Label56.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 14</value>
+  </data>
+  <data name="Label56.TabIndex" type="System.Int32, mscorlib">
+    <value>271</value>
+  </data>
+  <data name="Label56.Text" xml:space="preserve">
+    <value>SizeY</value>
+  </data>
+  <data name="&gt;&gt;Label56.Name" xml:space="preserve">
+    <value>Label56</value>
+  </data>
+  <data name="&gt;&gt;Label56.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label56.Parent" xml:space="preserve">
+    <value>pnl_cvparameter</value>
+  </data>
+  <data name="&gt;&gt;Label56.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="Label57.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label57.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 8.25pt</value>
+  </data>
+  <data name="Label57.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label57.Location" type="System.Drawing.Point, System.Drawing">
+    <value>531, 59</value>
+  </data>
+  <data name="Label57.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 14</value>
+  </data>
+  <data name="Label57.TabIndex" type="System.Int32, mscorlib">
+    <value>270</value>
+  </data>
+  <data name="Label57.Text" xml:space="preserve">
+    <value>SizeX</value>
+  </data>
+  <data name="&gt;&gt;Label57.Name" xml:space="preserve">
+    <value>Label57</value>
+  </data>
+  <data name="&gt;&gt;Label57.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label57.Parent" xml:space="preserve">
+    <value>pnl_cvparameter</value>
+  </data>
+  <data name="&gt;&gt;Label57.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="txtcv_crop_sizey.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 10pt</value>
+  </data>
   <data name="txtcv_crop_sizey.Location" type="System.Drawing.Point, System.Drawing">
-    <value>479, 124</value>
+    <value>589, 73</value>
   </data>
   <data name="txtcv_crop_sizey.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 21</value>
+    <value>43, 24</value>
   </data>
   <data name="txtcv_crop_sizey.TabIndex" type="System.Int32, mscorlib">
     <value>268</value>
@@ -6264,16 +6396,16 @@ Remover</value>
     <value>pnl_cvparameter</value>
   </data>
   <data name="&gt;&gt;txtcv_crop_sizey.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>5</value>
   </data>
   <data name="txtcv_crop_sizex.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 8.25pt</value>
+    <value>Meiryo UI, 10pt</value>
   </data>
   <data name="txtcv_crop_sizex.Location" type="System.Drawing.Point, System.Drawing">
-    <value>430, 124</value>
+    <value>533, 73</value>
   </data>
   <data name="txtcv_crop_sizex.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 21</value>
+    <value>43, 24</value>
   </data>
   <data name="txtcv_crop_sizex.TabIndex" type="System.Int32, mscorlib">
     <value>267</value>
@@ -6294,7 +6426,7 @@ Remover</value>
     <value>pnl_cvparameter</value>
   </data>
   <data name="&gt;&gt;txtcv_crop_sizex.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>6</value>
   </data>
   <data name="Label48.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6306,7 +6438,7 @@ Remover</value>
     <value>NoControl</value>
   </data>
   <data name="Label48.Location" type="System.Drawing.Point, System.Drawing">
-    <value>478, 73</value>
+    <value>476, 59</value>
   </data>
   <data name="Label48.Size" type="System.Drawing.Size, System.Drawing">
     <value>33, 14</value>
@@ -6327,7 +6459,7 @@ Remover</value>
     <value>pnl_cvparameter</value>
   </data>
   <data name="&gt;&gt;Label48.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>7</value>
   </data>
   <data name="Label50.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6339,7 +6471,7 @@ Remover</value>
     <value>NoControl</value>
   </data>
   <data name="Label50.Location" type="System.Drawing.Point, System.Drawing">
-    <value>427, 73</value>
+    <value>418, 59</value>
   </data>
   <data name="Label50.Size" type="System.Drawing.Size, System.Drawing">
     <value>33, 14</value>
@@ -6360,16 +6492,16 @@ Remover</value>
     <value>pnl_cvparameter</value>
   </data>
   <data name="&gt;&gt;Label50.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>8</value>
   </data>
   <data name="txtcv_crop_posy.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 8.25pt</value>
+    <value>Meiryo UI, 10pt</value>
   </data>
   <data name="txtcv_crop_posy.Location" type="System.Drawing.Point, System.Drawing">
-    <value>479, 87</value>
+    <value>477, 73</value>
   </data>
   <data name="txtcv_crop_posy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 21</value>
+    <value>43, 24</value>
   </data>
   <data name="txtcv_crop_posy.TabIndex" type="System.Int32, mscorlib">
     <value>264</value>
@@ -6390,16 +6522,16 @@ Remover</value>
     <value>pnl_cvparameter</value>
   </data>
   <data name="&gt;&gt;txtcv_crop_posy.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>9</value>
   </data>
   <data name="txtcv_crop_posx.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 8.25pt</value>
+    <value>Meiryo UI, 10pt</value>
   </data>
   <data name="txtcv_crop_posx.Location" type="System.Drawing.Point, System.Drawing">
-    <value>430, 87</value>
+    <value>421, 73</value>
   </data>
   <data name="txtcv_crop_posx.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 21</value>
+    <value>43, 24</value>
   </data>
   <data name="txtcv_crop_posx.TabIndex" type="System.Int32, mscorlib">
     <value>263</value>
@@ -6420,7 +6552,7 @@ Remover</value>
     <value>pnl_cvparameter</value>
   </data>
   <data name="&gt;&gt;txtcv_crop_posx.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>10</value>
   </data>
   <data name="Label47.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6453,7 +6585,7 @@ Remover</value>
     <value>pnl_cvparameter</value>
   </data>
   <data name="&gt;&gt;Label47.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>11</value>
   </data>
   <data name="Label45.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6486,7 +6618,7 @@ Remover</value>
     <value>pnl_cvparameter</value>
   </data>
   <data name="&gt;&gt;Label45.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>12</value>
   </data>
   <data name="cmbcv_resolution_input.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -6513,7 +6645,7 @@ Remover</value>
     <value>pnl_cvparameter</value>
   </data>
   <data name="&gt;&gt;cmbcv_resolution_input.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>13</value>
   </data>
   <data name="btncv_crop_setting.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6528,10 +6660,10 @@ Remover</value>
     <value>NoControl</value>
   </data>
   <data name="btncv_crop_setting.Location" type="System.Drawing.Point, System.Drawing">
-    <value>522, 17</value>
+    <value>528, 17</value>
   </data>
   <data name="btncv_crop_setting.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 38</value>
+    <value>103, 33</value>
   </data>
   <data name="btncv_crop_setting.TabIndex" type="System.Int32, mscorlib">
     <value>259</value>
@@ -6549,7 +6681,7 @@ Remover</value>
     <value>pnl_cvparameter</value>
   </data>
   <data name="&gt;&gt;btncv_crop_setting.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>14</value>
   </data>
   <data name="chkcv_crop.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6561,7 +6693,7 @@ Remover</value>
     <value>NoControl</value>
   </data>
   <data name="chkcv_crop.Location" type="System.Drawing.Point, System.Drawing">
-    <value>408, 22</value>
+    <value>423, 19</value>
   </data>
   <data name="chkcv_crop.Size" type="System.Drawing.Size, System.Drawing">
     <value>93, 23</value>
@@ -6582,7 +6714,7 @@ Remover</value>
     <value>pnl_cvparameter</value>
   </data>
   <data name="&gt;&gt;chkcv_crop.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>15</value>
   </data>
   <data name="Label62.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6615,7 +6747,7 @@ Remover</value>
     <value>pnl_cvparameter</value>
   </data>
   <data name="&gt;&gt;Label62.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>16</value>
   </data>
   <data name="Label81.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6648,7 +6780,7 @@ Remover</value>
     <value>pnl_cvparameter</value>
   </data>
   <data name="&gt;&gt;Label81.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>17</value>
   </data>
   <data name="Label61.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6681,7 +6813,7 @@ Remover</value>
     <value>pnl_cvparameter</value>
   </data>
   <data name="&gt;&gt;Label61.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>18</value>
   </data>
   <data name="_moji6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6714,7 +6846,7 @@ Remover</value>
     <value>pnl_cvparameter</value>
   </data>
   <data name="&gt;&gt;_moji6.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>19</value>
   </data>
   <data name="numcv_framerate.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6744,7 +6876,7 @@ Remover</value>
     <value>pnl_cvparameter</value>
   </data>
   <data name="&gt;&gt;numcv_framerate.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>20</value>
   </data>
   <data name="btnconnect_camera.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6780,7 +6912,7 @@ Remover</value>
     <value>pnl_cvparameter</value>
   </data>
   <data name="&gt;&gt;btnconnect_camera.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>21</value>
   </data>
   <data name="cmbcv_resolution_view.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -6807,7 +6939,7 @@ Remover</value>
     <value>pnl_cvparameter</value>
   </data>
   <data name="&gt;&gt;cmbcv_resolution_view.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>22</value>
   </data>
   <data name="numcv_device.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6837,7 +6969,7 @@ Remover</value>
     <value>pnl_cvparameter</value>
   </data>
   <data name="&gt;&gt;numcv_device.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>23</value>
   </data>
   <data name="btnresetup.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6873,7 +7005,7 @@ Remover</value>
     <value>pnl_cvparameter</value>
   </data>
   <data name="&gt;&gt;btnresetup.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>24</value>
   </data>
   <data name="_moji5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6906,7 +7038,7 @@ Remover</value>
     <value>pnl_cvparameter</value>
   </data>
   <data name="&gt;&gt;_moji5.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>25</value>
   </data>
   <data name="cmbcv_device.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -6942,7 +7074,7 @@ Remover</value>
     <value>pnl_cvparameter</value>
   </data>
   <data name="&gt;&gt;cmbcv_device.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>26</value>
   </data>
   <data name="pnl_cvparameter.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 794</value>
@@ -7898,6 +8030,69 @@ Remover</value>
   <data name="&gt;&gt;numtextwindow_sizey.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="Label44.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label44.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 11pt</value>
+  </data>
+  <data name="Label44.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label44.Location" type="System.Drawing.Point, System.Drawing">
+    <value>266, 165</value>
+  </data>
+  <data name="Label44.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 19</value>
+  </data>
+  <data name="Label44.TabIndex" type="System.Int32, mscorlib">
+    <value>280</value>
+  </data>
+  <data name="Label44.Text" xml:space="preserve">
+    <value>Input Resolution :</value>
+  </data>
+  <data name="&gt;&gt;Label44.Name" xml:space="preserve">
+    <value>Label44</value>
+  </data>
+  <data name="&gt;&gt;Label44.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label44.Parent" xml:space="preserve">
+    <value>GroupBox2</value>
+  </data>
+  <data name="&gt;&gt;Label44.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="numcrop_resolution_x.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numcrop_resolution_x.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 11pt</value>
+  </data>
+  <data name="numcrop_resolution_x.Location" type="System.Drawing.Point, System.Drawing">
+    <value>270, 192</value>
+  </data>
+  <data name="numcrop_resolution_x.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 26</value>
+  </data>
+  <data name="numcrop_resolution_x.TabIndex" type="System.Int32, mscorlib">
+    <value>278</value>
+  </data>
+  <data name="numcrop_resolution_x.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;numcrop_resolution_x.Name" xml:space="preserve">
+    <value>numcrop_resolution_x</value>
+  </data>
+  <data name="&gt;&gt;numcrop_resolution_x.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numcrop_resolution_x.Parent" xml:space="preserve">
+    <value>GroupBox2</value>
+  </data>
+  <data name="&gt;&gt;numcrop_resolution_x.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
   <data name="numprofile.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -7926,7 +8121,37 @@ Remover</value>
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;numprofile.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
+  </data>
+  <data name="numcrop_resolution_y.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numcrop_resolution_y.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 11pt</value>
+  </data>
+  <data name="numcrop_resolution_y.Location" type="System.Drawing.Point, System.Drawing">
+    <value>379, 192</value>
+  </data>
+  <data name="numcrop_resolution_y.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 26</value>
+  </data>
+  <data name="numcrop_resolution_y.TabIndex" type="System.Int32, mscorlib">
+    <value>279</value>
+  </data>
+  <data name="numcrop_resolution_y.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;numcrop_resolution_y.Name" xml:space="preserve">
+    <value>numcrop_resolution_y</value>
+  </data>
+  <data name="&gt;&gt;numcrop_resolution_y.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numcrop_resolution_y.Parent" xml:space="preserve">
+    <value>GroupBox2</value>
+  </data>
+  <data name="&gt;&gt;numcrop_resolution_y.ZOrder" xml:space="preserve">
+    <value>8</value>
   </data>
   <data name="Label38.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -7959,7 +8184,40 @@ Remover</value>
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;Label38.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
+  </data>
+  <data name="Label43.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label43.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 11pt</value>
+  </data>
+  <data name="Label43.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label43.Location" type="System.Drawing.Point, System.Drawing">
+    <value>347, 196</value>
+  </data>
+  <data name="Label43.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 19</value>
+  </data>
+  <data name="Label43.TabIndex" type="System.Int32, mscorlib">
+    <value>281</value>
+  </data>
+  <data name="Label43.Text" xml:space="preserve">
+    <value>x</value>
+  </data>
+  <data name="&gt;&gt;Label43.Name" xml:space="preserve">
+    <value>Label43</value>
+  </data>
+  <data name="&gt;&gt;Label43.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label43.Parent" xml:space="preserve">
+    <value>GroupBox2</value>
+  </data>
+  <data name="&gt;&gt;Label43.ZOrder" xml:space="preserve">
+    <value>10</value>
   </data>
   <data name="txtclickcount.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 9.75pt</value>
@@ -7992,7 +8250,7 @@ Remover</value>
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;txtclickcount.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>11</value>
   </data>
   <data name="txtprofile.Location" type="System.Drawing.Point, System.Drawing">
     <value>270, 64</value>
@@ -8022,7 +8280,7 @@ Remover</value>
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;txtprofile.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>12</value>
   </data>
   <data name="txtloadprofile.Location" type="System.Drawing.Point, System.Drawing">
     <value>318, 64</value>
@@ -8049,7 +8307,7 @@ Remover</value>
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;txtloadprofile.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>13</value>
   </data>
   <data name="GroupBox3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -8478,7 +8736,7 @@ Remover</value>
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;GroupBox3.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>14</value>
   </data>
   <data name="Panel5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -8706,7 +8964,7 @@ Remover</value>
     <value>GroupBox2</value>
   </data>
   <data name="&gt;&gt;Panel5.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>15</value>
   </data>
   <data name="GroupBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>1902, 60</value>
@@ -17973,132 +18231,6 @@ Remover</value>
   <data name="&gt;&gt;numcrop_rate.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="Label43.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label43.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 11pt</value>
-  </data>
-  <data name="Label43.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label43.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1143, 101</value>
-  </data>
-  <data name="Label43.Size" type="System.Drawing.Size, System.Drawing">
-    <value>17, 19</value>
-  </data>
-  <data name="Label43.TabIndex" type="System.Int32, mscorlib">
-    <value>281</value>
-  </data>
-  <data name="Label43.Text" xml:space="preserve">
-    <value>x</value>
-  </data>
-  <data name="&gt;&gt;Label43.Name" xml:space="preserve">
-    <value>Label43</value>
-  </data>
-  <data name="&gt;&gt;Label43.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label43.Parent" xml:space="preserve">
-    <value>TabPage4</value>
-  </data>
-  <data name="&gt;&gt;Label43.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="Label44.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label44.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 11pt</value>
-  </data>
-  <data name="Label44.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label44.Location" type="System.Drawing.Point, System.Drawing">
-    <value>954, 99</value>
-  </data>
-  <data name="Label44.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 19</value>
-  </data>
-  <data name="Label44.TabIndex" type="System.Int32, mscorlib">
-    <value>280</value>
-  </data>
-  <data name="Label44.Text" xml:space="preserve">
-    <value>Resolution :</value>
-  </data>
-  <data name="&gt;&gt;Label44.Name" xml:space="preserve">
-    <value>Label44</value>
-  </data>
-  <data name="&gt;&gt;Label44.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label44.Parent" xml:space="preserve">
-    <value>TabPage4</value>
-  </data>
-  <data name="&gt;&gt;Label44.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="numcrop_resolution_y.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="numcrop_resolution_y.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 11pt</value>
-  </data>
-  <data name="numcrop_resolution_y.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1165, 97</value>
-  </data>
-  <data name="numcrop_resolution_y.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 26</value>
-  </data>
-  <data name="numcrop_resolution_y.TabIndex" type="System.Int32, mscorlib">
-    <value>279</value>
-  </data>
-  <data name="numcrop_resolution_y.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="&gt;&gt;numcrop_resolution_y.Name" xml:space="preserve">
-    <value>numcrop_resolution_y</value>
-  </data>
-  <data name="&gt;&gt;numcrop_resolution_y.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numcrop_resolution_y.Parent" xml:space="preserve">
-    <value>TabPage4</value>
-  </data>
-  <data name="&gt;&gt;numcrop_resolution_y.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="numcrop_resolution_x.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="numcrop_resolution_x.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 11pt</value>
-  </data>
-  <data name="numcrop_resolution_x.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1066, 97</value>
-  </data>
-  <data name="numcrop_resolution_x.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 26</value>
-  </data>
-  <data name="numcrop_resolution_x.TabIndex" type="System.Int32, mscorlib">
-    <value>278</value>
-  </data>
-  <data name="numcrop_resolution_x.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="&gt;&gt;numcrop_resolution_x.Name" xml:space="preserve">
-    <value>numcrop_resolution_x</value>
-  </data>
-  <data name="&gt;&gt;numcrop_resolution_x.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numcrop_resolution_x.Parent" xml:space="preserve">
-    <value>TabPage4</value>
-  </data>
-  <data name="&gt;&gt;numcrop_resolution_x.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
   <data name="Label35.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -18130,7 +18262,7 @@ Remover</value>
     <value>TabPage4</value>
   </data>
   <data name="&gt;&gt;Label35.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>9</value>
   </data>
   <data name="Label36.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -18163,7 +18295,7 @@ Remover</value>
     <value>TabPage4</value>
   </data>
   <data name="&gt;&gt;Label36.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>10</value>
   </data>
   <data name="Label37.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -18196,7 +18328,7 @@ Remover</value>
     <value>TabPage4</value>
   </data>
   <data name="&gt;&gt;Label37.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>11</value>
   </data>
   <data name="Label40.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -18229,7 +18361,7 @@ Remover</value>
     <value>TabPage4</value>
   </data>
   <data name="&gt;&gt;Label40.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>12</value>
   </data>
   <data name="numcrop_position_y.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -18259,7 +18391,7 @@ Remover</value>
     <value>TabPage4</value>
   </data>
   <data name="&gt;&gt;numcrop_position_y.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>13</value>
   </data>
   <data name="numcrop_position_x.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -18289,7 +18421,7 @@ Remover</value>
     <value>TabPage4</value>
   </data>
   <data name="&gt;&gt;numcrop_position_x.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>14</value>
   </data>
   <data name="btntosetting05.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -18328,7 +18460,7 @@ Remover</value>
     <value>TabPage4</value>
   </data>
   <data name="&gt;&gt;btntosetting05.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>15</value>
   </data>
   <data name="TabPage4.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 4</value>

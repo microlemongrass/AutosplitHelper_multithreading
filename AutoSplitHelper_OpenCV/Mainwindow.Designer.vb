@@ -690,7 +690,11 @@ Partial Class Mainwindow
         Me.rdocrop_43 = New System.Windows.Forms.RadioButton()
         Me.Label54 = New System.Windows.Forms.Label()
         Me.btncrop_ok = New System.Windows.Forms.Button()
+        Me.Label56 = New System.Windows.Forms.Label()
+        Me.Label57 = New System.Windows.Forms.Label()
         Me.Label55 = New System.Windows.Forms.Label()
+        Me.Label58 = New System.Windows.Forms.Label()
+        Me.chkcv_grayscale = New System.Windows.Forms.CheckBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.DGtable, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -2621,7 +2625,11 @@ Partial Class Mainwindow
         '
         resources.ApplyResources(Me.pnl_cvparameter, "pnl_cvparameter")
         Me.pnl_cvparameter.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.pnl_cvparameter.Controls.Add(Me.chkcv_grayscale)
+        Me.pnl_cvparameter.Controls.Add(Me.Label58)
         Me.pnl_cvparameter.Controls.Add(Me.Label55)
+        Me.pnl_cvparameter.Controls.Add(Me.Label56)
+        Me.pnl_cvparameter.Controls.Add(Me.Label57)
         Me.pnl_cvparameter.Controls.Add(Me.txtcv_crop_sizey)
         Me.pnl_cvparameter.Controls.Add(Me.txtcv_crop_sizex)
         Me.pnl_cvparameter.Controls.Add(Me.Label48)
@@ -3032,8 +3040,12 @@ Partial Class Mainwindow
         Me.GroupBox2.Controls.Add(Me.numtextwindow_sizex)
         Me.GroupBox2.Controls.Add(Me.lblcheckopening)
         Me.GroupBox2.Controls.Add(Me.numtextwindow_sizey)
+        Me.GroupBox2.Controls.Add(Me.Label44)
+        Me.GroupBox2.Controls.Add(Me.numcrop_resolution_x)
         Me.GroupBox2.Controls.Add(Me.numprofile)
+        Me.GroupBox2.Controls.Add(Me.numcrop_resolution_y)
         Me.GroupBox2.Controls.Add(Me.Label38)
+        Me.GroupBox2.Controls.Add(Me.Label43)
         Me.GroupBox2.Controls.Add(Me.txtclickcount)
         Me.GroupBox2.Controls.Add(Me.txtprofile)
         Me.GroupBox2.Controls.Add(Me.txtloadprofile)
@@ -5849,10 +5861,6 @@ Partial Class Mainwindow
         Me.TabPage4.Controls.Add(Me.txtcrop_size_y)
         Me.TabPage4.Controls.Add(Me.txtcrop_size_x)
         Me.TabPage4.Controls.Add(Me.numcrop_rate)
-        Me.TabPage4.Controls.Add(Me.Label43)
-        Me.TabPage4.Controls.Add(Me.Label44)
-        Me.TabPage4.Controls.Add(Me.numcrop_resolution_y)
-        Me.TabPage4.Controls.Add(Me.numcrop_resolution_x)
         Me.TabPage4.Controls.Add(Me.Label35)
         Me.TabPage4.Controls.Add(Me.Label36)
         Me.TabPage4.Controls.Add(Me.Label37)
@@ -6337,12 +6345,37 @@ Partial Class Mainwindow
         Me.btncrop_ok.Name = "btncrop_ok"
         Me.btncrop_ok.UseVisualStyleBackColor = False
         '
+        'Label56
+        '
+        resources.ApplyResources(Me.Label56, "Label56")
+        Me.Label56.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label56.Name = "Label56"
+        '
+        'Label57
+        '
+        resources.ApplyResources(Me.Label57, "Label57")
+        Me.Label57.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label57.Name = "Label57"
+        '
         'Label55
         '
         resources.ApplyResources(Me.Label55, "Label55")
-        Me.Label55.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Label55.ForeColor = System.Drawing.SystemColors.Control
         Me.Label55.Name = "Label55"
+        '
+        'Label58
+        '
+        resources.ApplyResources(Me.Label58, "Label58")
+        Me.Label58.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label58.Name = "Label58"
+        '
+        'chkcv_grayscale
+        '
+        resources.ApplyResources(Me.chkcv_grayscale, "chkcv_grayscale")
+        Me.chkcv_grayscale.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.chkcv_grayscale.ForeColor = System.Drawing.SystemColors.Control
+        Me.chkcv_grayscale.Name = "chkcv_grayscale"
+        Me.chkcv_grayscale.UseVisualStyleBackColor = False
         '
         'Mainwindow
         '
@@ -7190,5 +7223,9 @@ Partial Class Mainwindow
     Friend WithEvents rdocrop_43 As RadioButton
     Friend WithEvents rdocrop_169 As RadioButton
     Friend WithEvents btncrop_ok As Button
+    Friend WithEvents chkcv_grayscale As CheckBox
+    Friend WithEvents Label58 As Label
     Friend WithEvents Label55 As Label
+    Friend WithEvents Label56 As Label
+    Friend WithEvents Label57 As Label
 End Class
