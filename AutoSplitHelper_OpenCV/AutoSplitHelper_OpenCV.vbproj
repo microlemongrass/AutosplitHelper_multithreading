@@ -141,6 +141,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="code_strage.vb" />
+    <Compile Include="Cropping_preview.Designer.vb">
+      <DependentUpon>Cropping_preview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cropping_preview.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Del_Addimagewindow.Designer.vb">
       <DependentUpon>Del_Addimagewindow.vb</DependentUpon>
     </Compile>
@@ -261,6 +267,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Cropping_preview.resx">
+      <DependentUpon>Cropping_preview.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Del_Addimagewindow.ja-JP.resx">
       <DependentUpon>Del_Addimagewindow.vb</DependentUpon>
     </EmbeddedResource>
@@ -402,7 +411,6 @@
     <EmbeddedResource Include="Resources\save.png" />
     <EmbeddedResource Include="Resources\delete.png" />
     <EmbeddedResource Include="Resources\License[Directshowlib-2005].txt" />
-    <EmbeddedResource Include="Resources\Licence[Intel_TBB].txt" />
     <EmbeddedResource Include="Resources\License[DOBONNET].txt" />
     <EmbeddedResource Include="Resources\License[OpenCVsharp].txt" />
     <EmbeddedResource Include="Resources\Description_Table.txt" />

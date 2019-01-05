@@ -14,40 +14,33 @@ Imports System.Net
 
 Public Class Mainwindow
 
-    '■API
+    '■API■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
     'キー入力を受け取る
     Private Declare Function GetKeyPress Lib "user32" Alias "GetAsyncKeyState" (ByVal key As Integer) As Integer
 
     'ウィンドウタイトルからハンドル値を取得するためのAPI
-    Declare Function EnumWindows Lib "User32.dll" _
-        (ByVal Proc As EnumWinProc, ByVal lParam As Integer) As Boolean
+    Declare Function EnumWindows Lib "User32.dll" (ByVal Proc As EnumWinProc, ByVal lParam As Integer) As Boolean
 
-    Delegate Function EnumWinProc _
-        (ByVal hwnd As IntPtr, ByVal lParam As Integer) As Boolean
-
+    Delegate Function EnumWinProc(ByVal hwnd As IntPtr, ByVal lParam As Integer) As Boolean
 
     Declare Function EnumChildWindows Lib "User32.dll" _
         (ByVal hWndParent As Integer, ByVal Proc As EnumChildProc, ByVal lParam As Integer) As Boolean
 
-    Delegate Function EnumChildProc _
-        (ByVal hwnd As IntPtr, ByVal lParam As Integer) As Boolean
+    Delegate Function EnumChildProc(ByVal hwnd As IntPtr, ByVal lParam As Integer) As Boolean
 
 
     Declare Function SendMessage Lib "user32.dll" Alias "SendMessageA" _
-        (ByVal hWnd As Integer, ByVal MSG As Integer,
-        ByVal wParam As Integer, ByVal lParam As Integer) As Integer
+        (ByVal hWnd As Integer, ByVal MSG As Integer, ByVal wParam As Integer, ByVal lParam As Integer) As Integer
 
     Declare Function SendMessageStr Lib "user32.dll" Alias "SendMessageA" _
-        (ByVal hWnd As Integer, ByVal MSG As Integer,
-        ByVal wParam As Integer, ByVal lParam As StringBuilder) As Integer
+        (ByVal hWnd As Integer, ByVal MSG As Integer, ByVal wParam As Integer, ByVal lParam As StringBuilder) As Integer
 
 
     Declare Function FindWindow Lib "user32" Alias "FindWindowA" _
         (ByVal lpClassName As String, ByVal lpWindowName As String) As Integer
 
     Declare Function FindWindowEx Lib "user32.dll" Alias "FindWindowExA" _
-        (ByVal hwndParent As Integer, ByVal hwndChildAfter As Integer,
-         ByVal lpszClass As String, ByVal lpszWindow As String) As Integer
+        (ByVal hwndParent As Integer, ByVal hwndChildAfter As Integer, ByVal lpszClass As String, ByVal lpszWindow As String) As Integer
 
 
     '正確な時間を計るためのAPI
@@ -62,8 +55,7 @@ Public Class Mainwindow
 
     'ウィンドウタイトル取得用のAPI
     <DllImport("user32.dll", CharSet:=CharSet.Auto, SetLastError:=True)>
-    Private Shared Function GetWindowText(hWnd As IntPtr,
-        lpString As StringBuilder, nMaxCount As Integer) As Integer
+    Private Shared Function GetWindowText(hWnd As IntPtr, lpString As StringBuilder, nMaxCount As Integer) As Integer
     End Function
 
     <DllImport("user32.dll", CharSet:=CharSet.Auto, SetLastError:=True)>
@@ -84,13 +76,11 @@ Public Class Mainwindow
     End Function
 
     <DllImport("user32.dll", SetLastError:=True)>
-    Public Shared Function GetWindowThreadProcessId(hWnd As IntPtr,
-        ByRef lpdwProcessId As Integer) As Integer
+    Public Shared Function GetWindowThreadProcessId(hWnd As IntPtr, ByRef lpdwProcessId As Integer) As Integer
     End Function
 
     <DllImport("user32.dll", CharSet:=CharSet.Auto, SetLastError:=True)>
-    Private Shared Function SetWindowText(hWnd As IntPtr,
-        lpString As String) As Integer
+    Private Shared Function SetWindowText(hWnd As IntPtr, lpString As String) As Integer
     End Function
 
     'RECT 構造体
@@ -100,7 +90,6 @@ Public Class Mainwindow
         Public Right As Integer
         Public Bottom As Integer
     End Structure
-
 
     Public Const WM_SETTEXT = &HC
     Public Const WM_GETTEXT = &HD
@@ -154,13 +143,12 @@ Public Class Mainwindow
         End If
 
 
+
         '■キー押下時間を設定。
         keydown_length = numpresstime.Value
 
-
         '■アプリ終了時のソフトの位置を記憶、復元
         Me.Location = New Drawing.Point(numsavex.Value, numsavey.Value)
-
 
         '■Sortimageのフォルダ削除。画像ファイルロック防止の為起動時に＋Sort作成毎に別名フォルダ作成★
         Try
@@ -191,6 +179,16 @@ Public Class Mainwindow
         '■ウィンドウサイズの調整 
         Me.Size = New Drawing.Point(800 * Dpi_rate, 600 * Dpi_rate)
         DGtable.Size = New Drawing.Point(785 * Dpi_rate, 146 * Dpi_rate)
+
+        '■設定パネルを画面外に
+        pnl_parameter.Location = New Drawing.Point(10000, 0)
+        pnl_cvparameter.Location = New Drawing.Point(10000, 0)
+        pnl_focus.Location = New Drawing.Point(10000, 0)
+        pnl_hotkey.Location = New Drawing.Point(10000, 0)
+        pnl_loadremover.Location = New Drawing.Point(10000, 0)
+        pnl_graph.Location = New Drawing.Point(10000, 0)
+        pnl_video.Location = New Drawing.Point(10000, 0)
+        pnl_other.Location = New Drawing.Point(10000, 0)
 
         '■バインドされているコントロールがあると、タブを開かないとエラーが出るので一旦開く
         TabControl1.SelectedTab = TabPage1
@@ -313,20 +311,47 @@ Public Class Mainwindow
 
         '■コンボボックス読み込み4
 
-        cmbcv_resolution.IntegralHeight = False
+        cmbcv_resolution_input.IntegralHeight = False
 
-        cmbcv_resolution.BeginUpdate()
+        cmbcv_resolution_input.BeginUpdate()
 
-        Dim st6 As New System.IO.StreamReader("./savedata/04_resolution.txt", System.Text.Encoding.Default)
+        Dim st6 As New System.IO.StreamReader("./savedata/04_resolution_input.txt", System.Text.Encoding.Default)
 
         'ファイルの最後までループ
         Do Until st6.Peek = -1
             '１行づつ読込む
-            cmbcv_resolution.Items.Add(st6.ReadLine)
+            cmbcv_resolution_input.Items.Add(st6.ReadLine)
         Loop
 
         st6.Close()              'ファイルを閉じる
-        cmbcv_resolution.EndUpdate()   'コントロールの描画を再開
+        cmbcv_resolution_input.EndUpdate()   'コントロールの描画を再開
+
+
+        '■コンボボックス読み込み5
+
+        cmbcv_resolution_view.IntegralHeight = False
+
+        cmbcv_resolution_view.BeginUpdate()
+
+        Dim st7 As New System.IO.StreamReader("./savedata/05_resolution_view.txt", System.Text.Encoding.Default)
+
+        'ファイルの最後までループ
+        Do Until st7.Peek = -1
+            '１行づつ読込む
+            cmbcv_resolution_view.Items.Add(st7.ReadLine)
+        Loop
+
+        st7.Close()              'ファイルを閉じる
+        cmbcv_resolution_view.EndUpdate()   'コントロールの描画を再開
+
+
+
+
+
+
+
+
+
 
 
 
@@ -438,7 +463,7 @@ Public Class Mainwindow
 
             cmbcv_device.SelectedIndex = 0
 
-            cmbcv_resolution.SelectedIndex = 0
+            cmbcv_resolution_view.SelectedIndex = 0
             cmbprofile.SelectedIndex = 0
 
             numcv_device.Value = 0
@@ -623,7 +648,6 @@ Public Class Mainwindow
         grpgeneral.Visible = False
 
 
-
     End Sub
 
     Private Sub lblset_device_MouseClick(sender As Object, e As MouseEventArgs) Handles lblset_device.MouseClick
@@ -645,7 +669,6 @@ Public Class Mainwindow
         grpgeneral.Visible = False
 
 
-
     End Sub
 
     Private Sub lblset_hotkey_MouseClick(sender As Object, e As MouseEventArgs) Handles lblset_hotkey.MouseClick
@@ -654,7 +677,6 @@ Public Class Mainwindow
         listsetcontents.SelectedIndex = 3
 
         grpgeneral.Visible = False
-
 
 
     End Sub
@@ -667,7 +689,6 @@ Public Class Mainwindow
         grpgeneral.Visible = False
 
 
-
     End Sub
 
     Private Sub lblset_graph_MouseClick(sender As Object, e As MouseEventArgs) Handles lblset_graph.MouseClick
@@ -678,7 +699,6 @@ Public Class Mainwindow
         grpgeneral.Visible = False
 
 
-
     End Sub
 
     Private Sub lblset_video_MouseClick(sender As Object, e As MouseEventArgs) Handles lblset_video.MouseClick
@@ -687,7 +707,6 @@ Public Class Mainwindow
         listsetcontents.SelectedIndex = 6
 
         grpgeneral.Visible = False
-
 
 
     End Sub
@@ -715,6 +734,7 @@ Public Class Mainwindow
         pnl_graph.Location = New Drawing.Point(10000, 0)
         pnl_video.Location = New Drawing.Point(10000, 0)
         pnl_other.Location = New Drawing.Point(10000, 0)
+
 
         Select Case listsetcontents.SelectedIndex
 
@@ -752,8 +772,6 @@ Public Class Mainwindow
 
     Private Sub btnclose_general_Click(sender As Object, e As EventArgs) Handles btnclose_general.Click
 
-
-
         grpgeneral.Visible = True
 
 
@@ -767,7 +785,6 @@ Public Class Mainwindow
 
         If (dgv Is Nothing) Then
             Exit Sub 'Return
-
 
         End If
 
@@ -788,7 +805,6 @@ Public Class Mainwindow
 
 
     '■インポート設定を開く
-
     Private Sub profile_import()
 
         Import_picture.Show()
@@ -796,6 +812,7 @@ Public Class Mainwindow
 
 
     End Sub
+
 
     Friend Sub import_ok()
 
@@ -1033,15 +1050,15 @@ Public Class Mainwindow
 
     '■■Video Device/OpenCVの設定■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 
-    Private Sub capture_setup()
+    Private Sub capture_setup() '★
         'InitializeComponent()
 
         Dim cameranum As Integer = numcv_device.Value
 
         capturecv = VideoCapture.FromCamera(cameranum)
 
-        capturecv.FrameWidth = numcv_sizex.Value
-        capturecv.FrameHeight = numcv_sizey.Value
+        capturecv.FrameWidth = numcrop_resolution_x.Value
+        capturecv.FrameHeight = numcrop_resolution_y.Value
         capturecv.Fps = numcv_framerate.Value
 
 
@@ -1052,16 +1069,16 @@ Public Class Mainwindow
         btnstartopencv.Enabled = False
 
         '■Current Settingへの反映
-        lblcur_device_res_fps.Text = cmbcv_resolution.SelectedItem & " - " & numcv_framerate.Value & "fps"
+        lblcur_device_res_fps.Text = cmbcv_resolution_view.SelectedItem & " - " & numcv_framerate.Value & "fps"
 
 
     End Sub
 
-    Private Sub cmbcv_resolution_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbcv_resolution.SelectedIndexChanged
+    Private Sub cmbcv_resolution_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbcv_resolution_view.SelectedIndexChanged
 
         '■コンボボックスの値を下に代入■■■■■■
         ' 必要な変数を宣言する
-        Dim stCsvData As String = cmbcv_resolution.SelectedItem
+        Dim stCsvData As String = cmbcv_resolution_view.SelectedItem
 
         ' カンマ区切りで分割して配列に格納する
         Dim stArrayData As String() = stCsvData.Split("x"c)
@@ -1072,7 +1089,7 @@ Public Class Mainwindow
         btnstartopencv.Enabled = False
 
         '■Current Settingへの反映
-        lblcur_device_res_fps.Text = cmbcv_resolution.SelectedItem & " - " & numcv_framerate.Value & "fps"
+        lblcur_device_res_fps.Text = cmbcv_resolution_view.SelectedItem & " - " & numcv_framerate.Value & "fps"
 
 
     End Sub
@@ -2432,6 +2449,10 @@ Public Class Mainwindow
 
     End Sub
 
+    Private Sub btntosetting05_Click(sender As Object, e As EventArgs) Handles btntosetting05.Click
+        Cropping_preview.Close()
+        TabControl1.SelectedIndex = 0
+    End Sub
 
 
 
@@ -2778,12 +2799,15 @@ Public Class Mainwindow
 
 
 
-    Private Sub cv_preview()
+    Private Sub cv_prepare()
         '適切な解像度を入力しているか確認
         If (numcv_sizex.Value Mod 16 = 0 And numcv_sizey.Value Mod 9 = 0) Or (numcv_sizex.Value Mod 4 = 0 And numcv_sizey.Value Mod 3 = 0) Then
             Console.WriteLine(numcv_sizex.Value & ", " & numcv_sizey.Value)
 
             PictureBoxIpl1.Size = New Drawing.Size(numcv_sizex.Value, numcv_sizey.Value)
+            pictempipl.Size = New Drawing.Size(numcv_sizex.Value, numcv_sizey.Value)
+            piccap.Size = New Drawing.Size(numcv_sizex.Value, numcv_sizey.Value)
+            piccap.Location = New Drawing.Point(-10000, 0)
 
             piczoom.Location = New Drawing.Point(0, numcv_sizey.Value)
             picview_capture.Location = New Drawing.Point((piczoom.Width + 5) * Dpi_rate, (numcv_sizey.Value + 30) * Dpi_rate) '(numcv_sizex.Value / 2) - 100
@@ -2792,17 +2816,19 @@ Public Class Mainwindow
             pnlview_window.Size = New Drawing.Size(numcv_sizex.Value * Dpi_rate, (numcv_sizey.Value + piczoom.Height) * Dpi_rate)
 
             pnlview_control.Location = New Drawing.Point(pnlview_window.Width, lbltitlebar.Height - (4 * Dpi_rate))
-            pnlview_control.Size = New Drawing.Size(220 * Dpi_rate, 340 * Dpi_rate)
 
-
-
+            If pnlview_window.Height < 340 * Dpi_rate Then
+                pnlview_control.Size = New Drawing.Size(220 * Dpi_rate, 340 * Dpi_rate)
+            Else '解像度大
+                pnlview_control.Size = New Drawing.Size(220 * Dpi_rate, (pnlview_window.Location.Y + pnlview_window.Height) * Dpi_rate)
+            End If
 
 
             Me.Size = New Drawing.Size((pnlview_window.Width + pnlview_control.Width),
-                                       (lbltitlebar.Height + numcv_sizey.Value + piczoom.Height + DGtable.Height + 60) * Dpi_rate)
+                                           (pnlview_control.Height + DGtable.Height + 60) * Dpi_rate)
 
-            btnclosewindow.Location = New Drawing.Point(10000, 0) '((Me.Width - btnclosewindow.Width), 0)
-            btnsaisyouka.Location = New Drawing.Point(10000, 0) '((Me.Width - btnclosewindow.Width - btnsaisyouka.Width), 0)
+            btnclosewindow.Location = New Drawing.Point(10000, 0)
+            btnsaisyouka.Location = New Drawing.Point(10000, 0)
 
             btnview_close.Location = New Drawing.Point(Me.Width - btnview_close.Width, 0)
 
@@ -2811,9 +2837,7 @@ Public Class Mainwindow
 
             txtrowscount.Location = New Drawing.Point(8 * Dpi_rate, DGtable.Location.Y * Dpi_rate)
 
-            MenuStrip1.Visible = False
-
-
+            Label32.Location = New Drawing.Point((piczoom.Width + 10) * Dpi_rate, (numcv_sizey.Value + 30 - 17) * Dpi_rate) '(numcv_sizex.Value / 2) - 100
 
             pnl_parameter.Location = New Drawing.Point(10000, 0)
             pnl_cvparameter.Location = New Drawing.Point(10000, 0)
@@ -2824,28 +2848,14 @@ Public Class Mainwindow
             pnl_video.Location = New Drawing.Point(10000, 0)
             pnl_other.Location = New Drawing.Point(10000, 0)
 
+            MenuStrip1.Visible = False
             btnclose_general.Visible = False
             listsetcontents.Visible = False
-
-
             grpgeneral.Visible = False
-
-
-
-            Label32.Location = New Drawing.Point((piczoom.Width + 10) * Dpi_rate, (numcv_sizey.Value + 30 - 17) * Dpi_rate) '(numcv_sizex.Value / 2) - 100
-
-
-            pictempipl.Size = New Drawing.Size(numcv_sizex.Value, numcv_sizey.Value)
-
-
-
-
 
 
             Load_preview()
 
-
-            btnstartopencv.Enabled = False
 
         Else
 
@@ -2861,12 +2871,55 @@ Public Class Mainwindow
 
         lbltitlebar.Text = My.Resources.Message.msgb2 '"Preview"
 
-
-
-        'NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
         capturecv.Read(frame)
 
-        PictureBoxIpl1.ImageIpl = frame
+        If chkcv_crop.Checked = True Then
+
+            '■先にクロップをする。
+            dst_cropRect = New Mat(frame, New OpenCvSharp.Rect(CInt(txtcv_crop_posx.Text), CInt(txtcv_crop_posy.Text),
+                                  CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text)))
+
+            Dim dst_cropped As Mat = New Mat(CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text), MatType.CV_32FC1)
+
+            dst_cropRect.CopyTo(dst_cropped)
+
+            '■リサイズ
+            dst_resize = New Mat()
+            Cv2.Resize(dst_cropped, dst_resize, New OpenCvSharp.Size(numcv_sizex.Value, numcv_sizey.Value), 0, 0, interpolation:=InterpolationFlags.Nearest)
+
+            PictureBoxIpl1.ImageIpl = dst_resize
+
+            dst_cropRect.Dispose()
+            dst_cropped.Dispose()
+            ' dst_resize.Dispose()
+
+
+        ElseIf chkcv_crop.Checked = False Then 'クロップなし。リサイズ有無で分岐
+
+            If numcv_sizex.Value = numcrop_resolution_x.Value And
+               numcv_sizey.Value = numcrop_resolution_y.Value Then
+
+                PictureBoxIpl1.ImageIpl = frame
+
+
+            Else
+
+                dst_resize = New Mat()
+                Cv2.Resize(frame, dst_resize, New OpenCvSharp.Size(numcv_sizex.Value, numcv_sizey.Value), 0, 0, interpolation:=InterpolationFlags.Nearest)
+
+                PictureBoxIpl1.ImageIpl = dst_resize
+
+                'dst_resize.Dispose()
+
+
+            End If
+
+        End If
+
+
+
+
+
 
 
         cvpreview.Interval = New TimeSpan(0, 0, 0, 0, 30)
@@ -2874,10 +2927,12 @@ Public Class Mainwindow
         cvpreview_replay.Interval = New TimeSpan(0, 0, 0, 0, 30)
 
         cvpreview.Start()
+        Capture_TF = 0
+
         cvpreview_zoom.Start()
         cvpreview_replay.Start()
 
-        piccap.Visible = False
+
         txtclickcount.Text = 0
 
 
@@ -2891,13 +2946,65 @@ Public Class Mainwindow
             btncap.Text = "Capture"
         End If
 
+
         Try
 
-
-            'NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
             capturecv.Read(frame)
 
-            PictureBoxIpl1.ImageIpl = frame
+            If Capture_TF = 0 Then
+
+                If chkcv_crop.Checked = True Then
+
+                    '■先にクロップをする。
+                    dst_cropRect = New Mat(frame, New OpenCvSharp.Rect(CInt(txtcv_crop_posx.Text), CInt(txtcv_crop_posy.Text),
+                                        CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text)))
+
+                    Dim dst_cropped As Mat = New Mat(CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text), MatType.CV_32FC1)
+
+                    dst_cropRect.CopyTo(dst_cropped)
+
+                    '■リサイズ
+                    dst_resize = New Mat()
+                    Cv2.Resize(dst_cropped, dst_resize, New OpenCvSharp.Size(numcv_sizex.Value, numcv_sizey.Value), 0, 0, interpolation:=InterpolationFlags.Nearest)
+
+                    PictureBoxIpl1.ImageIpl = dst_resize
+
+                    cvpreview_replayfunc()
+
+                    dst_cropRect.Dispose()
+                    dst_cropped.Dispose()
+                    'dst_resize.Dispose()
+
+
+                ElseIf chkcv_crop.Checked = False Then 'クロップなし。リサイズ有無で分岐
+
+                    If numcv_sizex.Value = numcrop_resolution_x.Value And
+                       numcv_sizey.Value = numcrop_resolution_y.Value Then
+
+                        PictureBoxIpl1.ImageIpl = frame
+
+                        cvpreview_replayfunc()
+
+                    Else
+
+                        dst_resize = New Mat()
+                        Cv2.Resize(frame, dst_resize, New OpenCvSharp.Size(numcv_sizex.Value, numcv_sizey.Value), 0, 0, interpolation:=InterpolationFlags.Nearest)
+
+                        PictureBoxIpl1.ImageIpl = dst_resize
+
+                        cvpreview_replayfunc()
+
+                        'dst_resize.Dispose()
+
+
+                    End If
+
+                End If
+
+            End If
+
+            '   cvpreview_replayfunc()
+
 
             '■選択行番号の再取得。■■■■■■■■■■■■■■■■■■
             For Each r11 As DataGridViewRow In DGtable.SelectedRows
@@ -2908,7 +3015,8 @@ Public Class Mainwindow
             txtno_comment.Text = psnumber & "," & CStr(DGtable(0, psnumber).Value)
 
         Catch ex As Exception
-            cvpreview.Stop()
+            'cvpreview.Stop()
+            Capture_TF = 1
 
             MessageBox.Show(My.Resources.Message.msg43, messagebox_name) '接続エラー。本体を再起動して下さい。
             rtxtlog.AppendText(Now & " " & My.Resources.Message.msg43 & vbCrLf & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
@@ -2918,39 +3026,48 @@ Public Class Mainwindow
 
     End Sub
 
+    Private Capture_TF As Integer = 0
     '■OpenCVキャプチャ→限定探索、ローディングあり。C&Dでキャプチャ＆保存
     '■RGBキャプチャ（一部）→限定探索、ローディングなし。C&Dでキャプチャ＆保存。
     '　↑保存データは同じ
     '■RGBキャプチャー（全画面）→限定探索、ローディングなし。1クリックで保存。RGB値を別に取得。
     'pic_capに画像の一部or全部。PX,PY,SX,SYの挿入間違えずに。画像を止めてクリックでRGB取得でも良いかも。
     Private Sub btncap_Click(sender As Object, e As EventArgs) Handles btncap.Click
+        Try
 
 
-        piccap.Visible = True
-        piccap.Size = New Drawing.Size(numcv_sizex.Value, numcv_sizey.Value)
+            lbltitlebar.Text = My.Resources.Message.msgb1 '"Preview キャプチャ中"
 
-        If btntemp.BackColor = Color.Maroon Then
+            piccap.Location = New Drawing.Point(0, 0)
 
-            piccap.Image = pictempipl.Image
+            If btntemp.BackColor = Color.Maroon Then
 
-        Else
+                piccap.Image = pictempipl.Image
 
-            piccap.Image = PictureBoxIpl1.Image
+            Else
 
-        End If
+                piccap.Image = PictureBoxIpl1.Image
 
-        pictempipl.Visible = False
+            End If
 
-        cvpreview.Stop()
 
-        Me.Cursor = Cursors.Cross
+            If rdocapture_rgbfull.Checked = True Then
+                txtclickcount.Text = 10
+                lbltitlebar.Text = "Click to get RGB value."
 
-        lbltitlebar.Text = My.Resources.Message.msgb1 '"Preview キャプチャ中"
+            End If
 
-        If rdocapture_rgbfull.Checked = True Then
-            txtclickcount.Text = 10
-            lbltitlebar.Text = "Click to get RGB value."
-        End If
+            pictempipl.Visible = False
+            Capture_TF = 1
+
+            Me.Cursor = Cursors.Cross
+
+
+        Catch ex As Exception
+            MessageBox.Show("キャプチャエラー" & vbCrLf & ex.Message & vbCrLf & ex.StackTrace, messagebox_name) '"無効な範囲です。")
+            rtxtlog.AppendText(Now & " " & "Capture Error" & vbCrLf & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
+            Clipboard.SetText(ex.Message & vbCrLf & ex.StackTrace)
+        End Try
 
 
     End Sub
@@ -2964,7 +3081,6 @@ Public Class Mainwindow
             txt12.Text = CInt(Cursor.Position.Y.ToString()) - Me.Location.Y - lbltitlebar.Height
 
 
-
             If txtclickcount.Text = 0 Then
                 skeleton.Show(Me)
             ElseIf txtclickcount.Text = 1 Then
@@ -2973,7 +3089,6 @@ Public Class Mainwindow
 
             ElseIf txtclickcount.Text = 10 Then
 
-
             End If
 
         End If
@@ -2981,15 +3096,6 @@ Public Class Mainwindow
 
     End Sub
 
-    Private Sub piccap_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles piccap.MouseMove
-
-        If e.Button = MouseButtons.Left Then
-
-
-        End If
-
-
-    End Sub
 
     Private Sub piccap_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles piccap.MouseUp
         'ローディング時は限定探索無効
@@ -2997,14 +3103,13 @@ Public Class Mainwindow
 
         If e.Button = MouseButtons.Left Then
 
-
             lbltitlebar.Text = My.Resources.Message.msgb2 '"Preview"
 
             txt21.Text = CInt(System.Windows.Forms.Cursor.Position.X.ToString()) - Me.Location.X
             txt22.Text = CInt(System.Windows.Forms.Cursor.Position.Y.ToString()) - Me.Location.Y - lbltitlebar.Height
 
-            Try
-                'RGB全画面取得の時以外では範囲選択内の画像を取得する。
+            Try 'RGB全画面取得の時以外では範囲選択内の画像を取得する。
+
                 If txtclickcount.Text = 0 Then
 
                     '描画先とするImageオブジェクトを作成する
@@ -3067,8 +3172,9 @@ Public Class Mainwindow
 
                         lbltitlebar.Text = My.Resources.Message.msgb2 '"Preview"
 
-                        piccap.Visible = False
-                        cvpreview.Start()
+                        piccap.Location = New Drawing.Point(-10000, 0)
+
+                        Capture_TF = 0
 
                         Cursor.Clip = Rectangle.Empty
                         Me.Cursor = Cursors.Default
@@ -3149,8 +3255,9 @@ Public Class Mainwindow
 
                     lbltitlebar.Text = My.Resources.Message.msgb2 '"Preview"
 
-                    piccap.Visible = False
-                    cvpreview.Start()
+                    piccap.Location = New Drawing.Point(-10000, 0)
+
+                    Capture_TF = 0
 
                     Cursor.Clip = Rectangle.Empty
                     Me.Cursor = Cursors.Default
@@ -3184,8 +3291,10 @@ Public Class Mainwindow
                 Cursor.Clip = Rectangle.Empty
                 Me.Cursor = Cursors.Default
                 My.Forms.skeleton.Close()
-                piccap.Visible = False
-                cvpreview.Start()
+                piccap.Location = New Drawing.Point(-10000, 0)
+
+                'cvpreview.Start()
+                Capture_TF = 0
 
                 MessageBox.Show(My.Resources.Message.msgb4, messagebox_name) '"無効な範囲です。")
                 rtxtlog.AppendText(Now & " " & My.Resources.Message.msgb4 & vbCrLf & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
@@ -3193,14 +3302,9 @@ Public Class Mainwindow
             End Try
 
         End If
+
         Console.WriteLine("clockcount: " & txtclickcount.Text)
 
-
-        '■選択行番号の再取得。■■■■■■■■■■■■■■■■■■
-        For Each r11 As DataGridViewRow In DGtable.SelectedRows
-            txtrowscount.Text = r11.Index
-
-        Next r11
 
 
     End Sub
@@ -3276,7 +3380,6 @@ Public Class Mainwindow
                         DGtable.Rows(psnumber + 1).Selected = True
 
                         txtno_comment.Text = psnumber + 1 & "," & CStr(DGtable(no.Index, psnumber + 1).Value)
-
 
 
 
@@ -3559,33 +3662,33 @@ Public Class Mainwindow
 
 
             DGtable(darksleep.Index, aaa).Value = 0
-                DGtable(darkthr.Index, aaa).Value = numanten.Text
-                DGtable(ltx.Index, aaa).Value = 0
-                DGtable(lty.Index, aaa).Value = 0
-                DGtable(rbx.Index, aaa).Value = 1000
-                DGtable(rby.Index, aaa).Value = 1000
+            DGtable(darkthr.Index, aaa).Value = numanten.Text
+            DGtable(ltx.Index, aaa).Value = 0
+            DGtable(lty.Index, aaa).Value = 0
+            DGtable(rbx.Index, aaa).Value = 1000
+            DGtable(rby.Index, aaa).Value = 1000
 
-                DGtable(graph_count.Index, aaa).Value = 0
-                DGtable(graph_rate.Index, aaa).Value = 0
-                DGtable(graph_view.Index, aaa).Value = 0
+            DGtable(graph_count.Index, aaa).Value = 0
+            DGtable(graph_rate.Index, aaa).Value = 0
+            DGtable(graph_view.Index, aaa).Value = 0
 
-                DGtable(color_r.Index, aaa).Value = Rvalue
-                DGtable(color_g.Index, aaa).Value = Gvalue
-                DGtable(color_b.Index, aaa).Value = Bvalue
+            DGtable(color_r.Index, aaa).Value = Rvalue
+            DGtable(color_g.Index, aaa).Value = Gvalue
+            DGtable(color_b.Index, aaa).Value = Bvalue
 
-                DGtable(seektime.Index, aaa).Value = -1
+            DGtable(seektime.Index, aaa).Value = -1
 
 
-                '表をスクロールさせる
-                DGtable.FirstDisplayedScrollingRowIndex = txtrowscount.Text
+            '表をスクロールさせる
+            DGtable.FirstDisplayedScrollingRowIndex = txtrowscount.Text
 
-                '最終行を選択している状態の場合、1行追加する。
-                If DGtable.RowCount - 1 <= aaa Then
-                    DGtable.Rows.Add(1)
-
-                End If
+            '最終行を選択している状態の場合、1行追加する。
+            If DGtable.RowCount - 1 <= aaa Then
+                DGtable.Rows.Add(1)
 
             End If
+
+        End If
 
 
     End Sub
@@ -3616,9 +3719,9 @@ Public Class Mainwindow
 
 
 
-            piccap.Visible = False
-            cvpreview.Start()
+            piccap.Location = New Drawing.Point(-10000, 0)
 
+            Capture_TF = 0
 
         End If
 
@@ -3653,9 +3756,9 @@ Public Class Mainwindow
 
 
 
-            piccap.Visible = False
-            cvpreview.Start()
+            piccap.Location = New Drawing.Point(-10000, 0)
 
+            Capture_TF = 0
 
         End If
 
@@ -3747,7 +3850,7 @@ Public Class Mainwindow
     End Sub
 
 
-
+    Private replayTF As Integer = 0
 
     Private Sub btntemp_Click(sender As Object, e As EventArgs) Handles btntemp.Click
 
@@ -3757,7 +3860,8 @@ Public Class Mainwindow
 
             pictempipl.ImageIpl = frame
 
-            cvpreview_replay.Stop()
+            'cvpreview_replay.Stop()
+            replayTF = 1
             pictempipl.Visible = True
 
             txtsavetempnumber.Text = tempnumber
@@ -3768,7 +3872,8 @@ Public Class Mainwindow
 
             btntemp.BackColor = Color.FromArgb(50, 52, 54)
 
-            cvpreview_replay.Start()
+            'cvpreview_replay.Start()
+            replayTF = 0
             pictempipl.Visible = False
             trktemp.Value = 300
 
@@ -4409,612 +4514,617 @@ Public Class Mainwindow
 
     End Sub
 
-    Private Sub Preview_replay_Tick(sender As Object, e As EventArgs) Handles cvpreview_replay.Tick
+    'Private Sub Preview_replay_Tick(sender As Object, e As EventArgs) Handles cvpreview_replay.Tick
+    Private Sub cvpreview_replayfunc()
+
+        If replayTF = 1 Then
+            Exit Sub
+        End If
 
         Select Case tempnumber
 
             Case 0
-                frame.CopyTo(frame0)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame0)
             Case 1
-                frame.CopyTo(frame1)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame1)
             Case 2
-                frame.CopyTo(frame2)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame2)
             Case 3
-                frame.CopyTo(frame3)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame3)
             Case 4
-                frame.CopyTo(frame4)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame4)
             Case 5
-                frame.CopyTo(frame5)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame5)
             Case 6
-                frame.CopyTo(frame6)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame6)
             Case 7
-                frame.CopyTo(frame7)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame7)
             Case 8
-                frame.CopyTo(frame8)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame8)
             Case 9
-                frame.CopyTo(frame9)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame9)
             Case 10
-                frame.CopyTo(frame10)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame10)
             Case 11
-                frame.CopyTo(frame11)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame11)
             Case 12
-                frame.CopyTo(frame12)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame12)
             Case 13
-                frame.CopyTo(frame13)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame13)
             Case 14
-                frame.CopyTo(frame14)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame14)
             Case 15
-                frame.CopyTo(frame15)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame15)
             Case 16
-                frame.CopyTo(frame16)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame16)
             Case 17
-                frame.CopyTo(frame17)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame17)
             Case 18
-                frame.CopyTo(frame18)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame18)
             Case 19
-                frame.CopyTo(frame19)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame19)
             Case 20
-                frame.CopyTo(frame20)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame20)
             Case 21
-                frame.CopyTo(frame21)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame21)
             Case 22
-                frame.CopyTo(frame22)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame22)
             Case 23
-                frame.CopyTo(frame23)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame23)
             Case 24
-                frame.CopyTo(frame24)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame24)
             Case 25
-                frame.CopyTo(frame25)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame25)
             Case 26
-                frame.CopyTo(frame26)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame26)
             Case 27
-                frame.CopyTo(frame27)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame27)
             Case 28
-                frame.CopyTo(frame28)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame28)
             Case 29
-                frame.CopyTo(frame29)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame29)
             Case 30
-                frame.CopyTo(frame30)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame30)
             Case 31
-                frame.CopyTo(frame31)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame31)
             Case 32
-                frame.CopyTo(frame32)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame32)
             Case 33
-                frame.CopyTo(frame33)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame33)
             Case 34
-                frame.CopyTo(frame34)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame34)
             Case 35
-                frame.CopyTo(frame35)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame35)
             Case 36
-                frame.CopyTo(frame36)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame36)
             Case 37
-                frame.CopyTo(frame37)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame37)
             Case 38
-                frame.CopyTo(frame38)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame38)
             Case 39
-                frame.CopyTo(frame39)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame39)
             Case 40
-                frame.CopyTo(frame40)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame40)
             Case 41
-                frame.CopyTo(frame41)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame41)
             Case 42
-                frame.CopyTo(frame42)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame42)
             Case 43
-                frame.CopyTo(frame43)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame43)
             Case 44
-                frame.CopyTo(frame44)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame44)
             Case 45
-                frame.CopyTo(frame45)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame45)
             Case 46
-                frame.CopyTo(frame46)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame46)
             Case 47
-                frame.CopyTo(frame47)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame47)
             Case 48
-                frame.CopyTo(frame48)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame48)
             Case 49
-                frame.CopyTo(frame49)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame49)
             Case 50
-                frame.CopyTo(frame50)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame50)
             Case 51
-                frame.CopyTo(frame51)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame51)
             Case 52
-                frame.CopyTo(frame52)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame52)
             Case 53
-                frame.CopyTo(frame53)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame53)
             Case 54
-                frame.CopyTo(frame54)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame54)
             Case 55
-                frame.CopyTo(frame55)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame55)
             Case 56
-                frame.CopyTo(frame56)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame56)
             Case 57
-                frame.CopyTo(frame57)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame57)
             Case 58
-                frame.CopyTo(frame58)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame58)
             Case 59
-                frame.CopyTo(frame59)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame59)
             Case 60
-                frame.CopyTo(frame60)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame60)
             Case 61
-                frame.CopyTo(frame61)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame61)
             Case 62
-                frame.CopyTo(frame62)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame62)
             Case 63
-                frame.CopyTo(frame63)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame63)
             Case 64
-                frame.CopyTo(frame64)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame64)
             Case 65
-                frame.CopyTo(frame65)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame65)
             Case 66
-                frame.CopyTo(frame66)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame66)
             Case 67
-                frame.CopyTo(frame67)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame67)
             Case 68
-                frame.CopyTo(frame68)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame68)
             Case 69
-                frame.CopyTo(frame69)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame69)
             Case 70
-                frame.CopyTo(frame70)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame70)
             Case 71
-                frame.CopyTo(frame71)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame71)
             Case 72
-                frame.CopyTo(frame72)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame72)
             Case 73
-                frame.CopyTo(frame73)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame73)
             Case 74
-                frame.CopyTo(frame74)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame74)
             Case 75
-                frame.CopyTo(frame75)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame75)
             Case 76
-                frame.CopyTo(frame76)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame76)
             Case 77
-                frame.CopyTo(frame77)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame77)
             Case 78
-                frame.CopyTo(frame78)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame78)
             Case 79
-                frame.CopyTo(frame79)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame79)
             Case 80
-                frame.CopyTo(frame80)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame80)
             Case 81
-                frame.CopyTo(frame81)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame81)
             Case 82
-                frame.CopyTo(frame82)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame82)
             Case 83
-                frame.CopyTo(frame83)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame83)
             Case 84
-                frame.CopyTo(frame84)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame84)
             Case 85
-                frame.CopyTo(frame85)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame85)
             Case 86
-                frame.CopyTo(frame86)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame86)
             Case 87
-                frame.CopyTo(frame87)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame87)
             Case 88
-                frame.CopyTo(frame88)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame88)
             Case 89
-                frame.CopyTo(frame89)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame89)
             Case 90
-                frame.CopyTo(frame90)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame90)
             Case 91
-                frame.CopyTo(frame91)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame91)
             Case 92
-                frame.CopyTo(frame92)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame92)
             Case 93
-                frame.CopyTo(frame93)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame93)
             Case 94
-                frame.CopyTo(frame94)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame94)
             Case 95
-                frame.CopyTo(frame95)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame95)
             Case 96
-                frame.CopyTo(frame96)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame96)
             Case 97
-                frame.CopyTo(frame97)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame97)
             Case 98
-                frame.CopyTo(frame98)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame98)
             Case 99
-                frame.CopyTo(frame99)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame99)
             Case 100
-                frame.CopyTo(frame100)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame100)
             Case 101
-                frame.CopyTo(frame101)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame101)
             Case 102
-                frame.CopyTo(frame102)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame102)
             Case 103
-                frame.CopyTo(frame103)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame103)
             Case 104
-                frame.CopyTo(frame104)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame104)
             Case 105
-                frame.CopyTo(frame105)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame105)
             Case 106
-                frame.CopyTo(frame106)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame106)
             Case 107
-                frame.CopyTo(frame107)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame107)
             Case 108
-                frame.CopyTo(frame108)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame108)
             Case 109
-                frame.CopyTo(frame109)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame109)
             Case 110
-                frame.CopyTo(frame110)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame110)
             Case 111
-                frame.CopyTo(frame111)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame111)
             Case 112
-                frame.CopyTo(frame112)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame112)
             Case 113
-                frame.CopyTo(frame113)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame113)
             Case 114
-                frame.CopyTo(frame114)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame114)
             Case 115
-                frame.CopyTo(frame115)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame115)
             Case 116
-                frame.CopyTo(frame116)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame116)
             Case 117
-                frame.CopyTo(frame117)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame117)
             Case 118
-                frame.CopyTo(frame118)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame118)
             Case 119
-                frame.CopyTo(frame119)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame119)
             Case 120
-                frame.CopyTo(frame120)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame120)
             Case 121
-                frame.CopyTo(frame121)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame121)
             Case 122
-                frame.CopyTo(frame122)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame122)
             Case 123
-                frame.CopyTo(frame123)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame123)
             Case 124
-                frame.CopyTo(frame124)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame124)
             Case 125
-                frame.CopyTo(frame125)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame125)
             Case 126
-                frame.CopyTo(frame126)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame126)
             Case 127
-                frame.CopyTo(frame127)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame127)
             Case 128
-                frame.CopyTo(frame128)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame128)
             Case 129
-                frame.CopyTo(frame129)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame129)
             Case 130
-                frame.CopyTo(frame130)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame130)
             Case 131
-                frame.CopyTo(frame131)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame131)
             Case 132
-                frame.CopyTo(frame132)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame132)
             Case 133
-                frame.CopyTo(frame133)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame133)
             Case 134
-                frame.CopyTo(frame134)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame134)
             Case 135
-                frame.CopyTo(frame135)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame135)
             Case 136
-                frame.CopyTo(frame136)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame136)
             Case 137
-                frame.CopyTo(frame137)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame137)
             Case 138
-                frame.CopyTo(frame138)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame138)
             Case 139
-                frame.CopyTo(frame139)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame139)
             Case 140
-                frame.CopyTo(frame140)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame140)
             Case 141
-                frame.CopyTo(frame141)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame141)
             Case 142
-                frame.CopyTo(frame142)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame142)
             Case 143
-                frame.CopyTo(frame143)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame143)
             Case 144
-                frame.CopyTo(frame144)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame144)
             Case 145
-                frame.CopyTo(frame145)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame145)
             Case 146
-                frame.CopyTo(frame146)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame146)
             Case 147
-                frame.CopyTo(frame147)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame147)
             Case 148
-                frame.CopyTo(frame148)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame148)
             Case 149
-                frame.CopyTo(frame149)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame149)
             Case 150
-                frame.CopyTo(frame150)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame150)
             Case 151
-                frame.CopyTo(frame151)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame151)
             Case 152
-                frame.CopyTo(frame152)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame152)
             Case 153
-                frame.CopyTo(frame153)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame153)
             Case 154
-                frame.CopyTo(frame154)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame154)
             Case 155
-                frame.CopyTo(frame155)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame155)
             Case 156
-                frame.CopyTo(frame156)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame156)
             Case 157
-                frame.CopyTo(frame157)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame157)
             Case 158
-                frame.CopyTo(frame158)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame158)
             Case 159
-                frame.CopyTo(frame159)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame159)
             Case 160
-                frame.CopyTo(frame160)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame160)
             Case 161
-                frame.CopyTo(frame161)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame161)
             Case 162
-                frame.CopyTo(frame162)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame162)
             Case 163
-                frame.CopyTo(frame163)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame163)
             Case 164
-                frame.CopyTo(frame164)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame164)
             Case 165
-                frame.CopyTo(frame165)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame165)
             Case 166
-                frame.CopyTo(frame166)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame166)
             Case 167
-                frame.CopyTo(frame167)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame167)
             Case 168
-                frame.CopyTo(frame168)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame168)
             Case 169
-                frame.CopyTo(frame169)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame169)
             Case 170
-                frame.CopyTo(frame170)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame170)
             Case 171
-                frame.CopyTo(frame171)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame171)
             Case 172
-                frame.CopyTo(frame172)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame172)
             Case 173
-                frame.CopyTo(frame173)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame173)
             Case 174
-                frame.CopyTo(frame174)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame174)
             Case 175
-                frame.CopyTo(frame175)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame175)
             Case 176
-                frame.CopyTo(frame176)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame176)
             Case 177
-                frame.CopyTo(frame177)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame177)
             Case 178
-                frame.CopyTo(frame178)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame178)
             Case 179
-                frame.CopyTo(frame179)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame179)
             Case 180
-                frame.CopyTo(frame180)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame180)
             Case 181
-                frame.CopyTo(frame181)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame181)
             Case 182
-                frame.CopyTo(frame182)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame182)
             Case 183
-                frame.CopyTo(frame183)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame183)
             Case 184
-                frame.CopyTo(frame184)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame184)
             Case 185
-                frame.CopyTo(frame185)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame185)
             Case 186
-                frame.CopyTo(frame186)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame186)
             Case 187
-                frame.CopyTo(frame187)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame187)
             Case 188
-                frame.CopyTo(frame188)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame188)
             Case 189
-                frame.CopyTo(frame189)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame189)
             Case 190
-                frame.CopyTo(frame190)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame190)
             Case 191
-                frame.CopyTo(frame191)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame191)
             Case 192
-                frame.CopyTo(frame192)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame192)
             Case 193
-                frame.CopyTo(frame193)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame193)
             Case 194
-                frame.CopyTo(frame194)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame194)
             Case 195
-                frame.CopyTo(frame195)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame195)
             Case 196
-                frame.CopyTo(frame196)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame196)
             Case 197
-                frame.CopyTo(frame197)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame197)
             Case 198
-                frame.CopyTo(frame198)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame198)
             Case 199
-                frame.CopyTo(frame199)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame199)
             Case 200
-                frame.CopyTo(frame200)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame200)
             Case 201
-                frame.CopyTo(frame201)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame201)
             Case 202
-                frame.CopyTo(frame202)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame202)
             Case 203
-                frame.CopyTo(frame203)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame203)
             Case 204
-                frame.CopyTo(frame204)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame204)
             Case 205
-                frame.CopyTo(frame205)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame205)
             Case 206
-                frame.CopyTo(frame206)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame206)
             Case 207
-                frame.CopyTo(frame207)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame207)
             Case 208
-                frame.CopyTo(frame208)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame208)
             Case 209
-                frame.CopyTo(frame209)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame209)
             Case 210
-                frame.CopyTo(frame210)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame210)
             Case 211
-                frame.CopyTo(frame211)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame211)
             Case 212
-                frame.CopyTo(frame212)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame212)
             Case 213
-                frame.CopyTo(frame213)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame213)
             Case 214
-                frame.CopyTo(frame214)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame214)
             Case 215
-                frame.CopyTo(frame215)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame215)
             Case 216
-                frame.CopyTo(frame216)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame216)
             Case 217
-                frame.CopyTo(frame217)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame217)
             Case 218
-                frame.CopyTo(frame218)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame218)
             Case 219
-                frame.CopyTo(frame219)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame219)
             Case 220
-                frame.CopyTo(frame220)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame220)
             Case 221
-                frame.CopyTo(frame221)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame221)
             Case 222
-                frame.CopyTo(frame222)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame222)
             Case 223
-                frame.CopyTo(frame223)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame223)
             Case 224
-                frame.CopyTo(frame224)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame224)
             Case 225
-                frame.CopyTo(frame225)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame225)
             Case 226
-                frame.CopyTo(frame226)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame226)
             Case 227
-                frame.CopyTo(frame227)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame227)
             Case 228
-                frame.CopyTo(frame228)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame228)
             Case 229
-                frame.CopyTo(frame229)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame229)
             Case 230
-                frame.CopyTo(frame230)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame230)
             Case 231
-                frame.CopyTo(frame231)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame231)
             Case 232
-                frame.CopyTo(frame232)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame232)
             Case 233
-                frame.CopyTo(frame233)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame233)
             Case 234
-                frame.CopyTo(frame234)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame234)
             Case 235
-                frame.CopyTo(frame235)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame235)
             Case 236
-                frame.CopyTo(frame236)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame236)
             Case 237
-                frame.CopyTo(frame237)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame237)
             Case 238
-                frame.CopyTo(frame238)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame238)
             Case 239
-                frame.CopyTo(frame239)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame239)
             Case 240
-                frame.CopyTo(frame240)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame240)
             Case 241
-                frame.CopyTo(frame241)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame241)
             Case 242
-                frame.CopyTo(frame242)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame242)
             Case 243
-                frame.CopyTo(frame243)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame243)
             Case 244
-                frame.CopyTo(frame244)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame244)
             Case 245
-                frame.CopyTo(frame245)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame245)
             Case 246
-                frame.CopyTo(frame246)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame246)
             Case 247
-                frame.CopyTo(frame247)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame247)
             Case 248
-                frame.CopyTo(frame248)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame248)
             Case 249
-                frame.CopyTo(frame249)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame249)
             Case 250
-                frame.CopyTo(frame250)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame250)
             Case 251
-                frame.CopyTo(frame251)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame251)
             Case 252
-                frame.CopyTo(frame252)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame252)
             Case 253
-                frame.CopyTo(frame253)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame253)
             Case 254
-                frame.CopyTo(frame254)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame254)
             Case 255
-                frame.CopyTo(frame255)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame255)
             Case 256
-                frame.CopyTo(frame256)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame256)
             Case 257
-                frame.CopyTo(frame257)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame257)
             Case 258
-                frame.CopyTo(frame258)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame258)
             Case 259
-                frame.CopyTo(frame259)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame259)
             Case 260
-                frame.CopyTo(frame260)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame260)
             Case 261
-                frame.CopyTo(frame261)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame261)
             Case 262
-                frame.CopyTo(frame262)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame262)
             Case 263
-                frame.CopyTo(frame263)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame263)
             Case 264
-                frame.CopyTo(frame264)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame264)
             Case 265
-                frame.CopyTo(frame265)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame265)
             Case 266
-                frame.CopyTo(frame266)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame266)
             Case 267
-                frame.CopyTo(frame267)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame267)
             Case 268
-                frame.CopyTo(frame268)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame268)
             Case 269
-                frame.CopyTo(frame269)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame269)
             Case 270
-                frame.CopyTo(frame270)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame270)
             Case 271
-                frame.CopyTo(frame271)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame271)
             Case 272
-                frame.CopyTo(frame272)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame272)
             Case 273
-                frame.CopyTo(frame273)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame273)
             Case 274
-                frame.CopyTo(frame274)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame274)
             Case 275
-                frame.CopyTo(frame275)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame275)
             Case 276
-                frame.CopyTo(frame276)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame276)
             Case 277
-                frame.CopyTo(frame277)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame277)
             Case 278
-                frame.CopyTo(frame278)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame278)
             Case 279
-                frame.CopyTo(frame279)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame279)
             Case 280
-                frame.CopyTo(frame280)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame280)
             Case 281
-                frame.CopyTo(frame281)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame281)
             Case 282
-                frame.CopyTo(frame282)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame282)
             Case 283
-                frame.CopyTo(frame283)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame283)
             Case 284
-                frame.CopyTo(frame284)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame284)
             Case 285
-                frame.CopyTo(frame285)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame285)
             Case 286
-                frame.CopyTo(frame286)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame286)
             Case 287
-                frame.CopyTo(frame287)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame287)
             Case 288
-                frame.CopyTo(frame288)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame288)
             Case 289
-                frame.CopyTo(frame289)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame289)
             Case 290
-                frame.CopyTo(frame290)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame290)
             Case 291
-                frame.CopyTo(frame291)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame291)
             Case 292
-                frame.CopyTo(frame292)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame292)
             Case 293
-                frame.CopyTo(frame293)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame293)
             Case 294
-                frame.CopyTo(frame294)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame294)
             Case 295
-                frame.CopyTo(frame295)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame295)
             Case 296
-                frame.CopyTo(frame296)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame296)
             Case 297
-                frame.CopyTo(frame297)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame297)
             Case 298
-                frame.CopyTo(frame298)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame298)
             Case 299
-                frame.CopyTo(frame299)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame299)
             Case 300
-                frame.CopyTo(frame300)
+                PictureBoxIpl1.ImageIpl.CopyTo(frame300)
 
         End Select
 
@@ -5055,7 +5165,7 @@ Public Class Mainwindow
 
         btnclose_general.Visible = True
         listsetcontents.Visible = True
-
+        btndescription_table.Visible = True
 
         'Trueにしてよいのか？
         btnstartopencv.Enabled = True
@@ -5065,7 +5175,9 @@ Public Class Mainwindow
 
         End If
 
-        cvpreview.Stop()
+        'cvpreview.Stop()
+        Capture_TF = 1
+
         cvpreview_replay.Stop()
         cvpreview_zoom.Stop()
 
@@ -5164,10 +5276,53 @@ Public Class Mainwindow
 
     Private Sub timcamera_Tick(sender As Object, e As EventArgs) Handles timcamera.Tick
 
-        'NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
         capturecv.Read(frame)
 
-        piccamera.ImageIpl = frame
+        If chkcv_crop.Checked = True Then
+
+            '■先にクロップをする。
+            dst_cropRect = New Mat(frame, New OpenCvSharp.Rect(CInt(txtcv_crop_posx.Text), CInt(txtcv_crop_posy.Text),
+                                   CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text)))
+
+            Dim dst_cropped As Mat = New Mat(CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text), MatType.CV_32FC1)
+
+            dst_cropRect.CopyTo(dst_cropped)
+
+            '■リサイズ
+            dst_resize = New Mat()
+            Cv2.Resize(dst_cropped, dst_resize, New OpenCvSharp.Size(numcv_sizex.Value, numcv_sizey.Value), 0, 0, interpolation:=InterpolationFlags.Nearest)
+
+            piccamera.ImageIpl = dst_resize
+
+            dst_cropRect.Dispose()
+            dst_cropped.Dispose()
+            'dst_resize.Dispose()
+
+
+        ElseIf chkcv_crop.Checked = False Then 'クロップなし。リサイズ有無で分岐
+
+            If numcv_sizex.Value = numcrop_resolution_x.Value And
+               numcv_sizey.Value = numcrop_resolution_y.Value Then
+
+                piccamera.ImageIpl = frame
+
+
+            Else
+
+                dst_resize = New Mat()
+                Cv2.Resize(frame, dst_resize, New OpenCvSharp.Size(numcv_sizex.Value, numcv_sizey.Value), 0, 0, interpolation:=InterpolationFlags.Nearest)
+
+                piccamera.ImageIpl = dst_resize
+
+                'dst_resize.Dispose()
+
+
+            End If
+
+        End If
+
+
+
 
 
     End Sub
@@ -5201,17 +5356,99 @@ Public Class Mainwindow
         piccalib_temp.Visible = True
         piccalib_temp.Size = New Drawing.Size(numcv_sizex.Value, numcv_sizey.Value)
 
-        'NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
         capturecv.Read(frame)
 
-        piccalib_temp.ImageIpl = frame
+        If chkcv_crop.Checked = True Then
+
+            '■先にクロップをする。
+            dst_cropRect = New Mat(frame, New OpenCvSharp.Rect(CInt(txtcv_crop_posx.Text), CInt(txtcv_crop_posy.Text),
+                                   CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text)))
+
+            Dim dst_cropped As Mat = New Mat(CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text), MatType.CV_32FC1)
+
+            dst_cropRect.CopyTo(dst_cropped)
+
+            '■リサイズ
+            dst_resize = New Mat()
+            Cv2.Resize(dst_cropped, dst_resize, New OpenCvSharp.Size(numcv_sizex.Value, numcv_sizey.Value), 0, 0, interpolation:=InterpolationFlags.Nearest)
+
+            piccalib_temp.ImageIpl = dst_resize
+
+            dst_cropRect.Dispose()
+            dst_cropped.Dispose()
+            'dst_resize.Dispose()
+
+
+        ElseIf chkcv_crop.Checked = False Then 'クロップなし。リサイズ有無で分岐
+
+            If numcv_sizex.Value = numcrop_resolution_x.Value And
+               numcv_sizey.Value = numcrop_resolution_y.Value Then
+
+                piccalib_temp.ImageIpl = frame
+
+
+            Else
+
+                dst_resize = New Mat()
+                Cv2.Resize(frame, dst_resize, New OpenCvSharp.Size(numcv_sizex.Value, numcv_sizey.Value), 0, 0, interpolation:=InterpolationFlags.Nearest)
+
+                piccalib_temp.ImageIpl = dst_resize
+
+                'dst_resize.Dispose()
+
+
+            End If
+
+        End If
+
+
 
         Application.DoEvents()
 
-        'NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
         capturecv.Read(frame)
 
-        piccalib_temp.ImageIpl = frame
+        If chkcv_crop.Checked = True Then
+
+            '■先にクロップをする。
+            dst_cropRect = New Mat(frame, New OpenCvSharp.Rect(CInt(txtcv_crop_posx.Text), CInt(txtcv_crop_posy.Text),
+                                   CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text)))
+
+            Dim dst_cropped As Mat = New Mat(CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text), MatType.CV_32FC1)
+
+            dst_cropRect.CopyTo(dst_cropped)
+
+            '■リサイズ
+            dst_resize = New Mat()
+            Cv2.Resize(dst_cropped, dst_resize, New OpenCvSharp.Size(numcv_sizex.Value, numcv_sizey.Value), 0, 0, interpolation:=InterpolationFlags.Nearest)
+
+            piccalib_temp.ImageIpl = dst_resize
+
+            dst_cropRect.Dispose()
+            dst_cropped.Dispose()
+            'dst_resize.Dispose()
+
+
+        ElseIf chkcv_crop.Checked = False Then 'クロップなし。リサイズ有無で分岐
+
+            If numcv_sizex.Value = numcrop_resolution_x.Value And
+               numcv_sizey.Value = numcrop_resolution_y.Value Then
+
+                piccalib_temp.ImageIpl = frame
+
+
+            Else
+
+                dst_resize = New Mat()
+                Cv2.Resize(frame, dst_resize, New OpenCvSharp.Size(numcv_sizex.Value, numcv_sizey.Value), 0, 0, interpolation:=InterpolationFlags.Nearest)
+
+                piccalib_temp.ImageIpl = dst_resize
+
+                'dst_resize.Dispose()
+
+
+            End If
+
+        End If
 
 
         chkcalib_1.Checked = True
@@ -6364,6 +6601,211 @@ Public Class Mainwindow
 
 #End Region
 
+    '■クロップウィンドウ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+    '■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+    '■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+
+    Private crop_aspect_x As Integer = 16
+    Private crop_aspect_y As Integer = 9
+
+    Private Sub Crop_setup()
+
+        lbltitlebar.Text = "[" & cmbprofile.SelectedItem & "]" & " Cropping"
+
+        btnclosewindow.Location = New Drawing.Point((Me.Width - btnclosewindow.Width), 0)
+        btnsaisyouka.Location = New Drawing.Point((Me.Width - btnclosewindow.Width - btnsaisyouka.Width), 0)
+
+        Cropping_preview.Show()
+        Cropping_preview.Size = New Drawing.Size(numcrop_resolution_x.Value, numcrop_resolution_y.Value + (50 * Dpi_rate))
+        Cropping_preview.picipl_crop.Size = New Drawing.Size(numcrop_resolution_x.Value, numcrop_resolution_y.Value)
+
+        '■inputの解像度を表示
+        capturecv.Read(frame)
+
+        Cropping_preview.picipl_crop.ImageIpl = frame
+
+
+
+
+
+    End Sub
+
+
+
+    Private dst_crop As Mat = New Mat(640, 360, MatType.CV_32FC1) ' = Cv2.ImRead("./data/img.png", ImreadModes.AnyColor)
+    Private dst_crop_temp As Mat = New Mat(640, 360, MatType.CV_32FC1) ' = Cv2.ImRead("./data/img.png", ImreadModes.AnyColor)
+
+
+    Private Sub btncrop_frame_Click(sender As Object, e As EventArgs) Handles btncrop_frame.Click
+
+        Try
+
+            If numcrop_resolution_x.Value < numcrop_position_x.Value + CInt(txtcrop_size_x.Text) Or
+            numcrop_resolution_y.Value < numcrop_position_y.Value + CInt(txtcrop_size_y.Text) Then
+                lblcrop_status.Text = "Crop status : 許されない"
+
+                Exit Sub
+
+
+            End If
+
+            Cropping_preview.Size = New Drawing.Size(
+                numcrop_rate.Value * crop_aspect_x * 2,
+                numcrop_rate.Value * crop_aspect_y * 2 + (50 * Dpi_rate))
+
+            Cropping_preview.picipl_crop.Size = New Drawing.Size(
+            numcrop_rate.Value * crop_aspect_x * 2,
+            numcrop_rate.Value * crop_aspect_y * 2)
+
+            '■inputの解像度を表示
+            capturecv.Read(frame)
+
+            dst_crop_temp = New Mat(frame, New OpenCvSharp.Rect(
+                                    numcrop_position_x.Value, numcrop_position_y.Value,
+                                    numcrop_rate.Value * crop_aspect_x * 2, numcrop_rate.Value * crop_aspect_y * 2))
+
+            Dim cropped_p As Mat = New Mat(numcrop_rate.Value * crop_aspect_x, numcrop_rate.Value * crop_aspect_y, MatType.CV_32FC1)
+
+
+            dst_crop_temp.CopyTo(cropped_p)
+            Cropping_preview.picipl_crop.ImageIpl = cropped_p
+
+        Catch ex As Exception
+
+            rtxtlog.AppendText(Now & " Error" & vbCrLf & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
+
+        End Try
+
+    End Sub
+
+
+    Private Sub numcrop_rate_ValueChanged(sender As Object, e As EventArgs) Handles numcrop_rate.ValueChanged
+
+        If Cropping_preview.Visible = False Then
+            Exit Sub
+
+        End If
+
+
+        txtcrop_size_x.Text = numcrop_rate.Value * crop_aspect_x * 2
+        txtcrop_size_y.Text = numcrop_rate.Value * crop_aspect_y * 2
+
+        If numcrop_resolution_x.Value < numcrop_position_x.Value + CInt(txtcrop_size_x.Text) Or
+           numcrop_resolution_y.Value < numcrop_position_y.Value + CInt(txtcrop_size_y.Text) Then
+
+            numcrop_position_x.Value = numcrop_resolution_x.Value - CInt(txtcrop_size_x.Text)
+            numcrop_position_y.Value = numcrop_resolution_y.Value - CInt(txtcrop_size_y.Text)
+
+        End If
+
+        Crop_apply()
+
+
+    End Sub
+
+    Private Sub numcrop_position_x_ValueChanged(sender As Object, e As EventArgs) Handles numcrop_position_x.ValueChanged
+
+        If Cropping_preview.Visible = False Then
+            Exit Sub
+        End If
+
+        If numcrop_resolution_x.Value < numcrop_position_x.Value + CInt(txtcrop_size_x.Text) Or
+          numcrop_resolution_y.Value < numcrop_position_y.Value + CInt(txtcrop_size_y.Text) Then
+            lblcrop_status.Text = "Crop status : 許されない"
+            Exit Sub
+
+        End If
+
+        Crop_apply()
+
+
+    End Sub
+
+    Private Sub numcrop_position_y_ValueChanged(sender As Object, e As EventArgs) Handles numcrop_position_y.ValueChanged
+
+        If Cropping_preview.Visible = False Then
+            Exit Sub
+        End If
+
+        If numcrop_resolution_x.Value < numcrop_position_x.Value + CInt(txtcrop_size_x.Text) Or
+          numcrop_resolution_y.Value < numcrop_position_y.Value + CInt(txtcrop_size_y.Text) Then
+            lblcrop_status.Text = "Crop status : 許されない"
+            Exit Sub
+
+        End If
+
+        Crop_apply()
+
+
+    End Sub
+
+    Private Sub Crop_apply()
+        Try
+
+
+            Cropping_preview.Size = New Drawing.Size(
+            numcrop_rate.Value * crop_aspect_x * 2,
+            numcrop_rate.Value * crop_aspect_y * 2 + (50 * Dpi_rate))
+
+            Cropping_preview.picipl_crop.Size = New Drawing.Size(
+                numcrop_rate.Value * crop_aspect_x * 2,
+                numcrop_rate.Value * crop_aspect_y * 2)
+
+            ''■inputの解像度を表示
+
+            dst_crop_temp = New Mat(frame, New OpenCvSharp.Rect(
+                                    numcrop_position_x.Value, numcrop_position_y.Value,
+                                    numcrop_rate.Value * crop_aspect_x * 2, numcrop_rate.Value * crop_aspect_y * 2))
+
+            Dim cropped_p As Mat = New Mat(numcrop_rate.Value * crop_aspect_x, numcrop_rate.Value * crop_aspect_y, MatType.CV_32FC1)
+
+
+            dst_crop_temp.CopyTo(cropped_p)
+            Cropping_preview.picipl_crop.ImageIpl = cropped_p
+            lblcrop_status.Text = "Crop status : 許された"
+
+        Catch ex As Exception
+            rtxtlog.AppendText(Now & " Error" & vbCrLf & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
+
+        End Try
+
+    End Sub
+
+    Private Sub btncrop_ok_Click(sender As Object, e As EventArgs) Handles btncrop_ok.Click
+        txtcv_crop_posx.Text = numcrop_position_x.Value
+        txtcv_crop_posy.Text = numcrop_position_y.Value
+        txtcv_crop_sizex.Text = txtcrop_size_x.Text
+        txtcv_crop_sizey.Text = txtcrop_size_y.Text
+        MessageBox.Show("Apply.")
+
+    End Sub
+
+    Private Sub rdocrop_169_CheckedChanged(sender As Object, e As EventArgs) Handles rdocrop_169.CheckedChanged
+
+        If rdocrop_169.Checked = True Then
+            crop_aspect_x = 16
+            crop_aspect_y = 9
+        ElseIf rdocrop_43.Checked = True Then
+            crop_aspect_x = 4
+            crop_aspect_y = 3
+        End If
+
+
+    End Sub
+
+    Private Sub rdocrop_43_CheckedChanged(sender As Object, e As EventArgs) Handles rdocrop_43.CheckedChanged
+
+        If rdocrop_169.Checked = True Then
+            crop_aspect_x = 16
+            crop_aspect_y = 9
+        ElseIf rdocrop_43.Checked = True Then
+            crop_aspect_x = 4
+            crop_aspect_y = 3
+        End If
+
+
+    End Sub
+
 
     '■OpenCVモニタリング■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
     '■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
@@ -6419,7 +6861,7 @@ Public Class Mainwindow
 
     Private capturecv As VideoCapture
 
-    Private frame As Mat = New Mat(640, 360, MatType.CV_8UC3) 'New Mat(numcv_sizex.Value, numcv_sizey.Value, MatType.CV_8UC3)
+    Private frame As Mat = New Mat(640, 360, MatType.CV_32FC1) 'New Mat(numcv_sizex.Value, numcv_sizey.Value, MatType.CV_8UC3)
 
 
     Private minloc_split As Point
@@ -6469,7 +6911,12 @@ Public Class Mainwindow
     Private tplex_load8 As Mat
     Private tplex_load9 As Mat
     Private tplex_load10 As Mat
-    Private imgex As Mat
+    Private imgex As Mat = New Mat(640, 360, MatType.CV_32FC1)
+
+    Private dst_resize As Mat = New Mat(640, 360, MatType.CV_32FC1) ' = Cv2.ImRead("./data/img.png", ImreadModes.AnyColor)
+    Private dst_cropRect As Mat = New Mat(640, 360, MatType.CV_32FC1) ' = Cv2.ImRead("./data/img.png", ImreadModes.AnyColor)
+    Private dst_cropped As Mat = New Mat(640, 360, MatType.CV_32FC1) ' = Cv2.ImRead("./data/img.png", ImreadModes.AnyColor)
+
 
     Private cv_method As Integer = 0
 
@@ -6985,12 +7432,58 @@ Public Class Mainwindow
             txtrecord_load_total.Text = 0.ToString("00:00.00")
 
 
-
-            '■プレビュー画面の更新
+            '■プレビュー画面の更新。Viewの解像度で表示
             capturecv.Read(frame) 'NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
 
-            picipl_cap.ImageIpl = frame
-            imgex = picipl_cap.ImageIpl
+            If chkcv_crop.Checked = True Then
+
+                '■先にクロップをする。
+                dst_cropRect = New Mat(frame, New OpenCvSharp.Rect(CInt(txtcv_crop_posx.Text), CInt(txtcv_crop_posy.Text),
+                                   CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text)))
+
+                Dim dst_cropped As Mat = New Mat(CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text), MatType.CV_32FC1)
+
+                dst_cropRect.CopyTo(dst_cropped)
+
+                '■リサイズ
+                dst_resize = New Mat()
+                Cv2.Resize(dst_cropped, dst_resize, New OpenCvSharp.Size(numcv_sizex.Value, numcv_sizey.Value), 0, 0, interpolation:=InterpolationFlags.Nearest)
+
+                picipl_cap.ImageIpl = dst_resize
+                imgex = dst_resize
+
+                dst_cropRect.Dispose()
+                dst_cropped.Dispose()
+                'dst_resize.Dispose()
+
+
+            ElseIf chkcv_crop.Checked = False Then 'クロップなし。リサイズ有無で分岐
+
+                If numcv_sizex.Value = numcrop_resolution_x.Value And
+                   numcv_sizey.Value = numcrop_resolution_y.Value Then
+
+                    picipl_cap.ImageIpl = frame
+                    imgex = frame
+
+                Else
+
+                    dst_resize = New Mat()
+                    Cv2.Resize(frame, dst_resize, New OpenCvSharp.Size(numcv_sizex.Value, numcv_sizey.Value), 0, 0, interpolation:=InterpolationFlags.Nearest)
+
+                    picipl_cap.ImageIpl = dst_resize
+                    imgex = dst_resize
+
+                    'dst_resize.Dispose()
+
+
+                End If
+
+            End If
+
+
+
+
+
 
             '■★Methodに番号を送る。どの方式で監視を行うか。
             cv_method = DGtable(send.Index, CInt(lblcv_lap.Text) - 0).Value '表の2行目のMethod値を取得。0/1:OpenCV、2/3:RGB、4/5:RGB(色の割合)
@@ -7539,6 +8032,10 @@ Public Class Mainwindow
                            End Using
 
                        End Sub)
+        If dst_resize.IsDisposed = False Then
+            dst_resize.Dispose()
+        End If
+
 
     End Sub
 
@@ -8020,8 +8517,52 @@ Public Class Mainwindow
         '■プレビュー画面の更新★
         capturecv.Read(frame) 'NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
 
-            ''■プレビュー画面の更新（表示のみ）
-            picipl_cap.ImageIpl = frame
+        If chkcv_crop.Checked = True Then
+
+            '■先にクロップをする。
+            dst_cropRect = New Mat(frame, New OpenCvSharp.Rect(CInt(txtcv_crop_posx.Text), CInt(txtcv_crop_posy.Text),
+                                   CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text)))
+
+            Dim dst_cropped As Mat = New Mat(CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text), MatType.CV_32FC1)
+
+            dst_cropRect.CopyTo(dst_cropped)
+
+            '■リサイズ
+            dst_resize = New Mat()
+            Cv2.Resize(dst_cropped, dst_resize, New OpenCvSharp.Size(numcv_sizex.Value, numcv_sizey.Value), 0, 0, interpolation:=InterpolationFlags.Nearest)
+
+            picipl_cap.ImageIpl = dst_resize
+            imgex = dst_resize
+
+            dst_cropRect.Dispose()
+            dst_cropped.Dispose()
+            'dst_resize.Dispose()はAsync内
+
+
+        ElseIf chkcv_crop.Checked = False Then 'クロップなし。リサイズ有無で分岐
+
+            If numcv_sizex.Value = numcrop_resolution_x.Value And
+               numcv_sizey.Value = numcrop_resolution_y.Value Then
+
+                picipl_cap.ImageIpl = frame
+                imgex = frame
+
+
+            Else
+
+                dst_resize = New Mat()
+                Cv2.Resize(frame, dst_resize, New OpenCvSharp.Size(numcv_sizex.Value, numcv_sizey.Value), 0, 0, interpolation:=InterpolationFlags.Nearest)
+
+                picipl_cap.ImageIpl = dst_resize
+                imgex = dst_resize
+                'dst_resize.Dispose()はAsync内
+
+
+            End If
+
+        End If
+
+
 
 
         'テンプレートマッチングのみ非同期に行う。チェックが付いているもののみマッチングを行う。
@@ -8042,61 +8583,61 @@ Public Class Mainwindow
 
 
         If async_reset_onoff = 1 Then
-                Async_reset()
-            End If
+            Async_reset()
+        End If
 
-            If async_load1_onoff = 1 Then
-                Async_load1()
-            End If
+        If async_load1_onoff = 1 Then
+            Async_load1()
+        End If
 
-            If async_load2_onoff = 1 Then
-                Async_load2()
-            End If
+        If async_load2_onoff = 1 Then
+            Async_load2()
+        End If
 
-            If async_load3_onoff = 1 Then
-                Async_load3()
-            End If
+        If async_load3_onoff = 1 Then
+            Async_load3()
+        End If
 
-            If async_load4_onoff = 1 Then
-                Async_load4()
-            End If
+        If async_load4_onoff = 1 Then
+            Async_load4()
+        End If
 
-            If async_load5_onoff = 1 Then
-                Async_load5()
-            End If
+        If async_load5_onoff = 1 Then
+            Async_load5()
+        End If
 
-            If async_load6_onoff = 1 Then
-                Async_load6()
-            End If
+        If async_load6_onoff = 1 Then
+            Async_load6()
+        End If
 
-            If async_load7_onoff = 1 Then
-                Async_load7()
-            End If
+        If async_load7_onoff = 1 Then
+            Async_load7()
+        End If
 
-            If async_load8_onoff = 1 Then
-                Async_load8()
-            End If
+        If async_load8_onoff = 1 Then
+            Async_load8()
+        End If
 
-            If async_load9_onoff = 1 Then
-                Async_load9()
-            End If
+        If async_load9_onoff = 1 Then
+            Async_load9()
+        End If
 
-            If async_load10_onoff = 1 Then
-                Async_load10()
-            End If
-
-
-
-            '■Videoplayer_wincapに別タイマーで稼働させている。パフォーマンスが悪いようならこちらに書く★♥
-            'Videoplayer_wincap.picVideo.Image = Videoplayer_wincap.bmp
-            'Videoplayer_wincap.ltx = Videoplayer.Location.X
-            'Videoplayer_wincap.lty = Videoplayer.Location.Y + Videoplayer.lbltitlebar.Height
-
-            Dim number As Integer = lblcv_lap.Text
+        If async_load10_onoff = 1 Then
+            Async_load10()
+        End If
 
 
-            '■テンプレートマッチング（スプリット）
-            If chknow_monitor.Checked = True Then
+
+        '■Videoplayer_wincapに別タイマーで稼働させている。パフォーマンスが悪いようならこちらに書く★♥
+        'Videoplayer_wincap.picVideo.Image = Videoplayer_wincap.bmp
+        'Videoplayer_wincap.ltx = Videoplayer.Location.X
+        'Videoplayer_wincap.lty = Videoplayer.Location.Y + Videoplayer.lbltitlebar.Height
+
+        Dim number As Integer = lblcv_lap.Text
+
+
+        '■テンプレートマッチング（スプリット）
+        If chknow_monitor.Checked = True Then
 
             If async_split_onoff = 1 Then
                 If cv_method = 0 Or cv_method = 1 Then
@@ -8118,55 +8659,150 @@ Public Class Mainwindow
                 '■マッチングされた。小数点以下まで加味。
                 If CDbl(lblcv_maxval.Text) > CDbl(txtcv_ikiti.Text) Then
 
-                        '一致した場所が指定範囲内にあるかどうか
-                        If maxloc_split.X < DGtable(ltx.Index, number).Value Or
+                    '一致した場所が指定範囲内にあるかどうか
+                    If maxloc_split.X < DGtable(ltx.Index, number).Value Or
                        maxloc_split.X + tplex.Width > DGtable(rbx.Index, number).Value Or
                        maxloc_split.Y < DGtable(lty.Index, number).Value Or
                        maxloc_split.Y + tplex.Height > DGtable(rby.Index, number).Value Then
 
-                            lblcv_maxval.Text = 0
+                        lblcv_maxval.Text = 0
 
-                            Exit Sub
+                        Exit Sub
+
+                    End If
+
+                    Console.WriteLine("Match")
+                    reflesh_img = 1
+
+                    '■一致した場所に四角を描画
+                    Dim g As Graphics = picipl_cap.CreateGraphics
+                    Dim DrawPen As New Pen(Color.Red, 3)
+                    g.DrawRectangle(DrawPen, maxloc_split.X, maxloc_split.Y, tplex.Width, tplex.Height)
+
+                    '■プレビュー画面の更新
+                    capturecv.Read(frame)
+
+                    If chkcv_crop.Checked = True Then
+
+                        '■先にクロップをする。
+                        dst_cropRect = New Mat(frame, New OpenCvSharp.Rect(CInt(txtcv_crop_posx.Text), CInt(txtcv_crop_posy.Text),
+                                   CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text)))
+
+                        Dim dst_cropped As Mat = New Mat(CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text), MatType.CV_32FC1)
+
+                        dst_cropRect.CopyTo(dst_cropped)
+
+                        '■リサイズ
+                        dst_resize = New Mat()
+                        Cv2.Resize(dst_cropped, dst_resize, New OpenCvSharp.Size(numcv_sizex.Value, numcv_sizey.Value), 0, 0, interpolation:=InterpolationFlags.Nearest)
+
+                        picipl_cap.ImageIpl = dst_resize
+                        imgex = dst_resize
+
+                        dst_cropRect.Dispose()
+                        dst_cropped.Dispose()
+                        'dst_resize.Dispose()
+
+
+                    ElseIf chkcv_crop.Checked = False Then 'クロップなし。リサイズ有無で分岐
+
+                        If numcv_sizex.Value = numcrop_resolution_x.Value And
+                           numcv_sizey.Value = numcrop_resolution_y.Value Then
+
+                            picipl_cap.ImageIpl = frame
+                            imgex = frame
+
+                        Else
+
+                            dst_resize = New Mat()
+                            Cv2.Resize(frame, dst_resize, New OpenCvSharp.Size(numcv_sizex.Value, numcv_sizey.Value), 0, 0, interpolation:=InterpolationFlags.Nearest)
+
+                            picipl_cap.ImageIpl = dst_resize
+                            imgex = dst_resize
+                            ' dst_resize.Dispose()
+
 
                         End If
 
-                        Console.WriteLine("Match")
-                        reflesh_img = 1
-
-                        '■一致した場所に四角を描画
-                        Dim g As Graphics = picipl_cap.CreateGraphics
-                        Dim DrawPen As New Pen(Color.Red, 3)
-                        g.DrawRectangle(DrawPen, maxloc_split.X, maxloc_split.Y, tplex.Width, tplex.Height)
-
-                        '■プレビュー画面の更新
-                        'NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
-                        capturecv.Read(frame)
-
-                        picipl_cap.ImageIpl = frame
-
-                        '■split用タイマー停止
-                        async_split_onoff = 0
+                    End If
 
 
-                        txtcv_result_posx.Text = maxloc_split.X
-                        txtcv_result_posy.Text = maxloc_split.Y
-                        txtcv_result_sizex.Text = tplex.Width
-                        txtcv_result_sizey.Text = tplex.Height
+
+                    '■split用タイマー停止
+                    async_split_onoff = 0
 
 
-                        'Start②  監視場所が同一の場合______________________________________________________________________________________________________________
-                        If chkcv_loop.Checked = True Then
+                    'txtcv_result_posx.Text = maxloc_split.X
+                    'txtcv_result_posy.Text = maxloc_split.Y
+                    'txtcv_result_sizex.Text = tplex.Width
+                    'txtcv_result_sizey.Text = tplex.Height
 
-                            lbllooptrigger.Text = 1
 
-                            lblcv_lap.Text = 1 '常に最初の画像をPicture2に表示
+                    '■Start②  監視場所が同一の場合______________________________________________________________________________________________________________
+                    If chkcv_loop.Checked = True Then
 
-                            If DGtable(send.Index, CInt(lblcv_lap.Text - 0)).Value = 0 Or
+                        lbllooptrigger.Text = 1
+
+                        lblcv_lap.Text = 1 '常に最初の画像を表示
+
+                        If DGtable(send.Index, CInt(lblcv_lap.Text - 0)).Value = 0 Or
                            DGtable(send.Index, CInt(lblcv_lap.Text - 0)).Value = 2 Or
                            DGtable(send.Index, CInt(lblcv_lap.Text - 0)).Value = 4 Then 'ホットキー送信をスルーする
 
+                            txtstate.Text = My.Resources.Message.msg31 '"待機中"
+
+                            msec = CDbl(timeGetTime)
+
+                            cvsleep_split.Start()
+                            lblcv_sendview.Visible = True
+                            lblsleeptime.Visible = True
+
+
+
+
+                        ElseIf DGtable(send.Index, CInt(lblcv_lap.Text - 0)).Value = 1 Or
+                               DGtable(send.Index, CInt(lblcv_lap.Text - 0)).Value = 3 Or
+                               DGtable(send.Index, CInt(lblcv_lap.Text - 0)).Value = 5 Then 'ホットキーを送信する。
+
+
+                            If DGtable(timing.Index, CInt(lblcv_lap.Text - 0)).Value = 4 Then
+                                txtstate.Text = My.Resources.Message.msg32 '"場面転換待機中"
+
+                                cvtimer_changergb.Start()
+
+
+
+                            ElseIf DGtable(timing.Index, CInt(lblcv_lap.Text - 0)).Value = 3 Then
+                                txtstate.Text = My.Resources.Message.msg32 '"場面転換待機中"
+
+                                cvtimer_change.Start()
+
+
+
+                            ElseIf DGtable(timing.Index, CInt(lblcv_lap.Text - 0)).Value = 2 Then
+                                txtstate.Text = My.Resources.Message.msg33 '"暗転待機中"
+
+
+                                timcv_anten.Enabled = True
+                                picipl_foranten.Size = New Drawing.Size(DGtable(sizex.Index, CInt(lblcv_lap.Text - 0)).Value, DGtable(sizey.Index, CInt(lblcv_lap.Text - 0)).Value)
+                                timcv_forantencap.Enabled = True
+                                timcv_forantencap.Interval = numcv_interval.Value
+
+
+
+                            ElseIf DGtable(timing.Index, CInt(lblcv_lap.Text - 0)).Value = 1 Then
+                                txtstate.Text = My.Resources.Message.msg34 '"指定時間待機中"
+
+                                msec = CDbl(timeGetTime)
+                                timcv_perfectanten.Enabled = True
+
+
+
+                            ElseIf DGtable(timing.Index, CInt(lblcv_lap.Text - 0)).Value = 0 Then
+
                                 txtstate.Text = My.Resources.Message.msg31 '"待機中"
 
+                                allkeysend()
 
                                 msec = CDbl(timeGetTime)
 
@@ -8174,84 +8810,29 @@ Public Class Mainwindow
                                 lblcv_sendview.Visible = True
                                 lblsleeptime.Visible = True
 
+                                '♥
+                                '■Videoplayerのシーク
+                                If chkshowvideo.Checked = True Then
+
+                                    If chkvideo_autoseek.Checked = True Then
+
+                                        Videoplayer.playtime = DGtable(seektime.Index, CInt(lblcv_lap.Text - 0)).Value
+
+                                        'Videoseekの値が"-1"ならば、シークなど何の操作もしない
+                                        If Videoplayer.playtime = -1 Then
+
+                                        Else
+
+                                            Videoplayer.videoplay()
+
+                                        End If
 
 
+                                    Else '最初の反応時にのみplayする
 
-
-                            ElseIf DGtable(send.Index, CInt(lblcv_lap.Text - 0)).Value = 1 Or
-                               DGtable(send.Index, CInt(lblcv_lap.Text - 0)).Value = 3 Or
-                               DGtable(send.Index, CInt(lblcv_lap.Text - 0)).Value = 5 Then 'ホットキーを送信する。
-
-
-                                If DGtable(timing.Index, CInt(lblcv_lap.Text - 0)).Value = 4 Then
-                                    txtstate.Text = My.Resources.Message.msg32 '"場面転換待機中"
-
-                                    cvtimer_changergb.Start()
-
-
-
-                                ElseIf DGtable(timing.Index, CInt(lblcv_lap.Text - 0)).Value = 3 Then
-                                    txtstate.Text = My.Resources.Message.msg32 '"場面転換待機中"
-
-                                    cvtimer_change.Start()
-
-                                    '暗転時にラップを取るかどうか。
-                                    'モニタリングタブの右上が変わらない内に処理をする。■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-
-                                ElseIf DGtable(timing.Index, CInt(lblcv_lap.Text - 0)).Value = 2 Then
-                                    txtstate.Text = My.Resources.Message.msg33 '"暗転待機中"
-
-
-                                    timcv_anten.Enabled = True
-                                    picipl_foranten.Size = New Drawing.Size(DGtable(sizex.Index, CInt(lblcv_lap.Text - 0)).Value, DGtable(sizey.Index, CInt(lblcv_lap.Text - 0)).Value)
-                                    timcv_forantencap.Enabled = True
-                                    timcv_forantencap.Interval = numcv_interval.Value
-
-
-                                ElseIf DGtable(timing.Index, CInt(lblcv_lap.Text - 0)).Value = 1 Then
-                                    txtstate.Text = My.Resources.Message.msg34 '"指定時間待機中"
-
-                                    msec = CDbl(timeGetTime)
-                                    timcv_perfectanten.Enabled = True
-
-                                ElseIf DGtable(timing.Index, CInt(lblcv_lap.Text - 0)).Value = 0 Then
-
-                                    txtstate.Text = My.Resources.Message.msg31 '"待機中"
-
-                                    allkeysend()
-
-
-                                    msec = CDbl(timeGetTime)
-
-                                    cvsleep_split.Start()
-                                    lblcv_sendview.Visible = True
-                                    lblsleeptime.Visible = True
-
-                                    '♥
-                                    '■Videoplayerのシーク
-                                    If chkshowvideo.Checked = True Then
-
-                                        If chkvideo_autoseek.Checked = True Then
-
-                                            Videoplayer.playtime = DGtable(seektime.Index, CInt(lblcv_lap.Text - 0)).Value
-
-                                            'Videoseekの値が"-1"ならば、シークなど何の操作もしない
-                                            If Videoplayer.playtime = -1 Then
-
-                                            Else
-
-                                                Videoplayer.videoplay()
-
-                                            End If
-
-
-                                        Else '最初の反応時にのみplayする
-
-                                            If numnowloop.Value = 0 Then
-                                                Videoplayer.playtime = DGtable(seektime.Index, CInt(lblcv_lap.Text)).Value
-                                                Videoplayer.videoplay()
-
-                                            End If
+                                        If numnowloop.Value = 0 Then
+                                            Videoplayer.playtime = DGtable(seektime.Index, CInt(lblcv_lap.Text)).Value
+                                            Videoplayer.videoplay()
 
                                         End If
 
@@ -8261,18 +8842,20 @@ Public Class Mainwindow
 
                             End If
 
+                        End If
 
 
 
-                            '■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-                            'Middle②  監視場所が異なる場合■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■_________________________________________________________________________
 
-                        ElseIf chkcv_loop.Checked = False Then
+                        '■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+                        'Middle②  監視場所が異なる場合■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■_________________________________________________________________________
 
-                            lblreload_graph.Text = 1
+                    ElseIf chkcv_loop.Checked = False Then
 
-                            number += 1
-                            lblcv_lap.Text += 1
+                        lblreload_graph.Text = 1
+
+                        number += 1
+                        lblcv_lap.Text += 1
 
 
                         'カラムS＝0の時、スルーする
@@ -8292,146 +8875,144 @@ Public Class Mainwindow
 
 
 
-
-                            Else '画像ファイルが存在しない
+                            Else '画像ファイルが存在しない＝終わり
 
                                 'lblcv_lap.Text = 1★
-
                                 show_finish()
 
-                                'MessageBox.Show(My.Resources.Message.msg7, "AutoSplit Helper by Image") '"画像ファイルが存在しません。"
 
                             End If
 
 
 
+
                         ElseIf DGtable(send.Index, CInt(lblcv_lap.Text - 1)).Value = 1 Or
-                           DGtable(send.Index, CInt(lblcv_lap.Text - 1)).Value = 3 Or
-                           DGtable(send.Index, CInt(lblcv_lap.Text - 1)).Value = 5 Then 'ホットキーを送信する
+                               DGtable(send.Index, CInt(lblcv_lap.Text - 1)).Value = 3 Or
+                               DGtable(send.Index, CInt(lblcv_lap.Text - 1)).Value = 5 Then 'ホットキーを送信する
 
 
 
                             If DGtable(timing.Index, CInt(lblcv_lap.Text - 1)).Value = 4 Then
-                                    txtstate.Text = My.Resources.Message.msg32 '"場面転換待機中"
+                                txtstate.Text = My.Resources.Message.msg32 '"場面転換待機中"
 
-                                    cvtimer_changergb.Start()
-
-
-                                ElseIf DGtable(timing.Index, CInt(lblcv_lap.Text - 1)).Value = 3 Then
-                                    txtstate.Text = My.Resources.Message.msg32 '"場面転換待機中"
-
-                                    cvtimer_change.Start()
+                                cvtimer_changergb.Start()
 
 
-                                ElseIf DGtable(timing.Index, CInt(lblcv_lap.Text - 1)).Value = 2 Then 'モニタリングタブの右上が変わらない内に処理をする。■■■■■■■■■■
 
-                                    txtstate.Text = My.Resources.Message.msg33 '"暗転待機中"
+                            ElseIf DGtable(timing.Index, CInt(lblcv_lap.Text - 1)).Value = 3 Then
+                                txtstate.Text = My.Resources.Message.msg32 '"場面転換待機中"
 
-                                    timcv_anten.Enabled = True
-                                    picipl_foranten.Size = New Drawing.Size(DGtable(sizex.Index, CInt(lblcv_lap.Text - 1)).Value, DGtable(sizey.Index, CInt(lblcv_lap.Text - 1)).Value)
-
-                                    timcv_forantencap.Interval = numcv_interval.Value
-                                    timcv_forantencap.Enabled = True
+                                cvtimer_change.Start()
 
 
-                                ElseIf DGtable(timing.Index, CInt(lblcv_lap.Text - 1)).Value = 1 Then
-                                    txtstate.Text = My.Resources.Message.msg34 '"指定時間待機中"
+
+                            ElseIf DGtable(timing.Index, CInt(lblcv_lap.Text - 1)).Value = 2 Then 'モニタリングタブの右上が変わらない内に処理をする。■■■■■■■■■■
+
+                                txtstate.Text = My.Resources.Message.msg33 '"暗転待機中"
+
+                                timcv_anten.Enabled = True
+                                picipl_foranten.Size = New Drawing.Size(DGtable(sizex.Index, CInt(lblcv_lap.Text - 1)).Value, DGtable(sizey.Index, CInt(lblcv_lap.Text - 1)).Value)
+
+                                timcv_forantencap.Interval = numcv_interval.Value
+                                timcv_forantencap.Enabled = True
+
+
+
+                            ElseIf DGtable(timing.Index, CInt(lblcv_lap.Text - 1)).Value = 1 Then
+                                txtstate.Text = My.Resources.Message.msg34 '"指定時間待機中"
+
+                                msec = CDbl(timeGetTime)
+                                timcv_perfectanten.Enabled = True
+
+
+
+                            ElseIf DGtable(timing.Index, CInt(lblcv_lap.Text - 1)).Value = 0 Then
+                                txtstate.Text = My.Resources.Message.msg31 '"待機中"
+
+                                '■StartA  ファイルが存在しているかどうか確認する■■■■■■
+                                If System.IO.File.Exists(txtpass_picturefolder.Text & "\" & number & ".bmp") Then
+
+                                    allkeysend()
 
                                     msec = CDbl(timeGetTime)
-                                    timcv_perfectanten.Enabled = True
+
+                                    cvsleep_split.Start()
+                                    lblcv_sendview.Visible = True
+                                    lblsleeptime.Visible = True
+
+                                    '■Videoplayerのシーク★
+                                    If chkshowvideo.Checked = True Then
+
+                                        If chkvideo_autoseek.Checked = True Then
+
+                                            Videoplayer.playtime = DGtable(seektime.Index, CInt(lblcv_lap.Text - 1)).Value
+
+                                            'Videoseekの値が"-1"ならば、シークなど何の操作もしない
+                                            If Videoplayer.playtime = -1 Then
+
+                                            Else
+                                                Videoplayer.videoplay()
+
+                                            End If
 
 
-                                ElseIf DGtable(timing.Index, CInt(lblcv_lap.Text - 1)).Value = 0 Then
-                                    txtstate.Text = My.Resources.Message.msg31 '"待機中"
+                                        Else '最初の反応時にのみplayする
 
-                                    '■StartA  ファイルが存在しているかどうか確認する■■■■■■
-                                    If System.IO.File.Exists(txtpass_picturefolder.Text & "\" & number & ".bmp") Then
-
-                                        allkeysend()
-
-                                        msec = CDbl(timeGetTime)
-
-                                        cvsleep_split.Start()
-                                        lblcv_sendview.Visible = True
-                                        lblsleeptime.Visible = True
-
-                                        '■Videoplayerのシーク★
-                                        If chkshowvideo.Checked = True Then
-
-                                            If chkvideo_autoseek.Checked = True Then
-
+                                            If lblcv_lap.Text = 2 Then
                                                 Videoplayer.playtime = DGtable(seektime.Index, CInt(lblcv_lap.Text - 1)).Value
-
-                                                'Videoseekの値が"-1"ならば、シークなど何の操作もしない
-                                                If Videoplayer.playtime = -1 Then
-
-                                                Else
-                                                    Videoplayer.videoplay()
-
-                                                End If
-
-
-                                            Else '最初の反応時にのみplayする
-
-                                                If lblcv_lap.Text = 2 Then
-                                                    Videoplayer.playtime = DGtable(seektime.Index, CInt(lblcv_lap.Text - 1)).Value
-                                                    Videoplayer.videoplay()
-
-                                                End If
+                                                Videoplayer.videoplay()
 
                                             End If
 
                                         End If
 
+                                    End If
 
 
-                                    Else ' ファイルが存在しない
+
+                                Else ' ファイルが存在しない
 
                                     'lblcv_lap.Text = 1★
-
                                     allkeysend()
 
                                     If lblreload_graph.Text = 1 Then
 
-                                            '■グラフ更新
-                                            graph_split()
+                                        '■グラフ更新
+                                        graph_split()
 
-                                            lblreload_graph.Text = 0
+                                        lblreload_graph.Text = 0
 
 
-                                        End If
+                                    End If
 
-                                        show_finish()
+                                    show_finish()
 
-                                        'MessageBox.Show(My.Resources.Message.msg9, "AutoSplit Helper by Image") '"ゴールに達したか、画像ファイルが存在しません。"
 
-                                    End If '■■■■■■
+                                End If '■■■■■■
 
-                                End If 'EndA■■■■■■■■■■
-
-                            End If
+                            End If 'EndA■■■■■■■■■■
 
                         End If
 
+                    End If
 
 
 
 
 
 
-                        '■結果の初期化
-                        lblcv_maxval_reset.Text = 0
-                        lblcv_nowmaxval_reset.Text = 0
 
-                        chknow_monitor.Checked = False
+                    '■結果の初期化
+                    lblcv_maxval_reset.Text = 0
+                    lblcv_nowmaxval_reset.Text = 0
 
-                        If chkcv_resetonoff.Checked = True Then
+                    chknow_monitor.Checked = False
 
-                            chknow_reset.Checked = True
-                            onetimematching_reset() '♥'これを書かないと、前のデータが何故か残って誤判定となる。
+                    If chkcv_resetonoff.Checked = True Then
 
+                        chknow_reset.Checked = True
+                        onetimematching_reset() '♥'これを書かないと、前のデータが何故か残って誤判定となる。
 
-                        End If
 
                     End If
 
@@ -8439,26 +9020,28 @@ Public Class Mainwindow
 
             End If
 
+        End If
+
 
 
 
 
         '■テンプレートマッチング（リセット）
         If chknow_reset.Checked = True Then
-                If async_reset_onoff = 1 Then '★
+            If async_reset_onoff = 1 Then '★
 
-                    '■リセット結果表示
-                    If Not maxval_reset = 1 Then
-                        lblcv_nowmaxval_reset.Text = Math.Round(100 * maxval_reset, 2, MidpointRounding.AwayFromZero) '100 * maxval
-                        If CDbl(lblcv_maxval_reset.Text) < 100 * maxval_reset Then
-                            lblcv_maxval_reset.Text = Math.Round(100 * maxval_reset, 2, MidpointRounding.AwayFromZero) '100 * maxval
-                        End If
+                '■リセット結果表示
+                If Not maxval_reset = 1 Then
+                    lblcv_nowmaxval_reset.Text = Math.Round(100 * maxval_reset, 2, MidpointRounding.AwayFromZero) '100 * maxval
+                    If CDbl(lblcv_maxval_reset.Text) < 100 * maxval_reset Then
+                        lblcv_maxval_reset.Text = Math.Round(100 * maxval_reset, 2, MidpointRounding.AwayFromZero) '100 * maxval
                     End If
+                End If
 
 
 
-                    '■リセットが反応した。■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-                    If CDbl(lblcv_maxval_reset.Text) > CDbl(txtcv_ikiti_reset.Text) Then
+                '■リセットが反応した。■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+                If CDbl(lblcv_maxval_reset.Text) > CDbl(txtcv_ikiti_reset.Text) Then
 
 
                     '■一致した場所が指定範囲内にあるかどうか
@@ -8469,6 +9052,7 @@ Public Class Mainwindow
                        maxloc_reset.Y + tplex_r.Height > DGtable(rby.Index, 0).Value Then
 
                         lblcv_maxval_reset.Text = 0
+
                         Exit Sub
 
 
@@ -8477,11 +9061,9 @@ Public Class Mainwindow
                     '■グラフ更新
                     graph_reset()
 
-
                     lblcv_lap.Text = 1
                     number = 1
                     txtstate.Text = My.Resources.Message.msg30 '"画像認識中"
-
 
 
                     lblcv_sendview.Visible = False
@@ -8510,122 +9092,311 @@ Public Class Mainwindow
 
 
                     lblcv_maxval_reset.Text = 0
-                        lblcv_nowmaxval_reset.Text = 0
+                    lblcv_nowmaxval_reset.Text = 0
 
 
-                        '■プレビュー画面の更新
-                        'NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
-                        capturecv.Read(frame)
+                    '■プレビュー画面の更新
+                    'NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
+                    capturecv.Read(frame)
 
-                        picipl_cap.ImageIpl = frame
+                    If chkcv_crop.Checked = True Then
+
+                        '■先にクロップをする。
+                        dst_cropRect = New Mat(frame, New OpenCvSharp.Rect(CInt(txtcv_crop_posx.Text), CInt(txtcv_crop_posy.Text),
+                                   CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text)))
+
+                        Dim dst_cropped As Mat = New Mat(CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text), MatType.CV_32FC1)
+
+                        dst_cropRect.CopyTo(dst_cropped)
+
+                        '■リサイズ
+                        dst_resize = New Mat()
+                        Cv2.Resize(dst_cropped, dst_resize, New OpenCvSharp.Size(numcv_sizex.Value, numcv_sizey.Value), 0, 0, interpolation:=InterpolationFlags.Nearest)
+
+                        picipl_cap.ImageIpl = dst_resize
+                        imgex = dst_resize
+
+                        dst_cropRect.Dispose()
+                        dst_cropped.Dispose()
+                        'dst_resize.Dispose()
 
 
-                        'Picture画像を"1.bmp"に戻す■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■！
+                    ElseIf chkcv_crop.Checked = False Then 'クロップなし。リサイズ有無で分岐
 
-                        '■テンプレート画像の更新
-                        Dim aa As String = txtpass_picturefolder.Text & "\" & 1 & ".bmp"
-                        tplex = Cv2.ImRead(aa, ImreadModes.Color)
+                        If numcv_sizex.Value = numcrop_resolution_x.Value And
+               numcv_sizey.Value = numcrop_resolution_y.Value Then
 
-                        '■ローディング画像の読み込み（表示用）
-                        Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
-                            piccv_picture.Image = Image.FromStream(fs)
-                        End Using
+                            picipl_cap.ImageIpl = frame
+                            imgex = frame
 
-                        '■最初のリッチテキストファイルを表示
-                        If chkshow_text.Checked = True Then
-                            Textwindow.rtxt1.LoadFile(txtpass_rtf.Text & "/1.rtf", RichTextBoxStreamType.RichText)
+
+                        Else
+
+                            dst_resize = New Mat()
+                            Cv2.Resize(frame, dst_resize, New OpenCvSharp.Size(numcv_sizex.Value, numcv_sizey.Value), 0, 0, interpolation:=InterpolationFlags.Nearest)
+
+                            picipl_cap.ImageIpl = dst_resize
+                            imgex = dst_resize
+
+                            'dst_resize.Dispose()
+
+
                         End If
 
+                    End If
 
-                        '■結果の初期化
-                        lblcv_maxval.Text = 0
-                        lblcv_maxval_reset.Text = 0
 
-                        '■リセットキー送信
 
-                        allkeysend_reset()
+                    'Picture画像を"1.bmp"に戻す■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■！
 
-                        chknow_reset.Checked = False
-                        async_reset_onoff = 0 '★
+                    '■テンプレート画像の更新
+                    Dim aa As String = txtpass_picturefolder.Text & "\" & 1 & ".bmp"
+                    tplex = Cv2.ImRead(aa, ImreadModes.Color)
+
+                    '■ローディング画像の読み込み（表示用）
+                    Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
+                        piccv_picture.Image = Image.FromStream(fs)
+                    End Using
+
+                    '■最初のリッチテキストファイルを表示
+                    If chkshow_text.Checked = True Then
+                        Textwindow.rtxt1.LoadFile(txtpass_rtf.Text & "/1.rtf", RichTextBoxStreamType.RichText)
+                    End If
+
+
+                    '■結果の初期化
+                    lblcv_maxval.Text = 0
+                    lblcv_maxval_reset.Text = 0
+
+                    '■リセットキー送信
+
+                    allkeysend_reset()
+
+                    chknow_reset.Checked = False
+                    async_reset_onoff = 0 '★
                     async_split_onoff = 1 '★
 
                     If chkcv_monitor.Checked = True Then
 
-                            chknow_monitor.Checked = True
+                        chknow_monitor.Checked = True
 
+
+                    End If
+
+                    If chkcv_loadremover.Checked = True Then
+
+                        If chkload1.Checked = True Then
+                            chknow_load1.Checked = True
 
                         End If
 
-                        If chkcv_loadremover.Checked = True Then
+                        If chkload2.Checked = True Then
+                            chknow_load2.Checked = True
 
-                            If chkload1.Checked = True Then
-                                chknow_load1.Checked = True
+                        End If
 
-                            End If
+                        If chkload3.Checked = True Then
+                            chknow_load3.Checked = True
 
-                            If chkload2.Checked = True Then
-                                chknow_load2.Checked = True
+                        End If
 
-                            End If
+                        If chkload4.Checked = True Then
+                            chknow_load4.Checked = True
 
-                            If chkload3.Checked = True Then
-                                chknow_load3.Checked = True
+                        End If
 
-                            End If
+                        If chkload5.Checked = True Then
+                            chknow_load5.Checked = True
 
-                            If chkload4.Checked = True Then
-                                chknow_load4.Checked = True
+                        End If
 
-                            End If
+                        If chkload6.Checked = True Then
+                            chknow_load6.Checked = True
 
-                            If chkload5.Checked = True Then
-                                chknow_load5.Checked = True
+                        End If
 
-                            End If
+                        If chkload7.Checked = True Then
+                            chknow_load7.Checked = True
 
-                            If chkload6.Checked = True Then
-                                chknow_load6.Checked = True
+                        End If
 
-                            End If
+                        If chkload8.Checked = True Then
+                            chknow_load8.Checked = True
 
-                            If chkload7.Checked = True Then
-                                chknow_load7.Checked = True
+                        End If
 
-                            End If
+                        If chkload9.Checked = True Then
+                            chknow_load9.Checked = True
 
-                            If chkload8.Checked = True Then
-                                chknow_load8.Checked = True
+                        End If
 
-                            End If
-
-                            If chkload9.Checked = True Then
-                                chknow_load9.Checked = True
-
-                            End If
-
-                            If chkload10.Checked = True Then
-                                chknow_load10.Checked = True
-
-                            End If
-
+                        If chkload10.Checked = True Then
+                            chknow_load10.Checked = True
 
                         End If
 
 
-                        '■Videoplayerの停止
-                        If chkshowvideo.Checked = True Then
+                    End If
 
-                            Videoplayer.videostop()
 
-                            If chkvideo_manualstart.Checked = True Then '再び手動スタートに
-                                txtstate.Text = "RTAスタート待機中"
-                                cvtimer_manualstart.Start()
-                                cvtimer.Stop()
+                    '■Videoplayerの停止
+                    If chkshowvideo.Checked = True Then
 
-                            End If
+                        Videoplayer.videostop()
+
+                        If chkvideo_manualstart.Checked = True Then '再び手動スタートに
+                            txtstate.Text = "RTAスタート待機中"
+                            cvtimer_manualstart.Start()
+                            cvtimer.Stop()
 
                         End If
 
+                    End If
+
+
+                End If
+
+            End If
+
+        End If
+
+
+
+        '■テンプレートマッチング（ロード）
+        If chkcv_loadremover.Checked = True Then
+
+            '■テンプレートマッチング（ロード1）
+            If chknow_load1.Checked = True Then
+                If async_load1_onoff = 1 Then
+                    If Not maxval_load1 = 1 Then
+
+                        '■ローディング結果を表示
+                        lblcv_nowmaxval_load1.Text = Math.Round(100 * maxval_load1, 2, MidpointRounding.AwayFromZero) '100 * maxval
+
+                        If CDbl(lblcv_maxval_load1.Text) < 100 * maxval_load1 Then
+                            lblcv_maxval_load1.Text = Math.Round(100 * maxval_load1, 2, MidpointRounding.AwayFromZero) '100 * maxval
+
+                        End If
+
+                    End If
+
+
+                    '■ローディングがマッチングされた。
+                    If CDbl(lblcv_maxval_load1.Text) > CDbl(txtcv_ikiti_load1.Text) Then
+
+                        Console.WriteLine("Show loading")
+
+
+                        allkeysend_load() '[play→sleep]pauseを送る
+
+                        txtstate.Text = My.Resources.Message.msg39 '"ロード中"
+                        lblloading.Text = "loading"
+
+                        msec_pause = CDbl(timeGetTime)
+
+                        cvtimer_loadremover1.Start()
+
+
+                        'ロード除去が1つ働いている時、他のLoading監視をすべて止める。
+                        chknow_load1.Checked = False
+                        chknow_load2.Checked = False
+                        chknow_load3.Checked = False
+                        chknow_load4.Checked = False
+                        chknow_load5.Checked = False
+                        chknow_load6.Checked = False
+                        chknow_load7.Checked = False
+                        chknow_load8.Checked = False
+                        chknow_load9.Checked = False
+                        chknow_load10.Checked = False
+
+                        async_load1_onoff = 0
+                        async_load2_onoff = 0
+                        async_load3_onoff = 0
+                        async_load4_onoff = 0
+                        async_load5_onoff = 0
+                        async_load6_onoff = 0
+                        async_load7_onoff = 0
+                        async_load8_onoff = 0
+                        async_load9_onoff = 0
+                        async_load10_onoff = 0
+
+
+
+                        If chkcv_resetonoff.Checked = True Then
+
+                            chknow_reset.Checked = True
+
+
+                        End If
+
+                    End If
+
+                End If
+
+
+            End If
+
+            '■テンプレートマッチング（ロード2）
+            If chknow_load2.Checked = True Then
+                If async_load2_onoff = 1 Then
+                    If Not maxval_load2 = 1 Then
+
+
+                        '■ローディング結果を表示
+                        lblcv_nowmaxval_load2.Text = Math.Round(100 * maxval_load2, 2, MidpointRounding.AwayFromZero) '100 * maxval
+
+                        If CDbl(lblcv_maxval_load2.Text) < 100 * maxval_load2 Then
+                            lblcv_maxval_load2.Text = Math.Round(100 * maxval_load2, 2, MidpointRounding.AwayFromZero) '100 * maxval
+
+                        End If
+                    End If
+
+                    '■ローディングがマッチングされた。
+                    If CDbl(lblcv_maxval_load2.Text) > CDbl(txtcv_ikiti_load2.Text) Then
+
+                        Console.WriteLine("Show loading")
+
+
+                        allkeysend_load() '[play→sleep]pauseを送る
+
+                        txtstate.Text = My.Resources.Message.msg39 '"ロード中"
+                        lblloading.Text = "loading"
+
+                        msec_pause = CDbl(timeGetTime)
+
+                        cvtimer_loadremover2.Start()
+
+                        'ロード除去が1つ働いている時、他のLoading監視をすべて止める。
+
+                        chknow_load1.Checked = False
+                        chknow_load2.Checked = False
+                        chknow_load3.Checked = False
+                        chknow_load4.Checked = False
+                        chknow_load5.Checked = False
+                        chknow_load6.Checked = False
+                        chknow_load7.Checked = False
+                        chknow_load8.Checked = False
+                        chknow_load9.Checked = False
+                        chknow_load10.Checked = False
+
+                        async_load1_onoff = 0
+                        async_load2_onoff = 0
+                        async_load3_onoff = 0
+                        async_load4_onoff = 0
+                        async_load5_onoff = 0
+                        async_load6_onoff = 0
+                        async_load7_onoff = 0
+                        async_load8_onoff = 0
+                        async_load9_onoff = 0
+                        async_load10_onoff = 0
+
+
+                        If chkcv_resetonoff.Checked = True Then
+
+                            chknow_reset.Checked = True
+
+
+                        End If
 
                     End If
 
@@ -8633,143 +9404,62 @@ Public Class Mainwindow
 
             End If
 
+            '■テンプレートマッチング（ロード3）
+            If chknow_load3.Checked = True Then
+                If async_load3_onoff = 1 Then
+                    If Not maxval_load3 = 1 Then
 
+                        '■ローディング結果を表示
+                        lblcv_nowmaxval_load3.Text = Math.Round(100 * maxval_load3, 2, MidpointRounding.AwayFromZero) '100 * maxval
 
-            '■テンプレートマッチング（ロード）
-            If chkcv_loadremover.Checked = True Then
-
-                '■テンプレートマッチング（ロード1）
-                If chknow_load1.Checked = True Then
-                    If async_load1_onoff = 1 Then
-                        If Not maxval_load1 = 1 Then
-
-                            '■ローディング結果を表示
-                            lblcv_nowmaxval_load1.Text = Math.Round(100 * maxval_load1, 2, MidpointRounding.AwayFromZero) '100 * maxval
-
-                            If CDbl(lblcv_maxval_load1.Text) < 100 * maxval_load1 Then
-                                lblcv_maxval_load1.Text = Math.Round(100 * maxval_load1, 2, MidpointRounding.AwayFromZero) '100 * maxval
-
-                            End If
+                        If CDbl(lblcv_maxval_load3.Text) < 100 * maxval_load3 Then
+                            lblcv_maxval_load3.Text = Math.Round(100 * maxval_load3, 2, MidpointRounding.AwayFromZero) '100 * maxval
 
                         End If
-
-
-                        '■ローディングがマッチングされた。
-                        If CDbl(lblcv_maxval_load1.Text) > CDbl(txtcv_ikiti_load1.Text) Then
-
-                            Console.WriteLine("Show loading")
-
-
-                            allkeysend_load() '[play→sleep]pauseを送る
-
-                            txtstate.Text = My.Resources.Message.msg39 '"ロード中"
-                            lblloading.Text = "loading"
-
-                            msec_pause = CDbl(timeGetTime)
-
-                            cvtimer_loadremover1.Start()
-
-
-                            'ロード除去が1つ働いている時、他のLoading監視をすべて止める。
-                            chknow_load1.Checked = False
-                            chknow_load2.Checked = False
-                            chknow_load3.Checked = False
-                            chknow_load4.Checked = False
-                            chknow_load5.Checked = False
-                            chknow_load6.Checked = False
-                            chknow_load7.Checked = False
-                            chknow_load8.Checked = False
-                            chknow_load9.Checked = False
-                            chknow_load10.Checked = False
-
-                            async_load1_onoff = 0
-                            async_load2_onoff = 0
-                            async_load3_onoff = 0
-                            async_load4_onoff = 0
-                            async_load5_onoff = 0
-                            async_load6_onoff = 0
-                            async_load7_onoff = 0
-                            async_load8_onoff = 0
-                            async_load9_onoff = 0
-                            async_load10_onoff = 0
-
-
-
-                            If chkcv_resetonoff.Checked = True Then
-
-                                chknow_reset.Checked = True
-
-
-                            End If
-
-                        End If
-
                     End If
 
+                    '■ローディングがマッチングされた。
+                    If CDbl(lblcv_maxval_load3.Text) > CDbl(txtcv_ikiti_load3.Text) Then
 
-                End If
-
-                '■テンプレートマッチング（ロード2）
-                If chknow_load2.Checked = True Then
-                    If async_load2_onoff = 1 Then
-                        If Not maxval_load2 = 1 Then
+                        Console.WriteLine("Show loading")
 
 
-                            '■ローディング結果を表示
-                            lblcv_nowmaxval_load2.Text = Math.Round(100 * maxval_load2, 2, MidpointRounding.AwayFromZero) '100 * maxval
+                        allkeysend_load() '[play→sleep]pauseを送る
 
-                            If CDbl(lblcv_maxval_load2.Text) < 100 * maxval_load2 Then
-                                lblcv_maxval_load2.Text = Math.Round(100 * maxval_load2, 2, MidpointRounding.AwayFromZero) '100 * maxval
+                        txtstate.Text = My.Resources.Message.msg39 '"ロード中"
+                        lblloading.Text = "loading"
 
-                            End If
-                        End If
+                        msec_pause = CDbl(timeGetTime)
 
-                        '■ローディングがマッチングされた。
-                        If CDbl(lblcv_maxval_load2.Text) > CDbl(txtcv_ikiti_load2.Text) Then
+                        cvtimer_loadremover3.Start()
 
-                            Console.WriteLine("Show loading")
+                        'ロード除去が1つ働いている時、他のLoading監視をすべて止める。
+                        chknow_load1.Checked = False
+                        chknow_load2.Checked = False
+                        chknow_load3.Checked = False
+                        chknow_load4.Checked = False
+                        chknow_load5.Checked = False
+                        chknow_load6.Checked = False
+                        chknow_load7.Checked = False
+                        chknow_load8.Checked = False
+                        chknow_load9.Checked = False
+                        chknow_load10.Checked = False
 
+                        async_load1_onoff = 0
+                        async_load2_onoff = 0
+                        async_load3_onoff = 0
+                        async_load4_onoff = 0
+                        async_load5_onoff = 0
+                        async_load6_onoff = 0
+                        async_load7_onoff = 0
+                        async_load8_onoff = 0
+                        async_load9_onoff = 0
+                        async_load10_onoff = 0
 
-                            allkeysend_load() '[play→sleep]pauseを送る
+                        If chkcv_resetonoff.Checked = True Then
 
-                            txtstate.Text = My.Resources.Message.msg39 '"ロード中"
-                            lblloading.Text = "loading"
+                            chknow_reset.Checked = True
 
-                            msec_pause = CDbl(timeGetTime)
-
-                            cvtimer_loadremover2.Start()
-
-                            'ロード除去が1つ働いている時、他のLoading監視をすべて止める。
-
-                            chknow_load1.Checked = False
-                            chknow_load2.Checked = False
-                            chknow_load3.Checked = False
-                            chknow_load4.Checked = False
-                            chknow_load5.Checked = False
-                            chknow_load6.Checked = False
-                            chknow_load7.Checked = False
-                            chknow_load8.Checked = False
-                            chknow_load9.Checked = False
-                            chknow_load10.Checked = False
-
-                            async_load1_onoff = 0
-                            async_load2_onoff = 0
-                            async_load3_onoff = 0
-                            async_load4_onoff = 0
-                            async_load5_onoff = 0
-                            async_load6_onoff = 0
-                            async_load7_onoff = 0
-                            async_load8_onoff = 0
-                            async_load9_onoff = 0
-                            async_load10_onoff = 0
-
-
-                            If chkcv_resetonoff.Checked = True Then
-
-                                chknow_reset.Checked = True
-
-
-                            End If
 
                         End If
 
@@ -8777,64 +9467,65 @@ Public Class Mainwindow
 
                 End If
 
-                '■テンプレートマッチング（ロード3）
-                If chknow_load3.Checked = True Then
-                    If async_load3_onoff = 1 Then
-                        If Not maxval_load3 = 1 Then
+            End If
 
-                            '■ローディング結果を表示
-                            lblcv_nowmaxval_load3.Text = Math.Round(100 * maxval_load3, 2, MidpointRounding.AwayFromZero) '100 * maxval
+            '■テンプレートマッチング（ロード4）
+            If chknow_load4.Checked = True Then
+                If async_load4_onoff = 1 Then
+                    If Not maxval_load4 = 1 Then
 
-                            If CDbl(lblcv_maxval_load3.Text) < 100 * maxval_load3 Then
-                                lblcv_maxval_load3.Text = Math.Round(100 * maxval_load3, 2, MidpointRounding.AwayFromZero) '100 * maxval
+                        '■ローディング結果を表示
+                        lblcv_nowmaxval_load4.Text = Math.Round(100 * maxval_load4, 2, MidpointRounding.AwayFromZero) '100 * maxval
 
-                            End If
+                        If CDbl(lblcv_maxval_load4.Text) < 100 * maxval_load4 Then
+                            lblcv_maxval_load4.Text = Math.Round(100 * maxval_load4, 2, MidpointRounding.AwayFromZero) '100 * maxval
+
                         End If
+                    End If
 
-                        '■ローディングがマッチングされた。
-                        If CDbl(lblcv_maxval_load3.Text) > CDbl(txtcv_ikiti_load3.Text) Then
+                    '■ローディングがマッチングされた。
+                    If CDbl(lblcv_maxval_load4.Text) > CDbl(txtcv_ikiti_load4.Text) Then
 
-                            Console.WriteLine("Show loading")
-
-
-                            allkeysend_load() '[play→sleep]pauseを送る
-
-                            txtstate.Text = My.Resources.Message.msg39 '"ロード中"
-                            lblloading.Text = "loading"
-
-                            msec_pause = CDbl(timeGetTime)
-
-                            cvtimer_loadremover3.Start()
-
-                            'ロード除去が1つ働いている時、他のLoading監視をすべて止める。
-                            chknow_load1.Checked = False
-                            chknow_load2.Checked = False
-                            chknow_load3.Checked = False
-                            chknow_load4.Checked = False
-                            chknow_load5.Checked = False
-                            chknow_load6.Checked = False
-                            chknow_load7.Checked = False
-                            chknow_load8.Checked = False
-                            chknow_load9.Checked = False
-                            chknow_load10.Checked = False
-
-                            async_load1_onoff = 0
-                            async_load2_onoff = 0
-                            async_load3_onoff = 0
-                            async_load4_onoff = 0
-                            async_load5_onoff = 0
-                            async_load6_onoff = 0
-                            async_load7_onoff = 0
-                            async_load8_onoff = 0
-                            async_load9_onoff = 0
-                            async_load10_onoff = 0
-
-                            If chkcv_resetonoff.Checked = True Then
-
-                                chknow_reset.Checked = True
+                        Console.WriteLine("Show loading")
 
 
-                            End If
+                        allkeysend_load() '[play→sleep]pauseを送る
+
+                        txtstate.Text = My.Resources.Message.msg39 '"ロード中"
+                        lblloading.Text = "loading"
+
+                        msec_pause = CDbl(timeGetTime)
+
+                        cvtimer_loadremover4.Start()
+
+
+                        'ロード除去が1つ働いている時、他のLoading監視をすべて止める。
+                        chknow_load1.Checked = False
+                        chknow_load2.Checked = False
+                        chknow_load3.Checked = False
+                        chknow_load4.Checked = False
+                        chknow_load5.Checked = False
+                        chknow_load6.Checked = False
+                        chknow_load7.Checked = False
+                        chknow_load8.Checked = False
+                        chknow_load9.Checked = False
+                        chknow_load10.Checked = False
+
+                        async_load1_onoff = 0
+                        async_load2_onoff = 0
+                        async_load3_onoff = 0
+                        async_load4_onoff = 0
+                        async_load5_onoff = 0
+                        async_load6_onoff = 0
+                        async_load7_onoff = 0
+                        async_load8_onoff = 0
+                        async_load9_onoff = 0
+                        async_load10_onoff = 0
+
+                        If chkcv_resetonoff.Checked = True Then
+
+                            chknow_reset.Checked = True
+
 
                         End If
 
@@ -8842,65 +9533,65 @@ Public Class Mainwindow
 
                 End If
 
-                '■テンプレートマッチング（ロード4）
-                If chknow_load4.Checked = True Then
-                    If async_load4_onoff = 1 Then
-                        If Not maxval_load4 = 1 Then
+            End If
 
-                            '■ローディング結果を表示
-                            lblcv_nowmaxval_load4.Text = Math.Round(100 * maxval_load4, 2, MidpointRounding.AwayFromZero) '100 * maxval
+            '■テンプレートマッチング（ロード5）
+            If chknow_load5.Checked = True Then
+                If async_load5_onoff = 1 Then
+                    If Not maxval_load5 = 1 Then
 
-                            If CDbl(lblcv_maxval_load4.Text) < 100 * maxval_load4 Then
-                                lblcv_maxval_load4.Text = Math.Round(100 * maxval_load4, 2, MidpointRounding.AwayFromZero) '100 * maxval
+                        '■ローディング結果を表示
+                        lblcv_nowmaxval_load5.Text = Math.Round(100 * maxval_load5, 2, MidpointRounding.AwayFromZero) '100 * maxval
 
-                            End If
+                        If CDbl(lblcv_maxval_load5.Text) < 100 * maxval_load5 Then
+                            lblcv_maxval_load5.Text = Math.Round(100 * maxval_load5, 2, MidpointRounding.AwayFromZero) '100 * maxval
+
                         End If
+                    End If
 
-                        '■ローディングがマッチングされた。
-                        If CDbl(lblcv_maxval_load4.Text) > CDbl(txtcv_ikiti_load4.Text) Then
+                    '■ローディングがマッチングされた。
+                    If CDbl(lblcv_maxval_load5.Text) > CDbl(txtcv_ikiti_load5.Text) Then
 
-                            Console.WriteLine("Show loading")
-
-
-                            allkeysend_load() '[play→sleep]pauseを送る
-
-                            txtstate.Text = My.Resources.Message.msg39 '"ロード中"
-                            lblloading.Text = "loading"
-
-                            msec_pause = CDbl(timeGetTime)
-
-                            cvtimer_loadremover4.Start()
+                        Console.WriteLine("Show loading")
 
 
-                            'ロード除去が1つ働いている時、他のLoading監視をすべて止める。
-                            chknow_load1.Checked = False
-                            chknow_load2.Checked = False
-                            chknow_load3.Checked = False
-                            chknow_load4.Checked = False
-                            chknow_load5.Checked = False
-                            chknow_load6.Checked = False
-                            chknow_load7.Checked = False
-                            chknow_load8.Checked = False
-                            chknow_load9.Checked = False
-                            chknow_load10.Checked = False
+                        allkeysend_load() '[play→sleep]pauseを送る
 
-                            async_load1_onoff = 0
-                            async_load2_onoff = 0
-                            async_load3_onoff = 0
-                            async_load4_onoff = 0
-                            async_load5_onoff = 0
-                            async_load6_onoff = 0
-                            async_load7_onoff = 0
-                            async_load8_onoff = 0
-                            async_load9_onoff = 0
-                            async_load10_onoff = 0
+                        txtstate.Text = My.Resources.Message.msg39 '"ロード中"
+                        lblloading.Text = "loading"
 
-                            If chkcv_resetonoff.Checked = True Then
+                        msec_pause = CDbl(timeGetTime)
 
-                                chknow_reset.Checked = True
+                        cvtimer_loadremover5.Start()
 
 
-                            End If
+                        'ロード除去が1つ働いている時、他のLoading監視をすべて止める。
+                        chknow_load1.Checked = False
+                        chknow_load2.Checked = False
+                        chknow_load3.Checked = False
+                        chknow_load4.Checked = False
+                        chknow_load5.Checked = False
+                        chknow_load6.Checked = False
+                        chknow_load7.Checked = False
+                        chknow_load8.Checked = False
+                        chknow_load9.Checked = False
+                        chknow_load10.Checked = False
+
+                        async_load1_onoff = 0
+                        async_load2_onoff = 0
+                        async_load3_onoff = 0
+                        async_load4_onoff = 0
+                        async_load5_onoff = 0
+                        async_load6_onoff = 0
+                        async_load7_onoff = 0
+                        async_load8_onoff = 0
+                        async_load9_onoff = 0
+                        async_load10_onoff = 0
+
+                        If chkcv_resetonoff.Checked = True Then
+
+                            chknow_reset.Checked = True
+
 
                         End If
 
@@ -8908,65 +9599,65 @@ Public Class Mainwindow
 
                 End If
 
-                '■テンプレートマッチング（ロード5）
-                If chknow_load5.Checked = True Then
-                    If async_load5_onoff = 1 Then
-                        If Not maxval_load5 = 1 Then
+            End If
 
-                            '■ローディング結果を表示
-                            lblcv_nowmaxval_load5.Text = Math.Round(100 * maxval_load5, 2, MidpointRounding.AwayFromZero) '100 * maxval
+            '■テンプレートマッチング（ロード6）
+            If chknow_load6.Checked = True Then
+                If async_load6_onoff = 1 Then
+                    If Not maxval_load6 = 1 Then
 
-                            If CDbl(lblcv_maxval_load5.Text) < 100 * maxval_load5 Then
-                                lblcv_maxval_load5.Text = Math.Round(100 * maxval_load5, 2, MidpointRounding.AwayFromZero) '100 * maxval
+                        '■ローディング結果を表示
+                        lblcv_nowmaxval_load6.Text = Math.Round(100 * maxval_load6, 2, MidpointRounding.AwayFromZero) '100 * maxval
 
-                            End If
+                        If CDbl(lblcv_maxval_load6.Text) < 100 * maxval_load6 Then
+                            lblcv_maxval_load6.Text = Math.Round(100 * maxval_load6, 2, MidpointRounding.AwayFromZero) '100 * maxval
+
                         End If
+                    End If
 
-                        '■ローディングがマッチングされた。
-                        If CDbl(lblcv_maxval_load5.Text) > CDbl(txtcv_ikiti_load5.Text) Then
+                    '■ローディングがマッチングされた。
+                    If CDbl(lblcv_maxval_load6.Text) > CDbl(txtcv_ikiti_load6.Text) Then
 
-                            Console.WriteLine("Show loading")
-
-
-                            allkeysend_load() '[play→sleep]pauseを送る
-
-                            txtstate.Text = My.Resources.Message.msg39 '"ロード中"
-                            lblloading.Text = "loading"
-
-                            msec_pause = CDbl(timeGetTime)
-
-                            cvtimer_loadremover5.Start()
+                        Console.WriteLine("Show loading")
 
 
-                            'ロード除去が1つ働いている時、他のLoading監視をすべて止める。
-                            chknow_load1.Checked = False
-                            chknow_load2.Checked = False
-                            chknow_load3.Checked = False
-                            chknow_load4.Checked = False
-                            chknow_load5.Checked = False
-                            chknow_load6.Checked = False
-                            chknow_load7.Checked = False
-                            chknow_load8.Checked = False
-                            chknow_load9.Checked = False
-                            chknow_load10.Checked = False
+                        allkeysend_load() '[play→sleep]pauseを送る
 
-                            async_load1_onoff = 0
-                            async_load2_onoff = 0
-                            async_load3_onoff = 0
-                            async_load4_onoff = 0
-                            async_load5_onoff = 0
-                            async_load6_onoff = 0
-                            async_load7_onoff = 0
-                            async_load8_onoff = 0
-                            async_load9_onoff = 0
-                            async_load10_onoff = 0
+                        txtstate.Text = My.Resources.Message.msg39 '"ロード中"
+                        lblloading.Text = "loading"
 
-                            If chkcv_resetonoff.Checked = True Then
+                        msec_pause = CDbl(timeGetTime)
 
-                                chknow_reset.Checked = True
+                        cvtimer_loadremover6.Start()
 
 
-                            End If
+                        'ロード除去が1つ働いている時、他のLoading監視をすべて止める。
+                        chknow_load1.Checked = False
+                        chknow_load2.Checked = False
+                        chknow_load3.Checked = False
+                        chknow_load4.Checked = False
+                        chknow_load5.Checked = False
+                        chknow_load6.Checked = False
+                        chknow_load7.Checked = False
+                        chknow_load8.Checked = False
+                        chknow_load9.Checked = False
+                        chknow_load10.Checked = False
+
+                        async_load1_onoff = 0
+                        async_load2_onoff = 0
+                        async_load3_onoff = 0
+                        async_load4_onoff = 0
+                        async_load5_onoff = 0
+                        async_load6_onoff = 0
+                        async_load7_onoff = 0
+                        async_load8_onoff = 0
+                        async_load9_onoff = 0
+                        async_load10_onoff = 0
+
+                        If chkcv_resetonoff.Checked = True Then
+
+                            chknow_reset.Checked = True
+
 
                         End If
 
@@ -8974,65 +9665,65 @@ Public Class Mainwindow
 
                 End If
 
-                '■テンプレートマッチング（ロード6）
-                If chknow_load6.Checked = True Then
-                    If async_load6_onoff = 1 Then
-                        If Not maxval_load6 = 1 Then
+            End If
 
-                            '■ローディング結果を表示
-                            lblcv_nowmaxval_load6.Text = Math.Round(100 * maxval_load6, 2, MidpointRounding.AwayFromZero) '100 * maxval
+            '■テンプレートマッチング（ロード7）
+            If chknow_load7.Checked = True Then
+                If async_load7_onoff = 1 Then
+                    If Not maxval_load7 = 1 Then
 
-                            If CDbl(lblcv_maxval_load6.Text) < 100 * maxval_load6 Then
-                                lblcv_maxval_load6.Text = Math.Round(100 * maxval_load6, 2, MidpointRounding.AwayFromZero) '100 * maxval
+                        '■ローディング結果を表示
+                        lblcv_nowmaxval_load7.Text = Math.Round(100 * maxval_load7, 2, MidpointRounding.AwayFromZero) '100 * maxval
 
-                            End If
+                        If CDbl(lblcv_maxval_load7.Text) < 100 * maxval_load7 Then
+                            lblcv_maxval_load7.Text = Math.Round(100 * maxval_load7, 2, MidpointRounding.AwayFromZero) '100 * maxval
+
                         End If
+                    End If
 
-                        '■ローディングがマッチングされた。
-                        If CDbl(lblcv_maxval_load6.Text) > CDbl(txtcv_ikiti_load6.Text) Then
+                    '■ローディングがマッチングされた。
+                    If CDbl(lblcv_maxval_load7.Text) > CDbl(txtcv_ikiti_load7.Text) Then
 
-                            Console.WriteLine("Show loading")
-
-
-                            allkeysend_load() '[play→sleep]pauseを送る
-
-                            txtstate.Text = My.Resources.Message.msg39 '"ロード中"
-                            lblloading.Text = "loading"
-
-                            msec_pause = CDbl(timeGetTime)
-
-                            cvtimer_loadremover6.Start()
+                        Console.WriteLine("Show loading")
 
 
-                            'ロード除去が1つ働いている時、他のLoading監視をすべて止める。
-                            chknow_load1.Checked = False
-                            chknow_load2.Checked = False
-                            chknow_load3.Checked = False
-                            chknow_load4.Checked = False
-                            chknow_load5.Checked = False
-                            chknow_load6.Checked = False
-                            chknow_load7.Checked = False
-                            chknow_load8.Checked = False
-                            chknow_load9.Checked = False
-                            chknow_load10.Checked = False
+                        allkeysend_load() '[play→sleep]pauseを送る
 
-                            async_load1_onoff = 0
-                            async_load2_onoff = 0
-                            async_load3_onoff = 0
-                            async_load4_onoff = 0
-                            async_load5_onoff = 0
-                            async_load6_onoff = 0
-                            async_load7_onoff = 0
-                            async_load8_onoff = 0
-                            async_load9_onoff = 0
-                            async_load10_onoff = 0
+                        txtstate.Text = My.Resources.Message.msg39 '"ロード中"
+                        lblloading.Text = "loading"
 
-                            If chkcv_resetonoff.Checked = True Then
+                        msec_pause = CDbl(timeGetTime)
 
-                                chknow_reset.Checked = True
+                        cvtimer_loadremover7.Start()
 
 
-                            End If
+                        'ロード除去が1つ働いている時、他のLoading監視をすべて止める。
+                        chknow_load1.Checked = False
+                        chknow_load2.Checked = False
+                        chknow_load3.Checked = False
+                        chknow_load4.Checked = False
+                        chknow_load5.Checked = False
+                        chknow_load6.Checked = False
+                        chknow_load7.Checked = False
+                        chknow_load8.Checked = False
+                        chknow_load9.Checked = False
+                        chknow_load10.Checked = False
+
+                        async_load1_onoff = 0
+                        async_load2_onoff = 0
+                        async_load3_onoff = 0
+                        async_load4_onoff = 0
+                        async_load5_onoff = 0
+                        async_load6_onoff = 0
+                        async_load7_onoff = 0
+                        async_load8_onoff = 0
+                        async_load9_onoff = 0
+                        async_load10_onoff = 0
+
+                        If chkcv_resetonoff.Checked = True Then
+
+                            chknow_reset.Checked = True
+
 
                         End If
 
@@ -9040,330 +9731,266 @@ Public Class Mainwindow
 
                 End If
 
-                '■テンプレートマッチング（ロード7）
-                If chknow_load7.Checked = True Then
-                    If async_load7_onoff = 1 Then
-                        If Not maxval_load7 = 1 Then
+            End If
 
-                            '■ローディング結果を表示
-                            lblcv_nowmaxval_load7.Text = Math.Round(100 * maxval_load7, 2, MidpointRounding.AwayFromZero) '100 * maxval
+            '■テンプレートマッチング（ロード8）
+            If chknow_load8.Checked = True Then
+                If async_load8_onoff = 1 Then
+                    If Not maxval_load8 = 1 Then
 
-                            If CDbl(lblcv_maxval_load7.Text) < 100 * maxval_load7 Then
-                                lblcv_maxval_load7.Text = Math.Round(100 * maxval_load7, 2, MidpointRounding.AwayFromZero) '100 * maxval
+                        '■ローディング結果を表示
+                        lblcv_nowmaxval_load8.Text = Math.Round(100 * maxval_load8, 2, MidpointRounding.AwayFromZero) '100 * maxval
 
-                            End If
+                        If CDbl(lblcv_maxval_load8.Text) < 100 * maxval_load8 Then
+                            lblcv_maxval_load8.Text = Math.Round(100 * maxval_load8, 2, MidpointRounding.AwayFromZero) '100 * maxval
+
                         End If
+                    End If
 
-                        '■ローディングがマッチングされた。
-                        If CDbl(lblcv_maxval_load7.Text) > CDbl(txtcv_ikiti_load7.Text) Then
+                    '■ローディングがマッチングされた。
+                    If CDbl(lblcv_maxval_load8.Text) > CDbl(txtcv_ikiti_load8.Text) Then
 
-                            Console.WriteLine("Show loading")
-
-
-                            allkeysend_load() '[play→sleep]pauseを送る
-
-                            txtstate.Text = My.Resources.Message.msg39 '"ロード中"
-                            lblloading.Text = "loading"
-
-                            msec_pause = CDbl(timeGetTime)
-
-                            cvtimer_loadremover7.Start()
+                        Console.WriteLine("Show loading")
 
 
-                            'ロード除去が1つ働いている時、他のLoading監視をすべて止める。
-                            chknow_load1.Checked = False
-                            chknow_load2.Checked = False
-                            chknow_load3.Checked = False
-                            chknow_load4.Checked = False
-                            chknow_load5.Checked = False
-                            chknow_load6.Checked = False
-                            chknow_load7.Checked = False
-                            chknow_load8.Checked = False
-                            chknow_load9.Checked = False
-                            chknow_load10.Checked = False
+                        allkeysend_load() '[play→sleep]pauseを送る
 
-                            async_load1_onoff = 0
-                            async_load2_onoff = 0
-                            async_load3_onoff = 0
-                            async_load4_onoff = 0
-                            async_load5_onoff = 0
-                            async_load6_onoff = 0
-                            async_load7_onoff = 0
-                            async_load8_onoff = 0
-                            async_load9_onoff = 0
-                            async_load10_onoff = 0
+                        txtstate.Text = My.Resources.Message.msg39 '"ロード中"
+                        lblloading.Text = "loading"
 
-                            If chkcv_resetonoff.Checked = True Then
+                        msec_pause = CDbl(timeGetTime)
 
-                                chknow_reset.Checked = True
+                        cvtimer_loadremover8.Start()
 
 
-                            End If
+                        'ロード除去が1つ働いている時、他のLoading監視をすべて止める。
+                        chknow_load1.Checked = False
+                        chknow_load2.Checked = False
+                        chknow_load3.Checked = False
+                        chknow_load4.Checked = False
+                        chknow_load5.Checked = False
+                        chknow_load6.Checked = False
+                        chknow_load7.Checked = False
+                        chknow_load8.Checked = False
+                        chknow_load9.Checked = False
+                        chknow_load10.Checked = False
+
+                        async_load1_onoff = 0
+                        async_load2_onoff = 0
+                        async_load3_onoff = 0
+                        async_load4_onoff = 0
+                        async_load5_onoff = 0
+                        async_load6_onoff = 0
+                        async_load7_onoff = 0
+                        async_load8_onoff = 0
+                        async_load9_onoff = 0
+                        async_load10_onoff = 0
+
+                        If chkcv_resetonoff.Checked = True Then
+
+                            chknow_reset.Checked = True
+
 
                         End If
 
                     End If
-
-                End If
-
-                '■テンプレートマッチング（ロード8）
-                If chknow_load8.Checked = True Then
-                    If async_load8_onoff = 1 Then
-                        If Not maxval_load8 = 1 Then
-
-                            '■ローディング結果を表示
-                            lblcv_nowmaxval_load8.Text = Math.Round(100 * maxval_load8, 2, MidpointRounding.AwayFromZero) '100 * maxval
-
-                            If CDbl(lblcv_maxval_load8.Text) < 100 * maxval_load8 Then
-                                lblcv_maxval_load8.Text = Math.Round(100 * maxval_load8, 2, MidpointRounding.AwayFromZero) '100 * maxval
-
-                            End If
-                        End If
-
-                        '■ローディングがマッチングされた。
-                        If CDbl(lblcv_maxval_load8.Text) > CDbl(txtcv_ikiti_load8.Text) Then
-
-                            Console.WriteLine("Show loading")
-
-
-                            allkeysend_load() '[play→sleep]pauseを送る
-
-                            txtstate.Text = My.Resources.Message.msg39 '"ロード中"
-                            lblloading.Text = "loading"
-
-                            msec_pause = CDbl(timeGetTime)
-
-                            cvtimer_loadremover8.Start()
-
-
-                            'ロード除去が1つ働いている時、他のLoading監視をすべて止める。
-                            chknow_load1.Checked = False
-                            chknow_load2.Checked = False
-                            chknow_load3.Checked = False
-                            chknow_load4.Checked = False
-                            chknow_load5.Checked = False
-                            chknow_load6.Checked = False
-                            chknow_load7.Checked = False
-                            chknow_load8.Checked = False
-                            chknow_load9.Checked = False
-                            chknow_load10.Checked = False
-
-                            async_load1_onoff = 0
-                            async_load2_onoff = 0
-                            async_load3_onoff = 0
-                            async_load4_onoff = 0
-                            async_load5_onoff = 0
-                            async_load6_onoff = 0
-                            async_load7_onoff = 0
-                            async_load8_onoff = 0
-                            async_load9_onoff = 0
-                            async_load10_onoff = 0
-
-                            If chkcv_resetonoff.Checked = True Then
-
-                                chknow_reset.Checked = True
-
-
-                            End If
-
-                        End If
-
-                    End If
-
-
-                End If
-
-                '■テンプレートマッチング（ロード9）
-                If chknow_load9.Checked = True Then
-                    If async_load9_onoff = 1 Then
-                        If Not maxval_load9 = 1 Then
-
-                            '■ローディング結果を表示
-                            lblcv_nowmaxval_load9.Text = Math.Round(100 * maxval_load9, 2, MidpointRounding.AwayFromZero) '100 * maxval
-
-                            If CDbl(lblcv_maxval_load9.Text) < 100 * maxval_load9 Then
-                                lblcv_maxval_load9.Text = Math.Round(100 * maxval_load9, 2, MidpointRounding.AwayFromZero) '100 * maxval
-
-                            End If
-                        End If
-
-                        '■ローディングがマッチングされた。
-                        If CDbl(lblcv_maxval_load9.Text) > CDbl(txtcv_ikiti_load9.Text) Then
-
-                            Console.WriteLine("Show loading")
-
-
-                            allkeysend_load() '[play→sleep]pauseを送る
-
-                            txtstate.Text = My.Resources.Message.msg39 '"ロード中"
-                            lblloading.Text = "loading"
-
-                            msec_pause = CDbl(timeGetTime)
-
-                            cvtimer_loadremover9.Start()
-
-
-                            'ロード除去が1つ働いている時、他のLoading監視をすべて止める。
-                            chknow_load1.Checked = False
-                            chknow_load2.Checked = False
-                            chknow_load3.Checked = False
-                            chknow_load4.Checked = False
-                            chknow_load5.Checked = False
-                            chknow_load6.Checked = False
-                            chknow_load7.Checked = False
-                            chknow_load8.Checked = False
-                            chknow_load9.Checked = False
-                            chknow_load10.Checked = False
-
-                            async_load1_onoff = 0
-                            async_load2_onoff = 0
-                            async_load3_onoff = 0
-                            async_load4_onoff = 0
-                            async_load5_onoff = 0
-                            async_load6_onoff = 0
-                            async_load7_onoff = 0
-                            async_load8_onoff = 0
-                            async_load9_onoff = 0
-                            async_load10_onoff = 0
-
-                            If chkcv_resetonoff.Checked = True Then
-
-                                chknow_reset.Checked = True
-
-
-                            End If
-
-                        End If
-
-                    End If
-
-                End If
-
-                '■テンプレートマッチング（ロード10）
-                If chknow_load10.Checked = True Then
-                    If async_load10_onoff = 1 Then
-                        If Not maxval_load10 = 1 Then
-
-                            '■ローディング結果を表示
-                            lblcv_nowmaxval_load10.Text = Math.Round(100 * maxval_load10, 2, MidpointRounding.AwayFromZero) '100 * maxval
-
-                            If CDbl(lblcv_maxval_load10.Text) < 100 * maxval_load10 Then
-                                lblcv_maxval_load10.Text = Math.Round(100 * maxval_load10, 2, MidpointRounding.AwayFromZero) '100 * maxval
-
-                            End If
-                        End If
-
-                        '■ローディングがマッチングされた。
-                        If CDbl(lblcv_maxval_load10.Text) > CDbl(txtcv_ikiti_load10.Text) Then
-
-                            Console.WriteLine("Show loading")
-
-
-                            allkeysend_load() '[play→sleep]pauseを送る
-
-                            txtstate.Text = My.Resources.Message.msg39 '"ロード中"
-                            lblloading.Text = "loading"
-
-                            msec_pause = CDbl(timeGetTime)
-
-                            cvtimer_loadremover10.Start()
-
-
-                            'ロード除去が1つ働いている時、他のLoading監視をすべて止める。
-                            chknow_load1.Checked = False
-                            chknow_load2.Checked = False
-                            chknow_load3.Checked = False
-                            chknow_load4.Checked = False
-                            chknow_load5.Checked = False
-                            chknow_load6.Checked = False
-                            chknow_load7.Checked = False
-                            chknow_load8.Checked = False
-                            chknow_load9.Checked = False
-                            chknow_load10.Checked = False
-
-
-                            async_load1_onoff = 0
-                            async_load2_onoff = 0
-                            async_load3_onoff = 0
-                            async_load4_onoff = 0
-                            async_load5_onoff = 0
-                            async_load6_onoff = 0
-                            async_load7_onoff = 0
-                            async_load8_onoff = 0
-                            async_load9_onoff = 0
-                            async_load10_onoff = 0
-
-
-                            If chkcv_resetonoff.Checked = True Then
-
-                                chknow_reset.Checked = True
-
-
-                            End If
-
-                        End If
-
-
-                    End If
-
-                End If
-
-
-
-                If cmbloadno.SelectedIndex = 1 - 1 Then
-                    lblcv_maxval_load.Text = lblcv_maxval_load1.Text
-                    lblcv_nowmaxval_load.Text = lblcv_nowmaxval_load1.Text
-                    txtcv_ikiti_load.Text = txtcv_ikiti_load1.Text
-
-                ElseIf cmbloadno.SelectedIndex = 2 - 1 Then
-                    lblcv_maxval_load.Text = lblcv_maxval_load2.Text
-                    lblcv_nowmaxval_load.Text = lblcv_nowmaxval_load2.Text
-                    txtcv_ikiti_load.Text = txtcv_ikiti_load2.Text
-
-                ElseIf cmbloadno.SelectedIndex = 3 - 1 Then
-                    lblcv_maxval_load.Text = lblcv_maxval_load3.Text
-                    lblcv_nowmaxval_load.Text = lblcv_nowmaxval_load3.Text
-                    txtcv_ikiti_load.Text = txtcv_ikiti_load3.Text
-
-                ElseIf cmbloadno.SelectedIndex = 4 - 1 Then
-                    lblcv_maxval_load.Text = lblcv_maxval_load4.Text
-                    lblcv_nowmaxval_load.Text = lblcv_nowmaxval_load4.Text
-                    txtcv_ikiti_load.Text = txtcv_ikiti_load4.Text
-
-                ElseIf cmbloadno.SelectedIndex = 5 - 1 Then
-                    lblcv_maxval_load.Text = lblcv_maxval_load5.Text
-                    lblcv_nowmaxval_load.Text = lblcv_nowmaxval_load5.Text
-                    txtcv_ikiti_load.Text = txtcv_ikiti_load5.Text
-
-                ElseIf cmbloadno.SelectedIndex = 6 - 1 Then
-                    lblcv_maxval_load.Text = lblcv_maxval_load6.Text
-                    lblcv_nowmaxval_load.Text = lblcv_nowmaxval_load6.Text
-                    txtcv_ikiti_load.Text = txtcv_ikiti_load6.Text
-
-                ElseIf cmbloadno.SelectedIndex = 7 - 1 Then
-                    lblcv_maxval_load.Text = lblcv_maxval_load7.Text
-                    lblcv_nowmaxval_load.Text = lblcv_nowmaxval_load7.Text
-                    txtcv_ikiti_load.Text = txtcv_ikiti_load7.Text
-
-                ElseIf cmbloadno.SelectedIndex = 8 - 1 Then
-                    lblcv_maxval_load.Text = lblcv_maxval_load8.Text
-                    lblcv_nowmaxval_load.Text = lblcv_nowmaxval_load8.Text
-                    txtcv_ikiti_load.Text = txtcv_ikiti_load8.Text
-
-                ElseIf cmbloadno.SelectedIndex = 9 - 1 Then
-                    lblcv_maxval_load.Text = lblcv_maxval_load9.Text
-                    lblcv_nowmaxval_load.Text = lblcv_nowmaxval_load9.Text
-                    txtcv_ikiti_load.Text = txtcv_ikiti_load9.Text
-
-                ElseIf cmbloadno.SelectedIndex = 10 - 1 Then
-                    lblcv_maxval_load.Text = lblcv_maxval_load10.Text
-                    lblcv_nowmaxval_load.Text = lblcv_nowmaxval_load10.Text
-                    txtcv_ikiti_load.Text = txtcv_ikiti_load10.Text
 
                 End If
 
 
             End If
+
+            '■テンプレートマッチング（ロード9）
+            If chknow_load9.Checked = True Then
+                If async_load9_onoff = 1 Then
+                    If Not maxval_load9 = 1 Then
+
+                        '■ローディング結果を表示
+                        lblcv_nowmaxval_load9.Text = Math.Round(100 * maxval_load9, 2, MidpointRounding.AwayFromZero) '100 * maxval
+
+                        If CDbl(lblcv_maxval_load9.Text) < 100 * maxval_load9 Then
+                            lblcv_maxval_load9.Text = Math.Round(100 * maxval_load9, 2, MidpointRounding.AwayFromZero) '100 * maxval
+
+                        End If
+                    End If
+
+                    '■ローディングがマッチングされた。
+                    If CDbl(lblcv_maxval_load9.Text) > CDbl(txtcv_ikiti_load9.Text) Then
+
+                        Console.WriteLine("Show loading")
+
+
+                        allkeysend_load() '[play→sleep]pauseを送る
+
+                        txtstate.Text = My.Resources.Message.msg39 '"ロード中"
+                        lblloading.Text = "loading"
+
+                        msec_pause = CDbl(timeGetTime)
+
+                        cvtimer_loadremover9.Start()
+
+
+                        'ロード除去が1つ働いている時、他のLoading監視をすべて止める。
+                        chknow_load1.Checked = False
+                        chknow_load2.Checked = False
+                        chknow_load3.Checked = False
+                        chknow_load4.Checked = False
+                        chknow_load5.Checked = False
+                        chknow_load6.Checked = False
+                        chknow_load7.Checked = False
+                        chknow_load8.Checked = False
+                        chknow_load9.Checked = False
+                        chknow_load10.Checked = False
+
+                        async_load1_onoff = 0
+                        async_load2_onoff = 0
+                        async_load3_onoff = 0
+                        async_load4_onoff = 0
+                        async_load5_onoff = 0
+                        async_load6_onoff = 0
+                        async_load7_onoff = 0
+                        async_load8_onoff = 0
+                        async_load9_onoff = 0
+                        async_load10_onoff = 0
+
+                        If chkcv_resetonoff.Checked = True Then
+
+                            chknow_reset.Checked = True
+
+
+                        End If
+
+                    End If
+
+                End If
+
+            End If
+
+            '■テンプレートマッチング（ロード10）
+            If chknow_load10.Checked = True Then
+                If async_load10_onoff = 1 Then
+                    If Not maxval_load10 = 1 Then
+
+                        '■ローディング結果を表示
+                        lblcv_nowmaxval_load10.Text = Math.Round(100 * maxval_load10, 2, MidpointRounding.AwayFromZero) '100 * maxval
+
+                        If CDbl(lblcv_maxval_load10.Text) < 100 * maxval_load10 Then
+                            lblcv_maxval_load10.Text = Math.Round(100 * maxval_load10, 2, MidpointRounding.AwayFromZero) '100 * maxval
+
+                        End If
+                    End If
+
+                    '■ローディングがマッチングされた。
+                    If CDbl(lblcv_maxval_load10.Text) > CDbl(txtcv_ikiti_load10.Text) Then
+
+                        Console.WriteLine("Show loading")
+
+
+                        allkeysend_load() '[play→sleep]pauseを送る
+
+                        txtstate.Text = My.Resources.Message.msg39 '"ロード中"
+                        lblloading.Text = "loading"
+
+                        msec_pause = CDbl(timeGetTime)
+
+                        cvtimer_loadremover10.Start()
+
+
+                        'ロード除去が1つ働いている時、他のLoading監視をすべて止める。
+                        chknow_load1.Checked = False
+                        chknow_load2.Checked = False
+                        chknow_load3.Checked = False
+                        chknow_load4.Checked = False
+                        chknow_load5.Checked = False
+                        chknow_load6.Checked = False
+                        chknow_load7.Checked = False
+                        chknow_load8.Checked = False
+                        chknow_load9.Checked = False
+                        chknow_load10.Checked = False
+
+
+                        async_load1_onoff = 0
+                        async_load2_onoff = 0
+                        async_load3_onoff = 0
+                        async_load4_onoff = 0
+                        async_load5_onoff = 0
+                        async_load6_onoff = 0
+                        async_load7_onoff = 0
+                        async_load8_onoff = 0
+                        async_load9_onoff = 0
+                        async_load10_onoff = 0
+
+
+                        If chkcv_resetonoff.Checked = True Then
+
+                            chknow_reset.Checked = True
+
+
+                        End If
+
+                    End If
+
+
+                End If
+
+            End If
+
+
+
+            If cmbloadno.SelectedIndex = 1 - 1 Then
+                lblcv_maxval_load.Text = lblcv_maxval_load1.Text
+                lblcv_nowmaxval_load.Text = lblcv_nowmaxval_load1.Text
+                txtcv_ikiti_load.Text = txtcv_ikiti_load1.Text
+
+            ElseIf cmbloadno.SelectedIndex = 2 - 1 Then
+                lblcv_maxval_load.Text = lblcv_maxval_load2.Text
+                lblcv_nowmaxval_load.Text = lblcv_nowmaxval_load2.Text
+                txtcv_ikiti_load.Text = txtcv_ikiti_load2.Text
+
+            ElseIf cmbloadno.SelectedIndex = 3 - 1 Then
+                lblcv_maxval_load.Text = lblcv_maxval_load3.Text
+                lblcv_nowmaxval_load.Text = lblcv_nowmaxval_load3.Text
+                txtcv_ikiti_load.Text = txtcv_ikiti_load3.Text
+
+            ElseIf cmbloadno.SelectedIndex = 4 - 1 Then
+                lblcv_maxval_load.Text = lblcv_maxval_load4.Text
+                lblcv_nowmaxval_load.Text = lblcv_nowmaxval_load4.Text
+                txtcv_ikiti_load.Text = txtcv_ikiti_load4.Text
+
+            ElseIf cmbloadno.SelectedIndex = 5 - 1 Then
+                lblcv_maxval_load.Text = lblcv_maxval_load5.Text
+                lblcv_nowmaxval_load.Text = lblcv_nowmaxval_load5.Text
+                txtcv_ikiti_load.Text = txtcv_ikiti_load5.Text
+
+            ElseIf cmbloadno.SelectedIndex = 6 - 1 Then
+                lblcv_maxval_load.Text = lblcv_maxval_load6.Text
+                lblcv_nowmaxval_load.Text = lblcv_nowmaxval_load6.Text
+                txtcv_ikiti_load.Text = txtcv_ikiti_load6.Text
+
+            ElseIf cmbloadno.SelectedIndex = 7 - 1 Then
+                lblcv_maxval_load.Text = lblcv_maxval_load7.Text
+                lblcv_nowmaxval_load.Text = lblcv_nowmaxval_load7.Text
+                txtcv_ikiti_load.Text = txtcv_ikiti_load7.Text
+
+            ElseIf cmbloadno.SelectedIndex = 8 - 1 Then
+                lblcv_maxval_load.Text = lblcv_maxval_load8.Text
+                lblcv_nowmaxval_load.Text = lblcv_nowmaxval_load8.Text
+                txtcv_ikiti_load.Text = txtcv_ikiti_load8.Text
+
+            ElseIf cmbloadno.SelectedIndex = 9 - 1 Then
+                lblcv_maxval_load.Text = lblcv_maxval_load9.Text
+                lblcv_nowmaxval_load.Text = lblcv_nowmaxval_load9.Text
+                txtcv_ikiti_load.Text = txtcv_ikiti_load9.Text
+
+            ElseIf cmbloadno.SelectedIndex = 10 - 1 Then
+                lblcv_maxval_load.Text = lblcv_maxval_load10.Text
+                lblcv_nowmaxval_load.Text = lblcv_nowmaxval_load10.Text
+                txtcv_ikiti_load.Text = txtcv_ikiti_load10.Text
+
+            End If
+
+
+        End If
 
 
 
@@ -9605,10 +10232,54 @@ Public Class Mainwindow
                 txtstate.Text = My.Resources.Message.msg30 '"画像認識中"
 
                 '■プレビュー画面の更新
-                'NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
                 capturecv.Read(frame)
 
-                picipl_cap.ImageIpl = frame
+                If chkcv_crop.Checked = True Then
+
+                    '■先にクロップをする。
+                    dst_cropRect = New Mat(frame, New OpenCvSharp.Rect(CInt(txtcv_crop_posx.Text), CInt(txtcv_crop_posy.Text),
+                                   CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text)))
+
+                    Dim dst_cropped As Mat = New Mat(CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text), MatType.CV_32FC1)
+
+                    dst_cropRect.CopyTo(dst_cropped)
+
+                    '■リサイズ
+                    dst_resize = New Mat()
+                    Cv2.Resize(dst_cropped, dst_resize, New OpenCvSharp.Size(numcv_sizex.Value, numcv_sizey.Value), 0, 0, interpolation:=InterpolationFlags.Nearest)
+
+                    picipl_cap.ImageIpl = dst_resize
+                    imgex = dst_resize
+
+                    dst_cropRect.Dispose()
+                    dst_cropped.Dispose()
+                    'dst_resize.Dispose()
+
+
+                ElseIf chkcv_crop.Checked = False Then 'クロップなし。リサイズ有無で分岐
+
+                    If numcv_sizex.Value = numcrop_resolution_x.Value And
+                       numcv_sizey.Value = numcrop_resolution_y.Value Then
+
+                        picipl_cap.ImageIpl = frame
+                        imgex = frame
+
+
+                    Else
+
+                        dst_resize = New Mat()
+                        Cv2.Resize(frame, dst_resize, New OpenCvSharp.Size(numcv_sizex.Value, numcv_sizey.Value), 0, 0, interpolation:=InterpolationFlags.Nearest)
+
+                        picipl_cap.ImageIpl = dst_resize
+                        imgex = dst_resize
+
+                        'dst_resize.Dispose()
+
+
+                    End If
+
+                End If
+
 
 
                 onetimematching()
@@ -9635,24 +10306,77 @@ Public Class Mainwindow
 
     End Sub
 
+    Private Sub Getimgex()
+        '■プレビュー画面の更新
+        capturecv.Read(frame)
 
+        If chkcv_crop.Checked = True Then
+
+            '■先にクロップをする。
+            dst_cropRect = New Mat(frame, New OpenCvSharp.Rect(CInt(txtcv_crop_posx.Text), CInt(txtcv_crop_posy.Text),
+                                   CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text)))
+
+            Dim dst_cropped As Mat = New Mat(CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text), MatType.CV_32FC1)
+
+            dst_cropRect.CopyTo(dst_cropped)
+
+            '■リサイズ
+            dst_resize = New Mat()
+            Cv2.Resize(dst_cropped, dst_resize, New OpenCvSharp.Size(numcv_sizex.Value, numcv_sizey.Value), 0, 0, interpolation:=InterpolationFlags.Nearest)
+
+            picipl_cap.ImageIpl = dst_resize
+            imgex = dst_resize
+
+            dst_cropRect.Dispose()
+            dst_cropped.Dispose()
+            'dst_resize.Dispose()
+
+
+        ElseIf chkcv_crop.Checked = False Then 'クロップなし。リサイズ有無で分岐
+
+            If numcv_sizex.Value = numcrop_resolution_x.Value And
+               numcv_sizey.Value = numcrop_resolution_y.Value Then
+
+                picipl_cap.ImageIpl = frame
+                imgex = frame
+
+
+            Else
+
+                dst_resize = New Mat()
+                Cv2.Resize(frame, dst_resize, New OpenCvSharp.Size(numcv_sizex.Value, numcv_sizey.Value), 0, 0, interpolation:=InterpolationFlags.Nearest)
+
+                picipl_cap.ImageIpl = dst_resize
+                imgex = dst_resize
+
+                'dst_resize.Dispose()
+
+
+            End If
+
+        End If
+    End Sub
 
     Private Sub onetimematching() 'なぜかマッチングを1回挟まないと、連続でマッチング判定が起こってしまう（誤判定）
 
-
+        '■プレビュー画面の更新
+        Getimgex()
 
         Using res1 As New Mat(imgex.Width - tplex.Width + 1, imgex.Height - tplex.Height + 1, MatType.CV_32FC1)
 
-                Cv2.MatchTemplate(imgex, tplex, res1, TemplateMatchModes.CCoeffNormed)
-                Cv2.MinMaxLoc(res1, minval_split, maxval_split, minloc_split, maxloc_split, Nothing)
+            Cv2.MatchTemplate(imgex, tplex, res1, TemplateMatchModes.CCoeffNormed)
+            Cv2.MinMaxLoc(res1, minval_split, maxval_split, minloc_split, maxloc_split, Nothing)
 
-            End Using
+        End Using
 
         async_split_onoff = 1 '♥
 
     End Sub
 
     Private Sub onetimematching_reset() 'なぜかマッチングを1回挟まないと、連続でマッチング判定が起こってしまう（誤判定）
+
+        Getimgex()
+
 
         Using res2 As New Mat(imgex.Width - tplex_r.Width + 1, imgex.Height - tplex_r.Height + 1, MatType.CV_32FC1)
 
@@ -9666,6 +10390,7 @@ Public Class Mainwindow
     End Sub
 
     Private Sub onetimematching_load1() 'なぜかマッチングを1回挟まないと、連続でマッチング判定が起こってしまう（誤判定）
+        Getimgex()
 
         Using res_load1 As New Mat(imgex.Width - tplex_load1.Width + 1, imgex.Height - tplex_load1.Height + 1, MatType.CV_32FC1)
 
@@ -9678,6 +10403,7 @@ Public Class Mainwindow
     End Sub
 
     Private Sub onetimematching_load2() 'なぜかマッチングを1回挟まないと、連続でマッチング判定が起こってしまう（誤判定）
+        Getimgex()
 
         Using res_load2 As New Mat(imgex.Width - tplex_load2.Width + 1, imgex.Height - tplex_load2.Height + 1, MatType.CV_32FC1)
 
@@ -9690,6 +10416,7 @@ Public Class Mainwindow
     End Sub
 
     Private Sub onetimematching_load3() 'なぜかマッチングを1回挟まないと、連続でマッチング判定が起こってしまう（誤判定）
+        Getimgex()
 
         Using res_load3 As New Mat(imgex.Width - tplex_load3.Width + 1, imgex.Height - tplex_load3.Height + 1, MatType.CV_32FC1)
 
@@ -9702,6 +10429,7 @@ Public Class Mainwindow
     End Sub
 
     Private Sub onetimematching_load4() 'なぜかマッチングを1回挟まないと、連続でマッチング判定が起こってしまう（誤判定）
+        Getimgex()
 
         Using res_load4 As New Mat(imgex.Width - tplex_load4.Width + 1, imgex.Height - tplex_load4.Height + 1, MatType.CV_32FC1)
 
@@ -9714,6 +10442,7 @@ Public Class Mainwindow
     End Sub
 
     Private Sub onetimematching_load5() 'なぜかマッチングを1回挟まないと、連続でマッチング判定が起こってしまう（誤判定）
+        Getimgex()
 
         Using res_load5 As New Mat(imgex.Width - tplex_load5.Width + 1, imgex.Height - tplex_load5.Height + 1, MatType.CV_32FC1)
 
@@ -9726,6 +10455,7 @@ Public Class Mainwindow
     End Sub
 
     Private Sub onetimematching_load6() 'なぜかマッチングを1回挟まないと、連続でマッチング判定が起こってしまう（誤判定）
+        Getimgex()
 
         Using res_load6 As New Mat(imgex.Width - tplex_load6.Width + 1, imgex.Height - tplex_load6.Height + 1, MatType.CV_32FC1)
 
@@ -9738,6 +10468,7 @@ Public Class Mainwindow
     End Sub
 
     Private Sub onetimematching_load7() 'なぜかマッチングを1回挟まないと、連続でマッチング判定が起こってしまう（誤判定）
+        Getimgex()
 
         Using res_load7 As New Mat(imgex.Width - tplex_load7.Width + 1, imgex.Height - tplex_load7.Height + 1, MatType.CV_32FC1)
 
@@ -9750,6 +10481,7 @@ Public Class Mainwindow
     End Sub
 
     Private Sub onetimematching_load8() 'なぜかマッチングを1回挟まないと、連続でマッチング判定が起こってしまう（誤判定）
+        Getimgex()
 
         Using res_load8 As New Mat(imgex.Width - tplex_load8.Width + 1, imgex.Height - tplex_load8.Height + 1, MatType.CV_32FC1)
 
@@ -9762,6 +10494,7 @@ Public Class Mainwindow
     End Sub
 
     Private Sub onetimematching_load9() 'なぜかマッチングを1回挟まないと、連続でマッチング判定が起こってしまう（誤判定）
+        Getimgex()
 
         Using res_load9 As New Mat(imgex.Width - tplex_load9.Width + 1, imgex.Height - tplex_load9.Height + 1, MatType.CV_32FC1)
 
@@ -9774,6 +10507,7 @@ Public Class Mainwindow
     End Sub
 
     Private Sub onetimematching_load10() 'なぜかマッチングを1回挟まないと、連続でマッチング判定が起こってしまう（誤判定）
+        Getimgex()
 
         Using res_load10 As New Mat(imgex.Width - tplex_load10.Width + 1, imgex.Height - tplex_load10.Height + 1, MatType.CV_32FC1)
 
@@ -10921,7 +11655,52 @@ Public Class Mainwindow
         'NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
         capturecv.Read(frame)
 
-        picipl_cap.ImageIpl = frame
+        If chkcv_crop.Checked = True Then
+
+            '■先にクロップをする。
+            dst_cropRect = New Mat(frame, New OpenCvSharp.Rect(CInt(txtcv_crop_posx.Text), CInt(txtcv_crop_posy.Text),
+                                   CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text)))
+
+            Dim dst_cropped As Mat = New Mat(CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text), MatType.CV_32FC1)
+
+            dst_cropRect.CopyTo(dst_cropped)
+
+            '■リサイズ
+            dst_resize = New Mat()
+            Cv2.Resize(dst_cropped, dst_resize, New OpenCvSharp.Size(numcv_sizex.Value, numcv_sizey.Value), 0, 0, interpolation:=InterpolationFlags.Nearest)
+
+            picipl_cap.ImageIpl = dst_resize
+            imgex = dst_resize
+
+            dst_cropRect.Dispose()
+            dst_cropped.Dispose()
+            'dst_resize.Dispose()
+
+
+        ElseIf chkcv_crop.Checked = False Then 'クロップなし。リサイズ有無で分岐
+
+            If numcv_sizex.Value = numcrop_resolution_x.Value And
+               numcv_sizey.Value = numcrop_resolution_y.Value Then
+
+                picipl_cap.ImageIpl = frame
+                imgex = frame
+
+
+            Else
+
+                dst_resize = New Mat()
+                Cv2.Resize(frame, dst_resize, New OpenCvSharp.Size(numcv_sizex.Value, numcv_sizey.Value), 0, 0, interpolation:=InterpolationFlags.Nearest)
+
+                picipl_cap.ImageIpl = dst_resize
+                imgex = dst_resize
+
+                'dst_resize.Dispose()
+
+
+            End If
+
+        End If
+
 
     End Sub
 
@@ -11242,14 +12021,6 @@ Public Class Mainwindow
 
     '■監視の停止
     Private Sub btncv_stop_Click(sender As Object, e As EventArgs) Handles btncv_stop.Click
-
-        '■画像フォルダの一時ファイルを作成するかどうか
-        If chkcreate_temppicture.Checked = True Then
-
-            '■passをtempから元に戻す
-            txtpass_picturefolder.Text = txttemp_picturepass.Text
-
-        End If
 
         lblreload_graph.Text = 0
         lbllooptrigger.Text = 0
@@ -12273,11 +13044,11 @@ Public Class Mainwindow
             Next
         End Using
 
-        Using st6 As New System.IO.StreamWriter("./savedata/04_resolution.txt", False, System.Text.Encoding.Default)
-            For iiiiii As Integer = 0 To cmbcv_resolution.Items.Count - 1
-                st6.WriteLine(cmbcv_resolution.Items(iiiiii))
-            Next
-        End Using
+        'Using st6 As New System.IO.StreamWriter("./savedata/04_resolution.txt", False, System.Text.Encoding.Default)
+        '    For iiiiii As Integer = 0 To cmbcv_resolution_view.Items.Count - 1
+        '        st6.WriteLine(cmbcv_resolution_view.Items(iiiiii))
+        '    Next
+        'End Using
 
 
         '表1（設定タブ）の保存用##############################################################################
@@ -13101,7 +13872,7 @@ Public Class Mainwindow
             numcv_interval.Value = txtloadprofile.Lines(17)
 
             cmbcv_device.SelectedIndex = txtloadprofile.Lines(20)
-            cmbcv_resolution.SelectedIndex = txtloadprofile.Lines(21)
+            cmbcv_resolution_view.SelectedIndex = txtloadprofile.Lines(21)
             numcv_framerate.Value = txtloadprofile.Lines(22)
 
             chkactiveapp.Checked = txtloadprofile.Lines(25)
@@ -13375,7 +14146,7 @@ Public Class Mainwindow
             lblcur_device_name.Text = cmbcv_device.SelectedItem
 
 
-            lblcur_device_res_fps.Text = cmbcv_resolution.SelectedItem & " - " & numcv_framerate.Value & "fps"
+            lblcur_device_res_fps.Text = cmbcv_resolution_view.SelectedItem & " - " & numcv_framerate.Value & "fps"
 
             If chkactiveapp.Checked = True Then
                 lblcur_focus_before.Text = cmbtimer.SelectedItem
@@ -14292,7 +15063,8 @@ Public Class Mainwindow
 
     Private Sub PreviewGetTemplatePictureToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PreviewGetTemplatePictureToolStripMenuItem.Click
         If btncur_webcamera.BackColor = Color.DarkRed Then
-            cv_preview()
+            btndescription_table.Visible = False
+            cv_prepare()
 
         Else
             MessageBox.Show(My.Resources.Message.msg50, messagebox_name) '仮想カメラとの接続を行って下さい。
@@ -14320,7 +15092,7 @@ Public Class Mainwindow
     End Sub
 
     Private Sub InformationToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InformationToolStripMenuItem.Click
-        TabControl1.SelectedIndex = 4
+        TabControl1.SelectedIndex = 5
 
     End Sub
 
@@ -14378,22 +15150,6 @@ Public Class Mainwindow
 
     End Sub
 
-    Private Sub link_inteltbb_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles link_inteltbb.LinkClicked
-        rtxtlicense.Clear()
-        '現在のコードを実行しているAssemblyを取得
-        Dim myAssembly As System.Reflection.Assembly = Reflection.Assembly.GetExecutingAssembly()
-        '指定されたマニフェストリソースを読み込む
-        Dim sr As New System.IO.StreamReader(
-            myAssembly.GetManifestResourceStream("AutoSplitHelper_OpenCV.Licence[Intel_TBB].txt"),
-                System.Text.Encoding.UTF8)
-        '内容を読み込む
-        Dim s As String = sr.ReadToEnd()
-        '後始末
-        sr.Close()
-        sr.Dispose()
-        rtxtlicense.Text = s
-
-    End Sub
 
     Private Sub link_directshowlib_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles link_directshowlib.LinkClicked
         rtxtlicense.Clear()
@@ -14431,7 +15187,7 @@ Public Class Mainwindow
 
 
     Private Sub LicenseLToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LicenseLToolStripMenuItem.Click
-        TabControl1.SelectedIndex = 5
+        TabControl1.SelectedIndex = 6
     End Sub
 
     Private Sub UploadTheCurrentProfileUToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UploadTheCurrentProfileUToolStripMenuItem.Click
@@ -14477,7 +15233,6 @@ Public Class Mainwindow
 
 
     End Sub
-
 
     '♥
     '常時作成にしたほうが良いかも知れない。
@@ -14565,7 +15320,7 @@ numcv_interval.Value,
 "-",
 "##########OpenCV Parameter##########",
 cmbcv_device.SelectedIndex,
-cmbcv_resolution.SelectedIndex,
+cmbcv_resolution_view.SelectedIndex,
 numcv_framerate.Value,
 "-",
 "##########Focus##########",
@@ -14686,6 +15441,8 @@ CInt(chkmonitor_sizestate.Checked)
 
     End Sub
 
+
+
     Private Sub numpercent_Enter(sender As Object, e As EventArgs) Handles numpercent.Enter
         numpercent.Select(0, numpercent.Text.Length)
 
@@ -14705,15 +15462,20 @@ CInt(chkmonitor_sizestate.Checked)
 
     End Sub
 
+
+
     Private Sub numcv_interval_Enter(sender As Object, e As EventArgs) Handles numcv_interval.Enter
         numcv_interval.Select(0, numcv_interval.Text.Length)
 
     End Sub
 
+
+
     Private Sub numcv_framerate_Enter(sender As Object, e As EventArgs) Handles numcv_framerate.Enter
         numcv_framerate.Select(0, numcv_framerate.Text.Length)
 
     End Sub
+
 
     Private Sub numsendsleep_Enter(sender As Object, e As EventArgs) Handles numsendsleep.Enter
         numsendsleep.Select(0, numsendsleep.Text.Length)
@@ -14894,7 +15656,7 @@ CInt(chkmonitor_sizestate.Checked)
             Catch ex As Exception
 
                 Console.WriteLine("インターネットに接続されていないようです。")
-                rtxtlog.AppendText(Now & " " & "インターネットに接続されていないようです。" & vbCrLf & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
+            rtxtlog.AppendText(Now & " " & "インターネットに接続されていないようです。" & vbCrLf & ex.Message & vbCrLf & ex.StackTrace & vbCrLf)
 
             End Try
 
@@ -14920,5 +15682,80 @@ CInt(chkmonitor_sizestate.Checked)
     End Sub
 
 
-End Class
+    Private Sub rdocapture_opencv_CheckedChanged(sender As Object, e As EventArgs) Handles rdocapture_opencv.CheckedChanged
+        If rdocapture_opencv.Checked = True Then
+            chklimit.Enabled = True
+            chkloading.Enabled = True
 
+
+
+
+        End If
+
+
+    End Sub
+
+
+    Private Sub rdocapture_rgb_CheckedChanged(sender As Object, e As EventArgs) Handles rdocapture_rgb.CheckedChanged
+        If rdocapture_rgb.Checked = True Then
+            chklimit.Checked = False
+            chkloading.Checked = False
+
+            chklimit.Enabled = False
+            chkloading.Enabled = False
+        Else
+
+
+
+        End If
+    End Sub
+
+    Private Sub rdocapture_rgbfull_CheckedChanged(sender As Object, e As EventArgs) Handles rdocapture_rgbfull.CheckedChanged
+
+        If rdocapture_rgbfull.Checked = True Then
+            chklimit.Checked = False
+            chkloading.Checked = False
+
+            chklimit.Enabled = False
+            chkloading.Enabled = False
+        End If
+
+
+    End Sub
+
+    Private Sub btncv_crop_setting_Click(sender As Object, e As EventArgs) Handles btncv_crop_setting.Click
+        If btncur_webcamera.BackColor = Color.DarkRed Then
+
+            btndescription_table.Visible = False
+
+            TabControl1.SelectedIndex = 4
+            Crop_setup()
+
+        Else
+            MessageBox.Show(My.Resources.Message.msg50, messagebox_name) '仮想カメラとの接続を行って下さい。
+
+
+        End If
+
+    End Sub
+
+
+    Private Sub cmbcv_resolution_input_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbcv_resolution_input.SelectedIndexChanged
+        '■コンボボックスの値を下に代入■■■■■■
+        ' 必要な変数を宣言する
+        Dim stCsvData As String = cmbcv_resolution_input.SelectedItem
+
+        ' カンマ区切りで分割して配列に格納する
+        Dim stArrayData As String() = stCsvData.Split("x"c)
+
+        numcrop_resolution_x.Value = CInt(stArrayData(0))
+        numcrop_resolution_y.Value = CInt(stArrayData(1))
+
+        btnstartopencv.Enabled = False
+
+        '■Current Settingへの反映
+        lblcur_device_res_fps.Text = cmbcv_resolution_view.SelectedItem & " - " & numcv_framerate.Value & "fps"
+
+    End Sub
+
+End Class

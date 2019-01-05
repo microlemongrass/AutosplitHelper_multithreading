@@ -27,7 +27,6 @@ Partial Class Mainwindow
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.btndescription_table = New System.Windows.Forms.Button()
         Me.txtrowscount = New System.Windows.Forms.TextBox()
         Me.DGtable = New System.Windows.Forms.DataGridView()
         Me.no = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -53,6 +52,7 @@ Partial Class Mainwindow
         Me.lty = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.rbx = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.rby = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btndescription_table = New System.Windows.Forms.Button()
         Me.pnlview_window = New System.Windows.Forms.Panel()
         Me.piccap = New System.Windows.Forms.PictureBox()
         Me.pictempipl = New OpenCvSharp.UserInterface.PictureBoxIpl()
@@ -234,13 +234,24 @@ Partial Class Mainwindow
         Me.chkshift_skip = New System.Windows.Forms.CheckBox()
         Me.listsetcontents = New System.Windows.Forms.ListBox()
         Me.pnl_cvparameter = New System.Windows.Forms.Panel()
+        Me.txtcv_crop_sizey = New System.Windows.Forms.TextBox()
+        Me.txtcv_crop_sizex = New System.Windows.Forms.TextBox()
+        Me.Label48 = New System.Windows.Forms.Label()
+        Me.Label50 = New System.Windows.Forms.Label()
+        Me.txtcv_crop_posy = New System.Windows.Forms.TextBox()
+        Me.txtcv_crop_posx = New System.Windows.Forms.TextBox()
+        Me.Label47 = New System.Windows.Forms.Label()
+        Me.Label45 = New System.Windows.Forms.Label()
+        Me.cmbcv_resolution_input = New System.Windows.Forms.ComboBox()
+        Me.btncv_crop_setting = New System.Windows.Forms.Button()
+        Me.chkcv_crop = New System.Windows.Forms.CheckBox()
         Me.Label62 = New System.Windows.Forms.Label()
         Me.Label81 = New System.Windows.Forms.Label()
         Me.Label61 = New System.Windows.Forms.Label()
         Me._moji6 = New System.Windows.Forms.Label()
         Me.numcv_framerate = New System.Windows.Forms.NumericUpDown()
         Me.btnconnect_camera = New System.Windows.Forms.Button()
-        Me.cmbcv_resolution = New System.Windows.Forms.ComboBox()
+        Me.cmbcv_resolution_view = New System.Windows.Forms.ComboBox()
         Me.numcv_device = New System.Windows.Forms.NumericUpDown()
         Me.btnresetup = New System.Windows.Forms.Button()
         Me._moji5 = New System.Windows.Forms.Label()
@@ -274,7 +285,6 @@ Partial Class Mainwindow
         Me.numtextwindow_sizex = New System.Windows.Forms.NumericUpDown()
         Me.lblcheckopening = New System.Windows.Forms.Label()
         Me.numtextwindow_sizey = New System.Windows.Forms.NumericUpDown()
-        Me.chkcreate_temppicture = New System.Windows.Forms.CheckBox()
         Me.numprofile = New System.Windows.Forms.NumericUpDown()
         Me.Label38 = New System.Windows.Forms.Label()
         Me.txtclickcount = New System.Windows.Forms.TextBox()
@@ -302,8 +312,6 @@ Partial Class Mainwindow
         Me.txt22 = New System.Windows.Forms.TextBox()
         Me.txt12 = New System.Windows.Forms.TextBox()
         Me.txt21 = New System.Windows.Forms.TextBox()
-        Me.txttemp_picturepass = New System.Windows.Forms.TextBox()
-        Me.Label71 = New System.Windows.Forms.Label()
         Me.pnl_parameter = New System.Windows.Forms.Panel()
         Me._moji1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -363,8 +371,6 @@ Partial Class Mainwindow
         Me.txtcv_color_r = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.txtcv_method = New System.Windows.Forms.TextBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.Label77 = New System.Windows.Forms.Label()
         Me.lbllooptrigger = New System.Windows.Forms.Label()
         Me.numnowloop = New System.Windows.Forms.NumericUpDown()
@@ -495,8 +501,6 @@ Partial Class Mainwindow
         Me.PictureBox18 = New System.Windows.Forms.PictureBox()
         Me.PictureBox19 = New System.Windows.Forms.PictureBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.btntosetting01 = New System.Windows.Forms.Button()
         Me.GroupBox9 = New System.Windows.Forms.GroupBox()
         Me.txtrenameapp = New System.Windows.Forms.TextBox()
@@ -617,9 +621,24 @@ Partial Class Mainwindow
         Me.piccalib_comp = New System.Windows.Forms.PictureBox()
         Me.piccalib_temp = New OpenCvSharp.UserInterface.PictureBoxIpl()
         Me.piccamera = New OpenCvSharp.UserInterface.PictureBoxIpl()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.lblcrop_status = New System.Windows.Forms.Label()
+        Me.btncrop_frame = New System.Windows.Forms.Button()
+        Me.txtcrop_size_y = New System.Windows.Forms.TextBox()
+        Me.txtcrop_size_x = New System.Windows.Forms.TextBox()
+        Me.numcrop_rate = New System.Windows.Forms.NumericUpDown()
+        Me.Label43 = New System.Windows.Forms.Label()
+        Me.Label44 = New System.Windows.Forms.Label()
+        Me.numcrop_resolution_y = New System.Windows.Forms.NumericUpDown()
+        Me.numcrop_resolution_x = New System.Windows.Forms.NumericUpDown()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.Label40 = New System.Windows.Forms.Label()
+        Me.numcrop_position_y = New System.Windows.Forms.NumericUpDown()
+        Me.numcrop_position_x = New System.Windows.Forms.NumericUpDown()
+        Me.btntosetting05 = New System.Windows.Forms.Button()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox12 = New System.Windows.Forms.PictureBox()
         Me.btntosetting02 = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.lbldpi = New System.Windows.Forms.Label()
@@ -643,11 +662,9 @@ Partial Class Mainwindow
         Me.link_dobon = New System.Windows.Forms.LinkLabel()
         Me.Label118 = New System.Windows.Forms.Label()
         Me.Label117 = New System.Windows.Forms.Label()
-        Me.Label116 = New System.Windows.Forms.Label()
         Me.link_directshowlib = New System.Windows.Forms.LinkLabel()
         Me.Label113 = New System.Windows.Forms.Label()
         Me.link_opencvsharp = New System.Windows.Forms.LinkLabel()
-        Me.link_inteltbb = New System.Windows.Forms.LinkLabel()
         Me.Label114 = New System.Windows.Forms.Label()
         Me.Label115 = New System.Windows.Forms.Label()
         Me.btnview_close = New System.Windows.Forms.Button()
@@ -669,6 +686,11 @@ Partial Class Mainwindow
         Me.timcalib = New System.Windows.Forms.Timer(Me.components)
         Me.timash_hotkey_sleep = New System.Windows.Forms.Timer(Me.components)
         Me.timashupdate = New System.Windows.Forms.Timer(Me.components)
+        Me.rdocrop_169 = New System.Windows.Forms.RadioButton()
+        Me.rdocrop_43 = New System.Windows.Forms.RadioButton()
+        Me.Label54 = New System.Windows.Forms.Label()
+        Me.btncrop_ok = New System.Windows.Forms.Button()
+        Me.Label55 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.DGtable, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -743,8 +765,6 @@ Partial Class Mainwindow
         CType(Me.numpercent, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.TabPage5.SuspendLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numnowloop, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox8.SuspendLayout()
         CType(Me.piccv_load, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -757,8 +777,6 @@ Partial Class Mainwindow
         CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox9.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
         CType(Me.dgv2_template, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -791,9 +809,13 @@ Partial Class Mainwindow
         CType(Me.piccalib_comp, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.piccalib_temp, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.piccamera, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage4.SuspendLayout()
+        CType(Me.numcrop_rate, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numcrop_resolution_y, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numcrop_resolution_x, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numcrop_position_y, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numcrop_position_x, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
-        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.TabPage16.SuspendLayout()
@@ -807,6 +829,7 @@ Partial Class Mainwindow
         Me.TabControl1.Controls.Add(Me.TabPage5)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage15)
+        Me.TabControl1.Controls.Add(Me.TabPage4)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage16)
         Me.TabControl1.Multiline = True
@@ -842,14 +865,6 @@ Partial Class Mainwindow
         Me.TabPage1.Controls.Add(Me.btnclose_general)
         Me.TabPage1.ForeColor = System.Drawing.SystemColors.ControlText
         Me.TabPage1.Name = "TabPage1"
-        '
-        'btndescription_table
-        '
-        resources.ApplyResources(Me.btndescription_table, "btndescription_table")
-        Me.btndescription_table.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
-        Me.btndescription_table.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.btndescription_table.Name = "btndescription_table"
-        Me.btndescription_table.UseVisualStyleBackColor = False
         '
         'txtrowscount
         '
@@ -991,6 +1006,14 @@ Partial Class Mainwindow
         '
         resources.ApplyResources(Me.rby, "rby")
         Me.rby.Name = "rby"
+        '
+        'btndescription_table
+        '
+        resources.ApplyResources(Me.btndescription_table, "btndescription_table")
+        Me.btndescription_table.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.btndescription_table.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btndescription_table.Name = "btndescription_table"
+        Me.btndescription_table.UseVisualStyleBackColor = False
         '
         'pnlview_window
         '
@@ -2598,18 +2621,113 @@ Partial Class Mainwindow
         '
         resources.ApplyResources(Me.pnl_cvparameter, "pnl_cvparameter")
         Me.pnl_cvparameter.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.pnl_cvparameter.Controls.Add(Me.Label55)
+        Me.pnl_cvparameter.Controls.Add(Me.txtcv_crop_sizey)
+        Me.pnl_cvparameter.Controls.Add(Me.txtcv_crop_sizex)
+        Me.pnl_cvparameter.Controls.Add(Me.Label48)
+        Me.pnl_cvparameter.Controls.Add(Me.Label50)
+        Me.pnl_cvparameter.Controls.Add(Me.txtcv_crop_posy)
+        Me.pnl_cvparameter.Controls.Add(Me.txtcv_crop_posx)
+        Me.pnl_cvparameter.Controls.Add(Me.Label47)
+        Me.pnl_cvparameter.Controls.Add(Me.Label45)
+        Me.pnl_cvparameter.Controls.Add(Me.cmbcv_resolution_input)
+        Me.pnl_cvparameter.Controls.Add(Me.btncv_crop_setting)
+        Me.pnl_cvparameter.Controls.Add(Me.chkcv_crop)
         Me.pnl_cvparameter.Controls.Add(Me.Label62)
         Me.pnl_cvparameter.Controls.Add(Me.Label81)
         Me.pnl_cvparameter.Controls.Add(Me.Label61)
         Me.pnl_cvparameter.Controls.Add(Me._moji6)
         Me.pnl_cvparameter.Controls.Add(Me.numcv_framerate)
         Me.pnl_cvparameter.Controls.Add(Me.btnconnect_camera)
-        Me.pnl_cvparameter.Controls.Add(Me.cmbcv_resolution)
+        Me.pnl_cvparameter.Controls.Add(Me.cmbcv_resolution_view)
         Me.pnl_cvparameter.Controls.Add(Me.numcv_device)
         Me.pnl_cvparameter.Controls.Add(Me.btnresetup)
         Me.pnl_cvparameter.Controls.Add(Me._moji5)
         Me.pnl_cvparameter.Controls.Add(Me.cmbcv_device)
         Me.pnl_cvparameter.Name = "pnl_cvparameter"
+        '
+        'txtcv_crop_sizey
+        '
+        Me.txtcv_crop_sizey.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        resources.ApplyResources(Me.txtcv_crop_sizey, "txtcv_crop_sizey")
+        Me.txtcv_crop_sizey.ForeColor = System.Drawing.SystemColors.Control
+        Me.txtcv_crop_sizey.Name = "txtcv_crop_sizey"
+        Me.txtcv_crop_sizey.ReadOnly = True
+        '
+        'txtcv_crop_sizex
+        '
+        Me.txtcv_crop_sizex.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        resources.ApplyResources(Me.txtcv_crop_sizex, "txtcv_crop_sizex")
+        Me.txtcv_crop_sizex.ForeColor = System.Drawing.SystemColors.Control
+        Me.txtcv_crop_sizex.Name = "txtcv_crop_sizex"
+        Me.txtcv_crop_sizex.ReadOnly = True
+        '
+        'Label48
+        '
+        resources.ApplyResources(Me.Label48, "Label48")
+        Me.Label48.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label48.Name = "Label48"
+        '
+        'Label50
+        '
+        resources.ApplyResources(Me.Label50, "Label50")
+        Me.Label50.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label50.Name = "Label50"
+        '
+        'txtcv_crop_posy
+        '
+        Me.txtcv_crop_posy.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        resources.ApplyResources(Me.txtcv_crop_posy, "txtcv_crop_posy")
+        Me.txtcv_crop_posy.ForeColor = System.Drawing.SystemColors.Control
+        Me.txtcv_crop_posy.Name = "txtcv_crop_posy"
+        Me.txtcv_crop_posy.ReadOnly = True
+        '
+        'txtcv_crop_posx
+        '
+        Me.txtcv_crop_posx.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        resources.ApplyResources(Me.txtcv_crop_posx, "txtcv_crop_posx")
+        Me.txtcv_crop_posx.ForeColor = System.Drawing.SystemColors.Control
+        Me.txtcv_crop_posx.Name = "txtcv_crop_posx"
+        Me.txtcv_crop_posx.ReadOnly = True
+        '
+        'Label47
+        '
+        resources.ApplyResources(Me.Label47, "Label47")
+        Me.Label47.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Label47.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label47.Name = "Label47"
+        '
+        'Label45
+        '
+        resources.ApplyResources(Me.Label45, "Label45")
+        Me.Label45.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Label45.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label45.Name = "Label45"
+        '
+        'cmbcv_resolution_input
+        '
+        Me.cmbcv_resolution_input.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.cmbcv_resolution_input.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        resources.ApplyResources(Me.cmbcv_resolution_input, "cmbcv_resolution_input")
+        Me.cmbcv_resolution_input.ForeColor = System.Drawing.SystemColors.Control
+        Me.cmbcv_resolution_input.FormattingEnabled = True
+        Me.cmbcv_resolution_input.Name = "cmbcv_resolution_input"
+        '
+        'btncv_crop_setting
+        '
+        resources.ApplyResources(Me.btncv_crop_setting, "btncv_crop_setting")
+        Me.btncv_crop_setting.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.btncv_crop_setting.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btncv_crop_setting.Name = "btncv_crop_setting"
+        Me.btncv_crop_setting.UseVisualStyleBackColor = False
+        '
+        'chkcv_crop
+        '
+        resources.ApplyResources(Me.chkcv_crop, "chkcv_crop")
+        Me.chkcv_crop.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.chkcv_crop.ForeColor = System.Drawing.SystemColors.Control
+        Me.chkcv_crop.Name = "chkcv_crop"
+        Me.chkcv_crop.UseVisualStyleBackColor = False
         '
         'Label62
         '
@@ -2658,14 +2776,14 @@ Partial Class Mainwindow
         Me.btnconnect_camera.Name = "btnconnect_camera"
         Me.btnconnect_camera.UseVisualStyleBackColor = False
         '
-        'cmbcv_resolution
+        'cmbcv_resolution_view
         '
-        Me.cmbcv_resolution.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.cmbcv_resolution.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        resources.ApplyResources(Me.cmbcv_resolution, "cmbcv_resolution")
-        Me.cmbcv_resolution.ForeColor = System.Drawing.SystemColors.Control
-        Me.cmbcv_resolution.FormattingEnabled = True
-        Me.cmbcv_resolution.Name = "cmbcv_resolution"
+        Me.cmbcv_resolution_view.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.cmbcv_resolution_view.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        resources.ApplyResources(Me.cmbcv_resolution_view, "cmbcv_resolution_view")
+        Me.cmbcv_resolution_view.ForeColor = System.Drawing.SystemColors.Control
+        Me.cmbcv_resolution_view.FormattingEnabled = True
+        Me.cmbcv_resolution_view.Name = "cmbcv_resolution_view"
         '
         'numcv_device
         '
@@ -2914,7 +3032,6 @@ Partial Class Mainwindow
         Me.GroupBox2.Controls.Add(Me.numtextwindow_sizex)
         Me.GroupBox2.Controls.Add(Me.lblcheckopening)
         Me.GroupBox2.Controls.Add(Me.numtextwindow_sizey)
-        Me.GroupBox2.Controls.Add(Me.chkcreate_temppicture)
         Me.GroupBox2.Controls.Add(Me.numprofile)
         Me.GroupBox2.Controls.Add(Me.Label38)
         Me.GroupBox2.Controls.Add(Me.txtclickcount)
@@ -2922,8 +3039,6 @@ Partial Class Mainwindow
         Me.GroupBox2.Controls.Add(Me.txtloadprofile)
         Me.GroupBox2.Controls.Add(Me.GroupBox3)
         Me.GroupBox2.Controls.Add(Me.Panel5)
-        Me.GroupBox2.Controls.Add(Me.txttemp_picturepass)
-        Me.GroupBox2.Controls.Add(Me.Label71)
         Me.GroupBox2.ForeColor = System.Drawing.Color.Cornsilk
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.TabStop = False
@@ -2965,16 +3080,6 @@ Partial Class Mainwindow
         Me.numtextwindow_sizey.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.numtextwindow_sizey.Name = "numtextwindow_sizey"
         Me.numtextwindow_sizey.Value = New Decimal(New Integer() {100, 0, 0, 0})
-        '
-        'chkcreate_temppicture
-        '
-        resources.ApplyResources(Me.chkcreate_temppicture, "chkcreate_temppicture")
-        Me.chkcreate_temppicture.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.chkcreate_temppicture.Checked = Global.AutoSplitHelper_OpenCV.My.MySettings.Default.chkcreate_temppicture
-        Me.chkcreate_temppicture.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Global.AutoSplitHelper_OpenCV.My.MySettings.Default, "chkcreate_temppicture", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
-        Me.chkcreate_temppicture.ForeColor = System.Drawing.SystemColors.Control
-        Me.chkcreate_temppicture.Name = "chkcreate_temppicture"
-        Me.chkcreate_temppicture.UseVisualStyleBackColor = False
         '
         'numprofile
         '
@@ -3199,22 +3304,6 @@ Partial Class Mainwindow
         Me.txt21.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.txt21.Name = "txt21"
         Me.txt21.ReadOnly = True
-        '
-        'txttemp_picturepass
-        '
-        Me.txttemp_picturepass.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
-        Me.txttemp_picturepass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.txttemp_picturepass, "txttemp_picturepass")
-        Me.txttemp_picturepass.ForeColor = System.Drawing.SystemColors.Control
-        Me.txttemp_picturepass.Name = "txttemp_picturepass"
-        Me.txttemp_picturepass.ReadOnly = True
-        '
-        'Label71
-        '
-        resources.ApplyResources(Me.Label71, "Label71")
-        Me.Label71.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.Label71.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label71.Name = "Label71"
         '
         'pnl_parameter
         '
@@ -3609,8 +3698,6 @@ Partial Class Mainwindow
         Me.TabPage5.Controls.Add(Me.txtcv_color_r)
         Me.TabPage5.Controls.Add(Me.Label15)
         Me.TabPage5.Controls.Add(Me.txtcv_method)
-        Me.TabPage5.Controls.Add(Me.PictureBox3)
-        Me.TabPage5.Controls.Add(Me.PictureBox4)
         Me.TabPage5.Controls.Add(Me.Label77)
         Me.TabPage5.Controls.Add(Me.lbllooptrigger)
         Me.TabPage5.Controls.Add(Me.numnowloop)
@@ -3740,20 +3827,6 @@ Partial Class Mainwindow
         Me.txtcv_method.ForeColor = System.Drawing.SystemColors.Control
         Me.txtcv_method.Name = "txtcv_method"
         Me.txtcv_method.ReadOnly = True
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(95, Byte), Integer))
-        resources.ApplyResources(Me.PictureBox3, "PictureBox3")
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.BackColor = System.Drawing.Color.FromArgb(CType(CType(90, Byte), Integer), CType(CType(95, Byte), Integer), CType(CType(105, Byte), Integer))
-        resources.ApplyResources(Me.PictureBox4, "PictureBox4")
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.TabStop = False
         '
         'Label77
         '
@@ -4800,8 +4873,6 @@ Partial Class Mainwindow
         'TabPage2
         '
         Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(75, Byte), Integer))
-        Me.TabPage2.Controls.Add(Me.PictureBox7)
-        Me.TabPage2.Controls.Add(Me.PictureBox8)
         Me.TabPage2.Controls.Add(Me.btntosetting01)
         Me.TabPage2.Controls.Add(Me.GroupBox9)
         Me.TabPage2.Controls.Add(Me.GroupBox7)
@@ -4834,20 +4905,6 @@ Partial Class Mainwindow
         Me.TabPage2.Controls.Add(Me.btn2_getwindowtitle)
         resources.ApplyResources(Me.TabPage2, "TabPage2")
         Me.TabPage2.Name = "TabPage2"
-        '
-        'PictureBox7
-        '
-        Me.PictureBox7.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(95, Byte), Integer))
-        resources.ApplyResources(Me.PictureBox7, "PictureBox7")
-        Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.TabStop = False
-        '
-        'PictureBox8
-        '
-        Me.PictureBox8.BackColor = System.Drawing.Color.FromArgb(CType(CType(90, Byte), Integer), CType(CType(95, Byte), Integer), CType(CType(105, Byte), Integer))
-        resources.ApplyResources(Me.PictureBox8, "PictureBox8")
-        Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.TabStop = False
         '
         'btntosetting01
         '
@@ -5780,11 +5837,163 @@ Partial Class Mainwindow
         Me.piccamera.Name = "piccamera"
         Me.piccamera.TabStop = False
         '
+        'TabPage4
+        '
+        Me.TabPage4.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(75, Byte), Integer))
+        Me.TabPage4.Controls.Add(Me.btncrop_ok)
+        Me.TabPage4.Controls.Add(Me.Label54)
+        Me.TabPage4.Controls.Add(Me.rdocrop_43)
+        Me.TabPage4.Controls.Add(Me.rdocrop_169)
+        Me.TabPage4.Controls.Add(Me.lblcrop_status)
+        Me.TabPage4.Controls.Add(Me.btncrop_frame)
+        Me.TabPage4.Controls.Add(Me.txtcrop_size_y)
+        Me.TabPage4.Controls.Add(Me.txtcrop_size_x)
+        Me.TabPage4.Controls.Add(Me.numcrop_rate)
+        Me.TabPage4.Controls.Add(Me.Label43)
+        Me.TabPage4.Controls.Add(Me.Label44)
+        Me.TabPage4.Controls.Add(Me.numcrop_resolution_y)
+        Me.TabPage4.Controls.Add(Me.numcrop_resolution_x)
+        Me.TabPage4.Controls.Add(Me.Label35)
+        Me.TabPage4.Controls.Add(Me.Label36)
+        Me.TabPage4.Controls.Add(Me.Label37)
+        Me.TabPage4.Controls.Add(Me.Label40)
+        Me.TabPage4.Controls.Add(Me.numcrop_position_y)
+        Me.TabPage4.Controls.Add(Me.numcrop_position_x)
+        Me.TabPage4.Controls.Add(Me.btntosetting05)
+        resources.ApplyResources(Me.TabPage4, "TabPage4")
+        Me.TabPage4.Name = "TabPage4"
+        '
+        'lblcrop_status
+        '
+        resources.ApplyResources(Me.lblcrop_status, "lblcrop_status")
+        Me.lblcrop_status.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.lblcrop_status.ForeColor = System.Drawing.SystemColors.Control
+        Me.lblcrop_status.Name = "lblcrop_status"
+        '
+        'btncrop_frame
+        '
+        resources.ApplyResources(Me.btncrop_frame, "btncrop_frame")
+        Me.btncrop_frame.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.btncrop_frame.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btncrop_frame.Name = "btncrop_frame"
+        Me.btncrop_frame.UseVisualStyleBackColor = False
+        '
+        'txtcrop_size_y
+        '
+        Me.txtcrop_size_y.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        resources.ApplyResources(Me.txtcrop_size_y, "txtcrop_size_y")
+        Me.txtcrop_size_y.ForeColor = System.Drawing.SystemColors.Control
+        Me.txtcrop_size_y.Name = "txtcrop_size_y"
+        Me.txtcrop_size_y.ReadOnly = True
+        '
+        'txtcrop_size_x
+        '
+        Me.txtcrop_size_x.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        resources.ApplyResources(Me.txtcrop_size_x, "txtcrop_size_x")
+        Me.txtcrop_size_x.ForeColor = System.Drawing.SystemColors.Control
+        Me.txtcrop_size_x.Name = "txtcrop_size_x"
+        Me.txtcrop_size_x.ReadOnly = True
+        '
+        'numcrop_rate
+        '
+        resources.ApplyResources(Me.numcrop_rate, "numcrop_rate")
+        Me.numcrop_rate.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.numcrop_rate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.numcrop_rate.ForeColor = System.Drawing.SystemColors.Control
+        Me.numcrop_rate.Maximum = New Decimal(New Integer() {2000, 0, 0, 0})
+        Me.numcrop_rate.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.numcrop_rate.Name = "numcrop_rate"
+        Me.numcrop_rate.Value = New Decimal(New Integer() {16, 0, 0, 0})
+        '
+        'Label43
+        '
+        resources.ApplyResources(Me.Label43, "Label43")
+        Me.Label43.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label43.Name = "Label43"
+        '
+        'Label44
+        '
+        resources.ApplyResources(Me.Label44, "Label44")
+        Me.Label44.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label44.Name = "Label44"
+        '
+        'numcrop_resolution_y
+        '
+        resources.ApplyResources(Me.numcrop_resolution_y, "numcrop_resolution_y")
+        Me.numcrop_resolution_y.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.numcrop_resolution_y.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.numcrop_resolution_y.ForeColor = System.Drawing.SystemColors.Control
+        Me.numcrop_resolution_y.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
+        Me.numcrop_resolution_y.Minimum = New Decimal(New Integer() {100, 0, 0, 0})
+        Me.numcrop_resolution_y.Name = "numcrop_resolution_y"
+        Me.numcrop_resolution_y.ReadOnly = True
+        Me.numcrop_resolution_y.Value = New Decimal(New Integer() {720, 0, 0, 0})
+        '
+        'numcrop_resolution_x
+        '
+        resources.ApplyResources(Me.numcrop_resolution_x, "numcrop_resolution_x")
+        Me.numcrop_resolution_x.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.numcrop_resolution_x.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.numcrop_resolution_x.ForeColor = System.Drawing.SystemColors.Control
+        Me.numcrop_resolution_x.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
+        Me.numcrop_resolution_x.Minimum = New Decimal(New Integer() {100, 0, 0, 0})
+        Me.numcrop_resolution_x.Name = "numcrop_resolution_x"
+        Me.numcrop_resolution_x.ReadOnly = True
+        Me.numcrop_resolution_x.Value = New Decimal(New Integer() {1280, 0, 0, 0})
+        '
+        'Label35
+        '
+        resources.ApplyResources(Me.Label35, "Label35")
+        Me.Label35.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label35.Name = "Label35"
+        '
+        'Label36
+        '
+        resources.ApplyResources(Me.Label36, "Label36")
+        Me.Label36.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label36.Name = "Label36"
+        '
+        'Label37
+        '
+        resources.ApplyResources(Me.Label37, "Label37")
+        Me.Label37.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label37.Name = "Label37"
+        '
+        'Label40
+        '
+        resources.ApplyResources(Me.Label40, "Label40")
+        Me.Label40.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label40.Name = "Label40"
+        '
+        'numcrop_position_y
+        '
+        resources.ApplyResources(Me.numcrop_position_y, "numcrop_position_y")
+        Me.numcrop_position_y.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.numcrop_position_y.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.numcrop_position_y.ForeColor = System.Drawing.SystemColors.Control
+        Me.numcrop_position_y.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
+        Me.numcrop_position_y.Name = "numcrop_position_y"
+        '
+        'numcrop_position_x
+        '
+        resources.ApplyResources(Me.numcrop_position_x, "numcrop_position_x")
+        Me.numcrop_position_x.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.numcrop_position_x.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.numcrop_position_x.ForeColor = System.Drawing.SystemColors.Control
+        Me.numcrop_position_x.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
+        Me.numcrop_position_x.Name = "numcrop_position_x"
+        '
+        'btntosetting05
+        '
+        resources.ApplyResources(Me.btntosetting05, "btntosetting05")
+        Me.btntosetting05.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.btntosetting05.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btntosetting05.Name = "btntosetting05"
+        Me.btntosetting05.UseVisualStyleBackColor = False
+        '
         'TabPage3
         '
         Me.TabPage3.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(75, Byte), Integer))
-        Me.TabPage3.Controls.Add(Me.PictureBox11)
-        Me.TabPage3.Controls.Add(Me.PictureBox12)
         Me.TabPage3.Controls.Add(Me.btntosetting02)
         Me.TabPage3.Controls.Add(Me.Panel3)
         Me.TabPage3.Controls.Add(Me.Label25)
@@ -5794,20 +6003,6 @@ Partial Class Mainwindow
         Me.TabPage3.Controls.Add(Me.Panel1)
         resources.ApplyResources(Me.TabPage3, "TabPage3")
         Me.TabPage3.Name = "TabPage3"
-        '
-        'PictureBox11
-        '
-        Me.PictureBox11.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(95, Byte), Integer))
-        resources.ApplyResources(Me.PictureBox11, "PictureBox11")
-        Me.PictureBox11.Name = "PictureBox11"
-        Me.PictureBox11.TabStop = False
-        '
-        'PictureBox12
-        '
-        Me.PictureBox12.BackColor = System.Drawing.Color.FromArgb(CType(CType(90, Byte), Integer), CType(CType(95, Byte), Integer), CType(CType(105, Byte), Integer))
-        resources.ApplyResources(Me.PictureBox12, "PictureBox12")
-        Me.PictureBox12.Name = "PictureBox12"
-        Me.PictureBox12.TabStop = False
         '
         'btntosetting02
         '
@@ -5964,11 +6159,9 @@ Partial Class Mainwindow
         Me.Panel2.Controls.Add(Me.link_dobon)
         Me.Panel2.Controls.Add(Me.Label118)
         Me.Panel2.Controls.Add(Me.Label117)
-        Me.Panel2.Controls.Add(Me.Label116)
         Me.Panel2.Controls.Add(Me.link_directshowlib)
         Me.Panel2.Controls.Add(Me.Label113)
         Me.Panel2.Controls.Add(Me.link_opencvsharp)
-        Me.Panel2.Controls.Add(Me.link_inteltbb)
         Me.Panel2.Controls.Add(Me.Label114)
         Me.Panel2.Controls.Add(Me.Label115)
         Me.Panel2.Name = "Panel2"
@@ -5996,13 +6189,6 @@ Partial Class Mainwindow
         Me.Label117.ForeColor = System.Drawing.SystemColors.Control
         Me.Label117.Name = "Label117"
         '
-        'Label116
-        '
-        resources.ApplyResources(Me.Label116, "Label116")
-        Me.Label116.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Label116.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label116.Name = "Label116"
-        '
         'link_directshowlib
         '
         resources.ApplyResources(Me.link_directshowlib, "link_directshowlib")
@@ -6027,15 +6213,6 @@ Partial Class Mainwindow
         Me.link_opencvsharp.Name = "link_opencvsharp"
         Me.link_opencvsharp.TabStop = True
         Me.link_opencvsharp.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        '
-        'link_inteltbb
-        '
-        resources.ApplyResources(Me.link_inteltbb, "link_inteltbb")
-        Me.link_inteltbb.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.link_inteltbb.LinkColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.link_inteltbb.Name = "link_inteltbb"
-        Me.link_inteltbb.TabStop = True
-        Me.link_inteltbb.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         '
         'Label114
         '
@@ -6129,6 +6306,43 @@ Partial Class Mainwindow
         '
         Me.timashupdate.Enabled = True
         Me.timashupdate.Interval = 1000
+        '
+        'rdocrop_169
+        '
+        resources.ApplyResources(Me.rdocrop_169, "rdocrop_169")
+        Me.rdocrop_169.Checked = True
+        Me.rdocrop_169.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.rdocrop_169.Name = "rdocrop_169"
+        Me.rdocrop_169.TabStop = True
+        Me.rdocrop_169.UseVisualStyleBackColor = True
+        '
+        'rdocrop_43
+        '
+        resources.ApplyResources(Me.rdocrop_43, "rdocrop_43")
+        Me.rdocrop_43.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.rdocrop_43.Name = "rdocrop_43"
+        Me.rdocrop_43.UseVisualStyleBackColor = True
+        '
+        'Label54
+        '
+        resources.ApplyResources(Me.Label54, "Label54")
+        Me.Label54.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label54.Name = "Label54"
+        '
+        'btncrop_ok
+        '
+        resources.ApplyResources(Me.btncrop_ok, "btncrop_ok")
+        Me.btncrop_ok.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.btncrop_ok.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btncrop_ok.Name = "btncrop_ok"
+        Me.btncrop_ok.UseVisualStyleBackColor = False
+        '
+        'Label55
+        '
+        resources.ApplyResources(Me.Label55, "Label55")
+        Me.Label55.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Label55.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label55.Name = "Label55"
         '
         'Mainwindow
         '
@@ -6237,8 +6451,6 @@ Partial Class Mainwindow
         Me.MenuStrip1.PerformLayout()
         Me.TabPage5.ResumeLayout(False)
         Me.TabPage5.PerformLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.numnowloop, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox8.ResumeLayout(False)
         Me.GroupBox8.PerformLayout()
@@ -6253,8 +6465,6 @@ Partial Class Mainwindow
         CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox9.ResumeLayout(False)
         Me.GroupBox9.PerformLayout()
         Me.GroupBox7.ResumeLayout(False)
@@ -6294,10 +6504,15 @@ Partial Class Mainwindow
         CType(Me.piccalib_comp, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.piccalib_temp, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.piccamera, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage4.ResumeLayout(False)
+        Me.TabPage4.PerformLayout()
+        CType(Me.numcrop_rate, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numcrop_resolution_y, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numcrop_resolution_x, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numcrop_position_y, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numcrop_position_x, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
-        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.Panel1.ResumeLayout(False)
@@ -6394,7 +6609,7 @@ Partial Class Mainwindow
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents chkcv_resetonoff As CheckBox
     Friend WithEvents chkcv_loop As CheckBox
-    Friend WithEvents cmbcv_resolution As ComboBox
+    Friend WithEvents cmbcv_resolution_view As ComboBox
     Friend WithEvents _moji5 As Label
     Friend WithEvents _moji6 As Label
     Friend WithEvents numcv_framerate As NumericUpDown
@@ -6631,8 +6846,6 @@ Partial Class Mainwindow
     Friend WithEvents Label68 As Label
     Friend WithEvents Label69 As Label
     Friend WithEvents Label70 As Label
-    Friend WithEvents txttemp_picturepass As TextBox
-    Friend WithEvents Label71 As Label
     Friend WithEvents numsavey As NumericUpDown
     Friend WithEvents numsavex As NumericUpDown
     Friend WithEvents numloopcount As NumericUpDown
@@ -6647,7 +6860,6 @@ Partial Class Mainwindow
     Friend WithEvents GroupBox9 As GroupBox
     Friend WithEvents Panel3 As Panel
     Friend WithEvents lbllivesplit_state As Label
-    Friend WithEvents chkcreate_temppicture As CheckBox
     Friend WithEvents grpgeneral As GroupBox
     Friend WithEvents lblcur_device_res_fps As Label
     Friend WithEvents lblcur_device_name As Label
@@ -6851,12 +7063,6 @@ Partial Class Mainwindow
     Friend WithEvents Label109 As Label
     Friend WithEvents Label111 As Label
     Friend WithEvents LinkLabel3 As LinkLabel
-    Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents PictureBox4 As PictureBox
-    Friend WithEvents PictureBox7 As PictureBox
-    Friend WithEvents PictureBox8 As PictureBox
-    Friend WithEvents PictureBox11 As PictureBox
-    Friend WithEvents PictureBox12 As PictureBox
     Friend WithEvents SaveProfileSToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DeleteSelectedProfileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
@@ -6875,11 +7081,9 @@ Partial Class Mainwindow
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label118 As Label
     Friend WithEvents Label117 As Label
-    Friend WithEvents Label116 As Label
     Friend WithEvents link_directshowlib As LinkLabel
     Friend WithEvents Label113 As Label
     Friend WithEvents link_opencvsharp As LinkLabel
-    Friend WithEvents link_inteltbb As LinkLabel
     Friend WithEvents Label114 As Label
     Friend WithEvents Label115 As Label
     Friend WithEvents rtxtlicense As RichTextBox
@@ -6954,4 +7158,37 @@ Partial Class Mainwindow
     Friend WithEvents lty As DataGridViewTextBoxColumn
     Friend WithEvents rbx As DataGridViewTextBoxColumn
     Friend WithEvents rby As DataGridViewTextBoxColumn
+    Friend WithEvents btncv_crop_setting As Button
+    Friend WithEvents chkcv_crop As CheckBox
+    Friend WithEvents TabPage4 As TabPage
+    Friend WithEvents btntosetting05 As Button
+    Friend WithEvents Label35 As Label
+    Friend WithEvents Label36 As Label
+    Friend WithEvents Label37 As Label
+    Friend WithEvents Label40 As Label
+    Friend WithEvents numcrop_position_y As NumericUpDown
+    Friend WithEvents numcrop_position_x As NumericUpDown
+    Friend WithEvents Label43 As Label
+    Friend WithEvents Label44 As Label
+    Friend WithEvents numcrop_resolution_y As NumericUpDown
+    Friend WithEvents numcrop_resolution_x As NumericUpDown
+    Friend WithEvents Label47 As Label
+    Friend WithEvents Label45 As Label
+    Friend WithEvents cmbcv_resolution_input As ComboBox
+    Friend WithEvents numcrop_rate As NumericUpDown
+    Friend WithEvents txtcrop_size_y As TextBox
+    Friend WithEvents txtcrop_size_x As TextBox
+    Friend WithEvents txtcv_crop_sizey As TextBox
+    Friend WithEvents txtcv_crop_sizex As TextBox
+    Friend WithEvents Label48 As Label
+    Friend WithEvents Label50 As Label
+    Friend WithEvents txtcv_crop_posy As TextBox
+    Friend WithEvents txtcv_crop_posx As TextBox
+    Friend WithEvents btncrop_frame As Button
+    Friend WithEvents lblcrop_status As Label
+    Friend WithEvents Label54 As Label
+    Friend WithEvents rdocrop_43 As RadioButton
+    Friend WithEvents rdocrop_169 As RadioButton
+    Friend WithEvents btncrop_ok As Button
+    Friend WithEvents Label55 As Label
 End Class
