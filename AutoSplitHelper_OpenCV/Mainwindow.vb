@@ -2874,13 +2874,14 @@ Public Class Mainwindow
 
         capturecv.Read(frame)
 
+
         If chkcv_crop.Checked = True Then
 
             '■先にクロップをする。
             dst_cropRect = New Mat(frame, New OpenCvSharp.Rect(CInt(txtcv_crop_posx.Text), CInt(txtcv_crop_posy.Text),
                                   CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text)))
 
-            Dim dst_cropped As Mat = New Mat(CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text), MatType.CV_32FC1)
+            Dim dst_cropped As Mat = New Mat(CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text), MatType.CV_8UC3)
 
             dst_cropRect.CopyTo(dst_cropped)
 
@@ -2960,7 +2961,7 @@ Public Class Mainwindow
                     dst_cropRect = New Mat(frame, New OpenCvSharp.Rect(CInt(txtcv_crop_posx.Text), CInt(txtcv_crop_posy.Text),
                                         CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text)))
 
-                    Dim dst_cropped As Mat = New Mat(CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text), MatType.CV_32FC1)
+                    Dim dst_cropped As Mat = New Mat(CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text), MatType.CV_8UC3)
 
                     dst_cropRect.CopyTo(dst_cropped)
 
@@ -3016,7 +3017,7 @@ Public Class Mainwindow
             txtno_comment.Text = psnumber & "," & CStr(DGtable(0, psnumber).Value)
 
         Catch ex As Exception
-            'cvpreview.Stop()
+            cvpreview.Stop()
             Capture_TF = 1
 
             MessageBox.Show(My.Resources.Message.msg43, messagebox_name) '接続エラー。本体を再起動して下さい。
@@ -5176,7 +5177,7 @@ Public Class Mainwindow
 
         End If
 
-        'cvpreview.Stop()
+        cvpreview.Stop()
         Capture_TF = 1
 
         cvpreview_replay.Stop()
@@ -5279,13 +5280,14 @@ Public Class Mainwindow
 
         capturecv.Read(frame)
 
+
         If chkcv_crop.Checked = True Then
 
             '■先にクロップをする。
             dst_cropRect = New Mat(frame, New OpenCvSharp.Rect(CInt(txtcv_crop_posx.Text), CInt(txtcv_crop_posy.Text),
                                    CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text)))
 
-            Dim dst_cropped As Mat = New Mat(CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text), MatType.CV_32FC1)
+            Dim dst_cropped As Mat = New Mat(CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text), MatType.CV_8UC3)
 
             dst_cropRect.CopyTo(dst_cropped)
 
@@ -5359,13 +5361,14 @@ Public Class Mainwindow
 
         capturecv.Read(frame)
 
+
         If chkcv_crop.Checked = True Then
 
             '■先にクロップをする。
             dst_cropRect = New Mat(frame, New OpenCvSharp.Rect(CInt(txtcv_crop_posx.Text), CInt(txtcv_crop_posy.Text),
                                    CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text)))
 
-            Dim dst_cropped As Mat = New Mat(CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text), MatType.CV_32FC1)
+            Dim dst_cropped As Mat = New Mat(CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text), MatType.CV_8UC3)
 
             dst_cropRect.CopyTo(dst_cropped)
 
@@ -5408,13 +5411,14 @@ Public Class Mainwindow
 
         capturecv.Read(frame)
 
+
         If chkcv_crop.Checked = True Then
 
             '■先にクロップをする。
             dst_cropRect = New Mat(frame, New OpenCvSharp.Rect(CInt(txtcv_crop_posx.Text), CInt(txtcv_crop_posy.Text),
                                    CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text)))
 
-            Dim dst_cropped As Mat = New Mat(CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text), MatType.CV_32FC1)
+            Dim dst_cropped As Mat = New Mat(CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text), MatType.CV_8UC3)
 
             dst_cropRect.CopyTo(dst_cropped)
 
@@ -5933,7 +5937,7 @@ Public Class Mainwindow
         Using tpl1 As Mat = Cv2.ImRead(aa, ImreadModes.Color)
 
             Dim img1 As Mat = piccalib_temp.ImageIpl
-            Using res1 As New Mat(img1.Width - tpl1.Width + 1, img1.Height - tpl1.Height + 1, MatType.CV_32FC1)
+            Using res1 As New Mat(img1.Width - tpl1.Width + 1, img1.Height - tpl1.Height + 1, MatType.CV_8UC3)
 
                 Cv2.MatchTemplate(img1, tpl1, res1, TemplateMatchModes.CCoeffNormed)
                 Cv2.MinMaxLoc(res1, minval, maxval, minloc, maxloc, Nothing)
@@ -5969,7 +5973,7 @@ Public Class Mainwindow
 
             Dim img2 As Mat = piccalib_temp.ImageIpl
 
-            Using res2 As New Mat(img2.Width - tpl2.Width + 1, img2.Height - tpl2.Height + 1, MatType.CV_32FC1)
+            Using res2 As New Mat(img2.Width - tpl2.Width + 1, img2.Height - tpl2.Height + 1, MatType.CV_8UC3)
 
                 Cv2.MatchTemplate(img2, tpl2, res2, TemplateMatchModes.CCoeffNormed)
                 Cv2.MinMaxLoc(res2, minval, maxval, minloc, maxloc, Nothing)
@@ -6032,7 +6036,7 @@ Public Class Mainwindow
         Using tpl2 As Mat = Cv2.ImRead(aa, ImreadModes.Color)
 
             Dim img2 As Mat = piccalib_temp.ImageIpl
-            Using res2 As New Mat(img2.Width - tpl2.Width + 1, img2.Height - tpl2.Height + 1, MatType.CV_32FC1)
+            Using res2 As New Mat(img2.Width - tpl2.Width + 1, img2.Height - tpl2.Height + 1, MatType.CV_8UC3)
 
                 Cv2.MatchTemplate(img2, tpl2, res2, TemplateMatchModes.CCoeffNormed)
                 Cv2.MinMaxLoc(res2, minval, maxval, minloc, maxloc, Nothing)
@@ -6628,15 +6632,12 @@ Public Class Mainwindow
 
 
 
-
-
-
     End Sub
 
 
 
-    Private dst_crop As Mat = New Mat(640, 360, MatType.CV_32FC1) ' = Cv2.ImRead("./data/img.png", ImreadModes.AnyColor)
-    Private dst_crop_temp As Mat = New Mat(640, 360, MatType.CV_32FC1) ' = Cv2.ImRead("./data/img.png", ImreadModes.AnyColor)
+    Private dst_crop As Mat = New Mat(640, 360, MatType.CV_8UC3) ' = Cv2.ImRead("./data/img.png", ImreadModes.AnyColor)
+    Private dst_crop_temp As Mat = New Mat(640, 360, MatType.CV_8UC3) ' = Cv2.ImRead("./data/img.png", ImreadModes.AnyColor)
 
 
     Private Sub btncrop_frame_Click(sender As Object, e As EventArgs) Handles btncrop_frame.Click
@@ -6663,11 +6664,12 @@ Public Class Mainwindow
             '■inputの解像度を表示
             capturecv.Read(frame)
 
+
             dst_crop_temp = New Mat(frame, New OpenCvSharp.Rect(
                                     numcrop_position_x.Value, numcrop_position_y.Value,
                                     numcrop_rate.Value * crop_aspect_x * 2, numcrop_rate.Value * crop_aspect_y * 2))
 
-            Dim cropped_p As Mat = New Mat(numcrop_rate.Value * crop_aspect_x, numcrop_rate.Value * crop_aspect_y, MatType.CV_32FC1)
+            Dim cropped_p As Mat = New Mat(numcrop_rate.Value * crop_aspect_x, numcrop_rate.Value * crop_aspect_y, MatType.CV_8UC3)
 
 
             dst_crop_temp.CopyTo(cropped_p)
@@ -6762,7 +6764,7 @@ Public Class Mainwindow
                                     numcrop_position_x.Value, numcrop_position_y.Value,
                                     numcrop_rate.Value * crop_aspect_x * 2, numcrop_rate.Value * crop_aspect_y * 2))
 
-            Dim cropped_p As Mat = New Mat(numcrop_rate.Value * crop_aspect_x, numcrop_rate.Value * crop_aspect_y, MatType.CV_32FC1)
+            Dim cropped_p As Mat = New Mat(numcrop_rate.Value * crop_aspect_x, numcrop_rate.Value * crop_aspect_y, MatType.CV_8UC3)
 
 
             dst_crop_temp.CopyTo(cropped_p)
@@ -6866,7 +6868,8 @@ Public Class Mainwindow
 
     Private capturecv As VideoCapture
 
-    Private frame As Mat = New Mat(640, 360, MatType.CV_32FC1) 'New Mat(numcv_sizex.Value, numcv_sizey.Value, MatType.CV_8UC3)
+    Private frame As Mat = New Mat(640, 360, MatType.CV_8UC3) 'New Mat(numcv_sizex.Value, numcv_sizey.Value, MatType.CV_8UC3)
+    Private frame_input As Mat = New Mat(640, 360, MatType.CV_8UC3) 'New Mat(numcv_sizex.Value, numcv_sizey.Value, MatType.CV_8UC3)
 
 
     Private minloc_split As Point
@@ -6904,23 +6907,23 @@ Public Class Mainwindow
     Private maxval_load9 As Double = 0
     Private maxval_load10 As Double = 0
 
-    Private tplex As Mat
-    Private tplex_r As Mat
-    Private tplex_load1 As Mat
-    Private tplex_load2 As Mat
-    Private tplex_load3 As Mat
-    Private tplex_load4 As Mat
-    Private tplex_load5 As Mat
-    Private tplex_load6 As Mat
-    Private tplex_load7 As Mat
-    Private tplex_load8 As Mat
-    Private tplex_load9 As Mat
-    Private tplex_load10 As Mat
-    Private imgex As Mat = New Mat(640, 360, MatType.CV_32FC1)
+    Private tplex As Mat = New Mat(4096, 2160, MatType.CV_8UC3)
+    Private tplex_r As Mat = New Mat(1280, 720, MatType.CV_8UC3)
+    Private tplex_load1 As Mat = New Mat(1280, 720, MatType.CV_8UC3)
+    Private tplex_load2 As Mat = New Mat(1280, 720, MatType.CV_8UC3)
+    Private tplex_load3 As Mat = New Mat(1280, 720, MatType.CV_8UC3)
+    Private tplex_load4 As Mat = New Mat(1280, 720, MatType.CV_8UC3)
+    Private tplex_load5 As Mat = New Mat(1280, 720, MatType.CV_8UC3)
+    Private tplex_load6 As Mat = New Mat(1280, 720, MatType.CV_8UC3)
+    Private tplex_load7 As Mat = New Mat(1280, 720, MatType.CV_8UC3)
+    Private tplex_load8 As Mat = New Mat(1280, 720, MatType.CV_8UC3)
+    Private tplex_load9 As Mat = New Mat(1280, 720, MatType.CV_8UC3)
+    Private tplex_load10 As Mat = New Mat(1280, 720, MatType.CV_8UC3)
+    Private imgex As Mat = New Mat(4096, 2160, MatType.CV_8UC3)
 
-    Private dst_resize As Mat = New Mat(640, 360, MatType.CV_32FC1) ' = Cv2.ImRead("./data/img.png", ImreadModes.AnyColor)
-    Private dst_cropRect As Mat = New Mat(640, 360, MatType.CV_32FC1) ' = Cv2.ImRead("./data/img.png", ImreadModes.AnyColor)
-    Private dst_cropped As Mat = New Mat(640, 360, MatType.CV_32FC1) ' = Cv2.ImRead("./data/img.png", ImreadModes.AnyColor)
+    Private dst_resize As Mat = New Mat(4096, 2160, MatType.CV_8UC3) ' = Cv2.ImRead("./data/img.png", ImreadModes.AnyColor)
+    Private dst_cropRect As Mat = New Mat(4096, 2160, MatType.CV_8UC3) ' = Cv2.ImRead("./data/img.png", ImreadModes.AnyColor)
+    Private dst_cropped As Mat = New Mat(4096, 2160, MatType.CV_8UC3) ' = Cv2.ImRead("./data/img.png", ImreadModes.AnyColor)
 
 
     Private cv_method As Integer = 0
@@ -7438,7 +7441,15 @@ Public Class Mainwindow
 
 
             '■プレビュー画面の更新。Viewの解像度で表示
-            capturecv.Read(frame) 'NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
+            capturecv.Read(frame_input) 'NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
+
+            '■グレースケールに変換
+            If chkcv_grayscale.Checked = True Then
+                Cv2.CvtColor(frame_input, frame, ColorConversionCodes.BGR2GRAY)
+            Else
+                frame = frame_input
+
+            End If
 
             If chkcv_crop.Checked = True Then
 
@@ -7446,7 +7457,7 @@ Public Class Mainwindow
                 dst_cropRect = New Mat(frame, New OpenCvSharp.Rect(CInt(txtcv_crop_posx.Text), CInt(txtcv_crop_posy.Text),
                                    CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text)))
 
-                Dim dst_cropped As Mat = New Mat(CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text), MatType.CV_32FC1)
+                Dim dst_cropped As Mat = New Mat(CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text), MatType.CV_8UC3)
 
                 dst_cropRect.CopyTo(dst_cropped)
 
@@ -7538,7 +7549,13 @@ Public Class Mainwindow
 
                 '■最初の画像の読み込み
                 Dim aa As String = txtpass_picturefolder.Text & "\" & 1 & ".bmp"
-                tplex = Cv2.ImRead(aa, ImreadModes.Color)
+
+                If chkcv_grayscale.Checked = False Then
+                    tplex = Cv2.ImRead(aa, ImreadModes.Color)
+                Else
+                    tplex = Cv2.ImRead(aa, ImreadModes.Grayscale)
+                End If
+
 
                 '■最初の画像の読み込み（表示用）
                 Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
@@ -7553,7 +7570,13 @@ Public Class Mainwindow
 
                 '■最初の画像の読み込み
                 Dim aa As String = txtpass_picturefolder.Text & "\" & 1 & ".bmp"
-                tplex = Cv2.ImRead(aa, ImreadModes.Color)
+
+                If chkcv_grayscale.Checked = False Then
+                    tplex = Cv2.ImRead(aa, ImreadModes.Color)
+                Else
+                    tplex = Cv2.ImRead(aa, ImreadModes.Grayscale)
+                End If
+
 
                 '■最初の画像の読み込み（表示用）
                 Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
@@ -7569,7 +7592,12 @@ Public Class Mainwindow
 
                 '■リセット画像の読み込み
                 Dim aa_reset As String = txtpass_picturefolder.Text & "\reset.bmp"
-                tplex_r = Cv2.ImRead(aa_reset, ImreadModes.Color)
+
+                If chkcv_grayscale.Checked = False Then
+                    tplex_r = Cv2.ImRead(aa_reset, ImreadModes.Color)
+                Else
+                    tplex_r = Cv2.ImRead(aa_reset, ImreadModes.Grayscale)
+                End If
 
                 '■リセット画像の読み込み（表示用）
                 Using fs As FileStream = New FileStream(aa_reset, FileMode.Open, FileAccess.Read)
@@ -7583,7 +7611,13 @@ Public Class Mainwindow
 
                 '■最初の画像の読み込み
                 Dim aa_reset As String = txtpass_picturefolder.Text & "\" & 1 & ".bmp"
-                tplex_r = Cv2.ImRead(aa_reset, ImreadModes.Color)
+
+                If chkcv_grayscale.Checked = False Then
+                    tplex_r = Cv2.ImRead(aa_reset, ImreadModes.Color)
+                Else
+                    tplex_r = Cv2.ImRead(aa_reset, ImreadModes.Grayscale)
+                End If
+
 
                 '■リセット画像の読み込み（表示用）
                 Using fs As FileStream = New FileStream(aa_reset, FileMode.Open, FileAccess.Read)
@@ -7605,7 +7639,13 @@ Public Class Mainwindow
                 If chkload1.Checked = True Then
                     '■ローディング画像1の読み込み
                     Dim aa_load1 As String = txtpass_picturefolder.Text & "\loading1.bmp"
-                    tplex_load1 = Cv2.ImRead(aa_load1, ImreadModes.Color)
+
+                    If chkcv_grayscale.Checked = False Then
+                        tplex_load1 = Cv2.ImRead(aa_load1, ImreadModes.Color)
+                    Else
+                        tplex_load1 = Cv2.ImRead(aa_load1, ImreadModes.Grayscale)
+                    End If
+
 
                     '■ローディング画像の読み込み（表示用）
                     Using fs As FileStream = New FileStream(aa_load1, FileMode.Open, FileAccess.Read)
@@ -7618,7 +7658,13 @@ Public Class Mainwindow
 
                     '■最初の画像の読み込み
                     Dim aa_load1 As String = txtpass_picturefolder.Text & "\" & 1 & ".bmp"
-                    tplex_load1 = Cv2.ImRead(aa_load1, ImreadModes.Color)
+
+                    If chkcv_grayscale.Checked = False Then
+                        tplex_load1 = Cv2.ImRead(aa_load1, ImreadModes.Color)
+                    Else
+                        tplex_load1 = Cv2.ImRead(aa_load1, ImreadModes.Grayscale)
+                    End If
+
 
                     '■ローディング画像の読み込み（表示用）
                     Using fs As FileStream = New FileStream(aa_load1, FileMode.Open, FileAccess.Read)
@@ -7631,7 +7677,13 @@ Public Class Mainwindow
                 If chkload2.Checked = True Then
                     '■ローディング画像2の読み込み
                     Dim aa_load2 As String = txtpass_picturefolder.Text & "\loading2.bmp"
-                    tplex_load2 = Cv2.ImRead(aa_load2, ImreadModes.Color)
+
+                    If chkcv_grayscale.Checked = False Then
+                        tplex_load2 = Cv2.ImRead(aa_load2, ImreadModes.Color)
+                    Else
+                        tplex_load2 = Cv2.ImRead(aa_load2, ImreadModes.Grayscale)
+                    End If
+
 
                     chknow_load2.Checked = True
 
@@ -7639,7 +7691,14 @@ Public Class Mainwindow
 
                     '■最初の画像の読み込み
                     Dim aa_load2 As String = txtpass_picturefolder.Text & "\" & 1 & ".bmp"
-                    tplex_load2 = Cv2.ImRead(aa_load2, ImreadModes.Color)
+
+                    If chkcv_grayscale.Checked = False Then
+                        tplex_load2 = Cv2.ImRead(aa_load2, ImreadModes.Color)
+                    Else
+                        tplex_load2 = Cv2.ImRead(aa_load2, ImreadModes.Grayscale)
+                    End If
+
+
 
 
                 End If
@@ -7648,7 +7707,14 @@ Public Class Mainwindow
                 If chkload3.Checked = True Then
                     '■ローディング画像3の読み込み
                     Dim aa_load3 As String = txtpass_picturefolder.Text & "\loading3.bmp"
-                    tplex_load3 = Cv2.ImRead(aa_load3, ImreadModes.Color)
+
+                    If chkcv_grayscale.Checked = False Then
+                        tplex_load3 = Cv2.ImRead(aa_load3, ImreadModes.Color)
+                    Else
+                        tplex_load3 = Cv2.ImRead(aa_load3, ImreadModes.Grayscale)
+                    End If
+
+
 
 
                     chknow_load3.Checked = True
@@ -7657,7 +7723,13 @@ Public Class Mainwindow
 
                     '■最初の画像の読み込み
                     Dim aa_load3 As String = txtpass_picturefolder.Text & "\" & 1 & ".bmp"
-                    tplex_load3 = Cv2.ImRead(aa_load3, ImreadModes.Color)
+
+                    If chkcv_grayscale.Checked = False Then
+                        tplex_load3 = Cv2.ImRead(aa_load3, ImreadModes.Color)
+                    Else
+                        tplex_load3 = Cv2.ImRead(aa_load3, ImreadModes.Grayscale)
+                    End If
+
 
 
                 End If
@@ -7666,7 +7738,14 @@ Public Class Mainwindow
                 If chkload4.Checked = True Then
                     '■ローディング画像4の読み込み
                     Dim aa_load4 As String = txtpass_picturefolder.Text & "\loading4.bmp"
-                    tplex_load4 = Cv2.ImRead(aa_load4, ImreadModes.Color)
+
+                    If chkcv_grayscale.Checked = False Then
+                        tplex_load4 = Cv2.ImRead(aa_load4, ImreadModes.Color)
+                    Else
+                        tplex_load4 = Cv2.ImRead(aa_load4, ImreadModes.Grayscale)
+                    End If
+
+
 
 
                     chknow_load4.Checked = True
@@ -7675,7 +7754,13 @@ Public Class Mainwindow
 
                     '■最初の画像の読み込み
                     Dim aa_load4 As String = txtpass_picturefolder.Text & "\" & 1 & ".bmp"
-                    tplex_load4 = Cv2.ImRead(aa_load4, ImreadModes.Color)
+
+                    If chkcv_grayscale.Checked = False Then
+                        tplex_load4 = Cv2.ImRead(aa_load4, ImreadModes.Color)
+                    Else
+                        tplex_load4 = Cv2.ImRead(aa_load4, ImreadModes.Grayscale)
+                    End If
+
 
 
                 End If
@@ -7684,7 +7769,14 @@ Public Class Mainwindow
                 If chkload5.Checked = True Then
                     '■ローディング画像5の読み込み
                     Dim aa_load5 As String = txtpass_picturefolder.Text & "\loading5.bmp"
-                    tplex_load5 = Cv2.ImRead(aa_load5, ImreadModes.Color)
+
+                    If chkcv_grayscale.Checked = False Then
+                        tplex_load5 = Cv2.ImRead(aa_load5, ImreadModes.Color)
+                    Else
+                        tplex_load5 = Cv2.ImRead(aa_load5, ImreadModes.Grayscale)
+                    End If
+
+
 
 
                     chknow_load5.Checked = True
@@ -7693,7 +7785,13 @@ Public Class Mainwindow
 
                     '■最初の画像の読み込み
                     Dim aa_load5 As String = txtpass_picturefolder.Text & "\" & 1 & ".bmp"
-                    tplex_load5 = Cv2.ImRead(aa_load5, ImreadModes.Color)
+
+                    If chkcv_grayscale.Checked = False Then
+                        tplex_load5 = Cv2.ImRead(aa_load5, ImreadModes.Color)
+                    Else
+                        tplex_load5 = Cv2.ImRead(aa_load5, ImreadModes.Grayscale)
+                    End If
+
 
 
                 End If
@@ -7702,7 +7800,14 @@ Public Class Mainwindow
                 If chkload6.Checked = True Then
                     '■ローディング画像6の読み込み
                     Dim aa_load6 As String = txtpass_picturefolder.Text & "\loading6.bmp"
-                    tplex_load6 = Cv2.ImRead(aa_load6, ImreadModes.Color)
+
+                    If chkcv_grayscale.Checked = False Then
+                        tplex_load6 = Cv2.ImRead(aa_load6, ImreadModes.Color)
+                    Else
+                        tplex_load6 = Cv2.ImRead(aa_load6, ImreadModes.Grayscale)
+                    End If
+
+
 
 
                     chknow_load6.Checked = True
@@ -7711,7 +7816,13 @@ Public Class Mainwindow
 
                     '■最初の画像の読み込み
                     Dim aa_load6 As String = txtpass_picturefolder.Text & "\" & 1 & ".bmp"
-                    tplex_load6 = Cv2.ImRead(aa_load6, ImreadModes.Color)
+
+                    If chkcv_grayscale.Checked = False Then
+                        tplex_load6 = Cv2.ImRead(aa_load6, ImreadModes.Color)
+                    Else
+                        tplex_load6 = Cv2.ImRead(aa_load6, ImreadModes.Grayscale)
+                    End If
+
 
 
                 End If
@@ -7720,7 +7831,13 @@ Public Class Mainwindow
                 If chkload7.Checked = True Then
                     '■ローディング画像7の読み込み
                     Dim aa_load7 As String = txtpass_picturefolder.Text & "\loading7.bmp"
-                    tplex_load7 = Cv2.ImRead(aa_load7, ImreadModes.Color)
+
+                    If chkcv_grayscale.Checked = False Then
+                        tplex_load7 = Cv2.ImRead(aa_load7, ImreadModes.Color)
+                    Else
+                        tplex_load7 = Cv2.ImRead(aa_load7, ImreadModes.Grayscale)
+                    End If
+
 
 
                     chknow_load7.Checked = True
@@ -7729,7 +7846,13 @@ Public Class Mainwindow
 
                     '■最初の画像の読み込み
                     Dim aa_load7 As String = txtpass_picturefolder.Text & "\" & 1 & ".bmp"
-                    tplex_load7 = Cv2.ImRead(aa_load7, ImreadModes.Color)
+
+                    If chkcv_grayscale.Checked = False Then
+                        tplex_load7 = Cv2.ImRead(aa_load7, ImreadModes.Color)
+                    Else
+                        tplex_load7 = Cv2.ImRead(aa_load7, ImreadModes.Grayscale)
+                    End If
+
 
 
                 End If
@@ -7738,7 +7861,13 @@ Public Class Mainwindow
                 If chkload8.Checked = True Then
                     '■ローディング画像8の読み込み
                     Dim aa_load8 As String = txtpass_picturefolder.Text & "\loading8.bmp"
-                    tplex_load8 = Cv2.ImRead(aa_load8, ImreadModes.Color)
+
+                    If chkcv_grayscale.Checked = False Then
+                        tplex_load8 = Cv2.ImRead(aa_load8, ImreadModes.Color)
+                    Else
+                        tplex_load8 = Cv2.ImRead(aa_load8, ImreadModes.Grayscale)
+                    End If
+
 
 
                     chknow_load8.Checked = True
@@ -7747,7 +7876,13 @@ Public Class Mainwindow
 
                     '■最初の画像の読み込み
                     Dim aa_load8 As String = txtpass_picturefolder.Text & "\" & 1 & ".bmp"
-                    tplex_load8 = Cv2.ImRead(aa_load8, ImreadModes.Color)
+
+                    If chkcv_grayscale.Checked = False Then
+                        tplex_load8 = Cv2.ImRead(aa_load8, ImreadModes.Color)
+                    Else
+                        tplex_load8 = Cv2.ImRead(aa_load8, ImreadModes.Grayscale)
+                    End If
+
 
 
                 End If
@@ -7756,7 +7891,13 @@ Public Class Mainwindow
                 If chkload9.Checked = True Then
                     '■ローディング画像9の読み込み
                     Dim aa_load9 As String = txtpass_picturefolder.Text & "\loading9.bmp"
-                    tplex_load9 = Cv2.ImRead(aa_load9, ImreadModes.Color)
+
+                    If chkcv_grayscale.Checked = False Then
+                        tplex_load9 = Cv2.ImRead(aa_load9, ImreadModes.Color)
+                    Else
+                        tplex_load9 = Cv2.ImRead(aa_load9, ImreadModes.Grayscale)
+                    End If
+
 
 
                     chknow_load9.Checked = True
@@ -7765,7 +7906,13 @@ Public Class Mainwindow
 
                     '■最初の画像の読み込み
                     Dim aa_load9 As String = txtpass_picturefolder.Text & "\" & 1 & ".bmp"
-                    tplex_load9 = Cv2.ImRead(aa_load9, ImreadModes.Color)
+
+                    If chkcv_grayscale.Checked = False Then
+                        tplex_load9 = Cv2.ImRead(aa_load9, ImreadModes.Color)
+                    Else
+                        tplex_load9 = Cv2.ImRead(aa_load9, ImreadModes.Grayscale)
+                    End If
+
 
 
                 End If
@@ -7774,7 +7921,13 @@ Public Class Mainwindow
                 If chkload10.Checked = True Then
                     '■ローディング画像10の読み込み
                     Dim aa_load10 As String = txtpass_picturefolder.Text & "\loading10.bmp"
-                    tplex_load10 = Cv2.ImRead(aa_load10, ImreadModes.Color)
+
+                    If chkcv_grayscale.Checked = False Then
+                        tplex_load10 = Cv2.ImRead(aa_load10, ImreadModes.Color)
+                    Else
+                        tplex_load10 = Cv2.ImRead(aa_load10, ImreadModes.Grayscale)
+                    End If
+
 
 
                     chknow_load10.Checked = True
@@ -7783,7 +7936,13 @@ Public Class Mainwindow
 
                     '■最初の画像の読み込み
                     Dim aa_load10 As String = txtpass_picturefolder.Text & "\" & 1 & ".bmp"
-                    tplex_load10 = Cv2.ImRead(aa_load10, ImreadModes.Color)
+
+                    If chkcv_grayscale.Checked = False Then
+                        tplex_load10 = Cv2.ImRead(aa_load10, ImreadModes.Color)
+                    Else
+                        tplex_load10 = Cv2.ImRead(aa_load10, ImreadModes.Grayscale)
+                    End If
+
 
                 End If
 
@@ -8025,22 +8184,30 @@ Public Class Mainwindow
         timash_hotkey_sleep.Enabled = False
 
     End Sub
+    Private memoryerror_count As Integer = 0
 
     Private Async Sub Async_split()
+        Try
 
-        Await Task.Run(Sub()
 
-                           Using res1 As New Mat(imgex.Width - tplex.Width + 1, imgex.Height - tplex.Height + 1, MatType.CV_32FC1)
-                               Cv2.MatchTemplate(imgex, tplex, res1, TemplateMatchModes.CCoeffNormed)
-                               Cv2.MinMaxLoc(res1, minval_split, maxval_split, minloc_split, maxloc_split, Nothing)
+            Await Task.Run(Sub()
 
-                           End Using
+                               Using res1 As New Mat(imgex.Width - tplex.Width + 1, imgex.Height - tplex.Height + 1, MatType.CV_8UC3)
+                                   Cv2.MatchTemplate(imgex, tplex, res1, TemplateMatchModes.CCoeffNormed)
+                                   Cv2.MinMaxLoc(res1, minval_split, maxval_split, minloc_split, maxloc_split, Nothing)
 
-                       End Sub)
-        If dst_resize.IsDisposed = False Then
-            dst_resize.Dispose()
-        End If
+                               End Using
 
+                           End Sub)
+
+            If dst_resize.IsDisposed = False Then
+                dst_resize.Dispose()
+            End If
+
+        Catch ex As Exception
+            btncv_stop.PerformClick()
+            MessageBox.Show("保護されていないメモリ" & vbCrLf & ex.Message & vbCrLf & ex.StackTrace)
+        End Try
 
     End Sub
 
@@ -8048,7 +8215,7 @@ Public Class Mainwindow
 
         Await Task.Run(Sub()
 
-                           Using res2 As New Mat(imgex.Width - tplex_r.Width + 1, imgex.Height - tplex_r.Height + 1, MatType.CV_32FC1)
+                           Using res2 As New Mat(imgex.Width - tplex_r.Width + 1, imgex.Height - tplex_r.Height + 1, MatType.CV_8UC3)
                                Cv2.MatchTemplate(imgex, tplex_r, res2, TemplateMatchModes.CCoeffNormed)
                                Cv2.MinMaxLoc(res2, minval_reset, maxval_reset, minloc_reset, maxloc_reset, Nothing)
 
@@ -8061,7 +8228,7 @@ Public Class Mainwindow
     Private Async Sub Async_load1()
 
         Await Task.Run(Sub()
-                           Using res_load1 As New Mat(imgex.Width - tplex_load1.Width + 1, imgex.Height - tplex_load1.Height + 1, MatType.CV_32FC1)
+                           Using res_load1 As New Mat(imgex.Width - tplex_load1.Width + 1, imgex.Height - tplex_load1.Height + 1, MatType.CV_8UC3)
 
                                Cv2.MatchTemplate(imgex, tplex_load1, res_load1, TemplateMatchModes.CCoeffNormed)
                                Cv2.MinMaxLoc(res_load1, minval_load1, maxval_load1, minloc_load1, maxloc_load1, Nothing)
@@ -8075,7 +8242,7 @@ Public Class Mainwindow
     Private Async Sub Async_load2()
 
         Await Task.Run(Sub()
-                           Using res_load2 As New Mat(imgex.Width - tplex_load2.Width + 1, imgex.Height - tplex_load2.Height + 1, MatType.CV_32FC1)
+                           Using res_load2 As New Mat(imgex.Width - tplex_load2.Width + 1, imgex.Height - tplex_load2.Height + 1, MatType.CV_8UC3)
 
                                Cv2.MatchTemplate(imgex, tplex_load2, res_load2, TemplateMatchModes.CCoeffNormed)
                                Cv2.MinMaxLoc(res_load2, minval_load2, maxval_load2, minloc_load2, maxloc_load2, Nothing)
@@ -8089,7 +8256,7 @@ Public Class Mainwindow
     Private Async Sub Async_load3()
 
         Await Task.Run(Sub()
-                           Using res_load3 As New Mat(imgex.Width - tplex_load3.Width + 1, imgex.Height - tplex_load3.Height + 1, MatType.CV_32FC1)
+                           Using res_load3 As New Mat(imgex.Width - tplex_load3.Width + 1, imgex.Height - tplex_load3.Height + 1, MatType.CV_8UC3)
 
                                Cv2.MatchTemplate(imgex, tplex_load3, res_load3, TemplateMatchModes.CCoeffNormed)
                                Cv2.MinMaxLoc(res_load3, minval_load3, maxval_load3, minloc_load3, maxloc_load3, Nothing)
@@ -8103,7 +8270,7 @@ Public Class Mainwindow
     Private Async Sub Async_load4()
 
         Await Task.Run(Sub()
-                           Using res_load4 As New Mat(imgex.Width - tplex_load4.Width + 1, imgex.Height - tplex_load4.Height + 1, MatType.CV_32FC1)
+                           Using res_load4 As New Mat(imgex.Width - tplex_load4.Width + 1, imgex.Height - tplex_load4.Height + 1, MatType.CV_8UC3)
 
                                Cv2.MatchTemplate(imgex, tplex_load4, res_load4, TemplateMatchModes.CCoeffNormed)
                                Cv2.MinMaxLoc(res_load4, minval_load4, maxval_load4, minloc_load4, maxloc_load4, Nothing)
@@ -8117,7 +8284,7 @@ Public Class Mainwindow
     Private Async Sub Async_load5()
 
         Await Task.Run(Sub()
-                           Using res_load5 As New Mat(imgex.Width - tplex_load5.Width + 1, imgex.Height - tplex_load5.Height + 1, MatType.CV_32FC1)
+                           Using res_load5 As New Mat(imgex.Width - tplex_load5.Width + 1, imgex.Height - tplex_load5.Height + 1, MatType.CV_8UC3)
 
                                Cv2.MatchTemplate(imgex, tplex_load5, res_load5, TemplateMatchModes.CCoeffNormed)
                                Cv2.MinMaxLoc(res_load5, minval_load5, maxval_load5, minloc_load5, maxloc_load5, Nothing)
@@ -8131,7 +8298,7 @@ Public Class Mainwindow
     Private Async Sub Async_load6()
 
         Await Task.Run(Sub()
-                           Using res_load6 As New Mat(imgex.Width - tplex_load6.Width + 1, imgex.Height - tplex_load6.Height + 1, MatType.CV_32FC1)
+                           Using res_load6 As New Mat(imgex.Width - tplex_load6.Width + 1, imgex.Height - tplex_load6.Height + 1, MatType.CV_8UC3)
 
                                Cv2.MatchTemplate(imgex, tplex_load6, res_load6, TemplateMatchModes.CCoeffNormed)
                                Cv2.MinMaxLoc(res_load6, minval_load6, maxval_load6, minloc_load6, maxloc_load6, Nothing)
@@ -8145,7 +8312,7 @@ Public Class Mainwindow
     Private Async Sub Async_load7()
 
         Await Task.Run(Sub()
-                           Using res_load7 As New Mat(imgex.Width - tplex_load7.Width + 1, imgex.Height - tplex_load7.Height + 1, MatType.CV_32FC1)
+                           Using res_load7 As New Mat(imgex.Width - tplex_load7.Width + 1, imgex.Height - tplex_load7.Height + 1, MatType.CV_8UC3)
 
                                Cv2.MatchTemplate(imgex, tplex_load7, res_load7, TemplateMatchModes.CCoeffNormed)
                                Cv2.MinMaxLoc(res_load7, minval_load7, maxval_load7, minloc_load7, maxloc_load7, Nothing)
@@ -8159,7 +8326,7 @@ Public Class Mainwindow
     Private Async Sub Async_load8()
 
         Await Task.Run(Sub()
-                           Using res_load8 As New Mat(imgex.Width - tplex_load8.Width + 1, imgex.Height - tplex_load8.Height + 1, MatType.CV_32FC1)
+                           Using res_load8 As New Mat(imgex.Width - tplex_load8.Width + 1, imgex.Height - tplex_load8.Height + 1, MatType.CV_8UC3)
 
                                Cv2.MatchTemplate(imgex, tplex_load8, res_load8, TemplateMatchModes.CCoeffNormed)
                                Cv2.MinMaxLoc(res_load8, minval_load8, maxval_load8, minloc_load8, maxloc_load8, Nothing)
@@ -8173,7 +8340,7 @@ Public Class Mainwindow
     Private Async Sub Async_load9()
 
         Await Task.Run(Sub()
-                           Using res_load9 As New Mat(imgex.Width - tplex_load9.Width + 1, imgex.Height - tplex_load9.Height + 1, MatType.CV_32FC1)
+                           Using res_load9 As New Mat(imgex.Width - tplex_load9.Width + 1, imgex.Height - tplex_load9.Height + 1, MatType.CV_8UC3)
 
                                Cv2.MatchTemplate(imgex, tplex_load9, res_load9, TemplateMatchModes.CCoeffNormed)
                                Cv2.MinMaxLoc(res_load9, minval_load9, maxval_load9, minloc_load9, maxloc_load9, Nothing)
@@ -8187,7 +8354,7 @@ Public Class Mainwindow
     Private Async Sub Async_load10()
 
         Await Task.Run(Sub()
-                           Using res_load10 As New Mat(imgex.Width - tplex_load10.Width + 1, imgex.Height - tplex_load10.Height + 1, MatType.CV_32FC1)
+                           Using res_load10 As New Mat(imgex.Width - tplex_load10.Width + 1, imgex.Height - tplex_load10.Height + 1, MatType.CV_8UC3)
 
                                Cv2.MatchTemplate(imgex, tplex_load10, res_load10, TemplateMatchModes.CCoeffNormed)
                                Cv2.MinMaxLoc(res_load10, minval_load10, maxval_load10, minloc_load10, maxloc_load10, Nothing)
@@ -8520,7 +8687,14 @@ Public Class Mainwindow
         'Try
 
         '■プレビュー画面の更新★
-        capturecv.Read(frame) 'NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
+        capturecv.Read(frame_input) 'NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
+
+        '■グレースケールに変換
+        If chkcv_grayscale.Checked = True Then
+            Cv2.CvtColor(frame_input, frame, ColorConversionCodes.BGR2GRAY)
+        Else
+            frame = frame_input
+        End If
 
         If chkcv_crop.Checked = True Then
 
@@ -8528,7 +8702,7 @@ Public Class Mainwindow
             dst_cropRect = New Mat(frame, New OpenCvSharp.Rect(CInt(txtcv_crop_posx.Text), CInt(txtcv_crop_posy.Text),
                                    CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text)))
 
-            Dim dst_cropped As Mat = New Mat(CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text), MatType.CV_32FC1)
+            Dim dst_cropped As Mat = New Mat(CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text), MatType.CV_8UC3)
 
             dst_cropRect.CopyTo(dst_cropped)
 
@@ -8536,7 +8710,11 @@ Public Class Mainwindow
             dst_resize = New Mat()
             Cv2.Resize(dst_cropped, dst_resize, New OpenCvSharp.Size(numcv_sizex.Value, numcv_sizey.Value), 0, 0, interpolation:=InterpolationFlags.Nearest)
 
-            picipl_cap.ImageIpl = dst_resize
+            If btncv_downsize.Text = My.Resources.Message.msg35 Then '"たたむ"
+                picipl_cap.ImageIpl = dst_resize
+
+            End If
+
             imgex = dst_resize
 
             dst_cropRect.Dispose()
@@ -8549,7 +8727,13 @@ Public Class Mainwindow
             If numcv_sizex.Value = numcrop_resolution_x.Value And
                numcv_sizey.Value = numcrop_resolution_y.Value Then
 
-                picipl_cap.ImageIpl = frame
+                If btncv_downsize.Text = My.Resources.Message.msg35 Then '"たたむ"
+                    picipl_cap.ImageIpl = frame
+
+                End If
+
+
+
                 imgex = frame
 
 
@@ -8558,7 +8742,13 @@ Public Class Mainwindow
                 dst_resize = New Mat()
                 Cv2.Resize(frame, dst_resize, New OpenCvSharp.Size(numcv_sizex.Value, numcv_sizey.Value), 0, 0, interpolation:=InterpolationFlags.Nearest)
 
-                picipl_cap.ImageIpl = dst_resize
+                If btncv_downsize.Text = My.Resources.Message.msg35 Then '"たたむ"
+                    picipl_cap.ImageIpl = dst_resize
+
+                End If
+
+
+
                 imgex = dst_resize
                 'dst_resize.Dispose()はAsync内
 
@@ -8685,7 +8875,15 @@ Public Class Mainwindow
                     g.DrawRectangle(DrawPen, maxloc_split.X, maxloc_split.Y, tplex.Width, tplex.Height)
 
                     '■プレビュー画面の更新
-                    capturecv.Read(frame)
+                    capturecv.Read(frame_input)
+
+                    '■グレースケールに変換
+                    If chkcv_grayscale.Checked = True Then
+                        Cv2.CvtColor(frame_input, frame, ColorConversionCodes.BGR2GRAY)
+                    Else
+                        frame = frame_input
+                    End If
+
 
                     If chkcv_crop.Checked = True Then
 
@@ -8693,7 +8891,7 @@ Public Class Mainwindow
                         dst_cropRect = New Mat(frame, New OpenCvSharp.Rect(CInt(txtcv_crop_posx.Text), CInt(txtcv_crop_posy.Text),
                                    CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text)))
 
-                        Dim dst_cropped As Mat = New Mat(CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text), MatType.CV_32FC1)
+                        Dim dst_cropped As Mat = New Mat(CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text), MatType.CV_8UC3)
 
                         dst_cropRect.CopyTo(dst_cropped)
 
@@ -9101,8 +9299,15 @@ Public Class Mainwindow
 
 
                     '■プレビュー画面の更新
-                    'NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
-                    capturecv.Read(frame)
+                    capturecv.Read(frame_input)
+
+                    '■グレースケールに変換
+                    If chkcv_grayscale.Checked = True Then
+                        Cv2.CvtColor(frame_input, frame, ColorConversionCodes.BGR2GRAY)
+                    Else
+                        frame = frame_input
+                    End If
+
 
                     If chkcv_crop.Checked = True Then
 
@@ -9110,7 +9315,7 @@ Public Class Mainwindow
                         dst_cropRect = New Mat(frame, New OpenCvSharp.Rect(CInt(txtcv_crop_posx.Text), CInt(txtcv_crop_posy.Text),
                                    CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text)))
 
-                        Dim dst_cropped As Mat = New Mat(CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text), MatType.CV_32FC1)
+                        Dim dst_cropped As Mat = New Mat(CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text), MatType.CV_8UC3)
 
                         dst_cropRect.CopyTo(dst_cropped)
 
@@ -9129,7 +9334,7 @@ Public Class Mainwindow
                     ElseIf chkcv_crop.Checked = False Then 'クロップなし。リサイズ有無で分岐
 
                         If numcv_sizex.Value = numcrop_resolution_x.Value And
-               numcv_sizey.Value = numcrop_resolution_y.Value Then
+                           numcv_sizey.Value = numcrop_resolution_y.Value Then
 
                             picipl_cap.ImageIpl = frame
                             imgex = frame
@@ -9156,7 +9361,13 @@ Public Class Mainwindow
 
                     '■テンプレート画像の更新
                     Dim aa As String = txtpass_picturefolder.Text & "\" & 1 & ".bmp"
-                    tplex = Cv2.ImRead(aa, ImreadModes.Color)
+
+                    If chkcv_grayscale.Checked = False Then
+                        tplex = Cv2.ImRead(aa, ImreadModes.Color)
+                    Else
+                        tplex = Cv2.ImRead(aa, ImreadModes.Grayscale)
+                    End If
+
 
                     '■ローディング画像の読み込み（表示用）
                     Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
@@ -10141,7 +10352,13 @@ Public Class Mainwindow
                 reflesh_img = 0
                 '■テンプレート画像の更新
                 Dim aa As String = txtpass_picturefolder.Text & "\" & lblcv_lap.Text & ".bmp"
-                tplex = Cv2.ImRead(aa, ImreadModes.Color)
+
+                If chkcv_grayscale.Checked = False Then
+                    tplex = Cv2.ImRead(aa, ImreadModes.Color)
+                Else
+                    tplex = Cv2.ImRead(aa, ImreadModes.Grayscale)
+                End If
+
 
                 '■テンプレート画像の更新（表示用）
                 Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
@@ -10237,7 +10454,15 @@ Public Class Mainwindow
                 txtstate.Text = My.Resources.Message.msg30 '"画像認識中"
 
                 '■プレビュー画面の更新
-                capturecv.Read(frame)
+                capturecv.Read(frame_input)
+
+                '■グレースケールに変換
+                If chkcv_grayscale.Checked = True Then
+                    Cv2.CvtColor(frame_input, frame, ColorConversionCodes.BGR2GRAY)
+                Else
+                    frame = frame_input
+                End If
+
 
                 If chkcv_crop.Checked = True Then
 
@@ -10245,7 +10470,7 @@ Public Class Mainwindow
                     dst_cropRect = New Mat(frame, New OpenCvSharp.Rect(CInt(txtcv_crop_posx.Text), CInt(txtcv_crop_posy.Text),
                                    CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text)))
 
-                    Dim dst_cropped As Mat = New Mat(CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text), MatType.CV_32FC1)
+                    Dim dst_cropped As Mat = New Mat(CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text), MatType.CV_8UC3)
 
                     dst_cropRect.CopyTo(dst_cropped)
 
@@ -10313,7 +10538,15 @@ Public Class Mainwindow
 
     Private Sub Getimgex()
         '■プレビュー画面の更新
-        capturecv.Read(frame)
+        capturecv.Read(frame_input)
+
+        '■グレースケールに変換
+        If chkcv_grayscale.Checked = True Then
+            Cv2.CvtColor(frame_input, frame, ColorConversionCodes.BGR2GRAY)
+        Else
+            frame = frame_input
+        End If
+
 
         If chkcv_crop.Checked = True Then
 
@@ -10321,7 +10554,7 @@ Public Class Mainwindow
             dst_cropRect = New Mat(frame, New OpenCvSharp.Rect(CInt(txtcv_crop_posx.Text), CInt(txtcv_crop_posy.Text),
                                    CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text)))
 
-            Dim dst_cropped As Mat = New Mat(CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text), MatType.CV_32FC1)
+            Dim dst_cropped As Mat = New Mat(CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text), MatType.CV_8UC3)
 
             dst_cropRect.CopyTo(dst_cropped)
 
@@ -10367,7 +10600,7 @@ Public Class Mainwindow
         '■プレビュー画面の更新
         Getimgex()
 
-        Using res1 As New Mat(imgex.Width - tplex.Width + 1, imgex.Height - tplex.Height + 1, MatType.CV_32FC1)
+        Using res1 As New Mat(imgex.Width - tplex.Width + 1, imgex.Height - tplex.Height + 1, MatType.CV_8UC3)
 
             Cv2.MatchTemplate(imgex, tplex, res1, TemplateMatchModes.CCoeffNormed)
             Cv2.MinMaxLoc(res1, minval_split, maxval_split, minloc_split, maxloc_split, Nothing)
@@ -10383,7 +10616,7 @@ Public Class Mainwindow
         Getimgex()
 
 
-        Using res2 As New Mat(imgex.Width - tplex_r.Width + 1, imgex.Height - tplex_r.Height + 1, MatType.CV_32FC1)
+        Using res2 As New Mat(imgex.Width - tplex_r.Width + 1, imgex.Height - tplex_r.Height + 1, MatType.CV_8UC3)
 
             Cv2.MatchTemplate(imgex, tplex_r, res2, TemplateMatchModes.CCoeffNormed)
             Cv2.MinMaxLoc(res2, minval_reset, maxval_reset, minloc_reset, maxloc_reset, Nothing)
@@ -10397,7 +10630,7 @@ Public Class Mainwindow
     Private Sub onetimematching_load1() 'なぜかマッチングを1回挟まないと、連続でマッチング判定が起こってしまう（誤判定）
         Getimgex()
 
-        Using res_load1 As New Mat(imgex.Width - tplex_load1.Width + 1, imgex.Height - tplex_load1.Height + 1, MatType.CV_32FC1)
+        Using res_load1 As New Mat(imgex.Width - tplex_load1.Width + 1, imgex.Height - tplex_load1.Height + 1, MatType.CV_8UC3)
 
             Cv2.MatchTemplate(imgex, tplex_load1, res_load1, TemplateMatchModes.CCoeffNormed)
             Cv2.MinMaxLoc(res_load1, minval_load1, maxval_load1, minloc_load1, maxloc_load1, Nothing)
@@ -10410,7 +10643,7 @@ Public Class Mainwindow
     Private Sub onetimematching_load2() 'なぜかマッチングを1回挟まないと、連続でマッチング判定が起こってしまう（誤判定）
         Getimgex()
 
-        Using res_load2 As New Mat(imgex.Width - tplex_load2.Width + 1, imgex.Height - tplex_load2.Height + 1, MatType.CV_32FC1)
+        Using res_load2 As New Mat(imgex.Width - tplex_load2.Width + 1, imgex.Height - tplex_load2.Height + 1, MatType.CV_8UC3)
 
             Cv2.MatchTemplate(imgex, tplex_load2, res_load2, TemplateMatchModes.CCoeffNormed)
             Cv2.MinMaxLoc(res_load2, minval_load2, maxval_load2, minloc_load2, maxloc_load2, Nothing)
@@ -10423,7 +10656,7 @@ Public Class Mainwindow
     Private Sub onetimematching_load3() 'なぜかマッチングを1回挟まないと、連続でマッチング判定が起こってしまう（誤判定）
         Getimgex()
 
-        Using res_load3 As New Mat(imgex.Width - tplex_load3.Width + 1, imgex.Height - tplex_load3.Height + 1, MatType.CV_32FC1)
+        Using res_load3 As New Mat(imgex.Width - tplex_load3.Width + 1, imgex.Height - tplex_load3.Height + 1, MatType.CV_8UC3)
 
             Cv2.MatchTemplate(imgex, tplex_load3, res_load3, TemplateMatchModes.CCoeffNormed)
             Cv2.MinMaxLoc(res_load3, minval_load3, maxval_load3, minloc_load3, maxloc_load3, Nothing)
@@ -10436,7 +10669,7 @@ Public Class Mainwindow
     Private Sub onetimematching_load4() 'なぜかマッチングを1回挟まないと、連続でマッチング判定が起こってしまう（誤判定）
         Getimgex()
 
-        Using res_load4 As New Mat(imgex.Width - tplex_load4.Width + 1, imgex.Height - tplex_load4.Height + 1, MatType.CV_32FC1)
+        Using res_load4 As New Mat(imgex.Width - tplex_load4.Width + 1, imgex.Height - tplex_load4.Height + 1, MatType.CV_8UC3)
 
             Cv2.MatchTemplate(imgex, tplex_load4, res_load4, TemplateMatchModes.CCoeffNormed)
             Cv2.MinMaxLoc(res_load4, minval_load4, maxval_load4, minloc_load4, maxloc_load4, Nothing)
@@ -10449,7 +10682,7 @@ Public Class Mainwindow
     Private Sub onetimematching_load5() 'なぜかマッチングを1回挟まないと、連続でマッチング判定が起こってしまう（誤判定）
         Getimgex()
 
-        Using res_load5 As New Mat(imgex.Width - tplex_load5.Width + 1, imgex.Height - tplex_load5.Height + 1, MatType.CV_32FC1)
+        Using res_load5 As New Mat(imgex.Width - tplex_load5.Width + 1, imgex.Height - tplex_load5.Height + 1, MatType.CV_8UC3)
 
             Cv2.MatchTemplate(imgex, tplex_load5, res_load5, TemplateMatchModes.CCoeffNormed)
             Cv2.MinMaxLoc(res_load5, minval_load5, maxval_load5, minloc_load5, maxloc_load5, Nothing)
@@ -10462,7 +10695,7 @@ Public Class Mainwindow
     Private Sub onetimematching_load6() 'なぜかマッチングを1回挟まないと、連続でマッチング判定が起こってしまう（誤判定）
         Getimgex()
 
-        Using res_load6 As New Mat(imgex.Width - tplex_load6.Width + 1, imgex.Height - tplex_load6.Height + 1, MatType.CV_32FC1)
+        Using res_load6 As New Mat(imgex.Width - tplex_load6.Width + 1, imgex.Height - tplex_load6.Height + 1, MatType.CV_8UC3)
 
             Cv2.MatchTemplate(imgex, tplex_load6, res_load6, TemplateMatchModes.CCoeffNormed)
             Cv2.MinMaxLoc(res_load6, minval_load6, maxval_load6, minloc_load6, maxloc_load6, Nothing)
@@ -10475,7 +10708,7 @@ Public Class Mainwindow
     Private Sub onetimematching_load7() 'なぜかマッチングを1回挟まないと、連続でマッチング判定が起こってしまう（誤判定）
         Getimgex()
 
-        Using res_load7 As New Mat(imgex.Width - tplex_load7.Width + 1, imgex.Height - tplex_load7.Height + 1, MatType.CV_32FC1)
+        Using res_load7 As New Mat(imgex.Width - tplex_load7.Width + 1, imgex.Height - tplex_load7.Height + 1, MatType.CV_8UC3)
 
             Cv2.MatchTemplate(imgex, tplex_load7, res_load7, TemplateMatchModes.CCoeffNormed)
             Cv2.MinMaxLoc(res_load7, minval_load7, maxval_load7, minloc_load7, maxloc_load7, Nothing)
@@ -10488,7 +10721,7 @@ Public Class Mainwindow
     Private Sub onetimematching_load8() 'なぜかマッチングを1回挟まないと、連続でマッチング判定が起こってしまう（誤判定）
         Getimgex()
 
-        Using res_load8 As New Mat(imgex.Width - tplex_load8.Width + 1, imgex.Height - tplex_load8.Height + 1, MatType.CV_32FC1)
+        Using res_load8 As New Mat(imgex.Width - tplex_load8.Width + 1, imgex.Height - tplex_load8.Height + 1, MatType.CV_8UC3)
 
             Cv2.MatchTemplate(imgex, tplex_load8, res_load8, TemplateMatchModes.CCoeffNormed)
             Cv2.MinMaxLoc(res_load8, minval_load8, maxval_load8, minloc_load8, maxloc_load8, Nothing)
@@ -10501,7 +10734,7 @@ Public Class Mainwindow
     Private Sub onetimematching_load9() 'なぜかマッチングを1回挟まないと、連続でマッチング判定が起こってしまう（誤判定）
         Getimgex()
 
-        Using res_load9 As New Mat(imgex.Width - tplex_load9.Width + 1, imgex.Height - tplex_load9.Height + 1, MatType.CV_32FC1)
+        Using res_load9 As New Mat(imgex.Width - tplex_load9.Width + 1, imgex.Height - tplex_load9.Height + 1, MatType.CV_8UC3)
 
             Cv2.MatchTemplate(imgex, tplex_load9, res_load9, TemplateMatchModes.CCoeffNormed)
             Cv2.MinMaxLoc(res_load9, minval_load9, maxval_load9, minloc_load9, maxloc_load9, Nothing)
@@ -10514,7 +10747,7 @@ Public Class Mainwindow
     Private Sub onetimematching_load10() 'なぜかマッチングを1回挟まないと、連続でマッチング判定が起こってしまう（誤判定）
         Getimgex()
 
-        Using res_load10 As New Mat(imgex.Width - tplex_load10.Width + 1, imgex.Height - tplex_load10.Height + 1, MatType.CV_32FC1)
+        Using res_load10 As New Mat(imgex.Width - tplex_load10.Width + 1, imgex.Height - tplex_load10.Height + 1, MatType.CV_8UC3)
 
             Cv2.MatchTemplate(imgex, tplex_load10, res_load10, TemplateMatchModes.CCoeffNormed)
             Cv2.MinMaxLoc(res_load10, minval_load10, maxval_load10, minloc_load10, maxloc_load10, Nothing)
@@ -10534,7 +10767,7 @@ Public Class Mainwindow
         txtrecord_load.Text = CDbl(lblrecord_pause.Text * 0.001).ToString("00:00.00")
 
 
-        Using res3 As New Mat(imgex.Width - tplex_load1.Width + 1, imgex.Height - tplex_load1.Height + 1, MatType.CV_32FC1)
+        Using res3 As New Mat(imgex.Width - tplex_load1.Width + 1, imgex.Height - tplex_load1.Height + 1, MatType.CV_8UC3)
 
             Cv2.MatchTemplate(imgex, tplex_load1, res3, TemplateMatchModes.CCoeffNormed)
             Cv2.MinMaxLoc(res3, minval_load1, maxval_load1, minloc_load1, maxloc_load1, Nothing)
@@ -10582,7 +10815,7 @@ Public Class Mainwindow
         txtrecord_load.Text = CDbl(lblrecord_pause.Text * 0.001).ToString("00:00.00")
 
 
-        Using res3 As New Mat(imgex.Width - tplex_load2.Width + 1, imgex.Height - tplex_load2.Height + 1, MatType.CV_32FC1)
+        Using res3 As New Mat(imgex.Width - tplex_load2.Width + 1, imgex.Height - tplex_load2.Height + 1, MatType.CV_8UC3)
 
             Cv2.MatchTemplate(imgex, tplex_load2, res3, TemplateMatchModes.CCoeffNormed)
             Cv2.MinMaxLoc(res3, minval_load2, maxval_load2, minloc_load2, maxloc_load2, Nothing)
@@ -10630,7 +10863,7 @@ Public Class Mainwindow
         txtrecord_load.Text = CDbl(lblrecord_pause.Text * 0.001).ToString("00:00.00")
 
 
-        Using res3 As New Mat(imgex.Width - tplex_load3.Width + 1, imgex.Height - tplex_load3.Height + 1, MatType.CV_32FC1)
+        Using res3 As New Mat(imgex.Width - tplex_load3.Width + 1, imgex.Height - tplex_load3.Height + 1, MatType.CV_8UC3)
 
             Cv2.MatchTemplate(imgex, tplex_load3, res3, TemplateMatchModes.CCoeffNormed)
             Cv2.MinMaxLoc(res3, minval_load3, maxval_load3, minloc_load3, maxloc_load3, Nothing)
@@ -10678,7 +10911,7 @@ Public Class Mainwindow
         txtrecord_load.Text = CDbl(lblrecord_pause.Text * 0.001).ToString("00:00.00")
 
 
-        Using res3 As New Mat(imgex.Width - tplex_load4.Width + 1, imgex.Height - tplex_load4.Height + 1, MatType.CV_32FC1)
+        Using res3 As New Mat(imgex.Width - tplex_load4.Width + 1, imgex.Height - tplex_load4.Height + 1, MatType.CV_8UC3)
 
             Cv2.MatchTemplate(imgex, tplex_load4, res3, TemplateMatchModes.CCoeffNormed)
             Cv2.MinMaxLoc(res3, minval_load4, maxval_load4, minloc_load4, maxloc_load4, Nothing)
@@ -10726,7 +10959,7 @@ Public Class Mainwindow
         txtrecord_load.Text = CDbl(lblrecord_pause.Text * 0.001).ToString("00:00.00")
 
 
-        Using res3 As New Mat(imgex.Width - tplex_load5.Width + 1, imgex.Height - tplex_load5.Height + 1, MatType.CV_32FC1)
+        Using res3 As New Mat(imgex.Width - tplex_load5.Width + 1, imgex.Height - tplex_load5.Height + 1, MatType.CV_8UC3)
 
             Cv2.MatchTemplate(imgex, tplex_load5, res3, TemplateMatchModes.CCoeffNormed)
             Cv2.MinMaxLoc(res3, minval_load5, maxval_load5, minloc_load5, maxloc_load5, Nothing)
@@ -10774,7 +11007,7 @@ Public Class Mainwindow
         txtrecord_load.Text = CDbl(lblrecord_pause.Text * 0.001).ToString("00:00.00")
 
 
-        Using res3 As New Mat(imgex.Width - tplex_load6.Width + 1, imgex.Height - tplex_load6.Height + 1, MatType.CV_32FC1)
+        Using res3 As New Mat(imgex.Width - tplex_load6.Width + 1, imgex.Height - tplex_load6.Height + 1, MatType.CV_8UC3)
 
             Cv2.MatchTemplate(imgex, tplex_load6, res3, TemplateMatchModes.CCoeffNormed)
             Cv2.MinMaxLoc(res3, minval_load6, maxval_load6, minloc_load6, maxloc_load6, Nothing)
@@ -10822,7 +11055,7 @@ Public Class Mainwindow
         txtrecord_load.Text = CDbl(lblrecord_pause.Text * 0.001).ToString("00:00.00")
 
 
-        Using res3 As New Mat(imgex.Width - tplex_load7.Width + 1, imgex.Height - tplex_load7.Height + 1, MatType.CV_32FC1)
+        Using res3 As New Mat(imgex.Width - tplex_load7.Width + 1, imgex.Height - tplex_load7.Height + 1, MatType.CV_8UC3)
 
             Cv2.MatchTemplate(imgex, tplex_load7, res3, TemplateMatchModes.CCoeffNormed)
             Cv2.MinMaxLoc(res3, minval_load7, maxval_load7, minloc_load7, maxloc_load7, Nothing)
@@ -10870,7 +11103,7 @@ Public Class Mainwindow
         txtrecord_load.Text = CDbl(lblrecord_pause.Text * 0.001).ToString("00:00.00")
 
 
-        Using res3 As New Mat(imgex.Width - tplex_load8.Width + 1, imgex.Height - tplex_load8.Height + 1, MatType.CV_32FC1)
+        Using res3 As New Mat(imgex.Width - tplex_load8.Width + 1, imgex.Height - tplex_load8.Height + 1, MatType.CV_8UC3)
 
             Cv2.MatchTemplate(imgex, tplex_load8, res3, TemplateMatchModes.CCoeffNormed)
             Cv2.MinMaxLoc(res3, minval_load8, maxval_load8, minloc_load8, maxloc_load8, Nothing)
@@ -10918,7 +11151,7 @@ Public Class Mainwindow
         txtrecord_load.Text = CDbl(lblrecord_pause.Text * 0.001).ToString("00:00.00")
 
 
-        Using res3 As New Mat(imgex.Width - tplex_load9.Width + 1, imgex.Height - tplex_load9.Height + 1, MatType.CV_32FC1)
+        Using res3 As New Mat(imgex.Width - tplex_load9.Width + 1, imgex.Height - tplex_load9.Height + 1, MatType.CV_8UC3)
 
             Cv2.MatchTemplate(imgex, tplex_load9, res3, TemplateMatchModes.CCoeffNormed)
             Cv2.MinMaxLoc(res3, minval_load9, maxval_load9, minloc_load9, maxloc_load9, Nothing)
@@ -10966,7 +11199,7 @@ Public Class Mainwindow
         txtrecord_load.Text = CDbl(lblrecord_pause.Text * 0.001).ToString("00:00.00")
 
 
-        Using res3 As New Mat(imgex.Width - tplex_load10.Width + 1, imgex.Height - tplex_load10.Height + 1, MatType.CV_32FC1)
+        Using res3 As New Mat(imgex.Width - tplex_load10.Width + 1, imgex.Height - tplex_load10.Height + 1, MatType.CV_8UC3)
 
             Cv2.MatchTemplate(imgex, tplex_load10, res3, TemplateMatchModes.CCoeffNormed)
             Cv2.MinMaxLoc(res3, minval_load10, maxval_load10, minloc_load10, maxloc_load10, Nothing)
@@ -11438,7 +11671,7 @@ Public Class Mainwindow
 
 
 
-        Using res1 As New Mat(imgex.Width - tplex.Width + 1, imgex.Height - tplex.Height + 1, MatType.CV_32FC1)
+        Using res1 As New Mat(imgex.Width - tplex.Width + 1, imgex.Height - tplex.Height + 1, MatType.CV_8UC3)
 
             Cv2.MatchTemplate(imgex, tplex, res1, TemplateMatchModes.CCoeffNormed)
             Cv2.MinMaxLoc(res1, minval_split, maxval_split, minloc_split, maxloc_split, Nothing)
@@ -11658,7 +11891,15 @@ Public Class Mainwindow
     Private Sub timcv_forantencap_Tick(sender As Object, e As EventArgs) Handles timcv_forantencap.Tick
 
         'NativeMethods.videoio_VideoCapture_operatorRightShift_Mat(Me.capturecv.CvPtr, Me.frame.CvPtr)
-        capturecv.Read(frame)
+        capturecv.Read(frame_input)
+
+        '■グレースケールに変換
+        If chkcv_grayscale.Checked = True Then
+            Cv2.CvtColor(frame_input, frame, ColorConversionCodes.BGR2GRAY)
+        Else
+            frame = frame_input
+        End If
+
 
         If chkcv_crop.Checked = True Then
 
@@ -11666,7 +11907,7 @@ Public Class Mainwindow
             dst_cropRect = New Mat(frame, New OpenCvSharp.Rect(CInt(txtcv_crop_posx.Text), CInt(txtcv_crop_posy.Text),
                                    CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text)))
 
-            Dim dst_cropped As Mat = New Mat(CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text), MatType.CV_32FC1)
+            Dim dst_cropped As Mat = New Mat(CInt(txtcv_crop_sizex.Text), CInt(txtcv_crop_sizey.Text), MatType.CV_8UC3)
 
             dst_cropRect.CopyTo(dst_cropped)
 
@@ -12265,7 +12506,13 @@ Public Class Mainwindow
 
             '■テンプレート画像の更新
             Dim aa As String = txtpass_picturefolder.Text & "\" & number & ".bmp"
-            tplex = Cv2.ImRead(aa, ImreadModes.Color)
+
+            If chkcv_grayscale.Checked = False Then
+                tplex = Cv2.ImRead(aa, ImreadModes.Color)
+            Else
+                tplex = Cv2.ImRead(aa, ImreadModes.Grayscale)
+            End If
+
 
             '■該当の画像をUIにも表示        
             Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
@@ -12546,7 +12793,13 @@ Public Class Mainwindow
 
             '■テンプレート画像の更新
             Dim aa As String = txtpass_picturefolder.Text & "\" & number & ".bmp"
-            tplex = Cv2.ImRead(aa, ImreadModes.Color)
+
+            If chkcv_grayscale.Checked = False Then
+                tplex = Cv2.ImRead(aa, ImreadModes.Color)
+            Else
+                tplex = Cv2.ImRead(aa, ImreadModes.Grayscale)
+            End If
+
 
             '■該当の画像をUIにも表示        
             Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
@@ -12802,7 +13055,13 @@ Public Class Mainwindow
 
             '■テンプレート画像の更新
             Dim aa As String = txtpass_picturefolder.Text & "\" & number & ".bmp"
-            tplex = Cv2.ImRead(aa, ImreadModes.Color)
+
+            If chkcv_grayscale.Checked = False Then
+                tplex = Cv2.ImRead(aa, ImreadModes.Color)
+            Else
+                tplex = Cv2.ImRead(aa, ImreadModes.Grayscale)
+            End If
+
 
             '■該当の画像をUIにも表示        
             Using fs As FileStream = New FileStream(aa, FileMode.Open, FileAccess.Read)
